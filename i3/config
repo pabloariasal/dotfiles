@@ -201,9 +201,9 @@ bar {
 }
 
 # Print screen: full | select window or rectangle
-bindsym --release $mod+Print exec scrot -s /tmp/screenshot.png &&\
+bindsym --release Print exec scrot -s /tmp/screenshot.png &&\
  xclip -selection clipboard -t image/png -i /tmp/screenshot.png
-bindsym --release $mod+Shift+Print exec scrot /tmp/screenshot.png &&\
+bindsym --release Shift+Print exec scrot /tmp/screenshot.png &&\
  xclip -selection clipboard -t image/png -i /tmp/screenshot.png
 
 #Assign applications to workspaces

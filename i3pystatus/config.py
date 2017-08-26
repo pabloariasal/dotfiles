@@ -51,6 +51,7 @@ status.register("alsa",
 
 status.register("spotify",
         format='{status} {title} - {artist}',
+        interval=1
         )
 
 status.run()
