@@ -16,16 +16,15 @@ font pango:DejaVu Sans Mono 10
 
 # Colors
 set $black #010101
-set $gray #585756
-# set $accent #d9ae38
+set $gray #808080
 set $accent #c6ff00
 set $urgent #DF6418
 
 # Window colors
-#client.focused $black $black $accent $gray
-#client.focused_inactive $black $black $gray $gray
-#client.unfocused $black $black $gray $gray
-#client.urgent $black $black $urgent $gray
+client.focused $black $black $accent $gray
+client.focused_inactive $black $black $gray $gray
+client.unfocused $black $black $gray $gray
+client.urgent $black $black $urgent $gray
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -212,3 +211,13 @@ assign [class="Thunderbird"] $ws4
 
 #Wallpaper
 exec_always --no-startup-id feh --bg-fill /home/pablo/Documents/wallpapers/arch1.jpeg
+
+# Audio control
+bindsym XF86AudioRaiseVolume exec amixer set Master 5%+
+bindsym XF86AudioLowerVolume exec amixer set Master 5%-
+bindsym XF86AudioMute exec amixer set Master toggle
+
+#Brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+
