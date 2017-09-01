@@ -46,7 +46,12 @@ status.register("disk",
 
 status.register("alsa",
         format="\u266B {volume}%",
-        format_muted="\u266B \u26D2"
+        format_muted="\u266B \u26D2",
+        interval=1
+        )
+status.register("backlight",
+        format='\u263C {percentage}%',
+        interval=1
         )
 
 status.register("spotify",
