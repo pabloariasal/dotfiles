@@ -31,6 +31,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 call plug#end()
 
 "Powerline settings
