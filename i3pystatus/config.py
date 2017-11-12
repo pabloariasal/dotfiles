@@ -3,7 +3,7 @@ from i3pystatus import Status
 status = Status()
 
 status.register("clock",
-    format="\u23F0 %a %-d %b %T",)
+    format="\u23F3 %a %-d %b %T",)
 
 status.register('battery',
     interval=5,
@@ -13,7 +13,7 @@ status.register('battery',
     status={
         "DIS": "\u2193",
         "CHR":"\u2191",
-        "FULL": "\u2705",
+        "FULL": "\u2713",
     }
 )
 

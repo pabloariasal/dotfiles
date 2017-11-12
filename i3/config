@@ -12,7 +12,7 @@ set $email thunderbird
 set $player spotify
 
 #System font
-font pango:DejaVu Sans Mono 10
+font pango:DejaVu Sans Mono 8 
 
 # Colors
 set $black #010101
@@ -183,7 +183,7 @@ workspace_auto_back_and_forth yes
 # finds out, if available)
 bar {
         status_command i3pystatus -c ~/.config/i3pystatus/config.py
-	font pango:DejaVu Sans Mono 12
+		font pango:DejaVu Sef Mono 9 
 
         colors {
 		background $black
