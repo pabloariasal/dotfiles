@@ -26,12 +26,14 @@ set smarttab
 "Keymaps
 map Y y$
 
+"Set leader
+let mapleader = ","
+
 "Plugins
 call plug#begin('~/.vim/plugged')
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'Valloric/YouCompleteMe'
 call plug#end()
 
 "Powerline settings
@@ -47,5 +49,13 @@ colorscheme elflord
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
-"NERDTree keymap
-map <C-n> :NERDTreeToggle<CR>
+"netrw
+let g:netrw_liststyle = 3
+let g:netrw_banner = 0
+"let g:netrw_browse_split = 4
+"let g:netrw_winsize = 25
+
+"ycm
+let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_global_ycm_extra_conf'
+nnoremap <leader>jd :YcmCompleter GoTo<CR>
+
