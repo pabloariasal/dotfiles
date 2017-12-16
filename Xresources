@@ -1,8 +1,5 @@
-!URxvt.font: xft:inconsolata:style=Regular:size=12
-!URxvt.font: xft:Inconsolata\ for\ Powerline:style=Regular:size=12
-!URxvt.font: xft:Inconsolata-g\ for\ Powerline:style=Regular:size=12
-!URxvt.font: xft:DejaVu\ San\s Mono\ for\ Powerline:style=Regular:size=10
-URxvt*font: xft:Source\ Code\ Pro\ for\ Powerline:pixelsize=13:antialias=true:hinting=true
+#Set font
+URxvt*font: xft:Inconsolata For Powerline::pixelsize=15:antialias=true:hinting=true
 
 ! special
 *.foreground:   #c5c8c6
