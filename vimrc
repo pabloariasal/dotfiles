@@ -9,6 +9,7 @@ set backspace=indent,eol,start
 set ruler
 set encoding=utf-8
 set showcmd
+set hlsearch
 
 "Window navigation
 nnoremap <C-h> <C-w>h
@@ -17,9 +18,9 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 "Identation
-set tabstop=4
+set tabstop=8
 set softtabstop=0
-set noexpandtab
+set expandtab
 set shiftwidth=4
 set smarttab
 
@@ -31,9 +32,10 @@ let mapleader = ","
 
 "Plugins
 call plug#begin('~/.vim/plugged')
-Plug 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'Valloric/YouCompleteMe'
+Plug 'scrooloose/nerdtree'
+Plug 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 call plug#end()
 
 "Powerline settings
@@ -59,3 +61,6 @@ let g:netrw_banner = 0
 let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_global_ycm_extra_conf'
 nnoremap <leader>jd :YcmCompleter GoTo<CR>
 
+"nerdtree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+map <C-n> :NERDTreeToggle<CR>
