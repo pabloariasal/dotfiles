@@ -180,10 +180,8 @@ bindsym $mod+Tab workspace back_and_forth
 workspace_auto_back_and_forth yes
 
 # Print screen: full | select window or rectangle
-bindsym --release Print exec scrot -s /tmp/screenshot.png &&\
- xclip -selection clipboard -t image/png -i /tmp/screenshot.png
-bindsym --release Shift+Print exec scrot /tmp/screenshot.png &&\
- xclip -selection clipboard -t image/png -i /tmp/screenshot.png
+bindsym --release Print exec scrot '%Y-%m-%d_$wx$h.png' -e 'mv $f /tmp/'
+bindsym --release Shift+Print exec scrot -s '%Y-%m-%d_$wx$h.png' -e 'mv $f /tmp/'
 
 # Audio control
 bindsym XF86AudioRaiseVolume exec amixer set Master 5%+
