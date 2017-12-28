@@ -10,6 +10,17 @@ set ruler
 set encoding=utf-8
 set showcmd
 set hlsearch
+set wildmenu
+set lazyredraw
+set showmatch
+
+"Set leader
+let mapleader = ","
+
+"Searching
+set incsearch
+set hlsearch
+nnoremap <leader><space> :nohlsearch<CR>
 
 "Window navigation
 nnoremap <C-h> <C-w>h
@@ -26,9 +37,6 @@ set smarttab
 
 "Keymaps
 map Y y$
-
-"Set leader
-let mapleader = ","
 
 "Plugins
 call plug#begin('~/.vim/plugged')
@@ -54,8 +62,6 @@ let g:ctrlp_cmd = 'CtrlP'
 "netrw
 let g:netrw_liststyle = 3
 let g:netrw_banner = 0
-"let g:netrw_browse_split = 4
-"let g:netrw_winsize = 25
 
 "ycm
 let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_global_ycm_extra_conf'
