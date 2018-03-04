@@ -37,8 +37,9 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = fixed:pixelsize=10;1
-font-1 = FontAwesome:size=13;2
+font-0 = fixed:pixelsize=11;1
+font-1 = FontAwesome5Free:style=Solid:pixelsize=11
+font-2 = FontAwesome5Brands:style=Solid:pixelsize=11
 
 modules-left = i3
 modules-center = 
@@ -128,7 +129,7 @@ label = %time%
 
 [module/date]
 type = internal/date
-interval = 86400
+interval = 3600
 
 date = %A %b %d
 
