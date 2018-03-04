@@ -38,6 +38,10 @@ set smarttab
 "Keymaps
 map Y y$
 
+"Show white space
+set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<
+set list
+
 "Plugins
 call plug#begin('~/.vim/plugged')
 Plug 'ctrlpvim/ctrlp.vim'
