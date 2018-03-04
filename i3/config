@@ -197,6 +197,6 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
 #Autostart
-exec --no-startup-id compton -b
+#exec --no-startup-id compton -b
 exec_always --no-startup-id feh --bg-fill /home/pablo/Documents/wallpapers/lain-blue.png
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
