@@ -44,6 +44,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'Valloric/YouCompleteMe'
 Plug 'scrooloose/nerdtree'
 Plug 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plug 'tpope/vim-surround'
 call plug#end()
 
 "Powerline settings
