@@ -158,6 +158,10 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+#Scratchpad
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+minus scratchpad show
+
 #System mode 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
