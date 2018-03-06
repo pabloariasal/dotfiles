@@ -39,7 +39,7 @@ set smarttab
 map Y y$
 
 "Show white space
-set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<
+set listchars=eol:¬,tab:»\ ,trail:~,extends:>,precedes:<
 set list
 
 "Plugins
