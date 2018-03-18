@@ -13,6 +13,7 @@ set hlsearch
 set wildmenu
 set lazyredraw
 set showmatch
+set hidden
 
 "Set leader
 let mapleader = ","
@@ -45,10 +46,14 @@ set list
 "Plugins
 call plug#begin('~/.vim/plugged')
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'Valloric/YouCompleteMe'
-Plug 'scrooloose/nerdtree'
 Plug 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'junegunn/vim-peekaboo'
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
 call plug#end()
 
 "Powerline settings
@@ -67,11 +72,44 @@ let g:ctrlp_cmd = 'CtrlP'
 "netrw
 let g:netrw_liststyle = 3
 let g:netrw_banner = 0
-
-"ycm
-let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_global_ycm_extra_conf'
-nnoremap <leader>jd :YcmCompleter GoTo<CR>
+"Open explorer if no args were provided
+augroup ProjectDrawer
+    autocmd!
+    autocmd VimEnter * if argc() == 0 | Explore! | endif
+augroup END
 
 "nerdtree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 map <C-n> :NERDTreeToggle<CR>
+
+"LSP settings
+let g:LanguageClient_serverCommands = {
+    \ 'c': ['cquery'],
+    \ 'cpp': ['cquery'],
+    \ 'python': ['pyls'],
+    \ }
+
+nnoremap <silent> gh :call LanguageClient_textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
+nnoremap <silent> gr :call LanguageClient_textDocument_references()<CR>
+nnoremap <silent> gs :call LanguageClient_textDocument_documentSymbol()<CR>
+nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
+
+let g:LanguageClient_loadSettings = 1
+let g:LanguageClient_settingsPath = expand('$HOME/Documents/dotfiles/vim/lsp-settings.json')
+
+" Ctrl-Space for completions. Heck Yeah!
+inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
+        \ "\<lt>C-n>" :
+        \ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .
+        \ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .
+        \ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
+imap <C-@> <C-Space>
+
+"vim-unimpaired settings
+nmap < [
+nmap > ]
+omap < [
+omap > ]
+xmap < [
+xmap > ]
