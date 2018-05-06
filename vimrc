@@ -48,7 +48,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-unimpaired'
 Plug 'junegunn/vim-peekaboo'
 Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
@@ -105,11 +104,3 @@ inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
         \ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .
         \ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
 imap <C-@> <C-Space>
-
-"vim-unimpaired settings
-nmap < [
-nmap > ]
-omap < [
-omap > ]
-xmap < [
-xmap > ]
