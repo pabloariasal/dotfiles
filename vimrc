@@ -86,6 +86,7 @@ let g:LanguageClient_serverCommands = {
     \ 'c': ['cquery'],
     \ 'cpp': ['cquery'],
     \ 'python': ['pyls'],
+    \ 'rust': ['rustup', 'run', 'stable', 'rls'],
     \ }
 
 nnoremap <silent> gh :call LanguageClient_textDocument_hover()<CR>
