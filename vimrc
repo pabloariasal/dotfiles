@@ -9,7 +9,6 @@ set backspace=indent,eol,start
 set ruler
 set encoding=utf-8
 set showcmd
-set hlsearch
 set wildmenu
 set lazyredraw
 set showmatch
@@ -67,20 +66,3 @@ let g:ctrlp_cmd = 'CtrlP'
 "netrw
 let g:netrw_liststyle = 3
 let g:netrw_banner = 0
-"Open explorer if no args were provided
-augroup ProjectDrawer
-    autocmd!
-    autocmd VimEnter * if argc() == 0 | Explore! | endif
-augroup END
-
-"nerdtree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-map <C-n> :NERDTreeToggle<CR>
-
-" Ctrl-Space for completions. Heck Yeah!
-inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
-        \ "\<lt>C-n>" :
-        \ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .
-        \ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .
-        \ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
-imap <C-@> <C-Space>
