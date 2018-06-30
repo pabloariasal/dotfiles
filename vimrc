@@ -47,7 +47,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plug 'tpope/vim-surround'
-Plug 'w0rp/ale'
 call plug#end()
 
 "Powerline settings
