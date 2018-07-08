@@ -43,7 +43,7 @@ font-2 = FontAwesome5Brands:style=Solid:pixelsize=11
 
 modules-left = i3
 modules-center = 
-modules-right = xbacklight volume wlan battery date time
+modules-right = cpu xbacklight volume keyboard filesystem wlan battery date time
 
 ;tray-position = 
 ;tray-padding = 2
@@ -169,6 +169,53 @@ label-discharging = "%percentage%%"
 format-full-prefix = ${self.format-charging-prefix}
 format-full-prefix-foreground = ${colors.primary}
 label-full = ${self.label-charging}
+
+[module/filesystem]
+type = internal/fs
+
+; Mountpoints to display
+mount-0 = /
+mount-1 = /home
+
+; Seconds to sleep between updates
+; Default: 30
+interval = 30
+
+; Display fixed precision values
+; Default: false
+fixed-values = true
+
+; Spacing between entries
+; Default: 2
+spacing = 1
+format-mounted-prefix = " "
+format-mounted = <label-mounted>
+format-mounted-prefix-foreground = ${colors.primary}
+label-mounted = %mountpoint%: %free% (%percentage_used%%)
+
+[module/cpu]
+type = internal/cpu
+
+; Seconds to sleep between updates
+; Default: 1
+interval = 0.5
+format = <label>
+format-prefix = " "
+format-prefix-foreground = ${colors.primary}
+label = %percentage%%
+
+[module/keyboard]
+type = internal/xkeyboard
+
+; List of indicators to ignore
+blacklist-0 = num lock
+blacklist-1 = scroll lock
+
+format = <label-layout>
+format-spacing = 0
+label-layout = %name%
+format-prefix = " "
+format-prefix-foreground = ${colors.primary}
 
 [settings]
 screenchange-reload = true
