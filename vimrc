@@ -43,17 +43,25 @@ set listchars=eol:¬,tab:»\ ,trail:~,extends:>,precedes:<
 set list
 
 "Plugins
-call plug#begin('~/.vim/plugged')
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
-Plug 'tpope/vim-surround'
-call plug#end()
+packadd minpac
+call minpac#init()
+call minpac#add('k-takata/minpac', {'type':'opt'})
+call minpac#add('tpope/vim-surround')
+call minpac#add('ctrlpvim/ctrlp.vim')
+call minpac#add('vim-airline/vim-airline')
+call minpac#add('tpope/vim-unimpaired')
+call minpac#add('w0rp/ale')
 
-"Powerline settings
+command! PackUpdate call minpac#update()
+command! PackClean call minpac#clean()
+
+"Airline settings
 set laststatus=2 " Always display the statusline in all windows
 set showtabline=2 " Always display the tabline, even if there is only one tab
 set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the
 set t_Co=256
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
 
 "Colorscheme
 colorscheme elflord
@@ -65,3 +73,7 @@ let g:ctrlp_cmd = 'CtrlP'
 "netrw
 let g:netrw_liststyle = 3
 let g:netrw_banner = 0
+
+"ctags
+set tags+=tags;$HOME "Look for tags acendengly until HOME is reached
+nnoremap <f5> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --exclude=.git --exclude=build .
