@@ -1,5 +1,6 @@
 #Set font
-URxvt*font: xft:Inconsolata For Powerline:pixelsize=15:antialias=true:hinting=true
+!URxvt*font: xft:Inconsolata For Powerline:pixelsize=15:antialias=true:hinting=true
+URxvt*font: xft:Source Code Pro For Powerline:pixelsize=13:antialias=true:hinting=true
 
 ! do not scroll with output
 URxvt*scrollTtyOutput: false
@@ -12,9 +13,5 @@ URxvt*scrollTtyKeypress: true
 
 URxvt.scrollBar: false
 
-! Terminal transparency using compton
-urxvt*depth: 32
-urxvt*background: rgba:0000/0000/0200/c800
-
 ! Include colors
-#include "/home/pablo/Documents/dotfiles/colors/scheme2"
+#include "/home/pablo/Documents/dotfiles/colors/electrux"
