@@ -7,39 +7,47 @@
 ;
 ;=====================================================
 [colors]
-background-alt = #444
-primary = #00ffff
-secondary = #ff00ff
 
 border = #ccffff
-background = #1c2023
-foreground = #c7ccd1
+background = ${xrdb:color0:#222}
+background-alt = ${xrdb:color2:#222}
+;foreground = #c7ccd1
+foreground = ${xrdb:color7:#222}
+alert = #c7ae95
+modus-background = ${xrdb:color1:#222}
 
 ; black
-black = #1c2023
-blackb = #747c84
+;black = #1c2023
+;blackb = #747c84
 
 ; red
-red = #c7ae95
+;red = #c7ae95
+red = ${xrdb:color1:#222}
 
 ; green
-green = #95c7ae
+;green = #95c7ae
+green = ${xrdb:color6:#222}
 
 ; yellow
-yellow = #aec795
+;yellow = #aec795
+yellow = ${xrdb:color3:#222}
 
 ; blue
-blue = #ae95c7
+;blue = #ae95c7
+blue = ${xrdb:color2:#222}
 
 ; magenta
-magenta = #c795ae
+;magenta = #c795ae
+magenta = ${xrdb:color5:#222}
 
 ; cyan
-cyan = #95aec7
+;cyan = #95aec7
+cyan = ${xrdb:color4:#222}
 
 ; white
-white = #c7ccd1
-whiteb = #f3f4f5
+;white = #c7ccd1
+white = ${xrdb:color7:#222}
+;whiteb = #f3f4f5
 
 [bar/mybar]
 ; Use the following command to list available outputs:
@@ -241,12 +249,12 @@ wrapping-scroll = false
 ; mode = when showing options for an i3 mode
 label-mode-padding = 2
 label-mode-foreground = #000
-label-mode-background = ${colors.primary}
+label-mode-background = ${colors.modus-background}
 
 ; focused = Active workspace on focused monitor
 label-focused = %index%
 label-focused-background = ${colors.background-alt}
-label-focused-underline = ${colors.green}
+;label-focused-underline = ${colors.green}
 label-focused-padding = 1
 
 ; unfocused = Inactive workspace on any monitor
@@ -256,12 +264,12 @@ label-unfocused-padding = ${self.label-focused-padding}
 ; visible = Active workspace on unfocused monitor
 label-visible = %index%
 label-visible-background = ${self.label-focused-background}
-label-visible-underline = ${self.label-focused-underline}
+;label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %index%
-label-urgent-background = ${colors.secondary}
+label-urgent-background = ${colors.alert}
 label-urgent-padding = ${self.label-focused-padding}
 
 [module/xbacklight]
