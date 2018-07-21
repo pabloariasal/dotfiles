@@ -13,5 +13,6 @@ URxvt*scrollTtyKeypress: true
 
 URxvt.scrollBar: false
 
-! Include colors
-#include "/home/pablo/Documents/dotfiles/colors/electrux"
+URxvt*inheritPixmap: true
+URxvt*transparent: true
+URxvt*shading: 20
