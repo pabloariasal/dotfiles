@@ -135,7 +135,7 @@ font-2 = FontAwesome5Brands:style=Solid:pixelsize=11
 ;   modules-right = ipc clock
 modules-left = i3
 modules-center =
-modules-right = cpu xbacklight volume keyboard filesystem wlan battery date time
+modules-right = player cpu xbacklight volume keyboard filesystem wlan battery date time
 
 ; The separator will be inserted between the output of each module
 separator =
@@ -414,6 +414,15 @@ label-layout-underline = ${colors.cyan}
 format-prefix = " "
 ;format-prefix-foreground = ${colors.cyan}
 format-prefix-underline = ${colors.cyan}
+
+[module/player]
+type = custom/script
+exec = ~/Documents/dotfiles/polybar/custom_scripts/player-mpris-tail/player-mpris-tail.py
+tail = true
+click-left = ~/Documents/dotfiles/polybar/custom_scripts/player-mpris-tail/player-ctrl.sh play-pause
+click-right = ~/Documents/dotfiles/polybar/custom_scripts/player-mpris-tail/player-ctrl.sh next
+click-middle = ~/Documents/dotfiles/polybar/custom_scripts/player-mpris-tail/player-ctrl.sh previous
+label-underline = ${colors.magenta}
 
 [settings]
 screenchange-reload = true
