@@ -391,7 +391,7 @@ format-mounted-prefix = " "
 format-mounted = <label-mounted>
 ;format-mounted-prefix-foreground = ${colors.primary}
 format-mounted-underline = ${colors.red}
-label-mounted = %mountpoint%: %free% (%percentage_used%%)
+label-mounted = %mountpoint%: %free%
 
 [module/cpu]
 type = internal/cpu
