@@ -13,6 +13,8 @@ set wildmenu
 set lazyredraw
 set showmatch
 set hidden
+set showtabline=2 " Always display the tabline, even if there is only one tab
+set t_Co=256
 
 "Set leader
 let mapleader = ","
@@ -48,23 +50,17 @@ call minpac#init()
 call minpac#add('k-takata/minpac', {'type':'opt'})
 call minpac#add('tpope/vim-surround')
 call minpac#add('ctrlpvim/ctrlp.vim')
-call minpac#add('vim-airline/vim-airline')
 call minpac#add('tpope/vim-unimpaired')
 call minpac#add('w0rp/ale')
+call minpac#add('dracula/vim', {'name':'dracula'})
+call minpac#add('junegunn/seoul256.vim')
+call minpac#add('romainl/Apprentice')
 
 command! PackUpdate call minpac#update()
 command! PackClean call minpac#clean()
 
-"Airline settings
+"Status line
 set laststatus=2 " Always display the statusline in all windows
-set showtabline=2 " Always display the tabline, even if there is only one tab
-set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the
-set t_Co=256
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
-
-"Colorscheme
-colorscheme elflord
 
 "Ctrlp Options
 let g:ctrlp_map = '<c-p>'
