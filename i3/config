@@ -43,7 +43,8 @@ gaps outer 0
 smart_gaps on
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+#bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec rofi -show run
 
 # change focus
 bindsym $mod+h focus left
