@@ -110,7 +110,7 @@ font-2 = FontAwesome5Brands:style=Solid:pixelsize=11
 ;   modules-right = ipc clock
 modules-left = i3
 modules-center =
-modules-right = player cpu xbacklight volume keyboard wlan battery date time
+modules-right = player cpu xbacklight volume keyboard filesystem wlan battery date time
 
 ; The separator will be inserted between the output of each module
 separator =
