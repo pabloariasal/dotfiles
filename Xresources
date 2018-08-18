@@ -1,6 +1,21 @@
 #Set font
-!URxvt*font: xft:Inconsolata For Powerline:pixelsize=15:antialias=true:hinting=true
-URxvt*font: xft:Source Code Pro For Powerline:pixelsize=13:antialias=true:hinting=true
+
+!Source code pro
+URxvt.allow_bold:           true
+URxvt*font: xft:source code pro:regular:pixelsize=13
+URxvt*imFont: xft:source code pro:regular:pixelsize=13
+URxvt*boldFont: xft:source code pro:semibold:pixelsize=13
+URxvt*italicFont: xft:source code pro:italic:pixelsize=13
+URxvt*boldItalicFont: xft:source code pro:semibold:italic:pixelsize=13
+URxvt*letterSpace: -1
+
+
+! Inconsolata
+/*URxvt*font: xft:inconsolata:regular:pixelsize=14
+URxvt*imFont: xft:inconsolata:regular:pixelsize=14
+URxvt*boldFont: xft:inconsolata:bold:pixelsize=14
+URxvt*letterSpace: -1
+*/
 
 ! do not scroll with output
 URxvt*scrollTtyOutput: false
