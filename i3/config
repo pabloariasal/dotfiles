@@ -193,7 +193,7 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
 # start compton in background as daemon process
-exec --no-startup-id compton --config $HOME/.config/compton.conf -b
+exec_always --no-startup-id compton --config $HOME/.config/compton.conf -b
 
 #Autostart
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
