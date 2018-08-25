@@ -2,11 +2,11 @@
 
 !Source code pro
 URxvt.allow_bold:           true
-URxvt*font: xft:source code pro:regular:pixelsize=13
-URxvt*imFont: xft:source code pro:regular:pixelsize=13
-URxvt*boldFont: xft:source code pro:semibold:pixelsize=13
-URxvt*italicFont: xft:source code pro:italic:pixelsize=13
-URxvt*boldItalicFont: xft:source code pro:semibold:italic:pixelsize=13
+URxvt*font: xft:source code pro:regular:pixelsize=14
+URxvt*imFont: xft:source code pro:regular:pixelsize=14
+URxvt*boldFont: xft:source code pro:semibold:pixelsize=14
+URxvt*italicFont: xft:source code pro:italic:pixelsize=14
+URxvt*boldItalicFont: xft:source code pro:semibold:italic:pixelsize=14
 URxvt*letterSpace: -1
 
 
