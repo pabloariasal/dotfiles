@@ -1,50 +1,139 @@
-"Defaults
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.
+" | .--------------. || .--------------. || .--------------. || .--------------. || .--------------. |
+" | | ____   ____  | || |     _____    | || | ____    ____ | || |  _______     | || |     ______   | |
+" | ||_  _| |_  _| | || |    |_   _|   | || ||_   \  /   _|| || | |_   __ \    | || |   .' ___  |  | |
+" | |  \ \   / /   | || |      | |     | || |  |   \/   |  | || |   | |__) |   | || |  / .'   \_|  | |
+" | |   \ \ / /    | || |      | |     | || |  | |\  /| |  | || |   |  __ /    | || |  | |         | |
+" | |    \ ' /     | || |     _| |_    | || | _| |_\/_| |_ | || |  _| |  \ \_  | || |  \ `.___.'\  | |
+" | |     \_/      | || |    |_____|   | || ||_____||_____|| || | |____| |___| | || |   `._____.'  | |
+" | |              | || |              | || |              | || |              | || |              | |
+" | '--------------' || '--------------' || '--------------' || '--------------' || '--------------' |
+"  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'
+"
+" Maintainer:
+"   Pablo Arias - pabloariasal@gmail.com
+"
+" Sections:
+"   -> General
+"   -> User Interface
+"   -> Colors
+"   -> Key Maps
+"   -> Searching
+"   -> Indentation
+"   -> Plugins
+"   -> Custom Commands
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => General
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible
-filetype indent plugin on
-syntax on
-set ignorecase
-set smartcase
-set autoindent
-set backspace=indent,eol,start
-set ruler
 set encoding=utf-8
-set showcmd
-set wildmenu
-set lazyredraw
-set showmatch
+filetype plugin on
+filetype indent on
+"Configure backspace so it acts as it should act
+set backspace=eol,start,indent
+"Allow abandoning buffers without having to save them (useful for batch buffer modification, e.g. global search/replace)
 set hidden
-set showtabline=2 " Always display the tabline, even if there is only one tab
+"Ignore files in .git, build dir, binary files, etc.
+set wildignore=*.o,*~,*.pyc,*.swp
+set wildignore+=*/.git/*,*/build/*
+"automatically reload buffers when file changes on disk
+set autoread
+"Look for tags file acendingly until HOME is reached
+set tags+=tags;$HOME
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => User Interface
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Show white space
+set listchars=eol:¬,tab:»\ ,trail:~,extends:>,precedes:<
+set list
+"show current command
+set showcmd
+"Don't redraw screen while executing macros
+set lazyredraw
+"Show matching braket
+set showmatch
+"show current position in file
+set ruler
+"always display the tabline, even if there is only one tab
+"set showtabline=2
+"always display the statusline in all windows
+set laststatus=2
+"show files in a wide style in netrw
+let g:netrw_liststyle = 3
+"remove banner in netrw
+let g:netrw_banner = 0
+"show possible matches above command line with TAB
+set wildmenu
+"set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Colors
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"enable syntax highlighting
+syntax on
+"Set number of terminal colors to 256 (required by most colorschemes)
 set t_Co=256
 
-"Set leader
-let mapleader = ","
+try
+    colorscheme default
+catch
+endtry
 
-"Searching
-set incsearch
-set hlsearch
-nnoremap <leader><space> :nohlsearch<CR>
+set background=dark
 
-"Window navigation
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Key Maps
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"set leader to ,
+let mapleader=","
+"but don't lose reverse motion
+noremap \ ,
+"make Y consistent with other motions
+map Y y$
+"fast saving
+nmap <leader>w :w!<cr>
+"convenient window navigation
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-"Identation
-set tabstop=8
-set softtabstop=4
-set expandtab
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Searching
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Ignore case per default
+set ignorecase
+"If search pattern contains an upper case letter, make search case sensitive
+set smartcase
+"Show matches as you type
+set incsearch
+"Highlight matches
+set hlsearch
+"Remove highlight with <C-l>
+nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Indentation
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Copy indent from current line
+set autoindent
+"smart autoindenting
+set smartindent
+"one tab = 4 spaces
+set tabstop=4
 set shiftwidth=4
+"use spaces instead of tabs
+"set expandtab
 set smarttab
 
-"Keymaps
-map Y y$
-
-"Show white space
-set listchars=eol:¬,tab:»\ ,trail:~,extends:>,precedes:<
-set list
-
-"Plugins
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Plugins
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 packadd minpac
 call minpac#init()
 call minpac#add('k-takata/minpac', {'type':'opt'})
@@ -59,17 +148,34 @@ call minpac#add('romainl/Apprentice')
 command! PackUpdate call minpac#update()
 command! PackClean call minpac#clean()
 
-"Status line
-set laststatus=2 " Always display the statusline in all windows
-
 "Ctrlp Options
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
-"netrw
-let g:netrw_liststyle = 3
-let g:netrw_banner = 0
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Custom Commands
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Close the current buffer
+map <leader>bd :Bclose<cr>:tabclose<cr>gT
+" Don't close window, when deleting a buffer
+command! Bclose call <SID>BufcloseCloseIt()
+function! <SID>BufcloseCloseIt()
+    let l:currentBufNum = bufnr("%")
+    let l:alternateBufNum = bufnr("#")
 
-"ctags
-set tags+=tags;$HOME "Look for tags acendengly until HOME is reached
-nnoremap <f5> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --exclude=.git --exclude=build .
+    if buflisted(l:alternateBufNum)
+        buffer #
+    else
+        bnext
+    endif
+
+    if bufnr("%") == l:currentBufNum
+        new
+    endif
+
+    if buflisted(l:currentBufNum)
+        execute("bdelete! ".l:currentBufNum)
+    endif
+endfunction
+":W sudo saves the file (useful for handling the permission-denied error)
+command! W w !sudo tee % > /dev/null
