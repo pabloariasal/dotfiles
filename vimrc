@@ -44,6 +44,8 @@ set wildignore+=*/.git/*,*/build/*
 set autoread
 "Look for tags file acendingly until HOME is reached
 set tags+=tags;$HOME
+"Don't allow nested folds
+set foldnestmax=1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => User Interface
@@ -59,8 +61,8 @@ set lazyredraw
 set showmatch
 "show current position in file
 set ruler
-"always display the tabline, even if there is only one tab
-"set showtabline=2
+"show line numbers
+set number
 "always display the statusline in all windows
 set laststatus=2
 "show files in a wide style in netrw
@@ -95,13 +97,14 @@ let mapleader=","
 noremap \ ,
 "make Y consistent with other motions
 map Y y$
-"fast saving
-nmap <leader>w :w!<cr>
 "convenient window navigation
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+"use space to toggle folds
+nnoremap <Space> za
+vnoremap <Space> za
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Searching
@@ -141,9 +144,14 @@ call minpac#add('tpope/vim-surround')
 call minpac#add('ctrlpvim/ctrlp.vim')
 call minpac#add('tpope/vim-unimpaired')
 call minpac#add('w0rp/ale')
+"colors
 call minpac#add('dracula/vim', {'name':'dracula'})
 call minpac#add('junegunn/seoul256.vim')
 call minpac#add('romainl/Apprentice')
+call minpac#add('morhetz/gruvbox')
+call minpac#add('NLKNguyen/papercolor-theme')
+"Folding
+call minpac#add('tmhedberg/SimpylFold')
 
 command! PackUpdate call minpac#update()
 command! PackClean call minpac#clean()
@@ -151,31 +159,13 @@ command! PackClean call minpac#clean()
 "Ctrlp Options
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'r'
+
+"Don't fold python docstrings
+let g:SimpylFold_fold_docstring = 0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Custom Commands
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Close the current buffer
-map <leader>bd :Bclose<cr>:tabclose<cr>gT
-" Don't close window, when deleting a buffer
-command! Bclose call <SID>BufcloseCloseIt()
-function! <SID>BufcloseCloseIt()
-    let l:currentBufNum = bufnr("%")
-    let l:alternateBufNum = bufnr("#")
-
-    if buflisted(l:alternateBufNum)
-        buffer #
-    else
-        bnext
-    endif
-
-    if bufnr("%") == l:currentBufNum
-        new
-    endif
-
-    if buflisted(l:currentBufNum)
-        execute("bdelete! ".l:currentBufNum)
-    endif
-endfunction
 ":W sudo saves the file (useful for handling the permission-denied error)
 command! W w !sudo tee % > /dev/null
