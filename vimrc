@@ -160,6 +160,8 @@ command! PackClean call minpac#clean()
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'r'
+noremap <silent> <c-k> :CtrlPBuffer<CR>
+noremap <silent> <c-y> :CtrlPTag<CR>
 
 "Don't fold python docstrings
 let g:SimpylFold_fold_docstring = 0
