@@ -8,13 +8,15 @@
 ;=====================================================
 [colors]
 border = #ccffff
+;transparent background
 background = #33000000
-background-alt = ${xrdb:color2:#222}
+focused-workspace = ${xrdb:color2:#222}
+;text color
 foreground = ${xrdb:color7:#222}
 alert = #c7ae95
+; background for i3 modi
 modus-background = ${xrdb:color1:#222}
-color1 = ${xrdb:color4:#222}
-color2 = ${xrdb:color11:#222}
+underlines = ${xrdb:color4:#222}
 
 [bar/mybar]
 ; Use the following command to list available outputs:
@@ -100,9 +102,9 @@ module-margin = 1
 ;   font-2 = Termsynu:size=8;-1
 ;   font-3 = FontAwesome:size=10
 ; See the Fonts wiki page for more details
-font-0 = fixed:pixelsize=11;1
-font-1 = FontAwesome5Free:style=Solid:pixelsize=11
-font-2 = FontAwesome5Brands:style=Solid:pixelsize=11
+font-0 = fixed:pixelsize=12;1
+font-1 = FontAwesome5Free:style=Solid:pixelsize=12
+font-2 = FontAwesome5Brands:style=Solid:pixelsize=12
 
 ; Modules are added to one of the available blocks
 ;   modules-left = cpu ram
@@ -209,6 +211,7 @@ type = internal/i3
 format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
+enable-scroll = false
 
 ; Only show workspaces on the same output as the bar
 ;pin-workspaces = true
@@ -219,26 +222,39 @@ label-mode-foreground = #000
 label-mode-background = ${colors.modus-background}
 
 ; focused = Active workspace on focused monitor
-label-focused = %index%
-label-focused-background = ${colors.background-alt}
-label-focused-underline = ${colors.color2}
+label-focused = %index%: %icon%
+label-focused-background = ${colors.focused-workspace}
+;label-focused-underline = ${colors.color2}
 label-focused-padding = 1
 
 ; unfocused = Inactive workspace on any monitor
-label-unfocused = %index%
+label-unfocused = ${self.label-focused}
 label-unfocused-padding = ${self.label-focused-padding}
-label-unfocused-underline = ${self.label-focused-underline}
+label-unfocused-underline = ${colors.underlines}
+;label-unfocused-background = ${colors.color2}
 
 ; visible = Active workspace on unfocused monitor
-label-visible = %index%
+label-visible = ${self.label-focused}
 label-visible-background = ${self.label-focused-background}
-label-visible-underline = ${self.label-focused-underline}
+label-visible-underline = ${colors.underlines}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
-label-urgent = %index%
+label-urgent = ${self.label-focused}
 label-urgent-background = ${colors.alert}
 label-urgent-padding = ${self.label-focused-padding}
+
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-7 = 8;
+ws-icon-8 = 9;
+ws-icon-9 = 10;
+ws-icon-default =
 
 [module/xbacklight]
 type = internal/xbacklight
@@ -286,7 +302,7 @@ label = %time%
 type = internal/date
 interval = 3600
 
-date = %b %d
+date = %d.%m.%Y
 
 format-prefix = " "
 ;format-prefix-foreground = ${colors.primary}
@@ -359,7 +375,7 @@ format-mounted-prefix = " "
 format-mounted = <label-mounted>
 ;format-mounted-prefix-foreground = ${colors.primary}
 ;format-mounted-underline = ${colors.red}
-label-mounted = %mountpoint%: %free%
+label-mounted = %mountpoint%: %percentage_used%%
 
 [module/cpu]
 type = internal/cpu
@@ -410,7 +426,7 @@ screenchange-reload = true
 ; Define fallback values used by all module formats
 ;format-foreground =
 ;format-background =
-format-underline = ${colors.color1}
+format-underline = ${colors.underlines}
 ;format-overline =
 ;format-spacing =
 ;format-padding =
