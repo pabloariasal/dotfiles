@@ -32,7 +32,7 @@ bindsym $mod+Return exec $terminal
 bindsym $mod+b exec $browser
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 
 # disable title bars
 for_window [class="^.*"] border pixel 0
