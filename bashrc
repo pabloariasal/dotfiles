@@ -20,4 +20,8 @@ HISTFILESIZE=10000
 shopt -s histappend
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
-export PS1="\W> "
+# starts a browser window without toolbars. Useful for streaming stuff in a tiling WM
+# can be called like watch youtube.com or watch twitch.tv
+browser_no_toolbars(){
+	exec google-chrome-stable --new-window --app="https://www.$1"
+}
