@@ -161,14 +161,14 @@ command! PackClean call minpac#clean()
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'r'
-noremap <silent> <c-s> :CtrlPBuffer<CR>
-noremap <silent> <c-a> :CtrlPTag<CR>
+"noremap <silent> <tab-s> :CtrlPBuffer<CR>
+"noremap <silent> <c-a> :CtrlPTag<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Snippets
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsListSnippets="<c-s>"
+let g:UltiSnipsListSnippets="<c-a>"
 "let g:UltiSnipsJumpForwardTrigger="<c-b>"
 "let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 "open personal snippet file in a vertical split
