@@ -22,6 +22,9 @@
 "   -> Searching
 "   -> Indentation
 "   -> Plugins
+"   -> Fuzzy Search
+"   -> Snippets
+"   -> Folding
 "   -> Custom Commands
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -44,8 +47,6 @@ set wildignore+=*/.git/*,*/build/*
 set autoread
 "Look for tags file acendingly until HOME is reached
 set tags+=tags;$HOME
-"Don't allow nested folds
-set foldnestmax=1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => User Interface
@@ -102,9 +103,6 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-"use space to toggle folds
-nnoremap <Space> za
-vnoremap <Space> za
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Searching
@@ -117,8 +115,8 @@ set smartcase
 set incsearch
 "Highlight matches
 set hlsearch
-"Remove highlight with <C-l>
-nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+"Turn off search highlight
+nnoremap <Leader><space> :noh<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Indentation
@@ -144,6 +142,7 @@ call minpac#add('tpope/vim-surround')
 call minpac#add('ctrlpvim/ctrlp.vim')
 call minpac#add('tpope/vim-unimpaired')
 call minpac#add('w0rp/ale')
+call minpac#add('SirVer/ultisnips')
 "colors
 call minpac#add('dracula/vim', {'name':'dracula'})
 call minpac#add('junegunn/seoul256.vim')
@@ -156,14 +155,38 @@ call minpac#add('tmhedberg/SimpylFold')
 command! PackUpdate call minpac#update()
 command! PackClean call minpac#clean()
 
-"Ctrlp Options
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Fuzzy Search
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'r'
 noremap <silent> <c-s> :CtrlPBuffer<CR>
 noremap <silent> <c-a> :CtrlPTag<CR>
 
-"Don't fold python docstrings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Snippets
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsListSnippets="<c-s>"
+"let g:UltiSnipsJumpForwardTrigger="<c-b>"
+"let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+"open personal snippet file in a vertical split
+let g:UltiSnipsEditSplit="vertical"
+"store personal snippets here. NOTE: must be in runtmepath
+let g:UltiSnipsSnippetsDir="mysnippets"
+"read snippets from the following directories.NOTE: dirs must be in runtmepath
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "mysnippets"]
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Folding
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"use space to toggle folds
+nnoremap <Space> za
+vnoremap <Space> za
+"don't allow nested folds
+set foldnestmax=1
+"don't fold python docstrings
 let g:SimpylFold_fold_docstring = 0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
