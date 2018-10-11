@@ -25,3 +25,5 @@ export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 browser_no_toolbars(){
 	exec google-chrome-stable --new-window --app="https://www.$1"
 }
+
+export VISUAL=nvim
