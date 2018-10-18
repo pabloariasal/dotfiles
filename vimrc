@@ -143,6 +143,8 @@ call minpac#add('ctrlpvim/ctrlp.vim')
 call minpac#add('tpope/vim-unimpaired')
 call minpac#add('w0rp/ale')
 call minpac#add('SirVer/ultisnips')
+call minpac#add('tpope/vim-dispatch')
+call minpac#add('radenling/vim-dispatch-neovim')
 "colors
 call minpac#add('dracula/vim', {'name':'dracula'})
 call minpac#add('junegunn/seoul256.vim')
