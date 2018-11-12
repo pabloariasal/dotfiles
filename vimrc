@@ -155,6 +155,7 @@ call minpac#add('junegunn/seoul256.vim')
 call minpac#add('romainl/Apprentice')
 call minpac#add('morhetz/gruvbox')
 call minpac#add('NLKNguyen/papercolor-theme')
+call minpac#add('nanotech/jellybeans.vim')
 "Folding
 call minpac#add('tmhedberg/SimpylFold')
 
