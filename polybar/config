@@ -10,7 +10,7 @@
 border = #ccffff
 ;transparent background
 background = #33000000
-focused-workspace = ${xrdb:color2:#222}
+focused-workspace = ${xrdb:color8:#222}
 ;text color
 foreground = ${xrdb:color7:#222}
 alert = #c7ae95
