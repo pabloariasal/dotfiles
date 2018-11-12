@@ -146,6 +146,9 @@ call minpac#add('ctrlpvim/ctrlp.vim')
 call minpac#add('tpope/vim-unimpaired')
 call minpac#add('w0rp/ale')
 call minpac#add('SirVer/ultisnips')
+call minpac#add('honza/vim-snippets')
+call minpac#add('tpope/vim-dispatch')
+call minpac#add('radenling/vim-dispatch-neovim')
 "colors
 call minpac#add('dracula/vim', {'name':'dracula'})
 call minpac#add('junegunn/seoul256.vim')
@@ -176,9 +179,9 @@ let g:UltiSnipsListSnippets="<c-a>"
 "let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 "open personal snippet file in a vertical split
 let g:UltiSnipsEditSplit="vertical"
-"store personal snippets here. NOTE: must be in runtmepath
+"store personal snippets here. NOTE: must be in runtimepath
 let g:UltiSnipsSnippetsDir="mysnippets"
-"read snippets from the following directories.NOTE: dirs must be in runtmepath
+"read snippets from the following directories. NOTE: dirs must be in runtmepath
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "mysnippets"]
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
