@@ -158,6 +158,7 @@ call minpac#add('NLKNguyen/papercolor-theme')
 call minpac#add('nanotech/jellybeans.vim')
 "Folding
 call minpac#add('tmhedberg/SimpylFold')
+call minpac#add('nelstrom/vim-markdown-folding')
 
 command! PackUpdate call minpac#update()
 command! PackClean call minpac#clean()
