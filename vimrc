@@ -149,6 +149,7 @@ call minpac#add('SirVer/ultisnips')
 call minpac#add('honza/vim-snippets')
 call minpac#add('tpope/vim-dispatch')
 call minpac#add('radenling/vim-dispatch-neovim')
+call minpac#add('tpope/vim-repeat')
 "colors
 call minpac#add('dracula/vim', {'name':'dracula'})
 call minpac#add('junegunn/seoul256.vim')
