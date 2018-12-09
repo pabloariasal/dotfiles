@@ -63,7 +63,7 @@ set showmatch
 "show current position in file
 set ruler
 "show line numbers
-set number
+"set number
 "always display the statusline in all windows
 set laststatus=2
 "show files in a wide style in netrw
