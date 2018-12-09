@@ -158,6 +158,7 @@ call minpac#add('romainl/Apprentice')
 call minpac#add('morhetz/gruvbox')
 call minpac#add('NLKNguyen/papercolor-theme')
 call minpac#add('nanotech/jellybeans.vim')
+call minpac#add('sheerun/vim-wombat-scheme')
 "Folding
 call minpac#add('tmhedberg/SimpylFold')
 call minpac#add('nelstrom/vim-markdown-folding')
