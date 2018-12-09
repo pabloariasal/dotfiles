@@ -171,9 +171,10 @@ command! PackClean call minpac#clean()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_working_path_mode = 'r'
-"noremap <silent> <tab-s> :CtrlPBuffer<CR>
-"noremap <silent> <c-a> :CtrlPTag<CR>
+let g:ctrlp_working_path_mode = 'ra'
+noremap <silent> <c-s> :CtrlPTag<CR>
+noremap <silent> <c-n> :CtrlPBuffer<CR>
+noremap <silent> <c-m> :CtrlPMRU<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Snippets
