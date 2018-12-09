@@ -116,7 +116,7 @@ set incsearch
 "Highlight matches
 set hlsearch
 "Turn off search highlight
-nnoremap <Leader><space> :noh<cr>
+nnoremap <Leader>c :noh<cr>
 "Set up RigGrep as external grepper
 set grepprg=rg\ -H\ --no-heading\ --vimgrep
 set grepformat=%f:%l:%c:%m
