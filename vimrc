@@ -158,7 +158,6 @@ call minpac#add('romainl/Apprentice')
 call minpac#add('morhetz/gruvbox')
 call minpac#add('NLKNguyen/papercolor-theme')
 call minpac#add('nanotech/jellybeans.vim')
-call minpac#add('sheerun/vim-wombat-scheme')
 "Folding
 call minpac#add('tmhedberg/SimpylFold')
 call minpac#add('nelstrom/vim-markdown-folding')
@@ -174,7 +173,6 @@ let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 noremap <silent> <c-s> :CtrlPTag<CR>
 noremap <silent> <c-n> :CtrlPBuffer<CR>
-noremap <silent> <c-m> :CtrlPMRU<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Snippets
