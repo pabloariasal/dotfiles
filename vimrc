@@ -47,6 +47,8 @@ set wildignore+=*/.git/*,*/build/*
 set autoread
 "Look for tags file acendingly until HOME is reached
 set tags+=tags;$HOME
+"Enable recursive search for path, you shouldn't do this
+set path+=**
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => User Interface

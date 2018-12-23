@@ -74,7 +74,7 @@ radius = 0.0
 ; Individual values can be defined using:
 ;   {overline,underline}-size
 ;   {overline,underline}-color
-line-size = 2
+line-size = 3
 ;line-color = ${colors.secondary}
 
 ; Values applied to all borders
