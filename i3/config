@@ -94,7 +94,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # focus the child container
-#bindsym $mod+d focus child
+bindsym $mod+c focus child
 
 # switch to workspace
 bindsym $mod+1 workspace 1
@@ -125,7 +125,7 @@ set $mail_ws 9
 set $player_ws 8
 
 assign [class="Thunderbird"] $mail_ws
-for_window [class="Spotify"] move to workspace $player_ws, workspace --no-auto-back-and-forth $player_ws
+#for_window [class="Spotify"] move to workspace $player_ws, workspace --no-auto-back-and-forth $player_ws
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
