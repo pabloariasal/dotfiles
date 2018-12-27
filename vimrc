@@ -42,7 +42,7 @@ set backspace=eol,start,indent
 set hidden
 "Ignore files in .git, build dir, binary files, etc.
 set wildignore=*.o,*~,*.pyc,*.swp
-set wildignore+=*/.git/*,*/build/*
+set wildignore+=*/.git/*,*/build*/*,*/dist/*
 "automatically reload buffers when file changes on disk
 set autoread
 "Look for tags file acendingly until HOME is reached
