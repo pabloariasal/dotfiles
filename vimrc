@@ -204,12 +204,14 @@ let g:SimpylFold_fold_docstring = 0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => ctags
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Don't generate tags every time you see a .git
+" Don't generate tags every time you see a .git -.-
 let g:gutentags_add_default_project_roots = 0
-" To enable ctags create a ctagsignore file in the project root
-let g:gutentags_project_root = ['.ctagsignore']
+" To enable ctags create a .ctagsenable file in the project root
+let g:gutentags_project_root = ['.ctagsenable']
 " Pass the paths to exclude to the ctag invocation
-let g:gutentags_ctags_exclude = ['@.ctagsignore']
+if !empty(glob(".ctagsignore"))
+	let g:gutentags_ctags_exclude = ['@.ctagsignore']
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Custom Commands
