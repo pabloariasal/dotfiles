@@ -47,8 +47,8 @@ set wildignore+=*/.git/*,*/build*/*,*/dist/*
 set autoread
 "Look for tags file acendingly until HOME is reached
 set tags+=tags;$HOME
-"Enable recursive search for path, you shouldn't do this
-"set path+=**
+"Search for files in this directories, recursively
+set path+=$HOME/Documents/**,$HOME/Workspace/**
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => User Interface
@@ -74,7 +74,6 @@ let g:netrw_liststyle = 3
 let g:netrw_banner = 0
 "show possible matches above command line with TAB
 set wildmenu
-"set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors
