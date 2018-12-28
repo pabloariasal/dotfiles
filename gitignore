@@ -10,4 +10,4 @@ Session.vim
 tags
 [._]*.un~
 .notags
-.ctagignore
+.ctagsignore
