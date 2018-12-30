@@ -112,7 +112,7 @@ font-2 = FontAwesome5Brands:style=Solid:pixelsize=12
 ;   modules-right = ipc clock
 modules-left = i3
 modules-center =
-modules-right = player cpu xbacklight volume keyboard filesystem wlan battery date time
+modules-right = player xbacklight volume keyboard wlan battery date time
 
 ; The separator will be inserted between the output of each module
 separator =
@@ -302,7 +302,7 @@ label = %time%
 type = internal/date
 interval = 3600
 
-date = %d.%m.%Y
+date = %a %b %e
 
 format-prefix = " "
 ;format-prefix-foreground = ${colors.primary}
@@ -352,44 +352,6 @@ format-full-prefix = ${self.format-charging-prefix}
 ;format-full-prefix-foreground = ${colors.primary}
 label-full = ${self.label-charging}
 ;label-full-underline = ${colors.yellow}
-
-[module/filesystem]
-type = internal/fs
-
-; Mountpoints to display
-mount-0 = /
-mount-1 = /home
-
-; Seconds to sleep between updates
-; Default: 30
-interval = 30
-
-; Display fixed precision values
-; Default: false
-fixed-values = true
-
-; Spacing between entries
-; Default: 2
-spacing = 1
-format-mounted-prefix = " "
-format-mounted = <label-mounted>
-;format-mounted-prefix-foreground = ${colors.primary}
-;format-mounted-underline = ${colors.red}
-label-mounted = %mountpoint%: %percentage_used%%
-
-[module/cpu]
-type = internal/cpu
-
-; Seconds to sleep between updates
-; Default: 1
-interval = 0.5
-format = <label>
-format-prefix = " "
-;format-prefix-underline = ${colors.green}
-;format-prefix-foreground = ${colors.green}
-label = %percentage%%
-;label-underline = ${colors.green}
-;label-foreground = ${colors.green}
 
 [module/keyboard]
 type = internal/xkeyboard
