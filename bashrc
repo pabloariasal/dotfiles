@@ -21,3 +21,6 @@ export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 # Default text editor
 export VISUAL=nvim
+
+# RTV reads some ENV variables to open links
+export RTV_BROWSER=qutebrowser
