@@ -8,7 +8,7 @@ import gi
 gi.require_version('Playerctl', '1.0')
 from gi.repository import Playerctl, GLib
 
-MUSIC_ICON = '\u266c'
+MUSIC_ICON = '\uf001'
 PAUSE_ICON = '\uf04c'
 PLAYER_CLOSED_ICON = ''
 

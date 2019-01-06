@@ -1,210 +1,103 @@
-;=====================================================
+;==========================================================
 ;
-;   To learn more about how to configure Polybar
-;   go to https://github.com/jaagr/polybar
 ;
-;   The README contains alot of information
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
 ;
-;=====================================================
-[colors]
-border = #ccffff
-;transparent background
-background = #33000000
-focused-workspace = ${xrdb:color8:#222}
-;text color
-foreground = ${xrdb:color7:#222}
-alert = #c7ae95
-; background for i3 modi
-modus-background = ${xrdb:color1:#222}
-underlines = ${xrdb:color4:#222}
+;
+;   Original By Aditya Shakya.
+;
+;==========================================================
 
-[bar/mybar]
-; Use the following command to list available outputs:
-; If unspecified, the application will pick the first one it finds.
-; $ xrandr -q | grep " connected" | cut -d ' ' -f1
+[color]
+
+trans = #00000000
+white = #FFFFFF
+black = #000000
+
+bg = #FFFFFF
+fg = #2E2E2E
+fg-alt = #424242
+
+acolor = #c0ca33
+curgent = #e53935
+coccupied = #039be5
+
+## Material Colors
+
+red = #e53935
+pink = #d81b60
+purple = #8e24aa
+deep-purple = #5e35b1
+indigo = #3949ab
+blue = #1e88e5
+light-blue = #039be5
+cyan = #00acc1
+teal = #00897b
+green = #43a047
+light-green = #7cb342
+lime = #c0ca33
+yellow = #fdd835
+amber = #ffb300
+orange = #fb8c00
+deep-orange = #f4511e
+brown = #6d4c41
+grey = #757575
+blue-gray = #546e7a
+
+;==========================================================
+
+[bar/main]
 monitor = ${env:MONITOR:eDP1}
-
-; Use the specified monitor as a fallback if the main one is not found.
-monitor-fallback =
-
-; Require the monitor to be in connected state
-; XRandR sometimes report my monitor as being disconnected (when in use)
-monitor-strict = false
-
-; Tell the Window Manager not to configure the window.
-; Use this to detach the bar if your WM is locking its size/position.
-override-redirect = false
-
-; Put the bar at the bottom of the screen
-bottom = false
-
-; Prefer fixed center position for the `modules-center` block
-; When false, the center position will be based on the size of the other blocks.
-fixed-center = false
-
-; Dimension defined as pixel value (e.g. 35) or percentage (e.g. 50%),
-; the percentage can optionally be extended with a pixel offset like so:
-; 50%:-10, this will result in a width or height of 50% minus 10 pixels
 width = 100%
-height = 27
+height = 25
+offset-x = 5%
+offset-y = 2%
+bottom = false
+fixed-center = false
+line-size = 2
 
-; Offset defined as pixel value (e.g. 35) or percentage (e.g. 50%)
-; the percentage can optionally be extended with a pixel offset like so:
-; 50%:-10, this will result in an offset in the x or y direction 
-; of 50% minus 10 pixels
-offset-x = 0
-offset-y = 0
+background = ${color.bg}
+foreground = ${color.fg}
 
-; Background argb color (e.g. #f00, #ff992a, #ddff1023)
-background = ${colors.background}
+border-size = 3
+border-color = ${color.bg}
 
-; Foreground argb color (e.g. #f00, #ff992a, #ddff1023)
-foreground = ${colors.foreground}
+module-margin-left = 1
+module-margin-right = 1
 
-; Background gradient (vertical steps)
-;   background-[0-9]+ = #aarrggbb
-;background-0 =
+;==========================================================
 
-; Value used for drawing rounded corners
-; Individual top/bottom values can be defined using:
-;   radius-{top,bottom}
-radius = 0.0
+font-0 = "Fantasque Sans Mono:pixelsize=12;2"
+font-1 = "Font Awesome 5 Free:style=Regular:size=13;4"
+font-2 = "Font Awesome 5 Free:style=Solid:size=13;4"
+font-3 = "Material Icons:size=13;4"
+;font-2 = FontAwesome5Brands:style=Solid:pixelsize=12
 
-; Under-/overline pixel size and argb color
-; Individual values can be defined using:
-;   {overline,underline}-size
-;   {overline,underline}-color
-line-size = 3
-;line-color = ${colors.secondary}
+;==========================================================
 
-; Values applied to all borders
-; Individual side values can be defined using:
-;   border-{left,top,right,bottom}-size
-;   border-{left,top,right,bottom}-color
-border-size =
-border-color =
+cursor-click = pointer
+cursor-scroll = ns-resize
 
-; Number of spaces to add at the beginning/end of the bar
-; Individual side values can be defined using:
-;   padding-{left,right}
-padding = 0
-padding-right = 2
+;tray-position = right
+;tray-padding = 0
+;tray-maxsize = 16
 
-; Number of spaces to add before/after each module
-; Individual side values can be defined using:
-;   module-margin-{left,right}
-module-margin = 1
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
 
-; Fonts are defined using <font-name>;<vertical-offset>
-; Font names are specified using a fontconfig pattern.
-;   font-0 = NotoSans-Regular:size=8;2
-;   font-1 = MaterialIcons:size=10
-;   font-2 = Termsynu:size=8;-1
-;   font-3 = FontAwesome:size=10
-; See the Fonts wiki page for more details
-font-0 = fixed:pixelsize=12;1
-font-1 = FontAwesome5Free:style=Solid:pixelsize=12
-font-2 = FontAwesome5Brands:style=Solid:pixelsize=12
-
-; Modules are added to one of the available blocks
-;   modules-left = cpu ram
-;   modules-center = xwindow xbacklight
-;   modules-right = ipc clock
-modules-left = i3
-modules-center =
-modules-right = player xbacklight volume keyboard wlan battery date time
-
-; The separator will be inserted between the output of each module
-separator =
-
-; This value is used to add extra spacing between elements
-; @deprecated: This parameter will be removed in an upcoming version
-spacing = 0
-
-; Opacity value between 0.0 and 1.0 used on fade in/out
-dim-value = 1.0
-
-; Value to be used to set the WM_NAME atom
-; If the value is empty or undefined, the atom value
-; will be created from the following template: polybar-[BAR]_[MONITOR]
-; NOTE: The placeholders are not available for custom values
 wm-name = i3
 
-; Locale used to localize various module data (e.g. date)
-; Expects a valid libc locale, for example: sv_SE.UTF-8
-locale = 
+;== Module Location ========================================================
 
-; Position of the system tray window
-; If empty or undefined, tray support will be disabled
-; NOTE: A center aligned tray will cover center aligned modules
-;
-; Available positions:
-;   left
-;   center
-;   right
-tray-position =
+modules-left = i3
+modules-right = player xbacklight volume battery keyboard network date time
 
-; If true, the bar will not shift its
-; contents when the tray changes
-tray-detached = false
-
-; Tray icon max size
-tray-maxsize = 16
-
-; Enable pseudo transparency
-; Will automatically be enabled if a fully transparent
-; background color is defined using `tray-background`
-tray-transparent = false
-
-; Background color for the tray container
-; By default the tray container will use the bar
-; background color.
-; Note: 32 bit alpha blending is not supported.
-tray-background = ${root.background}
-
-; Tray offset defined as pixel value (e.g. 35) or percentage (e.g. 50%)
-tray-offset-x = 0
-tray-offset-y = 0
-
-; Pad the sides of each tray icon
-tray-padding = 0
-
-; Scale factor for tray clients
-tray-scale = 1.0
-
-; Restack the bar window and put it above the
-; selected window manager's root
-;
-; Fixes the issue where the bar is being drawn
-; on top of fullscreen window's
-;
-; Currently supported WM's:
-;   bspwm
-;   i3 (requires: `override-redirect = true`)
-wm-restack = i3
-
-; Enable support for inter-process messaging
-; See the Messaging wiki page for more details.
-enable-ipc = false
-
-; Fallback click handlers that will be called if
-; there's no matching module handler found.
-click-left = 
-click-middle = 
-click-right =
-scroll-up =
-scroll-down =
-double-click-left =
-double-click-middle =
-double-click-right =
-
-; Requires polybar to be built with xcursor support (xcb-util-cursor)
-; Possible values are:
-; - default   : The default pointer as before, can also be an empty string (default)
-; - pointer   : Typically in the form of a hand
-; - ns-resize : Up and down arrows, can be used to indicate scrolling
-cursor-click = 
-cursor-scroll = 
+;== Modules ========================================================
 
 [module/i3]
 type = internal/i3
@@ -214,144 +107,87 @@ wrapping-scroll = false
 enable-scroll = false
 
 ; Only show workspaces on the same output as the bar
-;pin-workspaces = true
+pin-workspaces = true
 
 ; mode = when showing options for an i3 mode
+label-mode = %mode%
 label-mode-padding = 2
-label-mode-foreground = #000
-label-mode-background = ${colors.modus-background}
+label-mode-foreground = ${color.fg}
+label-mode-background = ${color.curgent}
 
 ; focused = Active workspace on focused monitor
-label-focused = %index%: %icon%
-label-focused-background = ${colors.focused-workspace}
-;label-focused-underline = ${colors.color2}
-label-focused-padding = 1
+label-focused = %index%
+label-focused-foreground = ${color.acolor}
+label-focused-underline = ${color.acolor}
+label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = ${self.label-focused}
 label-unfocused-padding = ${self.label-focused-padding}
-label-unfocused-underline = ${colors.underlines}
-;label-unfocused-background = ${colors.color2}
 
 ; visible = Active workspace on unfocused monitor
 label-visible = ${self.label-focused}
-label-visible-background = ${self.label-focused-background}
-label-visible-underline = ${colors.underlines}
+label-visible-foreground = ${self.label-focused-foreground}
+label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
 label-urgent = ${self.label-focused}
-label-urgent-background = ${colors.alert}
+label-urgent-foreground = ${color.curgent}
+label-urgent-underline = ${color.curgent}
 label-urgent-padding = ${self.label-focused-padding}
 
-ws-icon-0 = 1;
-ws-icon-1 = 2;
-ws-icon-2 = 3;
-ws-icon-3 = 4;
-ws-icon-4 = 5;
-ws-icon-5 = 6;
-ws-icon-6 = 7;
-ws-icon-7 = 8;
-ws-icon-8 = 9;
-ws-icon-9 = 10;
-ws-icon-default =
+[module/player]
+type = custom/script
+exec = ~/.config/polybar/scripts/player-mpris-tail/player-mpris-tail.py
+tail = true
+click-left =   ~/.config/polybar/scripts/player-mpris-tail/player-ctrl.sh play-pause
+click-right =  ~/.config/polybar/scripts/player-mpris-tail/player-ctrl.sh next
+click-middle = ~/.config/polybar/scripts/player-mpris-tail/player-ctrl.sh previous
+
+[module/battery]
+type = internal/battery
+full-at = 99
+battery = BAT0
+adapter = AC0
+
+format-charging = <animation-charging> <label-charging>
+label-charging = %percentage%%
+
+format-discharging = <ramp-capacity> <label-discharging>
+label-discharging = %percentage%%
+
+format-full = <label-full>
+format-full-prefix = " "
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-0-foreground = ${color.red}
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+
+animation-charging-framerate = 750
 
 [module/xbacklight]
 type = internal/xbacklight
 
 format = <label>
 format-prefix = " "
-;format-prefix-foreground = ${colors.primary}
-;format-prefix-underline = ${colors.white}
 label = %percentage%%
-;label-underline = ${colors.white}
-
-[module/wlan]
-type = internal/network
-interface = wlp2s0
-interval = 3.0
-
-format-connected = <label-connected>
-format-connected-prefix = " "
-;format-connected-prefix-foreground = ${colors.primary}
-;format-connected-prefix-underline = ${colors.green}
-label-connected = %essid%
-;label-connected-underline = ${colors.green}
-
-format-disconnected = <label-disconnected>
-format-disconnected-prefix = ${self.format-connected-prefix}
-;format-disconnected-prefix-underline = ${colors.green}
-;format-disconnected-prefix-foreground = ${colors.primary}
-label-disconnected = %ifname% disconnected
-;label-disconnected-underline = ${colors.green}
-
-[module/time]
-type = internal/date
-interval = 10
-
-time = %H:%M
-
-format-prefix = " "
-;format-prefix-foreground = ${colors.primary}
-;format-prefix-underline = ${colors.magenta}
-
-label = %time%
-;label-underline = ${colors.magenta}
-
-[module/date]
-type = internal/date
-interval = 3600
-
-date = %a %b %e
-
-format-prefix = " "
-;format-prefix-foreground = ${colors.primary}
-;format-prefix-underline = ${colors.cyan}
-
-label = %date%
-;label-underline = ${colors.cyan}
 
 [module/volume]
-type = internal/volume
-
+type = internal/alsa
+format-volume = <label-volume>
 format-volume-prefix = " "
-;format-volume-prefix-underline = ${colors.red}
-;format-volume-prefix-foreground = ${colors.primary}
-label-volume = %percentage%%
-;label-volume-underline = ${colors.red}
-
-format-muted-prefix = ${self.format-volume-prefix}
-;format-muted-prefix-underline = ${colors.red}
-;format-muted-prefix-foreground = ${self.format-volume-prefix-foreground}
-label-muted = ""
-;label-muted-underline = ${colors.red}
-
-[module/battery]
-type = internal/battery
-battery = BAT0
-adapter = AC0
-full-at = 98
-poll-interval = 60
-
-format-charging-prefix = " "
-;format-charging-prefix-underline = ${colors.yellow}
-;format-charging-prefix-foreground = ${colors.primary}
-format-charging = <label-charging>
-label-charging = "%percentage%%" 
-;label-charging-underline = ${colors.yellow}
-
-format-discharging-prefix = " "
-;format-discharging-prefix-underline = ${colors.yellow}
-;format-discharging-prefix-foreground = ${colors.primary}
-format-discharging = <label-discharging>
-label-discharging = "%percentage%%"
-;label-discharging-underline = ${colors.yellow}
-
-format-full-prefix = ${self.format-charging-prefix}
-;format-full-prefix-underline = ${colors.yellow}
-;format-full-prefix-foreground = ${colors.primary}
-label-full = ${self.label-charging}
-;label-full-underline = ${colors.yellow}
+label-volume = "%percentage%%"
+label-muted = ""
 
 [module/keyboard]
 type = internal/xkeyboard
@@ -363,40 +199,39 @@ blacklist-1 = scroll lock
 format = <label-layout>
 format-spacing = 0
 label-layout = %name%
-;label-layout-foreground = ${colors.cyan}
-;label-layout-underline = ${colors.cyan}
 format-prefix = " "
-;format-prefix-foreground = ${colors.cyan}
-;format-prefix-underline = ${colors.cyan}
 
-[module/player]
-type = custom/script
-exec = ~/Documents/dotfiles/polybar/custom_scripts/player-mpris-tail/player-mpris-tail.py
-tail = true
-click-left = ~/Documents/dotfiles/polybar/custom_scripts/player-mpris-tail/player-ctrl.sh play-pause
-click-right = ~/Documents/dotfiles/polybar/custom_scripts/player-mpris-tail/player-ctrl.sh next
-click-middle = ~/Documents/dotfiles/polybar/custom_scripts/player-mpris-tail/player-ctrl.sh previous
-;label-underline = ${colors.magenta}
+[module/network]
+type = internal/network
+interface = wlp2s0
+interval = 3.0
 
-[settings]
-screenchange-reload = true
-;compositing-background = xor
-;compositing-background = screen
-;compositing-foreground = source
-;compositing-border = over
+format-connected-prefix = " "
+format-connected = <label-connected>
+label-connected = %essid%
 
-; Define fallback values used by all module formats
-;format-foreground =
-;format-background =
-format-underline = ${colors.underlines}
-;format-overline =
-;format-spacing =
-;format-padding =
-;format-margin =
-;format-offset =
+format-disconnected-prefix = ${self.format-connected-prefix}
+format-disconnected = <label-disconnected>
+label-disconnected = %ifname% disconnected
 
-[global/wm]
-margin-top = 2
-margin-bottom = 0
+[module/time]
+type = internal/date
+interval = 10
 
-; vim:ft=dosini
+time = %H:%M
+
+format-prefix = " "
+format = <label>
+label = %time%
+
+[module/date]
+type = internal/date
+interval = 3600
+
+date = "%a %b %e"
+
+format-prefix = " "
+format = <label>
+label = %date%
+
+;== EOF ========================================================
