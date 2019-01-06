@@ -75,8 +75,6 @@ module-margin-right = 1
 font-0 = "Fantasque Sans Mono:pixelsize=12;2"
 font-1 = "Font Awesome 5 Free:style=Regular:size=13;4"
 font-2 = "Font Awesome 5 Free:style=Solid:size=13;4"
-font-3 = "Material Icons:size=13;4"
-;font-2 = FontAwesome5Brands:style=Solid:pixelsize=12
 
 ;==========================================================
 
