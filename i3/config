@@ -7,7 +7,7 @@ set $mod Mod4
 #Programs
 set $terminal urxvt
 set $Locker i3lock && sleep 1
-set $browser google-chrome-stable
+set $browser qutebrowser
 
 #System font
 font pango:DejaVu Sans Mono 8
