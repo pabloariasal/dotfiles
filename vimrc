@@ -104,6 +104,8 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+"fast buffer change
+nnoremap <Leader>b :set nomore <Bar> :ls <Bar> :set more <CR>:b<Space>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Searching
