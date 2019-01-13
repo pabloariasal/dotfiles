@@ -30,6 +30,8 @@ floating_modifier $mod
 # Starting programs
 bindsym $mod+Return exec $terminal
 bindsym $mod+b exec $browser
+bindsym $mod+n exec $terminal -e rtv
+bindsym $mod+t exec $terminal -e nvim
 
 # kill focused window
 bindsym $mod+q kill
