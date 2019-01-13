@@ -145,7 +145,6 @@ packadd minpac
 call minpac#init()
 call minpac#add('k-takata/minpac', {'type':'opt'})
 call minpac#add('tpope/vim-surround')
-call minpac#add('ctrlpvim/ctrlp.vim')
 call minpac#add('tpope/vim-unimpaired')
 call minpac#add('w0rp/ale')
 call minpac#add('SirVer/ultisnips')
@@ -155,6 +154,8 @@ call minpac#add('radenling/vim-dispatch-neovim')
 call minpac#add('tpope/vim-repeat')
 call minpac#add('tommcdo/vim-exchange')
 call minpac#add('ludovicchabant/vim-gutentags')
+call minpac#add('mhinz/vim-startify')
+call minpac#add('junegunn/fzf.vim')
 "colors
 call minpac#add('dracula/vim', {'name':'dracula'})
 call minpac#add('junegunn/seoul256.vim')
@@ -172,11 +173,8 @@ command! PackClean call minpac#clean()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Fuzzy Search
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_working_path_mode = 'ra'
-noremap <silent> <c-s> :CtrlPTag<CR>
-noremap <silent> <c-n> :CtrlPBuffer<CR>
+nnoremap <c-p> :<C-u>FZF<CR>
+nnoremap <c-n> :<C-u>Buffers<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Snippets
