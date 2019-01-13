@@ -106,7 +106,7 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 "fast buffer change
 nnoremap <Leader>b :set nomore <Bar> :ls <Bar> :set more <CR>:b<Space>
-
+nmap <F8> :TagbarToggle<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Searching
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -156,6 +156,8 @@ call minpac#add('tommcdo/vim-exchange')
 call minpac#add('ludovicchabant/vim-gutentags')
 call minpac#add('mhinz/vim-startify')
 call minpac#add('junegunn/fzf.vim')
+call minpac#add('tpope/vim-commentary')
+call minpac#add('majutsushi/tagbar')
 "colors
 call minpac#add('dracula/vim', {'name':'dracula'})
 call minpac#add('junegunn/seoul256.vim')
