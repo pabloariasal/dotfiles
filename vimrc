@@ -49,6 +49,8 @@ set autoread
 set tags+=tags;$HOME
 "Search for files in this directories, recursively
 set path+=$HOME/Documents/**,$HOME/Workspace/**
+"Don't change directory when opening file
+let g:startify_change_to_dir = 0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => User Interface
