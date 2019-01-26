@@ -207,7 +207,7 @@ blacklist-1 = scroll lock
 
 format = <label-layout>
 format-spacing = 0
-label-layout = %name%
+label-layout = %layout%
 format-prefix = " "
 
 [module/network]
