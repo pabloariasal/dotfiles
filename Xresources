@@ -1,5 +1,3 @@
-#Set font
-
 !Source code pro
 URxvt.allow_bold:           true
 URxvt*font: xft:source code pro:regular:pixelsize=14
