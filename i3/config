@@ -36,7 +36,7 @@ bindsym $mod+Ctrl+8 exec spotify
 bindsym $mod+Ctrl+9 exec thunderbird
 
 # Assign certain programs to specific workspaces
-assign [class="weechat_instance"] 6
+assign [instance="weechat_instance"] 6
 assign [instance="rtv_instance"] 7
 for_window [class="Spotify"] move to workspace 8
 assign [class="^Thunderbird$"] 9
@@ -129,13 +129,6 @@ bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
-
-# Assign client to specific workspaces
-set $mail_ws 9
-set $player_ws 8
-
-assign [class="Thunderbird"] $mail_ws
-#for_window [class="Spotify"] move to workspace $player_ws, workspace --no-auto-back-and-forth $player_ws
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
