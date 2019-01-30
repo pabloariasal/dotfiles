@@ -178,6 +178,7 @@ command! PackClean call minpac#clean()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <c-p> :<C-u>FZF<CR>
 nnoremap <c-n> :<C-u>Buffers<CR>
+nnoremap <Leader>g :<C-u>Rg<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Snippets
