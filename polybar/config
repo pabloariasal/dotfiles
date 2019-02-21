@@ -72,9 +72,9 @@ module-margin-right = 1
 
 ;==========================================================
 
-font-0 = "Fantasque Sans Mono:pixelsize=12;2"
-font-1 = "Font Awesome 5 Free:style=Regular:size=13;4"
-font-2 = "Font Awesome 5 Free:style=Solid:size=13;4"
+font-0 = "Fantasque Sans Mono:pixelsize=12;4"
+font-1 = "Font Awesome 5 Free:style=Regular:size=12;4"
+font-2 = "Font Awesome 5 Free:style=Solid:size=12;4"
 
 ;==========================================================
 
@@ -92,8 +92,8 @@ wm-name = i3
 
 ;== Module Location ========================================================
 
-modules-left = i3
-modules-right = player xbacklight volume battery keyboard network date time
+modules-left = i3 window
+modules-right = player time-colombia xbacklight volume battery keyboard network date time
 
 ;== Modules ========================================================
 
@@ -154,6 +154,12 @@ click-left =   ~/.config/polybar/scripts/player-mpris-tail/player-ctrl.sh play-p
 click-right =  ~/.config/polybar/scripts/player-mpris-tail/player-ctrl.sh next
 click-middle = ~/.config/polybar/scripts/player-mpris-tail/player-ctrl.sh previous
 
+[module/time-colombia]
+format-prefix = " "
+type = custom/script
+exec = TZ='America/Bogota' date +"BOG %H:%M"
+interval = 30
+
 [module/battery]
 type = internal/battery
 full-at = 99
@@ -183,6 +189,9 @@ animation-charging-3 = 
 animation-charging-4 = 
 
 animation-charging-framerate = 750
+
+[module/window]
+type = internal/xwindow
 
 [module/xbacklight]
 type = internal/xbacklight
