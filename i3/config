@@ -200,12 +200,19 @@ bindsym XF86AudioRaiseVolume exec amixer set Master 5%+
 bindsym XF86AudioLowerVolume exec amixer set Master 5%-
 bindsym XF86AudioMute exec amixer set Master toggle
 
-#Brightness
+#Brightness Control
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
+# Media Player Control
+bindsym $mod+F8 exec playerctl play-pause
+bindsym $mod+F9 exec playerctl next
+bindsym $mod+F7 exec playerctl previous
+
 # start compton in background as daemon process
 exec_always --no-startup-id compton --config $HOME/.config/compton.conf -b
+
+# Wallpaper
 exec_always --no-startup-id feh --bg-scale /home/pablo/Documents/wallpapers/IqqbRKA.jpg
 
 # start polybar
