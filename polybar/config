@@ -128,7 +128,7 @@ ws-icon-default =
 label-focused = %icon% %name%
 label-focused-foreground = ${color.acolor}
 label-focused-underline = ${color.acolor}
-label-focused-padding = 2
+label-focused-padding = 1
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = ${self.label-focused}
@@ -195,6 +195,7 @@ type = internal/xwindow
 
 [module/xbacklight]
 type = internal/xbacklight
+label-maxlen = 50
 
 format = <label>
 format-prefix = " "
