@@ -108,7 +108,14 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 "fast buffer change
 nnoremap <Leader>b :set nomore <Bar> :ls <Bar> :set more <CR>:b<Space>
+"open tagbar with f8
 nmap <F8> :TagbarToggle<CR>
+"Convenient system clipboard bindings
+nnoremap <leader>p "+p
+xnoremap <leader>p "+p
+nnoremap <leader>P "+P
+nnoremap <leader>y "+y
+xnoremap <leader>y "+y
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Searching
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
