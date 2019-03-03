@@ -15,18 +15,6 @@
 
 [color]
 
-trans = #00000000
-white = #FFFFFF
-black = #000000
-
-bg = #FFFFFF
-fg = #2E2E2E
-fg-alt = #424242
-
-acolor = #c0ca33
-curgent = #e53935
-coccupied = #039be5
-
 ## Material Colors
 
 red = #e53935
@@ -49,12 +37,18 @@ brown = #6d4c41
 grey = #757575
 blue-gray = #546e7a
 
+bg = #FFFFFF
+fg = #2E2E2E
+
+alternate-color = ${self.light-green}
+curgent = #e53935
+
 ;==========================================================
 
 [bar/main]
 monitor = ${env:MONITOR:eDP1}
 width = 100%
-height = 25
+height = 20
 offset-x = 5%
 offset-y = 2%
 bottom = false
@@ -64,17 +58,19 @@ line-size = 2
 background = ${color.bg}
 foreground = ${color.fg}
 
-border-size = 3
+border-size = 2
 border-color = ${color.bg}
 
 module-margin-left = 1
 module-margin-right = 1
 
+separator = |
+
 ;==========================================================
 
-font-0 = "Fantasque Sans Mono:pixelsize=12;4"
-font-1 = "Font Awesome 5 Free:style=Regular:size=12;4"
-font-2 = "Font Awesome 5 Free:style=Solid:size=12;4"
+font-0 = "Fantasque Sans Mono:pixelsize=10;4"
+font-1 = "Font Awesome 5 Free:style=Regular:size=10;4"
+font-2 = "Font Awesome 5 Free:style=Solid:size=10;4"
 
 ;==========================================================
 
@@ -126,8 +122,8 @@ ws-icon-default =
 
 ; focused = Active workspace on focused monitor
 label-focused = %icon% %name%
-label-focused-foreground = ${color.acolor}
-label-focused-underline = ${color.acolor}
+label-focused-foreground = ${color.alternate-color}
+label-focused-underline = ${color.alternate-color}
 label-focused-padding = 1
 
 ; unfocused = Inactive workspace on any monitor
