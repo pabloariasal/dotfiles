@@ -189,6 +189,9 @@ animation-charging-framerate = 750
 
 [module/window]
 type = internal/xwindow
+format = <label>
+label = %title%
+label-maxlen = 150
 
 [module/xbacklight]
 type = internal/xbacklight
