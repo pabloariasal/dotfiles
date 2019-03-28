@@ -7,37 +7,27 @@ set $mod Mod4
 #Programs
 set $terminal urxvt
 set $Locker i3lock && sleep 1
-set $browser qutebrowser
+set $browser-main qutebrowser
+set $browser-alt chromium
 
 #System font
 font pango:DejaVu Sans Mono 8
-
-# Colors
-set $black #010101
-set $gray #808080
-set $accent #c6ff00
-set $urgent #DF6418
-
-# Window colors
-client.focused $black $black $accent $gray
-client.focused_inactive $black $black $gray $gray
-client.unfocused $black $black $gray $gray
-client.urgent $black $black $urgent $gray
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # Starting programs
 bindsym $mod+Return exec $terminal
-bindsym $mod+b exec $browser
+bindsym $mod+b exec $browser-main
+bindsym $mod+Shift+b exec $browser-alt
 bindsym $mod+Ctrl+6 exec $terminal -name weechat_instance -e weechat
 bindsym $mod+Ctrl+7 exec $terminal -name rtv_instance -e rtv
 bindsym $mod+Ctrl+8 exec spotify
 bindsym $mod+Ctrl+9 exec thunderbird
 
 # Assign certain programs to specific workspaces
-assign [instance="weechat_instance"] 6
-assign [instance="rtv_instance"] 7
+assign [instance="^weechat_instance$"] 6
+assign [instance="^rtv_instance$"] 7
 for_window [class="Spotify"] move to workspace 8
 assign [class="^Thunderbird$"] 9
 
