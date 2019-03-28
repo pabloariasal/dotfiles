@@ -1461,7 +1461,7 @@ c.url.default_page = 'about:blank'
 ## used by prepending the search engine name to the search term, e.g.
 ## `:open google qutebrowser`.
 ## Type: Dict
-c.url.searchengines = {'DEFAULT': 'https://www.google.com/search?hl=en&q={}', 'r': 'https://reddit.com/r/{}'}
+c.url.searchengines = {'DEFAULT': 'https://www.google.com/search?hl=en&q={}', 'aw': 'https://wiki.archlinux.org/?search={}'}
 
 ## Page(s) to open at the start.
 ## Type: List of FuzzyUrl, or FuzzyUrl
