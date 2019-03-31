@@ -7,8 +7,7 @@ set $mod Mod4
 #Programs
 set $terminal urxvt
 set $Locker i3lock && sleep 1
-set $browser-main qutebrowser
-set $browser-alt chromium
+set $browser chromium
 
 #System font
 font pango:DejaVu Sans Mono 8
@@ -18,8 +17,7 @@ floating_modifier $mod
 
 # Starting programs
 bindsym $mod+Return exec $terminal
-bindsym $mod+b exec $browser-main
-bindsym $mod+Shift+b exec $browser-alt
+bindsym $mod+b exec $browser
 bindsym $mod+Ctrl+6 exec $terminal -name weechat_instance -e weechat
 bindsym $mod+Ctrl+7 exec $terminal -name rtv_instance -e rtv
 bindsym $mod+Ctrl+8 exec spotify
