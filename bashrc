@@ -4,6 +4,7 @@
 alias 'ls=ls --color=auto'
 alias ll='ls -l'
 alias n='nvim'
+alias e='exa'
 
 # Import colorscheme from 'wal' asynchronously
 # &   # Run the process in the background.
