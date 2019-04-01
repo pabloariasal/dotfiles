@@ -50,8 +50,6 @@ set autoread
 set tags+=tags;$HOME
 "Search for files in this directories, recursively
 set path+=$HOME/Documents/**,$HOME/Workspace/**
-"Don't change directory when opening file
-let g:startify_change_to_dir = 0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => User Interface
@@ -107,8 +105,6 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-"fast buffer change
-nnoremap <Leader>b :set nomore <Bar> :ls <Bar> :set more <CR>:b<Space>
 "open tagbar with f8
 nmap <F8> :TagbarToggle<CR>
 "Convenient system clipboard bindings
@@ -128,8 +124,6 @@ set smartcase
 set incsearch
 "Highlight matches
 set hlsearch
-"Turn off search highlight
-nnoremap <Leader>c :noh<cr>
 "Set up RigGrep as external grepper
 set grepprg=rg\ -H\ --no-heading\ --vimgrep
 set grepformat=%f:%l:%c:%m
@@ -207,7 +201,7 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips", "mysnippets"]
 nnoremap <Space> za
 vnoremap <Space> za
 "don't allow nested folds
-set foldnestmax=1
+set foldnestmax=2
 "don't fold python docstrings
 let g:SimpylFold_fold_docstring = 0
 
