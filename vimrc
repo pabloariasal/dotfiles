@@ -25,7 +25,8 @@
 "   -> Fuzzy Search
 "   -> Snippets
 "   -> Folding
-"   -> Custom Commands
+"   -> ctags
+"   -> Linting
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -150,35 +151,33 @@ set smarttab
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-packadd minpac
-call minpac#init()
-call minpac#add('k-takata/minpac', {'type':'opt'})
-call minpac#add('tpope/vim-surround')
-call minpac#add('tpope/vim-unimpaired')
-call minpac#add('w0rp/ale')
-call minpac#add('SirVer/ultisnips')
-call minpac#add('honza/vim-snippets')
-call minpac#add('tpope/vim-dispatch')
-call minpac#add('radenling/vim-dispatch-neovim')
-call minpac#add('tpope/vim-repeat')
-call minpac#add('tommcdo/vim-exchange')
-call minpac#add('ludovicchabant/vim-gutentags')
-call minpac#add('junegunn/fzf.vim')
-call minpac#add('tpope/vim-commentary')
-call minpac#add('majutsushi/tagbar')
+" auto-install vim-plug
+if empty(glob('~/.config/nvim/autoload/plug.vim'))
+  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+endif
+call plug#begin('~/.config/nvim/plugged')
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'neomake/neomake'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'tpope/vim-repeat'
+Plug 'tommcdo/vim-exchange'
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-commentary'
+Plug 'majutsushi/tagbar'
 "colors
-call minpac#add('dracula/vim', {'name':'dracula'})
-call minpac#add('junegunn/seoul256.vim')
-call minpac#add('romainl/Apprentice')
-call minpac#add('morhetz/gruvbox')
-call minpac#add('NLKNguyen/papercolor-theme')
-call minpac#add('nanotech/jellybeans.vim')
+Plug 'dracula/vim', {'as':'dracula'}
+Plug 'junegunn/seoul256.vim'
+Plug 'romainl/Apprentice'
+Plug 'morhetz/gruvbox'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'nanotech/jellybeans.vim'
 "Folding
-call minpac#add('tmhedberg/SimpylFold')
-call minpac#add('nelstrom/vim-markdown-folding')
-
-command! PackUpdate call minpac#update()
-command! PackClean call minpac#clean()
+Plug 'tmhedberg/SimpylFold'
+Plug 'nelstrom/vim-markdown-folding'
+call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Fuzzy Search
@@ -225,7 +224,7 @@ if !empty(glob(".ctagsignore"))
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Custom Commands
+" => Linting
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-":W sudo saves the file (useful for handling the permission-denied error)
-command! W w !sudo tee % > /dev/null
+let g:neomake_python_enabled_makers = ['pylint', 'pycodestyle', 'flake8']
+call neomake#configure#automake('rw', 500)
