@@ -14,34 +14,11 @@
 ;==========================================================
 
 [color]
+bg = ${xrdb:color0:#222}
+fg = ${xrdb:color7:#222}
 
-## Material Colors
-
-red = #e53935
-pink = #d81b60
-purple = #8e24aa
-deep-purple = #5e35b1
-indigo = #3949ab
-blue = #1e88e5
-light-blue = #039be5
-cyan = #00acc1
-teal = #00897b
-green = #43a047
-light-green = #7cb342
-lime = #c0ca33
-yellow = #fdd835
-amber = #ffb300
-orange = #fb8c00
-deep-orange = #f4511e
-brown = #6d4c41
-grey = #757575
-blue-gray = #546e7a
-
-bg = #FFFFFF
-fg = #2E2E2E
-
-alternate-color = ${self.light-green}
-curgent = #e53935
+alternate-color = ${xrdb:color1:#222}
+curgent = ${xrdb:color3:#222}
 
 ;==========================================================
 
@@ -123,7 +100,7 @@ ws-icon-default =
 ; focused = Active workspace on focused monitor
 label-focused = %icon% %name%
 label-focused-foreground = ${color.alternate-color}
-label-focused-underline = ${color.alternate-color}
+;label-focused-underline = ${color.alternate-color}
 label-focused-padding = 1
 
 ; unfocused = Inactive workspace on any monitor
@@ -133,13 +110,13 @@ label-unfocused-padding = ${self.label-focused-padding}
 ; visible = Active workspace on unfocused monitor
 label-visible = ${self.label-focused}
 label-visible-foreground = ${self.label-focused-foreground}
-label-visible-underline = ${self.label-focused-underline}
+;label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
 label-urgent = ${self.label-focused}
 label-urgent-foreground = ${color.curgent}
-label-urgent-underline = ${color.curgent}
+;label-urgent-underline = ${color.curgent}
 label-urgent-padding = ${self.label-focused-padding}
 
 [module/player-mpris-tail]
