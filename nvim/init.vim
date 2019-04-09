@@ -27,6 +27,7 @@
 "   -> Folding
 "   -> ctags
 "   -> Linting
+"   -> Autocompletion
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -161,6 +162,7 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-commentary'
 Plug 'majutsushi/tagbar'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 "colors
 Plug 'dracula/vim', {'as':'dracula'}
 Plug 'junegunn/seoul256.vim'
@@ -222,3 +224,8 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:neomake_python_enabled_makers = ['pylint', 'pycodestyle', 'flake8']
 call neomake#configure#automake('rw', 500)
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Autocompletion
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:deoplete#enable_at_startup = 1
