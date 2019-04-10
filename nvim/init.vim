@@ -230,3 +230,4 @@ call neomake#configure#automake('rw', 500)
 " => Autocompletion
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:deoplete#enable_at_startup = 1
+set dictionary+=/usr/share/dict/words
