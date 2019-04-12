@@ -230,4 +230,7 @@ call neomake#configure#automake('rw', 500)
 " => Autocompletion
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:deoplete#enable_at_startup = 1
-set dictionary+=/usr/share/dict/words
+
+" enable dictionary completion
+set dictionary+=/usr/share/dict/american-english
+call deoplete#custom#option('ignore_sources', {'cpp': ['dictionary'], 'python': ['dictionary']})
