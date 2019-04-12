@@ -115,13 +115,18 @@ xnoremap <leader>p "+p
 nnoremap <leader>P "+P
 nnoremap <leader>y "+y
 xnoremap <leader>y "+y
-" Easy grepping
+"Easy grepping
 nnoremap <Leader>g :<C-u>grep! 
-nnoremap <Leader>G :<C-u>grep 
+"Grep word under the cursor
 nnoremap <Leader>gc :<C-u>grep! <C-r><C-w>
-" Toggle locations and quickfix list
+"Toggle location and quickfix lists
 nmap <Leader>q <Plug>(qf_qf_toggle)
 nmap <Leader>l <Plug>(qf_loc_toggle)
+"Switch focus quickfix window
+nmap <Leader>w <Plug>(qf_qf_switch)
+"Close preview window
+nnoremap <Leader>c :<C-u>pclose<CR>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Searching
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -171,6 +176,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-commentary'
 Plug 'majutsushi/tagbar'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'deoplete-plugins/deoplete-jedi'
 Plug 'romainl/vim-qf'
 Plug 'itchyny/lightline.vim'
 Plug 'itchyny/vim-gitbranch'
@@ -240,11 +246,10 @@ let g:neomake_python_enabled_makers = ['pylint', 'pycodestyle', 'flake8']
 " => Autocompletion
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:deoplete#enable_at_startup = 1
-
-" enable dictionary completion
+"Enable dictionary completion
 set dictionary+=/usr/share/dict/american-english
 call deoplete#custom#option('ignore_sources', {'cpp': ['dictionary'], 'python': ['dictionary']})
-
+let g:deoplete#sources#jedi#show_docstring = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Statusline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
