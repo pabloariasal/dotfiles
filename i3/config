@@ -33,12 +33,7 @@ assign [class="^Thunderbird$"] 9
 bindsym $mod+q kill
 
 # disable title bars
-for_window [class="^.*"] border pixel 0
-
-# i3 gaps
-gaps inner 4
-gaps outer 0
-smart_gaps on
+for_window [class="^.*"] border pixel 2
 
 # start dmenu (a program launcher)
 #bindsym $mod+d exec dmenu_run
