@@ -114,6 +114,13 @@ xnoremap <leader>p "+p
 nnoremap <leader>P "+P
 nnoremap <leader>y "+y
 xnoremap <leader>y "+y
+" Easy grepping
+nnoremap <Leader>g :<C-u>grep! 
+nnoremap <Leader>G :<C-u>grep 
+nnoremap <Leader>gc :<C-u>grep! <C-r><C-w>
+" Toggle locations and quickfix list
+nmap <Leader>q <Plug>(qf_qf_toggle)
+nmap <Leader>l <Plug>(qf_loc_toggle)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Searching
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -163,6 +170,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-commentary'
 Plug 'majutsushi/tagbar'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'romainl/vim-qf'
 "colors
 Plug 'dracula/vim', {'as':'dracula'}
 Plug 'junegunn/seoul256.vim'
@@ -180,7 +188,6 @@ call plug#end()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <c-p> :<C-u>FZF<CR>
 nnoremap <c-n> :<C-u>Buffers<CR>
-nnoremap <Leader>g :<C-u>Rg<CR>
 nnoremap <Leader>t :<C-u>Tags<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
