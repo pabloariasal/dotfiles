@@ -231,7 +231,7 @@ endif
 " => Linting
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:neomake_python_enabled_makers = ['pylint', 'pycodestyle', 'flake8']
-call neomake#configure#automake('rw', 500)
+"call neomake#configure#automake('rw', 500)
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Autocompletion
