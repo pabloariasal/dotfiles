@@ -209,6 +209,7 @@ let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsSnippetsDir="mysnippets"
 "read snippets from the following directories. NOTE: dirs must be in runtmepath
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "mysnippets"]
+let g:UltiSnipsEnableSnipMate = 0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Folding
