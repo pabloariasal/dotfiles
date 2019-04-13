@@ -28,7 +28,6 @@
 "   -> ctags
 "   -> Linting
 "   -> Autocompletion
-"   -> Statusline
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -178,8 +177,6 @@ Plug 'majutsushi/tagbar'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'deoplete-plugins/deoplete-jedi'
 Plug 'romainl/vim-qf'
-Plug 'itchyny/lightline.vim'
-Plug 'itchyny/vim-gitbranch'
 "colors
 Plug 'dracula/vim', {'as':'dracula'}
 Plug 'junegunn/seoul256.vim'
@@ -250,16 +247,3 @@ let g:deoplete#enable_at_startup = 1
 set dictionary+=/usr/share/dict/american-english
 call deoplete#custom#option('ignore_sources', {'cpp': ['dictionary'], 'python': ['dictionary']})
 let g:deoplete#sources#jedi#show_docstring = 1
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Statusline
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:lightline = {
-      \ 'colorscheme': 'one',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'gitbranch#name'
-      \ },
-      \ }
