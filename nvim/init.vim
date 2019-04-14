@@ -219,7 +219,10 @@ let g:UltiSnipsEnableSnipMate = 0
 nnoremap <Space> za
 vnoremap <Space> za
 "don't allow nested folds
+set foldmethod=syntax
 set foldnestmax=2
+set nofoldenable
+set foldlevel=1
 "don't fold python docstrings
 let g:SimpylFold_fold_docstring = 0
 
