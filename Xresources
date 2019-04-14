@@ -1,10 +1,8 @@
 !Source code pro
 URxvt.allow_bold:           true
-URxvt.font: xft:source code pro:regular:pixelsize=14
-URxvt.imFont: xft:source code pro:regular:pixelsize=14
-URxvt.boldFont: xft:source code pro:semibold:pixelsize=14
-URxvt.italicFont: xft:source code pro:italic:pixelsize=14
-URxvt.boldItalicFont: xft:source code pro:semibold:italic:pixelsize=14
+URxvt.font: xft:DejaVuSansMono Nerd Font Mono:Book:size=10
+URxvt.boldFont: xft:DejaVuSansMono Nerd Font Mono:Bold:size=10
+URxvt.italicFont: xft:DejaVuSansMono Nerd Font Mono:Oblique:size=10
 URxvt.letterSpace: -1
 
 ! do not scroll with output
