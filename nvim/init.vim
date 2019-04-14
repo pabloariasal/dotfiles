@@ -115,16 +115,16 @@ nnoremap <leader>P "+P
 nnoremap <leader>y "+y
 xnoremap <leader>y "+y
 "Easy grepping
-nnoremap <Leader>g :<C-u>grep! 
+nnoremap <Leader>gr :<C-u>grep! 
 "Grep word under the cursor
-nnoremap <Leader>gc :<C-u>grep! <C-r><C-w>
+nnoremap <Leader>gc :<C-u>grep! <C-r><C-w><CR>
 "Toggle location and quickfix lists
 nmap <Leader>q <Plug>(qf_qf_toggle)
 nmap <Leader>l <Plug>(qf_loc_toggle)
 "Switch focus quickfix window
-nmap <Leader>w <Plug>(qf_qf_switch)
+nmap <Leader>fq <Plug>(qf_qf_switch)
 "Close preview window
-nnoremap <Leader>c :<C-u>pclose<CR>
+nnoremap <Leader>cp :<C-u>pclose<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Searching
@@ -195,6 +195,7 @@ call plug#end()
 nnoremap <c-p> :<C-u>FZF<CR>
 nnoremap <c-n> :<C-u>Buffers<CR>
 nnoremap <Leader>t :<C-u>Tags<CR>
+nnoremap <Leader>d :<C-u>BTags<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Snippets
