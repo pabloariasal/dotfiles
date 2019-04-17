@@ -28,6 +28,7 @@
 "   -> ctags
 "   -> Linting
 "   -> Autocompletion
+"   -> Statusline
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -252,3 +253,40 @@ let g:deoplete#enable_at_startup = 1
 set dictionary+=/usr/share/dict/american-english
 call deoplete#custom#option('ignore_sources', {'cpp': ['dictionary'], 'python': ['dictionary']})
 let g:deoplete#sources#jedi#show_docstring = 1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Statusline
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set statusline+=%F
+set statusline+=%m
+set statusline+=%h
+set statusline+=%r
+set statusline+=\ 
+set statusline+=%{b:gitbranch}
+set statusline+=%=
+set statusline+=%{strlen(&fenc)?&fenc:'none'}
+set statusline+=\ 
+set statusline+=%y
+set statusline+=\ 
+set statusline+=%l
+set statusline+=/
+set statusline+=%L
+set statusline+=\ 
+set statusline+=%P
+
+function! StatuslineGitBranch()
+  let b:gitbranch=""
+  if &modifiable
+    lcd %:p:h
+    let l:gitrevparse=system("git rev-parse --abbrev-ref HEAD")
+    lcd -
+    if l:gitrevparse!~"fatal: not a git repository"
+      let b:gitbranch="(".substitute(l:gitrevparse, '\n', '', 'g').") "
+    endif
+  endif
+endfunction
+
+augroup GetGitBranch
+  autocmd!
+  autocmd VimEnter,WinEnter,BufEnter * call StatuslineGitBranch()
+augroup END
