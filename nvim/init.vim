@@ -284,7 +284,7 @@ function! StatuslineGitBranch()
     let l:gitrevparse=system("git rev-parse --abbrev-ref HEAD")
     lcd -
     if l:gitrevparse!~"fatal: not a git repository"
-      let b:gitbranch="(".substitute(l:gitrevparse, '\n', '', 'g').") "
+      let b:gitbranch="[".substitute(l:gitrevparse, '\n', '', 'g')."] "
     endif
   endif
 endfunction
