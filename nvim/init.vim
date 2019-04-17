@@ -126,6 +126,8 @@ nmap <Leader>l <Plug>(qf_loc_toggle)
 nmap <Leader>fq <Plug>(qf_qf_switch)
 "Close preview window
 nnoremap <Leader>cp :<C-u>pclose<CR>
+" Open buffer deletion menu
+nnoremap <silent> <Leader>bd :<C-u>CloseBuffersMenu<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Searching
@@ -178,6 +180,7 @@ Plug 'majutsushi/tagbar'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'deoplete-plugins/deoplete-jedi'
 Plug 'romainl/vim-qf'
+Plug 'Asheq/close-buffers.vim'
 "colors
 Plug 'dracula/vim', {'as':'dracula'}
 Plug 'junegunn/seoul256.vim'
