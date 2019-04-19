@@ -48,8 +48,6 @@ separator = |
 
 font-0 = "Fantasque Sans Mono:pixelsize=10;4"
 font-1 = "Noto Color Emoji:style=Regular:scale=10;4"
-font-2 = "Font Awesome 5 Free:style=Regular:size=10;4"
-font-3 = "Font Awesome 5 Free:style=Solid:size=10;4"
 ;==========================================================
 
 cursor-click = pointer
@@ -132,7 +130,7 @@ click-middle = ~/polybar-scripts/polybar-scripts/player-mpris-tail/player-mpris-
 [module/time-colombia]
 format-prefix = "🇨🇴 "
 type = custom/script
-exec = TZ='America/Bogota' date +"BOG %H:%M"
+exec = TZ='America/Bogota' date +"%H:%M"
 interval = 30
 
 [module/battery]

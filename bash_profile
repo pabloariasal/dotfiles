@@ -1,9 +1,14 @@
 #
 # ~/.bash_profile
 #
-export PATH="$PATH:/home/pablo/Documents/dotfiles/scripts"
+
 [[ -f ~/.bashrc ]] && . ~/.bashrc
-if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
+
+# Add custom scripts to the path so that dmenu finds them
+export PATH="$PATH:/home/pablo/dotfiles/scripts"
+
+# Start x server
+if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
   exec startx
 fi
 

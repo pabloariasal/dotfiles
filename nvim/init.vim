@@ -181,6 +181,8 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'deoplete-plugins/deoplete-jedi'
 Plug 'romainl/vim-qf'
 Plug 'Asheq/close-buffers.vim'
+Plug 'deoplete-plugins/deoplete-tag'
+Plug 'deoplete-plugins/deoplete-dictionary'
 "colors
 Plug 'dracula/vim', {'as':'dracula'}
 Plug 'junegunn/seoul256.vim'
@@ -252,9 +254,20 @@ let g:neomake_python_enabled_makers = ['pylint', 'pycodestyle', 'flake8']
 " => Autocompletion
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:deoplete#enable_at_startup = 1
+
 "Enable dictionary completion
 set dictionary+=/usr/share/dict/american-english
 call deoplete#custom#option('ignore_sources', {'cpp': ['dictionary'], 'python': ['dictionary']})
+" Match by beginning of word
+call deoplete#custom#source(
+\ 'dictionary', 'matchers', ['matcher_head'])
+" Dictionary is already sorted, no need to sort it again.
+call deoplete#custom#source(
+\ 'dictionary', 'sorters', [])
+" Do not complete too short words
+call deoplete#custom#source(
+\ 'dictionary', 'min_pattern_length', 4)
+
 let g:deoplete#sources#jedi#show_docstring = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

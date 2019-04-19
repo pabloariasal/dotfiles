@@ -196,7 +196,7 @@ bindsym $mod+F7 exec playerctl previous
 exec_always --no-startup-id compton --config $HOME/.config/compton.conf -b
 
 # Wallpaper
-exec_always --no-startup-id feh --bg-scale /home/pablo/Documents/wallpapers/IqqbRKA.jpg
+exec_always --no-startup-id feh --bg-scale /home/pablo/Documents/wallpapers/arch_solarized.png
 
 # start polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
