@@ -36,8 +36,7 @@ bindsym $mod+q kill
 for_window [class="^.*"] border pixel 1
 
 # start dmenu (a program launcher)
-#bindsym $mod+d exec dmenu_run
-bindsym $mod+d exec rofi -show run
+bindsym $mod+d exec dmenu_run
 
 # change focus
 bindsym $mod+h focus left
