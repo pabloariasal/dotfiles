@@ -101,7 +101,7 @@ ws-icon-default =🖥
 ; focused = Active workspace on focused monitor
 label-focused = %icon% %name%
 label-focused-foreground = ${color.alternate-color}
-;label-focused-underline = ${color.alternate-color}
+label-focused-underline = ${color.alternate-color}
 label-focused-padding = 1
 
 ; unfocused = Inactive workspace on any monitor
