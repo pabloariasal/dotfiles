@@ -5,9 +5,9 @@ alias ls='ls --color=auto'
 alias ll='ls -l'
 alias n='nvim'
 alias e='exa'
-alias cp='nvim ~/Documents/dotfiles/polybar/config'
-alias ci='nvim ~/Documents/dotfiles/i3/config'
-alias cn='nvim ~/Documents/dotfiles/nvim/init.vim'
+alias poc='nvim ~/Documents/dotfiles/polybar/config'
+alias i3c='nvim ~/Documents/dotfiles/i3/config'
+alias nvc='nvim ~/Documents/dotfiles/nvim/init.vim'
 
 # Import colorscheme from 'wal' asynchronously
 # &   # Run the process in the background.
