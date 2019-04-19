@@ -47,9 +47,9 @@ separator = |
 ;==========================================================
 
 font-0 = "Fantasque Sans Mono:pixelsize=10;4"
-font-1 = "Font Awesome 5 Free:style=Regular:size=10;4"
-font-2 = "Font Awesome 5 Free:style=Solid:size=10;4"
-
+font-1 = "Noto Color Emoji:style=Regular:scale=10;4"
+font-2 = "Font Awesome 5 Free:style=Regular:size=10;4"
+font-3 = "Font Awesome 5 Free:style=Solid:size=10;4"
 ;==========================================================
 
 cursor-click = pointer
@@ -92,11 +92,11 @@ ws-icon-1 = 2;
 ws-icon-2 = 3;
 ws-icon-3 = 4;
 ws-icon-4 = 5;
-ws-icon-5 = 6;
-ws-icon-6 = 7;
-ws-icon-7 = 8;
-ws-icon-8 = 9;
-ws-icon-default =
+ws-icon-5 = 6;💬
+ws-icon-6 = 7;🤖
+ws-icon-7 = 8;🎧
+ws-icon-8 = 9;📬
+ws-icon-default =🖥
 
 ; focused = Active workspace on focused monitor
 label-focused = %icon% %name%
@@ -122,7 +122,7 @@ label-urgent-padding = ${self.label-focused-padding}
 
 [module/player-mpris-tail]
 type = custom/script
-exec = ~/polybar-scripts/polybar-scripts/player-mpris-tail/player-mpris-tail.py -f '{icon} {artist} - {title}' --icon-paused='' --icon-playing=''
+exec = ~/polybar-scripts/polybar-scripts/player-mpris-tail/player-mpris-tail.py -f '{icon} {artist} - {title}' --icon-paused='⏸' --icon-playing='🎵'
 tail = true
 label = %output%
 click-left = ~/polybar-scripts/polybar-scripts/player-mpris-tail/player-mpris-tail.py play-pause
@@ -130,7 +130,7 @@ click-right = ~/polybar-scripts/polybar-scripts/player-mpris-tail/player-mpris-t
 click-middle = ~/polybar-scripts/polybar-scripts/player-mpris-tail/player-mpris-tail.py previous
 
 [module/time-colombia]
-format-prefix = " "
+format-prefix = "🇨🇴 "
 type = custom/script
 exec = TZ='America/Bogota' date +"BOG %H:%M"
 interval = 30
@@ -141,29 +141,16 @@ full-at = 99
 battery = BAT0
 adapter = AC0
 
-format-charging = <animation-charging> <label-charging>
+format-charging-prefix = "🔋 "
+format-charging = <label-charging>
 label-charging = %percentage%%
 
-format-discharging = <ramp-capacity> <label-discharging>
-label-discharging = %percentage%%
-
 format-full = <label-full>
-format-full-prefix = " "
+format-full-prefix = "🔌 "
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-4 = 
-ramp-capacity-0-foreground = ${color.red}
-
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-3 = 
-animation-charging-4 = 
-
-animation-charging-framerate = 750
+format-discharging-prefix = "🔋 "
+format-discharging = <label-discharging>
+label-discharging = %percentage%%
 
 [module/window]
 type = internal/xwindow
@@ -176,15 +163,15 @@ type = internal/xbacklight
 label-maxlen = 50
 
 format = <label>
-format-prefix = " "
+format-prefix = "🔆 "
 label = %percentage%%
 
 [module/volume]
 type = internal/alsa
 format-volume = <label-volume>
-format-volume-prefix = " "
+format-volume-prefix = "🔊 "
 label-volume = "%percentage%%"
-label-muted = ""
+label-muted = "🔇"
 
 [module/keyboard]
 type = internal/xkeyboard
@@ -196,14 +183,14 @@ blacklist-1 = scroll lock
 format = <label-layout>
 format-spacing = 0
 label-layout = %layout%
-format-prefix = " "
+format-prefix = "⌨ "
 
 [module/network]
 type = internal/network
 interface = wlp2s0
 interval = 3.0
 
-format-connected-prefix = " "
+format-connected-prefix = "📶 "
 format-connected = <label-connected>
 label-connected = %essid%
 
@@ -217,7 +204,7 @@ interval = 10
 
 time = %H:%M
 
-format-prefix = " "
+format-prefix = "🕒 "
 format = <label>
 label = %time%
 
@@ -227,7 +214,7 @@ interval = 3600
 
 date = "%a %b %e"
 
-format-prefix = " "
+format-prefix = "📅 "
 format = <label>
 label = %date%
 
