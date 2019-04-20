@@ -139,7 +139,7 @@ full-at = 99
 battery = BAT0
 adapter = AC0
 
-format-charging-prefix = "🔋 "
+format-charging-prefix = "🔌 "
 format-charging = <label-charging>
 label-charging = %percentage%%
 
