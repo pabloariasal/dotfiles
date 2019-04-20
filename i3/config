@@ -18,12 +18,14 @@ floating_modifier $mod
 # Starting programs
 bindsym $mod+Return exec $terminal
 bindsym $mod+b exec $browser
+bindsym $mod+Ctrl+5 exec $terminal -name newsboat_instance -e newsboat
 bindsym $mod+Ctrl+6 exec $terminal -name weechat_instance -e weechat
 bindsym $mod+Ctrl+7 exec $terminal -name rtv_instance -e rtv
 bindsym $mod+Ctrl+8 exec spotify
 bindsym $mod+Ctrl+9 exec thunderbird
 
 # Assign certain programs to specific workspaces
+assign [instance="^newsboat_instance$"] 5
 assign [instance="^weechat_instance$"] 6
 assign [instance="^rtv_instance$"] 7
 for_window [class="Spotify"] move to workspace 8
