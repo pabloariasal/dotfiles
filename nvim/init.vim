@@ -190,6 +190,7 @@ Plug 'romainl/Apprentice'
 Plug 'morhetz/gruvbox'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'nanotech/jellybeans.vim'
+Plug 'aonemd/kuroi.vim'
 "Folding
 Plug 'tmhedberg/SimpylFold'
 Plug 'nelstrom/vim-markdown-folding'
