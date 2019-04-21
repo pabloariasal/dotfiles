@@ -26,8 +26,8 @@ alias nvc='nvim ~/dotfiles/nvim/init.vim'
 [[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
 
 #History
-#HISTSIZE=5000
-#HISTFILESIZE=10000
+HISTSIZE=5000
+HISTFILESIZE=10000
 #shopt -s histappend
 #export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
