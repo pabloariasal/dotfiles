@@ -51,7 +51,7 @@ set autoread
 "Look for tags file acendingly until HOME is reached
 set tags+=tags;$HOME
 "Search for files in this directories, recursively
-set path+=$HOME/Documents/**,$HOME/Workspace/**
+set path+=$HOME/dotfiles/**,$HOME/Workspace/**
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => User Interface
