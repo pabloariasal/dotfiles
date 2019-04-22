@@ -251,6 +251,8 @@ endif
 " => Linting
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:neomake_python_enabled_makers = ['pylint', 'pycodestyle', 'flake8']
+" Note: a compilation database must exist in the current dir for clang sanitizers to work
+let g:neomake_cpp_enabled_makers = ['clangtidy', 'clangcheck']
 "call neomake#configure#automake('rw', 500)
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -269,7 +271,7 @@ call deoplete#custom#source(
 \ 'dictionary', 'sorters', [])
 " Do not complete too short words
 call deoplete#custom#source(
-\ 'dictionary', 'min_pattern_length', 4)
+\ 'dictionary', 'min_pattern_length', 2)
 
 let g:deoplete#sources#jedi#show_docstring = 1
 
