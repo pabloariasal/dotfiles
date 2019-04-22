@@ -28,11 +28,10 @@ alias nvc='nvim ~/dotfiles/nvim/init.vim'
 #History
 HISTSIZE=5000
 HISTFILESIZE=10000
-#shopt -s histappend
-#export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 # Default text editor
 export VISUAL=nvim
+export EDITOR=nvim
 
 # RTV reads some ENV variables to open links
 export RTV_BROWSER=chromium
