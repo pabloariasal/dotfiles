@@ -183,6 +183,7 @@ Plug 'romainl/vim-qf'
 Plug 'Asheq/close-buffers.vim'
 Plug 'deoplete-plugins/deoplete-tag'
 Plug 'deoplete-plugins/deoplete-dictionary'
+Plug 'tpope/vim-obsession'
 "colors
 Plug 'dracula/vim', {'as':'dracula'}
 Plug 'junegunn/seoul256.vim'
@@ -191,6 +192,7 @@ Plug 'morhetz/gruvbox'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'nanotech/jellybeans.vim'
 Plug 'aonemd/kuroi.vim'
+Plug 'reedes/vim-colors-pencil'
 "Folding
 Plug 'tmhedberg/SimpylFold'
 Plug 'nelstrom/vim-markdown-folding'
