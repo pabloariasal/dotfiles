@@ -29,6 +29,7 @@
 "   -> Linting
 "   -> Autocompletion
 "   -> Statusline
+"   -> Spellcheck
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -275,7 +276,6 @@ let g:neomake_logfile = '/tmp/neomake.log'
 let g:deoplete#enable_at_startup = 1
 
 "Enable dictionary completion
-set dictionary+=/usr/share/dict/american-english
 call deoplete#custom#option('ignore_sources', {'cpp': ['dictionary'], 'python': ['dictionary']})
 " Match by beginning of word
 call deoplete#custom#source(
@@ -336,3 +336,11 @@ augroup GetGitBranch
   autocmd!
   autocmd VimEnter,WinEnter,BufEnter * call StatuslineGitBranch()
 augroup END
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Spellcheck
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Set American English as dictionary (for word completion)
+set dictionary+=/usr/share/dict/american-english
+nnoremap <Leader>se :setlocal spell spelllang=en_us<CR>
+nnoremap <Leader>sg :setlocal spell spelllang=de_20<CR>
