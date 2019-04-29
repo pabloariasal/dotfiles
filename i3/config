@@ -22,7 +22,9 @@ bindsym $mod+Ctrl+5 exec $terminal -name newsboat_instance -e newsboat
 bindsym $mod+Ctrl+6 exec $terminal -name weechat_instance -e weechat
 bindsym $mod+Ctrl+7 exec $terminal -name rtv_instance -e rtv
 bindsym $mod+Ctrl+8 exec spotify
-bindsym $mod+Ctrl+9 exec thunderbird
+bindsym $mod+Ctrl+9 exec $terminal -name email -e neomutt
+bindsym $mod+p exec opendir
+bindsym $mod+n exec openconf
 
 # Assign certain programs to specific workspaces
 assign [instance="^newsboat_instance$"] 5

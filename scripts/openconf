@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+conf=$(fd -tf . "$HOME/dotfiles" | dmenu -l 15 -p "Open conf: ")
+[ ! -z "$conf" ] && urxvt -e nvim $conf

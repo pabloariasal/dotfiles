@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+options=("https://www.youtube.com\nhttps://www.dazn.com\n")
+
+watch=$(echo -e $options | dmenu -l 10 -p "What to watch?")
+[ ! -z "$watch" ] && chromium --new-window --app="$watch"

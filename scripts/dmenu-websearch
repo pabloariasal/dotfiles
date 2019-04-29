@@ -1,0 +1,3 @@
+#!/bin/sh
+chromium https://google.com/search?q="$(dmenu -p "Google" < /dev/null)"
+
