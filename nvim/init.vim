@@ -76,6 +76,8 @@ set laststatus=2
 let g:netrw_liststyle = 3
 "remove banner in netrw
 let g:netrw_banner = 0
+" Close annoying netrw buffers https://github.com/tpope/vim-vinegar/issues/13
+autocmd FileType netrw setl bufhidden=delete
 "show possible matches above command line with TAB
 set wildmenu
 
