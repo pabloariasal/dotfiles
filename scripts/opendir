@@ -1,5 +1,3 @@
 #!/usr/bin/env bash
-# dirs_to_search=($HOME/Workspace)
-# dir=$({ fd -td -d 1 . "$HOME" ; fd -td -d 1 . "${dirs_to_search[@]}" ; } | dmenu -l 15 -p "Open: ")
-dir=$(fd -td . "$HOME" | dmenu -i -l 15 -p "Open: ")
-[ ! -z "$dir" ] && urxvt -cd $dir
+dir=$(fasd -dlR | dmenu -i -l 20 -p "Open: ")
+[ ! -z "$dir" ] && fasd -A "$dir" && urxvt -cd "$dir"

@@ -12,18 +12,11 @@ alias ls='ls --color=auto'
 alias ll='ls -l'
 alias n='nvim'
 alias e='exa'
-alias poc='nvim ~/dotfiles/polybar/config'
-alias i3c='nvim ~/dotfiles/i3/config'
-alias nvc='nvim ~/dotfiles/nvim/init.vim'
 
 # Import colorscheme from 'wal' asynchronously
 # &   # Run the process in the background.
 # ( ) # Hide shell job control messages.
 (cat ~/.cache/wal/sequences &)
-
-# Autojump Settings
-#[[ -r "/usr/share/autojump/autojump.bash" ]] && source /usr/share/autojump/autojump.bash
-[[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
 
 #History
 HISTSIZE=5000
@@ -42,4 +35,9 @@ export FZF_DEFAULT_OPTS='--height 40%'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 [[ -r "/usr/share/fzf/key-bindings.bash" ]] && source /usr/share/fzf/key-bindings.bash
 [[ -r "/usr/share/fzf/completion.bash" ]] && source /usr/share/fzf/completion.bash
+alias of="fzf | xargs -r nvim"
 
+# Fasd
+eval "$(fasd --init posix-alias bash-hook)"
+alias o='fasd -fR -e nvim'
+alias b='fasd -fR -e bat'

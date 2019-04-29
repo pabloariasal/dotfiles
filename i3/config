@@ -24,7 +24,7 @@ bindsym $mod+Ctrl+7 exec $terminal -name rtv_instance -e rtv
 bindsym $mod+Ctrl+8 exec spotify
 bindsym $mod+Ctrl+9 exec $terminal -name email -e neomutt
 bindsym $mod+p exec opendir
-bindsym $mod+n exec openconf
+bindsym $mod+n exec open-recent
 
 # Assign certain programs to specific workspaces
 assign [instance="^newsboat_instance$"] 5
