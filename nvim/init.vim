@@ -53,6 +53,8 @@ set autoread
 set tags+=tags;$HOME
 "Search for files in this directories, recursively
 set path+=$HOME/dotfiles/**,$HOME/Workspace/**
+" persist undo history
+set undofile
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => User Interface
@@ -80,7 +82,10 @@ let g:netrw_banner = 0
 autocmd FileType netrw setl bufhidden=delete
 "show possible matches above command line with TAB
 set wildmenu
+" highlight ranges composed of line numbers
 let g:traces_num_range_preview = 1
+set splitright
+set splitbelow
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors
@@ -192,6 +197,7 @@ Plug 'deoplete-plugins/deoplete-dictionary'
 Plug 'tpope/vim-obsession'
 Plug 'Yggdroot/indentLine'
 Plug 'markonm/traces.vim'
+Plug 'vim-scripts/ReplaceWithRegister'
 "colors
 Plug 'dracula/vim', {'as':'dracula'}
 Plug 'junegunn/seoul256.vim'
