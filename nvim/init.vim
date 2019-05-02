@@ -80,6 +80,7 @@ let g:netrw_banner = 0
 autocmd FileType netrw setl bufhidden=delete
 "show possible matches above command line with TAB
 set wildmenu
+let g:traces_num_range_preview = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors
@@ -190,6 +191,7 @@ Plug 'deoplete-plugins/deoplete-tag'
 Plug 'deoplete-plugins/deoplete-dictionary'
 Plug 'tpope/vim-obsession'
 Plug 'Yggdroot/indentLine'
+Plug 'markonm/traces.vim'
 "colors
 Plug 'dracula/vim', {'as':'dracula'}
 Plug 'junegunn/seoul256.vim'
