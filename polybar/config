@@ -21,17 +21,39 @@ fg = ${xrdb:color7:#222}
 alternate-color = ${xrdb:color1:#222}
 curgent = ${self.red}
 
+[icons]
+; colored icons theme
+brightness = "🔆 "
+volume = "🔊 "
+muted = "🔇"
+charging = "%{T2}⚡%{T-} "
+discharging = "🔋 "
+keyboard = "⌨ "
+wifi = "📶 "
+time = "🕒 "
+date = "📅 "
+
+;brightness = " "
+;volume = " "
+;muted = ""
+;charging = " "
+;discharging = " "
+;keyboard = " "
+;wifi = " "
+;time = " "
+;date = " "
+
 ;==========================================================
 
 [bar/main]
 monitor = ${env:MONITOR:eDP1}
 width = 100%
-height = 20
+height = 22
 offset-x = 5%
 offset-y = 2%
 bottom = false
 fixed-center = false
-line-size = 2
+line-size = 1
 
 background = ${color.bg}
 foreground = ${color.fg}
@@ -46,8 +68,11 @@ separator = |
 
 ;==========================================================
 
-font-0 = "Fantasque Sans Mono:pixelsize=10;4"
+font-0 = "Iosevka:style=Regular:pixelsize=10;4"
 font-1 = "Noto Color Emoji:style=Regular:scale=10;4"
+font-3 = "Font Awesome 5 Free,Font Awesome 5 Free Regular:style=Regular:pixelsize=10;4"
+font-2 = "Font Awesome 5 Free,Font Awesome 5 Free Solid:style=Solid:pixelsize=10;4"
+
 ;==========================================================
 
 cursor-click = pointer
@@ -64,12 +89,15 @@ wm-name = i3
 
 ;== Module Location ========================================================
 
-modules-left = i3 window
-modules-right = player-mpris-tail time-colombia xbacklight volume battery keyboard network date time
+;modules-left = i3-colored window
+;modules-right = player-colored time-colombia xbacklight volume battery keyboard network date time
+
+modules-left = i3-plain window
+modules-right = player-colored time-colombia xbacklight volume battery keyboard network date time
 
 ;== Modules ========================================================
 
-[module/i3]
+[module/i3-colored]
 type = internal/i3
 format = <label-state> <label-mode>
 index-sort = true
@@ -85,13 +113,14 @@ label-mode-padding = 2
 label-mode-foreground = ${color.fg}
 label-mode-background = ${color.curgent}
 
+; colored icons
 ws-icon-0 = 1;
 ws-icon-1 = 2;
 ws-icon-2 = 3;
 ws-icon-3 = 4;
-ws-icon-4 = 5;📰
+ws-icon-4 = 5;
 ws-icon-5 = 6;💬
-ws-icon-6 = 7;🤖
+ws-icon-6 = 7;📰
 ws-icon-7 = 8;🎧
 ws-icon-8 = 9;📬
 ws-icon-default =🖥
@@ -118,9 +147,69 @@ label-urgent-foreground = ${color.curgent}
 ;label-urgent-underline = ${color.curgent}
 label-urgent-padding = ${self.label-focused-padding}
 
-[module/player-mpris-tail]
+[module/i3-plain]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+enable-scroll = false
+
+; Only show workspaces on the same output as the bar
+pin-workspaces = true
+
+; mode = when showing options for an i3 mode
+label-mode = %mode%
+label-mode-padding = 2
+label-mode-foreground = ${color.fg}
+label-mode-background = ${color.curgent}
+
+ws-icon-0 = 1;1
+ws-icon-1 = 2;2
+ws-icon-2 = 3;3
+ws-icon-3 = 4;4
+ws-icon-4 = 5;5
+ws-icon-5 = 6;CHAT
+ws-icon-6 = 7;READ
+ws-icon-7 = 8;PLAY
+ws-icon-8 = 9;MAIL
+ws-icon-default =
+
+; focused = Active workspace on focused monitor
+label-focused = %icon%
+label-focused-background = ${color.alternate-color}
+label-focused-foreground = ${color.bg}
+;label-focused-underline = ${color.alternate-color}
+label-focused-padding = 1
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused = ${self.label-focused}
+label-unfocused-padding = ${self.label-focused-padding}
+
+; visible = Active workspace on unfocused monitor
+label-visible = ${self.label-focused}
+label-visible-foreground = ${self.label-focused-foreground}
+;label-visible-underline = ${self.label-focused-underline}
+label-visible-padding = ${self.label-focused-padding}
+
+; urgent = Workspace with urgency hint set
+label-urgent = ${self.label-focused}
+label-urgent-foreground = ${color.bg}
+label-urgent-background = ${color.curgent}
+;label-urgent-underline = ${color.curgent}
+label-urgent-padding = ${self.label-focused-padding}
+
+[module/player-colored]
 type = custom/script
 exec = ~/polybar-scripts/polybar-scripts/player-mpris-tail/player-mpris-tail.py -f '{icon} {artist} - {title}' --icon-paused='⏸' --icon-playing='🎵'
+tail = true
+label = %output%
+click-left = ~/polybar-scripts/polybar-scripts/player-mpris-tail/player-mpris-tail.py play-pause
+click-right = ~/polybar-scripts/polybar-scripts/player-mpris-tail/player-mpris-tail.py next
+click-middle = ~/polybar-scripts/polybar-scripts/player-mpris-tail/player-mpris-tail.py previous
+
+[module/player-plain]
+type = custom/script
+exec = ~/polybar-scripts/polybar-scripts/player-mpris-tail/player-mpris-tail.py -f '{icon} {artist} - {title}' --icon-paused='' --icon-playing=''
 tail = true
 label = %output%
 click-left = ~/polybar-scripts/polybar-scripts/player-mpris-tail/player-mpris-tail.py play-pause
@@ -139,14 +228,15 @@ full-at = 99
 battery = BAT0
 adapter = AC0
 
-format-charging-prefix = "🔌 "
+format-charging-prefix = ${icons.charging}
 format-charging = <label-charging>
 label-charging = %percentage%%
 
+format-full-prefix = ${self.format-charging-prefix}
 format-full = <label-full>
-format-full-prefix = "🔌 "
+label-full = %percentage%%
 
-format-discharging-prefix = "🔋 "
+format-discharging-prefix = ${icons.discharging}
 format-discharging = <label-discharging>
 label-discharging = %percentage%%
 
@@ -161,15 +251,15 @@ type = internal/xbacklight
 label-maxlen = 50
 
 format = <label>
-format-prefix = "🔆 "
+format-prefix = ${icons.brightness}
 label = %percentage%%
 
 [module/volume]
 type = internal/alsa
 format-volume = <label-volume>
-format-volume-prefix = "🔊 "
+format-volume-prefix = ${icons.volume}
 label-volume = "%percentage%%"
-label-muted = "🔇"
+label-muted = ${icons.muted}
 
 [module/keyboard]
 type = internal/xkeyboard
@@ -181,14 +271,14 @@ blacklist-1 = scroll lock
 format = <label-layout>
 format-spacing = 0
 label-layout = %layout%
-format-prefix = "⌨ "
+format-prefix = ${icons.keyboard}
 
 [module/network]
 type = internal/network
 interface = wlp2s0
 interval = 3.0
 
-format-connected-prefix = "📶 "
+format-connected-prefix = ${icons.wifi}
 format-connected = <label-connected>
 label-connected = %essid%
 
@@ -202,7 +292,7 @@ interval = 10
 
 time = %H:%M
 
-format-prefix = "🕒 "
+format-prefix = ${icons.time}
 format = <label>
 label = %time%
 
@@ -212,8 +302,13 @@ interval = 3600
 
 date = "%a %b %e"
 
-format-prefix = "📅 "
+format-prefix = ${icons.date}
 format = <label>
 label = %date%
+
+[module/separator]
+type = custom/text
+content = " "
+content-foreground = ${color.alternate-color}
 
 ;== EOF ========================================================
