@@ -27,11 +27,10 @@ bindsym $mod+p exec opendir
 bindsym $mod+n exec open-recent
 
 # Assign certain programs to specific workspaces
-assign [instance="^newsboat_instance$"] 5
 assign [instance="^weechat_instance$"] 6
 assign [instance="^rtv_instance$"] 7
 for_window [class="Spotify"] move to workspace 8
-assign [class="^Thunderbird$"] 9
+assign [instance="^email$"] 9
 
 # kill focused window
 bindsym $mod+q kill
