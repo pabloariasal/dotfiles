@@ -198,6 +198,7 @@ Plug 'tpope/vim-obsession'
 Plug 'Yggdroot/indentLine'
 Plug 'markonm/traces.vim'
 Plug 'vim-scripts/ReplaceWithRegister'
+Plug 'tpope/vim-sleuth'
 "colors
 Plug 'dracula/vim', {'as':'dracula'}
 Plug 'junegunn/seoul256.vim'
