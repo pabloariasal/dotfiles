@@ -244,7 +244,7 @@ label-discharging = %percentage%%
 type = internal/xwindow
 format = <label>
 label = %title%
-label-maxlen = 150
+label-maxlen = 80
 
 [module/xbacklight]
 type = internal/xbacklight
