@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+options="
+https://www.youtube.com\n
+https://www.dazn.com\n
+https://keep.google.com\n
+https://web.whatsapp.com\n
+"
+
+selection=$(echo -e $options | dmenu -l 10 -p "What to open?")
+[ ! -z "$selection" ] && chromium --new-window --app="$selection"
