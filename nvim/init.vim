@@ -131,8 +131,6 @@ nnoremap <Leader>s :<C-u>grep! <C-r><C-w><CR>
 "Toggle location and quickfix lists
 nmap <Leader>q <Plug>(qf_qf_toggle)
 nmap <Leader>l <Plug>(qf_loc_toggle)
-"Switch focus quickfix window
-nmap <Leader>fq <Plug>(qf_qf_switch)
 "Close preview window
 nnoremap <Leader>cp :<C-u>pclose<CR>
 " Open buffer deletion menu
@@ -267,7 +265,7 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:neomake_python_enabled_makers = ['pylint', 'pycodestyle', 'flake8']
 " Note: a compilation database must exist in the current dir for clang analyzers to work
-let g:neomake_cpp_enabled_makers = ['clangtidy', 'clangcheck']
+let g:neomake_cpp_enabled_makers = ['clangtidy', 'clangcheck', 'clang']
 " Run linting when saving and loading buffers
 call neomake#configure#automake('rw')
 " Change to build directory
