@@ -86,6 +86,8 @@ set wildmenu
 let g:traces_num_range_preview = 1
 set splitright
 set splitbelow
+" don't auto resize quickfix window
+let g:qf_auto_resize = 0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors
