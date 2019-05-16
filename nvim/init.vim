@@ -202,12 +202,8 @@ Plug 'tpope/vim-sleuth'
 "colors
 Plug 'dracula/vim', {'as':'dracula'}
 Plug 'junegunn/seoul256.vim'
-Plug 'romainl/Apprentice'
 Plug 'morhetz/gruvbox'
 Plug 'NLKNguyen/papercolor-theme'
-Plug 'nanotech/jellybeans.vim'
-Plug 'aonemd/kuroi.vim'
-Plug 'reedes/vim-colors-pencil'
 "Folding
 Plug 'tmhedberg/SimpylFold'
 Plug 'nelstrom/vim-markdown-folding'
