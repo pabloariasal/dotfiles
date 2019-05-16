@@ -200,10 +200,7 @@ Plug 'markonm/traces.vim'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'tpope/vim-sleuth'
 "colors
-Plug 'dracula/vim', {'as':'dracula'}
-Plug 'junegunn/seoul256.vim'
-Plug 'morhetz/gruvbox'
-Plug 'NLKNguyen/papercolor-theme'
+Plug 'rafi/awesome-vim-colorschemes'
 "Folding
 Plug 'tmhedberg/SimpylFold'
 Plug 'nelstrom/vim-markdown-folding'
