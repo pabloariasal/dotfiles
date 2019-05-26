@@ -254,7 +254,7 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:neomake_python_enabled_makers = ['pylint', 'pycodestyle', 'flake8']
 " Note: a compilation database must exist in the current dir for clang analyzers to work
-let g:neomake_cpp_enabled_makers = ['clangtidy', 'clangcheck', 'clang']
+let g:neomake_cpp_enabled_makers = ['clangtidy', 'clangcheck']
 " Run linting when saving and loading buffers
 call neomake#configure#automake('rw')
 " Change to build directory
