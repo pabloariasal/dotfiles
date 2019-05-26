@@ -126,10 +126,6 @@ xnoremap <leader>p "+p
 nnoremap <leader>P "+P
 nnoremap <leader>y "+y
 xnoremap <leader>y "+y
-"Easy grepping
-nnoremap <Leader>g :<C-u>grep! 
-"Grep word under the cursor
-nnoremap <Leader>s :<C-u>grep! <C-r><C-w><CR>
 "Toggle location and quickfix lists
 nmap <Leader>q <Plug>(qf_qf_toggle)
 nmap <Leader>l <Plug>(qf_loc_toggle)
@@ -137,8 +133,6 @@ nmap <Leader>l <Plug>(qf_loc_toggle)
 nnoremap <Leader>cp :<C-u>pclose<CR>
 " Open buffer deletion menu
 nnoremap <silent> <Leader>bd :<C-u>CloseBuffersMenu<CR>
-" Make
-nnoremap <silent> <Leader>m :<C-u>Neomake!<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Searching
