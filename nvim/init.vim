@@ -27,7 +27,6 @@
 "   -> Folding
 "   -> ctags
 "   -> Linting
-"   -> Autocompletion
 "   -> Statusline
 "   -> Spellcheck
 "
@@ -186,12 +185,8 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-commentary'
 Plug 'majutsushi/tagbar'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'deoplete-plugins/deoplete-jedi'
 Plug 'romainl/vim-qf'
 Plug 'Asheq/close-buffers.vim'
-Plug 'deoplete-plugins/deoplete-tag'
-Plug 'deoplete-plugins/deoplete-dictionary'
 Plug 'tpope/vim-obsession'
 Plug 'Yggdroot/indentLine'
 Plug 'markonm/traces.vim'
@@ -201,7 +196,6 @@ Plug 'tpope/vim-sleuth'
 Plug 'rafi/awesome-vim-colorschemes'
 "Folding
 Plug 'tmhedberg/SimpylFold'
-Plug 'nelstrom/vim-markdown-folding'
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -271,25 +265,6 @@ call neomake#config#set('maker_defaults.remove_invalid_entries', 1)
 let g:neomake_makeprg_remove_invalid_entries = 1
 " Enable logging
 let g:neomake_logfile = '/tmp/neomake.log'
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Autocompletion
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:deoplete#enable_at_startup = 1
-
-"Enable dictionary completion
-call deoplete#custom#option('ignore_sources', {'cpp': ['dictionary'], 'python': ['dictionary']})
-" Match by beginning of word
-call deoplete#custom#source(
-\ 'dictionary', 'matchers', ['matcher_head'])
-" Dictionary is already sorted, no need to sort it again.
-call deoplete#custom#source(
-\ 'dictionary', 'sorters', [])
-" Do not complete too short words
-call deoplete#custom#source(
-\ 'dictionary', 'min_pattern_length', 2)
-
-let g:deoplete#sources#jedi#show_docstring = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Statusline
