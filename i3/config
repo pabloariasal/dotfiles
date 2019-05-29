@@ -18,13 +18,11 @@ floating_modifier $mod
 # Starting programs
 bindsym $mod+Return exec $terminal
 bindsym $mod+b exec $browser
-bindsym $mod+Ctrl+5 exec $terminal -name newsboat_instance -e newsboat
 bindsym $mod+Ctrl+6 exec $terminal -name weechat_instance -e weechat
 bindsym $mod+Ctrl+7 exec $terminal -name rtv_instance -e rtv
 bindsym $mod+Ctrl+8 exec spotify
 bindsym $mod+Ctrl+9 exec $terminal -name email -e neomutt
-bindsym $mod+p exec opendir
-bindsym $mod+n exec open-recent
+bindsym $mod+t exec browse-light
 
 # Assign certain programs to specific workspaces
 assign [instance="^weechat_instance$"] 6
@@ -155,12 +153,12 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-#Scratchpad
+# Scratchpad
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
-bindsym $mod+equal [class="Chromium"] scratchpad show
+bindsym $mod+n [class="Chromium"] scratchpad show
 
-#System mode
+# System mode
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id $Locker, mode "default"
