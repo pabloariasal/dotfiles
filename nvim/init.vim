@@ -133,6 +133,10 @@ nmap <Leader>l <Plug>(qf_loc_toggle)
 nnoremap <Leader>cp :<C-u>pclose<CR>
 " Open buffer deletion menu
 nnoremap <silent> <Leader>bd :<C-u>CloseBuffersMenu<CR>
+"Easy grepping
+nnoremap <Leader>g :<C-u>grep! 
+"Grep word under the cursor
+nnoremap <Leader>s :<C-u>grep! <C-r><C-w>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Searching
