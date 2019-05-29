@@ -41,3 +41,5 @@ alias of="fzf | xargs -r nvim"
 eval "$(fasd --init posix-alias bash-hook)"
 alias o='fasd -fR -e nvim'
 alias b='fasd -fR -e bat'
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
