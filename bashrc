@@ -8,8 +8,7 @@
 PS1='[\u@\h \W]\$ '
 
 # Aliases
-alias ls='ls --color=auto'
-alias ll='ls -l'
+alias ls='exa'
 alias n='nvim'
 alias e='exa'
 
