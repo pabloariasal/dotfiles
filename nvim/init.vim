@@ -26,7 +26,6 @@
 "   -> Snippets
 "   -> Folding
 "   -> ctags
-"   -> Linting
 "   -> Statusline
 "   -> Spellcheck
 "
@@ -176,7 +175,6 @@ endif
 call plug#begin('~/.config/nvim/plugged')
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'neomake/neomake'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'tpope/vim-repeat'
@@ -248,25 +246,6 @@ if !empty(glob(".ctagsignore"))
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Linting
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:neomake_python_enabled_makers = ['pylint', 'pycodestyle', 'flake8']
-" Note: a compilation database must exist in the current dir for clang analyzers to work
-let g:neomake_cpp_enabled_makers = ['clangtidy', 'clangcheck']
-" Run linting when saving and loading buffers
-call neomake#configure#automake('rw')
-" Change to build directory
-let g:neomake_makeprg_args = ['-C', 'build', '--silent']
-" Open and jump to quickfix list after compilation
-let g:neomake_makeprg_open_list = 1
-" Remove entries that don't match the error format
-call neomake#config#set('maker_defaults.remove_invalid_entries', 1)
-" For some reason I have to set this explicitly for makeprg
-let g:neomake_makeprg_remove_invalid_entries = 1
-" Enable logging
-let g:neomake_logfile = '/tmp/neomake.log'
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Statusline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set statusline+=%F
@@ -275,8 +254,6 @@ set statusline+=%h
 set statusline+=%r
 set statusline+=\ 
 set statusline+=%{b:gitbranch}
-set statusline+=\ 
-set statusline+=%{NeomakeStatus()}
 set statusline+=%=
 set statusline+=%{strlen(&fenc)?&fenc:'none'}
 set statusline+=\ 
@@ -287,15 +264,6 @@ set statusline+=/
 set statusline+=%L
 set statusline+=\ 
 set statusline+=%P
-
-function! NeomakeStatus()
-	return neomake#statusline#get(g:actual_curbuf, {
-				\ 'use_highlights_with_defaults': 0,
-				\ 'format_running':'({{running_job_names}})…',
-				\ 'format_status': '[%s]',
-				\ 'format_loclist_unknown': '-'
-				\})
-endfunction
 
 function! StatuslineGitBranch()
   let b:gitbranch=""
