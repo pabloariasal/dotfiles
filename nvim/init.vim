@@ -190,6 +190,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'markonm/traces.vim'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'tpope/vim-sleuth'
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 "colors
 Plug 'rafi/awesome-vim-colorschemes'
 "Folding
