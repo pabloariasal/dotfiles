@@ -255,6 +255,8 @@ set statusline+=%h
 set statusline+=%r
 set statusline+=\ 
 set statusline+=%{b:gitbranch}
+set statusline+=\ 
+set statusline+=%{coc#status()}
 set statusline+=%=
 set statusline+=%{strlen(&fenc)?&fenc:'none'}
 set statusline+=\ 
