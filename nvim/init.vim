@@ -53,6 +53,7 @@ set tags+=tags;$HOME
 set path+=$HOME/dotfiles/**,$HOME/Workspace/**
 " persist undo history
 set undofile
+let g:startify_change_to_vcs_root = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => User Interface
@@ -190,6 +191,7 @@ Plug 'markonm/traces.vim'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'tpope/vim-sleuth'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+Plug 'mhinz/vim-startify'
 "colors
 Plug 'rafi/awesome-vim-colorschemes'
 "Folding
