@@ -1,4 +1,6 @@
 {
+  "diagnostic.checkCurrentLine": true,
+  "diagnostic.warningSign": ">>",
   "languageserver": {
     "clangd": {
       "command": "clangd",
