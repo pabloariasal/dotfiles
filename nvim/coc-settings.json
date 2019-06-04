@@ -9,7 +9,8 @@
       "initializationOptions": {
         "cacheDirectory": "/tmp/clangd_log"
       },
-      "filetypes": ["c", "cpp", "objc", "objcpp"]
+      "filetypes": ["c", "cpp", "objc", "objcpp"],
+      "disableDiagnostics": true
     },
     "python": {
       "command": "python",
@@ -23,6 +24,7 @@
       "filetypes": [
         "python"
       ],
+      "disableDiagnostics": true,
       "settings": {
         "pyls": {
           "enable": true,
