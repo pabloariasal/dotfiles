@@ -10,9 +10,7 @@
         "cacheDirectory": "/tmp/clangd_log"
       },
       "filetypes": ["c", "cpp", "objc", "objcpp"]
-    }
-  },
-  "languageserver": {
+    },
     "python": {
       "command": "python",
       "args": [
