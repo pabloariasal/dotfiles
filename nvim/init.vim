@@ -257,14 +257,8 @@ let g:neomake_python_enabled_makers = ['pylint', 'pycodestyle', 'flake8']
 let g:neomake_cpp_enabled_makers = ['clangtidy', 'clangcheck']
 " Run linting when saving and loading buffers
 call neomake#configure#automake('rw')
-" Change to build directory
-let g:neomake_makeprg_args = ['-C', 'build', '--silent']
-" Open and jump to quickfix list after compilation
-let g:neomake_makeprg_open_list = 1
 " Remove entries that don't match the error format
 call neomake#config#set('maker_defaults.remove_invalid_entries', 1)
-" For some reason I have to set this explicitly for makeprg
-let g:neomake_makeprg_remove_invalid_entries = 1
 " Enable logging
 let g:neomake_logfile = '/tmp/neomake.log'
 
@@ -284,6 +278,15 @@ let g:neomake_info_sign = {
       \ 'text': 'ℹ',
       \ 'texthl': 'NeomakeInfoSign'
       \ }
+
+" Compile asynchronously in a build folder
+let g:neomake_build_make_maker = {
+      \ 'exe': 'make',
+      \ 'args': ['-j', 4],
+      \ 'cwd': 'build',
+      \ 'errorformat': '%f:%l:%c: %m'
+      \ }
+let g:neomake_build_make_open_list = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Statusline
