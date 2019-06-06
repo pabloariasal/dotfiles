@@ -54,7 +54,6 @@ set tags+=tags;$HOME
 set path+=$HOME/dotfiles/**,$HOME/Workspace/**
 " persist undo history
 set undofile
-let g:startify_change_to_vcs_root = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => User Interface
@@ -80,8 +79,6 @@ set wildmenu
 let g:traces_num_range_preview = 1
 set splitright
 set splitbelow
-" don't auto resize quickfix window
-let g:qf_auto_resize = 0
 "show files in a wide style in netrw
 let g:netrw_liststyle = 3
 "remove banner in netrw
@@ -199,6 +196,10 @@ Plug 'rafi/awesome-vim-colorschemes'
 "Folding
 Plug 'tmhedberg/SimpylFold'
 call plug#end()
+
+" don't auto resize quickfix window
+let g:qf_auto_resize = 0
+let g:startify_change_to_vcs_root = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Fuzzy Search
