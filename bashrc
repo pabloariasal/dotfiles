@@ -35,6 +35,7 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 [[ -r "/usr/share/fzf/key-bindings.bash" ]] && source /usr/share/fzf/key-bindings.bash
 [[ -r "/usr/share/fzf/completion.bash" ]] && source /usr/share/fzf/completion.bash
 alias of="fzf | xargs -r nvim"
+alias bf="fzf | xargs -r bat"
 
 # Fasd
 eval "$(fasd --init posix-alias bash-hook)"
