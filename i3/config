@@ -18,17 +18,17 @@ floating_modifier $mod
 # Starting programs
 bindsym $mod+Return exec $terminal
 bindsym $mod+b exec $browser
+bindsym $mod+t exec browser-no-bars
 bindsym $mod+Ctrl+6 exec $terminal -name weechat_instance -e weechat
 bindsym $mod+Ctrl+7 exec $terminal -name rtv_instance -e rtv
 bindsym $mod+Ctrl+8 exec spotify
-bindsym $mod+Ctrl+9 exec $terminal -name email -e neomutt
-bindsym $mod+t exec browse-light
+bindsym $mod+Ctrl+9 exec thunderbird
 
 # Assign certain programs to specific workspaces
 assign [instance="^weechat_instance$"] 6
 assign [instance="^rtv_instance$"] 7
 for_window [class="Spotify"] move to workspace 8
-assign [instance="^email$"] 9
+assign [class="^Thunderbird$"] 9
 
 # kill focused window
 bindsym $mod+q kill
@@ -156,7 +156,10 @@ bindsym $mod+r mode "resize"
 # Scratchpad
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
-bindsym $mod+n [class="Chromium"] scratchpad show
+
+# Fast jumping to browser
+# bindsym $mod+n [class="Chromium"] scratchpad show
+bindsym $mod+n workspace 5
 
 # System mode
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
