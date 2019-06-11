@@ -134,6 +134,8 @@ nnoremap <silent> <Leader>bd :<C-u>CloseBuffersMenu<CR>
 nnoremap <Leader>g :<C-u>grep! 
 "Grep word under the cursor
 nnoremap <Leader>r :<C-u>grep! <C-r><C-w>
+"Easy grepping
+nnoremap <Leader>m :<C-u>Neomake! build_make<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Searching
@@ -283,8 +285,7 @@ let g:neomake_info_sign = {
 " Compile asynchronously in a build folder
 let g:neomake_build_make_maker = {
       \ 'exe': 'make',
-      \ 'args': ['-j', 4],
-      \ 'cwd': 'build',
+      \ 'args': ['-j', 8, '-C', 'build', '--silent'],
       \ 'errorformat': '%f:%l:%c: %m'
       \ }
 let g:neomake_build_make_open_list = 1
