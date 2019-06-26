@@ -38,8 +38,8 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd -td"
 [[ -r "/usr/share/fzf/key-bindings.bash" ]] && source /usr/share/fzf/key-bindings.bash
 [[ -r "/usr/share/fzf/completion.bash" ]] && source /usr/share/fzf/completion.bash
-alias of="fzf | xargs -r nvim"
-alias bf="fzf | xargs -r bat"
+alias of="fzf | tee >(xargs fasd -A) | xargs -r nvim"
+alias bf="fzf | tee >(xargs fasd -A) | xargs -r bat"
 
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
