@@ -1,8 +1,8 @@
 !Source code pro
 URxvt.allow_bold:           true
-URxvt.font: xft:DejaVuSansMono:Book:size=10
-URxvt.boldFont: xft:DejaVuSansMono:Bold:size=10
-URxvt.italicFont: xft:DejaVuSansMono:Oblique:size=10
+URxvt.font: xft:DejaVuSansMono:Book:size=9
+URxvt.boldFont: xft:DejaVuSansMono:Bold:size=9
+URxvt.italicFont: xft:DejaVuSansMono:Oblique:size=9
 URxvt.letterSpace: -1
 
 ! do not scroll with output
