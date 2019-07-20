@@ -15,8 +15,10 @@
 
 [color]
 red = #e53935
-bg = ${xrdb:color0:#222}
-fg = ${xrdb:color7:#222}
+;bg = ${xrdb:color0:#222}
+bg = #001b2b34
+;fg = ${xrdb:color7:#222}
+fg = #ffffffff
 
 alternate-color = ${xrdb:color1:#222}
 curgent = ${self.red}
@@ -53,7 +55,7 @@ offset-x = 5%
 offset-y = 2%
 bottom = false
 fixed-center = false
-line-size = 1
+line-size = 2
 
 background = ${color.bg}
 foreground = ${color.fg}
@@ -64,7 +66,7 @@ border-color = ${color.bg}
 module-margin-left = 1
 module-margin-right = 1
 
-separator = |
+;separator = |
 
 ;==========================================================
 
@@ -126,9 +128,9 @@ ws-icon-default =
 
 ; focused = Active workspace on focused monitor
 label-focused = %icon%
-label-focused-background = ${color.alternate-color}
-label-focused-foreground = ${color.bg}
-;label-focused-underline = ${color.alternate-color}
+;label-focused-background = ${color.alternate-color}
+label-focused-foreground = ${color.fg}
+label-focused-underline = ${color.alternate-color}
 label-focused-padding = 1
 
 ; unfocused = Inactive workspace on any monitor
