@@ -191,7 +191,6 @@ Plug 'markonm/traces.vim'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'tpope/vim-sleuth'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
-Plug 'mhinz/vim-startify'
 Plug 'neomake/neomake'
 "colors
 Plug 'rafi/awesome-vim-colorschemes'
