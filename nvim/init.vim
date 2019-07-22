@@ -45,7 +45,7 @@ set backspace=eol,start,indent
 set hidden
 "Ignore files in .git, build dir, binary files, etc.
 set wildignore=*.o,*~,*.pyc,*.swp
-set wildignore+=*/.git/*,*/build*/*,*/dist/*
+set wildignore+=*/.git/*,*/build*/*,*/dist/*,build
 "automatically reload buffers when file changes on disk
 set autoread
 "Look for tags file acendingly until HOME is reached
@@ -126,8 +126,6 @@ xnoremap <leader>y "+y
 "Toggle location and quickfix lists
 nmap <Leader>q <Plug>(qf_qf_toggle)
 nmap <Leader>l <Plug>(qf_loc_toggle)
-"Close preview window
-nnoremap <Leader>cp :<C-u>pclose<CR>
 " Open buffer deletion menu
 nnoremap <silent> <Leader>bd :<C-u>CloseBuffersMenu<CR>
 "Easy grepping
@@ -241,8 +239,8 @@ let g:SimpylFold_fold_docstring = 0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => ctags
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Don't generate tags every time you see a .git -.-
-let g:gutentags_add_default_project_roots = 0
+let g:gutentags_add_ctrlp_root_markers = 0
+let g:gutentags_exclude_filetypes = ['cmake', 'md', 'txt']
 " To enable ctags create a .ctagsenable file in the project root
 let g:gutentags_project_root = ['.ctagsenable']
 " Pass the paths to exclude to the ctag invocation
