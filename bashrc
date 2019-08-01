@@ -15,8 +15,12 @@ alias e='exa'
 (cat ~/.cache/wal/sequences &)
 
 #History
-HISTSIZE=5000
-HISTFILESIZE=10000
+shopt -s histappend
+HISTSIZE=1000000
+HISTFILESIZE=1000000
+HISTCONTROL=ignoreboth
+HISTIGNORE='ls:bg:fg:history'
+shopt -s cmdhist
 
 # Default text editor
 export VISUAL=nvim
