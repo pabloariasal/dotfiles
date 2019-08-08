@@ -197,7 +197,6 @@ call plug#end()
 
 " don't auto resize quickfix window
 let g:qf_auto_resize = 0
-let g:startify_change_to_vcs_root = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Fuzzy Search
