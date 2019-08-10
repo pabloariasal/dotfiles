@@ -153,8 +153,7 @@ bindsym $mod+r mode "resize"
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
-# Fast jumping to browser
-# bindsym $mod+n [class="Chromium"] scratchpad show
+# Fast jumping to special tasks
 bindsym $mod+n workspace 5
 
 # System mode
