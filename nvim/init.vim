@@ -22,11 +22,10 @@
 "   -> Searching
 "   -> Indentation
 "   -> Plugins
+"   -> Language Server and Semantic Completion
 "   -> Fuzzy Search
 "   -> Snippets
 "   -> Folding
-"   -> ctags
-"   -> Linting
 "   -> Statusline
 "   -> Spellcheck
 "
@@ -115,8 +114,6 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-"open tagbar with f8
-nmap <F8> :TagbarToggle<CR>
 "Convenient system clipboard bindings
 nnoremap <leader>p "+p
 xnoremap <leader>p "+p
@@ -130,10 +127,6 @@ nmap <Leader>l <Plug>(qf_loc_toggle)
 nnoremap <silent> <Leader>bd :<C-u>CloseBuffersMenu<CR>
 "Easy grepping
 nnoremap <Leader>g :<C-u>grep! 
-"Grep word under the cursor
-nnoremap <Leader>r :<C-u>grep! <C-r><C-w>
-"Easy grepping
-nnoremap <Leader>m :<C-u>Neomake! build_make<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Searching
@@ -177,18 +170,20 @@ Plug 'tpope/vim-unimpaired'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'tpope/vim-repeat'
-Plug 'ludovicchabant/vim-gutentags'
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-commentary'
-Plug 'majutsushi/tagbar'
 Plug 'romainl/vim-qf'
 Plug 'Asheq/close-buffers.vim'
 Plug 'tpope/vim-obsession'
 Plug 'markonm/traces.vim'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'tpope/vim-sleuth'
-Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
-Plug 'neomake/neomake'
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+Plug 'liuchengxu/vista.vim'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 "colors
 Plug 'rafi/awesome-vim-colorschemes'
 "Folding
@@ -197,14 +192,27 @@ call plug#end()
 
 " don't auto resize quickfix window
 let g:qf_auto_resize = 0
+let g:deoplete#enable_at_startup = 1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Language Server and Semantic Completion
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:LanguageClient_serverCommands = {
+ \ 'cpp': ['clangd', '-background-index',],
+ \ }
+nnoremap <silent> <Leader>d :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> <Leader>r :call LanguageClient#textDocument_references()<CR>
+nnoremap <silent> <Leader>h :call LanguageClient#textDocument_hover()<CR>
+let g:LanguageClient_selectionUI='quickfix'
+let g:LanguageClient_diagnosticsList='Location'
+let g:LanguageClient_useVirtualText=0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Fuzzy Search
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <c-p> :<C-u>FZF<CR>
 nnoremap <c-n> :<C-u>Buffers<CR>
-nnoremap <Leader>t :<C-u>Tags<CR>
-nnoremap <Leader>d :<C-u>BTags<CR>
+nnoremap <Leader>t :<C-u>Vista finder lcn<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Snippets
@@ -236,56 +244,6 @@ set foldlevel=1
 let g:SimpylFold_fold_docstring = 0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => ctags
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:gutentags_add_ctrlp_root_markers = 0
-let g:gutentags_exclude_filetypes = ['cmake', 'md', 'txt']
-" To enable ctags create a .ctagsenable file in the project root
-let g:gutentags_project_root = ['.ctagsenable']
-" Pass the paths to exclude to the ctag invocation
-if !empty(glob(".ctagsignore"))
-	let g:gutentags_ctags_exclude = ['@.ctagsignore']
-endif
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Linting
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:neomake_python_enabled_makers = ['pylint', 'pycodestyle', 'flake8']
-" Note: a compilation database must exist in the current dir for clang analyzers to work
-let g:neomake_cpp_enabled_makers = ['clangtidy', 'clangcheck']
-" Run linting when saving and loading buffers
-call neomake#configure#automake('rw')
-" Remove entries that don't match the error format
-call neomake#config#set('maker_defaults.remove_invalid_entries', 1)
-" Enable logging
-let g:neomake_logfile = '/tmp/neomake.log'
-
-let g:neomake_error_sign = {
-      \ 'text': '>>',
-      \ 'texthl': 'NeomakeErrorSign',
-      \ }
-let g:neomake_warning_sign = {
-      \   'text': '>>',
-      \   'texthl': 'NeomakeWarningSign',
-      \ }
-let g:neomake_message_sign = {
-      \   'text': '>>',
-      \   'texthl': 'NeomakeMessageSign',
-      \ }
-let g:neomake_info_sign = {
-      \ 'text': 'ℹ',
-      \ 'texthl': 'NeomakeInfoSign'
-      \ }
-
-" Compile asynchronously in a build folder
-let g:neomake_build_make_maker = {
-      \ 'exe': 'make',
-      \ 'args': ['-j', 8, '-C', 'build', '--silent'],
-      \ 'errorformat': '%f:%l:%c: %m'
-      \ }
-let g:neomake_build_make_open_list = 1
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Statusline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set statusline+=%F
@@ -294,10 +252,6 @@ set statusline+=%h
 set statusline+=%r
 set statusline+=\ 
 set statusline+=%{b:gitbranch}
-set statusline+=\ 
-set statusline+=%{NeomakeStatus()}
-set statusline+=\ 
-set statusline+=%{coc#status()}
 set statusline+=%=
 set statusline+=%{strlen(&fenc)?&fenc:'none'}
 set statusline+=\ 
@@ -308,15 +262,6 @@ set statusline+=/
 set statusline+=%L
 set statusline+=\ 
 set statusline+=%P
-
-function! NeomakeStatus()
-  return neomake#statusline#get(g:actual_curbuf, {
-	    \ 'use_highlights_with_defaults': 0,
-	    \ 'format_running':'({{running_job_names}})…',
-	    \ 'format_status': '[%s]',
-	    \ 'format_loclist_unknown': '-'
-	    \})
-endfunction
 
 function! StatuslineGitBranch()
   let b:gitbranch=""
