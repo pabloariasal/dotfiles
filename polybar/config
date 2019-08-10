@@ -15,35 +15,24 @@
 
 [color]
 red = #e53935
-;bg = ${xrdb:color0:#222}
-bg = #001b2b34
-;fg = ${xrdb:color7:#222}
-fg = #ffffffff
+black = #000000
+white = #ffffff
+; transparent background (needs compton or window compositor)
+bg = #00ffffff
+fg = ${xrdb:color7:#222}
 
-alternate-color = ${xrdb:color1:#222}
 curgent = ${self.red}
 
 [icons]
-; colored icons theme
-brightness = "🔆 "
-volume = "🔊 "
-muted = "🔇"
-charging = "%{T2}⚡%{T-} "
-discharging = "🔋 "
-keyboard = "⌨ "
-wifi = "📶 "
-time = "🕒 "
-date = "📅 "
-
-;brightness = " "
-;volume = " "
-;muted = ""
-;charging = " "
-;discharging = " "
-;keyboard = " "
-;wifi = " "
-;time = " "
-;date = " "
+brightness = " "
+volume = " "
+muted = ""
+charging = " "
+discharging = " "
+keyboard = " "
+wifi = " "
+time = " "
+date = " "
 
 ;==========================================================
 
@@ -66,13 +55,12 @@ border-color = ${color.bg}
 module-margin-left = 1
 module-margin-right = 1
 
-separator = |
+;separator = |
 
 ;==========================================================
 
 font-0 = "Iosevka:style=Regular:pixelsize=10;4"
-font-1 = "Noto Color Emoji:style=Regular:scale=10;4"
-font-3 = "Font Awesome 5 Free,Font Awesome 5 Free Regular:style=Regular:pixelsize=10;4"
+font-1 = "Font Awesome 5 Free,Font Awesome 5 Free Regular:style=Regular:pixelsize=10;4"
 font-2 = "Font Awesome 5 Free,Font Awesome 5 Free Solid:style=Solid:pixelsize=10;4"
 
 ;==========================================================
@@ -91,15 +79,12 @@ wm-name = i3
 
 ;== Module Location ========================================================
 
-;modules-left = i3-colored window
-;modules-right = player-colored time-colombia xbacklight volume battery keyboard network date time
+modules-left = i3 window
+modules-right = player time-colombia xbacklight volume battery keyboard network time
 
-modules-left = i3-plain window
-modules-right = player-colored time-colombia xbacklight volume battery keyboard network date time
+;== Modules ================================================================
 
-;== Modules ========================================================
-
-[module/i3-plain]
+[module/i3]
 type = internal/i3
 format = <label-state> <label-mode>
 index-sort = true
@@ -121,16 +106,16 @@ ws-icon-2 = 3;3
 ws-icon-3 = 4;4
 ws-icon-4 = 5;WWW
 ws-icon-5 = 6;CHAT
-ws-icon-6 = 7;READ
+ws-icon-6 = 7;NEWS
 ws-icon-7 = 8;PLAY
 ws-icon-8 = 9;MAIL
+ws-icon-9 = 10;10
 ws-icon-default =
 
 ; focused = Active workspace on focused monitor
 label-focused = %icon%
-;label-focused-background = ${color.alternate-color}
-label-focused-foreground = ${color.fg}
-label-focused-underline = ${color.alternate-color}
+label-focused-background = ${color.fg}
+label-focused-foreground = ${color.black}
 label-focused-padding = 1
 
 ; unfocused = Inactive workspace on any monitor
@@ -140,19 +125,17 @@ label-unfocused-padding = ${self.label-focused-padding}
 ; visible = Active workspace on unfocused monitor
 label-visible = ${self.label-focused}
 label-visible-foreground = ${self.label-focused-foreground}
-;label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
 label-urgent = ${self.label-focused}
 label-urgent-foreground = ${color.fg}
 label-urgent-background = ${color.curgent}
-;label-urgent-underline = ${color.curgent}
 label-urgent-padding = ${self.label-focused-padding}
 
-[module/player-colored]
+[module/player]
 type = custom/script
-exec = ~/polybar-scripts/polybar-scripts/player-mpris-tail/player-mpris-tail.py -f '{icon} {artist} - {title}' --icon-paused='⏸' --icon-playing='🎵'
+exec = ~/polybar-scripts/polybar-scripts/player-mpris-tail/player-mpris-tail.py -f '{icon} {artist} - {title}' --icon-paused='' --icon-playing=''
 tail = true
 label = %output%
 click-left = ~/polybar-scripts/polybar-scripts/player-mpris-tail/player-mpris-tail.py play-pause
@@ -160,7 +143,7 @@ click-right = ~/polybar-scripts/polybar-scripts/player-mpris-tail/player-mpris-t
 click-middle = ~/polybar-scripts/polybar-scripts/player-mpris-tail/player-mpris-tail.py previous
 
 [module/time-colombia]
-format-prefix = "🇨🇴 "
+format-prefix = "COL "
 type = custom/script
 exec = TZ='America/Bogota' date +"%H:%M"
 interval = 30
@@ -233,25 +216,10 @@ label-disconnected = %ifname% disconnected
 type = internal/date
 interval = 10
 
-time = %H:%M
+time = "%a %b %e %H:%M"
 
 format-prefix = ${icons.time}
 format = <label>
 label = %time%
-
-[module/date]
-type = internal/date
-interval = 3600
-
-date = "%a %b %e"
-
-format-prefix = ${icons.date}
-format = <label>
-label = %date%
-
-[module/separator]
-type = custom/text
-content = " "
-content-foreground = ${color.alternate-color}
 
 ;== EOF ========================================================
