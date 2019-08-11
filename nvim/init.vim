@@ -127,6 +127,8 @@ nmap <Leader>l <Plug>(qf_loc_toggle)
 nnoremap <silent> <Leader>bd :<C-u>CloseBuffersMenu<CR>
 "Easy grepping
 nnoremap <Leader>g :<C-u>grep! 
+"Grep word under the cursor
+nnoremap <Leader>r :<C-u>grep! <C-r><C-w>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Searching
@@ -200,9 +202,9 @@ let g:deoplete#enable_at_startup = 1
 let g:LanguageClient_serverCommands = {
  \ 'cpp': ['clangd', '-background-index',],
  \ }
-nnoremap <silent> <Leader>d :call LanguageClient#textDocument_definition()<CR>
-nnoremap <silent> <Leader>r :call LanguageClient#textDocument_references()<CR>
-nnoremap <silent> <Leader>h :call LanguageClient#textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> gu :call LanguageClient#textDocument_references()<CR>
+nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
 let g:LanguageClient_selectionUI='quickfix'
 let g:LanguageClient_diagnosticsList='Location'
 let g:LanguageClient_useVirtualText=0
@@ -212,7 +214,7 @@ let g:LanguageClient_useVirtualText=0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <c-p> :<C-u>FZF<CR>
 nnoremap <c-n> :<C-u>Buffers<CR>
-nnoremap <Leader>t :<C-u>Vista finder lcn<CR>
+nnoremap <c-t> :<C-u>Vista finder lcn<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Snippets
