@@ -14,5 +14,6 @@ tags
 .ctagsenable
 nvim/autoload
 nvim/plugged
+lsp_settings.json
 
 .gdb_history

@@ -189,7 +189,6 @@ Plug 'autozimu/LanguageClient-neovim', {
 Plug 'majutsushi/tagbar'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'ludovicchabant/vim-gutentags'
-Plug 'tpope/vim-dispatch'
 "colors
 Plug 'rafi/awesome-vim-colorschemes'
 "Folding
@@ -204,7 +203,8 @@ let g:deoplete#enable_at_startup = 1
 " => Language Server and Semantic Completion
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:LanguageClient_serverCommands = {
- \ 'cpp': ['clangd', '-background-index',],
+    \ 'c': ['ccls', '--log-file=/tmp/cc.log'],
+    \ 'cpp': ['ccls', '--log-file=/tmp/cc.log'],
  \ }
 nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
 nnoremap <silent> gu :call LanguageClient#textDocument_references()<CR>
@@ -213,10 +213,12 @@ nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
 let g:LanguageClient_selectionUI='quickfix'
 let g:LanguageClient_diagnosticsList='Location'
 let g:LanguageClient_useVirtualText=0
+let g:LanguageClient_settingsPath='lsp_settings.json'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => ctags
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Don't generate a tags file automatically
 let g:gutentags_add_default_project_roots = 0
 " To enable ctags create a .ctagsenable file in the project root
 let g:gutentags_project_root = ['.ctagsenable']
