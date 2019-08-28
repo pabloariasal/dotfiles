@@ -23,6 +23,7 @@
 "   -> Indentation
 "   -> Plugins
 "   -> Language Server and Semantic Completion
+"   -> ctags
 "   -> Fuzzy Search
 "   -> Snippets
 "   -> Folding
@@ -185,8 +186,10 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
     \ }
-Plug 'liuchengxu/vista.vim'
+Plug 'majutsushi/tagbar'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'tpope/vim-dispatch'
 "colors
 Plug 'rafi/awesome-vim-colorschemes'
 "Folding
@@ -206,16 +209,31 @@ let g:LanguageClient_serverCommands = {
 nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
 nnoremap <silent> gu :call LanguageClient#textDocument_references()<CR>
 nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
 let g:LanguageClient_selectionUI='quickfix'
 let g:LanguageClient_diagnosticsList='Location'
 let g:LanguageClient_useVirtualText=0
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => ctags
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:gutentags_add_default_project_roots = 0
+" To enable ctags create a .ctagsenable file in the project root
+let g:gutentags_project_root = ['.ctagsenable']
+" Pass the paths to exclude to the ctag invocation
+if !empty(glob(".ctagsignore"))
+	let g:gutentags_ctags_exclude = ['@.ctagsignore']
+endif
+"open tagbar with f8
+nmap <F8> :TagbarToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Fuzzy Search
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <c-p> :<C-u>FZF<CR>
 nnoremap <c-n> :<C-u>Buffers<CR>
-nnoremap <c-t> :<C-u>Vista finder lcn<CR>
+nnoremap <Leader>t :<C-u>Tags<CR>
+nnoremap <Leader>d :<C-u>BTags<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Snippets
