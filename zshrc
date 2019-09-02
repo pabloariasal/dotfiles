@@ -68,7 +68,7 @@ ZSH_CUSTOM=${HOME}/dotfiles/zsh_custom
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(vi-mode git colored-man-pages zsh-autosuggestions)
+plugins=(vi-mode git colored-man-pages zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -97,4 +97,3 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source "${HOME}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
