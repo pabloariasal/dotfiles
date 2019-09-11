@@ -123,6 +123,7 @@ xnoremap <leader>y "+y
 "Toggle location and quickfix lists
 nmap <Leader>q <Plug>(qf_qf_toggle)
 nmap <Leader>l <Plug>(qf_loc_toggle)
+nmap gq <Plug>(qf_qf_switch)
 " Open buffer deletion menu
 nnoremap <silent> <Leader>bd :<C-u>CloseBuffersMenu<CR>
 "Easy grepping
