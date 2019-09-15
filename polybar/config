@@ -19,7 +19,8 @@ black = #000000
 white = #ffffff
 ; transparent background (needs compton or window compositor)
 bg = #00ffffff
-fg = ${xrdb:color7:#222}
+;fg = ${xrdb:color7:#222}
+fg = ${self.white}
 
 curgent = ${self.red}
 
