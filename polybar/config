@@ -81,7 +81,8 @@ wm-name = i3
 ;== Module Location ========================================================
 
 modules-left = i3 window
-modules-right = player time-colombia xbacklight volume battery keyboard network time
+;modules-right = player time-colombia xbacklight volume battery keyboard network time
+modules-right = spotify time-colombia xbacklight volume battery keyboard network time
 
 ;== Modules ================================================================
 
@@ -133,15 +134,6 @@ label-urgent = ${self.label-focused}
 label-urgent-foreground = ${color.fg}
 label-urgent-background = ${color.curgent}
 label-urgent-padding = ${self.label-focused-padding}
-
-[module/player]
-type = custom/script
-exec = ~/polybar-scripts/polybar-scripts/player-mpris-tail/player-mpris-tail.py -f '{icon} {artist} - {title}' --icon-paused='' --icon-playing=''
-tail = true
-label = %output%
-click-left = ~/polybar-scripts/polybar-scripts/player-mpris-tail/player-mpris-tail.py play-pause
-click-right = ~/polybar-scripts/polybar-scripts/player-mpris-tail/player-mpris-tail.py next
-click-middle = ~/polybar-scripts/polybar-scripts/player-mpris-tail/player-mpris-tail.py previous
 
 [module/time-colombia]
 format-prefix = "COL "
@@ -222,5 +214,10 @@ time = "%a %b %e %H:%M"
 format-prefix = ${icons.time}
 format = <label>
 label = %time%
+
+[module/spotify]
+type = custom/script
+interval = 1
+exec = python3 ${HOME}/dotfiles/polybar/scripts/spotify_status.py -f '{play_pause} {artist} - {song}' -p '',
 
 ;== EOF ========================================================
