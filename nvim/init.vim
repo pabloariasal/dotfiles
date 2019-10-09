@@ -182,13 +182,9 @@ Plug 'tpope/vim-obsession'
 Plug 'markonm/traces.vim'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'tpope/vim-sleuth'
-Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
 Plug 'majutsushi/tagbar'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'ludovicchabant/vim-gutentags'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "colors
 Plug 'rafi/awesome-vim-colorschemes'
 "Folding
@@ -202,18 +198,18 @@ let g:deoplete#enable_at_startup = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Language Server and Semantic Completion
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:LanguageClient_serverCommands = {
-    \ 'c': ['ccls', '--log-file=/tmp/cc.log'],
-    \ 'cpp': ['ccls', '--log-file=/tmp/cc.log'],
- \ }
-nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
-nnoremap <silent> gu :call LanguageClient#textDocument_references()<CR>
-nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
-nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
-let g:LanguageClient_selectionUI='quickfix'
-let g:LanguageClient_diagnosticsList='Location'
-let g:LanguageClient_useVirtualText=0
-let g:LanguageClient_settingsPath='lsp_settings.json'
+" let g:LanguageClient_serverCommands = {
+"     \ 'c': ['ccls', '--log-file=/tmp/cc.log'],
+"     \ 'cpp': ['ccls', '--log-file=/tmp/cc.log'],
+"  \ }
+" nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+" nnoremap <silent> gu :call LanguageClient#textDocument_references()<CR>
+" nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+" nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+" let g:LanguageClient_selectionUI='quickfix'
+" let g:LanguageClient_diagnosticsList='Location'
+" let g:LanguageClient_useVirtualText=0
+" let g:LanguageClient_settingsPath='lsp_settings.json'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => ctags
@@ -274,7 +270,6 @@ set statusline+=%m
 set statusline+=%h
 set statusline+=%r
 set statusline+=\ 
-set statusline+=%{b:gitbranch}
 set statusline+=%=
 set statusline+=%{strlen(&fenc)?&fenc:'none'}
 set statusline+=\ 
@@ -285,23 +280,6 @@ set statusline+=/
 set statusline+=%L
 set statusline+=\ 
 set statusline+=%P
-
-function! StatuslineGitBranch()
-  let b:gitbranch=""
-  if &modifiable
-    lcd %:p:h
-    let l:gitrevparse=system("git rev-parse --abbrev-ref HEAD")
-    lcd -
-    if l:gitrevparse!~"fatal: not a git repository"
-      let b:gitbranch="[".substitute(l:gitrevparse, '\n', '', 'g')."] "
-    endif
-  endif
-endfunction
-
-augroup GetGitBranch
-  autocmd!
-  autocmd VimEnter,WinEnter,BufEnter * call StatuslineGitBranch()
-augroup END
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Spellcheck
