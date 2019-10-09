@@ -24,7 +24,6 @@
 "   -> Plugins
 "   -> Language Server and Semantic Completion
 "   -> ctags
-"   -> Fuzzy Search
 "   -> Snippets
 "   -> Folding
 "   -> Statusline
@@ -125,8 +124,6 @@ xnoremap <leader>y "+y
 nmap <Leader>q <Plug>(qf_qf_toggle)
 nmap <Leader>l <Plug>(qf_loc_toggle)
 nmap gq <Plug>(qf_qf_switch)
-" Open buffer deletion menu
-nnoremap <silent> <Leader>bd :<C-u>CloseBuffersMenu<CR>
 "Easy grepping
 nnoremap <Leader>g :<C-u>grep! 
 "Grep word under the cursor
@@ -174,15 +171,12 @@ Plug 'tpope/vim-unimpaired'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'tpope/vim-repeat'
-Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-commentary'
 Plug 'romainl/vim-qf'
-Plug 'Asheq/close-buffers.vim'
 Plug 'tpope/vim-obsession'
 Plug 'markonm/traces.vim'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'tpope/vim-sleuth'
-Plug 'majutsushi/tagbar'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "colors
@@ -196,20 +190,75 @@ let g:qf_auto_resize = 0
 let g:deoplete#enable_at_startup = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Language Server and Semantic Completion
+" => Language Server Protocol
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" let g:LanguageClient_serverCommands = {
-"     \ 'c': ['ccls', '--log-file=/tmp/cc.log'],
-"     \ 'cpp': ['ccls', '--log-file=/tmp/cc.log'],
-"  \ }
-" nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
-" nnoremap <silent> gu :call LanguageClient#textDocument_references()<CR>
-" nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
-" nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
-" let g:LanguageClient_selectionUI='quickfix'
-" let g:LanguageClient_diagnosticsList='Location'
-" let g:LanguageClient_useVirtualText=0
-" let g:LanguageClient_settingsPath='lsp_settings.json'
+" if hidden is not set, TextEdit might fail.
+set hidden
+
+" Some servers have issues with backup files, see #649
+set nobackup
+set nowritebackup
+
+" Better display for messages
+set cmdheight=2
+
+" You will have bad experience for diagnostic messages when it's default 4000.
+set updatetime=300
+
+" don't give |ins-completion-menu| messages.
+set shortmess+=c
+
+" always show signcolumns
+set signcolumn=yes
+
+" Remap keys for gotos
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gu <Plug>(coc-references)
+
+" Use K to show documentation in preview window
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+" Highlight symbol under cursor on CursorHold
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" Remap for rename current word
+nmap <F2> <Plug>(coc-rename)
+
+" Using CocList
+" Show all diagnostics
+nnoremap <silent> <leader>d  :<C-u>CocList --normal diagnostics<cr>
+" Manage extensions
+" nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
+" Show commands
+" nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
+" Find symbol of current document
+nnoremap <silent> <leader>o  :<C-u>CocList outline<cr>
+" Search workspace symbols
+nnoremap <silent> <leader>s  :<C-u>CocList -I symbols<cr>
+" search tags
+nnoremap <silent> <leader>t  :<C-u>CocList tags<cr>
+" search colors
+nnoremap <silent> <leader>c  :<C-u>CocList colors<cr>
+" search files
+nnoremap <c-p>  :<C-u>CocList files<cr>
+" search colors
+nnoremap <c-n>  :<C-u>CocList buffers<cr>
+" Do default action for next item.
+" nnoremap <silent> <space>j  :<C-u>CocNext<CR>
+" Do default action for previous item.
+" nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
+" Resume latest coc list
+" nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => ctags
@@ -222,16 +271,6 @@ let g:gutentags_project_root = ['.ctagsenable']
 if !empty(glob(".ctagsignore"))
 	let g:gutentags_ctags_exclude = ['@.ctagsignore']
 endif
-"open tagbar with f8
-nmap <F8> :TagbarToggle<CR>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Fuzzy Search
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <c-p> :<C-u>FZF<CR>
-nnoremap <c-n> :<C-u>Buffers<CR>
-nnoremap <Leader>t :<C-u>Tags<CR>
-nnoremap <Leader>d :<C-u>BTags<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Snippets
@@ -270,6 +309,8 @@ set statusline+=%m
 set statusline+=%h
 set statusline+=%r
 set statusline+=\ 
+set statusline+=%{coc#status()}%{get(b:,'coc_current_function','')}
+set statusline+=\ 
 set statusline+=%=
 set statusline+=%{strlen(&fenc)?&fenc:'none'}
 set statusline+=\ 
@@ -286,5 +327,3 @@ set statusline+=%P
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set American English as dictionary (for word completion)
 set dictionary+=/usr/share/dict/american-english
-nnoremap <Leader>se :setlocal spell spelllang=en_us<CR>
-nnoremap <Leader>sg :setlocal spell spelllang=de_20<CR>
