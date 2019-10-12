@@ -14,8 +14,18 @@
 " Maintainer:
 "   Pablo Arias - pabloariasal@gmail.com
 "
+" Description:
+"   Snippet configuration
+"
+" Required Plugins: SirVer/ultisnips, honza/vim-snippets
+"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-source ${HOME}/dotfiles/nvim/plugins.vim
-source ${HOME}/dotfiles/nvim/general.vim
-source ${HOME}/dotfiles/nvim/key_maps.vim
-source ${HOME}/dotfiles/nvim/statusline.vim
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsListSnippets="<c-a>"
+"open personal snippet file in a vertical split
+let g:UltiSnipsEditSplit="vertical"
+"store personal snippets here. NOTE: must be in runtimepath
+let g:UltiSnipsSnippetsDir="mysnippets"
+"read snippets from the following directories. NOTE: dirs must be in runtmepath
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "mysnippets"]
+let g:UltiSnipsEnableSnipMate = 0

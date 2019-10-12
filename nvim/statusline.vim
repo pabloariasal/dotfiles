@@ -14,8 +14,28 @@
 " Maintainer:
 "   Pablo Arias - pabloariasal@gmail.com
 "
+" Description:
+"   Status Line Configuration
+"
+" Required Plugins:
+"   
+"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-source ${HOME}/dotfiles/nvim/plugins.vim
-source ${HOME}/dotfiles/nvim/general.vim
-source ${HOME}/dotfiles/nvim/key_maps.vim
-source ${HOME}/dotfiles/nvim/statusline.vim
+set statusline+=%F
+set statusline+=%m
+set statusline+=%h
+set statusline+=%r
+set statusline+=\ 
+set statusline+=%=
+set statusline+=\ 
+set statusline+=%{SleuthIndicator()}
+set statusline+=\ 
+set statusline+=%{strlen(&fenc)?&fenc:'none'}
+set statusline+=\ 
+set statusline+=%y
+set statusline+=\ 
+set statusline+=%l
+set statusline+=/
+set statusline+=%L
+set statusline+=\ 
+set statusline+=%P
