@@ -38,4 +38,5 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'tmhedberg/SimpylFold'
+Plug 'junegunn/goyo.vim'
 call plug#end()
