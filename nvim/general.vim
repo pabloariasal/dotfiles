@@ -184,3 +184,6 @@ set shortmess+=c
 
 " always show signcolumns
 set signcolumn=yes
+
+" Use `:Format` to format current buffer
+command! -nargs=0 Format :call CocAction('format')

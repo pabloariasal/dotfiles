@@ -86,6 +86,9 @@ endfunction
 
 " Remap for rename current word
 nmap <F2> <Plug>(coc-rename)
+" Remap for format selected region
+xmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
 
 nnoremap <silent> <leader>d  :<C-u>CocList --normal diagnostics<cr>
 "Symbols in current document
