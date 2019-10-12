@@ -155,6 +155,7 @@ bindsym $mod+minus scratchpad show
 
 # Fast jumping to special tasks
 bindsym $mod+n workspace 5
+bindsym $mod+m workspace 1
 
 # System mode
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
