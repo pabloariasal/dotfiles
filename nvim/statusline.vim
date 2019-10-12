@@ -17,15 +17,25 @@
 " Description:
 "   Status Line Configuration
 "
-" Required Plugins:
+" Required Plugins: vim-sleuth, neomake
 "   
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! NeomakeStatus()
+ return neomake#statusline#get(g:actual_curbuf, {
+	    \ 'use_highlights_with_defaults': 0,
+	    \ 'format_running':'({{running_job_names}})…',
+	    \ 'format_status': '[%s]',
+	    \ 'format_loclist_unknown': '',
+	    \})
+endfunction
+
 set statusline+=%F
 set statusline+=%m
 set statusline+=%h
 set statusline+=%r
 set statusline+=\ 
+set statusline+=%{NeomakeStatus()}
 set statusline+=%=
 set statusline+=\ 
 set statusline+=%{SleuthIndicator()}

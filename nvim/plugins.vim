@@ -39,4 +39,5 @@ Plug 'honza/vim-snippets'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'tmhedberg/SimpylFold'
 Plug 'junegunn/goyo.vim'
+Plug 'neomake/neomake'
 call plug#end()

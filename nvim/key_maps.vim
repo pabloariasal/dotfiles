@@ -105,3 +105,11 @@ nnoremap <silent> <leader>t  :<C-u>CocList tags<cr>
 nnoremap <silent> <leader>c  :<C-u>CocList colors<cr>
 nnoremap <c-p>  :<C-u>CocList files<cr>
 nnoremap <c-n>  :<C-u>CocList buffers<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Buiding
+"
+" Required Plugins: neomake
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <Leader>mf :<C-u>Neomake! make_build_filtered<cr>
+nnoremap <Leader>mr :<C-u>Neomake! make_build<cr>
