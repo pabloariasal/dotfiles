@@ -1,6 +1,8 @@
 {
+"list.source.outline.defaultOptions": ["--auto-preview"],
 "list.source.files.command":"fd",
 "list.source.files.args":["-tf"],
+"coc.source.dictionary.filetypes":["markdown"],
 "languageserver": {
   "ccls": {
         "command": "ccls",
