@@ -40,4 +40,5 @@ Plug 'rafi/awesome-vim-colorschemes'
 Plug 'tmhedberg/SimpylFold'
 Plug 'junegunn/goyo.vim'
 Plug 'neomake/neomake'
+Plug 'reedes/vim-pencil'
 call plug#end()
