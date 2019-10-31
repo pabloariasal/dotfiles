@@ -7,6 +7,7 @@ https://web.whatsapp.com\n
 https://old.reddit.com\n
 https://feedly.com\n
 https://news.ycombinator.com\n
+https://keep.google.com\n
 "
 
 selection=$(echo -e $options | dmenu -l 10 -p "What to open?")
