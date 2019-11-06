@@ -41,12 +41,6 @@ nnoremap <leader>P "+P
 nnoremap <leader>y "+y
 xnoremap <leader>y "+y
 
-"Easy grepping
-nnoremap <Leader>g :<C-u>grep! 
-
-"Grep word under the cursor
-nnoremap <Leader>r :<C-u>grep! <C-r><C-w>
-
 "use space to toggle folds in normal mode
 nnoremap <Space> za
 vnoremap <Space> za
@@ -102,7 +96,8 @@ nnoremap <silent> <leader>t  :<C-u>CocList tags<cr>
 nnoremap <silent> <leader>c  :<C-u>CocList colors<cr>
 nnoremap <c-p>  :<C-u>CocList files<cr>
 nnoremap <c-n>  :<C-u>CocList buffers<cr>
-
+nnoremap <Leader>g :<C-u>CocList -I grep<cr>
+nnoremap <silent> <Leader>r :exe 'CocList -I --input='.expand('<cword>').' grep'<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Buiding
 "
