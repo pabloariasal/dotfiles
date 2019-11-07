@@ -2,6 +2,7 @@
 export FZF_DEFAULT_COMMAND='fd --type f'
 export FZF_DEFAULT_OPTS='--height 40%'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+# ALT-C cd into commond directory
 export FZF_ALT_C_COMMAND="fasd -Rld"
 [[ -r "/usr/share/fzf/key-bindings.zsh" ]] && source /usr/share/fzf/key-bindings.zsh
 
@@ -25,3 +26,20 @@ fzf-branch-widget() {
 }
 zle     -N   fzf-branch-widget
 bindkey '^O' fzf-branch-widget
+
+# ALT-D - cd into subdirectory
+fzf-cd-subdir-widget() {
+  local cmd="command fd -td 2> /dev/null"
+  setopt localoptions pipefail no_aliases 2> /dev/null
+  local dir="$(eval "$cmd" | FZF_DEFAULT_OPTS="--height ${FZF_TMUX_HEIGHT:-40%} --reverse $FZF_DEFAULT_OPTS $FZF_ALT_C_OPTS" $(__fzfcmd) +m)"
+  if [[ -z "$dir" ]]; then
+    zle redisplay
+    return 0
+  fi
+  cd "$dir"
+  local ret=$?
+  zle fzf-redraw-prompt
+  return $ret
+}
+zle     -N    fzf-cd-subdir-widget
+bindkey '\ed' fzf-cd-subdir-widget
