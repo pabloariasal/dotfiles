@@ -3,6 +3,7 @@
 "list.source.files.command":"fd",
 "list.source.files.args":["-tf"],
 "coc.source.dictionary.filetypes":["markdown"],
+"list.source.mru.defaultArgs":["--smart-case"],
 "languageserver": {
   "ccls": {
         "command": "ccls",
