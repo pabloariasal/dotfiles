@@ -88,7 +88,7 @@ nnoremap <silent> <leader>o  :<C-u>CocList outline<cr>
 nnoremap <silent> <leader>s  :<C-u>CocList -I symbols<cr>
 nnoremap <silent> <leader>t  :<C-u>CocList tags<cr>
 
-nnoremap <silent> <leader>f <Plug>(coc-format)
+nmap <leader>f <Plug>(coc-format)
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Fuzzy Finding
