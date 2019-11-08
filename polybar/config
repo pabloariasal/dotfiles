@@ -221,18 +221,9 @@ exec = python3 ${HOME}/dotfiles/polybar/scripts/spotify_status.py -f '{play_paus
 type = internal/cpu
 interval = 0.5
 
-format = <ramp-coreload>
+format = <label>
 label = %percentage%%
 format-prefix = ${icons.cpu}
-
-ramp-coreload-0 = ▁
-ramp-coreload-1 = ▂
-ramp-coreload-2 = ▃
-ramp-coreload-3 = ▄
-ramp-coreload-4 = ▅
-ramp-coreload-5 = ▆
-ramp-coreload-6 = ▇
-ramp-coreload-7 = █
 
 [module/memory]
 type = internal/memory
