@@ -41,4 +41,5 @@ Plug 'tmhedberg/SimpylFold'
 Plug 'junegunn/goyo.vim'
 Plug 'neomake/neomake'
 Plug 'reedes/vim-pencil'
+Plug 'airblade/vim-gitgutter'
 call plug#end()
