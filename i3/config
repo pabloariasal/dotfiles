@@ -44,6 +44,9 @@ for_window [class="^.*"] border pixel 1
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
 
+#toggle polybar
+bindsym $mod+p exec polybar-msg cmd toggle
+
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down

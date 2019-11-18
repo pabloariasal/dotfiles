@@ -80,6 +80,7 @@ scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
 
 wm-name = i3
+enable-ipc = true
 
 ;== Module Location ========================================================
 
