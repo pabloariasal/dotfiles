@@ -34,6 +34,9 @@ for_window [class="Spotify"] move to workspace 8
 assign [class="^Thunderbird$"] 9
 assign [class="Chromium" instance="keep.google.com"] 10
 
+# Make gitk floating and fullscreen
+for_window [class="Gitk"] fullscreen
+
 # kill focused window
 bindsym $mod+q kill
 
