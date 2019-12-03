@@ -19,15 +19,14 @@ floating_modifier $mod
 bindsym $mod+Return exec $terminal
 bindsym $mod+b exec $browser
 bindsym $mod+t exec browser-no-bars
-bindsym $mod+Ctrl+4 exec $terminal --class="irc" -e irssi
-bindsym $mod+Ctrl+6 exec $browser --new-window -app="https://web.whatsapp.com"
+bindsym $mod+Ctrl+6 exec $terminal --class="irc" -e irssi
 bindsym $mod+Ctrl+7 exec $browser --new-window -app="https://old.reddit.com"
 bindsym $mod+Ctrl+8 exec spotify
 bindsym $mod+Ctrl+9 exec thunderbird
 bindsym $mod+Ctrl+0 exec $browser --new-window -app="https://keep.google.com"
 
 # Assign certain programs to specific workspaces
-assign [class="Alacritty" instance="irc"] 4
+assign [class="Alacritty" instance="irc"] 6
 assign [class="Chromium" instance="web.whatsapp.com"] 6
 assign [class="Chromium" instance="old.reddit.com"] 7
 assign [class="Chromium" instance="news.ycombinator.com"] 7
