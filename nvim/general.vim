@@ -79,9 +79,6 @@ set showcmd
 "Highlight matching braket
 set showmatch
 
-"Show line numbers
-set number
-
 "Always display the statusline in all windows
 set laststatus=2
 
