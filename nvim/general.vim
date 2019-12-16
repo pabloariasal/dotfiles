@@ -184,3 +184,12 @@ command! -nargs=0 Format :call CocAction('format')
 
 " Highlight symbol under cursor on CursorHold
 autocmd CursorHold * silent call CocActionAsync('highlight')
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Code Outline Sidebar
+"
+" Require Plugins: vista
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:vista_sidebar_width = 100
+let g:vista#renderer#enable_icon = 0
+let g:vista_sidebar_position = 'vertical topleft'
