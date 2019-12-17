@@ -29,6 +29,7 @@ bindsym $mod+Ctrl+0 exec minetime
 # Assign certain programs to specific workspaces
 assign [class="Chromium" instance="keep.google.com"] 4
 assign [class="Alacritty" instance="irc"] 6
+assign [class="Chromium" instance="mm."] 6
 assign [class="Chromium" instance="web.whatsapp.com"] 6
 assign [class="Chromium" instance="old.reddit.com"] 7
 assign [class="Chromium" instance="news.ycombinator.com"] 7
