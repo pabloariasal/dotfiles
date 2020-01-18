@@ -28,6 +28,7 @@ bindsym $mod+Ctrl+9 exec thunderbird
 bindsym $mod+Ctrl+0 exec minetime
 
 # Assign certain programs to specific workspaces
+assign [class="Chromium" instance="crx"] 4
 assign [class="Chromium" instance="keep.google.com"] 4
 assign [class="Alacritty" instance="irc"] 6
 assign [class="Chromium" instance="mm."] 6
