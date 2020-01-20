@@ -115,7 +115,7 @@ ws-icon-5 = 6;CHAT
 ws-icon-6 = 7;NEWS
 ws-icon-7 = 8;PLAY
 ws-icon-8 = 9;MAIL
-ws-icon-9 = 10;CAL
+ws-icon-9 = 10;IRC
 ws-icon-default =
 
 ; focused = Active workspace on focused monitor
