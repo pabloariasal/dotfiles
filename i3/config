@@ -30,7 +30,6 @@ bindsym $mod+Ctrl+0 exec $terminal --class="irc" -e irssi
 
 # Assign certain programs to specific workspaces
 assign [class="Alacritty" instance="gotop"] 3
-assign [class="Chromium" instance="crx"] 4
 assign [class="Chromium" instance="keep.google.com"] 4
 assign [class="Chromium" instance="mm."] 6
 assign [class="Chromium" instance="web.whatsapp.com"] 6
