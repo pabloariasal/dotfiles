@@ -108,11 +108,3 @@ nnoremap <silent> <Leader>r :exe 'CocList -I --input='.expand('<cword>').' grep'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <Leader>mf :<C-u>Neomake! make_build_filtered<cr>
 nnoremap <Leader>mr :<C-u>Neomake! make_build<cr>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Code Outline Sidebar
-"
-" Require Plugins: vista
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <silent> <leader>vo  :<C-u>Vista coc<cr>
-nnoremap <silent> <leader>vc  :<C-u>Vista!<cr>

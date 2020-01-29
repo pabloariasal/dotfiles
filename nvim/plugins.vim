@@ -43,5 +43,4 @@ Plug 'junegunn/goyo.vim'
 Plug 'neomake/neomake'
 Plug 'reedes/vim-pencil'
 Plug 'airblade/vim-gitgutter'
-Plug 'liuchengxu/vista.vim'
 call plug#end()
