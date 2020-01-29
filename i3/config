@@ -20,17 +20,16 @@ bindsym $mod+Return exec $terminal
 bindsym $mod+Shift+Return exec opendir
 bindsym $mod+b exec $browser
 bindsym $mod+t exec browser-no-bars
-bindsym $mod+Ctrl+3 exec $terminal --class="gotop" -e gotop
-bindsym $mod+Ctrl+6 exec $browser --new-window -app="https://web.whatsapp.com"
 bindsym $mod+Ctrl+4 exec $browser --new-window -app="https://keep.google.com"
+bindsym $mod+Ctrl+6 exec $terminal --class="irc" -e irssi
 bindsym $mod+Ctrl+7 exec $browser --new-window -app="https://old.reddit.com"
 bindsym $mod+Ctrl+8 exec spotify
 bindsym $mod+Ctrl+9 exec thunderbird
-bindsym $mod+Ctrl+0 exec $terminal --class="irc" -e irssi
+bindsym $mod+Ctrl+0 exec $terminal --class="gotop" -e gotop
 
 # Assign certain programs to specific workspaces
-assign [class="Alacritty" instance="gotop"] 3
 assign [class="Chromium" instance="keep.google.com"] 4
+assign [class="Alacritty" instance="irc"] 6
 assign [class="Chromium" instance="mm."] 6
 assign [class="Chromium" instance="web.whatsapp.com"] 6
 assign [class="Chromium" instance="old.reddit.com"] 7
@@ -38,7 +37,7 @@ assign [class="Chromium" instance="news.ycombinator.com"] 7
 for_window [class="Spotify"] move to workspace 8
 assign [class="^Thunderbird$"] 9
 assign [class="MineTime"] 9
-assign [class="Alacritty" instance="irc"] 10
+assign [class="Alacritty" instance="gotop"] 10
 
 # Make gitk floating and fullscreen
 for_window [class="Gitk"] fullscreen
