@@ -9,6 +9,7 @@ https://feedly.com\n
 https://news.ycombinator.com\n
 https://keep.google.com\n
 https://mm.navvis.com\n
+https://twitter.com\n
 "
 
 selection=$(echo -e $options | dmenu -l 10 -p "What to open?")
