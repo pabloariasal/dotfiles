@@ -27,5 +27,5 @@ let g:UltiSnipsEditSplit="vertical"
 "store personal snippets here. NOTE: must be in runtimepath
 let g:UltiSnipsSnippetsDir="mysnippets"
 "read snippets from the following directories. NOTE: dirs must be in runtmepath
-let g:UltiSnipsSnippetDirectories=["UltiSnips", "mysnippets"]
+let g:UltiSnipsSnippetDirectories=["mysnippets"]
 let g:UltiSnipsEnableSnipMate = 0

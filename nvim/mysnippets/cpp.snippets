@@ -1,0 +1,133 @@
+snippet po "pragma once directive" b
+#pragma once
+endsnippet
+
+snippet abc "Abstract Base Class"
+class $1
+{
+public:
+		$1() = default;
+		virtual ~$1() = default;
+
+		$1(const $1&) = delete;
+		$1& operator=(const $1&) = delete;
+		$1($1&&) = delete;
+		$1& operator=($1&&) = delete;
+};
+endsnippet
+
+snippet cla "Class"
+class $1
+{
+public:
+		$1();
+
+private:
+};
+endsnippet
+
+snippet str "Struct"
+struct $1
+{
+$2
+};
+endsnippet
+
+snippet ld "Lambda"
+[$3]($1){$2}
+endsnippet
+
+snippet lld "Multiline Lambda"
+[$1]($2){
+		$3
+};
+endsnippet
+
+snippet iq "Include Quotes" b
+#include "$1"
+endsnippet
+
+snippet ib "Include Brackets" b
+#include <$1>
+endsnippet
+
+snippet main "main() (main)"
+int main(int argc, char *argv[])
+{
+	$1
+	return EXIT_SUCCESS;
+}
+endsnippet
+
+snippet forr "For Range Loop"
+for ($1 : $2)
+{
+$3
+}
+endsnippet
+
+snippet fori "For Counter"
+for (int i = 0; i < $1; ++i)
+{
+		$2
+}
+endsnippet
+
+snippet ns "Namespace"
+namespace $1
+{
+$2
+}
+endsnippet
+
+snippet cout "std::cout"
+std::cout << $1 << std::endl;
+endsnippet
+
+snippet if "If Clause"
+if ($1)
+{
+		$2
+}
+endsnippet
+
+snippet else "Else Clause"
+else
+{
+		$1
+}
+endsnippet
+
+snippet elif "Else-if Clause"
+else if
+{
+		$1
+}
+endsnippet
+
+snippet fun "Function"
+${1:void} $2($3)
+{
+		$4
+}
+endsnippet
+
+snippet fund "Function Declaration"
+${1:void} $2($3);
+endsnippet
+
+snippet be "Container Begin and End" i
+$1.begin(), $1.end()
+endsnippet
+
+snippet bec "Container Const Begin and End" i
+$1.cbegin(), $1.cend()
+endsnippet
+
+snippet st "std::"
+std::
+endsnippet
+
+snippet todo "TODO"
+// TODO: 
+endsnippet

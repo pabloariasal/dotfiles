@@ -36,7 +36,6 @@ Plug 'tpope/vim-sleuth'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'tmhedberg/SimpylFold'
 Plug 'junegunn/goyo.vim'
