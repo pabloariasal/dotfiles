@@ -86,9 +86,6 @@ else
   export EDITOR='nvim'
 fi
 
-# Navigate the dirhistory with alt+h and alt+l
-bindkey '^[h' insert-cycledleft
-bindkey '^[l' insert-cycledright
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
