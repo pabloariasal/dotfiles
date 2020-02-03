@@ -229,7 +229,7 @@ bindsym $mod+F9 exec playerctl next
 bindsym $mod+F7 exec playerctl previous
 
 # start compton in background as daemon process
-exec_always --no-startup-id picom -C -b
+exec_always --no-startup-id picom -b
 
 # Wallpaper
 exec_always --no-startup-id feh --bg-scale /home/pablo/Documents/wallpapers/current
