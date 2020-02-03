@@ -43,6 +43,3 @@ fzf-cd-subdir-widget() {
 }
 zle     -N    fzf-cd-subdir-widget
 bindkey '\ed' fzf-cd-subdir-widget
-
-alias of="fzf | xargs -r nvim"
-alias bf="fzf | xargs -r bat"
