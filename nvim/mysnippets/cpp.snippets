@@ -124,8 +124,16 @@ snippet bec "Container Const Begin and End" i
 $1.cbegin(), $1.cend()
 endsnippet
 
-snippet st "std::"
-std::
+snippet up "std::unique_ptr<>"
+std::unique_ptr<$1>
+endsnippet
+
+snippet ve "std::vector<>"
+std::vector<$1>
+endsnippet
+
+snippet st "std::string"
+std::string
 endsnippet
 
 snippet todo "TODO"
