@@ -21,7 +21,7 @@ bindsym $mod+Shift+Return exec opendir
 bindsym $mod+b exec $browser
 bindsym $mod+t exec browser-no-bars
 bindsym $mod+Ctrl+4 exec $browser --new-window -app="https://keep.google.com"
-bindsym $mod+Ctrl+6 exec $terminal --class="irc" -e irssi
+bindsym $mod+Ctrl+6 exec $terminal --class="irc" --title="Irssi" -e irssi
 bindsym $mod+Ctrl+7 exec $browser --new-window -app="https://old.reddit.com"
 bindsym $mod+Ctrl+8 exec spotify
 bindsym $mod+Ctrl+9 exec thunderbird
