@@ -45,6 +45,9 @@ xnoremap <leader>y "+y
 nnoremap <Space> za
 vnoremap <Space> za
 
+"remove trailing whitespace
+nmap <silent> <Leader>w :<C-u>%s/\s\+$//<cr>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Quickfix list and Location List
 "
