@@ -1,2 +1,8 @@
+sudo pacman -Syu
+nmcli device wifi connect FamiliaArias --ask
+nmcli device wifi list
+nmcli c up DumbledoreDies
+nmcli c down nv-pf1-udp-1194-Pablo_Arias
+nmcli c up nv-pf1-udp-1194-Pablo_Arias --ask
 cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ..
 cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ..
