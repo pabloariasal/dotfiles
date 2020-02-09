@@ -25,7 +25,7 @@ function _emarks_insert()
 		zle fzf-redraw-prompt
 		return 0
 	fi
-	LBUFFER="${LBUFFER}$(echo "$1" | tr '\r\n' ' ')"
+	LBUFFER="${LBUFFER}$(echo "$1" | tr '\r\n' ' '| sed -e 's/\s$//')"
 	local ret=$?
 	zle fzf-redraw-prompt
 	return $ret
