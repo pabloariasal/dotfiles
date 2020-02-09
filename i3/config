@@ -17,7 +17,6 @@ floating_modifier $mod
 
 # Starting programs
 bindsym $mod+Return exec $terminal
-bindsym $mod+Shift+Return exec opendir
 bindsym $mod+b exec $browser
 bindsym $mod+t exec browser-no-bars
 bindsym $mod+Ctrl+4 exec $browser --new-window -app="https://keep.google.com"
