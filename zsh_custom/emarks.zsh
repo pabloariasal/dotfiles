@@ -1,25 +1,25 @@
-# function pmarks-insert-bookmark-file()
+# function emarks-insert-bookmark-file()
 # {
-# 	_pmarks_insert "$(./pmarks.sh --select-files)"
+# 	_emarks_insert "$(./emarks.sh --select-files)"
 # }
-# zle     -N    pmarks-insert-bookmark-file
-# bindkey '\ef' pmarks-insert-bookmark-file
+# zle     -N    emarks-insert-bookmark-file
+# bindkey '\ef' emarks-insert-bookmark-file
 
-# function pmarks-insert-bookmark-dir()
+# function emarks-insert-bookmark-dir()
 # {
-# 	_pmarks_insert "$(./pmarks.sh --select-dirs)"
+# 	_emarks_insert "$(./emarks.sh --select-dirs)"
 # }
-# zle     -N    pmarks-insert-bookmark-dir
-# bindkey '\ed' pmarks-insert-bookmark-dir
+# zle     -N    emarks-insert-bookmark-dir
+# bindkey '\ed' emarks-insert-bookmark-dir
 
-function pmarks-insert-bookmark-dir()
+function emarks-insert-bookmark-dir()
 {
-	_pmarks_insert "$(pmarks --select)"
+	_emarks_insert "$(emarks --select)"
 }
-zle     -N    pmarks-insert-bookmark-dir
-bindkey '\eb' pmarks-insert-bookmark-dir
+zle     -N    emarks-insert-bookmark-dir
+bindkey '\eb' emarks-insert-bookmark-dir
 
-function _pmarks_insert()
+function _emarks_insert()
 {
 	if [[ -z "$1" ]]; then
 		zle fzf-redraw-prompt

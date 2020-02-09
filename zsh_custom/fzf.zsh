@@ -27,9 +27,9 @@ fzf-branch-widget() {
 zle     -N   fzf-branch-widget
 bindkey '\eo' fzf-branch-widget
 
-# ALT-D - cd into subdirectory
+# ALT-P - cd into subdirectory
 fzf-cd-subdir-widget() {
-  local cmd="command pmarks --list-dirs 2> /dev/null"
+  local cmd="command emarks --list-dirs 2> /dev/null"
   setopt localoptions pipefail no_aliases 2> /dev/null
   local dir="$(eval "$cmd" | FZF_DEFAULT_OPTS="--height ${FZF_TMUX_HEIGHT:-40%} --reverse $FZF_DEFAULT_OPTS $FZF_ALT_C_OPTS" $(__fzfcmd) +m)"
   if [[ -z "$dir" ]]; then
