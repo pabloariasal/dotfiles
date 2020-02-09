@@ -3,7 +3,7 @@ export FZF_DEFAULT_COMMAND='fd'
 export FZF_DEFAULT_OPTS='--height 40%'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 # ALT-C cd into commond directory
-export FZF_ALT_C_COMMAND="fasd -Rld"
+export FZF_ALT_C_COMMAND="fd -td"
 [[ -r "/usr/share/fzf/key-bindings.zsh" ]] && source /usr/share/fzf/key-bindings.zsh
 
 # CTRL-O - Paste the selected git branch into the command line
@@ -25,11 +25,11 @@ fzf-branch-widget() {
   return $ret
 }
 zle     -N   fzf-branch-widget
-bindkey '^O' fzf-branch-widget
+bindkey '\eo' fzf-branch-widget
 
 # ALT-D - cd into subdirectory
 fzf-cd-subdir-widget() {
-  local cmd="command fd -td 2> /dev/null"
+  local cmd="command pmarks --list-dirs 2> /dev/null"
   setopt localoptions pipefail no_aliases 2> /dev/null
   local dir="$(eval "$cmd" | FZF_DEFAULT_OPTS="--height ${FZF_TMUX_HEIGHT:-40%} --reverse $FZF_DEFAULT_OPTS $FZF_ALT_C_OPTS" $(__fzfcmd) +m)"
   if [[ -z "$dir" ]]; then
@@ -42,4 +42,4 @@ fzf-cd-subdir-widget() {
   return $ret
 }
 zle     -N    fzf-cd-subdir-widget
-bindkey '\ed' fzf-cd-subdir-widget
+bindkey '\ep' fzf-cd-subdir-widget
