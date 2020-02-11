@@ -213,13 +213,13 @@ bindsym --release Print exec scrot '%Y-%m-%d_$wx$h.png' -e 'mv $f /tmp/'
 bindsym --release Shift+Print exec scrot -s '%Y-%m-%d_$wx$h.png' -e 'mv $f /tmp/'
 
 # Audio control
-bindsym XF86AudioRaiseVolume exec change-volume '5%+'
-bindsym XF86AudioLowerVolume exec change-volume '5%-'
-bindsym XF86AudioMute exec change-volume 'toggle'
+bindsym XF86AudioRaiseVolume exec amixer set Master 10%+ unmute; exec notify-volume
+bindsym XF86AudioLowerVolume exec amixer set Master 10%- unmute; exec notify-volume
+bindsym XF86AudioMute exec exec amixer set Master toggle; exec notify-volume
 
 #Brightness Control
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10; exec notify-brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10; exec notify-brightness
 
 # Media Player Control
 bindsym $mod+F8 exec playerctl play-pause
