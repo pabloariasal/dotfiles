@@ -1,0 +1,5 @@
+#!/bin/bash
+
+msgId="3782642"
+datetime=$(date +"%a %d %b %Y %R")
+dunstify -a "notify_datetime" -u low -i alarm-symbolic -r "$msgId" "$datetime"

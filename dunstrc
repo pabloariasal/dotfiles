@@ -166,7 +166,7 @@
     max_icon_size = 32
 
     # Paths to default icons.
-    icon_path = /usr/share/icons/mate/scalable/status
+    icon_path = /usr/share/icons/mate/scalable/status:/usr/share/icons/mate/scalable/devices
 
     ### History ###
 
@@ -296,10 +296,24 @@
     # Icon for notifications with critical urgency, uncomment to enable
     #icon = /path/to/icon
 
-[volume-change]
+[volume_change]
+    appname = "notify_volume"
     timeout = 1
 
-[brightness-change]
+[brightness_change]
+    appname = "notify_brightness"
+    timeout = 1
+
+[datetime]
+    appname = "notify_datetime"
+    timeout = 5
+
+[battery_status]
+    appname = "notify_battery"
+    timeout = 5
+
+[keyboard_layout_change]
+    appname = "notify_layout"
     timeout = 1
 
 # Every section that isn't one of the above is interpreted as a rules to

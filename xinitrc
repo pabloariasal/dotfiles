@@ -38,5 +38,6 @@ fi
 
 wal -R
 setxkbmap -option caps:escape
+setxkbmap us
 xbindkeys
 exec i3

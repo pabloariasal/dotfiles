@@ -51,9 +51,6 @@ for_window [class="^.*"] border pixel 1
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
 
-#toggle polybar
-bindsym $mod+p exec polybar-msg cmd toggle
-
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -88,8 +85,8 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+# bindsym $mod+s layout stacking
+# bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 bindsym $mod+y layout toggle tabbed stacking split
 
@@ -186,6 +183,15 @@ bindsym $mod+equal [class="Chromium"] scratchpad show
 # Fast jumping to special tasks
 bindsym $mod+n workspace 5
 bindsym $mod+m workspace 1
+
+# Show clock and time
+bindsym $mod+u exec notify-datetime; exec notify-battery
+
+# Toggle polybar
+bindsym $mod+p exec polybar-msg cmd toggle
+
+# Change keyboard layout
+bindsym $mod+w exec change-keyboard-layout
 
 # System mode
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
