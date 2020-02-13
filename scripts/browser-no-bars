@@ -12,5 +12,5 @@ https://mm.navvis.com\n
 https://twitter.com\n
 "
 
-selection=$(echo -e $options | dmenu -l 10 -p "What to open?")
+selection=$(echo -e $options | rofi -dmenu)
 [ ! -z "$selection" ] && chromium --new-window --app="$selection"

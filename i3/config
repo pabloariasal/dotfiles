@@ -49,7 +49,7 @@ bindsym $mod+q kill
 for_window [class="^.*"] border pixel 1
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec rofi -show run
 
 # change focus
 bindsym $mod+h focus left
@@ -188,10 +188,13 @@ bindsym $mod+m workspace 1
 bindsym $mod+u exec notify-datetime; exec notify-battery
 
 # Toggle polybar
-bindsym $mod+p exec polybar-msg cmd toggle
+bindsym $mod+s exec polybar-msg cmd toggle
 
 # Change keyboard layout
 bindsym $mod+w exec change-keyboard-layout
+
+# Open window
+bindsym $mod+p exec rofi -show window
 
 # System mode
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
