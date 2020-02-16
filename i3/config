@@ -1,25 +1,11 @@
-# i3 config file (v4)
-#
-# Please see http://i3wm.org/docs/userguide.html for a complete reference!
-
+# Windows keu as mod
 set $mod Mod4
-
-#Programs
-set $terminal alacritty
-set $Locker i3lock && sleep 1
-
-#System font
-font pango:DejaVu Sans Mono 8
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# Starting programs
-bindsym $mod+Return exec $terminal
-bindsym $mod+Shift+Return exec opendir
-bindsym $mod+b exec ${CHROMIUM_EXEC}
-
-# Assign certain programs to specific workspaces
+#######################################################################
+# Automatic Window Assignment
 assign [class="Chromium" instance="keep.google.com"] 4
 assign [class="Chromium" instance="mm."] 6
 assign [class="Chromium" instance="web.whatsapp.com"] 6
@@ -31,70 +17,48 @@ assign [class="^Thunderbird$"] 9
 assign [class="MineTime"] 9
 assign [class="Alacritty" instance="gotop"] 10
 
-# Make gitk floating and fullscreen
-for_window [class="Gitk"] fullscreen
 
-# kill focused window
-bindsym $mod+q kill
-
-# disable title bars
-for_window [class="^.*"] border pixel 1
-
-# start dmenu (a program launcher)
+#######################################################################
+# Key Bindings - Starting Programs
+bindsym $mod+Return exec alacritty
+bindsym $mod+Shift+Return exec opendir
+bindsym $mod+b exec ${CHROMIUM_EXEC}
 bindsym $mod+d exec rofi -show run
+bindsym $mod+u exec notify-datetime; exec notify-battery
+bindsym $mod+w exec change-keyboard-layout
+bindsym $mod+p exec rofi -show window
+bindsym $mod+s exec polybar-msg cmd toggle
 
-# change focus
+
+#######################################################################
+# Key Bindings - Windows
+
+# Change Focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
 
-# alternatively, you can use the cursor keys:
-# bindsym $mod+Left focus left
-# bindsym $mod+Down focus down
-# bindsym $mod+Up focus up
-# bindsym $mod+Right focus right
-
-# move focused window
+# Move Focused Window
 bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
-# alternatively, you can use the cursor keys:
-# bindsym $mod+Shift+Left move left
-# bindsym $mod+Shift+Down move down
-# bindsym $mod+Shift+Up move up
-# bindsym $mod+Shift+Right move right
-
-# split in horizontal orientation
-bindsym $mod+o split h
-
-# split in vertical orientation
-bindsym $mod+v split v
-
-# enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
-
-# change container layout (stacked, tabbed, toggle split)
-# bindsym $mod+s layout stacking
-# bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
-bindsym $mod+y layout toggle tabbed stacking split
-
-# toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
-
-# change focus between tiling / floating windows
+# Change Focus Between Tiling / Floating Windows
 bindsym $mod+space focus mode_toggle
 
-# focus the parent container
 bindsym $mod+a focus parent
-
-# focus the child container
 bindsym $mod+c focus child
 
-# switch to workspace
+# Kill Focused Window
+bindsym $mod+q kill
+
+
+#######################################################################
+# Key Bindings - Workspaces
+
+# Switch Workspace
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
 bindsym $mod+3 workspace 3
@@ -106,7 +70,7 @@ bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
-# move focused container to workspace
+# Move Focused Container To Workspace
 bindsym $mod+Shift+1 move container to workspace 1
 bindsym $mod+Shift+2 move container to workspace 2
 bindsym $mod+Shift+3 move container to workspace 3
@@ -118,19 +82,31 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
-# gaps
-gaps inner 5
-gaps outer 0
-
-# Only enable gaps on a workspace when there is at least one container
-smart_gaps on
-
-# Only add borders if there is more than container in workspace
-smart_borders on
-
-# workspace cycling
+# Workspace Cycling
 bindsym $mod+Ctrl+l workspace next
 bindsym $mod+Ctrl+h workspace prev
+
+# Switch back and forth
+bindsym $mod+Tab workspace back_and_forth
+workspace_auto_back_and_forth yes
+
+bindsym $mod+n workspace 5
+bindsym $mod+m workspace 1
+
+
+#######################################################################
+# Key Bindings - Layout
+
+bindsym $mod+o split h # Horizontal Layout
+bindsym $mod+v split v # Vertical Layout
+bindsym $mod+e layout toggle split
+bindsym $mod+y layout toggle tabbed stacking split
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+f fullscreen toggle
+
+
+#######################################################################
+# Key Bindings - Restart and Reload
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -141,60 +117,73 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
-# resize window (you can also use the mouse for that)
-mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym h resize shrink width 10 px or 10 ppt
-        bindsym j resize grow height 10 px or 10 ppt
-        bindsym k resize shrink height 10 px or 10 ppt
-        bindsym l resize grow width 10 px or 10 ppt
+#######################################################################
+# Key Bindings - Scratchpad
 
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
-
-        # back to normal: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
-
-bindsym $mod+r mode "resize"
-
-# Scratchpad
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus [class="Alacritty"] scratchpad show
 bindsym $mod+equal [class="Chromium"] scratchpad show
 
-# Fast jumping to special tasks
-bindsym $mod+n workspace 5
-bindsym $mod+m workspace 1
 
-# Show clock and time
-bindsym $mod+u exec notify-datetime; exec notify-battery
+#######################################################################
+# Key Bindings - Print Screen
+bindsym --release Print exec scrot '%Y-%m-%d_$wx$h.png' -e 'mv $f /tmp/'
+bindsym --release Shift+Print exec scrot -s '%Y-%m-%d_$wx$h.png' -e 'mv $f /tmp/'
 
-# Toggle polybar
-bindsym $mod+s exec polybar-msg cmd toggle
 
-# Change keyboard layout
-bindsym $mod+w exec change-keyboard-layout
+#######################################################################
+# Key Bindings - Volume Control
+bindsym XF86AudioRaiseVolume exec amixer set Master 10%+ unmute; exec notify-volume
+bindsym XF86AudioLowerVolume exec amixer set Master 10%- unmute; exec notify-volume
+bindsym XF86AudioMute exec exec amixer set Master toggle; exec notify-volume
 
-# Open window
-bindsym $mod+p exec rofi -show window
 
-# System mode
+#######################################################################
+# Key Bindings - Screen Brightness Control
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10; exec notify-brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10; exec notify-brightness
+
+
+#######################################################################
+# Key Bindings - Media Control
+bindsym $mod+F8 exec playerctl play-pause
+bindsym $mod+F9 exec playerctl next
+bindsym $mod+F7 exec playerctl previous
+
+
+#######################################################################
+# Look And Feel
+
+# disable title bars
+for_window [class="^.*"] border pixel 1
+
+# Make gitk floating and fullscreen
+for_window [class="Gitk"] fullscreen
+
+# Only enable gaps on a workspace when there is at least one container
+smart_gaps on
+
+# Only add borders if there is more than container in workspace
+smart_borders on
+
+#System font
+font pango:DejaVu Sans Mono 8
+
+gaps inner 5
+gaps outer 0
+
+
+#######################################################################
+# Modes
+
+# System
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
-    bindsym l exec --no-startup-id $Locker, mode "default"
+    bindsym l exec --no-startup-id i3lock, mode "default"
     bindsym e exec --no-startup-id i3-msg exit, mode "default"
-    bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
-    bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
+    bindsym s exec --no-startup-id i3lock, mode "default"
+    bindsym h exec --no-startup-id i3lock, mode "default"
     bindsym r exec --no-startup-id systemctl reboot, mode "default"
     bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"  
 
@@ -202,36 +191,29 @@ mode "$mode_system" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-
 bindsym $mod+Pause mode "$mode_system"
 
-# switch between the current and the previously focused one
-bindsym $mod+Tab workspace back_and_forth
-workspace_auto_back_and_forth yes
+# Resize Window
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
 
-# Print screen: full | select window or rectangle
-bindsym --release Print exec scrot '%Y-%m-%d_$wx$h.png' -e 'mv $f /tmp/'
-bindsym --release Shift+Print exec scrot -s '%Y-%m-%d_$wx$h.png' -e 'mv $f /tmp/'
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+bindsym $mod+r mode "resize"
 
-# Audio control
-bindsym XF86AudioRaiseVolume exec amixer set Master 10%+ unmute; exec notify-volume
-bindsym XF86AudioLowerVolume exec amixer set Master 10%- unmute; exec notify-volume
-bindsym XF86AudioMute exec exec amixer set Master toggle; exec notify-volume
 
-#Brightness Control
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10; exec notify-brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10; exec notify-brightness
-
-# Media Player Control
-bindsym $mod+F8 exec playerctl play-pause
-bindsym $mod+F9 exec playerctl next
-bindsym $mod+F7 exec playerctl previous
-
-# start compton in background as daemon process
+#######################################################################
+# Auto Start Programs
 exec_always --no-startup-id picom -b
 
 # Wallpaper
-exec_always --no-startup-id feh --bg-scale /home/pablo/Documents/wallpapers/current
+exec_always --no-startup-id feh --bg-scale ${HOME}/Documents/wallpapers/current
 
-# start polybar
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+# Polybar
+exec_always --no-startup-id ${HOME}/.config/polybar/launch.sh
