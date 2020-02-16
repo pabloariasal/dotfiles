@@ -97,8 +97,8 @@ bindsym $mod+m workspace 1
 #######################################################################
 # Key Bindings - Layout
 
-bindsym $mod+o split h # Horizontal Layout
-bindsym $mod+v split v # Vertical Layout
+bindsym $mod+o split h
+bindsym $mod+v split v
 bindsym $mod+e layout toggle split
 bindsym $mod+y layout toggle tabbed stacking split
 bindsym $mod+Shift+space floating toggle
