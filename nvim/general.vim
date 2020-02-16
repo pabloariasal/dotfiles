@@ -139,7 +139,6 @@ set smarttab
 "
 " Required Plugins: tmhedberg/SimpylFold
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set foldmethod=syntax
 "Don't nest more than 3 folds
 set foldnestmax=3
 "Don't open folds per default
@@ -184,3 +183,5 @@ command! -nargs=0 Format :call CocAction('format')
 
 " Highlight symbol under cursor on CursorHold
 autocmd CursorHold * silent call CocActionAsync('highlight')
+
+command! -nargs=? Fold :call     CocAction('fold', <f-args>)

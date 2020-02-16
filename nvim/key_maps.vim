@@ -41,9 +41,8 @@ nnoremap <leader>P "+P
 nnoremap <leader>y "+y
 xnoremap <leader>y "+y
 
-"use space to toggle folds in normal mode
-nnoremap <Space> za
-vnoremap <Space> za
+"best mapping ever
+noremap <Space> :
 
 "remove trailing whitespace
 nmap <silent> <Leader>w :<C-u>%s/\s\+$//<cr>
@@ -98,11 +97,11 @@ nmap <leader>f <Plug>(coc-format)
 "
 " Required Plugins: coc.nvim with coc-lists extension
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <silent> <leader>c  :<C-u>CocList colors<cr>
 nnoremap <c-p>  :<C-u>CocList files<cr>
 nnoremap <c-n>  :<C-u>CocList buffers<cr>
 nnoremap <Leader>g :<C-u>CocList -I grep<cr>
 nnoremap <silent> <Leader>r :exe 'CocList -I --input='.expand('<cword>').' grep'<CR>
+nnoremap <silent> <leader>c  :<C-u>CocList colors<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Buiding
@@ -111,3 +110,10 @@ nnoremap <silent> <Leader>r :exe 'CocList -I --input='.expand('<cword>').' grep'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <Leader>mf :<C-u>Neomake! make_build_filtered<cr>
 nnoremap <Leader>mr :<C-u>Neomake! make_build<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Folding
+"
+" Required Plugins: coc.nvim
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <silent> <Leader>a :<C-u>Fold<cr>
