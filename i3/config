@@ -7,7 +7,6 @@ set $mod Mod4
 #Programs
 set $terminal alacritty
 set $Locker i3lock && sleep 1
-set $browser chromium
 
 #System font
 font pango:DejaVu Sans Mono 8
@@ -18,8 +17,7 @@ floating_modifier $mod
 # Starting programs
 bindsym $mod+Return exec $terminal
 bindsym $mod+Shift+Return exec opendir
-bindsym $mod+b exec $browser
-bindsym $mod+t exec browser-no-bars
+bindsym $mod+b exec ${CHROMIUM_EXEC}
 
 # Assign certain programs to specific workspaces
 assign [class="Chromium" instance="keep.google.com"] 4
