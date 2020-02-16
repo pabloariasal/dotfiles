@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-file=$(fasd -flR | dmenu -l 20 -p "Open Recent: ")
-[ ! -z "$file" ] && fasd -A "$file" && urxvt -cd "$(dirname "$file")" -e nvim $file

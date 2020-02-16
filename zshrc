@@ -1,6 +1,14 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+if [[ -n $SSH_CONNECTION ]]; then
+  export VISUAL='vim'
+  export EDITOR='vim'
+else
+  export VISUAL='nvim'
+  export EDITOR='nvim'
+fi
+
 # Path to your oh-my-zsh installation.
 export ZSH="/home/pablo/.oh-my-zsh"
 
