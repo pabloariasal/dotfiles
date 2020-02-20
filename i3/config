@@ -3,7 +3,7 @@
 set $mod Mod4
 set $wallpaper ${HOME}/Documents/wallpapers/current
 set $browser ${CHROMIUM_EXEC}
-set $browser_class "^Chromium-browser$"
+set $browser_class "^Chromium$"
 set $terminal alacritty
 set $terminal_class "^Alacritty$"
 
