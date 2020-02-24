@@ -2,3 +2,4 @@
 *.swp
 zsh_custom/plugins/
 zsh_custom/themes/
+antigen.zsh.zwc
