@@ -43,6 +43,7 @@ xnoremap <leader>y "+y
 
 "best mapping ever
 noremap <Space> :
+inoremap jj <ESC>
 
 "remove trailing whitespace
 nmap <silent> <Leader>w :<C-u>%s/\s\+$//<cr>
