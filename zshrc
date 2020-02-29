@@ -4,7 +4,6 @@ if [[ -z "$LS_COLORS" ]]; then
 fi
 
 source ${DOTFILES}/zsh/history.zsh
-source ${DOTFILES}/zsh/hstr.zsh
 source ${DOTFILES}/zsh/fzf.zsh
 source ${DOTFILES}/zsh/completion.zsh
 source ${DOTFILES}/zsh/wal.zsh
