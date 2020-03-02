@@ -96,6 +96,9 @@ syntax on
 colorscheme PaperColor
 set background=dark
 
+" show line numbers
+set number
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " netrw
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
