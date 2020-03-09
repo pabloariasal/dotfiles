@@ -193,7 +193,7 @@ mode "$mode_system" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+Insert mode "$mode_system"
+bindsym $mod+Delete mode "$mode_system"
 
 # Resize Window
 mode "resize" {
