@@ -46,7 +46,10 @@ noremap <Space> :
 inoremap jj <ESC>
 
 "remove trailing whitespace
-nmap <silent> <Leader>w :<C-u>%s/\s\+$//<cr>
+nmap <silent> <Leader>e :<C-u>%s/\s\+$//<cr>
+
+"remove trailing whitespace
+nmap <Leader>w :<C-u>wa<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Quickfix list and Location List
