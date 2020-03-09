@@ -114,10 +114,3 @@ nnoremap <silent> <leader>c  :<C-u>CocList colors<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <Leader>mf :<C-u>Neomake! make_build_filtered<cr>
 nnoremap <Leader>mr :<C-u>Neomake! make_build<cr>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Folding
-"
-" Required Plugins: coc.nvim
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <silent> <Leader>a :<C-u>Fold<cr>
