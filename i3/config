@@ -21,6 +21,8 @@ assign [class=$browser_class instance="news.ycombinator.com"] 7
 for_window [class="Spotify"] move to workspace 8
 assign [class="^Thunderbird$"] 9
 assign [class="MineTime"] 9
+assign [class=$browser_class instance="gmail.com"] 9
+assign [class=$browser_class instance="outlook.office.com"] 9
 assign [class=$terminal_class instance="gotop"] 10
 
 
