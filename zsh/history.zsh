@@ -17,3 +17,21 @@ setopt hist_find_no_dups
 
 setopt hist_verify
 
+#######################################################################
+# CTRL-F - Select History Favorite
+__ffavorite() {
+  local cmd="cat ${DOTFILES}/history_favorites"
+  setopt localoptions pipefail 2> /dev/null
+  eval "$cmd" | FZF_DEFAULT_OPTS="--height ${FZF_TMUX_HEIGHT:-40%} --reverse $FZF_DEFAULT_OPTS" $(__fzfcmd)
+  local ret=$?
+  return $ret
+}
+
+fzf-history-favorite-widget() {
+  LBUFFER="${LBUFFER}$(__ffavorite)"
+  local ret=$?
+  zle reset-prompt
+  return $ret
+}
+zle     -N   fzf-history-favorite-widget
+bindkey '^F' fzf-history-favorite-widget
