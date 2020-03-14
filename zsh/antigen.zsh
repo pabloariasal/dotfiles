@@ -1,4 +1,4 @@
-source /usr/share/zsh/share/antigen.zsh
+source ${HOME}/.antigen.zsh
 
 antigen bundle ohmyzsh/ohmyzsh plugins/extract
 antigen bundle ohmyzsh/ohmyzsh plugins/colored-man-pages

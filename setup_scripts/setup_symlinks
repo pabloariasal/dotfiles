@@ -1,0 +1,33 @@
+#!/bin/zsh
+
+if [[ -z "${DOTFILES}" ]]; then
+echo "DOTFILES not set!"
+exit 1
+fi
+
+CONF="${HOME}/.config"
+
+function symlink()
+{
+  if [ -e "$1" ]; then
+    ln -s -f -v "$1" "$2"
+  else
+    echo "$1" does not exist!
+    return 1
+  fi
+}
+
+symlink "${DOTFILES}"/alacritty.yml ${CONF}
+symlink "${DOTFILES}"/i3 ${CONF}
+symlink "${DOTFILES}"/polybar ${CONF}
+symlink "${DOTFILES}"/nvim ${CONF}
+symlink "${DOTFILES}"/rofi ${CONF}
+symlink "${DOTFILES}"/dunst ${CONF}
+symlink "${DOTFILES}"/ctags ${CONF}
+symlink "${DOTFILES}"/picom.conf ${CONF}
+symlink /usr/share/fzf/key-bindings.zsh ${HOME}/.fzf-key-bindings.zsh
+symlink /usr/share/zsh/share/antigen.zsh ${HOME}/.antigen.zsh
+symlink "${DOTFILES}"/xinitrc ${HOME}/.xinitrc
+symlink "${DOTFILES}"/zprofile ${HOME}/.zprofile
+symlink "${DOTFILES}"/zshrc ${HOME}/.zshrc
+symlink "${DOTFILES}"/gitignore ${HOME}/.gitignore_global
