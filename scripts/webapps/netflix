@@ -1,0 +1,2 @@
+#!/bin/bash
+${CHROMIUM_EXEC} --app="https://www.netflix.com"
