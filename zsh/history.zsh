@@ -22,7 +22,7 @@ setopt hist_verify
 __ffavorite() {
   local cmd="cat ${DOTFILES}/history_favorites"
   setopt localoptions pipefail 2> /dev/null
-  eval "$cmd" | FZF_DEFAULT_OPTS="--height ${FZF_TMUX_HEIGHT:-40%} --reverse $FZF_DEFAULT_OPTS" $(__fzfcmd)
+  eval "$cmd" | FZF_DEFAULT_OPTS="--height ${FZF_TMUX_HEIGHT:-40%} --cycle --reverse $FZF_DEFAULT_OPTS" $(__fzfcmd)
   local ret=$?
   return $ret
 }
