@@ -1,0 +1,14 @@
+#!/bin/zsh
+
+fonts=("Terminus")
+
+function install_nerd_fonts()
+{
+echo "Installing Nerd Fonts"
+local nerd_fonts_dir="${HOME}/nerd-fonts"
+[ ! -d "${nerd_fonts_dir}" ] && git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git "${nerd_fonts_dir}"
+eval "${nerd_fonts_dir}/install.sh" "${fonts[@]}"
+}
+
+install_nerd_fonts "$@"
+
