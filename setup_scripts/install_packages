@@ -21,6 +21,8 @@ packages=(i3-gaps
 	zathura
 	words
 	xss-lock
+	xorg-xinit
+	xorg
 	fzf
 	xsel
 	python-pynvim
