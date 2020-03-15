@@ -1,0 +1,20 @@
+#!/bin/zsh
+
+function install_yay()
+{
+git clone https://aur.archlinux.org/yay.git ~/yay
+cd ~/yay
+makepkg -si
+}
+
+function install_aur()
+{
+		yay -S --noconfirm spotify antigen-git ccls-git chromium-widevine fast gotop-bin minetime-bin pfetch
+}
+
+function install_packages()
+{
+		pacman -S --noconfirm i3-gaps alacritty chromium dunst fd feh htop irssi neovim networkmanager networkmanager-openvpn nm-connection-editor picom playerctl python-pywal rofi ripgrep sxiv wavemon zathura zsh words xss-lock
+}
+
+"$1"
