@@ -1,0 +1,4 @@
+#!/bin/sh
+source=$(realpath "$1")
+ln -svf "$source" "$WALLPAPER"
+feh --bg-scale "$WALLPAPER"

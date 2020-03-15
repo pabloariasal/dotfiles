@@ -1,7 +1,6 @@
 #######################################################################
 # Variables
 set $mod Mod4
-set $wallpaper ${HOME}/Documents/wallpapers/current
 set $browser ${CHROMIUM_EXEC}
 set $browser_class "^Chromium$"
 set $terminal alacritty
@@ -184,10 +183,10 @@ gaps outer 0
 # System
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
-    bindsym l exec --no-startup-id i3lock -i $wallpaper, mode "default"
+    bindsym l exec --no-startup-id i3lock -i $WALLPAPER, mode "default"
     bindsym e exec --no-startup-id i3-msg exit, mode "default"
-    bindsym s exec --no-startup-id i3lock -i $wallpaper, mode "default"
-    bindsym h exec --no-startup-id i3lock -i $wallpaper, mode "default"
+    bindsym s exec --no-startup-id i3lock -i $WALLPAPER, mode "default"
+    bindsym h exec --no-startup-id i3lock -i $WALLPAPER, mode "default"
     bindsym r exec --no-startup-id systemctl reboot, mode "default"
     bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"  
 
@@ -217,9 +216,9 @@ bindsym $mod+r mode "resize"
 exec_always --no-startup-id picom -b
 
 # Wallpaper
-exec_always --no-startup-id feh --bg-scale $wallpaper
+exec_always --no-startup-id feh --bg-scale $WALLPAPER
 
 # Polybar
 exec_always --no-startup-id ${HOME}/.config/polybar/launch.sh
 
-exec_always --no-startup-id xss-lock -- i3lock
+exec_always --no-startup-id xss-lock -- i3lock -i $WALLPAPER
