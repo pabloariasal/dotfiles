@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-fonts=("Terminus")
+fonts=("Terminus" "Meslo")
 nerd_fonts_dir="${HOME}/nerd-fonts"
 
 function clone_nerd_fonts()
