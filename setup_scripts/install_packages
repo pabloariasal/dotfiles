@@ -1,7 +1,53 @@
 #!/bin/zsh
 
+packages=(i3-gaps
+	alacritty
+	chromium
+	dunst
+	fd
+	bat
+	feh
+	htop
+	irssi
+	neovim
+	picom
+	playerctl
+	python-pywal
+	rofi
+	ripgrep
+	sxiv
+	wavemon
+	zathura
+	words
+	xss-lock
+	fzf
+	xsel
+	python-pynvim
+	nm-connection-editor
+	networkmanager-openvpn
+	tree
+	npm
+	ttf-font-awesome
+	libnotify
+	alsa-utils
+	scrot
+	mate-icon-theme
+	tk
+	nodejs)
+
+aur_packages=(spotify
+	antigen-git
+	ccls-git
+	chromium-widevine
+	fast
+	gotop-bin
+	minetime-bin
+	pfetch
+	polybar)
+
 function install_yay()
 {
+rm -rf ~/yay
 git clone https://aur.archlinux.org/yay.git ~/yay
 cd ~/yay
 makepkg -si
@@ -9,12 +55,12 @@ makepkg -si
 
 function install_aur()
 {
-		yay -S --noconfirm spotify antigen-git ccls-git chromium-widevine fast gotop-bin minetime-bin pfetch
+		yay -S --noconfirm "${aur_packages[@]}"
 }
 
 function install_packages()
 {
-		pacman -S --noconfirm i3-gaps alacritty chromium dunst fd feh htop irssi neovim networkmanager networkmanager-openvpn nm-connection-editor picom playerctl python-pywal rofi ripgrep sxiv wavemon zathura zsh words xss-lock
+		pacman -S --noconfirm "${packages[@]}"
 }
 
 "$1"
