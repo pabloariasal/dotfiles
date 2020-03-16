@@ -38,8 +38,6 @@ set statusline+=\
 set statusline+=%{NeomakeStatus()}
 set statusline+=%=
 set statusline+=\ 
-set statusline+=%{SleuthIndicator()}
-set statusline+=\ 
 set statusline+=%{strlen(&fenc)?&fenc:'none'}
 set statusline+=\ 
 set statusline+=%y

@@ -125,17 +125,12 @@ set hlsearch
 "
 " Required Plugins: tpope/vim-sleuth
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"Copy indent from current line
-set autoindent
 "Smart indentation for C-like languages
 set smartindent
-"Size of a tab in spaces
-set tabstop=4
-"controls number of blanks in front of lines (used by < and >)
-" set shiftwidth=4
 "Use spaces instead of tabs
-" set expandtab
-set smarttab
+set expandtab
+set shiftwidth=4
+set softtabstop=4
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Folding

@@ -32,7 +32,6 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-commentary'
 Plug 'romainl/vim-qf'
 Plug 'markonm/traces.vim'
-Plug 'tpope/vim-sleuth'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'SirVer/ultisnips'
