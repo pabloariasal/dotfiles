@@ -13,6 +13,7 @@ floating_modifier $mod
 # Automatic Window Assignment
 assign [class=$browser_class instance="keep.google.com"] 5
 assign [class=$browser_class instance="mm."] 6
+assign [class=$browser_class instance="teams."] 6
 assign [class=$browser_class instance="web.whatsapp.com"] 6
 assign [class=$browser_class instance="twitter.com"] 7
 assign [class=$browser_class instance="old.reddit.com"] 7
