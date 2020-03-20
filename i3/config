@@ -217,7 +217,7 @@ bindsym $mod+r mode "resize"
 
 #######################################################################
 # Auto Start Programs
-exec_always --no-startup-id picom -b
+exec_always --no-startup-id ${DOTFILES}/scripts/launch-picom
 
 # Wallpaper
 exec_always --no-startup-id feh --bg-scale $WALLPAPER
