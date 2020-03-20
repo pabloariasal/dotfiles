@@ -104,7 +104,7 @@ nmap <leader>f <Plug>(coc-format)
 nnoremap <c-p>  :<C-u>CocList files<cr>
 nnoremap <c-n>  :<C-u>CocList buffers<cr>
 nnoremap <Leader>g :<C-u>CocList -I grep<cr>
-nnoremap <silent> <Leader>r :exe 'CocList -I --input='.expand('<cword>').' grep'<CR>
+nnoremap <silent> <Leader>r :<C-u>grep '<C-r>=expand("<cword>")<CR>'<CR>
 nnoremap <silent> <leader>c  :<C-u>CocList colors<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
