@@ -24,6 +24,7 @@ assign [class="MineTime"] 9
 assign [class=$browser_class instance="gmail.com"] 9
 assign [class=$browser_class instance="outlook.office.com"] 9
 assign [class=$terminal_class instance="gotop"] 10
+assign [class=$terminal_class instance="htop"] 10
 
 
 #######################################################################
