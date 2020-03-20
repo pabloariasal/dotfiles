@@ -7,3 +7,5 @@ nmcli c up nv-pf1-udp-1194-Pablo_Arias --ask
 cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ..
 cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ..
 nmcli c show
+xrandr --output "HDMI2" --off --output "eDP1" --auto
+xrandr --output "eDP1" --off --output "HDMI2" --auto
