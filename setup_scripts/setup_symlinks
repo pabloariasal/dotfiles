@@ -30,4 +30,4 @@ symlink /usr/share/zsh/share/antigen.zsh ${HOME}/.antigen.zsh
 symlink "${DOTFILES}"/xinitrc ${HOME}/.xinitrc
 symlink "${DOTFILES}"/zprofile ${HOME}/.zprofile
 symlink "${DOTFILES}"/zshrc ${HOME}/.zshrc
-symlink "${DOTFILES}"/gitignore ${HOME}/.gitignore_global
+symlink "${DOTFILES}"/gitignore_global ${HOME}/.gitignore_global
