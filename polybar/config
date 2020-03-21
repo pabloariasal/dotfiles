@@ -85,7 +85,7 @@ enable-ipc = true
 ;== Module Location ========================================================
 
 modules-left = i3 window
-modules-right = xbacklight volume battery keyboard network time
+modules-right = spotify xbacklight volume battery keyboard network time
 
 ;== Modules ================================================================
 
@@ -215,7 +215,7 @@ label = %time%
 [module/spotify]
 type = custom/script
 interval = 1
-exec = python3 ${HOME}/dotfiles/polybar/scripts/spotify_status.py -f '{play_pause} {artist} - {song}' -p '',
+exec = polybar_spotify_status -f '{play_pause} {artist} - {song}' -p '',
 
 [module/cpu]
 type = internal/cpu
