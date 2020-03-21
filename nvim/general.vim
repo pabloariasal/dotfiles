@@ -64,6 +64,9 @@ set wildmenu
 "Add English as main dictionary
 set dictionary+=/usr/share/dict/american-english
 
+"English as default language
+set spelllang=en_us
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " User Interface
 "
