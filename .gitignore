@@ -3,3 +3,4 @@
 antigen.zsh.zwc
 nvim/autoload
 nvim/plugged
+*.spl
