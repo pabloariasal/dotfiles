@@ -1,2 +1,2 @@
 #!/bin/sh
-curl wttr.in/Munich
+curl wttr.in/Munich && sleep infinity
