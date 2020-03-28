@@ -19,6 +19,9 @@ bindkey '^ ' autosuggest-accept
 bindkey '^[h' insert-cycledleft
 bindkey '^[l' insert-cycledright
 
+# Fix vi mode backspace behavior
+bindkey -v '^?' backward-delete-char
+
 setopt correct
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
