@@ -16,7 +16,6 @@ packages=(i3-gaps
 	python-pywal
 	rofi
 	ripgrep
-	sxiv
 	wavemon
 	zathura
 	words

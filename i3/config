@@ -217,7 +217,7 @@ bindsym $mod+r mode "resize"
 exec_always --no-startup-id ${DOTFILES}/scripts/launch-picom
 
 # Wallpaper
-exec_always --no-startup-id feh --bg-scale $WALLPAPER
+exec_always --no-startup-id ${HOME}/.fehbg
 
 # Polybar
 exec_always --no-startup-id ${HOME}/.config/polybar/launch.sh
