@@ -222,4 +222,4 @@ exec_always --no-startup-id ${HOME}/.fehbg
 # Polybar
 exec_always --no-startup-id ${HOME}/.config/polybar/launch.sh
 
-exec_always --no-startup-id xss-lock -- i3lock -i $WALLPAPER
+exec_always --no-startup-id xss-lock -- i3lock -c 000000
