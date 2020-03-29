@@ -85,7 +85,7 @@ enable-ipc = true
 ;== Module Location ========================================================
 
 modules-left = i3 window
-modules-right = spotify xbacklight volume battery keyboard network time
+modules-right = spotify pomodoro xbacklight volume battery keyboard network time
 
 ;== Modules ================================================================
 
@@ -236,5 +236,12 @@ type = custom/script
 exec = ${HOME}/dotfiles/polybar/scripts/vpn-openvpn-status.sh
 interval = 5
 format-prefix = ${icons.vpn}
+
+[module/pomodoro]
+type = custom/script
+exec = pymodoro --break-prefix " " --pomodoro-prefix " " -p "=" -ah -f ~/.pomodoro_session
+label = %output%
+tail = true
+interval = 0
 
 ;== EOF ========================================================
