@@ -9,3 +9,6 @@ xrandr --output "eDP1" --off --output "HDMI2" --auto
 nmcli c up DumbledoreDies
 nmcli device wifi list
 nmcli device wifi connect FamiliaArias --ask
+setxkbmap -option caps:escape
+feh -z --bg-scale ${HOME}/Documents/wallpapers
+echo !! >> $DOTFILES/history_favorites
