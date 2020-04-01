@@ -96,6 +96,10 @@ nnoremap <silent> <leader>t  :<C-u>CocList tags<cr>
 
 nmap <leader>f <Plug>(coc-format)
 
+" Use `[g` and `]g` to navigate diagnostics
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Fuzzy Finding
 "
