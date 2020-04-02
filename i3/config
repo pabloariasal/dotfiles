@@ -5,6 +5,7 @@ set $browser ${CHROMIUM_EXEC}
 set $browser_class "^Chromium$"
 set $terminal alacritty
 set $terminal_class "^Alacritty$"
+set $locker i3lock -c 333333 --clock --timecolor ffffffff --datecolor ffffffff
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -184,10 +185,10 @@ gaps outer 0
 # System
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
-    bindsym l exec --no-startup-id i3lock -c 000000, mode "default"
+    bindsym l exec --no-startup-id $locker, mode "default"
     bindsym e exec --no-startup-id i3-msg exit, mode "default"
-    bindsym s exec --no-startup-id i3lock -c 000000 && systemctl suspend, mode "default"
-    bindsym h exec --no-startup-id i3lock -c 000000 && systemctl hibernate, mode "default"
+    bindsym s exec --no-startup-id $locker && systemctl suspend, mode "default"
+    bindsym h exec --no-startup-id $locker && systemctl hibernate, mode "default"
     bindsym r exec --no-startup-id systemctl reboot, mode "default"
     bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
 
@@ -222,4 +223,4 @@ exec_always --no-startup-id ${HOME}/.fehbg
 # Polybar
 exec_always --no-startup-id ${HOME}/.config/polybar/launch.sh
 
-exec_always --no-startup-id xss-lock -- i3lock -c 000000
+exec_always --no-startup-id xss-lock -- $locker
