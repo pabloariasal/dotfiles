@@ -10,6 +10,7 @@ source ${DOTFILES}/zsh/wal.zsh
 source ${DOTFILES}/zsh/aliases.zsh
 source ${DOTFILES}/zsh/directories.zsh
 source ${DOTFILES}/zsh/git.zsh
+source ${DOTFILES}/zsh/notes.zsh
 source ${DOTFILES}/zsh/antigen.zsh
 
 # Accept autosuggestion with Ctrl+Space
