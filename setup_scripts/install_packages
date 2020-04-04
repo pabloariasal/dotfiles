@@ -35,6 +35,7 @@ packages=(i3-gaps
 	scrot
 	mate-icon-theme
 	tk
+        dropbox-cli
 	nodejs)
 
 aur_packages=(spotify
