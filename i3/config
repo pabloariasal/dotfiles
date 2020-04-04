@@ -220,4 +220,6 @@ exec_always --no-startup-id ${HOME}/.fehbg
 # Polybar
 exec_always --no-startup-id ${HOME}/.config/polybar/launch.sh
 
+exec_always --no-startup-id dropbox-cli start
+
 exec_always --no-startup-id xss-lock -- $locker
