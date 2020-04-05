@@ -31,3 +31,4 @@ symlink "${DOTFILES}"/xinitrc ${HOME}/.xinitrc
 symlink "${DOTFILES}"/zprofile ${HOME}/.zprofile
 symlink "${DOTFILES}"/zshrc ${HOME}/.zshrc
 symlink "${DOTFILES}"/gitignore_global ${HOME}/.gitignore_global
+symlink "${DOTFILES}"/vifm/vifmrc ${CONF}/vifm

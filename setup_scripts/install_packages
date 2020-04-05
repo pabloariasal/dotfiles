@@ -35,6 +35,7 @@ packages=(i3-gaps
 	scrot
 	mate-icon-theme
 	tk
+        vifm
         dropbox-cli
 	nodejs)
 
@@ -46,6 +47,7 @@ aur_packages=(spotify
 	gotop-bin
 	minetime-bin
 	pfetch
+        python-ueberzug
 	polybar)
 
 function install_yay()
