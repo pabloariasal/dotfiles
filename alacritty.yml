@@ -482,7 +482,7 @@ schemes:
         cyan:    '#5fb3b3'
         white:   '#f3f4f5'
 
-colors: *oxyde
+colors: *snazzy
 
 # Visual Bell
 #
