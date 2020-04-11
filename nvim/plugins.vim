@@ -35,7 +35,6 @@ Plug 'markonm/traces.vim'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'SirVer/ultisnips'
-Plug 'rafi/awesome-vim-colorschemes'
 Plug 'junegunn/goyo.vim'
 Plug 'neomake/neomake'
 Plug 'reedes/vim-pencil'

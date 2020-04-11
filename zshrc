@@ -6,7 +6,6 @@ fi
 source ${DOTFILES}/zsh/history.zsh
 source ${DOTFILES}/zsh/fzf.zsh
 source ${DOTFILES}/zsh/completion.zsh
-source ${DOTFILES}/zsh/wal.zsh
 source ${DOTFILES}/zsh/aliases.zsh
 source ${DOTFILES}/zsh/directories.zsh
 source ${DOTFILES}/zsh/git.zsh

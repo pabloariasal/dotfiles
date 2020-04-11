@@ -13,7 +13,6 @@ packages=(i3-gaps
 	neovim
 	picom
 	playerctl
-	python-pywal
 	rofi
 	ripgrep
 	wavemon
