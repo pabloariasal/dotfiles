@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-dir=$(emarks --list-dirs | rofi -dmenu)
-[ ! -z "$dir" ] && alacritty --working-directory "$dir"

@@ -25,7 +25,6 @@ assign [class=$terminal_class instance="htop"] 10
 #######################################################################
 # Key Bindings - Starting Programs
 bindsym $mod+Return exec $terminal
-bindsym $mod+Shift+Return exec opendir
 bindsym $mod+b exec $browser
 bindsym $mod+d exec rofi -show run
 bindsym $mod+u exec notify-datetime; exec notify-battery
