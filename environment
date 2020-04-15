@@ -1,5 +1,5 @@
 export DOTFILES="${HOME}/dotfiles"
-export PATH="$PATH:${DOTFILES}/scripts:${DOTFILES}/scripts/webapps:${HOME}/bin:${HOME}/.gem/ruby/2.6.0/bin"
+export PATH="$PATH:${DOTFILES}/scripts:${DOTFILES}/scripts/webapps:${HOME}/bin:${HOME}/.gem/ruby/2.6.0/bin:${HOME}/.cargo/bin"
 export CHROMIUM_EXEC=chromium
 export EDITOR=nvim
 export NOTES_DIR="${HOME}/Dropbox/notes"
