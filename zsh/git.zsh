@@ -1,5 +1,5 @@
 #######################################################################
-# CTRL-A - Paste the selected git branch into the command line
+# CTRL-E - Paste the selected git branch into the command line
 __fbranch() {
   local cmd="git branch -a | grep -v HEAD"
   setopt localoptions pipefail 2> /dev/null
@@ -18,7 +18,7 @@ fzf-git-branch-widget() {
   return $ret
 }
 zle     -N   fzf-git-branch-widget
-bindkey '^A' fzf-git-branch-widget
+bindkey '^E' fzf-git-branch-widget
 
 # Aliases
 alias g='git'
