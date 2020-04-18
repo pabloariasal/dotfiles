@@ -15,12 +15,12 @@
 
 [color]
 red = #e53935
-black = #000000
-white = #ffffff
 ; transparent background (needs compton or window compositor)
-bg = #00ffffff
-;fg = ${xrdb:color7:#222}
-fg = ${self.white}
+;bg = #00ffffff
+bg = #282a36
+fg = #c594c5
+alt = #f3f99d
+alt2 = #9aedfe
 
 curgent = ${self.red}
 
@@ -85,7 +85,8 @@ enable-ipc = true
 ;== Module Location ========================================================
 
 modules-left = i3 window
-modules-right = spotify pomodoro xbacklight volume battery keyboard network time
+modules-center = time
+modules-right = spotify pomodoro cpu memory xbacklight volume battery keyboard network
 
 ;== Modules ================================================================
 
@@ -119,8 +120,9 @@ ws-icon-default =
 
 ; focused = Active workspace on focused monitor
 label-focused = %icon%
-label-focused-background = ${color.fg}
-label-focused-foreground = ${color.black}
+;label-focused-background = ${color.alt}
+;label-focused-overline = ${color.alt}
+label-focused-foreground = ${color.alt}
 label-focused-padding = 1
 
 ; unfocused = Inactive workspace on any monitor
@@ -161,6 +163,7 @@ type = internal/xwindow
 format = <label>
 label = %title%
 label-maxlen = 80
+label-foreground = ${color.alt}
 
 [module/xbacklight]
 type = internal/xbacklight
@@ -211,6 +214,8 @@ time = "%a %b %e %H:%M"
 format-prefix = ${icons.time}
 format = <label>
 label = %time%
+label-foreground = ${color.alt2}
+format-prefix-foreground = ${color.alt2}
 
 [module/spotify]
 type = custom/script
