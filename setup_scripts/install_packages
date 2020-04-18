@@ -1,70 +1,71 @@
 #!/bin/zsh
 
 packages=(i3-gaps
-	i3lock-color
-	alacritty
-	chromium
-	dunst
-	fd
-	bat
-	feh
-	htop
-	irssi
-	neovim
-	picom
-	playerctl
-	rofi
-	ripgrep
-	wavemon
-	zathura
-	words
-	xss-lock
-	xorg-xinit
-	xorg
-	fzf
-	xsel
-	python-pynvim
-	nm-connection-editor
-	networkmanager-openvpn
-	tree
-	npm
-	ttf-font-awesome
-	libnotify
-	alsa-utils
-	scrot
-	mate-icon-theme
-	tk
-        vifm
-        dropbox-cli
-	nodejs)
+    i3lock-color
+    alacritty
+    chromium
+    dunst
+    fd
+    bat
+    htop
+    irssi
+    neovim
+    picom
+    playerctl
+    rofi
+    ripgrep
+    wavemon
+    zathura
+    words
+    xss-lock
+    xorg-xinit
+    xorg
+    fzf
+    xsel
+    python-pynvim
+    nm-connection-editor
+    networkmanager-openvpn
+    tree
+    npm
+    ttf-font-awesome
+    libnotify
+    alsa-utils
+    scrot
+    mate-icon-theme
+    tk
+    vifm
+    dropbox-cli
+    sxiv
+    nitrogen
+    nodejs)
 
 aur_packages=(spotify
-	antigen-git
-	ccls-git
-	chromium-widevine
-	fast
-	gotop-bin
-	minetime-bin
-	pfetch
-        python-ueberzug
-	polybar)
+    antigen-git
+    ccls-git
+    chromium-widevine
+    fast
+    gotop-bin
+    minetime-bin
+    pfetch
+    python-ueberzug
+    polybar)
 
 function install_yay()
 {
-rm -rf ~/yay
-git clone https://aur.archlinux.org/yay.git ~/yay
-cd ~/yay
-makepkg -si
+    rm -rf ~/yay
+    git clone https://aur.archlinux.org/yay.git ~/yay
+    cd ~/yay
+    makepkg -si
 }
 
 function install_aur()
 {
-		yay -S --noconfirm "${aur_packages[@]}"
+    yay -S --noconfirm "${aur_packages[@]}"
 }
 
 function install_packages()
 {
-		pacman -S --noconfirm "${packages[@]}"
+    pacman -S --noconfirm "${packages[@]}"
 }
 
 "$1"
