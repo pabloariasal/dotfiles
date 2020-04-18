@@ -9,6 +9,7 @@ SAVEHIST=10000
 setopt share_history
 setopt append_history
 setopt inc_append_history
+setopt extendedhistory
 
 # setopt hist_ignore_all_dups
 setopt hist_expire_dups_first
@@ -16,6 +17,9 @@ setopt hist_ignore_dups # adjacent duplicates
 setopt hist_find_no_dups
 
 setopt hist_verify
+
+# Blacklist certain commands to be written to history file
+HISTORY_IGNORE="(ls|ls *|cd|cd *|gs|gd|ga *|gc *|gapa|gl|glp|glg|glga|gca|gcan|gco *|grb *|gm *|gp|f *|yay)"
 
 #######################################################################
 # CTRL-F - Select History Favorite
