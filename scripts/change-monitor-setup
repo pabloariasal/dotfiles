@@ -1,0 +1,21 @@
+#!/bin/bash
+
+configurations=("mobile" "docked")
+
+selection=$(echo "${configurations[@]}" | tr " " "\n" | rofi -dmenu)
+
+if [ -z "$selection" ]; then
+    exit 0
+fi
+
+case $selection in
+docked)
+    xrandr --output "eDP1" --off --output "HDMI2" --auto
+    sed -i 's/size:.*$/size: 11.0/' ${DOTFILES}/alacritty.yml
+    ;;
+*)
+    xrandr --output "HDMI2" --off --output "eDP1" --auto
+    sed -i 's/size:.*$/size: 8.0/' ${DOTFILES}/alacritty.yml
+    ;;
+esac
+i3-msg restart
