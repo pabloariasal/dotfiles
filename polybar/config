@@ -17,7 +17,7 @@
 red = #e53935
 ; transparent background (needs compton or window compositor)
 ;bg = #00ffffff
-bg = #282a36
+bg = #cc282a36
 fg = #c594c5
 alt = #f3f99d
 alt2 = #9aedfe
@@ -86,7 +86,7 @@ enable-ipc = true
 
 modules-left = i3 window
 modules-center = time
-modules-right = spotify pomodoro cpu memory xbacklight volume battery keyboard network
+modules-right = spotify pomodoro xbacklight volume battery keyboard network
 
 ;== Modules ================================================================
 
@@ -121,7 +121,7 @@ ws-icon-default =
 ; focused = Active workspace on focused monitor
 label-focused = %icon%
 ;label-focused-background = ${color.alt}
-;label-focused-overline = ${color.alt}
+label-focused-overline = ${color.alt}
 label-focused-foreground = ${color.alt}
 label-focused-padding = 1
 
