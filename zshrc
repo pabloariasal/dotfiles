@@ -22,7 +22,7 @@ bindkey '^[l' insert-cycledright
 # Fix vi mode backspace behavior
 bindkey -v '^?' backward-delete-char
 
-setopt correct
+setopt autocd
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
