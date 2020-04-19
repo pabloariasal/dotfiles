@@ -34,6 +34,11 @@ bindsym $mod+p exec rofi -show window
 bindsym $mod+s exec polybar-msg cmd toggle
 bindsym $mod+t exec change-monitor-setup
 
+#######################################################################
+# Key Bindings - Directory easy access
+bindsym $mod+ctrl+1 exec $terminal --working-directory ${DOTFILES} --title "dotfiles"
+bindsym $mod+ctrl+2 exec $terminal --working-directory ${HOME}/Workspace
+bindsym $mod+ctrl+4 exec $terminal --working-directory ${NOTES_DIR}
 
 #######################################################################
 # Key Bindings - Windows

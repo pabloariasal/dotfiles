@@ -1,2 +1,0 @@
-#!/bin/bash
-alacritty --working-directory "${DOTFILES}" --class "dotfiles" --title "Dotfiles"
