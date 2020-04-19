@@ -12,6 +12,7 @@ floating_modifier $mod
 
 #######################################################################
 # Automatic Window Assignment
+assign [class=$terminal_class instance="notes"] 4
 assign [class=$browser_class instance="mm."] 6
 assign [class=$browser_class instance="teams."] 6
 assign [class=$browser_class instance="web.whatsapp.com"] 6
