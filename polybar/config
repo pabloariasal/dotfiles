@@ -86,7 +86,7 @@ enable-ipc = true
 
 modules-left = i3 window
 modules-center = time
-modules-right = spotify pomodoro xbacklight volume battery keyboard network
+modules-right = spotify time-colombia pomodoro xbacklight volume battery keyboard network
 
 ;== Modules ================================================================
 
@@ -216,6 +216,13 @@ format = <label>
 label = %time%
 label-foreground = ${color.alt2}
 format-prefix-foreground = ${color.alt2}
+
+[module/time-colombia]
+type = custom/script
+exec = TZ=America/Bogota date +"BOG %H:%M"
+format-prefix = ${icons.time}
+format = <label>
+interval = 10
 
 [module/spotify]
 type = custom/script
