@@ -6,6 +6,7 @@ set $browser_class "^Chromium$"
 set $terminal alacritty
 set $terminal_class "^Alacritty$"
 set $locker i3lock -c 333333 --clock --timecolor ffffffff --datecolor ffffffff
+set $window_scale_factor_pixels 50
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -204,10 +205,10 @@ bindsym $mod+Delete mode "$mode_system"
 # Resize Window
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
-        bindsym h resize shrink width 5 px or 5 ppt
-        bindsym j resize grow height 5 px or 5 ppt
-        bindsym k resize shrink height 5 px or 5 ppt
-        bindsym l resize grow width 5 px or 5 ppt
+        bindsym h resize shrink width $window_scale_factor_pixels px or $window_scale_factor_pixels ppt
+        bindsym j resize grow height $window_scale_factor_pixels px or $window_scale_factor_pixels ppt
+        bindsym k resize shrink height $window_scale_factor_pixels px or $window_scale_factor_pixels ppt
+        bindsym l resize grow width $window_scale_factor_pixels px or $window_scale_factor_pixels ppt
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
