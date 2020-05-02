@@ -35,7 +35,6 @@ bindsym $mod+u exec notify-datetime; exec notify-battery
 bindsym $mod+w exec change-keyboard-layout
 bindsym $mod+p exec rofi -show window
 bindsym $mod+s exec polybar-msg cmd toggle
-bindsym $mod+t exec change-monitor-setup
 
 #######################################################################
 # Key Bindings - Directory easy access
