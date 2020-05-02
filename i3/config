@@ -20,6 +20,7 @@ assign [class=$browser_class instance="web.whatsapp.com"] 6
 for_window [class="Spotify"] move to workspace 8
 assign [class="^Thunderbird$"] 9
 assign [class="MineTime"] 9
+assign [class="Evolution"] 9
 assign [class=$terminal_class instance="gotop"] 10
 assign [class=$terminal_class instance="htop"] 10
 
