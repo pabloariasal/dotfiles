@@ -1,5 +1,0 @@
-#!/bin/bash
-
-capacity=$(cat /sys/class/power_supply/BAT0/capacity)
-status=$(cat /sys/class/power_supply/BAT0/status)
-dunstify -a "notify_battery" -u low -i battery-symbolic -r "72873" "$capacity"% "$status"

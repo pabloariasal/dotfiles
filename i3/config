@@ -14,33 +14,25 @@ floating_modifier $mod
 
 #######################################################################
 # Automatic Window Assignment
-assign [class=$terminal_class instance="notes"] 4
-assign [class=$browser_class instance="mm."] 6
 assign [class=$browser_class instance="teams."] 6
 assign [class=$browser_class instance="web.whatsapp.com"] 6
 for_window [class="Spotify"] move to workspace 8
-assign [class="^Thunderbird$"] 9
-assign [class="MineTime"] 9
 assign [class="Evolution"] 9
 assign [class=$terminal_class instance="gotop"] 10
 assign [class=$terminal_class instance="htop"] 10
-
 
 #######################################################################
 # Key Bindings - Starting Programs
 bindsym $mod+Return exec $terminal
 bindsym $mod+b exec $browser
 bindsym $mod+d exec rofi -show run
-bindsym $mod+u exec notify-datetime; exec notify-battery
 bindsym $mod+w exec change-keyboard-layout
-bindsym $mod+p exec rofi -show window
-bindsym $mod+s exec polybar-msg cmd toggle
 
 #######################################################################
 # Key Bindings - Directory easy access
 bindsym $mod+ctrl+1 exec $terminal --working-directory ${DOTFILES} --title "dotfiles"
 bindsym $mod+ctrl+2 exec $terminal --working-directory ${HOME}/Workspace
-bindsym $mod+ctrl+4 exec $terminal --working-directory ${NOTES_DIR}
+bindsym $mod+ctrl+4 workspace 4; exec $terminal --working-directory ${NOTES_DIR} --title "notes"
 
 #######################################################################
 # Key Bindings - Windows
@@ -52,10 +44,10 @@ bindsym $mod+k focus up
 bindsym $mod+l focus right
 
 # Move Focused Window
-bindsym $mod+Ctrl+h move left
-bindsym $mod+Ctrl+j move down
-bindsym $mod+Ctrl+k move up
-bindsym $mod+Ctrl+l move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # Change Focus Between Tiling / Floating Windows
 bindsym $mod+space focus mode_toggle
@@ -65,7 +57,6 @@ bindsym $mod+c focus child
 
 # Kill Focused Window
 bindsym $mod+q kill
-
 
 #######################################################################
 # Key Bindings - Workspaces
@@ -94,17 +85,12 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
-# Workspace Cycling
-bindsym $mod+Shift+l workspace next
-bindsym $mod+Shift+h workspace prev
-
 # Switch back and forth
 bindsym $mod+Tab workspace back_and_forth
 workspace_auto_back_and_forth yes
 
 bindsym $mod+n workspace 5
 bindsym $mod+m workspace 1
-
 
 #######################################################################
 # Key Bindings - Layout
@@ -115,7 +101,6 @@ bindsym $mod+e layout toggle split
 bindsym $mod+y layout toggle tabbed stacking split
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+f fullscreen toggle
-
 
 #######################################################################
 # Key Bindings - Restart and Reload
@@ -128,17 +113,13 @@ bindsym $mod+Shift+r restart
 
 #######################################################################
 # Key Bindings - Scratchpad
-
 bindsym $mod+Shift+minus move scratchpad
-bindsym $mod+minus [class="Alacritty"] scratchpad show
-bindsym $mod+equal [class="Chromium"] scratchpad show
-
+bindsym $mod+minus  scratchpad show
 
 #######################################################################
 # Key Bindings - Print Screen
 bindsym --release Print exec scrot '%Y-%m-%d_$wx$h.png' -e 'mv $f /tmp/'
 bindsym --release Shift+Print exec scrot -s '%Y-%m-%d_$wx$h.png' -e 'mv $f /tmp/'
-
 
 #######################################################################
 # Key Bindings - Volume Control
@@ -146,12 +127,10 @@ bindsym XF86AudioRaiseVolume exec amixer set Master 10%+ unmute; exec notify-vol
 bindsym XF86AudioLowerVolume exec amixer set Master 10%- unmute; exec notify-volume
 bindsym XF86AudioMute exec exec amixer set Master toggle; exec notify-volume
 
-
 #######################################################################
 # Key Bindings - Screen Brightness Control
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10; exec notify-brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10; exec notify-brightness
-
 
 #######################################################################
 # Key Bindings - Media Control
@@ -183,10 +162,8 @@ font pango:DejaVu Sans Mono 8
 gaps inner 5
 gaps outer 0
 
-
 #######################################################################
 # Modes
-
 # System
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
@@ -217,17 +194,10 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-
 #######################################################################
 # Auto Start Programs
 exec_always --no-startup-id ${DOTFILES}/scripts/launch-picom
-
-# Wallpaper
 exec_always --no-startup-id nitrogen --restore
-
-# Polybar
 exec_always --no-startup-id ${HOME}/.config/polybar/launch.sh
-
 exec_always --no-startup-id dropbox-cli start
-
 exec_always --no-startup-id xss-lock -- $locker
