@@ -10,11 +10,11 @@ packages=(i3-gaps
     htop
     irssi
     neovim
+    python-pynvim
     picom
     playerctl
     rofi
     ripgrep
-    wavemon
     zathura
     words
     xss-lock
@@ -37,17 +37,25 @@ packages=(i3-gaps
     dropbox-cli
     sxiv
     nitrogen
-    nodejs)
+    nodejs
+    zsh
+    which
+    wget
+    mlocate
+    lxappearance
+    evolution
+    evolution-ews
+    gnome-keyring)
 
 aur_packages=(spotify
     antigen-git
+    pymodoro-git
     ccls-git
     chromium-widevine
     fast
     gotop-bin
-    minetime-bin
-    pfetch
     python-ueberzug
+    xcursor-oxygen
     polybar)
 
 function install_yay()
