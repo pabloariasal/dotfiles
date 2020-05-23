@@ -39,4 +39,6 @@ Plug 'junegunn/goyo.vim'
 Plug 'neomake/neomake'
 Plug 'reedes/vim-pencil'
 Plug 'airblade/vim-gitgutter'
+"Colors
+Plug 'arcticicestudio/nord-vim'
 call plug#end()

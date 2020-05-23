@@ -148,6 +148,12 @@ set foldlevel=1
 let g:SimpylFold_fold_docstring = 0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Colors
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set background=dark
+colorscheme nord
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ctags
 "
 " Required Plugins: ludovicchabant/vim-gutentags

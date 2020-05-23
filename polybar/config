@@ -14,13 +14,16 @@
 ;==========================================================
 
 [color]
-red = #e53935
 ; transparent background (needs compton or window compositor)
 ;bg = #00ffffff
-bg = #cc282a36
-fg = #c594c5
-alt = #f3f99d
-alt2 = #9aedfe
+bg = #cc2E3440
+fg = #D8DEE9
+; green
+alt = #A3BE8C
+; magenta
+alt2 = #EBCB8B
+; red
+red = #BF616A
 
 curgent = ${self.red}
 
