@@ -154,6 +154,15 @@ set background=dark
 colorscheme nord
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Status Line
+"
+" Required Plugins: itchyny/lightline.vim
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:lightline = {
+      \ 'colorscheme': 'nord',
+      \ }
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ctags
 "
 " Required Plugins: ludovicchabant/vim-gutentags
