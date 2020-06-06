@@ -8,18 +8,23 @@ set $terminal_class "^Alacritty$"
 set $locker i3lock -c 333333 --clock --timecolor ffffffff --datecolor ffffffff
 set $floating_window_scale_factor_px 50
 set $tiling_window_scale_factor_ppt 5
+set $web_ws 6
+set $chat_ws 7
+set $playes_ws 8
+set $email_ws 9
+set $system_ws 10
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 #######################################################################
 # Automatic Window Assignment
-assign [class=$browser_class instance="teams."] 6
-assign [class=$browser_class instance="web.whatsapp.com"] 6
-for_window [class="Spotify"] move to workspace 8
-assign [class="Evolution"] 9
-assign [class=$terminal_class instance="gotop"] 10
-assign [class=$terminal_class instance="htop"] 10
+assign [class=$browser_class instance="teams."] $chat_ws
+assign [class=$browser_class instance="web.whatsapp.com"] $chat_ws
+for_window [class="Spotify"] move to workspace $playes_ws
+assign [class="Evolution"] $email_ws
+assign [class=$terminal_class instance="gotop"] $system_ws
+assign [class=$terminal_class instance="htop"] $system_ws
 
 #######################################################################
 # Key Bindings - Starting Programs
@@ -30,9 +35,8 @@ bindsym $mod+w exec change-keyboard-layout
 
 #######################################################################
 # Key Bindings - Directory easy access
-bindsym $mod+ctrl+1 exec $terminal --working-directory ${DOTFILES} --title "dotfiles"
-bindsym $mod+ctrl+2 exec $terminal --working-directory ${HOME}/Workspace
-bindsym $mod+ctrl+4 workspace 4; exec $terminal --working-directory ${NOTES_DIR} --title "notes"
+bindsym $mod+ctrl+d exec $terminal --working-directory ${DOTFILES} --title "dotfiles"
+bindsym $mod+ctrl+n exec $terminal --working-directory ${NOTES_DIR} --title "notes"
 
 #######################################################################
 # Key Bindings - Windows
@@ -89,8 +93,7 @@ bindsym $mod+Shift+0 move container to workspace 10
 bindsym $mod+Tab workspace back_and_forth
 workspace_auto_back_and_forth yes
 
-bindsym $mod+n workspace 5
-bindsym $mod+m workspace 1
+bindsym $mod+n workspace $web_ws
 
 #######################################################################
 # Key Bindings - Layout
@@ -114,7 +117,11 @@ bindsym $mod+Shift+r restart
 #######################################################################
 # Key Bindings - Scratchpad
 bindsym $mod+Shift+minus move scratchpad
-bindsym $mod+minus  scratchpad show
+bindsym $mod+minus scratchpad show
+
+#######################################################################
+# Key Bindings - Sticky Window
+bindsym $mod+s sticky toggle
 
 #######################################################################
 # Key Bindings - Print Screen
