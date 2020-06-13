@@ -108,13 +108,5 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 nnoremap <c-p>  :<C-u>CocList files<cr>
 nnoremap <c-n>  :<C-u>CocList buffers<cr>
 nnoremap <Leader>g :<C-u>CocList -I grep<cr>
+" grep for word under the cursor
 nnoremap <silent> <Leader>r :<C-u>grep '<C-r>=expand("<cword>")<CR>'<CR>
-nnoremap <silent> <leader>c  :<C-u>CocList colors<cr>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Buiding
-"
-" Required Plugins: neomake
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <Leader>mf :<C-u>Neomake! make_build_filtered<cr>
-nnoremap <Leader>mr :<C-u>Neomake! make_build<cr>

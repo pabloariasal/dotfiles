@@ -36,7 +36,6 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'SirVer/ultisnips'
 Plug 'junegunn/goyo.vim'
-Plug 'neomake/neomake'
 Plug 'reedes/vim-pencil'
 Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/lightline.vim'
