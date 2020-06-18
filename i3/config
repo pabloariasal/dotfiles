@@ -38,6 +38,7 @@ bindsym $mod+w exec change-keyboard-layout
 # Key Bindings - Directory easy access
 bindsym $mod+ctrl+d exec $terminal --working-directory ${DOTFILES} --title "dotfiles"
 bindsym $mod+ctrl+n exec $terminal --working-directory ${NOTES_DIR} --title "notes" -e fm
+bindsym $mod+ctrl+w exec $terminal --working-directory ${HOME}/Workspace --title "workspace"
 
 #######################################################################
 # Key Bindings - Windows
