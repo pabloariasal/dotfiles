@@ -1,6 +1,57 @@
 #!/bin/zsh
 
-fonts=("Terminus" "Meslo")
+# ShareTechMono
+# MPlus
+# FiraCode
+# IBMPlexMono
+# HeavyData
+# Hermit
+# DejaVuSansMono
+# FiraMono
+# Hasklig
+# 3270
+# InconsolataGo
+# BitstreamVeraSansMono
+# Overpass
+# Ubuntu
+# CascadiaCode
+# Go-Mono
+# Hack
+# SpaceMono
+# Monoid
+# Arimo
+# InconsolataLGC
+# ProFont
+# Agave
+# Gohu
+# Mononoki
+# Inconsolata
+# Terminus
+# DaddyTimeMono
+# FantasqueSansMono
+# UbuntuMono
+# Noto
+# DroidSansMono
+# AurulentSansMono
+# SourceCodePro
+# BigBlueTerminal
+# Cousine
+# Meslo
+# Lekton
+# LiberationMono
+# CodeNewRoman
+# Monofur
+# Iosevka
+# Tinos
+# AnonymousPro
+# JetBrainsMono
+# OpenDyslexic
+# VictorMono
+# RobotoMono
+# iA-Writer
+# ProggyClean
+
+fonts=("Terminus" "Meslo" "FiraMono")
 nerd_fonts_dir="${HOME}/nerd-fonts"
 
 function clone_nerd_fonts()
