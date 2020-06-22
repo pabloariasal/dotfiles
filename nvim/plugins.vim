@@ -39,6 +39,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'reedes/vim-pencil'
 Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/lightline.vim'
+Plug 'itchyny/vim-gitbranch'
 "Colors
 Plug 'arcticicestudio/nord-vim'
 call plug#end()

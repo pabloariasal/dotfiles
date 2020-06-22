@@ -159,8 +159,17 @@ colorscheme nord
 " Required Plugins: itchyny/lightline.vim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:lightline = {
-      \ 'colorscheme': 'nord',
-      \ }
+            \ 'colorscheme': 'nord',
+            \ 'active': {
+                \ 'left': [ [ 'mode', 'paste' ],
+                \           [ 'readonly', 'relativepath', 'modified', 'gitbranch' ] ],
+                \ 'right': [ [ 'lineinfo' ],
+                \            [ 'percent' ],
+                \            [ 'fileformat', 'fileencoding', 'filetype' ] ] },
+            \ 'component_function': {
+            \   'gitbranch': 'gitbranch#name',
+            \ },
+            \ }
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ctags
