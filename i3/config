@@ -32,6 +32,7 @@ assign [class=$terminal_class instance="htop"] $system_ws
 bindsym $mod+Return exec $terminal
 bindsym $mod+b exec $browser
 bindsym $mod+d exec rofi -show run
+bindsym $mod+p exec rofi -show window
 bindsym $mod+w exec change-keyboard-layout
 
 #######################################################################
