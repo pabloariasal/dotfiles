@@ -17,3 +17,4 @@ nvim/plugged
 lsp_settings.json
 
 .gdb_history
+compile_commands.json
