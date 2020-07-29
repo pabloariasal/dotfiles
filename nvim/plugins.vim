@@ -26,7 +26,6 @@ endif
 call plug#begin('~/.config/nvim/plugged')
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-vinegar'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-commentary'
@@ -40,6 +39,7 @@ Plug 'reedes/vim-pencil'
 Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/lightline.vim'
 Plug 'itchyny/vim-gitbranch'
+Plug 'voldikss/vim-floaterm'
 "Colors
 Plug 'arcticicestudio/nord-vim'
 call plug#end()

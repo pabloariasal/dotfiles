@@ -110,3 +110,17 @@ nnoremap <c-n>  :<C-u>CocList buffers<cr>
 nnoremap <Leader>g :<C-u>CocList -I grep<cr>
 " grep for word under the cursor
 nnoremap <silent> <Leader>r :<C-u>grep '<C-r>=expand("<cword>")<CR>'<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Floating Terminal
+"
+" Required Plugins: coc.nvim with coc-lists extension
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:floaterm_keymap_show    = '<F7>'
+let g:floaterm_keymap_new    = '<F8>'
+let g:floaterm_keymap_kill   = '<F9>'
+let g:floaterm_keymap_prev   = '<F10>'
+let g:floaterm_keymap_next   = '<F11>'
+let g:floaterm_keymap_toggle = '<F12>'
+nnoremap <silent> <leader>v :Vifm<CR>
+tnoremap <silent> <leader>v <C-\><C-n>:Vifm<CR>

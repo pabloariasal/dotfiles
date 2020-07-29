@@ -207,3 +207,13 @@ set shortmess+=c
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
 command! -nargs=? Fold :call     CocAction('fold', <f-args>)
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Floating Terminal
+"
+" Required Plugins: voldikss/vim-floaterm
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+command! Vifm FloatermNew vifm
+let g:floaterm_height=0.95
+let g:floaterm_width=0.8
+let g:floaterm_position='top'
