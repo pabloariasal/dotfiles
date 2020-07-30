@@ -8,6 +8,7 @@ Session.vim
 .netrwhist
 *~
 tags
+tags.*
 [._]*.un~
 .notags
 .ctagsignore
