@@ -26,10 +26,12 @@ for_window [class="Spotify"] move to workspace $playes_ws
 assign [class="Evolution"] $email_ws
 assign [class=$terminal_class instance="gotop"] $system_ws
 assign [class=$terminal_class instance="htop"] $system_ws
+for_window [class=$terminal_class instance="__scratchpad"] move scratchpad
 
 #######################################################################
 # Key Bindings - Starting Programs
 bindsym $mod+Return exec $terminal
+bindsym $mod+Shift+Return exec $terminal --class="__scratchpad"; scratchpad show
 bindsym $mod+b exec $browser
 bindsym $mod+d exec rofi -show run
 bindsym $mod+p exec rofi -show window
