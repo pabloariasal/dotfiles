@@ -7,3 +7,9 @@ alias l='ls'
 alias ll='ls -lh'
 alias la='ls -lAh'
 alias ..='cd ..'
+
+#devour
+alias za='devour zathura'
+alias sx='devour sxiv'
+alias gka='devour gitk --all --branches'
+alias gk='devour gitk'

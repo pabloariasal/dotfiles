@@ -160,9 +160,6 @@ bindsym XF86AudioPrev exec playerctl previous
 # disable title bars
 for_window [class="^.*"] border pixel 3
 
-# Make gitk floating and fullscreen
-for_window [class="Gitk"] fullscreen
-
 # Only enable gaps on a workspace when there is at least one container
 smart_gaps on
 
