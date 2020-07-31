@@ -42,6 +42,7 @@ bindsym $mod+w exec change-keyboard-layout
 bindsym $mod+ctrl+d exec $terminal --working-directory ${DOTFILES} --title "dotfiles"
 bindsym $mod+ctrl+n exec $terminal --working-directory ${NOTES_DIR} --title "notes" -e fm
 bindsym $mod+ctrl+w exec $terminal --working-directory ${HOME}/Workspace --title "workspace"
+bindsym $mod+ctrl+l exec $terminal --working-directory ${HOME}/Downloads
 
 #######################################################################
 # Key Bindings - Windows
