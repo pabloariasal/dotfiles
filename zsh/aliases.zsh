@@ -7,6 +7,7 @@ alias l='ls'
 alias ll='ls -lh'
 alias la='ls -lAh'
 alias ..='cd ..'
+alias ipinfo='curl -s ifconfig.co/json | jq'
 
 #devour
 alias za='devour zathura'
