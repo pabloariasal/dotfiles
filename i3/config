@@ -132,8 +132,8 @@ bindsym $mod+s sticky toggle
 
 #######################################################################
 # Key Bindings - Print Screen
-bindsym --release Print exec scrot '%Y-%m-%d_$wx$h.png' -e 'mv $f /tmp/'
-bindsym --release Shift+Print exec scrot -s '%Y-%m-%d_$wx$h.png' -e 'mv $f /tmp/'
+bindsym --release Print exec flameshot full -c -p /tmp
+bindsym --release Shift+Print exec flameshot gui
 
 #######################################################################
 # Key Bindings - Volume Control
