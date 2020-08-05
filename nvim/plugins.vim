@@ -26,6 +26,7 @@ endif
 call plug#begin('~/.config/nvim/plugged')
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-sleuth'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-commentary'
