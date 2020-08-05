@@ -1,9 +1,8 @@
 cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ..
 cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ..
-nmcli c up nv-pf1-udp-1194-Pablo_Arias --ask
+nmcli c up nv-pf1-udp-1194-Pablo_Arias
 nmcli c down nv-pf1-udp-1194-Pablo_Arias
 nmcli c up DumbledoreDies
 nmcli device wifi list
 nmcli device wifi connect FamiliaArias --ask
-setxkbmap -option caps:escape
 echo !! >> $DOTFILES/history_favorites
