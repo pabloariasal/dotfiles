@@ -3,7 +3,6 @@
 packages=(i3-gaps
     i3lock-color
     alacritty
-    chromium
     dunst
     fd
     bat
@@ -16,13 +15,11 @@ packages=(i3-gaps
     rofi
     ripgrep
     zathura
-    words
     xss-lock
     xorg-xinit
     xorg
     fzf
     xsel
-    python-pynvim
     nm-connection-editor
     networkmanager-openvpn
     tree
@@ -30,7 +27,8 @@ packages=(i3-gaps
     ttf-font-awesome
     libnotify
     alsa-utils
-    scrot
+    flameshot
+    xdotool
     mate-icon-theme
     tk
     vifm
@@ -45,13 +43,15 @@ packages=(i3-gaps
     lxappearance
     evolution
     evolution-ews
-    gnome-keyring)
+    gnome-keyring
+    seahorse
+)
 
 aur_packages=(spotify
     antigen-git
     pymodoro-git
     ccls-git
-    chromium-widevine
+    google-chrome
     fast
     gotop-bin
     python-ueberzug
