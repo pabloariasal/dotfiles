@@ -1,0 +1,18 @@
+#!/bin/bash
+
+INCREMENT=5
+# Uncomment if you want to use pulseaudio
+# FLAGS="-D pulse"
+
+case "$1" in
+    up)
+        amixer set Master "$INCREMENT"%+ unmute "${FLAGS}"
+        ;;
+    down)
+        amixer set Master "$INCREMENT"%- unmute "${FLAGS}"
+        ;;
+    toggle)
+        amixer set Master toggle "${FLAGS}"
+        ;;
+esac
+
