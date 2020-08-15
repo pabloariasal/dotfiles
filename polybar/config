@@ -32,14 +32,10 @@ brightness = " "
 volume = " "
 muted = " "
 charging = " "
-discharging = " "
-keyboard = " "
-wifi = " "
+discharging = "  "
+keyboard = "  "
+wifi = "  "
 time = " "
-date = " "
-cpu = " "
-ram = " "
-vpn = " "
 
 ;==========================================================
 
@@ -66,9 +62,7 @@ module-margin-right = 1
 
 ;==========================================================
 
-font-0 = "Font Awesome 5 Free,Font Awesome 5 Free Regular:style=Regular:pixelsize=9;4"
-font-1 = "Font Awesome 5 Free,Font Awesome 5 Free Solid:style=Solid:pixelsize=9;4"
-font-2 = "TerminessTTF Nerd Font:style=Regular:pixelsize=9;4"
+font-0 = "TerminessTTF Nerd Font:style=Regular:pixelsize=9;4"
 
 ;==========================================================
 
@@ -231,26 +225,6 @@ interval = 10
 type = custom/script
 interval = 1
 exec = polybar_spotify_status -f '{play_pause} {artist} - {song}' -p '',
-
-[module/cpu]
-type = internal/cpu
-interval = 0.5
-
-format = <label>
-label = %percentage%%
-format-prefix = ${icons.cpu}
-
-[module/memory]
-type = internal/memory
-format = <label>
-label = %percentage_used%%
-format-prefix = ${icons.ram}
-
-[module/vpn-openvpn-status]
-type = custom/script
-exec = ${HOME}/dotfiles/polybar/scripts/vpn-openvpn-status.sh
-interval = 5
-format-prefix = ${icons.vpn}
 
 [module/pomodoro]
 type = custom/script
