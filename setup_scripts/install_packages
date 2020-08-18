@@ -56,7 +56,9 @@ aur_packages=(spotify
     gotop-bin
     python-ueberzug
     xcursor-oxygen
-    polybar)
+    polybar
+    glow
+)
 
 function install_yay()
 {
