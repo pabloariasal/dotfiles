@@ -3,11 +3,14 @@ alias b='bat'
 alias sudo='sudo '
 alias p='pacman'
 alias ls='ls --color=tty'
-alias l='ls'
-alias ll='ls -lh'
-alias la='ls -lAh'
 alias ..='cd ..'
 alias ipinfo='curl -s ifconfig.co/json | jq'
+
+# exa
+alias l='exa'
+alias la='exa -a'
+alias ll='exa -la'
+alias lt='exa --tree'
 
 #devour
 alias za='devour zathura'
