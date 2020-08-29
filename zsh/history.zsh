@@ -19,7 +19,7 @@ setopt hist_find_no_dups
 setopt hist_verify
 
 # Blacklist certain commands to be written to history file
-HISTORY_IGNORE="(l[sla]|l[sal]|l *|cd|cd *|gs|gd|gdca|ga *|gc *|gapa|gl|glp|glg|glga|gca|gcan|gco *|grb *|gm *|gp|f *|yay)"
+HISTORY_IGNORE="(l[slat]|l|cd|cd *|gs|gd|gdca|gapa|gl|glp|glg|glga|gca|gcan|gp|gp!|f *|yay)"
 
 #######################################################################
 # CTRL-F - Select History Favorite
