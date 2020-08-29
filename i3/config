@@ -95,12 +95,12 @@ bindsym $mod+Shift+0 move container to workspace 10
 bindsym $mod+Tab workspace back_and_forth
 workspace_auto_back_and_forth yes
 
+# Easy jump to browser
 bindsym $mod+n workspace $web_ws
 bindsym $mod+m workspace $main_ws
 
 #######################################################################
 # Key Bindings - Layout
-
 bindsym $mod+o split h
 bindsym $mod+v split v
 bindsym $mod+e layout toggle split
@@ -110,7 +110,6 @@ bindsym $mod+f fullscreen toggle
 
 #######################################################################
 # Key Bindings - Restart and Reload
-
 # reload the configuration file
 bindsym $mod+Shift+c reload
 
