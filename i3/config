@@ -28,7 +28,6 @@ for_window [class=$terminal_class instance="__scratchpad"] move scratchpad
 #######################################################################
 # Key Bindings - Starting Programs
 bindsym $mod+Return exec $terminal
-bindsym $mod+Shift+Return exec $terminal --class="__scratchpad"; scratchpad show
 bindsym $mod+b exec $browser
 bindsym $mod+d exec rofi -show run
 bindsym $mod+p exec rofi -show window
@@ -118,8 +117,9 @@ bindsym $mod+Shift+r restart
 
 #######################################################################
 # Key Bindings - Scratchpad
-bindsym $mod+Shift+minus move scratchpad
-bindsym $mod+minus scratchpad show
+bindsym $mod+Shift+plus move scratchpad
+bindsym $mod+plus scratchpad show
+bindsym $mod+minus exec i3-toggle-scratchpad
 
 #######################################################################
 # Key Bindings - Sticky Window

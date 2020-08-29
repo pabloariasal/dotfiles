@@ -1,0 +1,5 @@
+#!/bin/bash
+if  [ -z "$(xdotool search --classname '__scratchpad')" ]; then
+    alacritty --class="__scratchpad" & sleep 0.5
+fi
+i3-msg "[instance=\"__scratchpad\"] scratchpad show"
