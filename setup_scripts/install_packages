@@ -45,6 +45,7 @@ packages=(i3-gaps
     evolution-ews
     gnome-keyring
     seahorse
+    exa
 )
 
 aur_packages=(spotify
