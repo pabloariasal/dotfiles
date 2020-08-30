@@ -11,7 +11,7 @@ configuration {
     font:                           "Inconsolata Nerd Font 10";
     show-icons:                     false;
     display-drun: 					":";
-    drun-display-format:            "{name}";
+    /* drun-display-format:            "{name}"; */
     threads:                        0;
     scroll-method:                  0;
     disable-history:                false;
