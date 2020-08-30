@@ -97,9 +97,6 @@ let g:qf_auto_resize = 0
 "Enable syntax highlighting
 syntax on
 
-" show line numbers
-set number
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " netrw
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
