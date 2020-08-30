@@ -30,7 +30,6 @@ for_window [class=$terminal_class instance="__scratchpad"] move scratchpad
 bindsym $mod+Return exec $terminal
 bindsym $mod+b exec $browser
 bindsym $mod+d exec rofi -show run
-bindsym $mod+p exec rofi -show window
 bindsym $mod+w exec change-keyboard-layout
 bindsym $mod+u exec polybar-msg cmd toggle
 bindsym $mod+Delete exec powermenu
