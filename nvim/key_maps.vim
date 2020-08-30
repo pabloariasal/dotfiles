@@ -66,6 +66,9 @@ nnoremap <silent> <CR> za
 vmap < <gv
 vmap > >gv
 
+"jump to alternate file
+nmap <silent> <leader>a :<C-u>Alternate<CR>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Quickfix list and Location List
 "

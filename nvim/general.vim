@@ -43,7 +43,7 @@ set wildignore+=*/.git/*,*/build*/*,*/dist/*,build
 set autoread
 
 "Search for files in this directories (e.g. via find, gf)
-set path+=$HOME/dotfiles/**,$HOME/Workspace/**
+set path=.,,**
 
 "Persist undo history
 set undofile
