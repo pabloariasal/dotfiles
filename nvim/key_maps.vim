@@ -41,27 +41,38 @@ nnoremap <leader>P "+P
 nnoremap <leader>y "+y
 xnoremap <leader>y "+y
 
-"best mapping ever
+"best mappings ever
 noremap <Space> :
 inoremap jj <ESC>
 
 "remove trailing whitespace
 nmap <silent> <Leader>e :<C-u>%s/\s\+$//<cr>
 
-"remove trailing whitespace
+"save all buffers
 nmap <Leader>w :<C-u>wa<cr>
+
+"Quit and force quit
+nmap <Leader>q :<C-u>qa<cr>
+nmap <Leader>Q :<C-u>qa!<cr>
+
+" grep for word under the cursor
+nnoremap <Leader>g :<C-u>grep 
+nnoremap <Leader>r :<C-u>grep '<C-r>=expand("<cword>")<CR>'<CR>
+
+" open folds with enter
+nnoremap <silent> <CR> za
+
+" Indent visual block
+vmap < <gv
+vmap > >gv
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Quickfix list and Location List
 "
 " Required Plugins: vim-qf
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"[vim-qf] Toggle location and quickfix lists
-nmap <Leader>q <Plug>(qf_qf_toggle)
-nmap <Leader>l <Plug>(qf_loc_toggle)
-
-"[vim-qf] Focus quickfixlist
-nmap gq <Plug>(qf_qf_switch)
+"[vim-qf] Toggle quickfix list
+nmap gq <Plug>(qf_qf_toggle)
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language Server Protocol
@@ -71,7 +82,7 @@ nmap gq <Plug>(qf_qf_switch)
 " Remap keys for gotos
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
+"nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gk <Plug>(coc-references)
 
 " Use K to show documentation in preview window
@@ -92,8 +103,8 @@ nnoremap <silent> <leader>d  :<C-u>CocList --normal diagnostics<cr>
 nnoremap <silent> <leader>o  :<C-u>CocList outline<cr>
 "Symbols in workspace
 nnoremap <silent> <leader>s  :<C-u>CocList -I symbols<cr>
-nnoremap <silent> <leader>t  :<C-u>CocList tags<cr>
 
+" Format current buffer
 nmap <leader>f <Plug>(coc-format)
 
 " Use `[g` and `]g` to navigate diagnostics
@@ -105,19 +116,15 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 "
 " Required Plugins: coc.nvim with coc-lists extension
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <c-p>  :<C-u>CocList files<cr>
-nnoremap <c-n>  :<C-u>CocList buffers<cr>
-nnoremap <Leader>g :<C-u>CocList -I grep<cr>
-" grep for word under the cursor
-nnoremap <silent> <Leader>r :<C-u>grep '<C-r>=expand("<cword>")<CR>'<CR>
+nnoremap <silent> <c-p>  :<C-u>CocList files<cr>
+nnoremap <silent> <c-n>  :<C-u>CocList buffers<cr>
+nnoremap <silent> <leader>t  :<C-u>CocList tags<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Floating Terminal
 "
 " Required Plugins: coc.nvim with coc-lists extension
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:floaterm_keymap_show    = '<F7>'
-let g:floaterm_keymap_new    = '<F8>'
 let g:floaterm_keymap_kill   = '<F9>'
 let g:floaterm_keymap_prev   = '<F10>'
 let g:floaterm_keymap_next   = '<F11>'
