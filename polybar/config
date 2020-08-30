@@ -82,11 +82,11 @@ enable-ipc = true
 padding = 1
 
 separator = |
-module-margin = 2
+module-margin = 1
 
 ;== Module Location ========================================================
 
-modules-left = systemmenu network xbacklight volume battery keyboard
+modules-left = systemmenu network xbacklight volume battery keyboard window
 modules-center = i3
 modules-right = pomodoro spotify time
 
@@ -165,8 +165,8 @@ label-discharging = %percentage%%
 type = internal/xwindow
 format = <label>
 label = %title%
-label-maxlen = 80
-label-foreground = ${color.ac}
+label-maxlen = 25
+label-foreground = ${color.purple}
 
 [module/xbacklight]
 type = internal/xbacklight
