@@ -165,7 +165,7 @@ label-discharging = %percentage%%
 type = internal/xwindow
 format = <label>
 label = %title%
-label-maxlen = 25
+label-maxlen = 30
 label-foreground = ${color.purple}
 
 [module/xbacklight]
