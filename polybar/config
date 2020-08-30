@@ -14,28 +14,42 @@
 ;==========================================================
 
 [color]
-; transparent background (needs compton or window compositor)
-;bg = #00ffffff
-bg = #cc2E3440
-fg = #D8DEE9
-; green
-alt = #A3BE8C
-; magenta
-alt2 = #EBCB8B
-; red
-red = #BF616A
+bg = #212B30
+bg-alt = #5C6F7B
+fg = #C4C7C5
+ac = #4DD0E1
 
-curgent = ${self.red}
+trans = #00000000
+white = #FFFFFF
+black = #000000
+
+;; Colors
+
+red = #EC7875
+pink = #EC407A
+purple = #BA68C8
+blue = #42A5F5
+cyan = #4DD0E1
+teal = #00B19F
+green = #61C766
+lime = #B9C244
+yellow = #FDD835
+amber = #FBC02D
+orange = #E57C46
+brown = #AC8476
+grey = #8C8C8C
+indigo = #6C77BB
+blue-gray = #6D8895
 
 [icons]
-brightness = " "
-volume = " "
-muted = " "
-charging = " "
+brightness = "  "
+volume = "  "
+muted = "  "
+charging = "  "
 discharging = "  "
 keyboard = "  "
 wifi = "  "
-time = " "
+time = "  "
 
 ;==========================================================
 
@@ -43,47 +57,41 @@ time = " "
 monitor = ${env:MONITOR:eDP1}
 width = 100%
 height = 22
-offset-x = 5%
-offset-y = 2%
-bottom = false
-fixed-center = false
+bottom = true
+fixed-center = true
 line-size = 2
 
 background = ${color.bg}
-foreground = ${color.fg}
+foreground = ${color.bg-alt}
 
 border-size = 2
 border-color = ${color.bg}
 
-module-margin-left = 1
-module-margin-right = 1
-
-;separator = |
-
-;==========================================================
-
-font-0 = "TerminessTTF Nerd Font:style=Regular:pixelsize=9;4"
-
-;==========================================================
+font-0 = "Inconsolata Nerd Font:style=Regular:pixelsize=10;2:antialiasing=false"
+font-1 = "Inconsolata Nerd Font:style=Bold:pixelsize=12;2:antialiasing=false"
 
 cursor-click = pointer
 cursor-scroll = ns-resize
 
-;tray-position = right
-;tray-padding = 0
-;tray-maxsize = 16
-
-scroll-up = i3wm-wsnext
-scroll-down = i3wm-wsprev
-
 wm-name = i3
 enable-ipc = true
 
+; Number of spaces to add at the beginning/end of the bar
+; Individual side values can be defined using:
+;   padding-{left,right}
+padding = 1
+
+separator = |
+module-margin = 2
+
 ;== Module Location ========================================================
 
-modules-left = i3 window
-modules-center = time
-modules-right = spotify time-colombia pomodoro xbacklight volume battery keyboard network
+modules-left = systemmenu network xbacklight volume battery keyboard
+modules-center = i3
+modules-right = pomodoro spotify time
+
+[settings]
+format-foreground = ${color.fg}
 
 ;== Modules ================================================================
 
@@ -101,41 +109,39 @@ pin-workspaces = true
 label-mode = %mode%
 label-mode-padding = 2
 label-mode-foreground = ${color.fg}
-label-mode-background = ${color.curgent}
+label-mode-background = ${color.black}
 
-ws-icon-0 = 1;1
-ws-icon-1 = 2;2
-ws-icon-2 = 3;3
-ws-icon-3 = 4;4
-ws-icon-4 = 5;5
-ws-icon-5 = 6;WWW
-ws-icon-6 = 7;CHAT
-ws-icon-7 = 8;PLAY
-ws-icon-8 = 9;MAIL
-ws-icon-9 = 10;10
-ws-icon-default =
+ws-icon-0 = 1;I
+ws-icon-1 = 2;II
+ws-icon-2 = 3;III
+ws-icon-3 = 4;IV
+ws-icon-4 = 5;V
+ws-icon-5 = 6;VI
+ws-icon-6 = 7;VII
+ws-icon-7 = 8;VIII
+ws-icon-8 = 9;IX
+ws-icon-9 = 10;X
 
 ; focused = Active workspace on focused monitor
-label-focused = %icon%
-;label-focused-background = ${color.alt}
-label-focused-overline = ${color.alt}
-label-focused-foreground = ${color.alt}
-label-focused-padding = 1
+label-focused = %{T2}%icon%%{T-}
+label-focused-foreground = ${color.ac}
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = ${self.label-focused}
-label-unfocused-padding = ${self.label-focused-padding}
+label-unfocused-foreground = ${color.fg}
 
 ; visible = Active workspace on unfocused monitor
 label-visible = ${self.label-focused}
 label-visible-foreground = ${self.label-focused-foreground}
-label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
 label-urgent = ${self.label-focused}
-label-urgent-foreground = ${color.fg}
-label-urgent-background = ${color.curgent}
-label-urgent-padding = ${self.label-focused-padding}
+label-urgent-foreground = ${color.red}
+
+; Separator in between workspaces
+label-separator = |
+label-separator-padding = 1
+label-separator-foreground = ${color.bg-alt}
 
 [module/battery]
 type = internal/battery
@@ -160,7 +166,7 @@ type = internal/xwindow
 format = <label>
 label = %title%
 label-maxlen = 80
-label-foreground = ${color.alt}
+label-foreground = ${color.ac}
 
 [module/xbacklight]
 type = internal/xbacklight
@@ -208,11 +214,8 @@ interval = 10
 
 time = "%a %b %e %H:%M"
 
-format-prefix = ${icons.time}
 format = <label>
 label = %time%
-label-foreground = ${color.alt2}
-format-prefix-foreground = ${color.alt2}
 
 [module/time-colombia]
 type = custom/script
@@ -225,6 +228,9 @@ interval = 10
 type = custom/script
 interval = 1
 exec = polybar_spotify_status -f '{play_pause} {artist} - {song}' -p '',
+click-left = playerctl play-pause
+click-middle = playerctl prev
+click-right = playerctl next
 
 [module/pomodoro]
 type = custom/script
@@ -232,5 +238,11 @@ exec = pymodoro --break-prefix " " --pomodoro-prefix " " -p "=" -ah -f ~/.
 label = %output%
 tail = true
 interval = 0
+
+[module/systemmenu]
+type = custom/text
+content = "%{T2}  %{T-}"
+content-foreground = ${color.orange}
+click-left = powermenu
 
 ;== EOF ========================================================
