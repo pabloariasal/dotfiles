@@ -1,4 +1,5 @@
 alias n='nvim'
+alias ns='nvim -S Session.vim'
 alias b='bat'
 alias sudo='sudo '
 alias p='pacman'

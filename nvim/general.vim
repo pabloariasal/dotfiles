@@ -135,16 +135,16 @@ set softtabstop=4
 "
 " Required Plugins: tmhedberg/SimpylFold
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Per default fold on syntax (C/C++)
+set foldmethod=syntax
 "Don't nest more than 3 folds
 set foldnestmax=2
-"Don't open folds per default
-set nofoldenable
+"Open folds per default
+set foldenable
 "When enabled, fold at top-level
 set foldlevel=1
-"[tmhedberg/SimpylFold] don't fold python docstrings
-let g:SimpylFold_fold_docstring = 0
-"Per default fold on syntax
-set foldmethod=syntax
+"if on markdown, use special fold syntax
+autocmd FileType markdown set foldexpr=NestedMarkdownFolds()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colors

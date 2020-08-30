@@ -41,6 +41,10 @@ Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/lightline.vim'
 Plug 'itchyny/vim-gitbranch'
 Plug 'voldikss/vim-floaterm'
+Plug 'junegunn/vim-peekaboo'
+Plug 'tpope/vim-obsession'
 "Colors
 Plug 'arcticicestudio/nord-vim'
+"Folds
+Plug 'masukomi/vim-markdown-folding'
 call plug#end()
