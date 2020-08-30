@@ -97,7 +97,13 @@ workspace_auto_back_and_forth yes
 
 # Easy jump to browser
 bindsym $mod+n workspace $web_ws
+
+# Easy jump to main workspace
 bindsym $mod+m workspace $main_ws
+
+# cycle through active workspaces
+bindsym $mod+bracketright workspace next
+bindsym $mod+bracketleft workspace prev
 
 #######################################################################
 # Key Bindings - Layout
