@@ -33,6 +33,7 @@ bindsym $mod+d exec rofi -show run
 bindsym $mod+w exec change-keyboard-layout
 bindsym $mod+u exec polybar-msg cmd toggle
 bindsym $mod+Delete exec powermenu
+bindsym $mod+t exec rofimoji
 
 #######################################################################
 # Key Bindings - Directory easy access

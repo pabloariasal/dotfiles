@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# The famous "get a menu of emojis to copy" script.
+emoji_file=${DOTFILES}/misc/emoji
+
+# Get user selection via dmenu from emoji file.
+chosen=$(cut -d ';' -f1 "${emoji_file}" | rofi -i -dmenu | sed "s/ .*//")
+
+# Exit if none chosen.
+[ -z "$chosen" ] && exit
+
+# Enter emoji
+xdotool type "$chosen"
