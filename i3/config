@@ -38,6 +38,7 @@ bindsym $mod+t exec rofimoji
 # Key Bindings - Directory easy access
 bindsym $mod+ctrl+d exec $terminal --working-directory ${DOTFILES} --title "dotfiles"
 bindsym $mod+ctrl+n exec $terminal --working-directory ${NOTES_DIR} --title "notes" -e fm
+bindsym $mod+ctrl+o exec $terminal --working-directory ${NOTES_DIR}/org --title "org"
 bindsym $mod+ctrl+l exec $terminal --working-directory ${HOME}/Downloads
 
 #######################################################################

@@ -1,5 +1,4 @@
 alias n='nvim'
-alias ns='nvim -S Session.vim'
 alias b='bat'
 alias sudo='sudo '
 alias p='pacman'
@@ -18,3 +17,12 @@ alias za='devour zathura'
 alias sx='devour sxiv'
 alias gka='devour gitk --all --branches'
 alias gk='devour gitk'
+
+function ns()
+{
+  if [[ $(pwd) == ${NOTES_DIR}/org ]]; then
+    nvim -S ${HOME}/.org_session
+  else
+    nvim -S Session.vim
+  fi
+}
