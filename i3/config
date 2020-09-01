@@ -9,7 +9,7 @@ set $locker i3lock -c 333333 --clock --timecolor ffffffff --datecolor ffffffff
 set $floating_window_scale_factor_px 50
 set $tiling_window_scale_factor_ppt 5
 set $main_ws 1
-set $web_ws 6
+set $web_ws 4
 set $chat_ws 7
 set $playes_ws 8
 set $email_ws 9
@@ -20,7 +20,6 @@ floating_modifier $mod
 #######################################################################
 # Automatic Window Assignment
 assign [class=$browser_class instance="teams."] $chat_ws
-assign [class=$browser_class instance="web.whatsapp.com"] $chat_ws
 for_window [class="Spotify"] move to workspace $playes_ws
 assign [class="Evolution"] $email_ws
 for_window [class=$terminal_class instance="__scratchpad"] move scratchpad
