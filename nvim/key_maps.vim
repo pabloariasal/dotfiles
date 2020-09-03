@@ -46,12 +46,14 @@ noremap <Space> :
 inoremap jj <ESC>
 
 "remove trailing whitespace
-nmap <silent> <Leader>e :<C-u>%s/\s\+$//<cr>
+nmap <silent> <leader>n :<C-u>%s/\s\+$//<cr>
 
 "save all buffers
 nmap <Leader>w :<C-u>wa<cr>
 "quit and save
-nmap <leader>q :<C-u>wq<cr>
+nmap <leader>e :<C-u>wq<cr>
+"quit and save
+nmap <leader>q :<C-u>q<cr>
 "force quit without saving
 nmap <leader><leader>q :<C-u>qa!<cr>
 
