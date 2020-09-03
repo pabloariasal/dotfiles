@@ -83,6 +83,7 @@ noremap <silent> <C-Down> :resize -3<CR>
 " Required Plugins: vim-qf
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "[vim-qf] Toggle quickfix list
+nmap <C-q> <Plug>(qf_qf_switch)
 nmap gq <Plug>(qf_qf_toggle)
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
