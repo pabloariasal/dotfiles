@@ -28,12 +28,6 @@ noremap \ ,
 "make Y consistent with other motions
 map Y y$
 
-"convenient window navigation
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
-
 "system clipboard
 nnoremap <leader>p "+p
 xnoremap <leader>p "+p
@@ -61,9 +55,6 @@ nmap <leader><leader>q :<C-u>qa!<cr>
 nnoremap <Leader>g :<C-u>grep 
 nnoremap <Leader>r :<C-u>grep '<C-r>=expand("<cword>")<CR>'<CR>
 
-" open folds with enter
-nnoremap <silent> <CR> za
-
 " Indent visual block
 vmap < <gv
 vmap > >gv
@@ -76,6 +67,16 @@ noremap <silent> <C-Left> :vertical resize +3<CR>
 noremap <silent> <C-Right> :vertical resize -3<CR>
 noremap <silent> <C-Up> :resize +3<CR>
 noremap <silent> <C-Down> :resize -3<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Folding
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Navigate by fold
+nnoremap <silent> <C-j> zj zz
+nnoremap <silent> <C-k> zk zz
+nnoremap <silent> <C-l> zo
+nnoremap <silent> <C-h> zc
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Quickfix list and Location List
