@@ -50,10 +50,10 @@ nmap <silent> <Leader>e :<C-u>%s/\s\+$//<cr>
 
 "save all buffers
 nmap <Leader>w :<C-u>wa<cr>
-
-"Quit and force quit
-nmap <Leader>q :<C-u>qa<cr>
-nmap <Leader>Q :<C-u>qa!<cr>
+"quit and save
+nmap <leader>q :<C-u>wq<cr>
+"force quit without saving
+nmap <leader><leader>q :<C-u>qa!<cr>
 
 " grep for word under the cursor
 nnoremap <Leader>g :<C-u>grep 
