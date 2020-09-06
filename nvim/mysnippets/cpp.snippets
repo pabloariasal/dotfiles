@@ -6,13 +6,13 @@ snippet abc "Abstract Base Class"
 class $1
 {
 public:
-		$1() = default;
-		virtual ~$1() = default;
+    $1() = default;
+    virtual ~$1() = default;
 
-		$1(const $1&) = delete;
-		$1& operator=(const $1&) = delete;
-		$1($1&&) = delete;
-		$1& operator=($1&&) = delete;
+    $1(const $1&) = delete;
+    $1& operator=(const $1&) = delete;
+    $1($1&&) = delete;
+    $1& operator=($1&&) = delete;
 };
 endsnippet
 
@@ -20,8 +20,7 @@ snippet cla "Class"
 class $1
 {
 public:
-		$1();
-
+    $2
 private:
 };
 endsnippet
@@ -29,17 +28,21 @@ endsnippet
 snippet str "Struct"
 struct $1
 {
-$2
+    $2
 };
 endsnippet
 
-snippet ld "Lambda"
+snippet la "Lambda"
 [$3]($1){$2}
 endsnippet
 
-snippet lld "Multiline Lambda"
+snippet fla "Filter Lambda"
+[$3](const auto& $1) { return $2; }
+endsnippet
+
+snippet mla "Multiline Lambda"
 [$1]($2){
-		$3
+    $3
 };
 endsnippet
 
@@ -87,28 +90,28 @@ endsnippet
 snippet if "If Clause"
 if ($1)
 {
-		$2
+    $2
 }
 endsnippet
 
 snippet else "Else Clause"
 else
 {
-		$1
+    $1
 }
 endsnippet
 
 snippet elif "Else-if Clause"
 else if
 {
-		$1
+    $1
 }
 endsnippet
 
 snippet fun "Function"
 ${1:void} $2($3)
 {
-		$4
+    $4
 }
 endsnippet
 
@@ -122,18 +125,6 @@ endsnippet
 
 snippet bec "Container Const Begin and End" i
 $1.cbegin(), $1.cend()
-endsnippet
-
-snippet up "std::unique_ptr<>"
-std::unique_ptr<$1>
-endsnippet
-
-snippet ve "std::vector<>"
-std::vector<$1>
-endsnippet
-
-snippet st "std::string"
-std::string
 endsnippet
 
 snippet todo "TODO"
