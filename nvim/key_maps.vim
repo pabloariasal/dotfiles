@@ -75,8 +75,7 @@ noremap <silent> <C-Down> :resize -3<CR>
 " Navigate by fold
 nnoremap <silent> <C-j> zj
 nnoremap <silent> <C-k> zk
-nnoremap <silent> <C-l> zo
-nnoremap <silent> <C-h> zc
+nnoremap <silent> <cr> za
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Quickfix list and Location List
