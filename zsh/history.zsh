@@ -6,20 +6,24 @@ bindkey -M vicmd 'j' history-beginning-search-forward
 [ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
 HISTSIZE=50000
 SAVEHIST=10000
+
+#share history across sessions
 setopt share_history
+# don't overwrite history file but append
 setopt append_history
-setopt inc_append_history
-setopt extendedhistory
-
-# setopt hist_ignore_all_dups
+# remove duplicated lines first when history is full
 setopt hist_expire_dups_first
-setopt hist_ignore_dups # adjacent duplicates
+# ignore duplicate entries in history
+setopt hist_ignore_all_dups
+# when searching or scrolling through history
 setopt hist_find_no_dups
-
+# when expanding history (e.g. with !) don't execute directly but just populate input
 setopt hist_verify
+# save no duplicates in hist file
+setopt hist_save_no_dups
 
 # Blacklist certain commands to be written to history file
-HISTORY_IGNORE="(l[slat]|l|cd|cd *|gs|gd|gdca|gapa|gl|glp|glg|glga|gca|gcan|gp|gp!|f *|yay)"
+HISTORY_IGNORE="(n|s|l|l[slat]|cd|gs|gd|gdca|gapa|gl|glp|glg|glga|gca|gcan|gp|gp!|f *|yay)"
 
 #######################################################################
 # CTRL-F - Select History Favorite
