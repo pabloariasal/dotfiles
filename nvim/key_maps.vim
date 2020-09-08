@@ -77,7 +77,7 @@ nnoremap <silent> <leader>b <cmd>Bdelete menu<CR>
 " Navigate by fold
 nnoremap <silent> <C-j> zj
 nnoremap <silent> <C-k> zk
-nnoremap <silent> <cr> za
+nnoremap <silent> <cr> zA
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Quickfix list and Location List
