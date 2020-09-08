@@ -20,7 +20,7 @@ alias gk='devour gitk'
 
 function s()
 {
-  if [[ $(pwd) == ${NOTES_DIR}/org ]]; then
+  if [[ $(pwd) == ${NOTES_DIR} ]]; then
     nvim -S ${HOME}/.org_session
   else
     nvim -S Session.vim
