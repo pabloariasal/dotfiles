@@ -110,12 +110,6 @@ endfunction
 " Remap for rename current word
 nmap <F2> <Plug>(coc-rename)
 
-nnoremap <silent> <leader>d  :<C-u>CocList --normal diagnostics<cr>
-"Symbols in current document
-nnoremap <silent> <leader>o  :<C-u>CocList outline<cr>
-"Symbols in workspace
-nnoremap <silent> <leader>s  :<C-u>CocList -I symbols<cr>
-
 " Format current buffer
 nmap <leader>f <Plug>(coc-format)
 
@@ -128,9 +122,10 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 "
 " Required Plugins: coc.nvim with coc-lists extension
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <silent> <c-p>  :<C-u>CocList files<cr>
-nnoremap <silent> <c-n>  :<C-u>CocList buffers<cr>
-nnoremap <silent> <leader>t  :<C-u>CocList tags<cr>
+nnoremap <silent> <c-p>  <cmd>Files<cr>
+nnoremap <silent> <c-n>  <cmd>Buffers<cr>
+nnoremap <silent> <leader>t  <cmd>Tags<cr>
+nnoremap <silent> <leader>o  <cmd>BTags<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Floating Terminal

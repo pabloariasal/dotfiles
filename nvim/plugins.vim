@@ -44,6 +44,8 @@ Plug 'junegunn/vim-peekaboo'
 Plug 'tpope/vim-obsession'
 Plug 'pabloariasal/vim-alternate'
 Plug 'justinmk/vim-sneak'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
 "Colors
 Plug 'arcticicestudio/nord-vim'
 "Folds
