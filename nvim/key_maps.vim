@@ -68,6 +68,8 @@ noremap <silent> <C-Right> :vertical resize -3<CR>
 noremap <silent> <C-Up> :resize +3<CR>
 noremap <silent> <C-Down> :resize -3<CR>
 
+nnoremap <silent> <leader>b <cmd>Bdelete menu<CR>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Folding
 "

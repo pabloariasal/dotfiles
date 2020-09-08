@@ -46,6 +46,7 @@ Plug 'pabloariasal/vim-alternate'
 Plug 'justinmk/vim-sneak'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'Asheq/close-buffers.vim'
 "Colors
 Plug 'arcticicestudio/nord-vim'
 "Folds
