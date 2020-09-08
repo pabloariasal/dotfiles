@@ -28,11 +28,13 @@ for_window [class=$terminal_class instance="__scratchpad"] move scratchpad
 # Key Bindings - Starting Programs
 bindsym $mod+Return exec $terminal
 bindsym $mod+b exec $browser
-bindsym $mod+d exec rofi -show run
 bindsym $mod+w exec change-keyboard-layout
 bindsym $mod+u exec polybar-msg cmd toggle
-bindsym $mod+Delete exec powermenu
+bindsym $mod+p exec rofi -show window
+bindsym $mod+d exec rofi -show run
+bindsym $mod+i exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 bindsym $mod+t exec rofimoji
+bindsym $mod+Delete exec powermenu
 
 #######################################################################
 # Key Bindings - Directory easy access
@@ -197,3 +199,4 @@ exec_always --no-startup-id nitrogen --restore
 exec_always --no-startup-id ${HOME}/.config/polybar/launch.sh
 exec_always --no-startup-id dropbox-cli start
 exec_always --no-startup-id xss-lock -- $locker
+exec_always --no-startup-id greenclip daemon
