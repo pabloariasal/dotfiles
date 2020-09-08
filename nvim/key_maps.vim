@@ -77,7 +77,11 @@ nnoremap <silent> <leader>b <cmd>Bdelete menu<CR>
 " Navigate by fold
 nnoremap <silent> <C-j> zj
 nnoremap <silent> <C-k> zk
+" Open fold under the cursor
 nnoremap <silent> <cr> zA
+" Visual feedback when changing fold level
+nnoremap zm zm<cmd>echo "foldlevel" &foldlevel<cr>
+nnoremap zr zr<cmd>echo "foldlevel" &foldlevel<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Quickfix list and Location List
