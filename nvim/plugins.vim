@@ -43,6 +43,7 @@ Plug 'voldikss/vim-floaterm'
 Plug 'junegunn/vim-peekaboo'
 Plug 'tpope/vim-obsession'
 Plug 'pabloariasal/vim-alternate'
+Plug 'justinmk/vim-sneak'
 "Colors
 Plug 'arcticicestudio/nord-vim'
 "Folds
