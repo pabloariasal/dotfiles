@@ -157,17 +157,23 @@ colorscheme nord
 "
 " Required Plugins: itchyny/lightline.vim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"NOTE: each sublist is its own highlight group
 let g:lightline = {
             \ 'colorscheme': 'nord',
             \ 'active': {
-                \ 'left': [ [ 'mode', 'paste' ],
-                \           [ 'readonly', 'relativepath', 'modified', 'gitbranch' ] ],
-                \ 'right': [ [ 'lineinfo' ],
-                \            [ 'percent' ],
-                \            [ 'fileformat', 'fileencoding', 'filetype' ] ] },
-            \ 'component_function': {
-            \   'gitbranch': 'gitbranch#name',
-            \ },
+                \ 'left': [
+                \           [ 'mode', 'paste' ],
+                \           [ 'readonly', 'relativepath', 'modified' ]
+                \         ],
+                \ 'right': [
+                \            [ 'percent', 'location' ],
+                \            [ 'fileinfo', 'fileencoding']
+                \          ]
+                \        },
+        \ 'component': {
+              \   'location': '%l/%L',
+              \   'fileinfo': '%y'
+              \ },
             \ }
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
