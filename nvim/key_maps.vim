@@ -78,7 +78,7 @@ nnoremap <silent> <leader>b <cmd>Bdelete menu<CR>
 nnoremap <silent> <C-j> zj
 nnoremap <silent> <C-k> zk
 " Open fold under the cursor
-nnoremap <silent> <cr> zA
+nnoremap <silent> <cr> za
 " Visual feedback when changing fold level
 nnoremap zm zm<cmd>echo "foldlevel" &foldlevel<cr>
 nnoremap zr zr<cmd>echo "foldlevel" &foldlevel<cr>
