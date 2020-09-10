@@ -70,13 +70,18 @@ noremap <silent> <C-Down> :resize -3<CR>
 
 nnoremap <silent> <leader>b <cmd>Bdelete menu<CR>
 
+" Don't write { } motions to the jump list
+nnoremap <silent> } <cmd>execute "keepjumps norm! " . v:count1 . "}"<CR>
+nnoremap <silent> { <cmd>execute "keepjumps norm! " . v:count1 . "{"<CR>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Folding
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Navigate by fold
-nnoremap <silent> <C-j> zj
-nnoremap <silent> <C-k> zk
+nnoremap <silent> <c-j> <cmd>execute "keepjumps norm! " . v:count1 . "zj"<CR>
+nnoremap <silent> <c-k> <cmd>execute "keepjumps norm! " . v:count1 . "zk"<CR>
+
 " Open fold under the cursor
 nnoremap <silent> <cr> za
 " Visual feedback when changing fold level
