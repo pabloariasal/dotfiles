@@ -68,8 +68,9 @@ noremap <silent> <C-Right> :vertical resize -3<CR>
 noremap <silent> <C-Up> :resize +3<CR>
 noremap <silent> <C-Down> :resize -3<CR>
 
+" Delete buffers
 nnoremap <silent> <leader>b <cmd>Bdelete menu<CR>
-nnoremap <silent> <leader>c <cmd>bdelete<CR>
+nnoremap <silent> <leader>c <cmd>bp <bar>bd #<cr>
 
 " Don't write { } motions to the jump list
 nnoremap <silent> } <cmd>execute "keepjumps norm! " . v:count1 . "}"<CR>
