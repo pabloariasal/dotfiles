@@ -49,6 +49,7 @@ packages=(i3-gaps
     gnome-keyring
     seahorse
     exa
+    ctags
 )
 
 aur_packages=(spotify
