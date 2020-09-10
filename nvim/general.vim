@@ -162,7 +162,7 @@ let g:lightline = {
             \ 'colorscheme': 'nord',
             \ 'active': {
                 \ 'left': [
-                \           [ 'mode', 'paste' ],
+                \           [ 'paste' ],
                 \           [ 'readonly', 'relativepath', 'modified' ]
                 \         ],
                 \ 'right': [
