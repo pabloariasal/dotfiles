@@ -39,6 +39,7 @@ bindsym $mod+Delete exec powermenu
 #######################################################################
 # Key Bindings - Directory easy access
 bindsym $mod+ctrl+d exec $terminal --working-directory ${DOTFILES} --title "dotfiles"
+bindsym $mod+ctrl+e exec $terminal --working-directory ${DOTFILES} --title "dotfiles" -e nvim -S Session.vim
 bindsym $mod+ctrl+n exec $terminal --working-directory ${NOTES_DIR} --title "notes"
 bindsym $mod+ctrl+l exec $terminal --working-directory ${HOME}/Downloads
 
