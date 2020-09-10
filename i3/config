@@ -32,7 +32,7 @@ bindsym $mod+w exec change-keyboard-layout
 bindsym $mod+u exec polybar-msg cmd toggle
 bindsym $mod+p exec rofi -show window
 bindsym $mod+d exec rofi -show run
-bindsym $mod+i exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+bindsym $mod+c exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 bindsym $mod+t exec rofimoji
 bindsym $mod+Delete exec powermenu
 
@@ -59,8 +59,8 @@ bindsym $mod+Shift+l move right
 # Change Focus Between Tiling / Floating Windows
 bindsym $mod+space focus mode_toggle
 
-bindsym $mod+a focus parent
-bindsym $mod+c focus child
+# bindsym $mod+a focus parent
+# bindsym $mod+c focus child
 
 # Kill Focused Window
 bindsym $mod+q kill
@@ -125,9 +125,9 @@ bindsym $mod+Shift+r restart
 
 #######################################################################
 # Key Bindings - Scratchpad
-bindsym $mod+Shift+plus move scratchpad
-bindsym $mod+plus scratchpad show
-bindsym $mod+minus exec i3-toggle-scratchpad
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+minus scratchpad show
+bindsym $mod+i exec i3-toggle-scratchpad
 
 #######################################################################
 # Key Bindings - Sticky Window
