@@ -76,6 +76,9 @@ nnoremap <silent> <leader>c <cmd>bp <bar>bd #<cr>
 nnoremap <silent> } <cmd>execute "keepjumps norm! " . v:count1 . "}"<CR>
 nnoremap <silent> { <cmd>execute "keepjumps norm! " . v:count1 . "{"<CR>
 
+"Reload vimrc
+nnoremap <F1> <cmd>source ~/.config/nvim/init.vim<cr>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Folding
 "
