@@ -67,6 +67,9 @@ set dictionary+=/usr/share/dict/american-english
 "English as default language
 set spelllang=en_us
 
+"Better split defaults.
+set splitright splitbelow
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " User Interface
 "
