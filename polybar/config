@@ -50,6 +50,8 @@ discharging = "  "
 keyboard = "  "
 wifi = "  "
 time = "  "
+window = "  "
+calendar = "  "
 
 ;==========================================================
 
@@ -164,9 +166,10 @@ label-discharging = %percentage%%
 [module/window]
 type = internal/xwindow
 format = <label>
+format-prefix = ${icons.window}
 label = %title%
 label-maxlen = 30
-label-foreground = ${color.purple}
+;label-foreground = ${color.purple}
 
 [module/xbacklight]
 type = internal/xbacklight
@@ -215,6 +218,7 @@ interval = 10
 time = "%a %b %e %H:%M"
 
 format = <label>
+format-prefix = ${icons.calendar}
 label = %time%
 
 [module/time-colombia]
