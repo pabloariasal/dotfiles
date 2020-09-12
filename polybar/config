@@ -113,27 +113,27 @@ label-mode-padding = 2
 label-mode-foreground = ${color.fg}
 label-mode-background = ${color.black}
 
-ws-icon-0 = 1;I
-ws-icon-1 = 2;II
-ws-icon-2 = 3;III
-ws-icon-3 = 4;IV
-ws-icon-4 = 5;V
-ws-icon-5 = 6;VI
-ws-icon-6 = 7;VII
-ws-icon-7 = 8;VIII
-ws-icon-8 = 9;IX
-ws-icon-9 = 10;X
+ws-icon-0 = 1;1
+ws-icon-1 = 2;2
+ws-icon-2 = 3;3
+ws-icon-3 = 4;4
+ws-icon-4 = 5;5
+ws-icon-5 = 6;6
+ws-icon-6 = 7;7
+ws-icon-7 = 8;8
+ws-icon-8 = 9;9
+ws-icon-9 = 10;10
 
 ; focused = Active workspace on focused monitor
 label-focused = %{T2}%icon%%{T-}
 label-focused-foreground = ${color.ac}
 
 ; unfocused = Inactive workspace on any monitor
-label-unfocused = ${self.label-focused}
+label-unfocused = %icon%
 label-unfocused-foreground = ${color.fg}
 
 ; visible = Active workspace on unfocused monitor
-label-visible = ${self.label-focused}
+label-visible = ${self.label-unfocused}
 label-visible-foreground = ${self.label-focused-foreground}
 
 ; urgent = Workspace with urgency hint set
