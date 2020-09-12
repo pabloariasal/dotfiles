@@ -196,7 +196,7 @@ bindsym $mod+r mode "resize"
 # Auto Start Programs
 exec_always --no-startup-id ${DOTFILES}/scripts/launch-picom
 exec_always --no-startup-id nitrogen --restore
-exec_always --no-startup-id ${HOME}/.config/polybar/launch.sh
+exec_always --no-startup-id ${DOTFILES}/scripts/launch-polybar
 exec_always --no-startup-id dropbox-cli start
 exec_always --no-startup-id xss-lock -- $locker
 exec_always --no-startup-id greenclip daemon
