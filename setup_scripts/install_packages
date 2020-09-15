@@ -50,13 +50,13 @@ packages=(i3-gaps
     seahorse
     exa
     ctags
+    chromium
 )
 
 aur_packages=(spotify
     antigen-git
     pymodoro-git
     ccls-git
-    google-chrome
     fast
     python-ueberzug
     xcursor-oxygen

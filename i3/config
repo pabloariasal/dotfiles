@@ -2,7 +2,7 @@
 # Variables
 set $mod Mod4
 set $browser ${CHROMIUM_EXEC}
-set $browser_class "^Google-chrome$"
+set $browser_class "^Chromium$"
 set $terminal alacritty
 set $terminal_class "^Alacritty$"
 set $locker i3lock -c 333333 --clock --timecolor ffffffff --datecolor ffffffff
