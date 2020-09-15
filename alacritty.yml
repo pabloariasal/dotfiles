@@ -99,10 +99,10 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: TerminessTTF Nerd Font Mono
+    family: FiraCode Nerd Font Mono
 
     # The `style` can be specified to pick a specific face.
-    style: Medium
+    style: Retina,Regular
 
   # Bold font face
   bold:
@@ -110,32 +110,32 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: TerminessTTF Nerd Font Mono
+    family: FiraCode Nerd Font Mono
 
     # The `style` can be specified to pick a specific face.
     style: Bold
 
   # Italic font face
-  italic:
+  # italic:
     # Font family
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: TerminessTTF Nerd Font Mono
+    # family: FiraCode Nerd Font Mono
 
     # The `style` can be specified to pick a specific face.
-    style: Italic
+    # style: Italic
 
   # Bold italic font face
-  bold_italic:
+  # bold_italic:
     # Font family
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: TerminessTTF Nerd Font Mono
+    # family: FiraCode Nerd Font Mono
 
     # The `style` can be specified to pick a specific face.
-    style: Bold Italic
+    # style: Bold Italic
 
   # Point size
   size: 8.0
