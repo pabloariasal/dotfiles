@@ -36,7 +36,7 @@ nnoremap <leader>y "+y
 xnoremap <leader>y "+y
 
 "best mappings ever
-noremap <Space> :
+noremap <c-l> :
 inoremap jj <ESC>
 
 "remove trailing whitespace
@@ -88,7 +88,8 @@ nnoremap <silent> <c-j> <cmd>execute "keepjumps norm! " . v:count1 . "zj"<CR>
 nnoremap <silent> <c-k> <cmd>execute "keepjumps norm! " . v:count1 . "zk"<CR>
 
 " Open fold under the cursor
-nnoremap <silent> <cr> za
+nnoremap <silent> <Space> za
+
 " Visual feedback when changing fold level
 nnoremap zm zm<cmd>echo "foldlevel" &foldlevel<cr>
 nnoremap zr zr<cmd>echo "foldlevel" &foldlevel<cr>
@@ -140,8 +141,8 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <silent> <c-p>  <cmd>Files<cr>
 nnoremap <silent> <c-n>  <cmd>Buffers<cr>
-nnoremap <silent> <c-l>  <cmd>Tags<cr>
-nnoremap <silent> <c-h>  <cmd>BTags<cr>
+nnoremap <silent> <leader>s  <cmd>Tags<cr>
+nnoremap <silent> <leader>d  <cmd>BTags<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Floating Terminal
