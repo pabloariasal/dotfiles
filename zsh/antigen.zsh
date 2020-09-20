@@ -6,6 +6,7 @@ antigen bundle ohmyzsh/ohmyzsh plugins/dircycle
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle pabloariasal/zfm
+antigen bundle marlonrichert/zsh-hist
 
 # Load the theme.
 antigen theme romkatv/powerlevel10k
