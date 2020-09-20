@@ -1,12 +1,12 @@
-snippet * "italics"
+snippet i "italics"
 *${1:${VISUAL}}*$0
 endsnippet
 
-snippet ** "bold"
+snippet b "bold"
 **${1:${VISUAL}}**$0
 endsnippet
 
-snippet *** "bold italics"
+snippet bi "bold italics"
 ***${1:${VISUAL}}***$0
 endsnippet
 
@@ -14,13 +14,13 @@ snippet link "Link to something"
 [${1:${VISUAL:Text}}]($2)
 endsnippet
 
-snippet i "Inline Code" i
+snippet c "Inline Code" i
 \`$1\`
 endsnippet
 
 snippet cb "Codeblock" b
 \`\`\`$1
-$1
+$2
 \`\`\`
 endsnippet
 
