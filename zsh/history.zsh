@@ -21,6 +21,8 @@ setopt hist_find_no_dups
 setopt hist_verify
 # save no duplicates in hist file
 setopt hist_save_no_dups
+# extended history
+setopt extended_history
 
 # Blacklist certain commands to be written to history file
 HISTORY_IGNORE="(n|s|l|l[slat]|cd|gs|gd|gdca|gapa|gl|glp|glg|glga|gca|gcan|gp|gp!|f *|yay)"

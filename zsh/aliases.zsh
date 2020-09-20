@@ -5,7 +5,7 @@ alias p='pacman'
 alias ls='ls --color=tty'
 alias ..='cd ..'
 alias ipinfo='curl -s ifconfig.co/json | jq'
-alias h='fc -rl -300 | less'
+alias h='history -r -E -1000 | less'
 
 # exa
 alias l='exa'
