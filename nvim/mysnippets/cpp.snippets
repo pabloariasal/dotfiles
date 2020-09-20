@@ -16,7 +16,7 @@ public:
 };
 endsnippet
 
-snippet cla "Class"
+snippet cl "Class"
 class $1
 {
 public:
@@ -25,25 +25,29 @@ private:
 };
 endsnippet
 
-snippet str "Struct"
+snippet st "Struct"
 struct $1
 {
     $2
 };
 endsnippet
 
-snippet la "Lambda"
+snippet l "Lambda"
 [$3]($1){$2}
 endsnippet
 
-snippet fla "Filter Lambda"
+snippet lm "Multiline Lambda"
+[$1]($2){
+    $3
+}
+endsnippet
+
+snippet l1 "One argument lamdba"
 [$3](const auto& $1) { return $2; }
 endsnippet
 
-snippet mla "Multiline Lambda"
-[$1]($2){
-    $3
-};
+snippet l2 "Two argument lamdba"
+[$4](const auto& $1, const auto& $2) { return $3; }
 endsnippet
 
 snippet iq "Include Quotes" b
@@ -62,14 +66,14 @@ int main(int argc, char *argv[])
 }
 endsnippet
 
-snippet forr "For Range Loop"
+snippet fr "For Range Loop"
 for ($1 : $2)
 {
 $3
 }
 endsnippet
 
-snippet fori "For Counter"
+snippet fi "For Counter"
 for (int i = 0; i < $1; ++i)
 {
 		$2
@@ -94,28 +98,14 @@ if ($1)
 }
 endsnippet
 
-snippet else "Else Clause"
-else
-{
-    $1
-}
-endsnippet
-
-snippet elif "Else-if Clause"
-else if
-{
-    $1
-}
-endsnippet
-
-snippet fun "Function"
+snippet f "Function"
 ${1:void} $2($3)
 {
     $4
 }
 endsnippet
 
-snippet fund "Function Declaration"
+snippet fd "Function Declaration"
 ${1:void} $2($3);
 endsnippet
 
