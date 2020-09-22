@@ -36,7 +36,6 @@ nnoremap <leader>y "+y
 xnoremap <leader>y "+y
 
 "best mappings ever
-noremap <c-l> :
 inoremap jj <ESC>
 
 "remove trailing whitespace
@@ -78,6 +77,10 @@ nnoremap <silent> { <cmd>execute "keepjumps norm! " . v:count1 . "{"<CR>
 
 "Reload vimrc
 nnoremap <F1> <cmd>source ~/.config/nvim/init.vim<cr>
+
+"Easy buffer cycling
+noremap <c-l> <cmd>bnext<cr>
+noremap <c-h> <cmd>bprev<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Folding
