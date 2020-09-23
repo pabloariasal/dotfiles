@@ -16,7 +16,7 @@ public:
 };
 endsnippet
 
-snippet cl "Class"
+snippet cla "Class"
 class $1
 {
 public:
@@ -25,29 +25,23 @@ private:
 };
 endsnippet
 
-snippet st "Struct"
+snippet str "Struct"
 struct $1
 {
     $2
 };
 endsnippet
 
-snippet l "Lambda"
-[$3]($1){$2}
+snippet la "Lambda" i
+[]($1){$2}
 endsnippet
 
-snippet lm "Multiline Lambda"
-[$1]($2){
-    $3
-}
+snippet l1 "One argument lamdba" i
+[](const auto& $1) { $2 }
 endsnippet
 
-snippet l1 "One argument lamdba"
-[$3](const auto& $1) { return $2; }
-endsnippet
-
-snippet l2 "Two argument lamdba"
-[$4](const auto& $1, const auto& $2) { return $3; }
+snippet l2 "Two argument lamdba" i
+[](const auto& $1, const auto& $2) { $3 }
 endsnippet
 
 snippet iq "Include Quotes" b
@@ -58,11 +52,11 @@ snippet ib "Include Brackets" b
 #include <$1>
 endsnippet
 
-snippet main "main() (main)"
+snippet main "main() (main)" b
 int main(int argc, char *argv[])
 {
-	$1
-	return EXIT_SUCCESS;
+    $1
+    return EXIT_SUCCESS;
 }
 endsnippet
 
@@ -98,7 +92,18 @@ if ($1)
 }
 endsnippet
 
-snippet f "Function"
+snippet ife "If-else Clause"
+if ($1)
+{
+    $2
+}
+else
+{
+    $3
+}
+endsnippet
+
+snippet f "Function Definition"
 ${1:void} $2($3)
 {
     $4
@@ -119,4 +124,16 @@ endsnippet
 
 snippet todo "TODO"
 // TODO: 
+endsnippet
+
+snippet vc "Void cast"
+(void) $0;
+endsnippet
+
+snippet ve "std vector" i
+std::vector<$1>
+endsnippet
+
+snippet st "std string" i
+std::string
 endsnippet
