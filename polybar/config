@@ -69,8 +69,8 @@ foreground = ${color.bg-alt}
 border-size = 2
 border-color = ${color.bg}
 
-font-0 = "Inconsolata Nerd Font:style=Regular:pixelsize=10;2:antialiasing=false"
-font-1 = "Inconsolata Nerd Font:style=Bold:pixelsize=12;2:antialiasing=false"
+font-0 = "Inconsolata Nerd Font:style=Regular:pixelsize=9;2:antialiasing=false"
+font-1 = "Inconsolata Nerd Font:style=Bold:pixelsize=10;2:antialiasing=false"
 
 cursor-click = pointer
 cursor-scroll = ns-resize
