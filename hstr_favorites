@@ -6,3 +6,4 @@ nmcli c up DumbledoreDies
 nmcli device wifi list
 nmcli device wifi connect FamiliaArias --ask
 echo !! >> $DOTFILES/history_favorites
+touch .ctagsenable
