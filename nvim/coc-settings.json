@@ -102,14 +102,13 @@
             }
         },
         "golang": {
-            "command": "gopls",
-            "rootPatterns": [
-                "go.mod"
-            ],
-            "disableWorkspaceFolders": true,
-            "filetypes": [
-                "go"
-            ]
+          "command": "go-langserver",
+          "filetypes": ["go"],
+          "initializationOptions": {
+            "gocodeCompletionEnabled": true,
+            "diagnosticsEnabled": true,
+            "lintTool": "golint"
+          }
         }
     }
 }
