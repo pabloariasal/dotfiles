@@ -23,25 +23,11 @@ setopt hist_verify
 setopt hist_save_no_dups
 # extended history
 setopt extended_history
+# skip cmds with leading space from history
+setopt histignorespace
 
 # Blacklist certain commands to be written to history file
-HISTORY_IGNORE="(n|s|l|l[slat]|cd|gs|gd|gdca|gapa|gl|glp|glg|glga|gca|gcan|gp|gp!|f *|yay)"
+HISTORY_IGNORE="(n|s|l|l *|l[slat]|cd|fm|gs|gd|gdca|gapa|gl|glp|glg|glga|gca|gcan|gp|gp!|f *|yay)"
 
-#######################################################################
-# CTRL-F - Select History Favorite
-__ffavorite() {
-  local cmd="cat ${DOTFILES}/history_favorites"
-  setopt localoptions pipefail 2> /dev/null
-  eval "$cmd" | FZF_DEFAULT_OPTS="--height ${FZF_TMUX_HEIGHT:-40%} --cycle --reverse $FZF_DEFAULT_OPTS" $(__fzfcmd)
-  local ret=$?
-  return $ret
-}
-
-fzf-history-favorite-widget() {
-  LBUFFER="${LBUFFER}$(__ffavorite)"
-  local ret=$?
-  zle reset-prompt
-  return $ret
-}
-zle     -N   fzf-history-favorite-widget
-bindkey '^F' fzf-history-favorite-widget
+export HSTR_CONFIG=hicolor,static-favorites
+bindkey -s "^r" "^u hstr -- ^j"
