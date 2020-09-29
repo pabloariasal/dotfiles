@@ -63,6 +63,7 @@ aur_packages=(spotify
     polybar
     glow
     rofi-greenclip
+    hstr
 )
 
 function install_yay()
