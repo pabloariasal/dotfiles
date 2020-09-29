@@ -22,7 +22,6 @@ floating_modifier $mod
 assign [class=$browser_class instance="teams."] $chat_ws
 for_window [class="Spotify"] move to workspace $playes_ws
 assign [class="Evolution"] $email_ws
-for_window [class=$terminal_class instance="__scratchpad"] move scratchpad
 
 #######################################################################
 # Key Bindings - Starting Programs
@@ -125,9 +124,10 @@ bindsym $mod+Shift+r restart
 
 #######################################################################
 # Key Bindings - Scratchpad
-bindsym $mod+Shift+minus move scratchpad
-bindsym $mod+minus scratchpad show
+for_window [class=$terminal_class instance="__scratchpad"] move scratchpad
 bindsym $mod+i exec i3-toggle-scratchpad
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+minus [instance="^(?!__scratchpad$)"] scratchpad show
 
 #######################################################################
 # Key Bindings - Sticky Window
