@@ -141,9 +141,9 @@ label-urgent = ${self.label-focused}
 label-urgent-foreground = ${color.red}
 
 ; Separator in between workspaces
-label-separator = |
-label-separator-padding = 1
-label-separator-foreground = ${color.bg-alt}
+label-separator = " "
+;label-separator-padding = 1
+;label-separator-foreground = ${color.bg-alt}
 
 [module/battery]
 type = internal/battery
