@@ -88,7 +88,7 @@ module-margin = 1
 
 ;== Module Location ========================================================
 
-modules-left = systemmenu network xbacklight volume battery keyboard window
+modules-left = network xbacklight volume battery keyboard window
 modules-center = i3
 modules-right = pomodoro spotify time
 
