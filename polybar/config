@@ -126,11 +126,11 @@ ws-icon-9 = 10;W10
 
 ; focused = Active workspace on focused monitor
 label-focused = %{T2}%icon%%{T-}
-label-focused-foreground = ${color.ac}
+label-focused-foreground = ${color.fg}
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %icon%
-label-unfocused-foreground = ${color.fg}
+label-unfocused-foreground = ${color.bg-alt}
 
 ; visible = Active workspace on unfocused monitor
 label-visible = ${self.label-unfocused}
