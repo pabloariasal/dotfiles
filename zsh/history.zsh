@@ -29,5 +29,5 @@ setopt histignorespace
 # Blacklist certain commands to be written to history file
 HISTORY_IGNORE="(n|s|l|l *|l[slat]|cd|fm|gs|gd|gdca|gapa|gl|glp|glg|glga|gca|gcan|gp|gp!|f *|yay)"
 
-export HSTR_CONFIG=hicolor,static-favorites
+export HSTR_CONFIG=hicolor,static-favorites,raw-history-view
 bindkey -s "^r" "^u hstr -- ^j"
