@@ -8,6 +8,7 @@ packages=(i3-gaps
     bat
     htop
     ncdu
+    # required for rofimoji
     noto-fonts-emoji
     irssi
     neovim
@@ -31,7 +32,6 @@ packages=(i3-gaps
     libnotify
     alsa-utils
     flameshot
-    xdotool
     mate-icon-theme
     tk
     vifm
@@ -51,6 +51,8 @@ packages=(i3-gaps
     exa
     ctags
     chromium
+    imagemagick
+    namcap
 )
 
 aur_packages=(spotify
@@ -64,6 +66,8 @@ aur_packages=(spotify
     glow
     rofi-greenclip
     hstr
+    fontpreview-ueberzug-git
+    devour
 )
 
 function install_yay()
