@@ -153,7 +153,8 @@ autocmd FileType markdown set foldexpr=NestedMarkdownFolds()
 " Colors
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set background=dark
-colorscheme nord
+colorscheme dracula
+set termguicolors
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Status Line

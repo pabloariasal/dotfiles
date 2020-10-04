@@ -50,6 +50,7 @@ Plug 'Asheq/close-buffers.vim'
 Plug 'tpope/vim-eunuch'
 "Colors
 Plug 'arcticicestudio/nord-vim'
+Plug 'dracula/vim'
 "Folds
 Plug 'masukomi/vim-markdown-folding'
 call plug#end()
