@@ -17,18 +17,20 @@ function symlink()
   fi
 }
 
-symlink "${DOTFILES}"/alacritty.yml ${CONF}
-symlink "${DOTFILES}"/i3 ${CONF}
-symlink "${DOTFILES}"/polybar ${CONF}
-symlink "${DOTFILES}"/nvim ${CONF}
-symlink "${DOTFILES}"/rofi ${CONF}
-symlink "${DOTFILES}"/dunst ${CONF}
-symlink "${DOTFILES}"/ctags ${CONF}
-symlink "${DOTFILES}"/picom.conf ${CONF}
+symlink ${DOTFILES}/alacritty.yml ${CONF}
+symlink ${DOTFILES}/i3 ${CONF}
+symlink ${DOTFILES}/polybar ${CONF}
+symlink ${DOTFILES}/nvim ${CONF}
+symlink ${DOTFILES}/rofi ${CONF}
+symlink ${DOTFILES}/dunst ${CONF}
+symlink ${DOTFILES}/ctags ${CONF}
+symlink ${DOTFILES}/picom.conf ${CONF}
 symlink /usr/share/fzf/key-bindings.zsh ${HOME}/.fzf-key-bindings.zsh
 symlink /usr/share/zsh/share/antigen.zsh ${HOME}/.antigen.zsh
-symlink "${DOTFILES}"/xinitrc ${HOME}/.xinitrc
-symlink "${DOTFILES}"/zprofile ${HOME}/.zprofile
-symlink "${DOTFILES}"/zshrc ${HOME}/.zshrc
-symlink "${DOTFILES}"/gitignore_global ${HOME}/.gitignore_global
-symlink "${DOTFILES}"/vifm/vifmrc ${CONF}/vifm
+symlink ${DOTFILES}/xinitrc ${HOME}/.xinitrc
+symlink ${DOTFILES}/zprofile ${HOME}/.zprofile
+symlink ${DOTFILES}/zshrc ${HOME}/.zshrc
+symlink ${DOTFILES}/vifm/vifmrc ${CONF}/vifm/vifmrc
+symlink ${DOTFILES/greenclip.cfg ${CONF}
+symlink ${DOTFILES/hstr_favorites ${HOME}/.hstr_favorites
+symlink ${DOTFILES}/systemd/user/ssh-agent.service ${CONF}/systemd/user/ssh-agent.service
