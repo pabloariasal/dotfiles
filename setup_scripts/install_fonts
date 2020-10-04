@@ -51,7 +51,7 @@
 # iA-Writer
 # ProggyClean
 
-fonts=("Terminus" "Meslo" "FiraMono")
+fonts=("FiraMono")
 nerd_fonts_dir="${HOME}/nerd-fonts"
 
 function clone_nerd_fonts()
