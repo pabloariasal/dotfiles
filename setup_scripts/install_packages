@@ -57,6 +57,7 @@ packages=(i3-gaps
 )
 
 aur_packages=(spotify
+    spotify-tui-bin
     antigen-git
     pymodoro-git
     ccls-git
