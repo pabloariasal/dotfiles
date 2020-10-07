@@ -54,6 +54,7 @@ packages=(i3-gaps
     imagemagick
     namcap
     xdotool
+    bc
 )
 
 aur_packages=(spotify

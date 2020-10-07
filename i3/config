@@ -22,6 +22,7 @@ floating_modifier $mod
 assign [class=$browser_class instance="teams."] $chat_ws
 for_window [class="Spotify"] move to workspace $playes_ws
 assign [class="Evolution"] $email_ws
+assign [class=$terminal_class instance="__spotify-tui"] $playes_ws
 
 #######################################################################
 # Key Bindings - Starting Programs
