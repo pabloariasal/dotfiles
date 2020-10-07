@@ -2,4 +2,12 @@
 if  [ -z "$(xdotool search --classname '__scratchpad')" ]; then
     alacritty --class="__scratchpad" & sleep 0.5
 fi
-i3-msg "[instance=\"__scratchpad\"] scratchpad show"
+screen_width=$(xdpyinfo | awk '/dimensions/{print $2}' | awk -F 'x' '{print $1}')
+screen_height=$(xdpyinfo | awk '/dimensions/{print $2}' | awk -F 'x' '{print $2}')
+scratchpad_width="0.8"
+scratchpad_height="0.9"
+width=$(echo "$screen_width * $scratchpad_width" | bc)
+height=$(echo "$screen_height * $scratchpad_height" | bc)
+pos_x=$(echo "($screen_width - $width) / 2" | bc)
+pos_y=$(echo "($screen_height - $height) / 2" | bc)
+i3-msg "[instance=\"__scratchpad\"] scratchpad show, resize set $(printf "%.0f" $width) $(printf "%.0f" $height), move position $(printf "%.0f" $pos_x) $(printf "%.0f" $pos_y)"
