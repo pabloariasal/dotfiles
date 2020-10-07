@@ -139,7 +139,7 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Fuzzy Finding
 "
-" Required Plugins: coc.nvim with coc-lists extension
+" Required Plugins: fzf-vim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <silent> <c-p>  <cmd>Files<cr>
 nnoremap <silent> <c-n>  <cmd>Buffers<cr>
@@ -150,7 +150,7 @@ nnoremap <silent> <leader>g <cmd>Rg<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Floating Terminal
 "
-" Required Plugins: coc.nvim with coc-lists extension
+" Required Plugins: vim-floaterm
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:floaterm_keymap_kill   = '<F9>'
 let g:floaterm_keymap_prev   = '<F10>'
@@ -158,3 +158,17 @@ let g:floaterm_keymap_next   = '<F11>'
 let g:floaterm_keymap_toggle = '<F12>'
 nnoremap <silent> <leader>v :Vifm<CR>
 tnoremap <silent> <leader>v <C-\><C-n>:Vifm<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Star
+"
+" Required Plugins: vim-asterisk
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map *   <Plug>(asterisk-*)
+map #   <Plug>(asterisk-#)
+map g*  <Plug>(asterisk-g*)
+map g#  <Plug>(asterisk-g#)
+map z*  <Plug>(asterisk-z*)
+map gz* <Plug>(asterisk-gz*)
+map z#  <Plug>(asterisk-z#)
+map gz# <Plug>(asterisk-gz#)

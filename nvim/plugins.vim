@@ -48,6 +48,7 @@ Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'Asheq/close-buffers.vim'
 Plug 'tpope/vim-eunuch'
+Plug 'haya14busa/vim-asterisk'
 "Colors
 Plug 'arcticicestudio/nord-vim'
 Plug 'dracula/vim'
