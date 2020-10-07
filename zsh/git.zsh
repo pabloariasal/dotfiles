@@ -26,7 +26,7 @@ __gitfile() {
   local cmd="git status --short"
   setopt localoptions pipefail 2> /dev/null
   eval "$cmd" | FZF_DEFAULT_OPTS="--height ${FZF_TMUX_HEIGHT:-40%} --reverse $FZF_DEFAULT_OPTS" $(__fzfcmd) "$@" | while read item; do
-    echo -n "${(q)item} " | awk '{print $2}'
+    echo -n "${(q)item} " | awk '{print $NF}'
   done
   local ret=$?
   echo
