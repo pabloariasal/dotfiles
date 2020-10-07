@@ -19,3 +19,25 @@ fzf-git-branch-widget() {
 }
 zle     -N   fzf-git-branch-widget
 bindkey '^E' fzf-git-branch-widget
+
+#######################################################################
+# CTRL-F - Paste the selected git file into the command line
+__gitfile() {
+  local cmd="git status --short"
+  setopt localoptions pipefail 2> /dev/null
+  eval "$cmd" | FZF_DEFAULT_OPTS="--height ${FZF_TMUX_HEIGHT:-40%} --reverse $FZF_DEFAULT_OPTS" $(__fzfcmd) "$@" | while read item; do
+    echo -n "${(q)item} " | awk '{print $2}'
+  done
+  local ret=$?
+  echo
+  return $ret
+}
+
+fzf-git-file-widget() {
+  LBUFFER="${LBUFFER}$(__gitfile)"
+  local ret=$?
+  zle reset-prompt
+  return $ret
+}
+zle     -N   fzf-git-file-widget
+bindkey '^F' fzf-git-file-widget
