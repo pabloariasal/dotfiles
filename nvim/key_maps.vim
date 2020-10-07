@@ -51,7 +51,6 @@ nmap <leader>q :<C-u>q<cr>
 nmap <leader><leader>q :<C-u>qa!<cr>
 
 " grep for word under the cursor
-nnoremap <Leader>g :<C-u>grep 
 nnoremap <Leader>r :<C-u>grep '<C-r>=expand("<cword>")<CR>'<CR>
 
 " Indent visual block
@@ -146,6 +145,7 @@ nnoremap <silent> <c-p>  <cmd>Files<cr>
 nnoremap <silent> <c-n>  <cmd>Buffers<cr>
 nnoremap <silent> <leader>s  <cmd>Tags<cr>
 nnoremap <silent> <leader>d  <cmd>BTags<cr>
+nnoremap <silent> <leader>g <cmd>Rg<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Floating Terminal
