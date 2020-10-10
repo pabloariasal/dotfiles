@@ -228,6 +228,13 @@ let g:floaterm_position='top'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Fuzzy Finding
 "
-" Required Plugins: fzf and fzf,vim
+" Required Plugins: fzf and fzf.vim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:fzf_layout = {'up':'~90%', 'window': { 'width': 0.9, 'height': 0.9}}
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Auto-pairs
+"
+" Required Plugins: jiangmiao/auto-pairs
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:AutoPairsMapSpace = 0
