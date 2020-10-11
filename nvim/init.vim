@@ -19,3 +19,4 @@ source ${HOME}/dotfiles/nvim/plugins.vim
 source ${HOME}/dotfiles/nvim/general.vim
 source ${HOME}/dotfiles/nvim/key_maps.vim
 source ${HOME}/dotfiles/nvim/snippets.vim
+source ${HOME}/dotfiles/nvim/lsp.vim

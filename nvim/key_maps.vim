@@ -108,33 +108,16 @@ nmap gq <Plug>(qf_qf_toggle)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language Server Protocol
 "
-" Required Plugins: coc.nvim with coc-lists extension
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remap keys for gotos
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-"nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gk <Plug>(coc-references)
-
-" Use K to show documentation in preview window
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
-endfunction
-
-" Remap for rename current word
-nmap <F2> <Plug>(coc-rename)
-
-" Format current buffer
-nmap <leader>f <Plug>(coc-format)
-
-" Use `[g` and `]g` to navigate diagnostics
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
+nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> gy <cmd>lua vim.lsp.buf.type_definition()<CR>
+nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
+nnoremap <silent> gk <cmd>lua vim.lsp.buf.references()<CR>
+nnoremap <silent> <leader>f <cmd>lua vim.lsp.buf.formatting()<CR>
+nnoremap <silent> <F2> <cmd>lua vim.lsp.buf.rename()<Cr>
+nnoremap <silent> [g <cmd>PrevDiagnosticCycle<CR>
+nnoremap <silent> ]g <cmd>NextDiagnosticCycle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Fuzzy Finding
@@ -172,3 +155,11 @@ map z*  <Plug>(asterisk-z*)
 map z#  <Plug>(asterisk-z#)
 map gz* <Plug>(asterisk-gz*)
 map gz# <Plug>(asterisk-gz#)
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Autocompletion
+"
+" Required Plugins: completion-nvim
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+imap  <c-j> <Plug>(completion_next_source)
+imap  <c-k> <Plug>(completion_prev_source)

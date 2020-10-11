@@ -91,9 +91,6 @@ set laststatus=2
 "[traces.vim] Highlight line number ranges when writing ex commands
 let g:traces_num_range_preview = 1
 
-"[coc.nvim] Highlight symbol under cursor (requires highlight extension)
-autocmd CursorHold * silent call CocActionAsync('highlight')
-
 "[vim-qf] don't shrink quickfixlist
 let g:qf_auto_resize = 0
 
@@ -195,27 +192,6 @@ if !empty(glob(".ctagsignore"))
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Needed for coc.nvim
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Some servers have issues with backup files, see #649
-set nobackup
-set nowritebackup
-
-" Better display for messages
-set cmdheight=2
-
-" You will have bad experience for diagnostic messages when it's default 4000.
-set updatetime=300
-
-" don't give |ins-completion-menu| messages.
-set shortmess+=c
-
-" Highlight symbol under cursor on CursorHold
-autocmd CursorHold * silent call CocActionAsync('highlight')
-
-command! -nargs=? Fold :call     CocAction('fold', <f-args>)
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Floating Terminal
 "
 " Required Plugins: voldikss/vim-floaterm
@@ -238,3 +214,23 @@ let g:fzf_layout = {'up':'~90%', 'window': { 'width': 0.9, 'height': 0.9}}
 " Required Plugins: jiangmiao/auto-pairs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:AutoPairsMapSpace = 0
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Autocompletion
+"
+" Required Plugins: completion-nvim
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" don't give |ins-completion-menu| messages.
+set shortmess+=c
+" Set completeopt to have a better completion experience
+set completeopt=menuone,noinsert,noselect
+let g:completion_auto_change_source = 1
+let g:completion_chain_complete_list = [
+    \{'complete_items': ['lsp']},
+    \{'complete_items': ['path']},
+    \{'mode': '<c-p>'},
+    \{'mode': '<c-n>'},
+    \{'mode': 'dict'},
+\]
+" Use completion-nvim in every buffer
+autocmd BufEnter * lua require'completion'.on_attach()
