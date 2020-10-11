@@ -9,7 +9,7 @@ set $locker i3lock -c 333333 --clock --timecolor ffffffff --datecolor ffffffff
 set $floating_window_scale_factor_px 50
 set $tiling_window_scale_factor_ppt 5
 set $main_ws 1
-set $web_ws 4
+set $web_ws 5
 set $chat_ws 7
 set $playes_ws 8
 set $email_ws 9
