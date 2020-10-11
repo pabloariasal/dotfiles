@@ -133,7 +133,7 @@ set softtabstop=4
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Folding
 "
-" Required Plugins: tmhedberg/SimpylFold
+" Required Plugins: masukomi/vim-markdown-folding
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Per default fold on syntax (C/C++)
 set foldmethod=syntax
@@ -188,7 +188,7 @@ let g:gutentags_add_default_project_roots = 0
 let g:gutentags_project_root = ['.ctagsenable']
 "[ludovicchabant/vim-gutentags] Pass the paths to exclude to the ctag invocation
 if !empty(glob(".ctagsignore"))
-	let g:gutentags_ctags_exclude = ['@.ctagsignore']
+    let g:gutentags_ctags_exclude = ['@.ctagsignore']
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
