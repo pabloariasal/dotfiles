@@ -52,6 +52,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/diagnostic-nvim'
 Plug 'nvim-lua/completion-nvim'
+Plug 'nvim-treesitter/nvim-treesitter'
 "Colors
 Plug 'arcticicestudio/nord-vim'
 Plug 'dracula/vim'
