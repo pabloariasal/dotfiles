@@ -13,5 +13,4 @@ require'nvim_lsp'.ccls.setup{on_attach=require'diagnostic'.on_attach;
         }}
     }
 EOF
-" Use LSP omni-completion in Python files.
-autocmd Filetype cpp setlocal omnifunc=v:lua.vim.lsp.omnifunc
+" autocmd Filetype cpp setlocal omnifunc=v:lua.vim.lsp.omnifunc
