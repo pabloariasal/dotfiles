@@ -25,8 +25,8 @@ bindkey '^E' fzf-git-branch-widget
 __gitfile() {
   local cmd="git status --short"
   setopt localoptions pipefail 2> /dev/null
-  eval "$cmd" | FZF_DEFAULT_OPTS="--height ${FZF_TMUX_HEIGHT:-40%} --reverse $FZF_DEFAULT_OPTS" $(__fzfcmd) "$@" | while read item; do
-    echo -n "${(q)item} " | awk '{print $NF}'
+  eval "$cmd" | FZF_DEFAULT_OPTS="--height ${FZF_TMUX_HEIGHT:-40%} --reverse --multi $FZF_DEFAULT_OPTS" $(__fzfcmd) "$@" | while read item; do
+    echo -n "${(q)item} " | awk '{print $NF}' | tr '\r\n' ' '
   done
   local ret=$?
   echo
