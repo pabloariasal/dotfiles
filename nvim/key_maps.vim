@@ -102,20 +102,30 @@ nnoremap zr zr<cmd>echo "foldlevel" &foldlevel<cr>
 "[vim-qf] Toggle quickfix list
 nmap <C-q> <Plug>(qf_qf_switch)
 nmap gq <Plug>(qf_qf_toggle)
+nmap gl <Plug>(qf_loc_toggle)
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language Server Protocol
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Remap keys for gotos
-nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
-nnoremap <silent> gy <cmd>lua vim.lsp.buf.type_definition()<CR>
-nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
-nnoremap <silent> gk <cmd>lua vim.lsp.buf.references()<CR>
-nnoremap <silent> <leader>f <cmd>lua vim.lsp.buf.formatting()<CR>
-nnoremap <silent> <F2> <cmd>lua vim.lsp.buf.rename()<Cr>
-nnoremap <silent> [g <cmd>PrevDiagnosticCycle<CR>
-nnoremap <silent> ]g <cmd>NextDiagnosticCycle<CR>
+" nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
+" nnoremap <silent> gy <cmd>lua vim.lsp.buf.type_definition()<CR>
+" nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
+" nnoremap <silent> gk <cmd>lua vim.lsp.buf.references()<CR>
+" nnoremap <silent> <leader>f <cmd>lua vim.lsp.buf.formatting()<CR>
+" nnoremap <silent> <F2> <cmd>lua vim.lsp.buf.rename()<Cr>
+" nnoremap <silent> [g <cmd>PrevDiagnosticCycle<CR>
+" nnoremap <silent> ]g <cmd>NextDiagnosticCycle<CR>
+
+nmap gd <plug>(lsp-definition)
+nmap gy <plug>(lsp-type-definition)
+nmap K <plug>(lsp-hover)
+nmap gk <plug>(lsp-references)
+nmap <leader>f <plug>(lsp-document-format)
+nmap <F2> <plug>(lsp-rename)
+nmap [g <Plug>(lsp-previous-diagnostic)
+nmap ]g <Plug>(lsp-next-diagnostic)
+nmap <leader>d <plug>(lsp-document-diagnostics)
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Fuzzy Finding
@@ -125,7 +135,7 @@ nnoremap <silent> ]g <cmd>NextDiagnosticCycle<CR>
 nnoremap <silent> <c-p>  <cmd>Files<cr>
 nnoremap <silent> <c-n>  <cmd>Buffers<cr>
 nnoremap <silent> <leader>s  <cmd>Tags<cr>
-nnoremap <silent> <leader>d  <cmd>BTags<cr>
+nnoremap <silent> <leader>o  <cmd>BTags<cr>
 nnoremap <silent> <leader>g <cmd>Rg<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

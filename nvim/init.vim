@@ -21,6 +21,6 @@ source ${HOME}/dotfiles/nvim/key_maps.vim
 source ${HOME}/dotfiles/nvim/snippets.vim
 source ${HOME}/dotfiles/nvim/statusline.vim
 source ${HOME}/dotfiles/nvim/folding.vim
-" source ${HOME}/dotfiles/nvim/auto-completion.vim
-" source ${HOME}/dotfiles/nvim/lsp.vim
+source ${HOME}/dotfiles/nvim/lsp.vim
+source ${HOME}/dotfiles/nvim/auto-completion.vim
 " source ${HOME}/dotfiles/nvim/treesitter.vim
