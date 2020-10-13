@@ -70,7 +70,7 @@ endsnippet
 snippet fi "For Counter"
 for (int i = 0; i < $1; ++i)
 {
-		$2
+    $2
 }
 endsnippet
 
@@ -78,6 +78,13 @@ snippet ns "Namespace"
 namespace $1
 {
 $2
+}
+endsnippet
+
+snippet nsa "Anonymous Namespace"
+namespace
+{
+$1
 }
 endsnippet
 
@@ -114,11 +121,11 @@ snippet fd "Function Declaration"
 ${1:void} $2($3);
 endsnippet
 
-snippet be "Container Begin and End" i
+snippet be "Begin/End Iterators" i
 $1.begin(), $1.end()
 endsnippet
 
-snippet cbe "Container Const Begin and End" i
+snippet cbe "Const Begin/End Iterators" i
 $1.cbegin(), $1.cend()
 endsnippet
 
@@ -140,4 +147,20 @@ endsnippet
 
 snippet re "return"
 return $1;
+endsnippet
+
+snippet cr "const reference" i
+const $1&
+endsnippet
+
+snippet ca "const auto" 1
+const auto 
+endsnippet
+
+snippet car "const auto reference" i
+const auto& 
+endsnippet
+
+snippet cap "const auto pointer" i
+const auto* 
 endsnippet
