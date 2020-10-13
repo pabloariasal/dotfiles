@@ -17,8 +17,6 @@
 " Description:
 "   Key Mappings
 "
-" Required Plugins: vim-qf, coc.nvim with coc-lists extension
-"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader=","
 
@@ -149,8 +147,10 @@ tnoremap <silent> <leader>v <C-\><C-n>:Vifm<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map *   <Plug>(asterisk-*)
 map #   <Plug>(asterisk-#)
+" search but don't add work separators
 map g*  <Plug>(asterisk-g*)
 map g#  <Plug>(asterisk-g#)
+" search but don't jump
 map z*  <Plug>(asterisk-z*)
 map z#  <Plug>(asterisk-z#)
 map gz* <Plug>(asterisk-gz*)

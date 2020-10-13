@@ -131,51 +131,11 @@ set shiftwidth=4
 set softtabstop=4
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Folding
-"
-" Required Plugins: masukomi/vim-markdown-folding
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"Per default fold on syntax (C/C++)
-set foldmethod=syntax
-"Don't nest more than 3 folds
-set foldnestmax=2
-"Open folds per default
-set foldenable
-"When enabled, fold at top-level
-set foldlevel=1
-"if on markdown, use special fold syntax
-autocmd FileType markdown set foldexpr=NestedMarkdownFolds()
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colors
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set background=dark
 colorscheme dracula
 set termguicolors
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Status Line
-"
-" Required Plugins: itchyny/lightline.vim
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"NOTE: each sublist is its own highlight group
-let g:lightline = {
-            \ 'colorscheme': 'nord',
-            \ 'active': {
-                \ 'left': [
-                \           [ 'paste' ],
-                \           [ 'readonly', 'relativepath', 'modified' ]
-                \         ],
-                \ 'right': [
-                \            [ 'percent', 'location' ],
-                \            [ 'fileinfo', 'fileencoding']
-                \          ]
-                \        },
-        \ 'component': {
-              \   'location': '%l/%L',
-              \   'fileinfo': '%y'
-              \ },
-            \ }
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ctags
@@ -214,23 +174,3 @@ let g:fzf_layout = {'up':'~90%', 'window': { 'width': 0.9, 'height': 0.9}}
 " Required Plugins: jiangmiao/auto-pairs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:AutoPairsMapSpace = 0
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Autocompletion
-"
-" Required Plugins: completion-nvim
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" don't give |ins-completion-menu| messages.
-set shortmess+=c
-" Set completeopt to have a better completion experience
-set completeopt=menuone,noinsert,noselect
-let g:completion_auto_change_source = 1
-let g:completion_chain_complete_list = [
-    \{'complete_items': ['lsp']},
-    \{'complete_items': ['path']},
-    \{'mode': '<c-p>'},
-    \{'mode': '<c-n>'},
-    \{'mode': 'dict'},
-\]
-" Use completion-nvim in every buffer
-autocmd BufEnter * lua require'completion'.on_attach()
