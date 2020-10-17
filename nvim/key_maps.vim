@@ -117,15 +117,15 @@ nmap gl <Plug>(qf_loc_toggle)
 " nnoremap <silent> [g <cmd>PrevDiagnosticCycle<CR>
 " nnoremap <silent> ]g <cmd>NextDiagnosticCycle<CR>
 
-nmap gd <plug>(lsp-definition)
-nmap gy <plug>(lsp-type-definition)
-nmap K <plug>(lsp-hover)
-nmap gk <plug>(lsp-references)
-nmap <leader>f <plug>(lsp-document-format)
-nmap <F2> <plug>(lsp-rename)
-nmap [g <Plug>(lsp-previous-diagnostic)
-nmap ]g <Plug>(lsp-next-diagnostic)
-nmap <leader>d <plug>(lsp-document-diagnostics)
+nmap gd <Plug>(coc-definition)
+nmap gy <Plug>(coc-type-definition)
+nmap K <cmd>call CocActon("doHover")<CR>
+nmap gk <Plug>(coc-references-used)
+nmap <leader>f (coc-format)
+nmap <F2> <Plug>(coc-rename)
+nmap [g <Plug>(coc-diagnostic-prev)
+nmap ]g <Plug>(coc-diagnostic-next)
+nmap <leader>d <cmd>CocDiagnostics<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Fuzzy Finding
@@ -169,7 +169,18 @@ map gz# <Plug>(asterisk-gz#)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Autocompletion
 "
-" Required Plugins: completion-nvim
+" Required Plugins: coc.nvim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-imap  <c-j> <Plug>(completion_next_source)
-imap  <c-k> <Plug>(completion_prev_source)
+" Use <c-space> to trigger completion.
+inoremap <silent><expr> <c-space> coc#refresh()
+
+" Make <CR> auto-select the first completion item and notify coc.nvim to
+" format on enter, <cr> could be remapped by other vim plugin
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+" Remap <C-f> and <C-b> for scroll float windows/popups.
+" nnoremap <expr><C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+" nnoremap <expr><C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+" inoremap <expr><C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<Right>"
+" inoremap <expr><C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<Left>"
