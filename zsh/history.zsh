@@ -31,3 +31,4 @@ HISTORY_IGNORE="(n|s|l|l *|l[slat]|cd|fm|gs|gd|gdca|gapa|gl|glp|glg|glga|gca|gca
 
 export HSTR_CONFIG=hicolor,static-favorites,raw-history-view
 bindkey -s "^r" "^u hstr -- ^j"
+bindkey -s "^f" "^u hstr --favorites ^j"

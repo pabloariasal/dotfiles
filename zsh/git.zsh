@@ -40,4 +40,4 @@ fzf-git-file-widget() {
   return $ret
 }
 zle     -N   fzf-git-file-widget
-bindkey '^F' fzf-git-file-widget
+bindkey '^s' fzf-git-file-widget
