@@ -75,9 +75,14 @@ nnoremap <silent> { <cmd>execute "keepjumps norm! " . v:count1 . "{"<CR>
 "Reload vimrc
 nnoremap <F1> <cmd>source ~/.config/nvim/init.vim<cr>
 
-"Easy buffer cycling
-noremap <c-l> <cmd>bnext<cr>
-noremap <c-h> <cmd>bprev<cr>
+" make <a-j>, <a-k>, <a-l>, and <a-h> move to window.
+nnoremap <a-j> <c-w>j
+nnoremap <a-k> <c-w>k
+nnoremap <a-l> <c-w>l
+nnoremap <a-h> <c-w>h
+
+nnoremap <silent> <c-l> g_
+nnoremap <silent> <c-h> ^
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Folding
@@ -176,8 +181,8 @@ inoremap <silent><expr> <c-space> coc#refresh()
 
 " Make <CR> auto-select the first completion item and notify coc.nvim to
 " format on enter, <cr> could be remapped by other vim plugin
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+" inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+"                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " Remap <C-f> and <C-b> for scroll float windows/popups.
 " nnoremap <expr><C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
