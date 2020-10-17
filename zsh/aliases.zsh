@@ -4,7 +4,7 @@ alias sudo='sudo '
 alias p='pacman'
 alias ls='ls --color=tty'
 alias ..='cd ..'
-alias ipinfo='curl -s ifconfig.co/json | jq'
+alias ipcheck='curl -s ifconfig.co/json | jq'
 alias h='history -r -E -1000 | less'
 
 # exa

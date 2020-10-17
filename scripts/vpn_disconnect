@@ -1,0 +1,15 @@
+#!/bin/bash
+vpn_connection=$(nmcli connection show --active | awk '$3 == "vpn" {print $1}')
+if [ -n "$vpn_connection" ]; then
+    header="OPENVPN"
+    output="$(nmcli c down ${vpn_connection} 2>&1)"
+elif [ "$(expressvpn status)" != "Not connected" ]; then
+    header="EXPRESSVPN"
+    output="$(expressvpn disconnect 2>&1 | sed 's/\x1B\[[0-9;]\{1,\}[A-Za-z]//g')"
+else
+    header="VPN"
+    output="No VPN connected!"
+fi
+
+notify-send "$header" "$output"
+echo  "$header" "$output"

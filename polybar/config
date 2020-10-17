@@ -52,6 +52,7 @@ wifi = "  "
 time = "  "
 window = "  "
 calendar = "  "
+vpn = "  "
 
 ;==========================================================
 
@@ -88,7 +89,7 @@ module-margin = 1
 
 ;== Module Location ========================================================
 
-modules-left = network xbacklight volume battery keyboard window
+modules-left = network xbacklight volume battery keyboard vpn window
 modules-center = i3
 modules-right = pomodoro spotify time
 
@@ -248,5 +249,14 @@ type = custom/text
 content = "%{T2}  %{T-}"
 content-foreground = ${color.orange}
 click-left = powermenu
+
+[module/vpn]
+type = custom/script
+exec = vpn_status
+exec-if = vpn_status
+interval = 3
+click-left = vpn_disconnect
+label = %output:0:15:...%
+format-prefix = ${icons.vpn}
 
 ;== EOF ========================================================

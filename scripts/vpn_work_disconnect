@@ -1,4 +1,0 @@
-#!/bin/bash
-vpn_connection_name="nv-pf1-udp-1194-Pablo_Arias"
-output="$(nmcli c down ${vpn_connection_name} 2>&1)"
-notify-send "VPN" "$output"
