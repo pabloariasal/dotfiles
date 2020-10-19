@@ -33,7 +33,7 @@ nnoremap <leader>P "+P
 nnoremap <leader>y "+y
 xnoremap <leader>y "+y
 
-"best mappings ever
+"best mapping ever
 inoremap jj <ESC>
 
 "remove trailing whitespace
@@ -46,7 +46,7 @@ nmap <leader>e :<C-u>wq<cr>
 "quit and save
 nmap <leader>q :<C-u>q<cr>
 "force quit without saving
-nmap <leader><leader>q :<C-u>qa!<cr>
+nmap <leader><leader>q :<C-u>qa<cr>
 
 " grep for word under the cursor
 nnoremap <Leader>r :<C-u>grep '<C-r>=expand("<cword>")<CR>'<CR>
@@ -57,12 +57,6 @@ vmap > >gv
 
 "jump to alternate file
 nmap <silent> <leader>a :<C-u>Alternate<CR>
-
-" Split resizing
-noremap <silent> <C-Left> :vertical resize +3<CR>
-noremap <silent> <C-Right> :vertical resize -3<CR>
-noremap <silent> <C-Up> :resize +3<CR>
-noremap <silent> <C-Down> :resize -3<CR>
 
 " Delete buffers
 nnoremap <silent> <leader>b <cmd>Bdelete menu<CR>
@@ -75,18 +69,29 @@ nnoremap <silent> { <cmd>execute "keepjumps norm! " . v:count1 . "{"<CR>
 "Reload vimrc
 nnoremap <F1> <cmd>source ~/.config/nvim/init.vim<cr>
 
-" make <a-j>, <a-k>, <a-l>, and <a-h> move to window.
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Splits
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" navigation
 nnoremap <a-j> <c-w>j
 nnoremap <a-k> <c-w>k
 nnoremap <a-l> <c-w>l
 nnoremap <a-h> <c-w>h
 
-nnoremap <silent> <c-l> g_
-nnoremap <silent> <c-h> ^
+" resize
+noremap <silent> <C-Left> :vertical resize +3<CR>
+noremap <silent> <C-Right> :vertical resize -3<CR>
+noremap <silent> <C-Up> :resize +3<CR>
+noremap <silent> <C-Down> :resize -3<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Tabs
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <silent> <c-l> gt
+nnoremap <silent> <c-h> gT
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Folding
-"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Navigate by fold
 nnoremap <silent> <c-j> <cmd>execute "keepjumps norm! " . v:count1 . "zj"<CR>
@@ -104,7 +109,6 @@ nnoremap zr zr<cmd>echo "foldlevel" &foldlevel<cr>
 "
 " Required Plugins: vim-qf
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"[vim-qf] Toggle quickfix list
 nmap <C-q> <Plug>(qf_qf_switch)
 nmap gq <Plug>(qf_qf_toggle)
 nmap gl <Plug>(qf_loc_toggle)
@@ -112,6 +116,7 @@ nmap gl <Plug>(qf_loc_toggle)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language Server Protocol
 "
+" Required Plugins: coc.nvim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
 " nnoremap <silent> gy <cmd>lua vim.lsp.buf.type_definition()<CR>
