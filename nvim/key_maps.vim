@@ -124,9 +124,9 @@ nmap gl <Plug>(qf_loc_toggle)
 
 nmap gd <Plug>(coc-definition)
 nmap gy <Plug>(coc-type-definition)
-nmap K <cmd>call CocActon("doHover")<CR>
+nmap K <cmd>call CocAction("doHover")<CR>
 nmap gk <Plug>(coc-references-used)
-nmap <leader>f (coc-format)
+nmap <leader>f <cmd>Format<CR>
 nmap <F2> <Plug>(coc-rename)
 nmap [g <Plug>(coc-diagnostic-prev)
 nmap ]g <Plug>(coc-diagnostic-next)

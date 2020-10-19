@@ -40,3 +40,6 @@ augroup end
 
 " ensure installation of these extensions
 let g:coc_global_extensions = ['coc-json', 'coc-highlight', 'coc-dictionary']
+
+" Add `:Format` command to format current buffer.
+command! -nargs=0 Format :call CocAction('format')
