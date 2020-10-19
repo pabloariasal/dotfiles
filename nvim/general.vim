@@ -67,9 +67,6 @@ set dictionary+=/usr/share/dict/american-english
 "English as default language
 set spelllang=en_us
 
-"Better split defaults.
-set splitright splitbelow
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " User Interface
 "
@@ -90,9 +87,6 @@ set laststatus=2
 
 "[traces.vim] Highlight line number ranges when writing ex commands
 let g:traces_num_range_preview = 1
-
-"[vim-qf] don't shrink quickfixlist
-let g:qf_auto_resize = 0
 
 "Enable syntax highlighting
 syntax on
