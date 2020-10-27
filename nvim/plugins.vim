@@ -60,4 +60,5 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'dracula/vim'
 "Folds
 Plug 'masukomi/vim-markdown-folding'
+Plug 'tmhedberg/SimpylFold'
 call plug#end()

@@ -13,3 +13,7 @@ set foldenable
 set foldlevel=1
 "if on markdown, use special fold syntax
 autocmd FileType markdown set foldexpr=NestedMarkdownFolds()
+
+" don't fold python docstrings or imports
+let g:SimpylFold_fold_docstring=0
+let g:SimpylFold_fold_import=0
