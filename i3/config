@@ -117,7 +117,7 @@ bindsym $mod+bracketleft workspace prev
 bindsym $mod+o split h
 bindsym $mod+v split v
 bindsym $mod+e layout toggle split
-bindsym $mod+y layout toggle tabbed stacking split
+bindsym $mod+y layout toggle stacking tabbed split
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+f fullscreen toggle
 
