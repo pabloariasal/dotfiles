@@ -11,4 +11,5 @@ let g:gutentags_project_root = ['.ctagsenable']
 if !empty(glob(".ctagsignore"))
     let g:gutentags_ctags_exclude = ['@.ctagsignore']
 endif
+let g:gutentags_file_list_command = 'rg --files'
 
