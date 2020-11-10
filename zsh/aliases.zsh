@@ -31,6 +31,9 @@ function s()
   fi
 }
 
+# do easy calculations
+cal() { echo "scale=2;$1" | bc; }
+
 # Git
 alias g='git'
 alias ga='git add'
