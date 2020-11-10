@@ -42,5 +42,7 @@ function fg-bg() {
 zle -N fg-bg
 bindkey '^Z' fg-bg
 
-pfetch
-colors
+figlet ArchLinux | lolcat
+uname -nsr
+bars
+glow "${HOME}/Dropbox/greeter.md"
