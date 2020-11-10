@@ -44,5 +44,4 @@ bindkey '^Z' fg-bg
 
 figlet ArchLinux | lolcat
 uname -nsr
-bars
 glow "${HOME}/Dropbox/greeter.md"
