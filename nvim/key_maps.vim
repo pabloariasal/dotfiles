@@ -144,7 +144,7 @@ nmap <leader>d <cmd>CocDiagnostics<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <silent> <c-p>  <cmd>Files<cr>
 nnoremap <silent> <c-n>  <cmd>Buffers<cr>
-nnoremap <silent> <leader>s  <cmd>Tags<cr>
+nnoremap <silent> <leader>t  <cmd>Tags<cr>
 nnoremap <silent> <leader>o  <cmd>BTags<cr>
 nnoremap <silent> <leader>g <cmd>Rg<cr>
 
