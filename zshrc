@@ -45,3 +45,12 @@ bindkey '^Z' fg-bg
 figlet ArchLinux | lolcat
 uname -nsr
 glow "${HOME}/Dropbox/greeter.md"
+bars
+
+echo "1) dotfiles 2) Workspace 3) Documents 4) Downloads 5) Notes 6) Todo" | lolcat
+alias 1='cd ${DOTFILES}'
+alias 2='cd ${HOME}/Workspace'
+alias 3='cd ${HOME}/Documents'
+alias 4='cd ${HOME}/Downloads'
+alias 5='cd ${HOME}/Dropbox/notes'
+alias 5='cd ${HOME}/Dropbox/notes/org'
