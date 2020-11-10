@@ -14,5 +14,8 @@ bindkey -M menuselect '^O' accept-and-infer-next-history
 
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
+# case and hyphen insensitive matching
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z-_}={A-Za-z_-}' 'r:|=*' 'l:|=* r:|=*'
+
 autoload -Uz compinit
 compinit
