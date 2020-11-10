@@ -147,6 +147,7 @@ nnoremap <silent> <c-n>  <cmd>Buffers<cr>
 nnoremap <silent> <leader>t  <cmd>Tags<cr>
 nnoremap <silent> <leader>o  <cmd>BTags<cr>
 nnoremap <silent> <leader>g <cmd>Rg<cr>
+nnoremap <silent> <leader>j <cmd>BLines<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Floating Terminal
