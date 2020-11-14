@@ -44,7 +44,7 @@ bindkey '^Z' fg-bg
 
 figlet ArchLinux | lolcat
 uname -nsr
-glow "${HOME}/Dropbox/greeter.md"
+# glow "${HOME}/Dropbox/greeter.md"
 bars
 
 echo "1) dotfiles 2) Workspace 3) Documents 4) Downloads 5) Notes 6) Todo" | lolcat
