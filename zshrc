@@ -3,13 +3,13 @@ if [[ -z "$LS_COLORS" ]]; then
   (( $+commands[dircolors] )) && eval "$(dircolors -b)"
 fi
 
+source ${DOTFILES}/zsh/antigen.zsh
 source ${DOTFILES}/zsh/fzf.zsh
 source ${DOTFILES}/zsh/history.zsh
 source ${DOTFILES}/zsh/completion.zsh
 source ${DOTFILES}/zsh/aliases.zsh
 source ${DOTFILES}/zsh/directories.zsh
 source ${DOTFILES}/zsh/git.zsh
-source ${DOTFILES}/zsh/antigen.zsh
 
 # Accept autosuggestion with Ctrl+Space
 bindkey '^ ' autosuggest-accept
@@ -53,4 +53,4 @@ alias 2='cd ${HOME}/Workspace'
 alias 3='cd ${HOME}/Documents'
 alias 4='cd ${HOME}/Downloads'
 alias 5='cd ${HOME}/Dropbox/notes'
-alias 5='cd ${HOME}/Dropbox/notes/org'
+alias 6='cd ${HOME}/Dropbox/notes/org'
