@@ -89,7 +89,7 @@ module-margin = 1
 
 ;== Module Location ========================================================
 
-modules-left = network xbacklight volume battery keyboard vpn window
+modules-left = logo network xbacklight volume battery keyboard vpn window
 modules-center = i3
 modules-right = pomodoro spotify time
 
