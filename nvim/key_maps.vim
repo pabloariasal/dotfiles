@@ -24,14 +24,14 @@ let mapleader=","
 noremap \ ,
 
 "make Y consistent with other motions
-map Y y$
+nnoremap Y y$
 
 "system clipboard
 nnoremap <leader>p "+p
-xnoremap <leader>p "+p
 nnoremap <leader>P "+P
 nnoremap <leader>y "+y
 xnoremap <leader>y "+y
+xnoremap <leader>p "+p
 
 "best mapping ever
 inoremap jj <ESC>
@@ -148,18 +148,6 @@ nnoremap <silent> <leader>t  <cmd>Tags<cr>
 nnoremap <silent> <leader>o  <cmd>BTags<cr>
 nnoremap <silent> <leader>g <cmd>Rg<cr>
 nnoremap <silent> <leader>j <cmd>BLines<cr>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Floating Terminal
-"
-" Required Plugins: vim-floaterm
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:floaterm_keymap_kill   = '<F9>'
-let g:floaterm_keymap_prev   = '<F10>'
-let g:floaterm_keymap_next   = '<F11>'
-let g:floaterm_keymap_toggle = '<F12>'
-nnoremap <silent> <leader>v :Vifm<CR>
-tnoremap <silent> <leader>v <C-\><C-n>:Vifm<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Star
