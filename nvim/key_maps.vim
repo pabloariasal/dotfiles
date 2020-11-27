@@ -69,6 +69,9 @@ nnoremap <silent> { <cmd>execute "keepjumps norm! " . v:count1 . "{"<CR>
 "Reload vimrc
 nnoremap <F1> <cmd>source ~/.config/nvim/init.vim<cr>
 
+"Swap arguments
+nnoremap g< <cmd>SidewaysLeft<cr>
+nnoremap g> <cmd>SidewaysRight<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Splits
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
