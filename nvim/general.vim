@@ -128,7 +128,7 @@ set softtabstop=4
 " Colors
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set background=dark
-colorscheme dracula
+colorscheme onedark
 set termguicolors
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

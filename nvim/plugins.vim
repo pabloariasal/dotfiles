@@ -58,6 +58,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Colors
 Plug 'arcticicestudio/nord-vim'
 Plug 'dracula/vim'
+Plug 'joshdick/onedark.vim'
 "Folds
 Plug 'masukomi/vim-markdown-folding'
 Plug 'tmhedberg/SimpylFold'
