@@ -259,4 +259,10 @@ click-left = vpn_disconnect
 label = %output:0:15:...%
 format-prefix = ${icons.vpn}
 
+[module/logo]
+type=custom/text
+content = 
+content-foreground=#1793d1
+content-padding=0
+
 ;== EOF ========================================================
