@@ -45,6 +45,7 @@ Plug 'tpope/vim-eunuch'
 Plug 'haya14busa/vim-asterisk'
 Plug 'jiangmiao/auto-pairs'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'preservim/nerdtree'
 Plug 'AndrewRadev/sideways.vim'
 " Plug 'neovim/nvim-lspconfig'
 " Plug 'nvim-lua/diagnostic-nvim'
