@@ -34,6 +34,17 @@ function s()
 # do easy calculations
 cal() { echo "scale=2;$1" | bc; }
 
+# create temporary dirs and files
+alias tmp-dir='cd $(mktemp -d)'
+function tmp()
+{
+  if [[ -z "$1" ]]; then
+    nvim $(mktemp)
+  else
+    nvim $(mktemp --suffix ."$1")
+  fi
+}
+
 # Git
 alias g='git'
 alias ga='git add'
