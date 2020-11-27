@@ -58,16 +58,16 @@ PF_ALIGN=""
 # usage solely to 'pfetch'.
 
 # Which user to display.
-export USER="pablo"
+# export USER="pablo"
 
 # Which hostname to display.
-HOSTNAME=""
+# HOSTNAME=""
 
 # Which editor to display.
-EDITOR=""
+# EDITOR=""
 
 # Which shell to display.
-SHELL=""
+# SHELL=""
 
 # Which desktop environment to display.
-XDG_CURRENT_DESKTOP=""
+# XDG_CURRENT_DESKTOP=""
