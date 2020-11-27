@@ -44,11 +44,3 @@ zle -N fg-bg
 bindkey '^Z' fg-bg
 
 pfetch
-
-echo "1) dotfiles 2) Workspace 3) Documents 4) Downloads 5) Notes 6) Todo" | lolcat
-alias 1='cd ${DOTFILES}'
-alias 2='cd ${HOME}/Workspace'
-alias 3='cd ${HOME}/Documents'
-alias 4='cd ${HOME}/Downloads'
-alias 5='cd ${HOME}/Dropbox/notes'
-alias 6='cd ${HOME}/Dropbox/notes/org'
