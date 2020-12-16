@@ -67,6 +67,9 @@ set dictionary+=/usr/share/dict/american-english
 "English as default language
 set spelllang=en_us
 
+"Dont generate a swap file
+set noswapfile
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " User Interface
 "
