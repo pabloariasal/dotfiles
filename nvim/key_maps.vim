@@ -73,8 +73,6 @@ nnoremap <F1> <cmd>source ~/.config/nvim/init.vim<cr>
 nnoremap g< <cmd>SidewaysLeft<cr>
 nnoremap g> <cmd>SidewaysRight<cr>
 
-map <silent> <leader>v <cmd>NERDTreeToggle<CR>
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Splits
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
