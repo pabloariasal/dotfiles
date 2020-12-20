@@ -198,8 +198,9 @@ client.background       #ffffff
 #######################################################################
 # Auto Start Programs
 exec_always --no-startup-id ${DOTFILES}/scripts/launch-picom
-exec_always --no-startup-id nitrogen --restore
 exec_always --no-startup-id ${DOTFILES}/scripts/launch-polybar
+exec_always --no-startup-id nitrogen --restore
 exec_always --no-startup-id dropbox-cli start
 exec_always --no-startup-id xss-lock -- $locker
 exec_always --no-startup-id greenclip daemon
+exec_always --no-startup-id nm-applet
