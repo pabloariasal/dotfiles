@@ -7,6 +7,8 @@ packages=(i3-gaps
     fd
     bat
     htop
+    figlet
+    lolcat
     ncdu
     # required for rofimoji
     noto-fonts-emoji
@@ -24,7 +26,7 @@ packages=(i3-gaps
     xorg
     fzf
     xsel
-    nm-connection-editor
+    nm-manager-applet
     networkmanager-openvpn
     tree
     npm
@@ -35,7 +37,6 @@ packages=(i3-gaps
     mate-icon-theme
     tk
     vifm
-    dropbox-cli
     sxiv
     nitrogen
     nodejs
@@ -55,10 +56,11 @@ packages=(i3-gaps
     namcap
     xdotool
     bc
+    jq
+    tlp
 )
 
 aur_packages=(spotify
-    spotify-tui-bin
     antigen-git
     pymodoro-git
     ccls-git
@@ -71,6 +73,9 @@ aur_packages=(spotify
     hstr
     fontpreview-ueberzug-git
     devour
+    pfetch-git
+    dropbox-cli
+    dropbox
 )
 
 function install_yay()
