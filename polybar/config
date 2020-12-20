@@ -126,9 +126,9 @@ tray-scale = 1.0
 
 ;== Module Location ========================================================
 
-modules-left = logo network xbacklight volume battery keyboard vpn window
+modules-left = xbacklight volume battery vpn window
 modules-center = i3
-modules-right = pomodoro spotify time
+modules-right = pomodoro keyboard time
 
 [settings]
 format-foreground = ${color.fg}
