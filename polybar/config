@@ -42,17 +42,17 @@ indigo = #6C77BB
 blue-gray = #6D8895
 
 [icons]
-brightness = "  "
-volume = "  "
-muted = "  "
-charging = "  "
-discharging = "  "
-keyboard = "  "
+brightness = "🔆 "
+volume = "🔊 "
+muted = "🔈 "
+charging = "🔌 "
+discharging = "🔋 "
+keyboard = "⌨ "
 wifi = "  "
 time = "  "
-window = "  "
-calendar = "  "
-vpn = "  "
+window = "🖥 "
+calendar = "📅 "
+vpn = "🔒 "
 
 ;==========================================================
 
@@ -70,8 +70,9 @@ foreground = ${color.bg-alt}
 border-size = 2
 border-color = ${color.bg}
 
-font-0 = "Inconsolata Nerd Font:style=Regular:pixelsize=9;2:antialiasing=false"
+font-0 = "Inconsolata Nerd Font:style=Regular:pixelsize=10;2:antialiasing=false"
 font-1 = "Inconsolata Nerd Font:style=Bold:pixelsize=10;2:antialiasing=false"
+font-2 = "Noto Color Emoji:style=Regular:scale=12;2"
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -239,7 +240,7 @@ click-right = playerctl next
 
 [module/pomodoro]
 type = custom/script
-exec = pymodoro --break-prefix " " --pomodoro-prefix " " -p "=" -ah -f ~/.pomodoro_session
+exec = pymodoro --break-prefix "☕" --pomodoro-prefix "🍅 " -p "=" -ah -f ~/.pomodoro_session
 label = %output%
 tail = true
 interval = 0
