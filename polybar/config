@@ -42,11 +42,11 @@ indigo = #6C77BB
 blue-gray = #6D8895
 
 [icons]
-brightness = "🔆 "
-volume = "🔊 "
+brightness = "🔆"
+volume = "🔊"
 muted = "🔈 "
 charging = "🔌 "
-discharging = "🔋 "
+discharging = "🔋"
 keyboard = "⌨ "
 wifi = "  "
 time = "  "
@@ -126,7 +126,7 @@ tray-scale = 1.0
 
 ;== Module Location ========================================================
 
-modules-left = xbacklight volume battery vpn window
+modules-left = logo xbacklight volume battery vpn window
 modules-center = i3
 modules-right = pomodoro keyboard time
 
@@ -151,16 +151,16 @@ label-mode-padding = 2
 label-mode-foreground = ${color.fg}
 label-mode-background = ${color.black}
 
-ws-icon-0 = 1;W1
-ws-icon-1 = 2;W2
-ws-icon-2 = 3;W3
-ws-icon-3 = 4;W4
+ws-icon-0 = 1;I
+ws-icon-1 = 2;II
+ws-icon-2 = 3;III
+ws-icon-3 = 4;IV
 ws-icon-4 = 5;WWW
 ws-icon-5 = 6;NOTES
 ws-icon-6 = 7;CHAT
 ws-icon-7 = 8;PLAY
 ws-icon-8 = 9;MAIL
-ws-icon-9 = 10;W10
+ws-icon-9 = 10;SYS
 
 ; focused = Active workspace on focused monitor
 label-focused = %{T2}%icon%%{T-}
