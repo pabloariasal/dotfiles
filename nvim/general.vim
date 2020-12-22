@@ -149,3 +149,9 @@ let g:fzf_preview_window = ''
 " Required Plugins: jiangmiao/auto-pairs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:AutoPairsMapSpace = 0
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Commands
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"clear trialing white space
+command ClearWhitespace %s/\s\+$//
