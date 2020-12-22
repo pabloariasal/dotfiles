@@ -37,7 +37,7 @@ xnoremap <leader>p "+p
 inoremap jj <ESC>
 
 "quit and save
-nmap <Leader>w <cmd>wa<cr>
+nmap <leader>w <cmd>wa<cr>
 nmap <leader>e <cmd>wq<cr>
 nmap <leader>q <cmd>qa<cr>
 
@@ -69,13 +69,14 @@ nnoremap g> <cmd>SidewaysRight<cr>
 "switch to alternate buffer
 nnoremap <BS> <C-^>
 
-"jump to the begining and end of line
-nnoremap <a-l> $
-nnoremap <a-h> ^
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Splits
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" navigation
+nnoremap <a-j> <c-w>j
+nnoremap <a-k> <c-w>k
+nnoremap <a-l> <c-w>l
+nnoremap <a-h> <c-w>h
 
 " resize
 noremap <silent> <C-Left> :vertical resize +3<CR>
