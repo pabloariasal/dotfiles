@@ -135,16 +135,6 @@ colorscheme onedark
 set termguicolors
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Floating Terminal
-"
-" Required Plugins: voldikss/vim-floaterm
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-command! Vifm FloatermNew vifm
-let g:floaterm_height=0.95
-let g:floaterm_width=0.8
-let g:floaterm_position='top'
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Fuzzy Finding
 "
 " Required Plugins: fzf and fzf.vim
