@@ -32,7 +32,7 @@ function s()
 }
 
 # do easy calculations
-cal() { echo "scale=2;$1" | bc; }
+calc() { echo "scale=2;$1" | bc; }
 
 # create temporary dirs and files
 alias tmp-dir='cd $(mktemp -d)'
