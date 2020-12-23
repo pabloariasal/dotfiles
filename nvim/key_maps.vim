@@ -18,7 +18,7 @@
 "   Key Mappings
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let mapleader=","
+let mapleader=" "
 
 "but don't lose reverse motion
 noremap \ ,
@@ -37,7 +37,7 @@ xnoremap <leader>p "+p
 inoremap jj <ESC>
 
 "quit and save
-nmap <leader>w <cmd>wa<cr>
+nmap <leader>s <cmd>wa<cr>
 nmap <leader>e <cmd>wq<cr>
 nmap <leader>q <cmd>qa<cr>
 
@@ -69,15 +69,15 @@ nnoremap g> <cmd>SidewaysRight<cr>
 "switch to alternate buffer
 nnoremap <BS> <C-^>
 
+nnoremap <a-h> ^
+nnoremap <a-l> $
+
+"open command prompt
+nnoremap <c-h> :
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Splits
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" navigation
-nnoremap <a-j> <c-w>j
-nnoremap <a-k> <c-w>k
-nnoremap <a-l> <c-w>l
-nnoremap <a-h> <c-w>h
-
 " resize
 noremap <silent> <C-Left> :vertical resize +3<CR>
 noremap <silent> <C-Right> :vertical resize -3<CR>
@@ -87,8 +87,8 @@ noremap <silent> <C-Down> :resize -3<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Tabs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <silent> <c-l> gt
-nnoremap <silent> <c-h> gT
+nnoremap <silent> <a-j> gt
+nnoremap <silent> <a-k> gT
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Folding
@@ -98,7 +98,7 @@ nnoremap <silent> <c-j> <cmd>execute "keepjumps norm! " . v:count1 . "zj"<CR>
 nnoremap <silent> <c-k> <cmd>execute "keepjumps norm! " . v:count1 . "zk"<CR>
 
 " Open fold under the cursor
-nnoremap <silent> <cr> zA
+nnoremap <silent> <c-l> zA
 
 " Visual feedback when changing fold level
 nnoremap zm zm<cmd>echo "foldlevel" &foldlevel<cr>
@@ -144,7 +144,7 @@ nmap <F1> <cmd>CocDiagnostics<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <silent> <c-p>  <cmd>Files<cr>
 nnoremap <silent> <c-n>  <cmd>Buffers<cr>
-nnoremap <silent> <leader>s  <cmd>Tags<cr>
+nnoremap <silent> <leader>t  <cmd>Tags<cr>
 nnoremap <silent> <leader>d  <cmd>BTags<cr>
 nnoremap <silent> <leader>g <cmd>Rg<cr>
 nnoremap <silent> <leader>j <cmd>BLines<cr>
