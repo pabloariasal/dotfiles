@@ -9,7 +9,7 @@ set $locker i3lock -c 333333 --clock --timecolor ffffffff --datecolor ffffffff
 set $floating_window_scale_factor_px 50
 set $tiling_window_scale_factor_ppt 5
 set $main_ws 1
-set $web_ws 5
+set $web_ws 6
 set $chat_ws 7
 set $player_ws 8
 set $email_ws 9
@@ -38,8 +38,8 @@ bindsym $mod+Delete exec powermenu
 
 #######################################################################
 # Key Bindings - Directory easy access
-bindsym $mod+ctrl+d exec $terminal --working-directory ${DOTFILES} --title "dotfiles"
-bindsym $mod+ctrl+n exec $terminal --working-directory ${NOTES_DIR} --title "notes"
+bindsym $mod+ctrl+j exec $terminal --working-directory ${DOTFILES} --title "dotfiles"
+bindsym $mod+ctrl+k exec $terminal --working-directory ${HOME}/Workspace
 bindsym $mod+ctrl+l exec $terminal --working-directory ${HOME}/Downloads
 
 #######################################################################
