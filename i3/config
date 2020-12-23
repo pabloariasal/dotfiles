@@ -29,7 +29,6 @@ assign [class=$terminal_class instance="__spotify-tui"] $player_ws
 bindsym $mod+Return exec $terminal
 bindsym $mod+b exec $browser
 bindsym $mod+w exec change-keyboard-layout
-bindsym $mod+u exec polybar-msg cmd toggle
 bindsym $mod+d exec rofi -show window
 bindsym $mod+p exec rofi -show run
 bindsym $mod+c exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'

@@ -7,7 +7,6 @@ alias ..='cd ..'
 alias ipcheck='curl -s ifconfig.co/json | jq'
 alias h='history -r -E -1000 | less'
 alias nb='ninja -C build '
-alias mb='make -C build '
 
 # exa
 alias l='exa'
@@ -21,17 +20,7 @@ alias sx='devour sxiv'
 alias gka='devour gitk --all --branches'
 alias gk='devour gitk'
 
-# neovim
-function s()
-{
-  if [[ $(pwd) == ${NOTES_DIR} ]]; then
-    nvim -S ${HOME}/.org_session
-  else
-    nvim -S Session.vim
-  fi
-}
-
-# do easy calculations
+# do easy calculations on the terminal
 calc() { echo "scale=2;$1" | bc; }
 
 # create temporary dirs and files
