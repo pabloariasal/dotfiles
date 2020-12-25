@@ -7,3 +7,4 @@ export FZF_CTRL_T_COMMAND="fd ${COMMON_FD_OPTS}"
 export FZF_CTRL_T_OPTS="--preview '(bat {} || tree -C {}) 2> /dev/null | head -200'"
 export FZF_CTRL_R_OPTS="--height 90% --sort --preview 'echo {}' --preview-window down:3:wrap --bind '?:toggle-preview'"
 source ${HOME}/.fzf-key-bindings.zsh
+bindkey '^n' fzf-file-widget
