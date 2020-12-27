@@ -98,7 +98,7 @@ nnoremap <silent> <c-j> <cmd>execute "keepjumps norm! " . v:count1 . "zj"<CR>
 nnoremap <silent> <c-k> <cmd>execute "keepjumps norm! " . v:count1 . "zk"<CR>
 
 " Open fold under the cursor
-nnoremap <silent> <c-l> zA
+nnoremap <silent> <c-l> za
 
 " Visual feedback when changing fold level
 nnoremap zm zm<cmd>echo "foldlevel" &foldlevel<cr>
