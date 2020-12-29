@@ -154,4 +154,4 @@ let g:AutoPairsMapSpace = 0
 " Commands
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "clear trialing white space
-command ClearWhitespace %s/\s\+$//
+command! ClearWhitespace %s/\s\+$//
