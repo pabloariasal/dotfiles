@@ -45,10 +45,6 @@ packages=(i3-gaps
     wget
     mlocate
     lxappearance
-    evolution
-    evolution-ews
-    gnome-keyring
-    seahorse
     exa
     ctags
     chromium
