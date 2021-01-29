@@ -20,8 +20,6 @@ alias sx='devour sxiv'
 alias gka='devour gitk --all --branches'
 alias gk='devour gitk'
 
-alias vw='cd ~/Dropbox/vimwiki && nvim -c VimwikiIndex'
-
 # do easy calculations on the terminal
 calc() { echo "scale=2;$1" | bc; }
 

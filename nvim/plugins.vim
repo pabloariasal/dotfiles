@@ -46,8 +46,6 @@ Plug 'haya14busa/vim-asterisk'
 Plug 'jiangmiao/auto-pairs'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'AndrewRadev/sideways.vim'
-Plug 'vimwiki/vimwiki'
-Plug 'mattn/calendar-vim'
 " Plug 'neovim/nvim-lspconfig'
 " Plug 'nvim-lua/diagnostic-nvim'
 " Plug 'nvim-lua/completion-nvim'
