@@ -29,17 +29,10 @@ assign [class=$terminal_class instance="__spotify-tui"] $player_ws
 bindsym $mod+Return exec $terminal
 bindsym $mod+b exec $browser
 bindsym $mod+w exec change-keyboard-layout
-bindsym $mod+d exec rofi -show window
 bindsym $mod+p exec rofi -show run
 bindsym $mod+c exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 bindsym $mod+t exec rofimoji
 bindsym $mod+Delete exec powermenu
-
-#######################################################################
-# Key Bindings - Directory easy access
-bindsym $mod+ctrl+j exec $terminal --working-directory ${DOTFILES} --title "dotfiles"
-bindsym $mod+ctrl+k exec $terminal --working-directory ${HOME}/Workspace
-bindsym $mod+ctrl+l exec $terminal --working-directory ${HOME}/Downloads
 
 #######################################################################
 # Key Bindings - Windows
