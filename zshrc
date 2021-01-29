@@ -10,7 +10,6 @@ source ${DOTFILES}/zsh/completion.zsh
 source ${DOTFILES}/zsh/aliases.zsh
 source ${DOTFILES}/zsh/directories.zsh
 source ${DOTFILES}/zsh/git.zsh
-source ${DOTFILES}/zsh/pfetch
 
 # Accept autosuggestion with Ctrl+Space
 bindkey '^ ' autosuggest-accept
@@ -42,5 +41,3 @@ function fg-bg() {
 }
 zle -N fg-bg
 bindkey '^Z' fg-bg
-
-pfetch

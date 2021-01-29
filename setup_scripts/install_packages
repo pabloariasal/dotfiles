@@ -73,7 +73,6 @@ aur_packages=(spotify
     hstr
     fontpreview-ueberzug-git
     devour
-    pfetch-git
     dropbox-cli
     dropbox
 )
