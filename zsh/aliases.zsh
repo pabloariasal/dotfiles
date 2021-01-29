@@ -6,7 +6,6 @@ alias ls='ls --color=tty'
 alias ..='cd ..'
 alias ipcheck='curl -s ifconfig.co/json | jq'
 alias h='history -r -E -1000 | less'
-alias nb='ninja -C build '
 
 # exa
 alias l='exa'
@@ -16,7 +15,7 @@ alias lt='exa --tree'
 
 # devour
 alias za='devour zathura'
-alias sx='devour sxiv'
+alias fx='devour feh'
 alias gka='devour gitk --all --branches'
 alias gk='devour gitk'
 
