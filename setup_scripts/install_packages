@@ -73,17 +73,18 @@ aur_packages=(spotify
     dropbox
 )
 
-function install_yay()
+function paru()
 {
-    rm -rf ~/yay
-    git clone https://aur.archlinux.org/yay.git ~/yay
-    cd ~/yay
+    rm -rf ~/paru
+    git clone https://aur.archlinux.org/paru-bin.git ~/paru
+    cd ~/paru
     makepkg -si
+    rm -rf ~/paru
 }
 
 function install_aur()
 {
-    yay -S --noconfirm "${aur_packages[@]}"
+    paru -S --noconfirm "${aur_packages[@]}"
 }
 
 function install_packages()
