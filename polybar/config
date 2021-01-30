@@ -99,7 +99,7 @@ module-margin = 1
 ;   center
 ;   right
 ;   none
-tray-position = left
+tray-position = right
 
 ; If true, the bar will not shift its
 ; contents when the tray changes
@@ -126,7 +126,7 @@ tray-scale = 1.0
 
 ;== Module Location ========================================================
 
-modules-left = logo xbacklight volume battery vpn window
+modules-left = logo xbacklight volume battery vpn
 modules-center = i3
 modules-right = pomodoro keyboard time
 
