@@ -7,12 +7,9 @@ packages=(i3-gaps
     fd
     bat
     htop
-    figlet
-    lolcat
     ncdu
     # required for rofimoji
     noto-fonts-emoji
-    irssi
     neovim
     python-pynvim
     picom
@@ -29,6 +26,7 @@ packages=(i3-gaps
     nm-manager-applet
     networkmanager-openvpn
     tree
+    # required for coc.nvim
     npm
     ttf-font-awesome
     libnotify
@@ -37,7 +35,6 @@ packages=(i3-gaps
     mate-icon-theme
     tk
     vifm
-    sxiv
     nitrogen
     nodejs
     zsh
@@ -47,7 +44,6 @@ packages=(i3-gaps
     lxappearance
     exa
     ctags
-    chromium
     imagemagick
     namcap
     xdotool
@@ -71,6 +67,7 @@ aur_packages=(spotify
     devour
     dropbox-cli
     dropbox
+    google-chrome
 )
 
 function paru()
