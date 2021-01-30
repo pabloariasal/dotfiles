@@ -21,8 +21,6 @@ floating_modifier $mod
 # Automatic Window Assignment
 assign [class=$browser_class instance="teams."] $chat_ws
 for_window [class="Spotify"] move to workspace $player_ws
-assign [class="Evolution"] $email_ws
-assign [class=$terminal_class instance="__spotify-tui"] $player_ws
 
 #######################################################################
 # Key Bindings - Starting Programs
