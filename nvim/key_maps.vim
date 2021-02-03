@@ -37,9 +37,9 @@ xnoremap <leader>p "+p
 inoremap jj <ESC>
 
 "quit and save
-nmap <leader>s <cmd>wa<cr>
+nmap <leader>w <cmd>wa<cr>
 nmap <leader>e <cmd>wq<cr>
-nmap <leader>q <cmd>qa<cr>
+nmap <leader>q <cmd>q<cr>
 
 " grep for word under the cursor
 nnoremap <Leader>r :<C-u>grep '<C-r>=expand("<cword>")<CR>'<CR>
@@ -72,8 +72,11 @@ nnoremap <BS> <C-^>
 nnoremap <a-h> ^
 nnoremap <a-l> $
 
+nnoremap <silent> <c-j> }
+nnoremap <silent> <c-k> {
+
 "open command prompt
-nnoremap <c-h> :
+nnoremap , :
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Splits
@@ -90,12 +93,14 @@ noremap <silent> <C-Down> :resize -3<CR>
 nnoremap <silent> <a-j> gt
 nnoremap <silent> <a-k> gT
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Folding
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Navigate by fold
-nnoremap <silent> <c-j> <cmd>execute "keepjumps norm! " . v:count1 . "zj"<CR>
-nnoremap <silent> <c-k> <cmd>execute "keepjumps norm! " . v:count1 . "zk"<CR>
+autocmd FileType rust,cpp,python,markdown
+            \ nnoremap <buffer> <silent> <c-j> <cmd>execute "keepjumps norm! " . v:count1 . "zj"<CR>
+autocmd FileType rust,cpp,python,markdown
+            \ nnoremap <buffer> <silent> <c-k> <cmd>execute "keepjumps norm! " . v:count1 . "zk"<CR>
 
 " Open fold under the cursor
 nnoremap <silent> <c-l> za
@@ -132,10 +137,10 @@ nmap gy <Plug>(coc-type-definition)
 nmap K <cmd>call CocAction("doHover")<CR>
 nmap gk <Plug>(coc-references-used)
 nmap <leader>f <cmd>Format<CR>
-nmap <F2> <Plug>(coc-rename)
 nmap [g <Plug>(coc-diagnostic-prev)
 nmap ]g <Plug>(coc-diagnostic-next)
 nmap <F1> <cmd>CocDiagnostics<CR>
+nmap <F2> <Plug>(coc-rename)
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Fuzzy Finding
@@ -145,7 +150,7 @@ nmap <F1> <cmd>CocDiagnostics<CR>
 nnoremap <silent> <c-p>  <cmd>Files<cr>
 nnoremap <silent> <c-n>  <cmd>Buffers<cr>
 nnoremap <silent> <leader>t  <cmd>Tags<cr>
-nnoremap <silent> <leader>d  <cmd>BTags<cr>
+nnoremap <silent> <leader>o  <cmd>BTags<cr>
 nnoremap <silent> <leader>g <cmd>Rg<cr>
 nnoremap <silent> <leader>j <cmd>BLines<cr>
 
