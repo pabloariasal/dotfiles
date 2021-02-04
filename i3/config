@@ -99,8 +99,8 @@ bindsym $mod+n workspace $web_ws
 bindsym $mod+m workspace $main_ws
 
 # cycle through active workspaces
-bindsym $mod+bracketright workspace next
-bindsym $mod+bracketleft workspace prev
+bindsym $mod+Ctrl+k workspace next
+bindsym $mod+Ctrl+j workspace prev
 
 #######################################################################
 # Key Bindings - Layout
