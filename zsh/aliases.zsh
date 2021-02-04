@@ -6,6 +6,7 @@ alias ls='ls --color=tty'
 alias ..='cd ..'
 alias ipcheck='curl -s ifconfig.co/json | jq'
 alias h='history -r -E -1000 | less'
+alias td='nvim ~/Dropbox/todo.md'
 
 # exa
 alias l='exa'
@@ -23,7 +24,6 @@ alias gk='devour gitk'
 calc() { echo "scale=2;$1" | bc; }
 
 # create temporary dirs and files
-alias tmp-dir='cd $(mktemp -d)'
 function tmp()
 {
   if [[ -z "$1" ]]; then
