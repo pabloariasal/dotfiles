@@ -16,7 +16,6 @@ alias lt='exa --tree'
 
 # devour
 alias za='devour zathura'
-alias fx='devour feh'
 alias gka='devour gitk --all --branches'
 alias gk='devour gitk'
 
