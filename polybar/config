@@ -45,14 +45,13 @@ blue-gray = #6D8895
 brightness = "🔆"
 volume = "🔊"
 muted = "🔈 "
-charging = "🔌 "
+charging = "🔌"
 discharging = "🔋"
-keyboard = "⌨ "
-wifi = "  "
-time = "  "
-window = "🖥 "
-calendar = "📅 "
-vpn = "🔒 "
+keyboard = "⌨"
+;wifi = "  "
+time = "🕒"
+calendar = "📅"
+vpn = "🔒"
 
 ;==========================================================
 
@@ -85,7 +84,7 @@ enable-ipc = true
 ;   padding-{left,right}
 padding = 1
 
-separator = |
+;separator = |
 module-margin = 1
 
 ;== System Tray ========================================================
@@ -108,7 +107,7 @@ tray-detached = false
 ; Tray icon max size
 tray-maxsize = 16
 
-; Background color for the tray container 
+; Background color for the tray container
 ; ARGB color (e.g. #f00, #ff992a, #ddff1023)
 ; By default the tray container will use the bar
 ; background color.
@@ -126,9 +125,9 @@ tray-scale = 1.0
 
 ;== Module Location ========================================================
 
-modules-left = logo xbacklight volume battery vpn
+modules-left = datetime
 modules-center = i3
-modules-right = pomodoro keyboard time
+modules-right = keyboard pomodoro vpn battery xbacklight volume
 
 [settings]
 format-foreground = ${color.fg}
@@ -234,7 +233,7 @@ blacklist-1 = scroll lock
 format = <label-layout>
 format-spacing = 0
 label-layout = %layout%
-format-prefix = ${icons.keyboard}
+;format-prefix = ${icons.keyboard}
 
 [module/network]
 type = internal/network
@@ -249,14 +248,34 @@ format-disconnected-prefix = ${self.format-connected-prefix}
 format-disconnected = <label-disconnected>
 label-disconnected = %ifname% disconnected
 
+[module/date]
+type = internal/date
+interval = 10
+
+time = "%a %b %e"
+
+format = <label>
+;format-prefix = ${icons.calendar}
+label = %time%
+
 [module/time]
 type = internal/date
 interval = 10
 
-time = "%a %b %e %H:%M"
+time = "%H:%M"
 
 format = <label>
-format-prefix = ${icons.calendar}
+;format-prefix = ${icons.time}
+label = %time%
+
+[module/datetime]
+type = internal/date
+interval = 10
+
+time = "%H:%M %a %b %e"
+
+format = <label>
+;format-prefix = ${icons.calendar}
 label = %time%
 
 [module/time-colombia]
