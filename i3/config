@@ -170,7 +170,7 @@ smart_borders on
 #System font
 font pango:DejaVu Sans Mono 8
 
-gaps inner 7
+gaps inner 4
 gaps outer 0
 
 #######################################################################
