@@ -29,7 +29,6 @@ bindsym $mod+b exec $browser
 bindsym $mod+w exec change-keyboard-layout
 bindsym $mod+p exec rofi -show run
 bindsym $mod+c exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
-bindsym $mod+t exec rofimoji
 bindsym $mod+Delete exec powermenu
 
 #######################################################################
@@ -107,7 +106,8 @@ bindsym $mod+Ctrl+j workspace prev
 bindsym $mod+o split h
 bindsym $mod+v split v
 bindsym $mod+e layout toggle split
-bindsym $mod+y layout toggle stacking tabbed split
+bindsym $mod+t layout toggle stacking tabbed split
+bindsym $mod+y layout toggle stacking split
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+f fullscreen toggle
 
