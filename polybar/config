@@ -98,7 +98,7 @@ module-margin = 1
 ;   center
 ;   right
 ;   none
-tray-position = right
+tray-position = left
 
 ; If true, the bar will not shift its
 ; contents when the tray changes
@@ -125,9 +125,9 @@ tray-scale = 1.0
 
 ;== Module Location ========================================================
 
-modules-left = datetime
+modules-left = xbacklight volume battery vpn keyboard
 modules-center = i3
-modules-right = keyboard pomodoro vpn battery xbacklight volume
+modules-right = datetime pomodoro
 
 [settings]
 format-foreground = ${color.fg}
