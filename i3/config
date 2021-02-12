@@ -121,10 +121,13 @@ bindsym $mod+Shift+r restart
 
 #######################################################################
 # Key Bindings - Scratchpad
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+minus [instance="^(?!__scratchpad$)" class="^(?!Spotify$)"] scratchpad show
+
 for_window [class=$terminal_class instance="__scratchpad"] move scratchpad
 bindsym $mod+i exec i3-toggle-scratchpad
-bindsym $mod+Shift+minus move scratchpad
-bindsym $mod+minus [instance="^(?!__scratchpad$)"] scratchpad show
+
+bindsym $mod+plus [class="^Spotify$"] scratchpad show
 
 #######################################################################
 # Key Bindings - Sticky Window
