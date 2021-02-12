@@ -78,6 +78,8 @@ nnoremap <silent> <c-k> {
 "open command prompt
 nnoremap , :
 
+nnoremap <leader>u <cmd>ClearWhitespace<CR>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Splits
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
