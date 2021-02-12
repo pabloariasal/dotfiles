@@ -46,6 +46,7 @@ Plug 'haya14busa/vim-asterisk'
 Plug 'jiangmiao/auto-pairs'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'AndrewRadev/sideways.vim'
+Plug 'tpope/vim-vinegar'
 " Plug 'neovim/nvim-lspconfig'
 " Plug 'nvim-lua/diagnostic-nvim'
 " Plug 'nvim-lua/completion-nvim'
