@@ -18,6 +18,7 @@ alias lt='exa --tree'
 alias za='devour zathura'
 alias gka='devour gitk --all --branches'
 alias gk='devour gitk'
+alias sx='devour sxiv'
 
 # do easy calculations on the terminal
 calc() { echo "scale=2;$1" | bc; }
