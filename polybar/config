@@ -147,8 +147,8 @@ pin-workspaces = true
 ; mode = when showing options for an i3 mode
 label-mode = %mode%
 label-mode-padding = 2
-label-mode-foreground = ${color.fg}
-label-mode-background = ${color.black}
+label-mode-foreground = ${color.black}
+label-mode-background = ${color.pink}
 
 ws-icon-0 = 1;MAIN
 ws-icon-1 = 2;W2
