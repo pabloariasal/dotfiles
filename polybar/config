@@ -69,8 +69,8 @@ foreground = ${color.bg-alt}
 border-size = 2
 border-color = ${color.bg}
 
-font-0 = "Inconsolata Nerd Font:style=Regular:pixelsize=10;2:antialiasing=false"
-font-1 = "Inconsolata Nerd Font:style=Bold:pixelsize=10;2:antialiasing=false"
+font-0 = "JetBrainsMono Nerd Font Mono:style=Medium:pixelsize=10;2:antialiasing=true"
+font-1 = "JetBrainsMono Nerd Font Mono:style=Bold:pixelsize=10;2:antialiasing=true"
 font-2 = "Noto Color Emoji:style=Regular:scale=14;2"
 
 cursor-click = pointer
@@ -150,19 +150,19 @@ label-mode-padding = 2
 label-mode-foreground = ${color.black}
 label-mode-background = ${color.pink}
 
-ws-icon-0 = 1;MAIN
-ws-icon-1 = 2;W2
-ws-icon-2 = 3;W3
-ws-icon-3 = 4;W4
-ws-icon-4 = 5;W5
-ws-icon-5 = 6;WWW
-ws-icon-6 = 7;CHAT
-ws-icon-7 = 8;PLAY
-ws-icon-8 = 9;MAIL
-ws-icon-9 = 10;SYS
+ws-icon-0 = 1;main
+ws-icon-1 = 2;misc
+ws-icon-2 = 3;3
+ws-icon-3 = 4;4
+ws-icon-4 = 5;5
+ws-icon-5 = 6;6
+ws-icon-6 = 7;www
+ws-icon-7 = 8;play
+ws-icon-8 = 9;chat
+ws-icon-9 = 10;email
 
 ; focused = Active workspace on focused monitor
-label-focused = %{T2}%icon%%{T-}
+label-focused = %icon%
 label-focused-foreground = ${color.fg}
 
 ; unfocused = Inactive workspace on any monitor
