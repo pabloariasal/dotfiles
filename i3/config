@@ -33,7 +33,7 @@ bindsym $mod+Delete exec powermenu
 
 #######################################################################
 # Key Bindings - Windows
-# Change Focus
+# Change Window Focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
@@ -48,11 +48,29 @@ bindsym $mod+Shift+l move right
 # Change Focus Between Tiling / Floating Windows
 bindsym $mod+space focus mode_toggle
 
-# bindsym $mod+a focus parent
+bindsym $mod+a focus parent
 # bindsym $mod+c focus child
 
 # Kill Focused Window
 bindsym $mod+q kill
+
+# Kill all windows on all workspaces
+bindsym $mod+Shift+q [class=”.*”] kill
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym $mod+r mode "resize"
 
 # Resize windows
 bindsym $mod+Left resize shrink width $floating_window_scale_factor_px px or $tiling_window_scale_factor_ppt ppt
