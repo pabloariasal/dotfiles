@@ -98,7 +98,7 @@ module-margin = 1
 ;   center
 ;   right
 ;   none
-tray-position = left
+tray-position = right
 
 ; If true, the bar will not shift its
 ; contents when the tray changes
@@ -125,9 +125,9 @@ tray-scale = 1.0
 
 ;== Module Location ========================================================
 
-modules-left = xbacklight volume battery vpn keyboard
+modules-left = datetime xbacklight volume battery
 modules-center = i3
-modules-right = datetime pomodoro
+modules-right = pomodoro keyboard vpn
 
 [settings]
 format-foreground = ${color.fg}
@@ -150,16 +150,16 @@ label-mode-padding = 2
 label-mode-foreground = ${color.black}
 label-mode-background = ${color.pink}
 
-ws-icon-0 = 1;main
-ws-icon-1 = 2;misc
-ws-icon-2 = 3;3
-ws-icon-3 = 4;4
-ws-icon-4 = 5;5
-ws-icon-5 = 6;6
-ws-icon-6 = 7;www
-ws-icon-7 = 8;play
-ws-icon-8 = 9;chat
-ws-icon-9 = 10;email
+ws-icon-0 = 1;I
+ws-icon-1 = 2;II
+ws-icon-2 = 3;III
+ws-icon-3 = 4;IV
+ws-icon-4 = 5;V
+ws-icon-5 = 6;VI
+ws-icon-6 = 7;VII
+ws-icon-7 = 8;VIII
+ws-icon-8 = 9;IX
+ws-icon-9 = 10;X
 
 ; focused = Active workspace on focused monitor
 label-focused = %icon%
