@@ -166,7 +166,7 @@ ws-icon-9 = 10;X
 label-focused = %{T2}%name%%{T-}
 label-focused-foreground = ${color.bg}
 label-focused-background = ${color.fg}
-label-focused-padding = 3
+label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = ${self.label-focused}
