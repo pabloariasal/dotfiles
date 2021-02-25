@@ -14,10 +14,11 @@
 ;==========================================================
 
 [color]
-bg = #dd212B30
-bg-alt = #5C6F7B
+bg = #dd282828
+bg-light= #303030
+;bg-alt = #5C6F7B
 fg = #C4C7C5
-ac = #4DD0E1
+;ac = #4DD0E1
 
 trans = #00000000
 white = #FFFFFF
@@ -162,23 +163,30 @@ ws-icon-8 = 9;IX
 ws-icon-9 = 10;X
 
 ; focused = Active workspace on focused monitor
-label-focused = %icon%
-label-focused-foreground = ${color.fg}
+label-focused = %{T2}%name%%{T-}
+label-focused-foreground = ${color.bg}
+label-focused-background = ${color.fg}
+label-focused-padding = 3
 
 ; unfocused = Inactive workspace on any monitor
-label-unfocused = %icon%
-label-unfocused-foreground = ${color.bg-alt}
+label-unfocused = ${self.label-focused}
+label-unfocused-foreground = ${color.white}
+label-unfocused-background = ${color.bg-light}
+label-unfocused-padding = ${self.label-focused-padding}
 
 ; visible = Active workspace on unfocused monitor
 label-visible = ${self.label-unfocused}
-label-visible-foreground = ${self.label-focused-foreground}
+label-visible-foreground = ${self.label-unfocused-foreground}
+;label-visible-background = ${self.label-unfocused-background}
+label-visible-padding = ${self.label-unfocused-padding}
 
 ; urgent = Workspace with urgency hint set
 label-urgent = ${self.label-focused}
-label-urgent-foreground = ${color.red}
+label-urgent-background = ${color.red}
+label-urgent-padding = ${self.label-focused-padding}
 
 ; Separator in between workspaces
-label-separator = " "
+;label-separator = " "
 ;label-separator-padding = 1
 ;label-separator-foreground = ${color.bg-alt}
 
