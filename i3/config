@@ -213,7 +213,7 @@ client.background       #ffffff
 exec_always --no-startup-id ${DOTFILES}/scripts/launch-picom
 exec_always --no-startup-id ${DOTFILES}/scripts/launch-polybar
 exec_always --no-startup-id nitrogen --restore
-exec_always --no-startup-id dropbox-cli start
-exec_always --no-startup-id xss-lock -- $locker
-exec_always --no-startup-id greenclip daemon
-exec_always --no-startup-id nm-applet
+exec --no-startup-id dropbox-cli start
+exec --no-startup-id xss-lock --transfer-sleep-lock -- $locker
+exec --no-startup-id greenclip daemon
+exec --no-startup-id nm-applet
