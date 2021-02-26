@@ -126,9 +126,9 @@ tray-scale = 1.0
 
 ;== Module Location ========================================================
 
-modules-left = datetime xbacklight volume battery
+modules-left = datetime vpn
 modules-center = i3
-modules-right = pomodoro keyboard vpn
+modules-right = pomodoro keyboard battery volume xbacklight
 
 [settings]
 format-foreground = ${color.fg}
