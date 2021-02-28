@@ -57,7 +57,7 @@ bindsym $mod+a focus parent
 bindsym $mod+q kill
 
 # Kill all windows on all workspaces
-bindsym $mod+Shift+q [class=”.*”] kill
+bindsym $mod+Shift+q [class=".*"] kill
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
