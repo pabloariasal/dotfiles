@@ -125,7 +125,7 @@ tray-scale = 1.0
 
 modules-left = datetime vpn
 modules-center = i3
-modules-right = pomodoro keyboard battery volume xbacklight
+modules-right = pomodoro spotify keyboard battery volume xbacklight
 
 [settings]
 format-foreground = ${color.fg}
@@ -292,8 +292,8 @@ interval = 10
 
 [module/spotify]
 type = custom/script
-interval = 1
-exec = polybar_spotify_status -f '{play_pause} {artist} - {song}' -p '',
+interval = 0.3
+exec = polybar_spotify_status -f '{play_pause} {artist} - {song}' --trunclen 20 --playpause-font 3 -p ▶,⏸
 click-left = playerctl play-pause
 click-middle = playerctl prev
 click-right = playerctl next
