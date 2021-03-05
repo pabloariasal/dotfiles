@@ -42,7 +42,7 @@ blue-gray = #6D8895
 [icons]
 brightness = "🔆"
 volume = "🔊"
-muted = "🔈 "
+muted = 🔇
 charging = "🔌"
 discharging = "🔋"
 keyboard = "⌨"
