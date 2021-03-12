@@ -39,4 +39,10 @@ fi
 setxkbmap -option caps:escape
 setxkbmap us
 xbindkeys
+
+# set the repeat rate of keys
+# first number is after how many seconds the key will start repeating
+# second number is repetitions per second
+# default: 660 25
+xset r rate 200 60
 exec i3
