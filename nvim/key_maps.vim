@@ -77,6 +77,7 @@ nnoremap <silent> <c-k> {
 
 "open command prompt
 nnoremap , :
+vnoremap , :
 
 nnoremap <leader>u <cmd>ClearWhitespace<CR>
 
