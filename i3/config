@@ -7,9 +7,9 @@ set $terminal alacritty
 set $terminal_class "^Alacritty$"
 set $locker i3lock -c 333333 --clock --timecolor ffffffff --datecolor ffffffff
 set $main_ws 1
-set $web_ws 7
-set $chat_ws 8
-set $email_ws 9
+set $web_ws 6
+set $chat_ws 7
+set $email_ws 8
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -97,7 +97,6 @@ bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
 
 # Move Focused Container To Workspace
 bindsym $mod+Shift+1 move container to workspace 1
@@ -108,7 +107,6 @@ bindsym $mod+Shift+5 move container to workspace 5
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
 
 # Switch back and forth
 bindsym $mod+Tab workspace back_and_forth
@@ -144,13 +142,19 @@ bindsym $mod+Shift+r restart
 
 #######################################################################
 # Key Bindings - Scratchpad
+# mod+Minus is the generic scratchpad
 bindsym $mod+Shift+minus move scratchpad
-bindsym $mod+minus [instance="^(?!__scratchpad$)" class="^(?!Spotify$)"] scratchpad show
+bindsym $mod+minus [instance="^(?!__scratchpad$)" class="^(?!Spotify$)" title="^(?!todo$)"] scratchpad show
 
+# mod+0 is the drop down terminal
 for_window [class=$terminal_class instance="__scratchpad"] move scratchpad
 bindsym $mod+0 exec i3-toggle-scratchpad
 
+# mod+Plus is music
 bindsym $mod+plus [class="^Spotify$"] scratchpad show
+
+# mod+9 are notes
+bindsym $mod+9 [title="^todo$"] scratchpad show
 
 #######################################################################
 # Key Bindings - Sticky Window
