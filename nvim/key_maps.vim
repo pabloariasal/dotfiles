@@ -40,6 +40,7 @@ inoremap jj <ESC>
 nmap <leader>w <cmd>wa<cr>
 nmap <leader>e <cmd>wq<cr>
 nmap <leader>q <cmd>q<cr>
+nmap <leader><leader>q <cmd>qa<cr>
 
 " grep for word under the cursor
 nnoremap <Leader>r :<C-u>grep '<C-r>=expand("<cword>")<CR>'<CR>
