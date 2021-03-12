@@ -9,3 +9,19 @@ export FZF_CTRL_R_OPTS="--height 90% --sort --preview 'echo {}' --preview-window
 source ${HOME}/.fzf-key-bindings.zsh
 bindkey '^n' fzf-file-widget
 bindkey '^k' fzf-cd-widget
+
+edit-fuzzy() {
+  local sel=$(__fsel)
+  if [[ -z "$sel" ]]; then
+    local ret=$?
+    zle reset-prompt
+    return $ret
+  fi
+  LBUFFER="${EDITOR} ${sel}"
+  zle reset-prompt
+  zle accept-line
+  local ret=$?
+  return $ret
+}
+zle     -N   edit-fuzzy
+bindkey '^j' edit-fuzzy
