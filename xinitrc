@@ -44,5 +44,5 @@ xbindkeys
 # first number is after how many seconds the key will start repeating
 # second number is repetitions per second
 # default: 660 25
-xset r rate 200 60
+xset r rate 200 50
 exec i3
