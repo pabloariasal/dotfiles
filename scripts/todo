@@ -1,0 +1,2 @@
+#!/bin/bash
+alacritty --title="todo" -e $SHELL -lc "nvim -p ${HOME}/Dropbox/plan.md ${HOME}/Dropbox/todo.md"
