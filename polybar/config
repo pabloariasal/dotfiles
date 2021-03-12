@@ -160,9 +160,10 @@ ws-icon-8 = 9;📬
 ws-icon-default = 🖥
 
 ; focused = Active workspace on focused monitor
-label-focused = %{T2}%name%%{T-}:%{T3}%icon%%{T-}
-label-focused-foreground = ${color.white}
-label-focused-background = ${color.indigo}
+;label-focused = %{T2}%name%%{T-}:%{T3}%icon%%{T-}
+label-focused = %{T2}%name%%{T-}
+label-focused-foreground = ${color.black}
+label-focused-background = ${color.white}
 label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
