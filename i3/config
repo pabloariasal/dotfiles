@@ -178,7 +178,7 @@ bindsym XF86AudioPrev exec playerctl previous
 # Look And Feel
 
 # disable title bars
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 1
 
 # Only enable gaps on a workspace when there is at least one container
 smart_gaps on
@@ -189,7 +189,7 @@ smart_borders on
 #System font
 font pango:DejaVu Sans Mono 0
 
-gaps inner 4
+gaps inner 5
 gaps outer 0
 
 #######################################################################
