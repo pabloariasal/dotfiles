@@ -81,10 +81,10 @@ configuration {
 /*	kb-move-char-forward: "Right,Control+f";*/
 /*	kb-remove-word-back: "Control+Alt+h,Control+BackSpace";*/
 /*	kb-remove-word-forward: "Control+Alt+d";*/
-/*	kb-remove-char-forward: "Delete,Control+d";*/
+	kb-remove-char-forward: "Delete";
 /*	kb-remove-char-back: "BackSpace,Shift+BackSpace,Control+h";*/
 	kb-remove-to-eol: "Control+Shift+e";
-/*	kb-remove-to-sol: "Control+u";*/
+	kb-remove-to-sol: "Control+y";
 	kb-accept-entry: "Control+m,Return,KP_Enter";
 /*	kb-accept-custom: "Control+Return";*/
 /*	kb-accept-alt: "Shift+Return";*/
@@ -96,8 +96,8 @@ configuration {
 	kb-row-up: "Control+k,Up,Control+p,ISO_Left_Tab";
 	kb-row-down: "Control+j,Down,Control+n";
 /*	kb-row-tab: "Tab";*/
-/*	kb-page-prev: "Page_Up";*/
-/*	kb-page-next: "Page_Down";*/
+	kb-page-prev: "Page_Up,Control+u";
+	kb-page-next: "Page_Down,Control+d";
 /*	kb-row-first: "Home,KP_Home";*/
 /*	kb-row-last: "End,KP_End";*/
 /*	kb-row-select: "Control+space";*/
