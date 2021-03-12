@@ -60,10 +60,10 @@ bindsym $mod+Shift+q [class=".*"] kill
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
-        bindsym h resize shrink width 8 px or 8 ppt
-        bindsym j resize grow height 8 px or 8 ppt
-        bindsym k resize shrink height 8 px or 8 ppt
-        bindsym l resize grow width 8 px or 8 ppt
+        bindsym h resize shrink width 20 px or 5 ppt
+        bindsym j resize grow height 20 px or 5 ppt
+        bindsym k resize shrink height 20 px or 5 ppt
+        bindsym l resize grow width 20 px or 5 ppt
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
