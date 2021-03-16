@@ -87,6 +87,9 @@ xnoremap <leader>p "+p
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Splits
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" cycle through splits
+noremap <c-h> <c-w><c-w>
+
 " resize
 noremap <silent> <C-Left> :vertical resize +3<CR>
 noremap <silent> <C-Right> :vertical resize -3<CR>
