@@ -148,23 +148,22 @@ label-mode-padding = 2
 label-mode-foreground = ${color.black}
 label-mode-background = ${color.pink}
 
-ws-icon-0 = 1;🖥
-ws-icon-1 = 2;🖥
-ws-icon-2 = 3;🖥
-ws-icon-3 = 4;🖥
-ws-icon-4 = 5;🖥
-ws-icon-5 = 6;🎵
-ws-icon-6 = 7;🌍
-ws-icon-7 = 8;💬
-ws-icon-8 = 9;📬
-ws-icon-default = 🖥
+ws-icon-0 = 1;work
+ws-icon-1 = 2;work
+ws-icon-2 = 3;work
+ws-icon-3 = 4;work
+ws-icon-4 = 5;music
+ws-icon-5 = 6;browser
+ws-icon-6 = 7;chat
+ws-icon-7 = 8;email
+ws-icon-8 = 9;notes
+ws-icon-default =
 
 ; focused = Active workspace on focused monitor
-;label-focused = %{T2}%name%%{T-}:%{T3}%icon%%{T-}
-label-focused = %{T2}%name%%{T-}
+label-focused = %{T2}%name%%{T-}:%{T2}%icon%%{T-}
 label-focused-foreground = ${color.black}
 label-focused-background = ${color.white}
-label-focused-padding = 2
+label-focused-padding = 1
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = ${self.label-focused}
