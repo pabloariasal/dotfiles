@@ -26,23 +26,10 @@ noremap \ ,
 "make Y consistent with other motions
 nnoremap Y y$
 
-"system clipboard
-nnoremap <leader>p "+p
-nnoremap <leader>P "+P
-nnoremap <leader>y "+y
-xnoremap <leader>y "+y
-xnoremap <leader>p "+p
-
 "best mapping ever
 inoremap jj <ESC>
 
-"quit and save
-nmap <leader>w <cmd>wa<cr>
-nmap <leader>e <cmd>wq<cr>
-nmap <leader>q <cmd>q<cr>
-nmap <leader><leader>q <cmd>qa<cr>
-
-" grep for word under the cursor
+"grep for word under the cursor
 nnoremap <Leader>r :<C-u>grep '<C-r>=expand("<cword>")<CR>'<CR>
 
 " Indent visual block
@@ -70,17 +57,37 @@ nnoremap g> <cmd>SidewaysRight<cr>
 "switch to alternate buffer
 nnoremap <BS> <C-^>
 
+"go to beginning and end of line
 nnoremap <a-h> ^
 nnoremap <a-l> $
 
+"navigate by paragraph
 nnoremap <silent> <c-j> }
 nnoremap <silent> <c-k> {
 
-"open command prompt
+"open command prompt with comma
 nnoremap , :
 vnoremap , :
 
 nnoremap <leader>u <cmd>ClearWhitespace<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Quitting and Saving
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <leader>w <cmd>wa<cr>
+nmap <leader>e <cmd>wq<cr>
+nmap <leader>q <cmd>q<cr>
+nmap <leader><leader>q <cmd>qa<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Clipboard
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"interact with system clipboard
+nnoremap <leader>p "+p
+nnoremap <leader>P "+P
+nnoremap <leader>y "+y
+xnoremap <leader>y "+y
+xnoremap <leader>p "+p
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Splits
@@ -100,7 +107,7 @@ nnoremap <silent> <a-k> gT
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Folding
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Navigate by fold
+" Navigate by fold for certain filetypes
 autocmd FileType rust,cpp,python,markdown
             \ nnoremap <buffer> <silent> <c-j> <cmd>execute "keepjumps norm! " . v:count1 . "zj"<CR>
 autocmd FileType rust,cpp,python,markdown
