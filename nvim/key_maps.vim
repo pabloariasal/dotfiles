@@ -39,8 +39,7 @@ vmap > >gv
 "jump to alternate file
 nmap <silent> <leader>a <cmd>Alternate<CR>
 
-" Delete buffers
-nnoremap <silent> <leader>b <cmd>Bdelete menu<CR>
+" close current buffer
 nnoremap <silent> <leader>c <cmd>bp <bar>bd #<cr>
 
 " Don't write { } motions to the jump list
@@ -49,10 +48,6 @@ nnoremap <silent> { <cmd>execute "keepjumps norm! " . v:count1 . "{"<CR>
 
 "Reload vimrc
 nnoremap <F12> <cmd>source ~/.config/nvim/init.vim<cr>
-
-"Swap arguments
-nnoremap g< <cmd>SidewaysLeft<cr>
-nnoremap g> <cmd>SidewaysRight<cr>
 
 "switch to alternate buffer
 nnoremap <BS> <C-^>
@@ -167,16 +162,7 @@ nnoremap <silent> <leader>j <cmd>BLines<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Star
-"
-" Required Plugins: vim-asterisk
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map *   <Plug>(asterisk-*)
-map #   <Plug>(asterisk-#)
-" search but don't add work separators
-map g*  <Plug>(asterisk-g*)
-map g#  <Plug>(asterisk-g#)
-" search but don't jump
-map z*  <Plug>(asterisk-z*)
-map z#  <Plug>(asterisk-z#)
-map gz* <Plug>(asterisk-gz*)
-map gz# <Plug>(asterisk-gz#)
+"search but don't jump
+map z*  *N
+map z#  #N
