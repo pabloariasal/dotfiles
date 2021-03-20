@@ -18,6 +18,10 @@ bindkey '^ ' autosuggest-accept
 bindkey '^[h' insert-cycledleft
 bindkey '^[l' insert-cycledright
 
+# In vi mode, mode to the beginning of end of the line
+bindkey -M vicmd '^[h' beginning-of-line
+bindkey -M vicmd '^[l' end-of-line
+
 # Fix vi mode backspace behavior
 bindkey -v '^?' backward-delete-char
 
