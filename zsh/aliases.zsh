@@ -42,7 +42,7 @@ function tmp()
 }
 
 # Git
-alias g='git'
+alias g='git status'
 alias ga='git add'
 alias gaa='git add --all'
 alias gapa='git add --patch'
@@ -67,8 +67,8 @@ alias gp='git push'
 alias gpu='git push --set-upstream origin HEAD'
 alias gpf='git push --force'
 alias grb='git rebase'
-alias gs='git status'
-alias gsta='git stash'
+alias gs='git stash'
 alias grh='git reset --hard HEAD'
 alias gb='git branch -vv'
 alias gba='git branch --all -vv'
+alias gcl='git clean -f -d'
