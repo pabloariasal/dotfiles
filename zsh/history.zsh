@@ -13,22 +13,20 @@ setopt share_history
 setopt append_history
 # remove duplicated lines first when history is full
 setopt hist_expire_dups_first
-# ignore duplicate entries in history
+# ignore duplicate entries in history listing (even of not adjacent)
 setopt hist_ignore_all_dups
-# when searching or scrolling through history
+# don't show adjacent duplicates when scrolling through history on the line editor
 setopt hist_find_no_dups
 # when expanding history (e.g. with !) don't execute directly but just populate input
 setopt hist_verify
 # save no duplicates in hist file
-setopt hist_save_no_dups
+#setopt hist_save_no_dups
 # extended history
 setopt extended_history
 # skip cmds with leading space from history
-setopt histignorespace
-
-# Blacklist certain commands to be written to history file
-HISTORY_IGNORE="(1|2|3|4|5|6|n|s|l|l *|l[slat]|cd|fm|gs|gd|gdca|gapa|gl|glp|glg|glga|gca|gcan|gp|gp!|f *|yay)"
-
-export HSTR_CONFIG=hicolor,static-favorites,raw-history-view
-bindkey -s "^r" "^u hstr -- ^m"
-bindkey -s "^f" "^u hstr --favorites ^m"
+setopt hist_ignore_space
+# Treated as a pattern at the time history files are written
+CMD_HISTORY_IGNORE="d|n|paru"
+GIT_HISTORY_IGNORE="gs|gd|gsta|gsta *|gdca|gapa|gl|glg|glg[dma]|gca|gcan|gp|gpf|gpu|gb|gba|grh|gm"
+LS_HISTORY_IGNORE="l|l[slat]"
+HISTORY_IGNORE="($CMD_HISTORY_IGNORE|$GIT_HISTORY_IGNORE|$LS_HISTORY_IGNORE)"

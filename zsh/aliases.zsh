@@ -10,7 +10,7 @@ alias ..='cd ..'
 
 # commands
 alias ipcheck='curl -s ifconfig.co/json | jq'
-alias h='history -r -E -1000 | less'
+alias h='history -r -E -35'
 alias td='nvim -p ~/Dropbox/plan.md ~/Dropbox/todo.md'
 
 # fast cd to directories
