@@ -1,6 +1,6 @@
 # program shorcuts
 alias n='nvim'
-alias b='bat'
+alias b='bat -p'
 alias p='pacman'
 
 # convenience
