@@ -300,10 +300,11 @@ click-right = playerctl next
 
 [module/pomodoro]
 type = custom/script
-exec = pymodoro --break-prefix "☕" --pomodoro-prefix "🍅 " -p "=" -ah -f ~/.pomodoro_session
+exec = pymodoro -ltr -bp "☕" -pp "🍅 " -p "=" -b "=" -f ~/.pomodoro_session
 label = %output%
 tail = true
-interval = 0
+click-left = pomodoro_start
+click-right = pomodoro_stop
 
 [module/systemmenu]
 type = custom/text
