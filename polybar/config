@@ -128,7 +128,7 @@ tray-scale = 1.0
 
 modules-left = datetime vpn
 modules-center = i3
-modules-right = pomodoro spotify keyboard battery volume xbacklight
+modules-right = pomodoro keyboard battery volume xbacklight
 
 [settings]
 format-foreground = ${color.fg}
