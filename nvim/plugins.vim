@@ -51,6 +51,7 @@ Plug 'tpope/vim-vinegar'
 Plug 'arcticicestudio/nord-vim'
 Plug 'dracula/vim'
 Plug 'joshdick/onedark.vim'
+Plug 'morhetz/gruvbox'
 "Folds
 Plug 'masukomi/vim-markdown-folding'
 Plug 'tmhedberg/SimpylFold'

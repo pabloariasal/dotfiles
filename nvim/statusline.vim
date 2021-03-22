@@ -5,7 +5,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "NOTE: each sublist is its own highlight group
 let g:lightline = {
-            \ 'colorscheme': 'nord',
+            \ 'colorscheme': 'gruvbox',
             \ 'active': {
                 \ 'left': [
                 \           [ 'paste' ],

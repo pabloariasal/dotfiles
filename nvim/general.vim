@@ -130,8 +130,9 @@ set softtabstop=4
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colors
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:gruvbox_sign_column=('bg0')
 set background=dark
-colorscheme onedark
+colorscheme gruvbox
 set termguicolors
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

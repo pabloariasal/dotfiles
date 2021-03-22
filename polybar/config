@@ -14,9 +14,12 @@
 ;==========================================================
 
 [color]
-bg = #dd282c34
-bg-light= #303030
-fg = #abb2bf
+bg = #dd282828
+fg = #a89984
+ws-bg-unfocused = #32302f
+ws-fg-unfocused = #8ec07c
+ws-bg-focused = #458588
+ws-fg-focused = #000000
 
 white = #FFFFFF
 black = #000000
@@ -161,14 +164,14 @@ ws-icon-default =
 
 ; focused = Active workspace on focused monitor
 label-focused = %icon%
-label-focused-foreground = ${color.black}
-label-focused-background = ${color.white}
+label-focused-foreground = ${color.ws-fg-focused}
+label-focused-background = ${color.ws-bg-focused}
 label-focused-padding = 1
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = ${self.label-focused}
-label-unfocused-foreground = ${color.white}
-label-unfocused-background = ${color.bg-light}
+label-unfocused-foreground = ${color.ws-fg-unfocused}
+label-unfocused-background = ${color.ws-bg-unfocused}
 label-unfocused-padding = ${self.label-focused-padding}
 
 ; visible = Active workspace on unfocused monitor
@@ -179,7 +182,7 @@ label-visible-padding = ${self.label-unfocused-padding}
 
 ; urgent = Workspace with urgency hint set
 label-urgent = ${self.label-focused}
-label-urgent-background = ${color.red}
+label-urgent-background = ${color.pink}
 label-urgent-padding = ${self.label-focused-padding}
 
 ; Separator in between workspaces
