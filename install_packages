@@ -5,6 +5,7 @@ packages=(i3-gaps
     alacritty
     dunst
     fd
+    stow
     bat
     htop
     ncdu
@@ -24,7 +25,6 @@ packages=(i3-gaps
     xsel
     nm-manager-applet
     networkmanager-openvpn
-    tree
     # required for coc.nvim
     npm
     ttf-font-awesome
