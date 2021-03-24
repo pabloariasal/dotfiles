@@ -11,8 +11,7 @@ if [[ $volume == 0 || "$mute" == "off" ]]; then
     dunstify -a "notify_volume" -u low -i audio-volume-muted-symbolic -r "$msgId" "Volume muted"
 else
     # Show the volume notification
-    dunstify -a "notify_volume" -u low -i audio-volume-high-symbolic -r "$msgId" \
-    "Volume: ${volume}%" "$(getProgressString 10 "<b> </b>" " " $volume)"
+    dunstify -a "notify_volume" -u low -i audio-volume-high-symbolic -r "$msgId" "Volume: ${volume}%"
 fi
 
 # Play the volume changed sound
