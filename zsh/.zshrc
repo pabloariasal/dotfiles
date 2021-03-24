@@ -3,13 +3,13 @@ if [[ -z "$LS_COLORS" ]]; then
   (( $+commands[dircolors] )) && eval "$(dircolors -b)"
 fi
 
-source ${DOTFILES}/zsh/antigen.zsh
-source ${DOTFILES}/zsh/fzf.zsh
-source ${DOTFILES}/zsh/history.zsh
-source ${DOTFILES}/zsh/completion.zsh
-source ${DOTFILES}/zsh/aliases.zsh
-source ${DOTFILES}/zsh/directories.zsh
-source ${DOTFILES}/zsh/git.zsh
+source ~/.zsh/antigen.zsh
+source ~/.zsh/fzf.zsh
+source ~/.zsh/history.zsh
+source ~/.zsh/completion.zsh
+source ~/.zsh/aliases.zsh
+source ~/.zsh/directories.zsh
+source ~/.zsh/git.zsh
 
 # Accept autosuggestion with Ctrl+Space
 bindkey '^ ' autosuggest-accept

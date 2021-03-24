@@ -1,6 +1,6 @@
 #FZF settings
 COMMON_FD_OPTS='--hidden -E ".git"'
-export FZF_DEFAULT_COMMAND='fd -tf ${COMMON_FD_OPTS}'
+export FZF_DEFAULT_COMMAND="fd -tf ${COMMON_FD_OPTS}"
 export FZF_DEFAULT_OPTS='--cycle --height 60%'
 export FZF_ALT_C_COMMAND="fd -td"
 export FZF_CTRL_T_COMMAND="fd ${COMMON_FD_OPTS}"

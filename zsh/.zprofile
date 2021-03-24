@@ -1,7 +1,7 @@
 # Source Environment Variables
 export DOTFILES="${HOME}/dotfiles"
-if [ -f "$DOTFILES/environment" ]; then
-    . "$DOTFILES/environment"
+if [ -f ~/.env ]; then
+    . ~/.env
 fi
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 

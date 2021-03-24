@@ -2,4 +2,4 @@
 	email = pabloariasal@gmail.com
 	name = Pablo Arias
 [core]
-	excludesfile = /home/pablo/dotfiles/gitignore_global
+	excludesfile = ~/.gitignore_global

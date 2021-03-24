@@ -15,14 +15,14 @@
 "   Pablo Arias - pabloariasal@gmail.com
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-source ${HOME}/dotfiles/nvim/plugins.vim
-source ${HOME}/dotfiles/nvim/general.vim
-source ${HOME}/dotfiles/nvim/key_maps.vim
-source ${HOME}/dotfiles/nvim/snippets.vim
-source ${HOME}/dotfiles/nvim/statusline.vim
-source ${HOME}/dotfiles/nvim/folding.vim
-source ${HOME}/dotfiles/nvim/coc.vim
-source ${HOME}/dotfiles/nvim/ctags.vim
+runtime plugins.vim
+runtime general.vim
+runtime key_maps.vim
+runtime snippets.vim
+runtime statusline.vim
+runtime folding.vim
+runtime coc.vim
+runtime ctags.vim
 " source ${HOME}/dotfiles/nvim/lsp.vim
 " source ${HOME}/dotfiles/nvim/auto-completion.vim
 " source ${HOME}/dotfiles/nvim/treesitter.vim

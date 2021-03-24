@@ -217,8 +217,8 @@ client.background       #ffffff
 
 #######################################################################
 # Auto Start Programs
-exec_always --no-startup-id ${DOTFILES}/scripts/launch-picom
-exec_always --no-startup-id ${DOTFILES}/scripts/launch-polybar
+exec_always --no-startup-id launch-picom
+exec_always --no-startup-id launch-polybar
 exec_always --no-startup-id nitrogen --restore
 exec --no-startup-id dropbox-cli start
 exec --no-startup-id xss-lock --transfer-sleep-lock -- $locker
