@@ -1,5 +1,0 @@
-#!/bin/bash
-xrandr --output "HDMI2" --off --output "eDP1" --auto
-sed -i 's/size:.*$/size: 6.5/' ${DOTFILES}/alacritty.yml
-i3-msg restart
-setxkbmap -option caps:escape
