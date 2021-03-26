@@ -1,0 +1,3 @@
+#!/bin/bash
+wallpaper=$(awk -F'=' '/file/ {print $2}' ${HOME}/.config/nitrogen/bg-saved.cfg)
+convert "$wallpaper" RGB:- | i3lock --image /dev/stdin --raw=1920x1080:rgb --tiling
