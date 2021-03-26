@@ -5,7 +5,7 @@ set $browser ${CHROMIUM_EXEC}
 set $browser_class "^Google-chrome$"
 set $terminal alacritty
 set $terminal_class "^Alacritty$"
-set $locker i3lock -c 333333 --clock --timecolor ffffffff --datecolor ffffffff
+set $locker lock-screen
 set $main_ws 1
 set $web_ws 6
 set $chat_ws 7
@@ -221,8 +221,8 @@ client.background       #ffffff
 exec_always --no-startup-id launch-picom
 exec_always --no-startup-id launch-polybar
 exec_always --no-startup-id nitrogen --restore
+exec_always --no-startup-id xss-lock --transfer-sleep-lock -- $locker
 exec --no-startup-id dropbox-cli start
-exec --no-startup-id xss-lock --transfer-sleep-lock -- $locker
 exec --no-startup-id greenclip daemon
 exec --no-startup-id nm-applet
 exec --no-startup-id flameshot

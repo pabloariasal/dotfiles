@@ -26,10 +26,10 @@ case $chosen in
         systemctl reboot
         ;;
     $lock)
-        i3lock -c 333333 --clock --timecolor ffffffff --datecolor ffffffff
+	lock-screen
         ;;
     $suspend)
-        i3lock -c 333333 --clock --timecolor ffffffff --datecolor ffffffff
+	lock-screen
         systemctl suspend
         ;;
     $logout)
