@@ -129,27 +129,16 @@ nmap gl <Plug>(qf_loc_toggle)
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language Server Protocol
-"
-" Required Plugins: coc.nvim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
-" nnoremap <silent> gy <cmd>lua vim.lsp.buf.type_definition()<CR>
-" nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
-" nnoremap <silent> gk <cmd>lua vim.lsp.buf.references()<CR>
-" nnoremap <silent> <leader>f <cmd>lua vim.lsp.buf.formatting()<CR>
-" nnoremap <silent> <F2> <cmd>lua vim.lsp.buf.rename()<Cr>
-" nnoremap <silent> [g <cmd>PrevDiagnosticCycle<CR>
-" nnoremap <silent> ]g <cmd>NextDiagnosticCycle<CR>
-
-nmap gd <Plug>(coc-definition)
-nmap gy <Plug>(coc-type-definition)
-nmap K <cmd>call CocAction("doHover")<CR>
-nmap gk <Plug>(coc-references-used)
-nmap <leader>f <cmd>Format<CR>
-nmap [g <Plug>(coc-diagnostic-prev)
-nmap ]g <Plug>(coc-diagnostic-next)
-nmap <F1> <cmd>CocDiagnostics<CR>
-nmap <F2> <Plug>(coc-rename)
+nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> gy <cmd>lua vim.lsp.buf.type_definition()<CR>
+nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
+nnoremap <silent> gk <cmd>lua vim.lsp.buf.references()<CR>
+nnoremap <silent> <leader>f <cmd>lua vim.lsp.buf.formatting()<CR>
+nnoremap <silent> <F2> <cmd>lua vim.lsp.buf.rename()<Cr>
+nnoremap <silent> [g <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
+nnoremap <silent> ]g <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
+nnoremap <silent> <leader>d <cmd>lua vim.lsp.diagnostic.set_loclist()<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Fuzzy Finding

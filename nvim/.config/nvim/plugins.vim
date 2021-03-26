@@ -41,18 +41,12 @@ Plug 'pabloariasal/vim-alternate'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-eunuch'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-vinegar'
-" Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/nvim-compe'
+Plug 'neovim/nvim-lspconfig'
 " Plug 'nvim-lua/diagnostic-nvim'
-" Plug 'nvim-lua/completion-nvim'
 " Plug 'nvim-treesitter/nvim-treesitter'
-"Colors
-Plug 'arcticicestudio/nord-vim'
-Plug 'dracula/vim'
-Plug 'joshdick/onedark.vim'
 Plug 'morhetz/gruvbox'
-"Folds
 Plug 'masukomi/vim-markdown-folding'
 Plug 'tmhedberg/SimpylFold'
 call plug#end()

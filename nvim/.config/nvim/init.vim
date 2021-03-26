@@ -21,8 +21,7 @@ runtime key_maps.vim
 runtime snippets.vim
 runtime statusline.vim
 runtime folding.vim
-runtime coc.vim
+runtime lsp.vim
 runtime ctags.vim
-" source ${HOME}/dotfiles/nvim/lsp.vim
-" source ${HOME}/dotfiles/nvim/auto-completion.vim
+runtime auto-completion.vim
 " source ${HOME}/dotfiles/nvim/treesitter.vim
