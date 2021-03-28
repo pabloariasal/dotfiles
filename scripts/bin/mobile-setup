@@ -1,0 +1,10 @@
+#!/bin/bash
+
+ALACRITTY_OVERRIDE=~/.alacritty_overrides.yml
+
+echo "Switching to mobile setup"
+xrandr --output "HDMI2" --off --output "eDP1" --auto
+rm "$ALACRITTY_OVERRIDE"
+touch ~/.config/alacritty/alacritty.yml
+i3-msg restart
+setxkbmap -option caps:escape
