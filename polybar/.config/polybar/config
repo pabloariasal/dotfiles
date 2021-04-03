@@ -151,7 +151,7 @@ label-mode-padding = 2
 label-mode-foreground = ${color.black}
 label-mode-background = ${color.pink}
 
-ws-icon-0 = 1;work1
+ws-icon-0 = 1;main
 ws-icon-1 = 2;work2
 ws-icon-2 = 3;work3
 ws-icon-3 = 4;work4
