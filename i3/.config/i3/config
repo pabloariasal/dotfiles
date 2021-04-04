@@ -193,8 +193,8 @@ bindsym $mod+F9 exec volume-control toggle; exec notify-volume
 
 #######################################################################
 # Key Bindings - Screen Brightness Control
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10; exec notify-brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10; exec notify-brightness
+bindsym XF86MonBrightnessUp exec brightnessctl set +10%; exec notify-brightness
+bindsym XF86MonBrightnessDown exec brightnessctl set 10%-; exec notify-brightness
 
 #######################################################################
 # Key Bindings - Media Control
