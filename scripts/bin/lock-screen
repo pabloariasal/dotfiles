@@ -1,2 +1,2 @@
 #!/bin/bash
-i3lock
+i3lock -c 444444
