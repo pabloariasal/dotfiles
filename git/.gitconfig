@@ -1,5 +1,4 @@
 [user]
-	email = pabloariasal@gmail.com
 	name = Pablo Arias
 [core]
 	excludesfile = ~/.gitignore_global
