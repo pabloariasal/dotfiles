@@ -127,7 +127,7 @@ tray-scale = 1.0
 
 modules-left = datetime
 modules-center = i3
-modules-right = pomodoro keyboard battery volume xbacklight
+modules-right = pomodoro keyboard battery volume backlight
 
 [settings]
 format-foreground = ${color.fg}
@@ -215,9 +215,13 @@ label = %title%
 label-maxlen = 30
 ;label-foreground = ${color.purple}
 
-[module/xbacklight]
-type = internal/xbacklight
+[module/backlight]
+type = internal/backlight
 label-maxlen = 50
+
+; Use the following command to list available cards:
+; $ ls -1 /sys/class/backlight/
+card = intel_backlight
 
 format = <label>
 format-prefix = ${icons.brightness}
