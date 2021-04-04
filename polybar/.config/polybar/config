@@ -64,7 +64,7 @@ fixed-center = true
 line-size = 2
 
 background = ${color.bg}
-foreground = ${color.bg-alt}
+foreground = ${color.fg}
 
 border-size = 2
 border-color = ${color.bg}
