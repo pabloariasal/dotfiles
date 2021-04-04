@@ -1,11 +1,20 @@
 #!/bin/bash
 
-ALACRITTY_OVERRIDE=~/.alacritty_overrides.yml
-
 echo "Switching to mobile setup"
-xrandr --output "HDMI2" --off --output "eDP1" --auto
-rm "$ALACRITTY_OVERRIDE"
-touch ~/.config/alacritty/alacritty.yml
+
+xrandr --output "DP-1-1-3" --off --output "eDP-1-1" --auto
+
+sed -i "s/dpi: 96/dpi: 192/" ${HOME}/.Xresources
+xrdb -merge ${HOME}/.Xresources
+
+# change polybar settings
+sed -i 's/dpi = 96/dpi = 192/' ${DOTFILES}/polybar/.config/polybar/config
+sed -i 's/;2/;4/' ${DOTFILES}/polybar/.config/polybar/config
+sed -i 's/height = 14/height = 26/' ${DOTFILES}/polybar/.config/polybar/config
+
+# change rofi settings
+sed -i 's/dpi: 96/dpi: 192/' ${DOTFILES}/rofi/.config/rofi/config.rasi
+
 i3-msg restart
 
 setxkbmap -option compose:rctrl
