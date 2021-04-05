@@ -1,0 +1,28 @@
+#!/usr/bin/env python3
+
+import datetime
+import calendar
+import sys
+from pathlib import Path
+
+def main():
+    if len(sys.argv) > 1:
+        date = datetime.date(int(sys.argv[1]), int(sys.argv[2]), 1)
+    else:
+        date = datetime.date.today()
+
+    print('# {}'.format(date.strftime('%B %Y')))
+    print('## Goals')
+    print()
+    print('## Timeline')
+
+    days_in_month = [d for d in calendar.Calendar().itermonthdates(date.year, date.month) if d.month == date.month]
+
+    for d in days_in_month:
+        print('### {}'.format(d.strftime('%A - %d.%m.%y')))
+
+if '--help' in sys.argv:
+    print('usage: {} [year] [month]'.format(Path(__file__).stem))
+    sys.exit(0)
+
+main()
