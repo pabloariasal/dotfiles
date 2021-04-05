@@ -19,6 +19,7 @@ floating_modifier $mod
 assign [class=$browser_class instance="teams."] $chat_ws
 assign [class=$browser_class instance="outlook."] $email_ws
 assign [class=$browser_class instance="gmail."] $email_ws
+for_window [class=$terminal_class instance="__text_scratchpad"] floating enable
 
 #######################################################################
 # Key Bindings - Starting Programs
@@ -29,6 +30,7 @@ bindsym $mod+p exec rofi -show run
 bindsym $mod+i exec rofi -show window
 bindsym $mod+c exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 bindsym $mod+Delete exec powermenu
+bindsym $mod+g exec text-scratchpad
 
 #######################################################################
 # Key Bindings - Windows
