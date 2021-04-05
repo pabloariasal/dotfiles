@@ -172,6 +172,9 @@ bindsym --release Shift+Print exec flameshot gui
 bindsym XF86AudioRaiseVolume exec volume-control up; exec notify-volume
 bindsym XF86AudioLowerVolume exec volume-control down; exec notify-volume
 bindsym XF86AudioMute exec volume-control toggle; exec notify-volume
+bindsym $mod+F11 exec volume-control up; exec notify-volume
+bindsym $mod+F10 exec volume-control down; exec notify-volume
+bindsym $mod+F9 exec volume-control toggle; exec notify-volume
 
 #######################################################################
 # Key Bindings - Screen Brightness Control
@@ -180,9 +183,9 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10; exec notify-brightness
 
 #######################################################################
 # Key Bindings - Media Control
-bindsym $mod+F8 exec playerctl play-pause
-bindsym $mod+F9 exec playerctl next
-bindsym $mod+F7 exec playerctl previous
+bindsym $mod+F7 exec playerctl play-pause
+bindsym $mod+F8 exec playerctl next
+bindsym $mod+F6 exec playerctl previous
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
