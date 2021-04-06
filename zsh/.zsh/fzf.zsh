@@ -8,7 +8,7 @@ export FZF_CTRL_T_OPTS="--preview '(bat {} || tree -C {}) 2> /dev/null | head -2
 export FZF_CTRL_R_OPTS="--no-height --no-reverse --exact --preview 'echo {}' --preview-window down:3:wrap --bind '?:toggle-preview'"
 source ${HOME}/.fzf-key-bindings.zsh
 bindkey '^n' fzf-file-widget
-bindkey '^o' fzf-cd-widget
+bindkey '^k' fzf-cd-widget
 
 edit-fuzzy() {
   local sel=$(__fsel)
