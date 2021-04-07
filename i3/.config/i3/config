@@ -31,6 +31,7 @@ bindsym $mod+i exec rofi -show window
 bindsym $mod+c exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 bindsym $mod+Delete exec powermenu
 bindsym $mod+g exec text-scratchpad
+bindsym $mod+d exec rofimoji
 
 #######################################################################
 # Key Bindings - Windows
