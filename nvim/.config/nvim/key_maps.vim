@@ -46,9 +46,6 @@ nnoremap <silent> <leader>c <cmd>bp <bar>bd #<cr>
 nnoremap <silent> } <cmd>execute "keepjumps norm! " . v:count1 . "}"<CR>
 nnoremap <silent> { <cmd>execute "keepjumps norm! " . v:count1 . "{"<CR>
 
-"Reload vimrc
-nnoremap <F12> <cmd>source ~/.config/nvim/init.vim<cr>
-
 "switch to alternate buffer
 nnoremap <BS> <C-^>
 
@@ -64,13 +61,12 @@ nnoremap <silent> <c-k> {
 nnoremap , :
 vnoremap , :
 
-nnoremap <leader>u <cmd>ClearWhitespace<CR>
+nnoremap <leader>e <cmd>ClearWhitespace<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Quitting and Saving
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <leader>w <cmd>wa<cr>
-nmap <leader>e <cmd>wq<cr>
 nmap <leader>q <cmd>q<cr>
 nmap <leader><leader>q <cmd>qa<cr>
 
@@ -123,7 +119,6 @@ nnoremap zr zr<cmd>echo "foldlevel" &foldlevel<cr>
 "
 " Required Plugins: vim-qf
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <C-q> <Plug>(qf_qf_switch)
 nmap gq <Plug>(qf_qf_toggle)
 nmap gl <Plug>(qf_loc_toggle)
 
@@ -133,12 +128,12 @@ nmap gl <Plug>(qf_loc_toggle)
 nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> gy <cmd>lua vim.lsp.buf.type_definition()<CR>
 nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
-nnoremap <silent> gk <cmd>lua vim.lsp.buf.references()<CR>
+nnoremap <silent> <leader>k <cmd>lua vim.lsp.buf.references()<CR>
 nnoremap <silent> <leader>f <cmd>lua vim.lsp.buf.formatting()<CR>
-nnoremap <silent> <F2> <cmd>lua vim.lsp.buf.rename()<Cr>
 nnoremap <silent> [g <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
 nnoremap <silent> ]g <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
 nnoremap <silent> <leader>d <cmd>lua vim.lsp.diagnostic.set_loclist()<CR>
+nnoremap <silent> <F2> <cmd>lua vim.lsp.buf.rename()<Cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Fuzzy Finding
