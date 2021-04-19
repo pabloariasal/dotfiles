@@ -3,7 +3,17 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 lua <<EOF
 local lspconfig = require'lspconfig'
-lspconfig.hls.setup{}
+
+-- Haskell - hls
+lspconfig.hls.setup {
+ settings = {
+      languageServerHaskell = {
+        formattingProvider = "ormolu";
+      };
+    };
+}
+
+-- C++ - ccls
 lspconfig.ccls.setup {
   init_options = {
     cache = {
