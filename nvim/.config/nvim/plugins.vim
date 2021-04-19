@@ -44,9 +44,11 @@ Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-vinegar'
 Plug 'hrsh7th/nvim-compe'
 Plug 'neovim/nvim-lspconfig'
-" Plug 'nvim-lua/diagnostic-nvim'
-" Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'morhetz/gruvbox'
 Plug 'masukomi/vim-markdown-folding'
+" Python
 Plug 'tmhedberg/SimpylFold'
+" Haskell
+Plug 'itchyny/vim-haskell-indent'
+Plug 'Twinside/vim-haskellFold'
 call plug#end()

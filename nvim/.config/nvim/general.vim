@@ -30,7 +30,7 @@ set encoding=utf-8
 "Load plugins per filetype
 filetype plugin on
 
-filetype indent on
+filetype plugin indent on
 
 "Allow abandoning buffers without having to save them (useful for batch buffer modification, e.g. global search/replace)
 set hidden
