@@ -1,6 +1,3 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Haskell - hls
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 lua <<EOF
 local lspconfig = require'lspconfig'
 
@@ -21,4 +18,7 @@ lspconfig.ccls.setup {
     };
   }
 }
+
+-- Rust - rust-analyzer
+lspconfig.rust_analyzer.setup{}
 EOF
