@@ -91,4 +91,13 @@ function install_packages()
     pacman -S --noconfirm "${packages[@]}"
 }
 
+function install_i3blocks_contrib()
+{
+    local loc="$HOME/.i3blocks-contrib"
+    rm -rf $loc
+    git clone git@github.com:pabloariasal/i3blocks-contrib.git ~/.i3blocks-contrib
+    cd $loc
+    git remote add upstream https://github.com/vivien/i3blocks.git
+}
+
 "$1"

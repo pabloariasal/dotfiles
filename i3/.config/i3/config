@@ -6,19 +6,28 @@ set $browser_class "^Google-chrome$"
 set $terminal alacritty
 set $terminal_class "^Alacritty$"
 set $locker lock-screen
-set $main_ws 1
-set $web_ws 6
-set $chat_ws 7
-set $email_ws 8
 
+# workspaces
+set $ws1 1:work1
+set $ws2 2:work2
+set $ws3 3:work3
+set $ws4 4:sys
+set $ws5 5:music
+set $ws6 6:www
+set $ws7 7:chat
+set $ws8 8:email
+set $ws9 9:todo
+
+#######################################################################
+# General
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 #######################################################################
 # Automatic Window Assignment
-assign [class=$browser_class instance="teams."] $chat_ws
-assign [class=$browser_class instance="outlook."] $email_ws
-assign [class=$browser_class instance="gmail."] $email_ws
+assign [class=$browser_class instance="teams."] $ws7
+assign [class=$browser_class instance="outlook."] $ws8
+assign [class=$browser_class instance="gmail."] $ws8
 for_window [class=$terminal_class instance="__text_scratchpad"] floating enable
 
 #######################################################################
@@ -93,36 +102,36 @@ bindsym $mod+u mode "move"
 # Key Bindings - Workspaces
 
 # Switch Workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
 
 # Move Focused Container To Workspace
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
 
 # Switch back and forth
 bindsym $mod+Tab workspace back_and_forth
 workspace_auto_back_and_forth yes
 
 # Easy jump to browser
-bindsym $mod+n workspace $web_ws
+bindsym $mod+n workspace $ws6
 
 # Easy jump to main workspace
-bindsym $mod+m workspace $main_ws
+bindsym $mod+m workspace $ws1
 
 # cycle through active workspaces
 bindsym $mod+Ctrl+k workspace next
@@ -222,9 +231,32 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 client.background       #ffffff
 
 #######################################################################
+# Status bar
+bar {
+        status_command i3blocks
+        font pango:DejaVu Sans Mono 10
+        # mode hide
+        strip_workspace_numbers yes
+        i3bar_command i3bar --transparency
+        separator_symbol " "
+        colors {
+                background #282828ff
+                statusline #a89984
+                separator #458588
+
+# border background text_color
+               # focused_workspace  #4c7899 #458588 #ffffff
+                # active_workspace   #333333 #5f676a #ffffff
+                # inactive_workspace #333333 #222222 #888888
+                # urgent_workspace   #2f343a #900000 #ffffff
+                # binding_mode       #2f343a #900000 #ffffff
+        }
+}
+
+#######################################################################
 # Auto Start Programs
 exec_always --no-startup-id launch-picom
-exec_always --no-startup-id launch-polybar
+# exec_always --no-startup-id launch-polybar
 exec_always --no-startup-id nitrogen --restore
 exec_always --no-startup-id xss-lock --transfer-sleep-lock -- $locker
 exec --no-startup-id dropbox-cli start
