@@ -11,7 +11,7 @@ set $locker lock-screen
 set $ws1 1:work1
 set $ws2 2:work2
 set $ws3 3:work3
-set $ws4 4:sys
+set $ws4 4:work4
 set $ws5 5:music
 set $ws6 6:www
 set $ws7 7:chat
