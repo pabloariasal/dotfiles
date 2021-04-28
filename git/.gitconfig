@@ -2,3 +2,15 @@
 	name = Pablo Arias
 [core]
 	excludesfile = ~/.gitignore_global
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = true
+[difftool "vimdiff"]
+	path = nvim
+[merge]
+	tool = vimdiff
+[mergetool]
+	prompt = true
+[mergetool "vimdiff"]
+	path = nvim
