@@ -234,7 +234,7 @@ client.background       #ffffff
 # Status bar
 bar {
         status_command i3blocks
-        font pango:DejaVu Sans Mono 10
+        font pango:DejaVu Sans Mono 9
         # mode hide
         strip_workspace_numbers yes
         i3bar_command i3bar --transparency
