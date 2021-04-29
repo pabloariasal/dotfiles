@@ -1,0 +1,4 @@
+#!/bin/bash
+
+file="$HOME/Dropbox/mercado.md"
+alacritty --class="__text_scratchpad" -e $SHELL -lc "sleep 0.1 && nvim ${file}"
