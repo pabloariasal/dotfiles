@@ -56,8 +56,8 @@ label=🔊
 interval=1
 signal=10
 
-[backlight]
-label=☀
+[backlight_brightnessctl]
+label=🔆
 interval=1
 
 # Battery indicator
