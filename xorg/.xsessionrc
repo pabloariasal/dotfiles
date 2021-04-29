@@ -1,3 +1,4 @@
+setxkbmap -option compose:rctrl
 setxkbmap -option caps:escape
 setxkbmap us
 
