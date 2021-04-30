@@ -21,4 +21,12 @@ lspconfig.ccls.setup {
 
 -- Rust - rust-analyzer
 lspconfig.rust_analyzer.setup{}
+
+-- Python - python-language-server
+require'lspconfig'.pyls.setup{
+ settings = {
+      pyls = {
+      };
+    };
+}
 EOF
