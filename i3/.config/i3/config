@@ -28,7 +28,11 @@ floating_modifier $mod
 assign [class=$browser_class instance="teams."] $ws7
 assign [class=$browser_class instance="outlook."] $ws8
 assign [class=$browser_class instance="gmail."] $ws8
+
+#######################################################################
+# Window rules
 for_window [class=$terminal_class instance="__text_scratchpad"] floating enable
+for_window [class=$terminal_class title="^System$"] floating enable, resize set 90 ppt 90 ppt, move position center
 
 #######################################################################
 # Key Bindings - Starting Programs
