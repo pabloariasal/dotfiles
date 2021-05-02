@@ -263,10 +263,12 @@ bar {
 #######################################################################
 # Auto Start Programs
 exec_always --no-startup-id launch-picom
-# exec_always --no-startup-id launch-polybar
 exec_always --no-startup-id nitrogen --restore
 exec_always --no-startup-id xss-lock --transfer-sleep-lock -- $locker
 exec --no-startup-id dropbox-cli start
 exec --no-startup-id greenclip daemon
-exec --no-startup-id nm-applet
-exec --no-startup-id flameshot
+exec_always --no-startup-id nm-applet
+exec --no-startup-id todo
+exec --no-startup-id spotify
+exec --no-startup-id exec greeter_term
+exec --no-startup-id i3-msg "workspace $ws6; exec $browser"
