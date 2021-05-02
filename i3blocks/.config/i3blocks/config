@@ -29,11 +29,16 @@ command=$HOME/.i3blocks-contrib/$BLOCK_NAME/$BLOCK_NAME
 separator_block_width=15
 markup=none
 
-[rofi-calendar]
-# LABEL=📅
-interval=5
-DATEFTM=+%H:%M %a %b %e
-align=left
+[pomodoro]
+label=🍅
+format=json
+interval=1
+DEFAULT_TIMER=1500
+TIMER_LOOP=false
+
+[key_layout]
+label=⌨
+interval=1
 
 # Volume indicator
 #
@@ -57,6 +62,21 @@ interval=30
 markup=pango
 label=🔋
 
+[time_colombia]
+label=🇨🇴
+command=TZ=America/Bogota date +"%H:%M"
+interval=5
+
+[rofi-calendar]
+LABEL=📅
+interval=5
+DATEFTM=+%a %b %e %Y
+align=left
+
+[time]
+command=echo '<span size="large">'$(date '+%H:%M')"</span>"
+interval=5
+markup=pango
 
 # Key indicators
 #
