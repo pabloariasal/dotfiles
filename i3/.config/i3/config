@@ -13,7 +13,7 @@ set $ws2 2:work2
 set $ws3 3:work3
 set $ws4 4:work4
 set $ws5 5:music
-set $ws6 6:www
+set $ws6 6:web
 set $ws7 7:chat
 set $ws8 8:email
 set $ws9 9:todo
