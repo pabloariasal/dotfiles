@@ -28,6 +28,9 @@ floating_modifier $mod
 assign [class=$browser_class instance="teams."] $ws7
 assign [class=$browser_class instance="outlook."] $ws8
 assign [class=$browser_class instance="gmail."] $ws8
+assign [class=$terminal_class instance="__todo"] $ws9
+assign [class=$terminal_class instance="__greeter"] $ws1
+for_window [class="^Spotify$"] move container to workspace $ws5
 
 #######################################################################
 # Window rules
