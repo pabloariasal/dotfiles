@@ -1,0 +1,2 @@
+#!/bin/sh
+alacritty --class="__greeter" -e $SHELL -lc "fortune | cowsay && bars && exec $SHELL"
