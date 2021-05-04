@@ -59,7 +59,7 @@ aur_packages=(spotify
     gotop-bin
 )
 
-function paru()
+function install_paru()
 {
     rm -rf ~/paru
     git clone https://aur.archlinux.org/paru-bin.git ~/paru
