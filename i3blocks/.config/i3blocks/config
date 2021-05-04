@@ -29,6 +29,12 @@ command=$HOME/.i3blocks-contrib/$BLOCK_NAME/$BLOCK_NAME
 separator_block_width=15
 markup=none
 
+[mediaplayer]
+label=🎵
+instance=spotify
+interval=1
+signal=10
+
 [pomodoro]
 label=🍅
 format=json
