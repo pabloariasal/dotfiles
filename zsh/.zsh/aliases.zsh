@@ -11,7 +11,6 @@ alias ..='cd ..'
 # commands
 alias ipcheck='curl -s ifconfig.co/json | jq'
 alias h='history -r -E -35'
-alias td='nvim -S ~/.todo_session -O ~/Dropbox/plan.md ~/Dropbox/todo.md'
 
 # fast cd to directories
 alias d="cd ${DOTFILES}"
