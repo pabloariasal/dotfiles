@@ -270,5 +270,4 @@ exec --no-startup-id greenclip daemon
 exec_always --no-startup-id nm-applet
 exec --no-startup-id todo
 exec --no-startup-id spotify
-exec --no-startup-id exec greeter_term
 exec --no-startup-id i3-msg "workspace $ws6; exec $browser"
