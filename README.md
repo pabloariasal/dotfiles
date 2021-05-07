@@ -18,9 +18,9 @@ The config can serve as inspiration, however, many hours of my life have been sp
 
 # Installation
 
-## Clone the Repo
+## Clone
 
-The repo must be cloned in the user's home at `~/dotfiles`
+The repo must be cloned in the user's home as `~/dotfiles`
 
 ```sh
 git clone https://github.com/pabloariasal/dotfiles.git ~
@@ -43,7 +43,7 @@ git clone https://github.com/pabloariasal/dotfiles.git ~
 ./misc/install_packages install_aur
 ```
 
-## Clone `i3blocks-contrib` Custom Fork
+## Clone `i3blocks-contrib` (custom fork)
 ```sh
 ./misc/install_packages install_i3blocks_contrib
 ```
@@ -56,9 +56,10 @@ git clone https://github.com/pabloariasal/dotfiles.git ~
 
 # Symlinking
 
-The configuration is divided into separate programs that can be symlinked independently using GNU `stow`
+The configuration is divided into separate programs that can be symlinked independently using [GNU stow](https://www.gnu.org/software/stow/).
 
 ```sh
 stow --verbose=2 scripts
 stow --verbose=2 greenclip
 ```
+etc.
