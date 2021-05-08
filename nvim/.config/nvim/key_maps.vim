@@ -107,7 +107,7 @@ autocmd FileType rust,cpp,python,markdown,haskell
 autocmd FileType rust,cpp,python,markdown,haskell
             \ nnoremap <buffer> <silent> <c-k> <cmd>execute "keepjumps norm! " . v:count1 . "zk"<CR>
 
-" Open fold under the cursor
+" toggle fold under the cursor
 nnoremap <silent> <c-l> za
 
 " Visual feedback when changing fold level
