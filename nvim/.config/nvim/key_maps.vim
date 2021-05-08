@@ -121,6 +121,7 @@ nnoremap zr zr<cmd>echo "foldlevel" &foldlevel<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap gq <Plug>(qf_qf_toggle)
 nmap gl <Plug>(qf_loc_toggle)
+nmap <leader>l <Plug>(qf_qf_switch)
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language Server Protocol
