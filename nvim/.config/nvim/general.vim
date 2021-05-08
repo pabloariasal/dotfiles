@@ -145,11 +145,11 @@ let g:fzf_layout = {'up':'~90%', 'window': { 'width': 0.9, 'height': 0.9}}
 let g:fzf_preview_window = ''
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Auto-pairs
+" Quickfix and Location lists
 "
-" Required Plugins: jiangmiao/auto-pairs
+" Required Plugins: vim-qf
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:AutoPairsMapSpace = 0
+let g:qf_max_height = 20
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Commands
