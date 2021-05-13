@@ -131,6 +131,7 @@ set softtabstop=4
 " Colors
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:gruvbox_sign_column=('bg0')
+let g:gruvbox_italic = 1
 set background=dark
 colorscheme gruvbox
 set termguicolors
