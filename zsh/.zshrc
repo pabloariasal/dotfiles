@@ -27,7 +27,7 @@ bindkey -v '^?' backward-delete-char
 
 setopt autocd
 
-# edit command line command in vim with v
+# edit command in vi mpde with <c-x><c-e>
 autoload -U edit-command-line
 zle -N edit-command-line
 bindkey '\C-x\C-e' edit-command-line
