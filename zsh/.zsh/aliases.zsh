@@ -41,6 +41,17 @@ function tmp()
   fi
 }
 
+# Toggle ctags file
+function toggle_ctags()
+{
+  local file='.ctagsenable'
+  if [[ -f $file ]]; then
+    rm $file && echo "Disabled ctags"
+  else
+    echo "fd -tf" > $file && echo "Enabled ctags"
+  fi
+}
+
 # Git
 alias g='git status'
 alias ga='git add'
