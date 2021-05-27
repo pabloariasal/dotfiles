@@ -63,6 +63,9 @@ vnoremap , :
 
 nnoremap <leader>e <cmd>ClearWhitespace<CR>
 
+"open command line window
+nnoremap <leader>s q:
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Quitting and Saving
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
