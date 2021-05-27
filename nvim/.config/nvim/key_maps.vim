@@ -67,8 +67,8 @@ nnoremap <leader>e <cmd>ClearWhitespace<CR>
 " Quitting and Saving
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <leader>w <cmd>wa<cr>
-nmap <leader>q <cmd>q<cr>
-nmap <leader><leader>q <cmd>qa<cr>
+nmap <leader>q <cmd>x<cr>
+nmap <leader><leader>q <cmd>xa<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Clipboard
