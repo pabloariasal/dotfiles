@@ -70,6 +70,9 @@ set spelllang=en_us
 "Dont generate a swap file
 set noswapfile
 
+"Scroll 8 spaces before edge
+set scrolloff=8
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " User Interface
 "
