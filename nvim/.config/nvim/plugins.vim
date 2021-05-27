@@ -46,10 +46,9 @@ Plug 'junegunn/fzf.vim'
 Plug 'hrsh7th/nvim-compe'
 Plug 'neovim/nvim-lspconfig'
 Plug 'morhetz/gruvbox'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 " Markdown
 Plug 'masukomi/vim-markdown-folding'
-" Python
-Plug 'tmhedberg/SimpylFold'
 " Haskell
 Plug 'itchyny/vim-haskell-indent'
 Plug 'Twinside/vim-haskellFold'

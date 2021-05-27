@@ -24,4 +24,4 @@ runtime folding.vim
 runtime lsp.vim
 runtime ctags.vim
 runtime auto-completion.vim
-" source ${HOME}/dotfiles/nvim/treesitter.vim
+runtime treesitter.vim
