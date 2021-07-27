@@ -28,7 +28,8 @@ floating_modifier $mod
 assign [class=$browser_class instance="teams."] $ws7
 assign [class=$browser_class instance="outlook."] $ws8
 assign [class=$browser_class instance="gmail."] $ws8
-assign [class=$terminal_class instance="__todo"] $ws9
+assign [class=$browser_class instance="calendar."] $ws9
+assign [class=$browser_class instance="keep."] $ws9
 for_window [class="^Spotify$"] move container to workspace $ws5
 
 #######################################################################
@@ -265,4 +266,6 @@ exec_always --no-startup-id nitrogen --restore
 exec_always --no-startup-id xss-lock --transfer-sleep-lock -- $locker
 exec --no-startup-id greenclip daemon
 exec_always --no-startup-id nm-applet
+exec --no-startup-id gcal
+exec --no-startup-id keep
 exec --no-startup-id i3-msg "workspace $ws6; exec $browser"
