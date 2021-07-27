@@ -1,2 +1,0 @@
-#!/bin/bash
-alacritty --title="todo" --class="__todo" --working-directory "${HOME}/Dropbox" -e $SHELL -lc "sleep 0.1 && nvim -S ~/.todo_session -O ${HOME}/Dropbox/plan.md ${HOME}/Dropbox/todo.md"
