@@ -53,8 +53,6 @@ aur_packages=(spotify
     ccls-git
     rofi-greenclip
     devour
-    dropbox-cli
-    dropbox
     google-chrome
     gotop-bin
 )
