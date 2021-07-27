@@ -29,19 +29,6 @@ command=$HOME/.i3blocks-contrib/$BLOCK_NAME/$BLOCK_NAME
 separator_block_width=15
 markup=none
 
-[mediaplayer]
-label=🎵
-instance=spotify
-interval=1
-signal=10
-
-[pomodoro]
-label=🍅
-format=json
-interval=1
-DEFAULT_TIMER=1500
-TIMER_LOOP=false
-
 [key_layout]
 label=⌨
 interval=1
@@ -67,11 +54,6 @@ interval=1
 interval=30
 markup=pango
 label=🔋
-
-[time_colombia]
-label=🇨🇴
-command=TZ=America/Bogota date +"%H:%M"
-interval=5
 
 [rofi-calendar]
 LABEL=📅
