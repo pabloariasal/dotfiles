@@ -23,5 +23,5 @@ lspconfig.ccls.setup {
 lspconfig.rust_analyzer.setup{}
 
 -- Python - python-language-server
-require'lspconfig'.pyls.setup{}
+lspconfig.pylsp.setup{}
 EOF
