@@ -2,18 +2,18 @@
 export FZF_DEFAULT_COMMAND="fd -tf --hidden -E '.git'"
 export FZF_DEFAULT_OPTS='--cycle --height 60%'
 
-# Jump to subdirectory
-# <c-space> shows hidden directories
-# <c-r> hides hidden directories
-export FZF_ALT_C_COMMAND="fd -td"
-export FZF_ALT_C_OPTS="--bind='ctrl-space:reload(fd -td --hidden -E ".git")' --bind='ctrl-r:reload(fd -td)'"
+# Jump to subdirectory (includes hidden directories)
+# <c-space> remove hidden directories from the view
+# <c-r> resets to the default view
+export FZF_ALT_C_COMMAND='fd -td --hidden -E ".git"'
+export FZF_ALT_C_OPTS="--bind='ctrl-space:reload(fd -td)' --bind='ctrl-r:reload(fd -td --hidden -E ".git")'"
 
-# fuzzy-find files and directories and enter them in the current command line buffer
-# <c-space> shows hidden elements
-# <c-r> hides hidden elements
+# fuzzy-find files and directories and enter them in the current command line buffer (including hidden elements)
+# <c-space> remove hidden elements from the view
 # <c-d> shows only directories (including hidden)
-export FZF_CTRL_T_COMMAND="fd"
-export FZF_CTRL_T_OPTS="--bind='ctrl-space:reload(fd --hidden -E ".git")' --bind='ctrl-r:reload(fd)' --bind='ctrl-d:reload(fd -td --hidden -E ".git")'"
+# <c-r> reset to default view
+export FZF_CTRL_T_COMMAND='fd --hidden -E ".git"'
+export FZF_CTRL_T_OPTS="--bind='ctrl-space:reload(fd)' --bind='ctrl-r:reload(fd --hidden -E ".git")' --bind='ctrl-d:reload(fd -td --hidden -E ".git")'"
 export FZF_CTRL_R_OPTS="--no-height --no-reverse --exact --preview 'echo {}' --preview-window down:3:wrap --bind '?:toggle-preview'"
 
 source ${HOME}/.fzf-key-bindings.zsh
