@@ -166,14 +166,11 @@ bindsym $mod+Shift+r restart
 # Key Bindings - Scratchpad
 # mod+Minus is the generic scratchpad
 bindsym $mod+Shift+minus move scratchpad
-bindsym $mod+minus [instance="^(?!__scratchpad$)" class="^(?!Spotify$)"] scratchpad show
+bindsym $mod+minus [instance="^(?!__scratchpad$)"] scratchpad show
 
 # mod+0 is the drop down terminal
 for_window [class=$terminal_class instance="__scratchpad"] move scratchpad
 bindsym $mod+0 exec i3-toggle-scratchpad
-
-# mod+Plus is music
-bindsym $mod+plus [class="^Spotify$"] scratchpad show
 
 #######################################################################
 # Key Bindings - Sticky Window
