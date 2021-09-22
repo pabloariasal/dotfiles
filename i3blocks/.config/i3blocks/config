@@ -33,6 +33,21 @@ markup=none
 label=⌨
 interval=1
 
+[memory]
+label=💽
+interval=1
+
+[cpu_usage2]
+markup=pango
+interval=persist
+#min_width=CPU 100.00%
+LABEL=💻
+DECIMALS=0
+
+#min_width=CPU: 100.00%
+#T_WARN=50
+#T_CRIT=80
+#DECIMALS=2
 # Volume indicator
 #
 # The first parameter sets the step (and units to display)
@@ -55,10 +70,10 @@ interval=30
 markup=pango
 label=🔋
 
-[rofi-calendar]
+[calendar]
 LABEL=📅
 interval=5
-DATEFTM=+%a %b %e %Y
+DATEFMT=+%a %b %e %Y
 align=left
 
 [time]
