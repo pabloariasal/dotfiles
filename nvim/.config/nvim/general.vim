@@ -169,3 +169,9 @@ let g:dispatch_no_maps = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "clear trialing white space
 command! ClearWhitespace %s/\s\+$//
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" autocommands
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"enable spell checkinf for markdown files
+autocmd FileType markdown setlocal spell
