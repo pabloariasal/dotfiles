@@ -53,7 +53,7 @@ function toggle_ctags()
 }
 
 # Git
-alias g='git'
+alias gr='git restore'
 alias gs='git status'
 alias ga='git add'
 alias gaa='git add --all'
@@ -67,9 +67,10 @@ alias gcb='git checkout -b'
 alias gco='git checkout'
 alias gd='git diff'
 alias gdca='git diff --cached'
-alias gf='git fetch'
+alias gf='git fetch --prune'
 alias gl='git log'
 alias glp='git log --stat -p'
+alias gls='git log --stat'
 alias glg='git log --oneline --graph --decorate'
 alias glgd='git log --oneline --graph --decorate HEAD origin/develop'
 alias glgm='git log --oneline --graph --decorate HEAD origin/master'
@@ -80,7 +81,13 @@ alias gpu='git push --set-upstream origin HEAD'
 alias gpf='git push --force'
 alias grb='git rebase'
 alias gsta='git stash'
-alias grh='git reset --hard HEAD'
+alias grh='git reset --hard'
+alias grhh='git reset --hard HEAD'
 alias gb='git branch -vv'
 alias gba='git branch --all -vv'
 alias gcl='git clean -f -d'
+
+function gclb() {
+  git remote update --prune &&
+  git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -D
+}
