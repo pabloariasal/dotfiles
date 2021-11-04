@@ -11,12 +11,12 @@ set $locker lock-screen
 set $ws1 1:work1
 set $ws2 2:work2
 set $ws3 3:work3
-set $ws4 4:cal
+set $ws4 4:work4
 set $ws5 5:music
 set $ws6 6:web
 set $ws7 7:chat
 set $ws8 8:email
-set $ws9 9:notes
+set $ws9 9:cal
 
 #######################################################################
 # General
@@ -28,8 +28,7 @@ floating_modifier $mod
 assign [class=$browser_class instance="teams."] $ws7
 assign [class=$browser_class instance="outlook."] $ws8
 assign [class=$browser_class instance="gmail."] $ws8
-assign [class=$browser_class instance="calendar."] $ws4
-assign [class=$browser_class instance="keep."] $ws9
+assign [class=$browser_class instance="calendar."] $ws9
 for_window [class="^Spotify$"] move container to workspace $ws5
 
 #######################################################################
@@ -265,5 +264,4 @@ exec_always --no-startup-id xss-lock --transfer-sleep-lock -- $locker
 exec --no-startup-id greenclip daemon
 exec_always --no-startup-id nm-applet
 exec --no-startup-id gcal
-exec --no-startup-id keep
 exec --no-startup-id i3-msg "workspace $ws6; exec $browser"
