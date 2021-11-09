@@ -29,21 +29,6 @@ command=$HOME/.i3blocks-contrib/$BLOCK_NAME/$BLOCK_NAME
 separator_block_width=15
 markup=none
 
-[key_layout]
-label=⌨
-interval=1
-
-[memory]
-label=💽
-interval=1
-
-[cpu_usage2]
-markup=pango
-interval=persist
-#min_width=CPU 100.00%
-LABEL=💻
-DECIMALS=0
-
 #min_width=CPU: 100.00%
 #T_WARN=50
 #T_CRIT=80
