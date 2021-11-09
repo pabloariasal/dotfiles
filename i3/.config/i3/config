@@ -209,9 +209,6 @@ bindsym XF86AudioPrev exec playerctl previous
 # disable title bars
 for_window [class="^.*"] border pixel 1
 
-# Only enable gaps on a workspace when there is at least one container
-smart_gaps on
-
 # Only add borders if there is more than container in workspace
 smart_borders on
 
