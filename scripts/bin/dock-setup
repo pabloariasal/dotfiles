@@ -9,7 +9,7 @@ ln -sf "$DOCKED_ALACRITTY_CONFIG" "$ALACRITTY_OVERRIDE"
 touch ~/.config/alacritty/alacritty.yml
 i3-msg restart
 
-setxkbmap -option compose:rctrl
+setxkbmap -option compose:ralt
 setxkbmap -option caps:escape
 setxkbmap us
 xbindkeys
