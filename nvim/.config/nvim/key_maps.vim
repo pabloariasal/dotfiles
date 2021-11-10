@@ -61,7 +61,7 @@ nnoremap <silent> <c-k> {
 nnoremap , :
 vnoremap , :
 
-nnoremap <leader>c <cmd>ClearWhitespace<CR>
+nnoremap <leader>x <cmd>ClearWhitespace<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Quitting and Saving
