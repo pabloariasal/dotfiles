@@ -61,13 +61,14 @@ nnoremap <silent> <c-k> {
 nnoremap , :
 vnoremap , :
 
-nnoremap <leader>e <cmd>ClearWhitespace<CR>
+nnoremap <leader>c <cmd>ClearWhitespace<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Quitting and Saving
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <leader>w <cmd>wa<cr>
 nmap <leader>q <cmd>x<cr>
+nmap <leader>e <cmd>wq<cr>
 nmap <leader><leader>q <cmd>xa<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
