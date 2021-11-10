@@ -1,0 +1,23 @@
+general {
+        colors = true
+        output_format = "i3bar"
+        interval = 1
+}
+
+order += "battery all"
+order += "tztime date"
+order += "tztime time"
+
+battery all {
+        format = "%status %percentage"
+}
+
+tztime time {
+        format = "%time"
+        format_time = "%H:%M"
+}
+
+tztime date {
+        format = "%time"
+        format_time = "%a %b %e"
+}
