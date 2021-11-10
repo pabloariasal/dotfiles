@@ -39,12 +39,12 @@ markup=none
 # The second parameter overrides the mixer selection
 # See the script for details.
 [volume]
-label=🔊
+label=VOL 
 interval=1
 signal=10
 
 [backlight]
-label=☀
+label=BRI 
 interval=1
 
 # Battery indicator
@@ -53,10 +53,9 @@ interval=1
 [battery]
 interval=30
 markup=pango
-label=🔋
+label=BAT 
 
 [calendar]
-LABEL=📅
 interval=5
 DATEFMT=+%a %b %e %Y
 align=left
