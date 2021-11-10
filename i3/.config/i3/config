@@ -35,6 +35,7 @@ for_window [class="^Spotify$"] move container to workspace $ws5
 # Window rules
 for_window [class=$terminal_class instance="__text_scratchpad"] floating enable, resize set 50 ppt 50 ppt, move position centered
 for_window [class=Pavucontrol] floating enable, resize set 50 ppt 50 ppt, move position centered
+for_window [class=Nitrogen] floating enable
 
 #######################################################################
 # Key Bindings - Starting Programs
