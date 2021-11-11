@@ -179,12 +179,12 @@ bindsym --release Shift+Print exec flameshot gui
 
 #######################################################################
 # Key Bindings - Volume Control
-bindsym XF86AudioRaiseVolume exec volume-control up; exec notify-volume
-bindsym XF86AudioLowerVolume exec volume-control down; exec notify-volume
-bindsym XF86AudioMute exec volume-control toggle; exec notify-volume
-bindsym $mod+F11 exec volume-control up; exec notify-volume
-bindsym $mod+F10 exec volume-control down; exec notify-volume
-bindsym $mod+F9 exec volume-control toggle; exec notify-volume
+bindsym XF86AudioRaiseVolume exec volume-control up
+bindsym XF86AudioLowerVolume exec volume-control down
+bindsym XF86AudioMute exec volume-control toggle
+bindsym $mod+F11 exec volume-control up
+bindsym $mod+F10 exec volume-control down
+bindsym $mod+F9 exec volume-control toggle
 
 #######################################################################
 # Key Bindings - Screen Brightness Control

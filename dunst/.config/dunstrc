@@ -166,7 +166,7 @@
     max_icon_size = 32
 
     # Paths to default icons.
-    icon_path = /usr/share/icons/mate/scalable/status:/usr/share/icons/mate/scalable/devices
+    icon_path = /usr/share/icons/Adwaita/scalable/status:/usr/share/icons/Adwaita/scalable/devices
 
     ### History ###
 

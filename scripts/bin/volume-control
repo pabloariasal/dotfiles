@@ -5,26 +5,27 @@ INCREMENT=5
 if [[ $(lsb_release --id) == *"Ubuntu"* ]]; then
     case "$1" in
         up)
-            amixer -D pulse set Master "$INCREMENT"%+ unmute
+            vol=$(amixer -D pulse set Master "$INCREMENT"%+ unmute)
             ;;
         down)
-            amixer -D pulse set Master "$INCREMENT"%- unmute
+            vol=$(amixer -D pulse set Master "$INCREMENT"%- unmute)
             ;;
         toggle)
-            amixer -D pulse set Master toggle
+            vol=$(amixer -D pulse set Master toggle)
             ;;
     esac
 else
     case "$1" in
         up)
-            amixer set Master "$INCREMENT"%+ unmute
+            vol=$(amixer set Master "$INCREMENT"%+ unmute)
             ;;
         down)
-            amixer set Master "$INCREMENT"%- unmute
+            vol=$(amixer set Master "$INCREMENT"%- unmute)
             ;;
         toggle)
-            amixer set Master toggle
+            vol=$(amixer set Master toggle)
             ;;
     esac
 fi
 
+notify-volume "$vol"
