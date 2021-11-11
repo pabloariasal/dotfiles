@@ -231,7 +231,7 @@ client.background       #ffffff
 # Status bar
 bar {
         status_command i3blocks
-        font pango:DejaVu Sans Mono 9
+        font pango:DejaVu Sans Mono 10
         strip_workspace_numbers yes
         workspace_min_width 45
         colors {
