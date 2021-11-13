@@ -1,31 +1,16 @@
 #!/bin/bash
 
 INCREMENT=5
-# Ubuntu uses pulseaudio
-if [[ $(lsb_release --id) == *"Ubuntu"* ]]; then
-    case "$1" in
-        up)
-            vol=$(amixer -D pulse set Master "$INCREMENT"%+ unmute)
-            ;;
-        down)
-            vol=$(amixer -D pulse set Master "$INCREMENT"%- unmute)
-            ;;
-        toggle)
-            vol=$(amixer -D pulse set Master toggle)
-            ;;
-    esac
-else
-    case "$1" in
-        up)
-            vol=$(amixer set Master "$INCREMENT"%+ unmute)
-            ;;
-        down)
-            vol=$(amixer set Master "$INCREMENT"%- unmute)
-            ;;
-        toggle)
-            vol=$(amixer set Master toggle)
-            ;;
-    esac
-fi
+case "$1" in
+    up)
+        vol=$(amixer set Master "$INCREMENT"%+ unmute)
+        ;;
+    down)
+        vol=$(amixer set Master "$INCREMENT"%- unmute)
+        ;;
+    toggle)
+        vol=$(amixer set Master toggle)
+        ;;
+esac
 
 notify-volume "$vol"
