@@ -231,9 +231,9 @@ client.background       #ffffff
 # Status bar
 bar {
         status_command i3blocks
-        font pango:DejaVu Sans Mono 10
+        font pango:JetBrainsMono 10
         strip_workspace_numbers yes
-        workspace_min_width 45
+        workspace_min_width 40
         colors {
                 background #282828
                 statusline #a89984
