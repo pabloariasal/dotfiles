@@ -8,10 +8,10 @@ volume=$(echo "$1" | tail -1 | awk '{print $4}' | sed 's/[^0-9]*//g')
 mute=$(echo "$1" | tail -1 | awk '{print $6}' | sed 's/[^a-z]*//g')
 if [[ $volume == 0 || "$mute" == "off" ]]; then
     # Show the sound muted notification
-    dunstify -a "notify_volume" -u low -i "audio-volume-muted-symbolic" -r "$msgId" "muted"
+    dunstify -a "notify_volume" -u low -i "audio-volume-muted" -r "$msgId" "muted"
 else
     # Show the volume notification
-    dunstify -a "notify_volume" -u low -i "audio-volume-high-symbolic" -r "$msgId" "${volume}%"
+    dunstify -a "notify_volume" -u low -i "audio-volume-high" -r "$msgId" "${volume}%"
 fi
 
 # Play the volume changed sound
