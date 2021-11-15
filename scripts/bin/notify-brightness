@@ -3,11 +3,8 @@
 # Arbitrary but unique message id
 msgId="99154"
 
-icons="/usr/share/icons/mate/scalable/status"
-icon="${icons}/display-brightness-symbolic.svg"
-
 brightness=$(xbacklight | cut -f1 -d ".")
-dunstify -a "notify_brightness" -u low -i "$icon" -r "$msgId" "Brightness: ${brightness}%"
+dunstify -a "notify_brightness" -u low -i "display-brightness-symbolic" -r "$msgId" "Brightness: ${brightness}%"
 
 # Play the volume changed sound
 canberra-gtk-play -i audio-volume-change -d "changedBrightness"
