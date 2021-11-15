@@ -39,13 +39,13 @@ markup=none
 # The second parameter overrides the mixer selection
 # See the script for details.
 [volume]
-label=VOL 
+label=🔊
 interval=1
 signal=10
 color=#98971a
 
 [backlight]
-label=BRI 
+label=🔆
 interval=1
 color=#458588
 
@@ -55,7 +55,7 @@ color=#458588
 [battery]
 interval=30
 markup=pango
-label=BAT 
+label=🔋
 color=#b16286
 
 [calendar]
