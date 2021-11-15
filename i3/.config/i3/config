@@ -236,8 +236,13 @@ bar {
         workspace_min_width 40
         colors {
                 background #282828
-                statusline #a89984
-                separator #458588
+                statusline #eddbb2
+
+                focused_workspace  #4c7899 #458588 #ffffff
+                active_workspace   #333333 #5f676a #ffffff
+                inactive_workspace #333333 #222222 #888888
+                urgent_workspace   #2f343a #900000 #ffffff
+                binding_mode       #2f343a #900000 #ffffff  separator #458588
         }
 }
 
