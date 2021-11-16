@@ -54,6 +54,7 @@ function toggle_ctags()
 
 # Git
 alias gr='git restore'
+alias grc='git restore --staged'
 alias gs='git status'
 alias ga='git add'
 alias gaa='git add --all'
