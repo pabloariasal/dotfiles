@@ -47,6 +47,7 @@ Plug 'hrsh7th/nvim-compe'
 Plug 'neovim/nvim-lspconfig'
 Plug 'morhetz/gruvbox'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'jiangmiao/auto-pairs'
 " Markdown
 Plug 'masukomi/vim-markdown-folding'
 " Haskell
