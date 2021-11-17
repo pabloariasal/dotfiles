@@ -45,3 +45,5 @@ function fg-bg() {
 }
 zle -N fg-bg
 bindkey '^Z' fg-bg
+
+lwd
