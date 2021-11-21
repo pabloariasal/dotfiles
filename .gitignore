@@ -4,6 +4,7 @@ antigen.zsh.zwc
 nvim/.config/nvim/autoload/
 nvim/.config/nvim/plugged/
 *.spl
+*.sug
 vifm/.config/vifm/scripts/
 vifm/.config/vifm/vifm-help.txt
 vifm/.config/vifm/vifminfo.json

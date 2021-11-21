@@ -156,3 +156,9 @@ nnoremap <silent> <leader>s <cmd>History:<cr>
 "search but don't jump
 map z*  *N
 map z#  #N
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Spelling
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <leader>ig <cmd>set spell spelllang=de_de<cr>
+nnoremap <leader>ie <cmd>set spell spelllang=en_us<cr>
