@@ -236,7 +236,7 @@ bar {
         strip_workspace_numbers yes
         workspace_min_width 40
         colors {
-                background #282828aa
+                background #282828cc
                 statusline #eddbb2
 
                 focused_workspace  #4c7899 #458588 #ffffff
