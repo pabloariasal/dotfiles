@@ -1,0 +1,50 @@
+# i3status configuration file.
+# see "man i3status" for documentation.
+
+# It is important that this file is edited as UTF-8.
+# The following line should contain a sharp s:
+# ß
+# If the above line is not correctly displayed, fix your editor first!
+
+general {
+        output_format = "i3bar"
+        markup = "pango"
+        colors = true
+        interval = 1
+}
+
+order += "battery all"
+order += "volume master"
+order += "time"
+order += "tztime local"
+
+volume master {
+        format = "🔊%volume"
+        format_muted = "🔊 muted"
+        device = "pulse"
+}
+
+battery all {
+        format = "🔋%percentage [%remaining]"
+        # format_down = "No battery"
+        # status_chr = "⚡ CHR"
+        # status_bat = "🔋 BAT"
+        # status_unk = "? UNK"
+        # status_full = "☻ FULL"
+        # path = "/sys/class/power_supply/BAT%d/uevent"
+        hide_seconds = true
+        last_full_capacity = true
+        integer_battery_capacity = true
+        threshold_type = "percentage"
+        low_threshold = 30
+}
+
+time {
+        format = "%A %b %e %Y"
+}
+
+tztime local {
+  format = "<span size='large'>%time</span>"
+  format_time = "%H:%M"
+}
+

@@ -230,11 +230,12 @@ client.background       #ffffff
 #######################################################################
 # Status bar
 bar {
-        status_command i3blocks
+        status_command i3status-wrapper
         i3bar_command i3bar --transparency
-        font pango:JetBrainsMono 11
+        font pango:JetBrainsMono Nerd Font 11
         strip_workspace_numbers yes
-        workspace_min_width 40
+        workspace_min_width 45
+        separator_symbol " / "
         colors {
                 background #282828cc
                 statusline #eddbb2

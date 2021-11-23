@@ -1,0 +1,12 @@
+#!/bin/sh
+# shell script to prepend i3status with more stuff
+update_brightness() {
+  brightness=$(xbacklight | cut -f1 -d ".")
+}
+
+i3status | (read line && echo "$line" && read line && echo "$line" && read line && echo "$line" && update_brightness && while :
+do
+  read line
+  update_brightness
+  echo ",[{\"full_text\":\"🔆${brightness}%\" },${line#,\[}" || exit 1
+done)

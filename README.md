@@ -2,10 +2,10 @@
 
 Arch Linux setup centered around practicality and minimalism.
 
-* i3-gaps + i3lock + i3bar + i3blocks (custom contrib fork)
+* i3-gaps + i3lock + i3bar + i3status
 * zsh (no oh-my-zsh), powerlevel10k prompt
 * alacritty
-* nvim (0.5+ HEAD with Lua nvim.lsp config 😎)
+* nvim
 * rofi absolutely everything
 * dunst
 * picom (no weird forks, just normal picom)
@@ -41,11 +41,6 @@ git clone https://github.com/pabloariasal/dotfiles.git ~
 ## Install AUR Packages
 ```sh
 ./misc/install_packages install_aur
-```
-
-## Clone `i3blocks-contrib` (custom fork)
-```sh
-./misc/install_packages install_i3blocks_contrib
 ```
 
 ## Grab the `nerd-fonts`
