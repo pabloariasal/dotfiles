@@ -157,6 +157,10 @@ snippet cr "const reference" i
 const $1&
 endsnippet
 
+snippet ad "forward declaration struct" b
+auto $1 = $2;
+endsnippet
+
 snippet ca "const auto" 1
 const auto 
 endsnippet
@@ -167,4 +171,12 @@ endsnippet
 
 snippet cap "const auto pointer" i
 const auto* 
+endsnippet
+
+snippet fdc "forward declaration class" b
+class $1;
+endsnippet
+
+snippet fds "forward declaration struct" b
+struct $1;
 endsnippet
