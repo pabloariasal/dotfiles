@@ -248,6 +248,9 @@ bar {
         }
 }
 
+# hide status bar
+bindsym $mod+semicolon bar mode toggle
+
 #######################################################################
 # Auto Start Programs
 exec_always --no-startup-id launch-picom
