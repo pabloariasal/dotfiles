@@ -175,3 +175,4 @@ command! ClearWhitespace %s/\s\+$//
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "enable spell checkinf for markdown files
 autocmd FileType markdown setlocal spell
+autocmd FileType help wincmd L
