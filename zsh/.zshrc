@@ -46,4 +46,5 @@ function fg-bg() {
 zle -N fg-bg
 bindkey '^Z' fg-bg
 
+# switch to last visited directory
 lwd

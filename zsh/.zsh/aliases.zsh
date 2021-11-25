@@ -28,6 +28,9 @@ alias gk='devour gitk'
 alias fe='devour feh'
 alias sx='devour sxiv'
 
+# add ssh keys to agent
+alias sag='ssh-add ~/.ssh/github'
+
 # do easy calculations on the terminal
 calc() { echo "scale=2;$1" | bc; }
 
