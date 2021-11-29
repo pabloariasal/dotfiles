@@ -212,8 +212,13 @@ smart_borders on
 #System font
 font pango:DejaVu Sans Mono 0
 
+#######################################################################
+# Gaps
 gaps inner 7
-gaps outer 0
+gaps outer 10
+
+# only enable outer gaps when there is exactly one container
+smart_gaps inverse_outer
 
 #######################################################################
 # Colors
