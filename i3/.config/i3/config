@@ -45,6 +45,9 @@ bindsym $mod+Delete exec powermenu
 bindsym $mod+g exec text-scratchpad
 bindsym $mod+d exec rofimoji
 
+bindsym $mod+Ctrl+8 exec spotify
+bindsym $mod+Ctrl+9 exec gcal
+
 #######################################################################
 # Key Bindings - Windows
 # Change Window Focus
