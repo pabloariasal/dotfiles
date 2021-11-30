@@ -42,7 +42,7 @@ bindsym $mod+p exec dmenu_run -p "Run"
 bindsym $mod+c exec dmenu-clipboard
 bindsym $mod+Delete exec dmenu-powermenu
 bindsym $mod+g exec text-scratchpad
-bindsym $mod+d exec dmenu-emoji
+bindsym $mod+i exec dmenu-emoji
 
 bindsym $mod+Ctrl+8 exec spotify
 bindsym $mod+Ctrl+9 exec gcal
