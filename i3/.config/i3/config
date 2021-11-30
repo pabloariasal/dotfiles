@@ -38,12 +38,11 @@ for_window [class=Nitrogen] floating enable
 # Key Bindings - Starting Programs
 bindsym $mod+Return exec $terminal
 bindsym $mod+b exec $browser
-bindsym $mod+p exec rofi -show run
-bindsym $mod+i exec rofi -show window
-bindsym $mod+c exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
-bindsym $mod+Delete exec powermenu
+bindsym $mod+p exec dmenu_run -p "Run"
+bindsym $mod+c exec dmenu-clipboard
+bindsym $mod+Delete exec dmenu-powermenu
 bindsym $mod+g exec text-scratchpad
-bindsym $mod+d exec rofimoji
+bindsym $mod+d exec dmenu-emoji
 
 bindsym $mod+Ctrl+8 exec spotify
 bindsym $mod+Ctrl+9 exec gcal

@@ -1,7 +1,5 @@
 #!/bin/bash
 
-uptime=$(uptime -p | sed -e 's/up //g')
-
 shutdown="Shutdown"
 reboot="Reboot"
 lock="Lock"
@@ -9,10 +7,10 @@ suspend="Suspend"
 hibernate="Hibernate"
 logout="Logout"
 
-# Variable passed to rofi
-options="$lock\n$suspend\n$hibernate\n$logout\n$reboot\n$shutdown"
+# Variable passed to dmenu
+options="$lock\n$reboot\n$shutdown\n$suspend\n$hibernate\n$logout"
 
-chosen="$(echo -e "$options" | rofi -p "Uptime - $uptime" -dmenu -selected-row 0)"
+chosen="$(echo -e "$options" | dmenu -p "What do?")"
 case $chosen in
     $shutdown)
         systemctl poweroff

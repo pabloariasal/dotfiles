@@ -6,7 +6,7 @@ Arch Linux setup centered around practicality and minimalism.
 * zsh (no oh-my-zsh), powerlevel10k prompt
 * alacritty
 * nvim
-* rofi absolutely everything
+* patched dmenu
 * dunst
 * picom (no weird forks, just normal picom)
 * gruvbox is life
