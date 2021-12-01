@@ -5,7 +5,6 @@ set $browser ${CHROMIUM_EXEC}
 set $browser_class "^Google-chrome$"
 set $terminal alacritty
 set $terminal_class "^Alacritty$"
-set $locker lock-screen
 
 # workspaces
 set $ws1 1:1
@@ -278,6 +277,6 @@ bindsym $mod+semicolon bar mode toggle
 # Auto Start Programs
 exec_always --no-startup-id launch-picom
 exec_always --no-startup-id nitrogen --restore
-exec_always --no-startup-id xss-lock --transfer-sleep-lock -- $locker
+exec_always --no-startup-id xss-lock --transfer-sleep-lock -- lock-screen
 exec --no-startup-id greenclip daemon
 exec_always --no-startup-id nm-applet
