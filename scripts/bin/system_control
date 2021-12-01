@@ -1,0 +1,25 @@
+#!/bin/bash
+
+chosen="$1"
+case $chosen in
+    "shutdown")
+        systemctl poweroff
+        ;;
+    "reboot")
+        systemctl reboot
+        ;;
+    "lock")
+        lock-screen
+        ;;
+    "suspend")
+        lock-screen &&
+        systemctl suspend
+        ;;
+    "hibernate")
+        lock-screen &&
+        systemctl hibernate
+        ;;
+    "logout")
+        i3-msg exit
+        ;;
+esac
