@@ -217,7 +217,7 @@ font pango:DejaVu Sans Mono 0
 #######################################################################
 # Gaps
 gaps inner 7
-gaps outer 10
+gaps outer 5
 
 # only enable outer gaps when there is exactly one container
 smart_gaps inverse_outer
