@@ -39,7 +39,8 @@ bindsym $mod+Return exec $terminal
 bindsym $mod+b exec $browser
 bindsym $mod+p exec dmenu_run -p "Run"
 bindsym $mod+c exec dmenu-clipboard
-bindsym $mod+g exec text-scratchpad
+bindsym $mod+g exec text-scratchpad "txt"
+bindsym $mod+Shift+g exec text-scratchpad "md"
 bindsym $mod+i exec dmenu-emoji
 
 bindsym $mod+Ctrl+8 exec spotify
