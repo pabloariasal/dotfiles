@@ -1,6 +1,0 @@
-#!/bin/bash
-
-i3-msg "append_layout ~/.config/i3/layouts/stacked.json" &&
-google-chrome-stable &
-alacritty &
-alacritty &
