@@ -9,11 +9,6 @@ ln -sf "$DOCKED_ALACRITTY_CONFIG" "$ALACRITTY_OVERRIDE"
 touch ~/.config/alacritty/alacritty.yml
 i3-msg restart
 
-setxkbmap -option compose:ralt
-setxkbmap -option caps:escape
-setxkbmap us
-xbindkeys
-
 # set the repeat rate of keys
 # first number is after how many seconds the key will start repeating
 # second number is repetitions per second

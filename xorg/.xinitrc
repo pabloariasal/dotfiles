@@ -36,11 +36,6 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-setxkbmap -option compose:rctrl
-setxkbmap -option caps:escape
-setxkbmap us
-xbindkeys
-
 # set the repeat rate of keys
 # first number is after how many seconds the key will start repeating
 # second number is repetitions per second
