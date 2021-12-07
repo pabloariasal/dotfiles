@@ -4,7 +4,7 @@
 " Required Plugins: fzf and fzf.vim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Show fuzzy window at the bottom of the screen
-let g:fzf_layout = { 'down': '40%' }
+let g:fzf_layout = { 'down': '40%', 'window': '15new' }
 
 " Empty value to disable preview window altogether
 let g:fzf_preview_window = ''
