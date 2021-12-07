@@ -43,12 +43,6 @@ git clone https://github.com/pabloariasal/dotfiles.git ~
 ./misc/install_packages install_aur
 ```
 
-## Grab the `nerd-fonts`
-```
-./misc/install_fonts clone_nerd_fonts
-./misc/install_fonts install_nerd_fonts
-```
-
 # Symlinking
 
 The configuration is divided into separate programs that can be symlinked independently using [GNU stow](https://www.gnu.org/software/stow/).
