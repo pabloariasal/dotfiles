@@ -167,3 +167,8 @@ map z#  #N
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <leader>ig <cmd>set spell spelllang=de_de<cr>
 nnoremap <leader>ie <cmd>set spell spelllang=en_us<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Misc
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <F1> <cmd>source ~/.config/nvim/init.vim<cr>
