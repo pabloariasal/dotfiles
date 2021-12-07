@@ -94,10 +94,13 @@ noremap <silent> <C-Up> :resize +3<CR>
 noremap <silent> <C-Down> :resize -3<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Tabs
+" Move text up and down
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <silent> <a-j> gt
-nnoremap <silent> <a-k> gT
+nnoremap <a-j> :m .+1<CR>==
+nnoremap <a-k> :m .-2<CR>==
+
+vnoremap <c-k> :m '<-2<CR>gv=gv
+vnoremap <c-k> :m '<-2<CR>gv=gv
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Folding
