@@ -150,6 +150,7 @@ nnoremap <silent> <leader>g <cmd>Rg<cr>
 nnoremap <silent> <leader>j <cmd>BLines<cr>
 nnoremap <silent> <leader>s <cmd>History:<cr>
 nnoremap <silent> <leader>z <cmd>Helptags<cr>
+nnoremap <silent> <leader>b <cmd>BDel<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Star

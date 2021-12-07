@@ -142,15 +142,6 @@ colorscheme gruvbox
 set termguicolors
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Fuzzy Finding
-"
-" Required Plugins: fzf and fzf.vim
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:fzf_layout = {'up':'~90%', 'window': { 'width': 0.9, 'height': 0.9}}
-" Empty value to disable preview window altogether
-let g:fzf_preview_window = ''
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Quickfix and Location lists
 "
 " Required Plugins: vim-qf
@@ -175,4 +166,7 @@ command! ClearWhitespace %s/\s\+$//
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "enable spell checkinf for markdown files
 autocmd FileType markdown setlocal spell
+"Open help bufers on the right per default
 autocmd FileType help wincmd L
+"Don't show numbers on terminal buffers (needed for fzf)
+autocmd TermOpen * setlocal nonumber norelativenumber
