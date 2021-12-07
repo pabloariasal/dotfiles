@@ -63,6 +63,9 @@ vnoremap , :
 
 nnoremap <leader>x <cmd>ClearWhitespace<CR>
 
+"toggle line numbers
+nnoremap <leader>n <cmd>setlocal number!<CR>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Quitting and Saving
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
