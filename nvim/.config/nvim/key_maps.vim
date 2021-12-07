@@ -78,6 +78,7 @@ nmap <leader><leader>q <cmd>xa<cr>
 nnoremap <leader>p "+p
 nnoremap <leader>P "+P
 nnoremap <leader>y "+y
+nnoremap <leader>Y "+y$
 xnoremap <leader>y "+y
 xnoremap <leader>p "+p
 
