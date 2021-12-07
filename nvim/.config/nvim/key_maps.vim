@@ -127,7 +127,7 @@ nmap <leader>l <Plug>(qf_qf_switch)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language Server Protocol
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> gd <cmd>lua vim.lsp.buf.declaration()<CR>
 nnoremap <silent> gy <cmd>lua vim.lsp.buf.type_definition()<CR>
 nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
 nnoremap <silent> <leader>v <cmd>lua vim.lsp.buf.references()<CR>
