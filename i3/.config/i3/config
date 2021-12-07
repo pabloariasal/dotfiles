@@ -232,11 +232,14 @@ font pango:DejaVu Sans Mono 0
 
 #######################################################################
 # Gaps
-gaps inner 7
-gaps outer 5
+gaps inner 3
+# gaps outer 3
 
-# only enable outer gaps when there is exactly one container
-smart_gaps inverse_outer
+# Only enable gaps on a workspace when there is at least one container
+# smart_gaps on
+
+# Only enable outer gaps when there is exactly one container
+# smart_gaps inverse_outer
 
 #######################################################################
 # Colors
