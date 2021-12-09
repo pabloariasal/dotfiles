@@ -26,7 +26,7 @@ setopt extended_history
 # skip cmds with leading space from history
 setopt hist_ignore_space
 # Treated as a pattern at the time history files are written
-CMD_HISTORY_IGNORE="d|n|paru"
+CMD_HISTORY_IGNORE="k|j|d|n|paru"
 GIT_HISTORY_IGNORE="g|gs|gc|gd|gs *|gdca|gapa|gl|glg|glg[dma]|gca|gcan|gp|gpf|gpu|gb|gba|grh|gm"
 LS_HISTORY_IGNORE="l|l[slat]"
 HISTORY_IGNORE="($CMD_HISTORY_IGNORE|$GIT_HISTORY_IGNORE|$LS_HISTORY_IGNORE)"
