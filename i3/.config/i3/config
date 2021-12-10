@@ -260,17 +260,18 @@ bar {
         i3bar_command i3bar --transparency
         font pango:JetBrainsMono 11
         strip_workspace_numbers yes
-        workspace_min_width 45
+        workspace_min_width 65
         separator_symbol " / "
+        height 20
         colors {
-                background #282828cc
+                background #282828aa
                 statusline #eddbb2
 
-                focused_workspace  #4c7899 #458588 #ffffff
-                active_workspace   #333333 #5f676a #ffffff
-                inactive_workspace #333333 #222222 #888888
-                urgent_workspace   #2f343a #900000 #ffffff
-                binding_mode       #2f343a #900000 #ffffff  separator #458588
+                # focused_workspace  #4c7899 #458588 #ffffff
+                # active_workspace   #333333 #5f676a #ffffff
+                # inactive_workspace #333333 #222222 #888888
+                # urgent_workspace   #2f343a #900000 #ffffff
+                # binding_mode       #2f343a #900000 #ffffff  separator #458588
         }
 }
 
