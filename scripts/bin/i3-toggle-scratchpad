@@ -2,4 +2,4 @@
 if  [ -z "$(xdotool search --classname '__terminal_scratchpad')" ]; then
     alacritty --class="__terminal_scratchpad" & sleep 0.4
 fi
-i3-msg [instance="__terminal_scratchpad"] scratchpad show, resize set 80 ppt 80 ppt, move position centered
+i3-msg [instance="__terminal_scratchpad"] scratchpad show
