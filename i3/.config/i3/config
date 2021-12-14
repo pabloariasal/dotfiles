@@ -1,7 +1,7 @@
 #######################################################################
 # Variables
 set $mod Mod4
-set $browser ${CHROMIUM_EXEC}
+set $browser firefox
 set $browser_class "^Google-chrome$"
 set $terminal alacritty
 set $terminal_class "^Alacritty$"

@@ -1,0 +1,9 @@
+#TabsToolbar {
+    visibility: collapse;
+}
+
+#navigator-toolbox:hover #TabsToolbar {
+    visibility: visible;
+}
+
+/* :root {--tab-min-height: 10 !important;} */
