@@ -46,6 +46,7 @@ return require('packer').startup(function()
   use 'masukomi/vim-markdown-folding'
   use 'itchyny/vim-haskell-indent'
   use 'Twinside/vim-haskellFold'
+  use 'dcampos/nvim-snippy'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

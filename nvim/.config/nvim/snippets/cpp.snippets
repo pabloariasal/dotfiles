@@ -1,0 +1,113 @@
+snippet po "pragma once directive"
+    #pragma once
+snippet abc "Abstract Base Class"
+    class $1
+    {
+    public:
+        $1() = default;
+        virtual ~$1() = default;
+
+        $1(const $1&) = delete;
+        $1& operator=(const $1&) = delete;
+        $1($1&&) = delete;
+        $1& operator=($1&&) = delete;
+    };
+snippet cl "Class"
+    class $1
+    {
+    public:
+        $1()
+    private:
+    };
+snippet str "Struct"
+    struct $1
+    {
+        $2
+    };
+snippet la "Lambda"
+    []($1){$2}
+snippet l1 "One argument lamdba"
+    [](const auto& $1) { $2 }
+snippet l2 "Two argument lamdba"
+    [](const auto& $1, const auto& $2) { $3 }
+snippet iq "Include Quotes"
+    #include "$1"
+snippet ib "Include Brackets"
+    #include <$1>
+snippet main "main() (main)"
+    int main(int argc, char *argv[])
+    {
+        $1
+        return EXIT_SUCCESS;
+    }
+snippet fr "for range loop"
+    for ($1 : $2)
+    {
+    $3
+    }
+snippet fi "for counter"
+    for (int i = 0; i < $1; ++i)
+    {
+        $2
+    }
+snippet ns "Namespace"
+    namespace $1
+    {
+    $2
+    }
+snippet nsa "anonymous namespace"
+    namespace
+    {
+    $1
+    }
+snippet cout "std::cout"
+    std::cout << $1 << std::endl;
+snippet if "if clause"
+    if ($1)
+    {
+        $2
+    }
+snippet ife "if-else clause"
+    if ($1)
+    {
+        $2
+    }
+    else
+    {
+        $3
+    }
+snippet fun "function definition"
+    ${1:void} $2($3)
+    {
+        $4
+    }
+snippet fd "function declaration"
+    ${1:void} $2($3);
+snippet be "begin/end iterators"
+    $1.begin(), $1.end()
+snippet cbe "const begin/end iterators"
+    $1.cbegin(), $1.cend()
+snippet todo "TODO"
+    // TODO:
+snippet vc "void cast"
+    (void) $0;
+snippet ve "std vector"
+    std::vector<$1>
+snippet st "std string"
+    std::string
+snippet re "return"
+    return $1;
+snippet cr "const reference"
+    const $1&
+snippet ad "auto variable declaration"
+    auto $1 = $2;
+snippet ca "const auto"
+    const auto
+snippet car "const auto reference"
+    const auto&
+snippet cap "const auto pointer"
+    const auto* $0
+snippet fdc "forward declaration class"
+    class $1;
+snippet fds "forward declaration struct"
+    struct $1;

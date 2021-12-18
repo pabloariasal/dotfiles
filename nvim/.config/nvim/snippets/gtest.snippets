@@ -1,0 +1,27 @@
+snippet case "Gtest Test Case"
+    TEST($1, $2)
+    {
+        $3
+    }
+snippet fcase "Gtest Test Fixture"
+    TEST_F($1, $2)
+    {
+        $3
+    }
+snippet gclass "Gtest Fixture Class"
+    class $1 : public ::testing::Test
+    {
+    protected:
+        $1()
+        {
+        }
+        ~$1()
+        {
+        }
+        void SetUp() override
+        {
+        }
+        void TearDown() override
+        {
+        }
+    };

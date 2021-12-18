@@ -175,3 +175,16 @@ nnoremap <leader>ie <cmd>set spell spelllang=en_us<cr>
 " Misc
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <F1> <cmd>source ~/.config/nvim/init.vim<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Snippets
+"
+" Required Plugins: nvim-snippy
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+imap <expr> <Tab> snippy#can_expand() ? '<Plug>(snippy-expand)' : '<Tab>'
+imap <expr> <C-j> snippy#can_jump(1) ? '<Plug>(snippy-next)' : '<C-j>'
+imap <expr> <C-k> snippy#can_jump(-1) ? '<Plug>(snippy-previous)' : '<C-k>'
+smap <expr> <C-j> snippy#can_jump(1) ? '<Plug>(snippy-next)' : '<C-j>'
+smap <expr> <C-k> snippy#can_jump(-1) ? '<Plug>(snippy-previous)' : '<C-k>'
+nmap g<Tab> <Plug>(snippy-cut-text)
+xmap <Tab> <Plug>(snippy-cut-text)

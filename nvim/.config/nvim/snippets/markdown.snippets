@@ -1,0 +1,20 @@
+snippet i "italics"
+    *${1:${VISUAL}}*$0
+snippet b "bold"
+    **${1:${VISUAL}}**$0
+snippet bi "bold italics"
+    ***${1:${VISUAL}}***$0
+snippet link "Link to something"
+    [${1:${VISUAL:Text}}]($2)
+snippet c "Inline Code"
+    \`$1\`
+snippet cb "codeblock"
+    \`\`\`$1
+    $2
+    \`\`\`
+snippet fnt "footnote"
+    [^${1:${VISUAL:Footnote}}]$0
+
+    [^$1]:${2:Text}
+snippet [ "todo list item"
+    [$1]$2

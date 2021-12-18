@@ -1,0 +1,22 @@
+snippet dr "data record syntax"
+    data $1 = $1 {$2} deriving (Eq, Show)
+
+snippet da "algebraic data type"
+    data $1 = $2 deriving (Eq, Show)
+
+snippet f "function"
+    $1 :: $2
+    $1 = ${3:undefined}
+
+snippet id "import Data"
+    import Data.$1 ($1)
+    import qualified Data.$1 as $2
+
+snippet is "import some"
+    import $1 ($2)
+
+snippet iq "import qualified"
+    import qualified $1
+
+snippet i "simple import"
+    import $1
