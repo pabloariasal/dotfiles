@@ -15,15 +15,15 @@
 "   Pablo Arias - pabloariasal@gmail.com
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-runtime plugins.vim
+runtime plugins.lua
 runtime general.vim
 runtime key_maps.vim
-runtime snippets.vim
-runtime statusline.vim
+" runtime snippets.vim
+runtime statusline.lua
 runtime folding.vim
-runtime lsp.vim
+runtime lsp.lua
 runtime ctags.vim
-runtime auto-completion.vim
-runtime treesitter.vim
-runtime plugins.lua
+runtime completion.lua
+runtime treesitter.lua
 runtime fuzzy-finding.lua
+runtime autopairs.lua
