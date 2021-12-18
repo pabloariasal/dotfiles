@@ -23,6 +23,7 @@ runtime statusline.vim
 runtime folding.vim
 runtime lsp.vim
 runtime ctags.vim
-runtime fuzzy-finding.vim
 runtime auto-completion.vim
 runtime treesitter.vim
+runtime plugins.lua
+runtime fuzzy-finding.lua

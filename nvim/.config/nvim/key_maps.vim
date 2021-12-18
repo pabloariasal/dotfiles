@@ -147,17 +147,35 @@ nnoremap <silent> <F2> <cmd>lua vim.lsp.buf.rename()<Cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Fuzzy Finding
 "
-" Required Plugins: fzf-vim
+" Required Plugins: fzf-lua
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <silent> <c-p>  <cmd>Files<cr>
-nnoremap <silent> <c-n>  <cmd>Buffers<cr>
-nnoremap <silent> <leader>t  <cmd>Tags<cr>
-nnoremap <silent> <leader>o  <cmd>BTags<cr>
-nnoremap <silent> <leader>g <cmd>Rg<cr>
-nnoremap <silent> <leader>j <cmd>BLines<cr>
-nnoremap <silent> <leader>s <cmd>History:<cr>
-nnoremap <silent> <leader>z <cmd>Helptags<cr>
-nnoremap <silent> <leader>b <cmd>BDel<cr>
+lua << EOF
+local k = vim.api.nvim_set_keymap
+k('n', '<c-p>',
+    "<cmd>lua require('fzf-lua').files()<CR>",
+    { noremap = true, silent = true })
+k('n', '<c-n>',
+    "<cmd>lua require('fzf-lua').buffers()<CR>",
+    { noremap = true, silent = true })
+k('n', '<leader>j',
+    "<cmd>lua require('fzf-lua').blines()<CR>",
+    { noremap = true, silent = true })
+k('n', '<leader>t',
+    "<cmd>lua require('fzf-lua').tags()<CR>",
+    { noremap = true, silent = true })
+k('n', '<leader>o',
+    "<cmd>lua require('fzf-lua').btags()<CR>",
+    { noremap = true, silent = true })
+k('n', '<leader>z',
+    "<cmd>lua require('fzf-lua').help_tags()<CR>",
+    { noremap = true, silent = true })
+k('n', '<leader>s',
+    "<cmd>lua require('fzf-lua').command_history()<CR>",
+    { noremap = true, silent = true })
+k('n', '<leader>g',
+    "<cmd>lua require('fzf-lua').live_grep()<CR>",
+    { noremap = true, silent = true })
+EOF
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Star
