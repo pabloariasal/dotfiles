@@ -6,4 +6,4 @@
     visibility: visible;
 }
 
-/* :root {--tab-min-height: 10 !important;} */
+:root {--tab-min-height: 10 !important;}
