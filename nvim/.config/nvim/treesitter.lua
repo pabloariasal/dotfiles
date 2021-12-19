@@ -3,7 +3,7 @@ require'nvim-treesitter.configs'.setup {
   ensure_installed = {"c","cpp","rust","bash","json","lua","toml","yaml","python", "haskell"},
   highlight = {
     enable = true,              -- false will disable the whole extension
-    disable = {"haskell"}
+    disable = {}
   },
   indent = {
     enable = true
