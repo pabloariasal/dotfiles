@@ -7,6 +7,11 @@ vim.opt.shortmess:append "c"
 vim.opt.completeopt = {"menuone", "noinsert", "noselect" }
 
 cmp.setup {
+    snippet = {
+          expand = function(args)
+            require('snippy').expand_snippet(args.body) -- For `snippy` users.
+          end,
+        },
     mapping = {
         ['<C-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
         ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
@@ -24,6 +29,7 @@ cmp.setup {
         { name = 'nvim_lsp' },
         { name = 'buffer' },
         { name = 'path' },
+        { name = 'snippy' },
         { name = 'spell' }
     }
 }
