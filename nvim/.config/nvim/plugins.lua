@@ -15,7 +15,6 @@ end
 return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
   use 'morhetz/gruvbox'
-  use 'ibhagwan/fzf-lua'
   use 'tpope/vim-surround'
   use 'tpope/vim-repeat'
   use 'tpope/vim-sleuth'
@@ -48,7 +47,10 @@ return require('packer').startup(function()
   use 'itchyny/vim-haskell-indent'
   use 'Twinside/vim-haskellFold'
   use 'dcampos/nvim-snippy'
-
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then

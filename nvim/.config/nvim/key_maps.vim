@@ -157,10 +157,10 @@ nnoremap <silent> <F2> <cmd>lua vim.lsp.buf.rename()<Cr>
 "
 " Required Plugins: fzf-lua
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <c-p> <cmd>lua require('fzf-lua').files()<CR>
-nnoremap <c-n> <cmd>lua require('fzf-lua').buffers()<CR>
-nnoremap <leader>j <cmd>lua require('fzf-lua').blines()<CR>
-
+nnoremap <c-p> <cmd>lua require('telescope.builtin').find_files()<CR>
+nnoremap <c-n> <cmd>lua require('telescope.builtin').buffers()<CR>
+nnoremap <leader>j <cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<CR>
+nnoremap <leader>k <cmd>lua require('telescope.builtin').lsp_dynamic_workspace_symbols()<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Star
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

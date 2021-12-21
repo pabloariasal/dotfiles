@@ -25,5 +25,5 @@ runtime lsp.lua
 runtime ctags.vim
 runtime completion.lua
 runtime treesitter.lua
-runtime fuzzy-finding.lua
+runtime telescope.lua
 runtime autopairs.lua
