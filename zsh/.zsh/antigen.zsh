@@ -9,6 +9,7 @@ antigen bundle ohmyzsh/ohmyzsh plugins/last-working-dir
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle pabloariasal/zfm
+antigen bundle hlissner/zsh-autopair
 
 # Load the theme.
 antigen theme romkatv/powerlevel10k
