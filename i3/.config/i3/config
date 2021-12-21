@@ -232,7 +232,7 @@ font pango:DejaVu Sans Mono 0
 
 #######################################################################
 # Gaps
-gaps inner 3
+# gaps inner 3
 # gaps outer 3
 
 # Only enable gaps on a workspace when there is at least one container
