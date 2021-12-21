@@ -11,6 +11,7 @@ require'fzf-lua'.setup {
     layout = false,
   },
   files = {
-    git_icons = false
-  }
+    git_icons = false,
+    fd_opts   = vim.env.FZF_DEFAULT_COMMAND:gsub("^fd", ""),
+  },
 }

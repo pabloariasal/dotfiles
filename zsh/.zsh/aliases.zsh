@@ -49,9 +49,9 @@ function toggle_ctags()
 {
   local file='.ctagsenable'
   if [[ -f $file ]]; then
-    rm $file && echo "Disabled ctags"
+    rm $file && echo "ctags disabled"
   else
-    echo "fd -tf" > $file && echo "Enabled ctags"
+    echo "fd -tf --strip-cwd-prefix" > $file && echo "ctags enabled"
   fi
 }
 

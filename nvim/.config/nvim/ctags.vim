@@ -9,3 +9,4 @@ let g:gutentags_add_default_project_roots = 0
 let g:gutentags_project_root = ['.ctagsenable']
 "ctagsenable is a script that list the relevant files to index
 let g:gutentags_file_list_command = 'bash .ctagsenable'
+let g:gutentags_ctags_extra_args = ['--tag-relative=always']
