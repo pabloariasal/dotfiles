@@ -72,7 +72,7 @@ nnoremap <leader>g :<C-u>grep
 nnoremap <leader>z :<C-u>help 
 nnoremap <leader>s q:
 nnoremap <leader>t :<C-u>tjump 
-nnoremap <leader>e :<C-u>edit 
+nnoremap <leader>o :<C-u>edit 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Quitting and Saving
