@@ -29,9 +29,6 @@ nnoremap Y y$
 "best mapping ever
 inoremap jj <ESC>
 
-"grep for word under the cursor
-nnoremap <Leader>r :<C-u>grep '<C-r>=expand("<cword>")<CR>'<CR>
-
 " Indent visual block
 vmap < <gv
 vmap > >gv
@@ -65,6 +62,16 @@ nnoremap <leader>x <cmd>ClearWhitespace<CR>
 
 "toggle line numbers
 nnoremap <leader>n <cmd>setlocal number!<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Populate command line
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"grep for word under the cursor
+nnoremap <Leader>r :<C-u>grep '<C-r>=expand("<cword>")<CR>'<CR>
+nnoremap <leader>g :<C-u>grep 
+nnoremap <leader>z :<C-u>help 
+nnoremap <leader>s q:
+nnoremap <leader>t :<C-u>tjump 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Quitting and Saving
@@ -152,11 +159,6 @@ nnoremap <silent> <F2> <cmd>lua vim.lsp.buf.rename()<Cr>
 nnoremap <c-p> <cmd>lua require('fzf-lua').files()<CR>
 nnoremap <c-n> <cmd>lua require('fzf-lua').buffers()<CR>
 nnoremap <leader>j <cmd>lua require('fzf-lua').blines()<CR>
-nnoremap <leader>t <cmd>lua require('fzf-lua').tags()<CR>
-nnoremap <leader>o <cmd>lua require('fzf-lua').btags()<CR>
-nnoremap <leader>z <cmd>lua require('fzf-lua').help_tags()<CR>
-nnoremap <leader>s <cmd>lua require('fzf-lua').command_history()<CR>
-nnoremap <leader>g <cmd>lua require('fzf-lua').live_grep()<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Star
