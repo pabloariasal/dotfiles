@@ -66,13 +66,13 @@ nnoremap <leader>n <cmd>setlocal number!<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Populate command line
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"grep for word under the cursor
 nnoremap <Leader>r :<C-u>grep '<C-r>=expand("<cword>")<CR>'<CR>
 nnoremap <leader>g :<C-u>grep 
 nnoremap <leader>z :<C-u>help 
 nnoremap <leader>s q:
 nnoremap <leader>t :<C-u>tjump 
 nnoremap <leader>o :<C-u>edit 
+nnoremap <leader>u :<C-u>find 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Quitting and Saving
