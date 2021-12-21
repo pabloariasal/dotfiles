@@ -5,7 +5,7 @@ Arch Linux setup centered around practicality and minimalism.
 * i3-gaps + i3lock + i3bar + i3status
 * zsh (no oh-my-zsh), powerlevel10k prompt
 * alacritty
-* nvim
+* nvim (config mostly in sweet lua, bur VimL when it makes sense)
 * patched dmenu
 * dunst
 * picom (no weird forks, just normal picom)
