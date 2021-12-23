@@ -1,14 +1,14 @@
-snippet case "Gtest Test Case"
+snippet test "Gtest Test Case"
     TEST($1, $2)
     {
         $3
     }
-snippet fcase "Gtest Test Fixture"
+snippet testf "Gtest Test Fixture"
     TEST_F($1, $2)
     {
         $3
     }
-snippet gclass "Gtest Fixture Class"
+snippet fclass "Gtest Fixture Class"
     class $1 : public ::testing::Test
     {
     protected:
