@@ -28,7 +28,13 @@ return require('packer').startup(function()
   use 'romainl/vim-qf'
   use 'markonm/traces.vim'
   use 'ludovicchabant/vim-gutentags'
-  use 'airblade/vim-gitgutter'
+  use {
+    'lewis6991/gitsigns.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim'
+    },
+    -- tag = 'release' -- To use the latest release
+  }
   use 'nvim-lualine/lualine.nvim'
   use 'pabloariasal/vim-alternate'
   use 'neovim/nvim-lspconfig'
