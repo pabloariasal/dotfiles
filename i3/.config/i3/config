@@ -232,8 +232,8 @@ font pango:DejaVu Sans Mono 0
 
 #######################################################################
 # Gaps
-# gaps inner 3
-# gaps outer 3
+# toggle gaps
+bindsym $mod+semicolon gaps inner all toggle 5
 
 # Only enable gaps on a workspace when there is at least one container
 smart_gaps on
@@ -274,9 +274,6 @@ bar {
                 # binding_mode       #2f343a #900000 #ffffff  separator #458588
         }
 }
-
-# hide status bar
-bindsym $mod+semicolon bar mode toggle
 
 #######################################################################
 # Auto Start Programs
