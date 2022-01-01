@@ -263,7 +263,7 @@ bar {
         i3bar_command i3bar --transparency
         font pango:JetBrainsMono 11
         strip_workspace_numbers yes
-        workspace_min_width 65
+        workspace_min_width 45
         # separator_symbol " / "
         height 20
         colors {
