@@ -1,4 +1,4 @@
-snippet po "pragma once directive"
+snippet po "pragma once directive" b
     #pragma once
 snippet abc "Abstract Base Class"
     class $1
@@ -24,17 +24,17 @@ snippet str "Struct"
     {
         $2
     };
-snippet la "Lambda"
+snippet la "Lambda" i
     []($1){$2}
-snippet l1 "One argument lamdba"
+snippet l1 "One argument lamdba" i
     [](const auto& $1) { $2 }
-snippet l2 "Two argument lamdba"
+snippet l2 "Two argument lamdba" i
     [](const auto& $1, const auto& $2) { $3 }
-snippet iq "Include Quotes"
+snippet iq "Include Quotes" b
     #include "$1"
-snippet ib "Include Brackets"
+snippet ib "Include Brackets" b
     #include <$1>
-snippet main "main() (main)"
+snippet main "main() (main)" b
     int main(int argc, char *argv[])
     {
         $1
@@ -83,29 +83,29 @@ snippet fun "function definition"
     }
 snippet fd "function declaration"
     ${1:void} $2($3);
-snippet be "begin/end iterators"
+snippet be "begin/end iterators" i
     $1.begin(), $1.end()
-snippet cbe "const begin/end iterators"
+snippet cbe "const begin/end iterators" i
     $1.cbegin(), $1.cend()
 snippet todo "TODO"
     // TODO: $0
 snippet vc "void cast"
     (void) $0;
-snippet ve "std vector"
+snippet ve "std vector" i
     std::vector<$1>
-snippet st "std string"
+snippet st "std string" i
     std::string
 snippet re "return"
-    return $1;
-snippet cr "const reference"
+    return ${1:{}}
+snippet cr "const reference" i
     const $1& $0
 snippet ad "auto variable declaration"
     auto $1 = $2;
-snippet ca "const auto"
+snippet ca "const auto" i
     const auto $0
-snippet car "const auto reference"
+snippet car "const auto reference" i
     const auto& $0
-snippet cap "const auto pointer"
+snippet cap "const auto pointer" i
     const auto* $0
 snippet fdc "forward declaration class"
     class $1;
