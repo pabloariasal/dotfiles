@@ -66,8 +66,8 @@ nnoremap <leader>n <cmd>setlocal number!<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Populate command line
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <Leader>r :<C-u>grep '<C-r>=expand("<cword>")<CR>'<CR>
-nnoremap <leader>g :<C-u>grep 
+nnoremap <Leader>r :<C-u>grep! '<C-r>=expand("<cword>")<CR>'<CR>
+nnoremap <leader>g :<C-u>grep! 
 nnoremap <leader>z :<C-u>help 
 nnoremap <leader>s q:
 nnoremap <leader>t :<C-u>tjump 
