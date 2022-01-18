@@ -8,6 +8,10 @@ alias sudo='sudo '
 alias ls='ls --color=tty'
 alias ..='cd ..'
 
+# prompt before doing anything stupid
+alias rm='rm -I'
+alias mv='mv -i'
+
 # commands
 alias ipcheck='curl -s ifconfig.co/json | jq'
 alias h='history -r -E -35'
