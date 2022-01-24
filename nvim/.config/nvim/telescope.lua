@@ -34,7 +34,7 @@ require('telescope').setup{
       -- theme = "dropdown"
     },
     buffers = {
-      theme = "dropdown"
+      -- theme = "dropdown"
     },
   },
   extensions = {
