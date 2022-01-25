@@ -12,7 +12,7 @@ snippet abc "Abstract Base Class"
         $1($1&&) = delete;
         $1& operator=($1&&) = delete;
     };
-snippet cl "Class"
+snippet cla "Class"
     class $1
     {
     public:
@@ -34,6 +34,12 @@ snippet iq "Include Quotes" b
     #include "$1"
 snippet ib "Include Brackets" b
     #include <$1>
+snippet iv "Include std::vector" b
+    #include <vector>
+snippet ii "Include std::iostream" b
+    #include <iostream>
+snippet is "Include std::string" b
+    #include <string>
 snippet main "main() (main)" b
     int main(int argc, char *argv[])
     {
@@ -76,17 +82,13 @@ snippet ife "if-else clause"
     {
         $3
     }
-snippet fun "function definition"
+snippet f "function definition"
     ${1:void} $2($3)
     {
         $4
     }
 snippet fd "function declaration"
     ${1:void} $2($3);
-snippet be "begin/end iterators" i
-    $1.begin(), $1.end()
-snippet cbe "const begin/end iterators" i
-    $1.cbegin(), $1.cend()
 snippet todo "TODO"
     // TODO: $0
 snippet vc "void cast"
@@ -96,7 +98,7 @@ snippet ve "std vector" i
 snippet st "std string" i
     std::string
 snippet re "return"
-    return ${1:{}};
+    return $1;
 snippet cr "const reference" i
     const $1& $0
 snippet ad "auto variable declaration"
