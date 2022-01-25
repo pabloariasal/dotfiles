@@ -33,7 +33,7 @@ return require('packer').startup(function()
     requires = {
       'nvim-lua/plenary.nvim'
     },
-    -- tag = 'release' -- To use the latest release
+    tag = 'release' -- To use the latest release
   }
   use 'nvim-lualine/lualine.nvim'
   use 'pabloariasal/vim-alternate'
