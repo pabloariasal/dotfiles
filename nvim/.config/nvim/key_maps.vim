@@ -43,9 +43,6 @@ nnoremap <silent> <leader>c <cmd>bp <bar>bd #<cr>
 nnoremap <silent> } <cmd>execute "keepjumps norm! " . v:count1 . "}"<CR>
 nnoremap <silent> { <cmd>execute "keepjumps norm! " . v:count1 . "{"<CR>
 
-"switch to alternate buffer
-nnoremap <BS> <C-^>
-
 "go to beginning and end of line
 nnoremap <a-h> ^
 nnoremap <a-l> $
@@ -66,7 +63,8 @@ nnoremap <leader>n <cmd>setlocal number!<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Populate command line
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <Leader>r :<C-u>grep! '<C-r>=expand("<cword>")<CR>'<CR>
+"look for word under the cursor
+nnoremap <Leader>b :<C-u>grep! '<C-r>=expand("<cword>")<CR>'<CR>
 nnoremap <leader>g :<C-u>grep! 
 nnoremap <leader>z :<C-u>help 
 nnoremap <leader>s q:
