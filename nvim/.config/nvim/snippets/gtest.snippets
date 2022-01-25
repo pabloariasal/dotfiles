@@ -25,3 +25,23 @@ snippet fclass "Gtest Fixture Class"
         {
         }
     };
+snippet ptest "Parameterized Test Fixture"
+    struct $1 {
+
+    };
+
+    ostream& operator<<(ostream& os, const $1& data)
+    {
+        (void) data;
+        return os;
+    }
+
+    class $2 : public ::testing::TestWithParam<$1> {
+    };
+
+    TEST_P($2, TestCaseName) {
+    }
+
+    INSTANTIATE_TEST_CASE_P(InstantiationName,
+            $2,
+            ::testing::Values());
