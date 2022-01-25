@@ -155,10 +155,6 @@ bindsym $mod+n workspace $ws7
 # Easy jump to main workspace
 bindsym $mod+m workspace $ws1
 
-# cycle through active workspaces
-bindsym $mod+Ctrl+k workspace next
-bindsym $mod+Ctrl+j workspace prev
-
 #######################################################################
 # Key Bindings - Layout
 bindsym $mod+o split h
@@ -185,10 +181,6 @@ bindsym $mod+minus [instance="^(?!__terminal_scratchpad$)"] scratchpad show
 
 # mod+0 is the drop down terminal
 bindsym $mod+0 exec i3-toggle-scratchpad
-
-#######################################################################
-# Key Bindings - Sticky Window
-bindsym $mod+s sticky toggle
 
 #######################################################################
 # Key Bindings - Print Screen
