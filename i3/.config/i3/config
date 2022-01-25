@@ -256,11 +256,10 @@ bar {
         font pango:JetBrainsMono 11
         strip_workspace_numbers yes
         workspace_min_width 45
-        # separator_symbol " / "
         height 20
         colors {
-                background #282828aa
-                # statusline #eddbb2
+                background #282828
+                statusline #eddbb2
 
                 # focused_workspace  #4c7899 #458588 #ffffff
                 # active_workspace   #333333 #5f676a #ffffff
