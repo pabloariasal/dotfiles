@@ -60,6 +60,8 @@ nnoremap <leader>x <cmd>ClearWhitespace<CR>
 "toggle line numbers
 nnoremap <leader>n <cmd>setlocal number!<CR>
 
+nnoremap <BS> <c-^>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Populate command line
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
