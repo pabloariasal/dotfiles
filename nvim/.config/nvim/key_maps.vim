@@ -109,9 +109,9 @@ noremap <silent> <C-Down> :resize -3<CR>
 " Folding
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Navigate by fold for certain filetypes
-autocmd FileType rust,cpp,python,markdown,haskell
+autocmd FileType rust,cpp,python,markdown,haskell,lua
             \ nnoremap <buffer> <silent> <c-j> <cmd>execute "keepjumps norm! " . v:count1 . "zj"<CR>
-autocmd FileType rust,cpp,python,markdown,haskell
+autocmd FileType rust,cpp,python,markdown,haskell,lua
             \ nnoremap <buffer> <silent> <c-k> <cmd>execute "keepjumps norm! " . v:count1 . "zk"<CR>
 
 " toggle fold under the cursor
