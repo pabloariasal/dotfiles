@@ -128,6 +128,15 @@ nmap gq <Plug>(qf_qf_toggle)
 nmap gl <Plug>(qf_loc_toggle)
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Registers
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <leader>rc "+
+nnoremap <leader>rs "*
+nnoremap <leader>rb "_
+nnoremap <leader>rt "t
+nnoremap <leader>rr <cmd>registers<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language Server Protocol
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
