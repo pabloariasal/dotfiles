@@ -12,5 +12,8 @@ require('lualine').setup {
     lualine_x = {'encoding', 'filetype'},
     lualine_y = {},
     lualine_z = {'location'}
+  },
+  tabline = {
+    lualine_a = {'buffers'}
   }
 }
