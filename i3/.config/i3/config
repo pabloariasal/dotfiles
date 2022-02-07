@@ -13,9 +13,9 @@ set $ws3 3:3
 set $ws4 4:4
 set $ws5 5:5
 set $ws6 6:6
-set $ws7 7:web
-set $ws8 8:mus
-set $ws9 9:cal
+set $ws7 7:7
+set $ws8 8:8
+set $ws9 9:9
 
 #######################################################################
 # General
@@ -255,7 +255,7 @@ bar {
         i3bar_command i3bar --transparency
         font pango:JetBrainsMono 11
         strip_workspace_numbers yes
-        workspace_min_width 45
+        # workspace_min_width 45
         height 20
         colors {
                 background #282828
