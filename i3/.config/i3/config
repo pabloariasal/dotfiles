@@ -249,7 +249,7 @@ bar {
         height 20
         colors {
                 background #282828
-                statusline #eddbb2
+                # statusline #eddbb2
         }
 }
 
