@@ -227,7 +227,7 @@ font pango:DejaVu Sans Mono 0
 #######################################################################
 # Gaps
 set $gap_size 5
-gaps inner $gap_size
+# gaps inner $gap_size
 
 # toggle gaps
 bindsym $mod+semicolon gaps inner current toggle $gap_size
@@ -255,7 +255,7 @@ bar {
 
 #######################################################################
 # Auto Start Programs
-exec_always --no-startup-id launch-picom
+# exec_always --no-startup-id launch-picom
 exec_always --no-startup-id nitrogen --restore
 exec_always --no-startup-id xss-lock --transfer-sleep-lock -- lock-screen
 exec --no-startup-id greenclip daemon
