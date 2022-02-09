@@ -10,8 +10,6 @@ Session.vim
 tags
 tags.*
 [._]*.un~
-.notags
-.ctagsignore
 .ctagsenable
 lsp_settings.json
 
@@ -19,3 +17,6 @@ lsp_settings.json
 compile_commands.json
 
 .ccls-cache
+build_release
+build_debug
+build/
