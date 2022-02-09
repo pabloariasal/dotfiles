@@ -78,20 +78,8 @@ nnoremap <leader>u :<C-u>find
 " Quitting and Saving
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <leader>w <cmd>wa<cr>
-nmap <leader>q <cmd>x<cr>
-nmap <leader>e <cmd>wq<cr>
-nmap <leader><leader>q <cmd>xa<cr>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Clipboard
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"interact with system clipboard
-nnoremap <leader>p "+p
-nnoremap <leader>P "+P
-nnoremap <leader>y "+y
-nnoremap <leader>Y "+y$
-xnoremap <leader>y "+y
-xnoremap <leader>p "+p
+nmap <leader>q <cmd>xa<cr>
+nmap <c-q> <cmd>xa!<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Splits
@@ -137,6 +125,11 @@ nnoremap <leader>rs "*
 nnoremap <leader>rb "_
 nnoremap <leader>rt "t
 nnoremap <leader>rr <cmd>registers<CR>
+
+xnoremap <leader>rc "+
+xnoremap <leader>rs "*
+xnoremap <leader>rb "_
+xnoremap <leader>rt "t
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language Server Protocol
