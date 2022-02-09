@@ -228,7 +228,7 @@ set $gap_size 5
 gaps inner $gap_size
 
 # toggle gaps
-bindsym $mod+semicolon gaps inner current toggle 5
+bindsym $mod+semicolon gaps inner current toggle $gap_size
 
 # Only enable gaps on a workspace when there is at least one container
 smart_gaps on
