@@ -40,7 +40,7 @@ battery all {
 }
 
 time {
-        format = "%a %b %e %Y"
+        format = "📅%a %b %e %Y"
 }
 
 tztime local {
