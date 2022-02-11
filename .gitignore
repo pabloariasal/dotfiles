@@ -1,12 +1,8 @@
 *~
 *.swp
 antigen.zsh.zwc
-nvim/.config/nvim/autoload/
-nvim/.config/nvim/plugged/
-nvim/.config/nvim/plugin/
 *.spl
 *.sug
-vifm/.config/vifm/scripts/
 vifm/.config/vifm/vifm-help.txt
 vifm/.config/vifm/vifminfo.json
 systemd/.config/systemd/user/default.target.wants/
