@@ -120,16 +120,24 @@ nmap gl <Plug>(qf_loc_toggle)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Registers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <leader>rr <cmd>registers<CR>
+
 nnoremap <leader>rc "+
 nnoremap <leader>rs "*
 nnoremap <leader>rb "_
 nnoremap <leader>rt "t
-nnoremap <leader>rr <cmd>registers<CR>
 
 xnoremap <leader>rc "+
 xnoremap <leader>rs "*
 xnoremap <leader>rb "_
 xnoremap <leader>rt "t
+
+nnoremap <leader>p "+p
+nnoremap <leader>P "+P
+nnoremap <leader>y "+y
+nnoremap <leader>Y "+y$
+xnoremap <leader>y "+y
+xnoremap <leader>p "+p
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language Server Protocol
