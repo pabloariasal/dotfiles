@@ -384,7 +384,7 @@ filextype */
 
 " What should be saved automatically between vifm sessions.  Drop "savedirs"
 " value if you don't want vifm to remember last visited directories for you.
-set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,
+set vifminfo=dhistory,chistory,state,tui,shistory,
     \phistory,fhistory,dirstack,registers,bookmarks,bmarks
 
 " ------------------------------------------------------------------------------
@@ -474,6 +474,7 @@ nnoremap <a-o> :sync %c<cr>
 " nnoremap <c-u> <c-w>x
 nnoremap , :
 nnoremap <space>q :q<cr>
+nnoremap q :q<cr>
 
 " ------------------------------------------------------------------------------
 
