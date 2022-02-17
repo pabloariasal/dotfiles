@@ -62,6 +62,8 @@ nnoremap <leader>n <cmd>setlocal number!<CR>
 
 nnoremap <BS> <c-^>
 
+nnoremap <leader>e <cmd>Lex 20<CR>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Populate command line
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

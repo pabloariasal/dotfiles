@@ -20,7 +20,6 @@ return require('packer').startup(function()
   use 'tpope/vim-sleuth'
   use 'tpope/vim-dispatch'
   use 'tpope/vim-eunuch'
-  use 'tpope/vim-vinegar'
   use 'tpope/vim-unimpaired'
   use 'tpope/vim-commentary'
   use 'tpope/vim-obsession'
