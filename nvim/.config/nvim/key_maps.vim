@@ -128,11 +128,13 @@ nnoremap <leader>rc "+
 nnoremap <leader>rs "*
 nnoremap <leader>rb "_
 nnoremap <leader>rt "t
+nnoremap <leader>rz "0
 
 xnoremap <leader>rc "+
 xnoremap <leader>rs "*
 xnoremap <leader>rb "_
 xnoremap <leader>rt "t
+xnoremap <leader>rz "0
 
 nnoremap <leader>p "+p
 nnoremap <leader>P "+P
@@ -140,6 +142,8 @@ nnoremap <leader>y "+y
 nnoremap <leader>Y "+y$
 xnoremap <leader>y "+y
 xnoremap <leader>p "+p
+
+xnoremap <silent> p "_dp
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language Server Protocol
