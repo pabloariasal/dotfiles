@@ -74,6 +74,7 @@ set noswapfile
 set scrolloff=8
 
 set relativenumber
+set cursorline
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " User Interface
