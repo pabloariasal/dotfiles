@@ -36,6 +36,9 @@ require('telescope').setup{
     buffers = {
       -- theme = "dropdown"
     },
+    current_buffer_fuzzy_find = {
+      theme = "ivy"
+    }
   },
   extensions = {
     -- Your extension configuration goes here:

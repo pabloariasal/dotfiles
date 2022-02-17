@@ -157,7 +157,7 @@ nnoremap <silent> <F2> <cmd>lua vim.lsp.buf.rename()<Cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Fuzzy Finding
 "
-" Required Plugins: fzf-lua
+" Required Plugins: telescope
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <c-p> <cmd>lua require('telescope.builtin').find_files()<CR>
 nnoremap <c-n> <cmd>lua require('telescope.builtin').buffers()<CR>
