@@ -73,10 +73,12 @@ set noswapfile
 "Scroll 8 spaces before edge
 set scrolloff=8
 
+set relativenumber
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " User Interface
 "
-" Required Plugins: traces.vim, coc.nvim, vim-qf, awesome-vim-colorschemes
+" Required Plugins: traces.vim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Show white space
 set listchars=eol:¬,tab:»\ ,trail:~,extends:>,precedes:<

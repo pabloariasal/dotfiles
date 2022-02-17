@@ -44,8 +44,12 @@ nnoremap <silent> } <cmd>execute "keepjumps norm! " . v:count1 . "}"<CR>
 nnoremap <silent> { <cmd>execute "keepjumps norm! " . v:count1 . "{"<CR>
 
 "go to beginning and end of line
-nnoremap <a-h> ^
-nnoremap <a-l> $
+nnoremap <silent> <a-h> ^
+nnoremap <silent> <a-l> $
+
+"navigate tabs
+nnoremap <silent> <a-j> <cmd>tabprev<cr>
+nnoremap <silent> <a-k> <cmd>tabnext<cr>
 
 "navigate by paragraph
 nnoremap <silent> <c-j> }
@@ -57,12 +61,14 @@ vnoremap , :
 
 nnoremap <leader>x <cmd>ClearWhitespace<CR>
 
-"toggle line numbers
-nnoremap <leader>n <cmd>setlocal number!<CR>
+"change line number display
+nnoremap <leader>nr <cmd>setlocal nonumber relativenumber<CR>
+nnoremap <leader>nn <cmd>setlocal norelativenumber number<CR>
+nnoremap <leader>no <cmd>setlocal norelativenumber nonumber<CR>
 
 nnoremap <BS> <c-^>
 
-nnoremap <leader>e <cmd>Lex 20<CR>
+nnoremap <leader>e <cmd>Lex 30<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Populate command line
