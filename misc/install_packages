@@ -89,4 +89,12 @@ function install_wallpapers()
     git clone https://gitlab.com/dwt1/wallpapers.git $wallpaper_loc
 }
 
+function install_nerd_fonts()
+{
+    local nerd_fonts_dir="$HOME/nerd-fonts"
+    [ ! -d "$nerd-fonts" ] || git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git $nerd_fonts_dir
+    cd "$HOME/nerd-fonts"
+    ./install.sh JetBrainsMono
+}
+
 "$1"

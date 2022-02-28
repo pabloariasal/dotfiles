@@ -243,7 +243,7 @@ smart_gaps on
 bar {
         status_command i3status-wrapper
         i3bar_command i3bar --transparency
-        font pango:JetBrainsMono 11
+        font pango:JetBrainsMono Nerd Font 11
         strip_workspace_numbers yes
         # workspace_min_width 45
         height 20
