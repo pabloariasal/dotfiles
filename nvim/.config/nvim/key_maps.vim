@@ -47,9 +47,11 @@ nnoremap <silent> { <cmd>execute "keepjumps norm! " . v:count1 . "{"<CR>
 nnoremap <silent> <a-h> ^
 nnoremap <silent> <a-l> $
 
-"navigate tabs
-nnoremap <silent> <a-j> <cmd>tabprev<cr>
-nnoremap <silent> <a-k> <cmd>tabnext<cr>
+"navigate splits
+nnoremap <silent> <a-h> <c-w>h
+nnoremap <silent> <a-j> <c-w>j
+nnoremap <silent> <a-k> <c-w>k
+nnoremap <silent> <a-l> <c-w>l
 
 "navigate by paragraph
 nnoremap <silent> <c-j> }
