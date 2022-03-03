@@ -23,6 +23,7 @@ return require('packer').startup(function()
   use 'tpope/vim-unimpaired'
   use 'tpope/vim-commentary'
   use 'tpope/vim-obsession'
+  use 'szw/vim-maximizer'
   use 'vim-scripts/ReplaceWithRegister'
   use 'romainl/vim-qf'
   use 'markonm/traces.vim'
