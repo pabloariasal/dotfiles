@@ -72,6 +72,9 @@ nnoremap <BS> <c-^>
 
 nnoremap <leader>e <cmd>Lex 30<CR>
 
+" maximize current window split
+nnoremap <silent><leader>l :MaximizerToggle<CR>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Populate command line
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
