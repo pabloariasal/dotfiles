@@ -46,5 +46,10 @@ function fg-bg() {
 zle -N fg-bg
 bindkey '^Z' fg-bg
 
+# cp to bookmarked directory
+bindkey -r '^O'
+bindkey '^O' zfm-cd-to-bookmark
+bindkey '^I' zfm-insert-bookmark
+
 # switch to last visited directory
 lwd
