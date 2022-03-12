@@ -79,8 +79,8 @@ nnoremap <silent><leader>l :MaximizerToggle<CR>
 " Populate command line
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "look for word under the cursor
-nnoremap <Leader>b :<C-u>grep! '<C-r>=expand("<cword>")<CR>'<CR>
-nnoremap <leader>g :<C-u>grep! 
+nnoremap <Leader>gc :<C-u>grep! '<C-r>=expand("<cword>")<CR>'<CR>
+nnoremap <leader>gn :<C-u>grep! 
 nnoremap <leader>z :<C-u>help 
 nnoremap <leader>s q:
 nnoremap <leader>t :<C-u>tjump 
@@ -177,7 +177,7 @@ nnoremap <silent> <F2> <cmd>lua vim.lsp.buf.rename()<Cr>
 nnoremap <c-p> <cmd>lua require('telescope.builtin').find_files()<CR>
 nnoremap <c-n> <cmd>lua require('telescope.builtin').buffers()<CR>
 nnoremap <leader>j <cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<CR>
-nnoremap <leader>k <cmd>lua require('telescope.builtin').lsp_dynamic_workspace_symbols()<CR>
+nnoremap <leader>gl <cmd>lua require('telescope.builtin').live_grep()<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Star
