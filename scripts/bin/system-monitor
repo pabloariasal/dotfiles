@@ -1,0 +1,2 @@
+#!/bin/bash
+alacritty --class system_monitor -e htop

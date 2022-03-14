@@ -29,10 +29,11 @@ for_window [class="^Spotify$"] move container to workspace $ws8
 
 #######################################################################
 # Window rules
-for_window [class=$terminal_class instance="__text_scratchpad"] floating enable, resize set 50 ppt 50 ppt, move position centered
+for_window [class=$terminal_class instance="__text_scratchpad"] floating enable, resize set width 50 ppt height 50 ppt, move position centered
 for_window [class=$terminal_class instance="__terminal_scratchpad"] move scratchpad
-for_window [class=Pavucontrol] floating enable, resize set 50 ppt 50 ppt, move position centered
+for_window [class=Pavucontrol] floating enable, resize set width 50 ppt height 50 ppt, move position centered
 for_window [class=Nitrogen] floating enable
+for_window [class=$terminal_class instance="system_monitor"] floating enable, resize set width 75 ppt height 75 ppt, move position centered
 
 #######################################################################
 # Key Bindings - Starting Programs
@@ -43,6 +44,7 @@ bindsym $mod+c exec dmenu-clipboard
 bindsym $mod+g exec text-scratchpad "txt"
 bindsym $mod+Shift+g exec text-scratchpad "md"
 bindsym $mod+i exec dmenu-emoji
+bindsym $mod+w exec system-monitor
 
 bindsym $mod+Ctrl+8 exec spotify
 bindsym $mod+Ctrl+9 exec gcal
