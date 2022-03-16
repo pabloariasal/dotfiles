@@ -48,7 +48,7 @@ return require('packer').startup(function()
   use 'hrsh7th/cmp-path'
   use 'f3fora/cmp-spell'
   use 'dcampos/cmp-snippy'
-  use 'windwp/nvim-autopairs'
+  use 'jiangmiao/auto-pairs'
   use 'masukomi/vim-markdown-folding'
   use 'itchyny/vim-haskell-indent'
   use 'Twinside/vim-haskellFold'

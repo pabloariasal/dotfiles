@@ -26,5 +26,4 @@ runtime ctags.vim
 runtime completion.lua
 runtime treesitter.lua
 runtime telescope.lua
-runtime autopairs.lua
 runtime gitsigns.lua
