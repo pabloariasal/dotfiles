@@ -33,6 +33,7 @@ for_window [class=$terminal_class instance="__text_scratchpad"] floating enable,
 for_window [class=$terminal_class instance="__terminal_scratchpad"] move scratchpad
 for_window [class=Pavucontrol] floating enable, resize set width 50 ppt height 50 ppt, move position centered
 for_window [class=Nitrogen] floating enable
+for_window [class=flameshot] floating enable
 for_window [class=$terminal_class instance="system_monitor"] floating enable, resize set width 75 ppt height 75 ppt, move position centered
 
 #######################################################################
@@ -105,7 +106,10 @@ mode "move" {
 
 bindsym $mod+u mode "move"
 
-# system mode
+bindsym $mod+d sticky enable
+
+#######################################################################
+# System Mode
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (s) shutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id system-control "lock", mode "default"
@@ -187,9 +191,9 @@ bindsym $mod+minus [instance="^(?!__terminal_scratchpad$)"] scratchpad show
 bindsym $mod+0 exec i3-toggle-scratchpad
 
 #######################################################################
-# Key Bindings - Print Screen
-bindsym --release Print exec flameshot full -c -p /tmp
-bindsym --release Shift+Print exec flameshot gui
+# Key Bindings - Screenshots
+bindsym $mod+Shift+s exec flameshot full -c -p /tmp
+bindsym $mod+s exec flameshot gui
 
 #######################################################################
 # Key Bindings - Volume Control
