@@ -222,7 +222,7 @@ bindsym XF86AudioPrev exec playerctl previous
 # Look And Feel
 
 # disable title bars
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 1
 
 # Only add borders if there is more than container in workspace
 smart_borders on
