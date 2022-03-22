@@ -47,15 +47,9 @@ nnoremap <silent> { <cmd>execute "keepjumps norm! " . v:count1 . "{"<CR>
 nnoremap <silent> <a-h> ^
 nnoremap <silent> <a-l> $
 
-"navigate splits
-nnoremap <silent> <a-h> <c-w>h
-nnoremap <silent> <a-j> <c-w>j
-nnoremap <silent> <a-k> <c-w>k
-nnoremap <silent> <a-l> <c-w>l
-
-"navigate by paragraph
-nnoremap <silent> <c-j> }
-nnoremap <silent> <c-k> {
+"navigate tabs
+nnoremap <silent> <a-j> gt
+nnoremap <silent> <a-k> gT
 
 "open command prompt with comma
 nnoremap , :
@@ -106,23 +100,13 @@ noremap <silent> <C-Right> :vertical resize -3<CR>
 noremap <silent> <C-Up> :resize +3<CR>
 noremap <silent> <C-Down> :resize -3<CR>
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Folding
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Navigate by fold for certain filetypes
-autocmd FileType rust,cpp,python,markdown,haskell,lua
-            \ nnoremap <buffer> <silent> <c-j> <cmd>execute "keepjumps norm! " . v:count1 . "zj"<CR>
-autocmd FileType rust,cpp,python,markdown,haskell,lua
-            \ nnoremap <buffer> <silent> <c-k> <cmd>execute "keepjumps norm! " . v:count1 . "zk"<CR>
+" navigate splits
+noremap <silent> <c-h> <c-w>h
+noremap <silent> <c-j> <c-w>j
+noremap <silent> <c-k> <c-w>k
+noremap <silent> <c-l> <c-w>l
 
-" toggle fold under the cursor
-nnoremap <silent> <c-l> za
-
-" Visual feedback when changing fold level
-nnoremap zm zm<cmd>echo "foldlevel" &foldlevel<cr>
-nnoremap zr zr<cmd>echo "foldlevel" &foldlevel<cr>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Quickfix list and Location List
 "
 " Required Plugins: vim-qf

@@ -49,9 +49,7 @@ return require('packer').startup(function()
   use 'f3fora/cmp-spell'
   use 'dcampos/cmp-snippy'
   use 'jiangmiao/auto-pairs'
-  use 'masukomi/vim-markdown-folding'
   use 'itchyny/vim-haskell-indent'
-  use 'Twinside/vim-haskellFold'
   use 'dcampos/nvim-snippy'
   use {
     'nvim-telescope/telescope.nvim',

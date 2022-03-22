@@ -20,7 +20,6 @@ runtime general.vim
 runtime key_maps.vim
 runtime snippets.lua
 runtime statusline.lua
-runtime folding.vim
 runtime lsp.lua
 runtime ctags.vim
 runtime completion.lua
