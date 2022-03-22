@@ -17,9 +17,6 @@ alias mv='mv -i'
 alias ipcheck='curl -s ifconfig.co/json | jq'
 alias h='history -r -E -35'
 
-# fast cd to directories
-alias d="cd ${DOTFILES}"
-
 # exa
 alias l='exa'
 alias la='exa -a'
