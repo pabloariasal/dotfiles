@@ -253,7 +253,7 @@ bar {
         strip_workspace_numbers yes
         height 20
         colors {
-                background #28282800
+                background #282828
         }
 }
 
