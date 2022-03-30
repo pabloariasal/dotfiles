@@ -253,13 +253,13 @@ bar {
         strip_workspace_numbers yes
         height 20
         colors {
-                background #282828
+                background #28282800
         }
 }
 
 #######################################################################
 # Auto Start Programs
-# exec_always --no-startup-id launch-picom
+exec_always --no-startup-id launch-picom
 exec_always --no-startup-id nitrogen --restore
 exec_always --no-startup-id xss-lock --transfer-sleep-lock -- lock-screen
 exec --no-startup-id greenclip daemon
