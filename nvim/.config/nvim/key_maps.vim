@@ -150,7 +150,7 @@ nnoremap <silent> <leader>v <cmd>lua vim.lsp.buf.references()<CR>
 nnoremap <silent> <leader>f <cmd>lua vim.lsp.buf.formatting()<CR>
 nnoremap <silent> [g <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
 nnoremap <silent> ]g <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
-nnoremap <silent> <leader>d <cmd>lua vim.lsp.diagnostic.set_loclist()<CR>
+nnoremap <silent> <leader>d <cmd>lua vim.diagnostic.setloclist()<CR>
 nnoremap <silent> <F2> <cmd>lua vim.lsp.buf.rename()<Cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
