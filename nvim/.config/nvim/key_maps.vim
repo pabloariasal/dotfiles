@@ -57,11 +57,6 @@ vnoremap , :
 
 nnoremap <leader>x <cmd>ClearWhitespace<CR>
 
-"change line number display
-nnoremap <leader>nr <cmd>setlocal nonumber relativenumber<CR>
-nnoremap <leader>nn <cmd>setlocal norelativenumber number<CR>
-nnoremap <leader>no <cmd>setlocal norelativenumber nonumber<CR>
-
 nnoremap <BS> <c-^>
 
 nnoremap <leader>e <cmd>Lex 30<CR>
@@ -91,8 +86,6 @@ nmap <c-q> <cmd>xa!<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Splits
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" cycle through splits
-noremap <c-h> <c-w><c-w>
 
 " resize
 noremap <silent> <C-Left> :vertical resize +3<CR>
@@ -117,20 +110,6 @@ nmap gl <Plug>(qf_loc_toggle)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Registers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <leader>rr <cmd>registers<CR>
-
-nnoremap <leader>rc "+
-nnoremap <leader>rs "*
-nnoremap <leader>rb "_
-nnoremap <leader>rt "t
-nnoremap <leader>rz "0
-
-xnoremap <leader>rc "+
-xnoremap <leader>rs "*
-xnoremap <leader>rb "_
-xnoremap <leader>rt "t
-xnoremap <leader>rz "0
-
 nnoremap <leader>p "+p
 nnoremap <leader>P "+P
 nnoremap <leader>y "+y
@@ -160,7 +139,6 @@ nnoremap <silent> <F2> <cmd>lua vim.lsp.buf.rename()<Cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <c-p> <cmd>lua require('telescope.builtin').find_files()<CR>
 nnoremap <c-n> <cmd>lua require('telescope.builtin').buffers()<CR>
-nnoremap <leader>j <cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<CR>
 nnoremap <leader>gl <cmd>lua require('telescope.builtin').live_grep()<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
