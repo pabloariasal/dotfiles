@@ -26,9 +26,9 @@ snippet str "Struct"
     };
 snippet la "Lambda" i
     []($1){$2}
-snippet l1 "One argument lamdba" i
+snippet l1 "One argument generic lamdba" i
     [](const auto& $1) { $2 }
-snippet l2 "Two argument lamdba" i
+snippet l2 "Two argument generic lamdba" i
     [](const auto& $1, const auto& $2) { $3 }
 snippet iq "Include Quotes" b
     #include "$1"
@@ -73,15 +73,6 @@ snippet if "if clause"
     {
         $2
     }
-snippet ife "if-else clause"
-    if ($1)
-    {
-        $2
-    }
-    else
-    {
-        $3
-    }
 snippet f "function definition"
     ${1:void} $2($3)
     {
@@ -97,6 +88,8 @@ snippet ve "std vector" i
     std::vector<$1>
 snippet up "std unique_ptr" i
     std::unique_ptr<$1>
+snippet sp "std shared_ptr" i
+    std::shared_ptr<$1>
 snippet st "std string" i
     std::string
 snippet re "return"
@@ -115,3 +108,7 @@ snippet fdc "forward declaration class"
     class $1;
 snippet fds "forward declaration struct"
     struct $1;
+snippet sci "static cast int"
+    static_cast<int>($1)
+snippet sc "static cast"
+    static_cast<$1>($2)
