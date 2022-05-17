@@ -23,7 +23,11 @@ cmp.setup {
         ['<C-l>'] = cmp.mapping.confirm({
             behavior = cmp.ConfirmBehavior.Replace,
             select = true,
-          })
+          }),
+        ['<CR>'] = cmp.mapping.confirm({ select = true }),
+        ['<C-n>'] = cmp.mapping(cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }), { 'i', 'c' }),
+        ['<C-p>'] = cmp.mapping(cmp.mapping.select_prev_item({
+            behavior = cmp.SelectBehavior.Insert }), { 'i', 'c' }),
     },
     sources = cmp.config.sources {
         { name = 'nvim_lsp' },
