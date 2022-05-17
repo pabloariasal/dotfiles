@@ -73,7 +73,6 @@ set noswapfile
 "Scroll 8 spaces before edge
 set scrolloff=8
 
-set relativenumber
 set cursorline
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
