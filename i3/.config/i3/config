@@ -1,7 +1,7 @@
 #######################################################################
 # Variables
 set $mod Mod4
-set $browser firefox
+set $browser google-chrome-stable
 set $browser_class "^Google-chrome$"
 set $terminal alacritty
 set $terminal_class "^Alacritty$"
