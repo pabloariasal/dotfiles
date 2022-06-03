@@ -1,0 +1,75 @@
+{
+    "border": "pixel",
+    "current_border_width": 2,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 600,
+       "width": 800,
+       "x": 0,
+       "y": 0
+    },
+    "marks": [],
+    "name": "Alacritty",
+    "percent": 0.5,
+    "swallows": [
+       {
+        "class": "^Alacritty$",
+        "instance": "^Alacritty$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "stacked",
+    "marks": [],
+    "percent": 0.5,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 600,
+               "width": 800,
+               "x": 0,
+               "y": 0
+            },
+            "marks": [],
+            "name": "Alacritty",
+            "percent": 0.5,
+            "swallows": [
+               {
+                "class": "^Alacritty$",
+                "instance": "^Alacritty$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "pixel",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 1060,
+               "width": 1920,
+               "x": 10,
+               "y": 10
+            },
+            "marks": [],
+            "name": "New Tab - Google Chrome",
+            "percent": 0.5,
+            "swallows": [
+               {
+                "class": "^Google\\-chrome$",
+                "instance": "^google\\-chrome$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
