@@ -219,15 +219,15 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 #######################################################################
-# Look And Feel
+# Window borders
 
 # disable title bars
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 2
 
 # Only add borders if there is more than container in workspace
 smart_borders on
 
-# disable window titles by setting font size to 0
+# disable window titles in stacking and tabbed layouts
 font pango:DejaVu Sans Mono 0
 
 #######################################################################
