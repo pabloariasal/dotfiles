@@ -232,14 +232,13 @@ font pango:DejaVu Sans Mono 0
 
 #######################################################################
 # Gaps
-set $gap_size 5
-# gaps inner $gap_size
+# set $gap_size 5
 
 # toggle gaps
-bindsym $mod+semicolon gaps inner current toggle $gap_size
+# bindsym $mod+semicolon gaps inner current toggle $gap_size
 
 # Only enable gaps on a workspace when there is at least one container
-smart_gaps on
+# smart_gaps on
 
 # Only enable outer gaps when there is exactly one container
 # smart_gaps inverse_outer
