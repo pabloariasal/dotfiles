@@ -117,8 +117,6 @@ nnoremap <leader>Y "+y$
 xnoremap <leader>y "+y
 xnoremap <leader>p "+p
 
-xnoremap <silent> p "_dp
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language Server Protocol
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
