@@ -1,5 +1,8 @@
 ohmyzsh/ohmyzsh path:plugins/extract
 ohmyzsh/ohmyzsh path:plugins/dircycle
+ohmyzsh/ohmyzsh path:lib/clipboard.zsh
+ohmyzsh/ohmyzsh path:plugins/copypath
+ohmyzsh/ohmyzsh path:plugins/last-working-dir
 ael-code/zsh-colored-man-pages
 zsh-users/zsh-syntax-highlighting
 zsh-users/zsh-autosuggestions

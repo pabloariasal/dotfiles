@@ -22,3 +22,6 @@ source $zhome/.zsh_plugins.zsh
 
 unset zhome
 unset plugins_file
+
+# some Oh-my-zsh plugins expect this to be set
+ZSH_CACHE_DIR="${HOME}/.cache"

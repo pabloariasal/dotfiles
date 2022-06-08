@@ -27,3 +27,6 @@ bindkey '^Z' fg-bg
 autoload -Uz promptinit && promptinit && prompt powerlevel10k
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# switch to last visited directory
+lwd
