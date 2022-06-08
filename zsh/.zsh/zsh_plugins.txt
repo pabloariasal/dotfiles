@@ -1,0 +1,8 @@
+ohmyzsh/ohmyzsh path:plugins/extract
+ohmyzsh/ohmyzsh path:plugins/dircycle
+ael-code/zsh-colored-man-pages
+zsh-users/zsh-syntax-highlighting
+zsh-users/zsh-autosuggestions
+pabloariasal/zfm
+hlissner/zsh-autopair
+romkatv/powerlevel10k kind:fpath
