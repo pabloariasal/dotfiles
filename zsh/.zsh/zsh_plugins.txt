@@ -1,4 +1,3 @@
-ohmyzsh/ohmyzsh path:plugins/extract
 ohmyzsh/ohmyzsh path:plugins/dircycle
 ohmyzsh/ohmyzsh path:lib/clipboard.zsh
 ohmyzsh/ohmyzsh path:plugins/copypath
