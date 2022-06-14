@@ -472,6 +472,10 @@ nnoremap <a-i> :sync<cr>
 nnoremap <a-o> :sync %c<cr>
 " Swap panes
 " nnoremap <c-u> <c-w>x
+nnoremap <c-h> <c-w>h
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
 nnoremap , :
 nnoremap <space>q :q<cr>
 nnoremap q :q<cr>
