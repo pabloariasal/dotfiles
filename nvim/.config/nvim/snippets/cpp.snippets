@@ -98,6 +98,8 @@ snippet cr "const reference" i
     const $1& $0
 snippet ad "auto variable declaration"
     auto $1 = $2;
+snippet ar "auto reference" i
+    auto& $0
 snippet ca "const auto" i
     const auto $0
 snippet car "const auto reference" i
@@ -108,7 +110,13 @@ snippet fdc "forward declaration class"
     class $1;
 snippet fds "forward declaration struct"
     struct $1;
-snippet sci "static cast int"
+snippet sci "static cast int" i
     static_cast<int>($1)
-snippet sc "static cast"
+snippet sc "static cast" i
     static_cast<$1>($2)
+snippet be "begin end iterator pair" i
+    $1.begin(), $1.end()
+snippet cbe "begin end const iterator pair" i
+    $1.cbegin(), $1.cend()
+snippet mu "make unique" i
+    std::make_unique<$1>($2)
