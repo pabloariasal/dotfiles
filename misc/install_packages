@@ -36,22 +36,17 @@ packages=(i3-gaps
     exa
     ctags
     imagemagick
-    namcap
     xdotool
-    bc
     jq
     tlp
     vlc
-    feh
     sxiv
     pulseaudio
     pulseaudio-alsa
 )
 
 aur_packages=(spotify
-    antigen-git
     ccls-git
-    rofi-greenclip
     devour
     google-chrome
 )
