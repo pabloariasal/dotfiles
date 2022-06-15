@@ -1,0 +1,6 @@
+#!/bin/bash
+# set the repeat rate of keys
+# first number is after how many milliseconds the key will start repeating
+# second number is repetitions per second
+# default: 660 25
+xset r rate 200 100

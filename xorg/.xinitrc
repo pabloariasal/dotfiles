@@ -36,9 +36,5 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-# set the repeat rate of keys
-# first number is after how many seconds the key will start repeating
-# second number is repetitions per second
-# default: 660 25
-xset r rate 200 50
+setrrate
 exec i3
