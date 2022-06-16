@@ -35,6 +35,7 @@ for_window [class=Pavucontrol] floating enable, resize set width 50 ppt height 5
 for_window [class=Nitrogen] floating enable
 for_window [class=flameshot] floating enable
 for_window [class=$terminal_class instance="system_monitor"] floating enable, resize set width 75 ppt height 75 ppt, move position centered
+for_window [class=$browser_class instance="www.wetteronline.de__wettertrend_muenchen"] floating enable, resize set width 50 ppt height 75 ppt, move position centered
 
 #######################################################################
 # Key Bindings - Starting Programs
@@ -46,6 +47,7 @@ bindsym $mod+g exec text-scratchpad "txt"
 bindsym $mod+Shift+g exec text-scratchpad "md"
 bindsym $mod+i exec dmenu-emoji
 bindsym $mod+w exec system-monitor
+bindsym $mod+z exec wetter
 
 bindsym $mod+Ctrl+8 exec spotify
 bindsym $mod+Ctrl+9 exec gcal
