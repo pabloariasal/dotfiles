@@ -118,5 +118,10 @@ snippet be "begin end iterator pair" i
     $1.begin(), $1.end()
 snippet cbe "begin end const iterator pair" i
     $1.cbegin(), $1.cend()
-snippet mu "make unique" i
-    std::make_unique<$1>($2)
+snippet mu "mayunused" i
+   [[maybe_unused]]
+snippet do "default operations"
+    $1(const $1&) = delete;
+    $1& operator=(const $1&) = delete;
+    $1($1&&) = delete;
+    $1& operator=($1&&) = delete;
