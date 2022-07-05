@@ -49,6 +49,8 @@ bindsym $mod+i exec dmenu-emoji
 bindsym $mod+w exec system-monitor
 bindsym $mod+z exec wetter
 
+# programs assigned to workspaces
+bindsym $mod+Ctrl+1 exec layout_code
 bindsym $mod+Ctrl+8 exec spotify
 bindsym $mod+Ctrl+9 exec gcal
 
