@@ -28,5 +28,9 @@ autoload -Uz promptinit && promptinit && prompt powerlevel10k
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+function py() {
+    python3 -c "from math import *; print($*)"
+}
+
 # switch to last visited directory
 lwd
