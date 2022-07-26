@@ -26,6 +26,7 @@ return require('packer').startup(function()
   use 'szw/vim-maximizer'
   use 'vim-scripts/ReplaceWithRegister'
   use 'romainl/vim-qf'
+  use 'vifm/vifm.vim'
   use 'markonm/traces.vim'
   use 'ludovicchabant/vim-gutentags'
   use {

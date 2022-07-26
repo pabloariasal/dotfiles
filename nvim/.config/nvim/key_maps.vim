@@ -59,7 +59,7 @@ nnoremap <leader>x <cmd>ClearWhitespace<CR>
 
 nnoremap <BS> <c-^>
 
-nnoremap <leader>e <cmd>Lex 30<CR>
+nnoremap <leader>e <cmd>EditVifm<CR>
 
 " maximize current window split
 nnoremap <silent><leader>l :MaximizerToggle<CR>
