@@ -261,7 +261,7 @@ bar {
         workspace_min_width 50
         height 20
         colors {
-                background #282828
+                background #282828aa
         }
 }
 
