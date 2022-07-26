@@ -1,0 +1,3 @@
+#!/bin/sh
+
+feh --recursive --randomize --bg-fill "${HOME}"/Dropbox/wallpapers  "${HOME}"/wallpapers
