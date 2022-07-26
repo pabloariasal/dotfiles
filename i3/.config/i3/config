@@ -32,6 +32,7 @@ for_window [class="^Spotify$"] move container to workspace $ws8
 for_window [class=$terminal_class instance="__text_scratchpad"] floating enable, resize set width 50 ppt height 50 ppt, move position centered
 for_window [class=$terminal_class instance="__terminal_scratchpad"] move scratchpad
 for_window [class=Pavucontrol] floating enable, resize set width 50 ppt height 50 ppt, move position centered
+for_window [class=Blueman-manager] floating enable, resize set width 50 ppt height 50 ppt, move position centered
 for_window [class=Nitrogen] floating enable
 for_window [class=flameshot] floating enable
 for_window [class=$terminal_class instance="system_monitor"] floating enable, resize set width 75 ppt height 75 ppt, move position centered
@@ -268,3 +269,4 @@ exec_always --no-startup-id xss-lock --transfer-sleep-lock -- lock-screen
 exec --no-startup-id greenclip daemon
 exec --no-startup-id dropbox
 exec_always --no-startup-id nm-applet
+exec_always --no-startup-id blueman-applet
