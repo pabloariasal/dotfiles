@@ -50,7 +50,9 @@ bindsym $mod+Shift+g exec text-scratchpad "md"
 bindsym $mod+i exec dmenu-emoji
 bindsym $mod+w exec system-monitor
 bindsym $mod+z exec wetter
-bindsym $mod+Ctrl+b exec random_wallpaper
+bindsym $mod+Ctrl+w exec random_wallpaper
+bindsym $mod+Ctrl+b exec blueman-manager
+bindsym $mod+Ctrl+p exec pavucontrol
 
 # programs assigned to workspaces
 bindsym $mod+Ctrl+1 exec layout_code
