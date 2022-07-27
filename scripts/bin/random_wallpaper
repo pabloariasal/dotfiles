@@ -1,3 +1,13 @@
 #!/bin/sh
 
-feh --recursive --randomize --bg-fill "${HOME}"/Dropbox/wallpapers  "${HOME}"/wallpapers
+set -e
+
+function list_files()
+{
+    fd -e jpg . "$1"
+}
+
+wallpaper=$({ list_files "${HOME}"/Dropbox/wallpapers; list_files "${HOME}/wallpapers"; } | shuf | head -n 1)
+echo "$wallpaper"
+feh --bg-fill "$wallpaper"
+notify-send "New Wallpaper: $wallpaper"
