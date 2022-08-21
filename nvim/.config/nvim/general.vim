@@ -75,6 +75,8 @@ set scrolloff=8
 
 set cursorline
 
+set relativenumber
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " User Interface
 "
