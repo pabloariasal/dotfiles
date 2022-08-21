@@ -5,6 +5,8 @@ set $browser google-chrome-stable
 set $browser_class "^Google-chrome$"
 set $terminal alacritty
 set $terminal_class "^Alacritty$"
+set $display_builtin eDP1
+set $display_external HDMI2
 
 # workspaces
 set $ws1 1:1
@@ -33,6 +35,7 @@ for_window [class="^Spotify$"] move container to workspace $ws8
 for_window [class=$terminal_class instance="__text_scratchpad"] floating enable, resize set width 50 ppt height 50 ppt, move position centered
 for_window [class=$terminal_class instance="__terminal_scratchpad"] move scratchpad
 for_window [class=Pavucontrol] floating enable, resize set width 50 ppt height 50 ppt, move position centered
+for_window [class=Arandr] floating enable, resize set width 50 ppt height 50 ppt, move position centered
 for_window [class=Blueman-manager] floating enable, resize set width 50 ppt height 50 ppt, move position centered
 for_window [class=Nitrogen] floating enable
 for_window [class=flameshot] floating enable
@@ -53,6 +56,7 @@ bindsym $mod+z exec wetter
 bindsym $mod+Ctrl+w exec random_wallpaper
 bindsym $mod+Ctrl+b exec blueman-manager
 bindsym $mod+Ctrl+p exec pavucontrol
+bindsym $mod+Ctrl+a exec arandr
 
 # programs assigned to workspaces
 bindsym $mod+Ctrl+1 exec layout_code
@@ -173,6 +177,17 @@ bindsym $mod+n workspace $ws7
 # Easy jump to main workspace
 bindsym $mod+m workspace $ws1
 
+# Assign workspaces to displays
+workspace $ws1 output $display_external
+workspace $ws2 output $display_builtin
+workspace $ws3 output $display_builtin
+workspace $ws4 output $display_external
+workspace $ws5 output $display_builtin
+workspace $ws6 output $display_external
+workspace $ws7 output $display_external
+workspace $ws8 output $display_external
+workspace $ws9 output $display_external
+
 #######################################################################
 # Key Bindings - Layout
 bindsym $mod+o split h
@@ -261,6 +276,7 @@ bar {
         font pango:JetBrainsMono Nerd Font 11
         strip_workspace_numbers yes
         workspace_min_width 50
+        tray_output primary
         height 20
         colors {
                 background #282828aa
