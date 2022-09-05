@@ -53,7 +53,6 @@ bindsym $mod+Shift+g exec text-scratchpad "md"
 bindsym $mod+i exec dmenu-emoji
 bindsym $mod+w exec system-monitor
 bindsym $mod+z exec wetter
-bindsym $mod+Ctrl+w exec random_wallpaper
 bindsym $mod+Ctrl+b exec blueman-manager
 bindsym $mod+Ctrl+p exec pavucontrol
 bindsym $mod+Ctrl+a exec arandr
@@ -284,10 +283,9 @@ bar {
 #######################################################################
 # Auto Start Programs
 exec_always --no-startup-id launch-picom
-# exec_always --no-startup-id nitrogen --restore
+exec_always --no-startup-id nitrogen --restore
 exec_always --no-startup-id xss-lock --transfer-sleep-lock -- lock-screen
 exec --no-startup-id greenclip daemon
 exec --no-startup-id dropbox
 exec_always --no-startup-id nm-applet
 exec_always --no-startup-id blueman-applet
-exec_always --no-startup-id ~/.fehbg
