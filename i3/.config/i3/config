@@ -175,15 +175,15 @@ bindsym $mod+n workspace $ws7
 bindsym $mod+m workspace $ws1
 
 # Assign workspaces to displays
-workspace $ws1 output $display_external
-workspace $ws2 output $display_builtin
-workspace $ws3 output $display_builtin
-workspace $ws4 output $display_external
-workspace $ws5 output $display_builtin
-workspace $ws6 output $display_external
-workspace $ws7 output $display_external
-workspace $ws8 output $display_external
-workspace $ws9 output $display_external
+# workspace $ws1 output $display_external
+# workspace $ws2 output $display_builtin
+# workspace $ws3 output $display_builtin
+# workspace $ws4 output $display_external
+# workspace $ws5 output $display_builtin
+# workspace $ws6 output $display_external
+# workspace $ws7 output $display_external
+# workspace $ws8 output $display_external
+# workspace $ws9 output $display_external
 
 #######################################################################
 # Key Bindings - Layout
@@ -222,9 +222,9 @@ bindsym $mod+s exec flameshot gui
 bindsym XF86AudioRaiseVolume exec volume-control up
 bindsym XF86AudioLowerVolume exec volume-control down
 bindsym XF86AudioMute exec volume-control toggle
-bindsym $mod+F11 exec volume-control up
-bindsym $mod+F10 exec volume-control down
-bindsym $mod+F9 exec volume-control toggle
+# bindsym $mod+F11 exec volume-control up
+# bindsym $mod+F10 exec volume-control down
+# bindsym $mod+F9 exec volume-control toggle
 
 #######################################################################
 # Key Bindings - Screen Brightness Control
@@ -233,9 +233,9 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10; exec notify-brightness
 
 #######################################################################
 # Key Bindings - Media Control
-bindsym $mod+F7 exec playerctl play-pause
-bindsym $mod+F8 exec playerctl next
-bindsym $mod+F6 exec playerctl previous
+# bindsym $mod+F7 exec playerctl play-pause
+# bindsym $mod+F8 exec playerctl next
+# bindsym $mod+F6 exec playerctl previous
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
@@ -251,19 +251,6 @@ smart_borders on
 
 # disable window titles in stacking and tabbed layouts
 font pango:DejaVu Sans Mono 0
-
-#######################################################################
-# Gaps
-# set $gap_size 5
-
-# toggle gaps
-# bindsym $mod+semicolon gaps inner current toggle $gap_size
-
-# Only enable gaps on a workspace when there is at least one container
-# smart_gaps on
-
-# Only enable outer gaps when there is exactly one container
-# smart_gaps inverse_outer
 
 #######################################################################
 # Status bar
