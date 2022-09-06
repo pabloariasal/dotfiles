@@ -66,11 +66,9 @@ nnoremap <silent><leader>l :MaximizerToggle<CR>
 "look for word under the cursor
 nnoremap <Leader>gc :<C-u>grep! '<C-r>=expand("<cword>")<CR>'<CR>
 nnoremap <leader>gn :<C-u>grep! 
-nnoremap <leader>z :<C-u>help 
 nnoremap <leader>s q:
 nnoremap <leader>t :<C-u>tjump 
 nnoremap <leader>o :<C-u>edit 
-nnoremap <leader>u :<C-u>find 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Quitting and Saving
