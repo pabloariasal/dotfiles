@@ -55,10 +55,6 @@ nnoremap <silent> <a-k> gT
 nnoremap , :
 vnoremap , :
 
-nnoremap <leader>x <cmd>ClearWhitespace<CR>
-
-nnoremap <BS> <c-^>
-
 nnoremap <leader>e <cmd>EditVifm<CR>
 
 " maximize current window split
@@ -108,7 +104,7 @@ nmap gq <Plug>(qf_qf_toggle)
 nmap gl <Plug>(qf_loc_toggle)
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Registers
+" System clipboard
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <leader>p "+p
 nnoremap <leader>P "+P

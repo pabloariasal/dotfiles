@@ -2,15 +2,18 @@ local actions = require "telescope.actions"
 
 require('telescope').setup{
   defaults = {
-    -- path_display = 'smart',
-    layout_strategy = 'bottom_pane',
+    layout_strategy = 'vertical',
     layout_config = {
         bottom_pane = {
                 height = 25,
                 preview_cutoff = 120,
                 prompt_position = "bottom",
                 preview = false
-        },
+      },
+    vertical = {
+        prompt_position = 'top',
+        height = 25,
+      },
     },
     preview = {
       hide_on_startup = true,
@@ -42,12 +45,6 @@ require('telescope').setup{
     find_files = {
       find_command = {"fd", "--type", "f", "--hidden", "--strip-cwd-prefix", "-E", ".git"},
       -- theme = "dropdown"
-    },
-    buffers = {
-      -- theme = "dropdown"
-    },
-    current_buffer_fuzzy_find = {
-      theme = "ivy"
     }
   },
   extensions = {
