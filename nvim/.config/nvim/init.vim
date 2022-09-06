@@ -19,10 +19,11 @@ runtime plugins.lua
 runtime general.vim
 runtime key_maps.vim
 runtime snippets.lua
-runtime statusline.lua
+runtime statusline.vim
 runtime lsp.lua
 runtime ctags.vim
-runtime completion.lua
+" runtime completion.lua
+runtime completion.vim
 runtime treesitter.lua
 runtime telescope.lua
 runtime gitsigns.lua

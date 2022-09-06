@@ -23,6 +23,7 @@ return require('packer').startup(function()
   use 'tpope/vim-unimpaired'
   use 'tpope/vim-commentary'
   use 'tpope/vim-obsession'
+  use 'jiangmiao/auto-pairs'
   use 'szw/vim-maximizer'
   use 'vim-scripts/ReplaceWithRegister'
   use 'romainl/vim-qf'
@@ -36,21 +37,14 @@ return require('packer').startup(function()
     },
     tag = 'release' -- To use the latest release
   }
-  use 'nvim-lualine/lualine.nvim'
-  use 'pabloariasal/vim-alternate'
+  use{  'nvim-lualine/lualine.nvim', disable=true }
+  use{  'pabloariasal/vim-alternate', disable=true }
   use 'neovim/nvim-lspconfig'
   use {
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
-  use 'hrsh7th/nvim-cmp'
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/cmp-path'
-  use 'f3fora/cmp-spell'
-  use 'dcampos/cmp-snippy'
-  use 'jiangmiao/auto-pairs'
-  use 'itchyny/vim-haskell-indent'
+  use{  'itchyny/vim-haskell-indent', disable=true }
   use 'dcampos/nvim-snippy'
   use {
     'nvim-telescope/telescope.nvim',

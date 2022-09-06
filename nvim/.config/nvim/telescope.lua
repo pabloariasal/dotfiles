@@ -11,7 +11,7 @@ require('telescope').setup{
                 preview = false
       },
     vertical = {
-        prompt_position = 'top',
+        -- prompt_position = 'top',
         height = 25,
       },
     },
