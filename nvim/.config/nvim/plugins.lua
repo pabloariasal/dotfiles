@@ -37,8 +37,7 @@ return require('packer').startup(function()
     },
     tag = 'release' -- To use the latest release
   }
-  use{  'nvim-lualine/lualine.nvim', disable=true }
-  use{  'pabloariasal/vim-alternate', disable=true }
+  use{  'pabloariasal/vim-alternate'}
   use 'neovim/nvim-lspconfig'
   use {
     "nvim-treesitter/nvim-treesitter",
