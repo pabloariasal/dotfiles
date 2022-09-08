@@ -2,7 +2,7 @@ local actions = require "telescope.actions"
 
 require('telescope').setup{
   defaults = {
-    layout_strategy = 'vertical',
+    layout_strategy = 'bottom_pane',
     layout_config = {
         bottom_pane = {
                 height = 25,
