@@ -46,6 +46,7 @@ for_window [class=$browser_class instance="www.wetteronline.de__wettertrend_muen
 # Key Bindings - Starting Programs
 bindsym $mod+Return exec $terminal
 bindsym $mod+b exec $browser
+bindsym $mod+Shift+b exec $browser --incognito
 bindsym $mod+p exec dmenu_run -p "Run"
 bindsym $mod+c exec dmenu-clipboard
 bindsym $mod+g exec text-scratchpad "txt"
