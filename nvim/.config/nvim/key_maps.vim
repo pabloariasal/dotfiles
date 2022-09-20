@@ -34,7 +34,7 @@ vmap < <gv
 vmap > >gv
 
 "jump to alternate file
-nmap <silent> <leader>a <cmd>Alternate<CR>
+nmap <leader>a <cmd>lua require('alternate').alternate()<CR>
 
 " close current buffer
 nnoremap <silent> <leader>c <cmd>bp <bar>bd #<cr>
