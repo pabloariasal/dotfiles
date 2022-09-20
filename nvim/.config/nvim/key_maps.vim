@@ -163,16 +163,16 @@ xmap <Tab> <Plug>(snippy-cut-text)
 " Marks
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <leader>m1 mA
-nnoremap <leader>1 'A
+nnoremap <leader>1 `A
 
 nnoremap <leader>m2 mB
-nnoremap <leader>2 'B
+nnoremap <leader>2 `B
 
 nnoremap <leader>m3 mC
-nnoremap <leader>3 'C
+nnoremap <leader>3 `C
 
 nnoremap <leader>m4 mD
-nnoremap <leader>4 'D
+nnoremap <leader>4 `D
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Misc
