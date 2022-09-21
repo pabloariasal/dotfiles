@@ -36,7 +36,7 @@ set hidden
 
 "Ignore files in .git, build etc. when globbing or autocompleting
 set wildignore=*.o,*~,*.pyc,*.swp
-set wildignore+=*/.git/*,*/build*/*,*/dist/*,build
+set wildignore+=*/.git/*
 
 "Automatically reload buffers when file changes on disk
 set autoread
