@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -e
+
+INCREMENT=10
+
+if [ "$1" = "inc" ]; then
+    xbacklight -inc $INCREMENT
+else
+    xbacklight -dec $INCREMENT
+fi
+
+notify-brightness
+
+

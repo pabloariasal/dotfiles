@@ -228,8 +228,8 @@ bindsym XF86AudioMute exec volume-control toggle
 
 #######################################################################
 # Key Bindings - Screen Brightness Control
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10; exec notify-brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10; exec notify-brightness
+bindsym XF86MonBrightnessUp exec brightness-control inc
+bindsym XF86MonBrightnessDown exec brightness-control dec
 
 #######################################################################
 # Key Bindings - Media Control
