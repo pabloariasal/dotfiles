@@ -1,11 +1,9 @@
 # program shorcuts
 alias n='nvim'
-alias b='bat -p'
 alias v='vifm'
 
 # convenience
 alias sudo='sudo '
-alias ls='ls --color=tty'
 alias ..='cd ..'
 
 # prompt before doing anything stupid
@@ -15,11 +13,11 @@ alias mv='mv -i'
 # commands
 alias h='history -r -E -35'
 
-# exa
-alias l='exa'
-alias la='exa -a'
-alias ll='exa -la'
-alias lt='exa --tree'
+# ls
+alias ls='ls --color=tty'
+alias l='ls'
+alias la='ls -a'
+alias ll='ls -la'
 
 # devour
 alias za='devour zathura'
