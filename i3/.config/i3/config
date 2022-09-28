@@ -263,7 +263,7 @@ bar {
         tray_output primary
         height 20
         colors {
-                background #282828aa
+                background #282828
         }
 }
 
