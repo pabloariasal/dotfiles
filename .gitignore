@@ -6,3 +6,4 @@ antigen.zsh.zwc
 vifm/.config/vifm/vifm-help.txt
 vifm/.config/vifm/vifminfo.json
 systemd/.config/systemd/user/default.target.wants/
+nvim/.config/nvim/plugin/
