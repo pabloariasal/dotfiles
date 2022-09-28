@@ -256,7 +256,7 @@ bar {
         i3bar_command i3bar --transparency
         font pango:JetBrainsMono Nerd Font 11
         strip_workspace_numbers yes
-        workspace_min_width 100
+        workspace_min_width 125
         tray_output primary
         height 20
         colors {
