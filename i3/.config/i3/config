@@ -55,7 +55,7 @@ bindsym $mod+Ctrl+p exec pavucontrol
 bindsym $mod+Ctrl+a exec arandr
 
 # programs assigned to workspaces
-bindsym $mod+Ctrl+1 exec layout_code
+# bindsym $mod+Ctrl+1 exec layout_code
 bindsym $mod+Ctrl+4 exec keep
 bindsym $mod+Ctrl+8 exec spotify
 bindsym $mod+Ctrl+9 exec gcal
