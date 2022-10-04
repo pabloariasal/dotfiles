@@ -191,7 +191,10 @@ bindsym $mod+Shift+r restart
 # Key Bindings - Scratchpad
 # mod+Minus is the generic scratchpad
 bindsym $mod+Shift+minus move scratchpad
-bindsym $mod+minus [instance="^(?!__terminal_scratchpad$)"] scratchpad show
+bindsym $mod+minus [instance="^(?!__terminal_scratchpad$)" class="^(?!Google-chrome$)"] scratchpad show
+
+# mod+plus browser scratchpad
+bindsym $mod+plus [class=$browser_class] scratchpad show
 
 # mod+0 is the drop down terminal
 bindsym $mod+0 exec i3-toggle-scratchpad
