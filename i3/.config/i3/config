@@ -35,7 +35,6 @@ for_window [class="^Spotify$"] move container to workspace $ws8
 for_window [class=$terminal_class instance="__terminal_scratchpad"] move scratchpad
 for_window [class=Pavucontrol] floating enable, resize set width 50 ppt height 50 ppt, move position centered
 for_window [class=Arandr] floating enable, resize set width 50 ppt height 50 ppt, move position centered
-for_window [class=Blueman-manager] floating enable, resize set width 50 ppt height 50 ppt, move position centered
 for_window [class=Nitrogen] floating enable, resize set width 90 ppt height 90 ppt, move position centered
 for_window [class=flameshot] floating enable
 for_window [class=$terminal_class instance="system_monitor"] floating enable, resize set width 75 ppt height 75 ppt, move position centered
@@ -52,10 +51,9 @@ bindsym $mod+i exec dmenu-emoji
 bindsym $mod+w exec system-monitor
 bindsym $mod+z exec wetter
 bindsym $mod+Ctrl+p exec pavucontrol
-bindsym $mod+Ctrl+a exec arandr
 
 # programs assigned to workspaces
-# bindsym $mod+Ctrl+1 exec layout_code
+bindsym $mod+Ctrl+1 exec layout_code
 bindsym $mod+Ctrl+4 exec keep
 bindsym $mod+Ctrl+8 exec spotify
 bindsym $mod+Ctrl+9 exec gcal
@@ -171,17 +169,6 @@ bindsym $mod+n workspace $ws7
 # Easy jump to main workspace
 bindsym $mod+m workspace $ws1
 
-# Assign workspaces to displays
-# workspace $ws1 output $display_external
-# workspace $ws2 output $display_builtin
-# workspace $ws3 output $display_builtin
-# workspace $ws4 output $display_external
-# workspace $ws5 output $display_builtin
-# workspace $ws6 output $display_external
-# workspace $ws7 output $display_external
-# workspace $ws8 output $display_external
-# workspace $ws9 output $display_external
-
 #######################################################################
 # Key Bindings - Layout
 bindsym $mod+o split h
@@ -219,9 +206,6 @@ bindsym $mod+s exec flameshot gui
 bindsym XF86AudioRaiseVolume exec volume-control up
 bindsym XF86AudioLowerVolume exec volume-control down
 bindsym XF86AudioMute exec volume-control toggle
-# bindsym $mod+F11 exec volume-control up
-# bindsym $mod+F10 exec volume-control down
-# bindsym $mod+F9 exec volume-control toggle
 
 #######################################################################
 # Key Bindings - Screen Brightness Control
@@ -230,9 +214,6 @@ bindsym XF86MonBrightnessDown exec brightness-control dec
 
 #######################################################################
 # Key Bindings - Media Control
-# bindsym $mod+F7 exec playerctl play-pause
-# bindsym $mod+F8 exec playerctl next
-# bindsym $mod+F6 exec playerctl previous
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
@@ -272,4 +253,3 @@ exec_always --no-startup-id xss-lock --transfer-sleep-lock -- lock-screen
 exec --no-startup-id greenclip daemon
 exec --no-startup-id dropbox
 exec_always --no-startup-id nm-applet
-# exec_always --no-startup-id blueman-applet
