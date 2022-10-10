@@ -118,7 +118,7 @@ nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> gy <cmd>lua vim.lsp.buf.type_definition()<CR>
 nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
 nnoremap <silent> <leader>v <cmd>lua vim.lsp.buf.references()<CR>
-nnoremap <silent> <leader>f <cmd>lua vim.lsp.buf.formatting()<CR>
+nnoremap <silent> <leader>f <cmd>lua vim.lsp.buf.format()<CR>
 nnoremap <silent> [g <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
 nnoremap <silent> ]g <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
 nnoremap <silent> <leader>d <cmd>lua vim.diagnostic.setloclist()<CR>
@@ -162,16 +162,9 @@ xmap <Tab> <Plug>(snippy-cut-text)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Marks
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <leader>m1 mA
 nnoremap <leader>1 `A
-
-nnoremap <leader>m2 mB
 nnoremap <leader>2 `B
-
-nnoremap <leader>m3 mC
 nnoremap <leader>3 `C
-
-nnoremap <leader>m4 mD
 nnoremap <leader>4 `D
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

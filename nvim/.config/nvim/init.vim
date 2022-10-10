@@ -17,6 +17,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 runtime plugins.lua
 runtime general.vim
+runtime options.lua
 runtime key_maps.vim
 runtime snippets.lua
 runtime statusline.vim
