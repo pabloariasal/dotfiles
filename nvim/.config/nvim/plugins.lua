@@ -30,14 +30,7 @@ return require('packer').startup(function()
   use 'vifm/vifm.vim'
   use 'markonm/traces.vim'
   use 'ludovicchabant/vim-gutentags'
-  use {
-    'lewis6991/gitsigns.nvim',
-    requires = {
-      'nvim-lua/plenary.nvim'
-    },
-    tag = 'release' -- To use the latest release
-  }
-  use{  'pabloariasal/vim-alternate'}
+  use 'lewis6991/gitsigns.nvim'
   use 'neovim/nvim-lspconfig'
   use {
     "nvim-treesitter/nvim-treesitter",
