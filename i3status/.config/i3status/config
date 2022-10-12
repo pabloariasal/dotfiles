@@ -15,8 +15,8 @@ general {
 
 order += "volume master"
 order += "battery all"
-order += "time"
-order += "tztime local"
+order += "tztime date"
+order += "tztime time"
 
 volume master {
         format = "🔊%volume"
@@ -39,11 +39,12 @@ battery all {
         low_threshold = 30
 }
 
-time {
-        format = "📅%a %b %e %Y"
+tztime date {
+  format = "%time"
+  format_time = "📅%a %b %e %Y"
 }
 
-tztime local {
+tztime time {
   format = "<span size='large'>%time</span>"
   format_time = "%H:%M"
 }

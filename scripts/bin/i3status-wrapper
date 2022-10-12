@@ -8,5 +8,5 @@ i3status | (read line && echo "$line" && read line && echo "$line" && read line 
 do
   read line
   update_brightness
-  echo ",[{\"full_text\":\"🔆${brightness}%\" },${line#,\[}" || exit 1
+  echo ",[{\"full_text\":\"🔆${brightness}%\" , \"markup\":\"pango\"},${line#,\[}" || exit 1
 done)
