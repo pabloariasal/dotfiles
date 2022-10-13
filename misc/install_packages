@@ -92,4 +92,13 @@ function install_nerd_fonts()
     ./install.sh JetBrainsMono
 }
 
+function install_i3lock_fancy()
+{
+    mkdir -p ~/tools
+    cd ~/tools
+    git clone https://github.com/guimeira/i3lock-fancy-multimonitor.git
+    chmod +x ${HOME}/tools/i3lock-fancy-multimonitor/lock
+    ln -s ${HOME}/tools/i3lock-fancy-multimonitor/lock ${HOME}/bin/i3lock-fancy
+}
+
 "$1"
