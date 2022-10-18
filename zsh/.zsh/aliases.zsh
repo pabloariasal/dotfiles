@@ -1,6 +1,7 @@
 # program shorcuts
 alias n='nvim'
 alias v='vifm'
+alias b='bat --plain'
 
 # convenience
 alias sudo='sudo '
