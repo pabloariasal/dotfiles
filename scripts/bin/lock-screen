@@ -1,2 +1,2 @@
 #!/bin/bash
-i3lock-fancy --pixelate
+i3lock -c 444444 && sleep 1
