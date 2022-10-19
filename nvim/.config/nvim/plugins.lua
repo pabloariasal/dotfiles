@@ -14,7 +14,6 @@ end
 
 return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
-  use 'morhetz/gruvbox'
   use 'tpope/vim-surround'
   use 'tpope/vim-repeat'
   use 'tpope/vim-sleuth'
@@ -43,6 +42,24 @@ return require('packer').startup(function()
     requires = { {'nvim-lua/plenary.nvim'} }
   }
   use 'pabloariasal/alternate.nvim'
+  -- colors
+  use 'morhetz/gruvbox'
+  use 'dracula/vim'
+  use {
+    "catppuccin/nvim",
+    as = "catppuccin",
+    config = function()
+      vim.g.catppuccin_flavour = "macchiato" -- latte, frappe, macchiato, mocha
+      require("catppuccin").setup()
+    end
+  }
+  use 'mhartington/oceanic-next'
+  use {
+    'https://gitlab.com/__tpb/monokai-pro.nvim',
+    as = 'monokai-pro.nvim'
+  }
+  use 'arcticicestudio/nord-vim'
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then

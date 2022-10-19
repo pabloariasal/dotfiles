@@ -1,0 +1,7 @@
+#!/bin/bash
+
+theme=$(ls ${DOTFILES}/themes | dmenu -p 'select a theme' -l 20)
+source "${DOTFILES}/themes/$theme"
+
+# reload alacritty
+touch ${DOTFILES}/alacritty/.config/alacritty/alacritty.yml

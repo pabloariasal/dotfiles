@@ -27,3 +27,4 @@ runtime completion.vim
 runtime treesitter.lua
 runtime telescope.lua
 runtime gitsigns.lua
+runtime colors.lua
