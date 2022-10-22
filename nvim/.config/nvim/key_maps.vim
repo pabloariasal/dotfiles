@@ -112,19 +112,6 @@ xnoremap <leader>y "+y
 xnoremap <leader>p "+p
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Language Server Protocol
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
-nnoremap <silent> gy <cmd>lua vim.lsp.buf.type_definition()<CR>
-nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
-nnoremap <silent> <leader>v <cmd>lua vim.lsp.buf.references()<CR>
-nnoremap <silent> <leader>f <cmd>lua vim.lsp.buf.format()<CR>
-nnoremap <silent> [g <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
-nnoremap <silent> ]g <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
-nnoremap <silent> <leader>d <cmd>lua vim.diagnostic.setloclist()<CR>
-nnoremap <silent> <F2> <cmd>lua vim.lsp.buf.rename()<Cr>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Fuzzy Finding
 "
 " Required Plugins: telescope
