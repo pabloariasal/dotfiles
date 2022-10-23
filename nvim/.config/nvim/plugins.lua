@@ -42,16 +42,13 @@ return require('packer').startup(function()
     requires = { {'nvim-lua/plenary.nvim'} }
   }
   use 'pabloariasal/alternate.nvim'
+  use "lukas-reineke/indent-blankline.nvim"
   -- colors
   use 'morhetz/gruvbox'
   use 'dracula/vim'
   use {
-    "catppuccin/nvim",
-    as = "catppuccin",
-    config = function()
-      vim.g.catppuccin_flavour = "macchiato" -- latte, frappe, macchiato, mocha
-      require("catppuccin").setup()
-    end
+      "catppuccin/nvim",
+      as = "catppuccin",
   }
   use 'mhartington/oceanic-next'
   use {
