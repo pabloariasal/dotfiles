@@ -1,8 +1,13 @@
+-- gruvbox
 vim.g.gruvbox_sign_column = 'bg0'
 vim.g.gruvbox_italic = true
 
+-- oceanic next
 vim.g.oceanic_next_terminal_bold = true
 vim.g.oceanic_next_terminal_italic = true
+
+-- seoul256
+vim.g.seoul256_background = 236
 
 vim.o.termguicolors = true
 

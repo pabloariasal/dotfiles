@@ -58,6 +58,7 @@ return require('packer').startup(function()
   }
   use 'arcticicestudio/nord-vim'
   use 'NLKNguyen/papercolor-theme'
+  use 'junegunn/seoul256.vim'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
