@@ -27,7 +27,6 @@ floating_modifier $mod
 #######################################################################
 # Automatic Window Assignment
 assign [class=$browser_class instance="calendar."] $ws9
-assign [class=$browser_class instance="keep."] $ws4
 for_window [class="^Spotify$"] move container to workspace $ws8
 
 #######################################################################
@@ -57,7 +56,6 @@ bindsym $mod+g exec galculator
 
 # programs assigned to workspaces
 bindsym $mod+Ctrl+1 exec layout_code
-bindsym $mod+Ctrl+4 exec keep
 bindsym $mod+Ctrl+8 exec spotify
 bindsym $mod+Ctrl+9 exec gcal
 
