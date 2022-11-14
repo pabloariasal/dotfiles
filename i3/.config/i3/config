@@ -242,10 +242,9 @@ bar {
         font pango:JetBrainsMono Nerd Font 11
         strip_workspace_numbers yes
         workspace_min_width 125
-        tray_output primary
         height 20
         colors {
-                background #282828
+                background #282828cc
         }
 }
 
