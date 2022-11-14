@@ -62,3 +62,8 @@ lspconfig.pylsp.setup{
   -- capabilities = capabilities
   on_attach = on_attach
 }
+
+-- CMake - cmake-language-server
+lspconfig.cmake.setup{
+  on_attach = on_attach
+}
