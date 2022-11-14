@@ -45,6 +45,7 @@ return require('packer').startup(function()
   use "lukas-reineke/indent-blankline.nvim"
   -- colors
   use 'morhetz/gruvbox'
+  use 'shaunsingh/solarized.nvim'
   use 'dracula/vim'
   use {
       "catppuccin/nvim",
@@ -56,6 +57,7 @@ return require('packer').startup(function()
     as = 'monokai-pro.nvim'
   }
   use 'arcticicestudio/nord-vim'
+  use 'NLKNguyen/papercolor-theme'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
