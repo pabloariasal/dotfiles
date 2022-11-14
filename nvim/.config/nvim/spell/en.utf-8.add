@@ -6,3 +6,11 @@ fzf
 plugin
 vim
 repo
+coroutines
+parallelize
+syscall
+RAII
+coroutine
+destructor
+deallocate
+deallocating
