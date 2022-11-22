@@ -4,7 +4,6 @@ set $mod Mod4
 set $browser google-chrome-stable
 set $browser_class "^Google-chrome$"
 set $terminal alacritty
-set $terminal_class "^Alacritty$"
 set $display_builtin eDP1
 set $display_external HDMI2
 
@@ -25,7 +24,8 @@ set $ws9 9:9
 floating_modifier $mod
 
 #######################################################################
-# Automatic Window Assignment
+# Assign programs to workspaces
+assign [instance="__greeter_term"] $ws1
 assign [class=$browser_class instance="calendar."] $ws9
 for_window [class="^Spotify$"] move container to workspace $ws8
 
@@ -249,10 +249,17 @@ bar {
 }
 
 #######################################################################
-# Auto Start Programs
+# Auto Start Services
 exec_always --no-startup-id launch-picom
 exec_always --no-startup-id nitrogen --restore
 exec_always --no-startup-id xss-lock --transfer-sleep-lock -- lock-screen
 exec --no-startup-id greenclip daemon
 exec --no-startup-id dropbox
 exec_always --no-startup-id nm-applet
+exec alternating_layouts
+
+#######################################################################
+# Auto Start Programs
+exec greeter_term
+exec spotify
+exec gcal

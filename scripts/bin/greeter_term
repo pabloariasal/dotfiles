@@ -1,0 +1,2 @@
+#!/bin/sh
+alacritty --class="__greeter_term" -e $SHELL -lc "neofetch && exec $SHELL"
