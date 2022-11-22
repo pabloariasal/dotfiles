@@ -1,0 +1,4 @@
+#!/bin/bash
+
+web=$(echo "" | dmenu -p "Enter URL >")
+google-chrome-stable --app="https://$web"
