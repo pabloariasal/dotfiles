@@ -42,7 +42,8 @@ return require('packer').startup(function()
     requires = { {'nvim-lua/plenary.nvim'} }
   }
   use 'pabloariasal/alternate.nvim'
-  use "lukas-reineke/indent-blankline.nvim"
+  use 'lukas-reineke/indent-blankline.nvim'
+  use 'takac/vim-hardtime'
   -- colors
   use 'morhetz/gruvbox'
   use 'shaunsingh/solarized.nvim'

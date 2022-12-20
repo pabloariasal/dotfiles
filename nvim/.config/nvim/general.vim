@@ -73,6 +73,9 @@ set cursorline
 
 set relativenumber
 
+" Enable hard mode per default
+let g:hardtime_default_on = 1
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " User Interface
 "
