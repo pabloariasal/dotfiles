@@ -57,6 +57,8 @@ bindsym $mod+g exec galculator
 
 # programs assigned to workspaces
 bindsym $mod+Ctrl+1 exec layout_code
+bindsym $mod+Ctrl+8 exec spotify
+bindsym $mod+Ctrl+9 exec gcal
 
 #######################################################################
 # Key Bindings - Windows
