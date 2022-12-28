@@ -4,8 +4,6 @@ set $mod Mod4
 set $browser google-chrome-stable
 set $browser_class "^Google-chrome$"
 set $terminal alacritty
-set $display_builtin eDP1
-set $display_external HDMI2
 
 # workspaces
 set $ws1 1:1
