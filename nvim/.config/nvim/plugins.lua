@@ -23,7 +23,6 @@ return require('packer').startup(function()
   use 'tpope/vim-commentary'
   use 'tpope/vim-obsession'
   use 'jiangmiao/auto-pairs'
-  use 'szw/vim-maximizer'
   use 'vim-scripts/ReplaceWithRegister'
   use 'romainl/vim-qf'
   use 'vifm/vifm.vim'
