@@ -1,25 +1,4 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.
-" | .--------------. || .--------------. || .--------------. || .--------------. || .--------------. |
-" | | ____   ____  | || |     _____    | || | ____    ____ | || |  _______     | || |     ______   | |
-" | ||_  _| |_  _| | || |    |_   _|   | || ||_   \  /   _|| || | |_   __ \    | || |   .' ___  |  | |
-" | |  \ \   / /   | || |      | |     | || |  |   \/   |  | || |   | |__) |   | || |  / .'   \_|  | |
-" | |   \ \ / /    | || |      | |     | || |  | |\  /| |  | || |   |  __ /    | || |  | |         | |
-" | |    \ ' /     | || |     _| |_    | || | _| |_\/_| |_ | || |  _| |  \ \_  | || |  \ `.___.'\  | |
-" | |     \_/      | || |    |_____|   | || ||_____||_____|| || | |____| |___| | || |   `._____.'  | |
-" | |              | || |              | || |              | || |              | || |              | |
-" | '--------------' || '--------------' || '--------------' || '--------------' || '--------------' |
-"  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'
-"
-" Maintainer:
-"   Pablo Arias - pabloariasal@gmail.com
-"
-" Description:
-"   General basic configuration
-"
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General Settings
 "
 " Required Tools: ripgrep
@@ -60,24 +39,13 @@ set splitbelow
 "Show possible matches above command line with TAB
 set wildmenu
 
-"English as default language
-set spelllang=en_us
-
-"Dont generate a swap file
-set noswapfile
-
-"Scroll 8 spaces before edge
-set scrolloff=8
-
+" highlight line where cursor is
 set cursorline
 
 set relativenumber
 
-" Enable hard mode per default
-let g:hardtime_default_on = 1
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" User Interface
+" Look & Feel
 "
 " Required Plugins: traces.vim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -99,6 +67,9 @@ let g:traces_num_range_preview = 1
 
 "Enable syntax highlighting
 syntax on
+
+" Enable hard mode per default
+let g:hardtime_default_on = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " netrw
@@ -123,8 +94,6 @@ set hlsearch
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Indentation
-"
-" Required Plugins: tpope/vim-sleuth
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Smart indentation for C-like languages
 set smartindent
@@ -158,7 +127,7 @@ command! ClearWhitespace %s/\s\+$//
 " autocommands
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "enable spell checkinf for markdown files
-autocmd FileType markdown setlocal spell
+autocmd FileType markdown setlocal spell spelllang=en_us
 "Open help bufers on the right per default
 autocmd FileType help wincmd L
 "Don't show numbers on terminal buffers (needed for fzf)

@@ -1,30 +1,8 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.
-" | .--------------. || .--------------. || .--------------. || .--------------. || .--------------. |
-" | | ____   ____  | || |     _____    | || | ____    ____ | || |  _______     | || |     ______   | |
-" | ||_  _| |_  _| | || |    |_   _|   | || ||_   \  /   _|| || | |_   __ \    | || |   .' ___  |  | |
-" | |  \ \   / /   | || |      | |     | || |  |   \/   |  | || |   | |__) |   | || |  / .'   \_|  | |
-" | |   \ \ / /    | || |      | |     | || |  | |\  /| |  | || |   |  __ /    | || |  | |         | |
-" | |    \ ' /     | || |     _| |_    | || | _| |_\/_| |_ | || |  _| |  \ \_  | || |  \ `.___.'\  | |
-" | |     \_/      | || |    |_____|   | || ||_____||_____|| || | |____| |___| | || |   `._____.'  | |
-" | |              | || |              | || |              | || |              | || |              | |
-" | '--------------' || '--------------' || '--------------' || '--------------' || '--------------' |
-"  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'
-"
-" Maintainer:
-"   Pablo Arias - pabloariasal@gmail.com
-"
-" Description:
-"   Key Mappings
-"
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" use space as leader
 let mapleader=" "
 
 "but don't lose reverse motion
 noremap \ ,
-
-"make Y consistent with other motions
-nnoremap Y y$
 
 "best mapping ever
 inoremap jj <ESC>
@@ -43,22 +21,11 @@ nnoremap <silent> <leader>c <cmd>bp <bar>bd #<cr>
 nnoremap <silent> } <cmd>execute "keepjumps norm! " . v:count1 . "}"<CR>
 nnoremap <silent> { <cmd>execute "keepjumps norm! " . v:count1 . "{"<CR>
 
-"go to beginning and end of line
-nnoremap <silent> <a-h> ^
-nnoremap <silent> <a-l> $
-
-"navigate tabs
-nnoremap <silent> <a-j> gt
-nnoremap <silent> <a-k> gT
-
 "open command prompt with comma
 nnoremap , :
 vnoremap , :
 
 nnoremap <leader>e <cmd>EditVifm<CR>
-
-" maximize current window split
-nnoremap <silent><leader>l :MaximizerToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Populate command line
@@ -68,7 +35,6 @@ nnoremap <Leader>gc :<C-u>grep! '<C-r>=expand("<cword>")<CR>'<CR>
 nnoremap <leader>gn :<C-u>grep! 
 nnoremap <leader>s q:
 nnoremap <leader>t :<C-u>tjump 
-nnoremap <leader>o :<C-u>edit 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Quitting and Saving
@@ -145,14 +111,6 @@ smap <expr> <C-j> snippy#can_jump(1) ? '<Plug>(snippy-next)' : '<C-j>'
 smap <expr> <C-k> snippy#can_jump(-1) ? '<Plug>(snippy-previous)' : '<C-k>'
 nmap g<Tab> <Plug>(snippy-cut-text)
 xmap <Tab> <Plug>(snippy-cut-text)
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Marks
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <leader>1 `A
-nnoremap <leader>2 `B
-nnoremap <leader>3 `C
-nnoremap <leader>4 `D
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Misc
