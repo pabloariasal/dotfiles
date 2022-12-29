@@ -87,7 +87,7 @@ function install_wallpapers()
 function install_nerd_fonts()
 {
     local nerd_fonts_dir="$HOME/nerd-fonts"
-    [ ! -d "$nerd-fonts" ] || git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git $nerd_fonts_dir
+    [ -d "$nerd-fonts" ] || git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git $nerd_fonts_dir
     cd "$HOME/nerd-fonts"
     ./install.sh JetBrainsMono
 }
