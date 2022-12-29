@@ -1,6 +1,3 @@
 #!/bin/bash
 
-set -e
-
-lock_wallpaper=$(cat ${HOME}/.config/nitrogen/bg-saved.cfg | grep 'file' | awk -F  '=' '{print $2}')
-convert "$lock_wallpaper" RGB:- | i3lock --nofork --raw 1920x1080:rgb --image /dev/stdin
+i3lock --nofork -i ${HOME}/wallpapers/me/windows.png
