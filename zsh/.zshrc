@@ -32,7 +32,5 @@ function py() {
     python3 -c "from math import *; print($*)"
 }
 
-eval "$(rbenv init - zsh)"
-
 # switch to last visited directory
 lwd
