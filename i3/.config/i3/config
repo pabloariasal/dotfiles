@@ -37,7 +37,6 @@ for_window [class=Nitrogen] floating enable, resize set width 90 ppt height 90 p
 for_window [class=flameshot] floating enable
 for_window [instance="__system_monitor"] floating enable, resize set width 75 ppt height 75 ppt, move position centered
 for_window [class=$browser_class instance="www.wetteronline.de__wettertrend_muenchen"] floating enable, resize set width 50 ppt height 75 ppt, move position centered
-for_window [class=Galculator] floating enable
 
 #######################################################################
 # Key Bindings - Starting Programs
@@ -51,7 +50,6 @@ bindsym $mod+w exec system-monitor
 bindsym $mod+z exec wetter
 bindsym $mod+Ctrl+p exec pavucontrol
 bindsym $mod+Ctrl+t exec theme_selector
-bindsym $mod+g exec galculator
 
 # programs assigned to workspaces
 bindsym $mod+Ctrl+1 exec layout_code
