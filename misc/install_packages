@@ -88,7 +88,9 @@ function install_packages()
 function install_wallpapers()
 {
     local wallpaper_loc="$HOME/wallpapers"
-    git clone https://gitlab.com/dwt1/wallpapers.git $wallpaper_loc
+    mkdir -p $wallpaper_loc
+    git clone https://gitlab.com/dwt1/wallpapers.git $wallpaper_loc/dt
+    git clone git@github.com:pabloariasal/wallpapers.git $wallpaper_loc/me
 }
 
 function install_nerd_fonts()
