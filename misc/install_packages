@@ -99,4 +99,15 @@ function install_nerd_fonts()
     ./install.sh JetBrainsMono
 }
 
+function install_keyboard_conf()
+{
+    sudo ln -s ${DOTFILES}/extra/00-keyboard.conf /etc/X11/xorg.conf.d/
+}
+
+function start_agent_service()
+{
+   systemctl --user enable ssh-agent.service
+   systemctl --user start ssh-agent.service
+}
+
 "$1"
