@@ -24,7 +24,7 @@ floating_modifier $mod
 #######################################################################
 # Assign programs to workspaces
 assign [instance="__greeter_term"] $ws1
-assign [class=$browser_class instance="keep."] $ws4
+assign [class=$browser_class instance="keep."] $ws6
 assign [class=$browser_class instance="calendar."] $ws9
 for_window [class="^Spotify$"] move container to workspace $ws8
 
@@ -53,7 +53,7 @@ bindsym $mod+Ctrl+t exec theme_selector
 
 # programs assigned to workspaces
 bindsym $mod+Ctrl+1 exec layout_code
-bindsym $mod+Ctrl+4 exec keep
+bindsym $mod+Ctrl+6 exec keep
 bindsym $mod+Ctrl+8 exec spotify
 bindsym $mod+Ctrl+9 exec gcal
 
