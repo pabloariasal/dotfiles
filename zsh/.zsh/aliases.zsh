@@ -16,9 +16,10 @@ alias h='history -r -E -35'
 
 # ls
 alias ls='ls --color=tty'
-alias l='ls'
-alias la='ls -a'
-alias ll='ls -la'
+alias l='exa'
+alias la='exa -a'
+alias ll='exa -la'
+alias lt='exa -T'
 
 # devour
 alias za='devour zathura'
