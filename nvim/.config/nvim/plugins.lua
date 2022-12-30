@@ -34,14 +34,12 @@ return require('packer').startup(function()
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
-  use{  'itchyny/vim-haskell-indent', disable=true }
   use 'dcampos/nvim-snippy'
   use {
     'nvim-telescope/telescope.nvim',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
   use 'pabloariasal/alternate.nvim'
-  use 'lukas-reineke/indent-blankline.nvim'
   use 'takac/vim-hardtime'
   -- colors
   use 'morhetz/gruvbox'
