@@ -41,6 +41,7 @@ return require('packer').startup(function()
   }
   use 'pabloariasal/alternate.nvim'
   use 'takac/vim-hardtime'
+  use 'justinmk/vim-sneak'
   -- colors
   use 'morhetz/gruvbox'
   use 'shaunsingh/solarized.nvim'
