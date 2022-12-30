@@ -1,3 +1,4 @@
+# Adapted from: https://github.com/i3/i3status/blob/main/contrib/any_position_wrapper.sh
 # i3status configuration file.
 # see "man i3status" for documentation.
 
@@ -13,6 +14,8 @@ general {
         interval = 1
 }
 
+order += "tztime holder__hey_man"
+order += "tztime holder__brightness"
 order += "volume master"
 order += "battery all"
 order += "tztime date"
@@ -47,4 +50,12 @@ tztime date {
 tztime time {
   format = "<span size='large'>%H:%M</span>"
   # format_time = "%H:%M"
+}
+
+tztime holder__hey_man {
+       format = "holder__hey_man"
+}
+
+tztime holder__brightness {
+       format = "holder__brightness"
 }
