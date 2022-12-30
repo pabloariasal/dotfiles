@@ -11,9 +11,7 @@ packages=(i3-gaps
     htop
     noto-fonts-emoji
     neovim
-    python-pynvim
     picom
-    playerctl
     ripgrep
     zathura
     zathura-pdf-mupdf
@@ -22,40 +20,35 @@ packages=(i3-gaps
     xorg
     fzf
     xsel
+    networkmanager
     networkmanager-manager-applet
     libnotify
     alsa-utils
     flameshot
-    mate-icon-theme
     nitrogen
     zsh
     which
     wget
     mlocate
-    lxappearance
     exa
     ctags
     imagemagick
-    xdotool
-    jq
+    xdotool # needed for scratchpad terminal
     tlp
     vlc
-    sxiv
     pulseaudio
     pulseaudio-alsa
     gnome-themes-extra
 )
 
 aur_packages=(spotify
-    ccls-git
     devour
     google-chrome
 )
 
 function install_patched_dmenu()
 {
-    mkdir -p ${HOME}/tools
-    cd ${HOME}/tools
+    cd /tmp
     rm -rf dmenu
     git clone git://git.suckless.org/dmenu
     cd dmenu
@@ -107,7 +100,7 @@ function install_keyboard_conf()
     sudo ln -s ${DOTFILES}/extra/00-keyboard.conf /etc/X11/xorg.conf.d/
 }
 
-function start_agent_service()
+function enable_agent_service()
 {
    systemctl --user enable ssh-agent.service
    systemctl --user start ssh-agent.service
