@@ -1,12 +1,6 @@
 #!/bin/bash
 
-DOCKED_ALACRITTY_CONFIG=~/.config/alacritty/docked_alacritty_overrides.yml
-ALACRITTY_OVERRIDE=~/.alacritty_overrides.yml
-
 echo "Switching to docked setup"
-xrandr --output "eDP1" --off --output "HDMI2" --auto
-ln -sf "$DOCKED_ALACRITTY_CONFIG" "$ALACRITTY_OVERRIDE"
-touch ~/.config/alacritty/alacritty.yml
+xrandr --output "eDP1" --off --output "HDMI2" --mode 3440x1440
 i3-msg restart
-
 setrrate
