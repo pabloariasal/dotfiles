@@ -218,8 +218,11 @@ bindsym XF86MonBrightnessDown exec brightness-control dec
 #######################################################################
 # Key Bindings - Media Control
 bindsym XF86AudioPlay exec playerctl play-pause
+bindsym $mod+F7 exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
+bindsym $mod+F8 exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
+bindsym $mod+F6 exec playerctl previous
 
 #######################################################################
 # Window borders
