@@ -18,7 +18,7 @@ alias h='history -r -E -35'
 alias ls='ls --color=tty'
 alias l='exa'
 alias la='exa -a'
-alias ll='exa -la'
+alias ll='exa -l'
 alias lt='exa -T'
 
 # devour
