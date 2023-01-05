@@ -48,7 +48,7 @@ git clone https://github.com/pabloariasal/dotfiles.git ~
 The configuration is divided into separate programs that can be symlinked independently using [GNU stow](https://www.gnu.org/software/stow/).
 
 ```sh
-stow --verbose=2 scripts
-stow --verbose=2 greenclip
+stow --verbose=2 -d configs -t ~ scripts
+stow --verbose=2 -d configs -t ~ greenclip
 ```
 etc.
