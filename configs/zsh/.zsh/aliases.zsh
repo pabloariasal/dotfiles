@@ -20,6 +20,7 @@ alias l='exa'
 alias la='exa -a'
 alias ll='exa -l'
 alias lla='exa -la'
+alias lal='exa -la'
 alias lt='exa -T'
 
 # devour
