@@ -34,6 +34,8 @@ alias sag='ssh-add ~/.ssh/github'
 alias cin="xclip -selection clipboard -in"
 alias cout="xclip -selection clipboard -out"
 
+alias install_config='stow --verbose=2 -d configs -t ~ '
+
 # create temporary dirs and files
 function tmp()
 {
