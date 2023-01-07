@@ -2,7 +2,7 @@
 
 set -e
 
-INCREMENT=10
+INCREMENT=5
 
 if [ "$1" = "inc" ]; then
     xbacklight -inc $INCREMENT
