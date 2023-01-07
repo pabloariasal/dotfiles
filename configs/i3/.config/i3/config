@@ -23,7 +23,6 @@ floating_modifier $mod
 
 #######################################################################
 # Assign programs to workspaces
-assign [instance="__greeter_term"] $ws1
 assign [class=$browser_class instance="keep."] $ws6
 assign [class=$browser_class instance="calendar."] $ws9
 for_window [class="^Spotify$"] move container to workspace $ws8
@@ -191,10 +190,7 @@ bindsym $mod+Shift+r restart
 # Key Bindings - Scratchpad
 # mod+Minus is the generic scratchpad
 bindsym $mod+Shift+minus move scratchpad
-bindsym $mod+minus [instance="^(?!__terminal_scratchpad$)" class="^(?!Google-chrome$)"] scratchpad show
-
-# mod+plus browser scratchpad
-bindsym $mod+plus [class=$browser_class] scratchpad show
+bindsym $mod+minus [instance="^(?!__terminal_scratchpad$)"] scratchpad show
 
 # mod+0 is the drop down terminal
 bindsym $mod+0 exec i3-toggle-scratchpad
