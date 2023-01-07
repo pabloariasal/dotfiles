@@ -1,5 +1,3 @@
-set -e
-
-ln -sfv "${DOTFILES}/alacritty/colors/catppuccin_frappe.yml" ${HOME}/.alacritty_colors.yml
-echo "catppuccin-frappe" > ~/.nvim_colorscheme.txt
-echo "dark" > ~/.nvim_background.txt
+ALACRITTY_COLOR_FILE=catppuccin_frappe.yml
+NVIM_COLORSCHEME=catppuccin-frappe
+NVIM_BACKGROUND=dark

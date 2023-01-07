@@ -1,7 +1,3 @@
-set -e
-
-ln -sfv "${DOTFILES}/alacritty/colors/monokai.yml" ${HOME}/.alacritty_colors.yml
-echo "monokaipro" > ~/.nvim_colorscheme.txt
-echo "dark" > ~/.nvim_background.txt
-echo "nvim colorscheme: " && cat ~/.nvim_colorscheme.txt
-echo "nvim backgroud: " && cat ~/.nvim_background.txt
+ALACRITTY_COLOR_FILE=monokai.yml
+NVIM_COLORSCHEME=monokaipro
+NVIM_BACKGROUND=dark
