@@ -13,6 +13,9 @@ vim.o.termguicolors = true
 
 function read_file(file_path)
     local file = io.open(file_path, 'r')
+    if not file then
+        return nil
+    end
     local contents = file:read()
     file:close()
     return contents
