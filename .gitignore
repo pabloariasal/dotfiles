@@ -5,6 +5,7 @@ antigen.zsh.zwc
 *.sug
 configs/vifm/.config/vifm/vifm-help.txt
 configs/vifm/.config/vifm/vifminfo.json
+configs/vifm/.config/vifm/vifminfo
 configs/systemd/.config/systemd/user/default.target.wants/
 configs/nvim/.config/nvim/plugin/
 configs/alacritty/.config/alacritty/alacritty_colors.toml
