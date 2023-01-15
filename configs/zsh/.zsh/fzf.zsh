@@ -1,5 +1,5 @@
 FD_HIDDEN="--hidden -E '.git'"
-FD_EXTRA_OPTS="--strip-cwd-prefix"
+#FD_EXTRA_OPTS="--strip-cwd-prefix"
 
 # per default find only files including hidden ones, but not those in .git directory
 export FZF_DEFAULT_COMMAND="fd -tf $FD_HIDDEN $FD_EXTRA_OPTS"
