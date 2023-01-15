@@ -25,8 +25,8 @@ alias lal='exa -la'
 alias lt='exa -T'
 
 # devour
-alias za='devour zathura'
-alias sx='devour sxiv'
+# alias za='devour zathura'
+# alias sx='devour sxiv'
 
 # add ssh keys to agent
 alias sag='ssh-add ~/.ssh/github'
