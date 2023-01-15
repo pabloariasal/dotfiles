@@ -1,2 +1,2 @@
 #!/bin/bash
-alacritty --class '__system_monitor' -e htop
+env -u WAYLAND_DISPLAY alacritty --class '__system_monitor' -e htop
