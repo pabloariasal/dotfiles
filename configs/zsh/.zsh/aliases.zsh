@@ -2,6 +2,7 @@
 alias n='nvim'
 alias v='vifm'
 alias b='bat --plain'
+alias t='tmux'
 
 # convenience
 alias sudo='sudo '
