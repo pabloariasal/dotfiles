@@ -44,6 +44,9 @@ set cursorline
 
 set relativenumber
 
+" disable swap files
+set noswapfile
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Look & Feel
 "
