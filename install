@@ -48,8 +48,9 @@ aur_packages=(spotify
 
 function install_patched_dmenu()
 {
-    cd /tmp
-    rm -rf dmenu
+    local tools_dir=${HOME}/tools
+    mkdir -p ${tools_dir}
+    cd ${tools_dir}
     git clone git://git.suckless.org/dmenu
     cd dmenu
     wget https://tools.suckless.org/dmenu/patches/case-insensitive/dmenu-caseinsensitive-5.0.diff -O patch1
