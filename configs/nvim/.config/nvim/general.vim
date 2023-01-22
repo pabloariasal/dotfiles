@@ -132,6 +132,8 @@ let g:hardtime_ignore_quickfix = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "clear trialing white space
 command! ClearWhitespace %s/\s\+$//
+command! BuffCloseAll bufdo bwipeout
+command! BuffOnly %bd|e#
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " autocommands
