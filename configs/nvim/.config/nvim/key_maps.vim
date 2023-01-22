@@ -33,7 +33,6 @@ nnoremap <leader>e <cmd>EditVifm<CR>
 "look for word under the cursor
 nnoremap <Leader>gc :<C-u>grep! '<C-r>=expand("<cword>")<CR>'<CR>
 nnoremap <leader>gn :<C-u>grep! 
-nnoremap <leader>s q:
 nnoremap <leader>t :<C-u>tjump 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -46,7 +45,6 @@ nmap <c-q> <cmd>xa!<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Splits
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 " resize
 noremap <silent> <C-Left> :vertical resize +3<CR>
 noremap <silent> <C-Right> :vertical resize -3<CR>
