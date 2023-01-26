@@ -29,7 +29,7 @@ alias lt='exa -T'
 # alias sx='devour sxiv'
 
 # add ssh keys to agent
-alias sag='ssh-add ~/.ssh/github'
+alias sag='ssh-add ~/.ssh/github_personal'
 
 # system clipboard
 alias cin="xclip -selection clipboard -in"
