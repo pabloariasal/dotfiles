@@ -53,7 +53,7 @@ function hey_man {
 }
 
 function brightness {
-  local brightness=$(xbacklight | cut -f1 -d ".")
+  local brightness=$(brightnessctl info intel_backlight -m | awk -F, '{print $4}' | tr -d %)
   local json="{\"full_text\":\"🔆${brightness}%\" , \"markup\":\"pango\"}"
   json_array=$(update_holder holder__brightness "$json")
 }

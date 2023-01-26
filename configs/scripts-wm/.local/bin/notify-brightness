@@ -3,7 +3,7 @@
 # Arbitrary but unique message id
 msgId="99154"
 
-brightness=$(xbacklight | cut -f1 -d ".")
+brightness=$(brightnessctl info intel_backlight -m | awk -F, '{print $4}' | tr -d %)
 dunstify -a "notify_brightness" -u low -i "display-brightness" -h string:x-canonical-private-synchronous:brightness -h int:value:"${brightness}" "brightness: [${brightness}%]"
 
 # Play the volume changed sound

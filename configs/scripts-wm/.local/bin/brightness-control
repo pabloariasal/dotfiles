@@ -5,9 +5,9 @@ set -e
 INCREMENT=5
 
 if [ "$1" = "inc" ]; then
-    xbacklight -inc $INCREMENT
+    brightnessctl set $INCREMENT%+
 else
-    xbacklight -dec $INCREMENT
+    brightnessctl set $INCREMENT%-
 fi
 
 notify-brightness
