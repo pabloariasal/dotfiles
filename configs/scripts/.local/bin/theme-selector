@@ -3,7 +3,7 @@
 set -e
 
 themes_dir=${DOTFILES}/themes
-theme=$(ls ${themes_dir} | rofi -dmenu -p 'select a theme' -l 20)
+theme=$(ls ${themes_dir} | dmenu -p 'select a theme' -l 20)
 source "${themes_dir}/$theme"
 
 ## Set alacritty colorscheme
