@@ -252,5 +252,4 @@ exec_always --no-startup-id launch-picom
 exec_always --no-startup-id nitrogen --restore
 exec_always --no-startup-id xss-lock --transfer-sleep-lock -- lock-screen
 exec --no-startup-id greenclip daemon
-exec --no-startup-id dropbox
 exec_always --no-startup-id nm-applet
