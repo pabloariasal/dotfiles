@@ -3,13 +3,13 @@
 INCREMENT=5
 case "$1" in
     up)
-        vol=$(amixer set Master "$INCREMENT"%+ unmute)
+        vol=$(pactl set-sink-volume 0 +${INCREMENT}%)
         ;;
     down)
-        vol=$(amixer set Master "$INCREMENT"%- unmute)
+        vol=$(pactl set-sink-volume 0 -${INCREMENT}%)
         ;;
     toggle)
-        vol=$(amixer set Master toggle)
+        vol=$(pactl set-sink-mute 0 toggle)
         ;;
 esac
 
