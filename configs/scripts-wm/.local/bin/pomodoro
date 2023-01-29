@@ -1,0 +1,63 @@
+#!/bin/bash
+
+# 25 minutes as standard duration
+DURATION=$((25 * 60))
+
+FILE="${HOME}/.pomodoro"
+
+function show {
+    if [ -f "$FILE" ]; then
+      local start=$(date -r $FILE +%s)
+      local elapsed="$(( $(date +%s) - $start ))"
+      local duration=$(cat $FILE)
+      if [ "$elapsed" -eq "$duration" ]; then
+        dunstify -u low "Pomodoro done"
+      elif [ "$elapsed" -lt "$duration" ]; then
+        # still running
+        echo "$(date -u -d "@$elapsed" +%M:%S)"
+      else
+        # timedout
+        echo "$(date -u -d "@$duration" +%M:%S)" "DONE"
+      fi
+    else
+        echo "OFF"
+    fi
+}
+
+function status {
+    if [ -f "$FILE" ]; then
+      echo "podomoro running with duration:" $(cat "$FILE") "s"
+    else
+      echo "pomodoro stopped."
+    fi
+}
+
+case $1 in
+
+  show)
+    show
+    ;;
+
+  start)
+    duration="${2:-$DURATION}"
+    echo $duration > "$FILE"
+    status
+    dunstify -u low "Starting pomodoro with duration: $duration"
+    ;;
+
+  stop)
+    rm "$FILE"
+    dunstify -u low "Pomodoro stopped"
+    status
+    ;;
+
+  status)
+    status
+    ;;
+
+  *)
+    echo "unknown operation"
+    exit 1
+    ;;
+esac
+
