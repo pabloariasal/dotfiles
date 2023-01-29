@@ -42,7 +42,7 @@ case $1 in
     duration="${2:-$DURATION}"
     echo $duration > "$FILE"
     status
-    dunstify -u low "Starting pomodoro with duration: $duration"
+    dunstify -u low "Starting pomodoro with duration: ${duration}s"
     ;;
 
   stop)
