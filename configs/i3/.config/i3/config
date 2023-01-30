@@ -23,7 +23,6 @@ floating_modifier $mod
 
 #######################################################################
 # Assign programs to workspaces
-assign [class=$browser_class instance="youtube.com"] $ws3
 assign [class=$browser_class instance="gmail.com"] $ws4
 assign [class=$browser_class instance="discord.com"] $ws5
 assign [class=$browser_class instance="keep."] $ws6
@@ -56,7 +55,6 @@ bindsym $mod+Ctrl+t exec theme-selector
 
 # programs assigned to workspaces
 bindsym $mod+Ctrl+1 exec layout_code
-bindsym $mod+Ctrl+3 exec youtube
 bindsym $mod+Ctrl+4 exec gmail
 bindsym $mod+Ctrl+5 exec discord
 bindsym $mod+Ctrl+6 exec keep
