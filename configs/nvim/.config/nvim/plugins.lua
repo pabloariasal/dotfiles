@@ -21,7 +21,6 @@ return require('packer').startup(function()
   use 'tpope/vim-eunuch'
   use 'tpope/vim-unimpaired'
   use 'tpope/vim-commentary'
-  use 'tpope/vim-obsession'
   use 'jiangmiao/auto-pairs'
   use 'vim-scripts/ReplaceWithRegister'
   use 'romainl/vim-qf'
@@ -41,7 +40,6 @@ return require('packer').startup(function()
   }
   use 'pabloariasal/alternate.nvim'
   use 'takac/vim-hardtime'
-  use 'justinmk/vim-sneak'
   -- colors
   use 'morhetz/gruvbox'
   use 'shaunsingh/solarized.nvim'
