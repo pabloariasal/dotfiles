@@ -95,7 +95,7 @@ snippet sp "std shared_ptr" i
 snippet st "std string" i
     std::string
 snippet re "return"
-    return $1;
+    return ${1:\{\}};
 snippet cr "const reference" i
     const $1& $0
 snippet ad "auto variable declaration"
@@ -127,3 +127,12 @@ snippet do "default operations"
     $1& operator=(const $1&) = delete;
     $1($1&&) = delete;
     $1& operator=($1&&) = delete;
+snippet dot "default operations trailing return type"
+    $1(const $1&) = delete;
+    auto operator=(const $1&) -> $1& = delete;
+    $1($1&&) = delete;
+    auto operator=($1&&) -> $1& = delete;
+snippet ig "include guard"
+    #ifndef $1_H_
+    #define $1_H_
+    #endif
