@@ -136,6 +136,15 @@ command! BuffCloseAll bufdo bwipeout
 command! BuffOnly %bd|e#
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Templates
+"
+" Required Plugins: vim-template
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:templates_no_autocmd = 1
+let g:templates_no_builtin_templates = 1
+let g:templates_directory = "~/.config/nvim/templates/"
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " autocommands
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "enable spell checkinf for markdown files
