@@ -33,6 +33,7 @@ return require('packer').startup(function()
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
+  use 'nvim-treesitter/nvim-treesitter-textobjects'
   use 'dcampos/nvim-snippy'
   use {
     'nvim-telescope/telescope.nvim',

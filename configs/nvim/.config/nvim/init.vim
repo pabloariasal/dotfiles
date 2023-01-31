@@ -25,6 +25,7 @@ runtime lsp.lua
 runtime ctags.vim
 runtime completion.vim
 runtime treesitter.lua
+runtime treesitter-textobjects.lua
 runtime telescope.lua
 runtime gitsigns.lua
 runtime colors.lua
