@@ -44,7 +44,7 @@ for_window [class=$browser_class instance="www.wetteronline.de__wettertrend_muen
 bindsym $mod+Return exec $terminal
 bindsym $mod+b exec $browser
 bindsym $mod+Shift+b exec $browser --incognito
-bindsym $mod+p exec dmenu_run -p "Run"
+bindsym $mod+p exec bemenu-run -p "Run" -i --binding vim
 bindsym $mod+c exec dmenu-clipboard
 bindsym $mod+i exec dmenu-emoji
 bindsym $mod+w exec system-monitor
