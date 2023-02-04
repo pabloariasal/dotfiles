@@ -5,19 +5,32 @@ DURATION=$((25 * 60))
 
 FILE="${HOME}/.pomodoro"
 
+function format_seconds {
+  date -u -d "@$1" +%M:%S
+}
+
+function task_name {
+  cat "$FILE" | tail -n 1
+}
+
+function read_duration {
+  cat "$FILE" | head -n 1
+}
+
 function show {
     if [ -f "$FILE" ]; then
       local start=$(date -r $FILE +%s)
       local elapsed="$(( $(date +%s) - $start ))"
-      local duration=$(cat $FILE)
+      local duration=$(read_duration)
       if [ "$elapsed" -eq "$duration" ]; then
-        dunstify -u low "Pomodoro done"
+        # pomodoro finished
+        dunstify -u low "Pomodoro Finished for Task: $(task_name)"
       elif [ "$elapsed" -lt "$duration" ]; then
         # still running
-        echo "$(date -u -d "@$elapsed" +%M:%S)"
+        echo "$(format_seconds $elapsed)" - "$(task_name)"
       else
         # timedout
-        echo "$(date -u -d "@$duration" +%M:%S)" "DONE"
+        echo "$(format_seconds $duration)" "DONE" - "$(task_name)"
       fi
     else
         echo "OFF"
@@ -26,9 +39,9 @@ function show {
 
 function status {
     if [ -f "$FILE" ]; then
-      echo "podomoro running with duration:" $(cat "$FILE") "s"
+      echo "Running task $(task_name) with duration $(read_duration)s"
     else
-      echo "pomodoro stopped."
+      echo "not runnning"
     fi
 }
 
@@ -40,9 +53,11 @@ case $1 in
 
   start)
     duration="${2:-$DURATION}"
-    echo $duration > "$FILE"
+    task_name=$(echo "" | bemenu -p "Task Name:" -c -B 1 -W '0.2')
+    echo "${duration}" > "$FILE"
+    echo "${task_name}" >> "$FILE"
     status
-    dunstify -u low "Starting pomodoro with duration: ${duration}s"
+    dunstify -u low "Starting $(task_name): ${duration}s"
     ;;
 
   stop)
