@@ -27,6 +27,10 @@ vnoremap , :
 
 nnoremap <leader>e <cmd>EditVifm<CR>
 
+" maximize current split
+nnoremap <leader>l <cmd>MaximizerToggle<CR>
+vnoremap <leader>l <cmd>MaximizerToggle<CR>gv
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Populate command line
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
