@@ -16,7 +16,7 @@ snippet cla "Class"
     class $1
     {
     public:
-        $1()
+        $2
     private:
     };
 snippet str "Struct"
@@ -43,8 +43,8 @@ snippet is "Include std::string" b
 snippet main "main() (main)" b
     int main(int argc, char *argv[])
     {
-        $1
-        return EXIT_SUCCESS;
+        $0
+        return 0;
     }
 snippet fr "for range loop"
     for ($1 : $2)
@@ -76,10 +76,17 @@ snippet if "if clause"
 snippet f "function definition"
     ${1:void} $2($3)
     {
-        $4
+        $0
+    }
+snippet ft "function definition trailing return type"
+    auto $1($2) -> ${3:void}
+    {
+        $0
     }
 snippet fd "function declaration"
     ${1:void} $2($3);
+snippet fdt "function declaration trailing return type"
+    auto $1($2) -> ${3:void};
 snippet todo "TODO"
     // TODO: $0
 snippet vc "void cast"
@@ -140,3 +147,5 @@ snippet doc "start doxygen doc"
     /**
     * @brief $0
     */
+snippet mi i "std::chrono::milliseconds"
+    std::chrono::milliseconds
