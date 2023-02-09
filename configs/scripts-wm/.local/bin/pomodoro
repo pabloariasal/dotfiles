@@ -53,7 +53,7 @@ case $1 in
 
   start)
     duration="${2:-$DURATION}"
-    task_name=$(echo "" | bemenu -p "Task Name:" -c -B 1 -W '0.2')
+    task_name=$(echo "" | bemenu_wrapper -p "Task Name:" -c -B 1 -W '0.2')
     echo "${duration}" > "$FILE"
     echo "${task_name}" >> "$FILE"
     status

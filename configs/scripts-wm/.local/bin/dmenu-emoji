@@ -4,7 +4,7 @@
 emoji_file=${DOTFILES}/misc/emoji
 
 # Get user selection via dmenu from emoji file.
-chosen=$(cut -d ';' -f1 "${emoji_file}" | bemenu -p '' -W '0.2' --border 1 --binding vim -i -c -l 20 | sed "s/ .*//")
+chosen=$(cut -d ';' -f1 "${emoji_file}" | bemenu_wrapper -p '' -W '0.2' --border 1 -i -c -l 20 | sed "s/ .*//")
 
 # Exit if none chosen.
 [ -z "$chosen" ] && exit

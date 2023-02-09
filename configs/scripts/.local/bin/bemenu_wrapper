@@ -1,0 +1,2 @@
+#!/bin/bash
+bemenu --binding vim "$@"
