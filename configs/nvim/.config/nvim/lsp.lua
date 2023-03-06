@@ -59,6 +59,7 @@ lspconfig.rust_analyzer.setup{
 
 -- Python - python-language-server
 lspconfig.pylsp.setup{
+  cmd = {"pyls"},
   -- capabilities = capabilities
   on_attach = on_attach
 }
