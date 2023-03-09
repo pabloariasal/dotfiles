@@ -95,6 +95,7 @@ alias grhh='git reset --hard HEAD'
 alias gb='git branch -vv'
 alias gba='git branch --all -vv'
 alias gcl='git clean -f -d'
+alias gw='git worktree'
 
 function gclb() {
   git remote update --prune &&
