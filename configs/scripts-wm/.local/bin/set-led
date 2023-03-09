@@ -1,7 +1,0 @@
-#!/bin/bash
-
-if [ -n "$1" ]; then
-    echo "$1" > ~/.message
-else
-    rm ~/.message
-fi

@@ -52,39 +52,6 @@ function hey_man_static {
   fi
 }
 
-length=50
-count=0
-
-function hey_man_moving {
-  if (( count == length-1 ))
-  then
-    count=0
-  fi
-
-  local message
-  local file="${HOME}/.message"
-  if [ -f "$file" ]; then
-    message=$(cat "$file")
-  else
-    message="Hey man 🐸"
-  fi
-  local body=$(led_display "$message" $length $count)
-
-  local color
-  local rand_val=$((RANDOM % 3))
-  if [ $rand_val == 1 ] ; then
-    color="#00FF00"
-  elif [ $rand_val == 0 ] ; then
-    color="#FF0000"
-  else
-    color="#0000FF"
-  fi
-
-  local json="{ \"full_text\": \"${body}\", \"color\": \"${color}\" }"
-  json_array=$(update_holder holder__hey_man "$json")
-  count=$((count+1))
-}
-
 function brightness {
   local brightness=$(brightnessctl info intel_backlight -m | awk -F, '{print $4}' | tr -d %)
   local json="{\"full_text\":\"🔆${brightness}%\" , \"markup\":\"pango\"}"
