@@ -20,3 +20,5 @@ compile_commands.json
 .ccls
 build_*
 build/
+
+.worktrees
