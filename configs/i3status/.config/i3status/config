@@ -14,7 +14,7 @@ general {
         interval = 1
 }
 
-order += "tztime holder__hey_man"
+# order += "tztime holder__hey_man"
 order += "tztime holder__pomodoro"
 order += "tztime holder__brightness"
 order += "volume master"
