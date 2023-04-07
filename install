@@ -1,4 +1,5 @@
 #!/bin/zsh
+
 set -e
 
 packages=(i3-gaps
@@ -107,7 +108,8 @@ function enable_agent_service()
    systemctl --user start ssh-agent.service
 }
 
-function install_devour {
+function install_devour()
+{
     mkdir -p ${HOME}/tools
     cd ${HOME}/tools
     rm -rf devour
@@ -115,4 +117,11 @@ function install_devour {
     cd devour
     sudo make install
 }
-"$1"
+
+if [[ $# -eq 0 || "$*" == *"--help"* ]]; then
+    SCRIPTPATH="$(realpath "$0")"
+    cat "$SCRIPTPATH" | grep 'function' | head -n -1 | awk '{print $2}' | tr -d '()'
+    exit 0
+fi
+
+"$@"
