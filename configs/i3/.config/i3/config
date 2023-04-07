@@ -3,6 +3,7 @@
 set $mod Mod4
 set $browser google-chrome-stable
 set $browser_class "^Google-chrome$"
+set $no_browser_class "^(?!Google-chrome$)"
 set $terminal alacritty
 
 # workspaces
@@ -38,6 +39,7 @@ for_window [class=Nitrogen] floating enable, resize set width 90 ppt height 90 p
 for_window [class=flameshot] floating enable
 for_window [instance="__system_monitor"] floating enable, resize set width 75 ppt height 75 ppt, move position centered
 for_window [class=$browser_class instance="www.wetteronline.de__wettertrend_muenchen"] floating enable, resize set width 50 ppt height 75 ppt, move position centered
+for_window [class=$browser_class instance="chat.openai.com__chat"] move scratchpad
 
 #######################################################################
 # Key Bindings - Starting Programs
@@ -209,11 +211,12 @@ bindsym $mod+Shift+r restart
 # Key Bindings - Scratchpad
 # mod+Minus is the generic scratchpad
 bindsym $mod+Shift+minus move scratchpad
-bindsym $mod+minus [class="^(?!Google-chrome$)" instance="^(?!__terminal_scratchpad$)"] scratchpad show
-bindsym $mod+plus [class=$browser_class] scratchpad show
+bindsym $mod+minus [class=$no_browser_class instance="^(?!__terminal_scratchpad$)"] scratchpad show
+bindsym $mod+plus [class=$browser_class instance="^(?!chat.openai.com__chat$)"] scratchpad show
+bindsym $mod+g exec i3-toggle-gpt-scratchpad
 
 # mod+0 is the drop down terminal
-bindsym $mod+0 exec i3-toggle-scratchpad
+bindsym $mod+0 exec i3-toggle-terminal-scratchpad
 
 #######################################################################
 # Key Bindings - Screenshots

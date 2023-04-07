@@ -1,0 +1,5 @@
+#!/bin/bash
+if  [ -z "$(xdotool search --classname 'chat.openai.com__chat')" ]; then
+    ${CHROMIUM_EXEC} --app="https://chat.openai.com/chat"
+fi
+i3-msg [class="Google-chrome" instance="chat.openai.com__chat"] scratchpad show
