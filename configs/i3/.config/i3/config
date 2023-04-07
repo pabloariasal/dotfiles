@@ -139,7 +139,7 @@ bindsym $mod+Delete mode "$mode_system"
 
 #######################################################################
 # Common commands
-set $mode_commands (1) pomodoro start (2) pomodoro stop (3) open draft
+set $mode_commands (1) pomodoro start (2) pomodoro stop
 mode "$mode_commands" {
     bindsym 1 exec --no-startup-id pomodoro start
     bindsym 2 exec --no-startup-id pomodoro stop
