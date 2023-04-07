@@ -31,7 +31,6 @@ for_window [class="^Spotify$"] move container to workspace $ws8
 
 #######################################################################
 # Window rules
-for_window [class=Alacritty instance="__text_scratchpad"] floating enable, resize set width 50 ppt height 50 ppt, move position centered
 for_window [instance="__terminal_scratchpad"] move scratchpad
 for_window [class=Pavucontrol] floating enable, resize set width 50 ppt height 50 ppt, move position centered
 for_window [class=Arandr] floating enable, resize set width 50 ppt height 50 ppt, move position centered
@@ -50,8 +49,6 @@ bindsym $mod+c exec dmenu-clipboard
 bindsym $mod+i exec dmenu-emoji
 bindsym $mod+w exec system-monitor
 bindsym $mod+z exec wetter
-bindsym $mod+g exec text-scratchpad-new 'txt'
-bindsym $mod+Shift+g exec text-scratchpad-new 'md'
 bindsym $mod+Ctrl+a exec arandr
 bindsym $mod+Ctrl+p exec pavucontrol
 bindsym $mod+Ctrl+t exec theme-selector
@@ -146,7 +143,6 @@ set $mode_commands (1) pomodoro start (2) pomodoro stop (3) open draft
 mode "$mode_commands" {
     bindsym 1 exec --no-startup-id pomodoro start
     bindsym 2 exec --no-startup-id pomodoro stop
-    bindsym 3 exec --no-startup-id text-scratchpad-open
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"
@@ -213,7 +209,8 @@ bindsym $mod+Shift+r restart
 # Key Bindings - Scratchpad
 # mod+Minus is the generic scratchpad
 bindsym $mod+Shift+minus move scratchpad
-bindsym $mod+minus [instance="^(?!__terminal_scratchpad$)"] scratchpad show
+bindsym $mod+minus [class="^(?!Google-chrome$)" instance="^(?!__terminal_scratchpad$)"] scratchpad show
+bindsym $mod+plus [class=$browser_class] scratchpad show
 
 # mod+0 is the drop down terminal
 bindsym $mod+0 exec i3-toggle-scratchpad

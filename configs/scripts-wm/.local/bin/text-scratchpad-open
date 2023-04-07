@@ -1,8 +1,0 @@
-#!/bin/bash
-
-set -e
-
-drafts_dir=/tmp/drafts
-file=$(ls "$drafts_dir" | bemenu_wrapper -c -B 1 -l 20 -p "Open Draft" -W '0.2')
-[ -z "$file" ] && exit
-text-scratchpad "$file"
