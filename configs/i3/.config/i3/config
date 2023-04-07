@@ -33,12 +33,12 @@ for_window [class="^Spotify$"] move container to workspace $ws8
 #######################################################################
 # Window rules
 for_window [instance="__terminal_scratchpad"] move scratchpad
-for_window [class=Pavucontrol] floating enable, resize set width 50 ppt height 50 ppt, move position centered
-for_window [class=Arandr] floating enable, resize set width 50 ppt height 50 ppt, move position centered
-for_window [class=Nitrogen] floating enable, resize set width 90 ppt height 90 ppt, move position centered
+for_window [class=Pavucontrol] floating enable, resize set width 95 ppt height 95 ppt, move position center
+for_window [class=Arandr] floating enable, resize set width 75 ppt height 75 ppt, move position center
+for_window [class=Nitrogen] floating enable, resize set width 95 ppt height 95 ppt, move position center
 for_window [class=flameshot] floating enable
-for_window [instance="__system_monitor"] floating enable, resize set width 75 ppt height 75 ppt, move position centered
-for_window [class=$browser_class instance="www.wetteronline.de__wettertrend_muenchen"] floating enable, resize set width 50 ppt height 75 ppt, move position centered
+for_window [instance="__system_monitor"] floating enable, resize set width 75 ppt height 75 ppt, move position center
+for_window [class=$browser_class instance="www.wetteronline.de__wettertrend_muenchen"] floating enable, resize set width 50 ppt height 75 ppt, move position center
 for_window [class=$browser_class instance="chat.openai.com__chat"] move scratchpad
 
 #######################################################################
