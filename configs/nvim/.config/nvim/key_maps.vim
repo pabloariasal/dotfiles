@@ -88,7 +88,7 @@ nnoremap <c-p> <cmd>lua require('telescope.builtin').find_files()<CR>
 nnoremap <c-n> <cmd>lua require('telescope.builtin').buffers()<CR>
 nnoremap <leader>j <cmd>lua require('telescope.builtin').current_buffer_tags()<CR>
 nnoremap <leader>r <cmd>lua require('telescope.builtin').oldfiles()<CR>
-nnoremap <leader>s <cmd>lua require('telescope.builtin').live_grep()<CR>
+nnoremap <leader>gl <cmd>lua require('telescope.builtin').live_grep()<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Star
