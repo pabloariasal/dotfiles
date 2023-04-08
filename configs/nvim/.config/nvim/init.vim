@@ -18,7 +18,7 @@
 runtime plugins.lua
 runtime general.vim
 runtime options.lua
-runtime key_maps.vim
+runtime key_maps.lua
 runtime snippets.lua
 runtime statusline.vim
 runtime lsp.lua
