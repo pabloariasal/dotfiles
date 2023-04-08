@@ -5,7 +5,7 @@ vim.keymap.set('n', '<leader>d', vim.diagnostic.setloclist, { noremap=true, sile
 
 local lspconfig = require'lspconfig'
 
--- local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 local on_attach = function(client, bufnr)
   -- Enable completion triggered by <c-x><c-o>
@@ -38,8 +38,8 @@ lspconfig.hls.setup {
         formattingProvider = "ormolu";
       }
     },
-  on_attach = on_attach
-  -- capabilities = capabilities
+  on_attach = on_attach,
+  capabilities = capabilities
 }
 
 -- C++ - ccls
@@ -55,23 +55,25 @@ lspconfig.hls.setup {
 
 -- C++ clangd
 require'lspconfig'.clangd.setup{
-  on_attach = on_attach
+  on_attach = on_attach,
+  capabilities = capabilities
 }
 
 -- Rust - rust-analyzer
 lspconfig.rust_analyzer.setup{
-  -- capabilities = capabilities
+  capabilities = capabilities,
   on_attach = on_attach
 }
 
 -- Python - python-language-server
 lspconfig.pylsp.setup{
   cmd = {"pyls"},
-  -- capabilities = capabilities
+  capabilities = capabilities,
   on_attach = on_attach
 }
 
 -- CMake - cmake-language-server
 lspconfig.cmake.setup{
-  on_attach = on_attach
+  on_attach = on_attach,
+  capabilities = capabilities
 }

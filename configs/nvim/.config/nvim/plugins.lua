@@ -45,16 +45,24 @@ return require('packer').startup(function()
   use 'takac/vim-hardtime'
   use {
   "AckslD/nvim-neoclip.lua",
-  requires = {
-    {'kkharji/sqlite.lua', module = 'sqlite'},
-    -- you'll need at least one of these
-    {'nvim-telescope/telescope.nvim'},
-    -- {'ibhagwan/fzf-lua'},
-  },
-  config = function()
-    require('neoclip').setup({enable_persistent_history = true,})
-  end,
-}
+    requires = {
+      {'kkharji/sqlite.lua', module = 'sqlite'},
+      {'nvim-telescope/telescope.nvim'},
+    },
+    config = function()
+      require('neoclip').setup({enable_persistent_history = true,})
+    end,
+  }
+  use {
+  'hrsh7th/nvim-cmp',
+    requires = {
+    {'hrsh7th/cmp-nvim-lsp'},
+    {'hrsh7th/cmp-buffer'},
+    {'hrsh7th/cmp-path'},
+    {'f3fora/cmp-spell'},
+    }
+
+  }
   -- colors
   use 'morhetz/gruvbox'
   use 'shaunsingh/solarized.nvim'

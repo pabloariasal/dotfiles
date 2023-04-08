@@ -23,7 +23,7 @@ runtime snippets.lua
 runtime statusline.vim
 runtime lsp.lua
 runtime ctags.lua
-runtime completion.vim
+runtime completion.lua
 runtime treesitter.lua
 runtime treesitter-textobjects.lua
 runtime telescope.lua
