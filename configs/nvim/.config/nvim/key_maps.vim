@@ -80,17 +80,6 @@ xnoremap <leader>y "+y
 xnoremap <leader>p "+p
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Fuzzy Finding
-"
-" Required Plugins: telescope
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <c-p> <cmd>lua require('telescope.builtin').find_files()<CR>
-nnoremap <c-n> <cmd>lua require('telescope.builtin').buffers()<CR>
-nnoremap <leader>j <cmd>lua require('telescope.builtin').current_buffer_tags()<CR>
-nnoremap <leader>r <cmd>lua require('telescope.builtin').oldfiles()<CR>
-nnoremap <leader>gl <cmd>lua require('telescope.builtin').live_grep()<CR>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Star
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "search but don't jump

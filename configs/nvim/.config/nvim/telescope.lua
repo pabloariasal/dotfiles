@@ -10,13 +10,13 @@ require('telescope').setup{
                 prompt_position = "bottom",
                 preview = false
       },
-    vertical = {
-        -- prompt_position = 'top',
-        height = 25,
+        vertical = {
+            -- prompt_position = 'top',
+            height = 25,
       },
     },
     preview = {
-      hide_on_startup = true,
+      hide_on_startup = true, -- fully disable preview window
     },
     mappings = {
       i = {
@@ -57,3 +57,18 @@ require('telescope').setup{
     -- please take a look at the readme of the extension you want to configure
   }
 }
+
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<c-p>', builtin.find_files, { desc = "Open files"})
+vim.keymap.set('n', '<c-n>', builtin.buffers, { desc = "Navigate buffers" })
+vim.keymap.set('n', '<leader>gl', builtin.live_grep, { desc = "[G]rep [L]ive" })
+vim.keymap.set('n', '<leader>r', builtin.oldfiles, { desc = "Open [r]ecent files" })
+vim.keymap.set('n', '<leader>/', function()
+  -- You can pass additional configuration to telescope to change theme, layout, etc.
+  require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
+    winblend = 10,
+    previewer = false,
+  })
+end, { desc = '[/] Fuzzily search in current buffer' })
+vim.keymap.set('n', '<leader>sd', builtin.lsp_document_symbols, { desc = "Navigate [s]ymbols [d]ocument" })
+vim.keymap.set('n', '<leader>sw', builtin.lsp_dynamic_workspace_symbols, { desc = "Navigate [s]ymbols in workspace" })
