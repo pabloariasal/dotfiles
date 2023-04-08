@@ -22,7 +22,7 @@ runtime key_maps.vim
 runtime snippets.lua
 runtime statusline.vim
 runtime lsp.lua
-runtime ctags.vim
+runtime ctags.lua
 runtime completion.vim
 runtime treesitter.lua
 runtime treesitter-textobjects.lua
