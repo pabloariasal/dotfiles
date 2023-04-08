@@ -70,6 +70,8 @@ vim.keymap.set('n', '<leader>/', function()
     previewer = false,
   })
 end, { desc = '[/] Fuzzily search in current buffer' })
+require('telescope').load_extension('neoclip')
+vim.keymap.set('n', '<leader>v', '<cmd>Telescope neoclip initial_mode=normal<cr>', {})
 -- Lsp
 vim.keymap.set('n', '<leader>sd', builtin.lsp_document_symbols, { desc = "Navigate [s]ymbols [d]ocument" })
 vim.keymap.set('n', '<leader>sw', builtin.lsp_dynamic_workspace_symbols, { desc = "Navigate [s]ymbols in workspace" })
