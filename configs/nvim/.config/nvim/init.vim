@@ -29,3 +29,4 @@ runtime treesitter-textobjects.lua
 runtime telescope.lua
 runtime gitsigns.lua
 runtime colors.lua
+runtime user-commands.lua

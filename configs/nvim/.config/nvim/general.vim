@@ -134,14 +134,6 @@ let g:dispatch_no_maps = 1
 let g:hardtime_ignore_quickfix = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Commands
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"clear trialing white space
-command! ClearWhitespace %s/\s\+$//
-command! BuffCloseAll bufdo bwipeout
-command! BuffOnly %bd|e#
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Templates
 "
 " Required Plugins: vim-template
