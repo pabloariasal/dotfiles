@@ -52,3 +52,9 @@ vim.keymap.set({'n', 'v'}, 'z*', '*N', { desc = 'search for word under cursor' }
 vim.keymap.set({'n', 'v'}, 'z#', '#N', { desc = 'search backward for word under cursor' })
 
 vim.keymap.set('n', '<F1>', '<cmd>source ~/.config/nvim/init.vim<cr>', { desc = 'reload config' })
+
+-- system clipboard
+vim.keymap.set({'n', 'v', 'x'}, '<leader>p', '"+p', { noremap=true, desc = 'paste from system clipboard' })
+vim.keymap.set({'n', 'v'}, '<leader>P', '"+P', { noremap=true, desc = 'paste from system clipboard' })
+vim.keymap.set({'n', 'v', 'x'}, '<leader>y', '"+y', { noremap=true, desc = 'yank to system clipboard' })
+vim.keymap.set({'n', 'v'}, '<leader>Y', '"+y$', { noremap=true, desc = 'yank to system clipboard' })
