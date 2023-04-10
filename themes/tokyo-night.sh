@@ -1,0 +1,3 @@
+ALACRITTY_COLOR_FILE=tokyo-night.yaml
+NVIM_COLORSCHEME=tokyonight-night
+NVIM_BACKGROUND=dark
