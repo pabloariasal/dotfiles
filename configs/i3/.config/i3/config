@@ -191,6 +191,12 @@ bindsym $mod+n workspace $ws7
 # Easy jump to main workspace
 bindsym $mod+m workspace $ws1
 
+# Move workspace to another display
+bindsym $mod+Ctrl+l move workspace to output right
+bindsym $mod+Ctrl+h move workspace to output left
+bindsym $mod+Ctrl+j move workspace to output down
+bindsym $mod+Ctrl+k move workspace to output up
+
 #######################################################################
 # Key Bindings - Layout
 bindsym $mod+o split h
