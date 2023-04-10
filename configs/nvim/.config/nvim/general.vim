@@ -140,12 +140,14 @@ let g:hardtime_ignore_quickfix = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:templates_no_autocmd = 1
 let g:templates_no_builtin_templates = 1
+let g:templates_directory = "~/.config/nvim/templates/"
 
-
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Dictionary completion
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Add languages to be used for dictionary completiong <c-x><c-k>
 set dictionary+=/usr/share/dict/american-english
 set dictionary+=/usr/share/dict/german
-let g:templates_directory = "~/.config/nvim/templates/"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " autocommands
