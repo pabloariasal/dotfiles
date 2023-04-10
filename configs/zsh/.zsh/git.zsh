@@ -110,6 +110,8 @@ alias gb='git branch -vv'
 alias gba='git branch --all -vv'
 alias gcl='git clean -f -d'
 alias gw='git worktree'
+alias gwl='git worktree list'
+alias ge='git commit -m "Empty commit"'
 
 #######################################################################
 # Functions
@@ -117,4 +119,11 @@ alias gw='git worktree'
 function gclb() {
   git remote update --prune &&
   git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -D
+}
+
+function gwa() {
+  if [ ! -d ".worktrees" ]; then
+    mkdir .worktrees
+  fi
+  git worktree add "$@"
 }
