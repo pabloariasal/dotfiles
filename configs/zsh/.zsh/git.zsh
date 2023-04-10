@@ -46,28 +46,30 @@ fzf-git-file-widget() {
 zle     -N   fzf-git-file-widget
 bindkey '^s' fzf-git-file-widget
 
-# CTRL-W - Jump to worktree
-# __gitfile() {
-#   local cmd="git -c color.status=always status --short"
-#   setopt localoptions pipefail 2> /dev/null
-#   eval "$cmd" | $(__fzfcmd) --multi --reverse  --ansi --nth 2..,.. |
-#   cut -c4- | sed 's/.* -> //'  "$@" |
-#   while read item; do
-#     echo -n "${(q)item} " | awk '{print $NF}' | tr '\r\n' ' '
-#   done
-#   local ret=$?
-#   echo
-#   return $ret
-# }
-
-# fzf-git-file-widget() {
-#   LBUFFER="${LBUFFER}$(__gitfile)"
-#   local ret=$?
-#   zle reset-prompt
-#   return $ret
-# }
-# zle     -N   fzf-git-file-widget
-# bindkey '^s' fzf-git-file-widget
+# CTRL-B - Jump to worktree
+__select_git_worktree() {
+  local cmd="git worktree list"
+  setopt localoptions pipefail no_aliases 2> /dev/null
+  local dir="$(eval "$cmd" | $(__fzfcmd) | awk '{print $1}')"
+  # make relative paths absolute to repo root
+  if [[ ! "$path" =~ ^/ ]]; then
+    local repo_root="$(git rev-parse --show-toplevel)"
+    dir="${repo_root}/${dir}"
+  fi
+  if [[ -z "$dir" ]]; then
+    zle redisplay
+    return 0
+  fi
+  # zle push-line # Clear buffer. Auto-restored on next prompt.
+  BUFFER="builtin cd -- ${(q)dir}"
+  zle accept-line
+  local ret=$?
+  unset dir # ensure this doesn't end up appearing in prompt expansion
+  zle reset-prompt
+  return $ret
+}
+zle     -N   __select_git_worktree
+bindkey '^b' __select_git_worktree
 
 #######################################################################
 # Aliases
