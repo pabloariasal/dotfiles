@@ -1,16 +1,11 @@
-require('lualine').setup {
-  options = {
-    theme = 'gruvbox',
-    icons_enabled = false,
-    section_separators = '',
-    component_separators = '',
-  },
-  sections = {
-    lualine_a = {'mode'},
-    lualine_b = {},
-    lualine_c = {{'filename', path = 1}},
-    lualine_x = {'encoding', 'filetype'},
-    lualine_y = {},
-    lualine_z = {'location'}
-  }
-}
+vim.o.statusline = '%F'
+vim.opt.statusline:append '%m' -- modified
+vim.opt.statusline:append '%r' -- read only tag
+vim.opt.statusline:append '%h' -- help tag
+vim.opt.statusline:append '%q' -- quickfixlist tag
+vim.opt.statusline:append '%w' -- preview window tag
+vim.opt.statusline:append '%=' -- separation point
+vim.opt.statusline:append '%y ' -- type of file
+vim.opt.statusline:append '[%{&fileencoding?&fileencoding:&encoding}] '
+vim.opt.statusline:append '[col %c] '
+vim.opt.statusline:append '[%l/%L %p%%] '
