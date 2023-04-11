@@ -111,7 +111,7 @@ alias gba='git branch --all -vv'
 alias gcl='git clean -f -d'
 alias gw='git worktree'
 alias gwl='git worktree list'
-alias ge='git commit -m "Empty commit"'
+alias ge='git commit --allow-empty -m "Empty commit"'
 
 #######################################################################
 # Functions
