@@ -6,8 +6,8 @@ __fbranch() {
   local cmd="git branch -a | grep -v HEAD"
   setopt localoptions pipefail 2> /dev/null
   eval "$cmd" | $(__fzfcmd) --reverse "$@" |
-    while read item; do
-    echo -n "${(q)item} " | awk '{print $1}' | sed "s/remotes\///"
+  while read item; do
+    echo -n "${(q)item}" | tr -d '\\+*' | awk '{print $1}' | sed "s/remotes\///"
   done
   local ret=$?
   echo
