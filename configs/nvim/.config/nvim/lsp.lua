@@ -28,7 +28,7 @@ local on_attach = function(client, bufnr)
   nmap('<F2>', vim.lsp.buf.rename, "Rename symbol")
   -- vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, bufopts)
   nmap('<leader>r', vim.lsp.buf.references, "Open [R]eferences")
-  nmap('<leader>f', function() vim.lsp.buf.format { async = true } end, "[F]ormat")
+  nmap('<leader>f', vim.lsp.buf.format, "[F]ormat")
 end
 
 -- Haskell - hls
