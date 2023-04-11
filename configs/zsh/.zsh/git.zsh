@@ -127,3 +127,31 @@ function gwa() {
   fi
   git worktree add "$@"
 }
+
+function gwrel() {
+    local parent_dir="$(basename $(dirname $(pwd)))"
+    if [[ "$parent_dir" == ".worktrees" || "$(basename $(pwd))" == ".worktrees" ]]; then
+      echo "Can only be run from repo's root"
+      return 1
+    fi
+    if [[ $# -eq 0 ]]; then
+      echo "worktree dir not provided"
+      return 1
+    fi
+    local worktree_name="$(basename $1)"
+    git-worktree-relative -w "$1" -r "$(pwd)/.git/worktrees/${worktree_name}"
+}
+
+function gwabs() {
+    local parent_dir="$(basename $(dirname $(pwd)))"
+    if [[ "$parent_dir" == ".worktrees" || "$(basename $(pwd))" == ".worktrees" ]]; then
+      echo "Can only be run from repo's root"
+      return 1
+    fi
+    if [[ $# -eq 0 ]]; then
+      echo "worktree dir not provided"
+      return 1
+    fi
+    local worktree_name="$(basename $1)"
+    git-worktree-absolute -w "$1" -r "$(pwd)/.git/worktrees/${worktree_name}"
+}
