@@ -52,8 +52,17 @@ __select_git_worktree() {
   setopt localoptions pipefail no_aliases 2> /dev/null
   local dir="$(eval "$cmd" | $(__fzfcmd) | awk '{print $1}')"
   # make relative paths absolute to repo root
-  if [[ ! "$path" =~ ^/ ]]; then
-    local repo_root="$(git rev-parse --show-toplevel)"
+  if [[ ! "$dir" =~ ^/ ]]; then
+    if [[ $(basename $(dirname $(pwd))) == ".worktrees" ]]; then
+      # we are in <root>/.worktrees/branchX
+      local repo_root="$(dirname $(dirname $(pwd)))"
+    elif [[ $(basename $(pwd)) == ".worktrees" ]]; then
+      # we are in <repo_root>/.worktrees
+      local repo_root="$(dirname $(pwd))"
+    else
+      # we are in <repo_root>
+      local repo_root="$(pwd)"
+    fi
     dir="${repo_root}/${dir}"
   fi
   if [[ -z "$dir" ]]; then
@@ -140,6 +149,8 @@ function gwrel() {
     fi
     local worktree_name="$(basename $1)"
     git-worktree-relative -w "$1" -r "$(pwd)/.git/worktrees/${worktree_name}"
+    echo "Done!"
+    git worktree list
 }
 
 function gwabs() {
@@ -154,4 +165,6 @@ function gwabs() {
     fi
     local worktree_name="$(basename $1)"
     git-worktree-absolute -w "$1" -r "$(pwd)/.git/worktrees/${worktree_name}"
+    echo "Done!"
+    git worktree list
 }
