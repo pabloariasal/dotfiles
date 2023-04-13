@@ -11,6 +11,7 @@ source ~/.zsh/aliases.zsh
 source ~/.zsh/directories.zsh
 source ~/.zsh/git.zsh
 source ~/.zsh/bindings.zsh
+source ~/.zsh/functions.zsh
 
 # Make CTRL-Z background things and unbackground them.
 function fg-bg() {

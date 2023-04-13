@@ -36,23 +36,3 @@ alias cout="xclip -selection clipboard -out"
 
 alias install_config='stow --verbose=2 -d configs -t ~ '
 
-# create temporary dirs and files
-function tmp()
-{
-  if [[ -z "$1" ]]; then
-    nvim $(mktemp)
-  else
-    nvim $(mktemp --suffix ."$1")
-  fi
-}
-
-# Toggle ctags file
-function toggle_ctags()
-{
-  local file='.ctagsenable'
-  if [[ -f $file ]]; then
-    rm $file && echo "ctags disabled"
-  else
-    echo "fd -tf --strip-cwd-prefix" > $file && echo "ctags enabled"
-  fi
-}
