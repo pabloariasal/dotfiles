@@ -21,7 +21,7 @@ local on_attach = function(client, bufnr)
 
   -- nmap('gD', vim.lsp.buf.declaration, 'Open [D]eclaration')
   nmap('gd', vim.lsp.buf.definition, 'Open [D]efinition')
-  nmap('n', 'gI', vim.lsp.buf.implementation, 'Open [I]mplementation')
+  nmap('gI', vim.lsp.buf.implementation, 'Open [I]mplementation')
   nmap('gy', vim.lsp.buf.type_definition, "Open Type Definition")
   nmap('K', vim.lsp.buf.hover, 'Hover')
   nmap('<leader>sh', vim.lsp.buf.signature_help, '[S]ignature [H]elp')
