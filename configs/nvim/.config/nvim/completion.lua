@@ -33,6 +33,7 @@ cmp.setup {
         }
       },
       { name = 'path' },
-      { name = 'spell' }
+      { name = 'spell' },
+      { name = 'buffer-lines' },
     }
 }
