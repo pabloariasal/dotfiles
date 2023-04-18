@@ -24,9 +24,15 @@ cmp.setup {
          ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
        }),
     sources = cmp.config.sources {
-        { name = 'nvim_lsp' },
-        { name = 'buffer' },
-        { name = 'path' },
-        { name = 'spell' }
+      { name = 'nvim_lsp' },
+      { name = 'buffer',
+        option = {
+          get_bufnrs = function()
+            return vim.api.nvim_list_bufs()
+          end
+        }
+      },
+      { name = 'path' },
+      { name = 'spell' }
     }
 }
