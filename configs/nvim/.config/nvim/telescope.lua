@@ -47,7 +47,13 @@ require('telescope').setup{
     find_files = {
       find_command = {"fd", "--type", "f", "--hidden", "-E", ".git"},
       -- theme = "dropdown"
-    }
+    },
+    lsp_document_symbols = {
+      symbol_width = 75,
+    },
+    lsp_dynamic_workspace_symbols = {
+      symbol_width = 75,
+    },
   },
   extensions = {
     -- Your extension configuration goes here:
