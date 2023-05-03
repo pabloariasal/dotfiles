@@ -60,7 +60,6 @@ return require('packer').startup(function()
       {'hrsh7th/cmp-buffer'},
       {'hrsh7th/cmp-path'},
       {'f3fora/cmp-spell'},
-      {'amarakon/nvim-cmp-buffer-lines'},
     }
   }
   -- colors
