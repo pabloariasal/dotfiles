@@ -51,9 +51,6 @@ require('telescope').setup{
     lsp_document_symbols = {
       symbol_width = 75,
     },
-    lsp_dynamic_workspace_symbols = {
-      symbol_width = 75,
-    },
   },
   extensions = {
     -- Your extension configuration goes here:
