@@ -62,6 +62,7 @@ return require('packer').startup(function()
       {'f3fora/cmp-spell'},
     }
   }
+  use 'f-person/git-blame.nvim'
   -- colors
   use 'morhetz/gruvbox'
   use 'shaunsingh/solarized.nvim'
