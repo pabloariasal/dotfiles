@@ -5,11 +5,11 @@ vim.keymap.set('n', '<leader>d', vim.diagnostic.setloclist, { noremap=true, sile
 
 local lspconfig = require'lspconfig'
 
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
+-- local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 local on_attach = function(client, bufnr)
   -- Enable completion triggered by <c-x><c-o>
-  -- vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+  vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
   local nmap = function(keys, func, desc)
     if desc then
@@ -39,7 +39,7 @@ lspconfig.hls.setup {
       }
     },
   on_attach = on_attach,
-  capabilities = capabilities
+  -- capabilities = capabilities
 }
 
 -- C++ - ccls
@@ -56,7 +56,7 @@ lspconfig.hls.setup {
 -- C++ clangd
 require'lspconfig'.clangd.setup{
   on_attach = on_attach,
-  capabilities = capabilities
+  -- capabilities = capabilities
 }
 
 -- Rust - rust-analyzer
@@ -68,12 +68,12 @@ lspconfig.rust_analyzer.setup{
 -- Python - python-language-server
 lspconfig.pylsp.setup{
   cmd = {"pyls"},
-  capabilities = capabilities,
+  -- capabilities = capabilities,
   on_attach = on_attach
 }
 
 -- CMake - cmake-language-server
 lspconfig.cmake.setup{
   on_attach = on_attach,
-  capabilities = capabilities
+  -- capabilities = capabilities
 }

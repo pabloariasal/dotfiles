@@ -52,15 +52,6 @@ return require('packer').startup(function()
       require('neoclip').setup({enable_persistent_history = true,})
     end,
   }
-  use {
-  'hrsh7th/nvim-cmp',
-    requires = {
-      {'hrsh7th/cmp-nvim-lsp'},
-      {'hrsh7th/cmp-buffer'},
-      {'hrsh7th/cmp-path'},
-      {'f3fora/cmp-spell'},
-    }
-  }
   use 'sitiom/nvim-numbertoggle'
   -- colors
   use 'morhetz/gruvbox'
