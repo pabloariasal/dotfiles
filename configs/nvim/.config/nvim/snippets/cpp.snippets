@@ -40,6 +40,8 @@ snippet ii "Include std::iostream" b
     #include <iostream>
 snippet is "Include std::string" b
     #include <string>
+snippet is "Include std::optional" b
+    #include <optional>
 snippet main "main() (main)" b
     int main(int argc, char *argv[])
     {
@@ -73,20 +75,18 @@ snippet if "if clause"
     {
         $2
     }
-snippet f "function definition"
-    ${1:void} $2($3)
-    {
-        $0
-    }
-snippet ft "function definition trailing return type"
+snippet fdef "function definition"
     auto $1($2) -> ${3:void}
     {
         $0
     }
-snippet fd "function declaration"
-    ${1:void} $2($3);
-snippet fdt "function declaration trailing return type"
-    auto $1($2) -> ${3:void};
+snippet fdec "function declaration"
+    auto $1($2) -> ${3:void}
+snippet mdec "member function declaration"
+    auto $1::$2($3) -> ${4:void}
+    {
+        $0
+    }
 snippet todo "TODO"
     // TODO: $0
 snippet vc "void cast"
@@ -115,10 +115,6 @@ snippet car "const auto reference" i
     const auto& $0
 snippet cap "const auto pointer" i
     const auto* $0
-snippet fdc "forward declaration class"
-    class $1;
-snippet fds "forward declaration struct"
-    struct $1;
 snippet sci "static cast int" i
     static_cast<int>($1)
 snippet sc "static cast" i
@@ -151,3 +147,5 @@ snippet mi "std::chrono::milliseconds" i
     std::chrono::milliseconds
 snippet mv "std::move" i
     std::move($0)
+snippet op "std::optional" i
+    std::optional<$1>
