@@ -63,6 +63,7 @@ return require('packer').startup(function()
     }
   }
   use 'f-person/git-blame.nvim'
+  use 'sitiom/nvim-numbertoggle'
   -- colors
   use 'morhetz/gruvbox'
   use 'shaunsingh/solarized.nvim'
