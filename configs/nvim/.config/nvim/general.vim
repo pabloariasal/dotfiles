@@ -153,3 +153,5 @@ autocmd FileType markdown setlocal spell spelllang=en_us
 autocmd FileType help wincmd L
 "Don't show numbers on terminal buffers (needed for fzf)
 autocmd TermOpen * setlocal nonumber norelativenumber
+" autoclose scratchpad window
+autocmd CompleteDone * pclose
