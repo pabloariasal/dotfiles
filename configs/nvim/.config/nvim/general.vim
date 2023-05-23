@@ -43,7 +43,6 @@ set wildmenu
 set cursorline
 
 set relativenumber
-set number
 
 " disable swap files
 set noswapfile
