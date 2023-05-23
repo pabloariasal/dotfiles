@@ -24,10 +24,6 @@ vim.keymap.set('n', '<leader>gn', ':<c-u>grep! ', { desc = 'grep for word' })
 vim.keymap.set('n', '<leader>gc', ':<c-u>grep! <C-r>=expand("<cword>")<cr>', { desc = 'grep for word under cursor' })
 -- jump to tag
 vim.keymap.set('n', '<leader>t', ':<c-u>tjump ', { desc = 'start tjump prompt' })
--- -- quitting and saving
-vim.keymap.set('n', '<leader>w', '<cmd>wa<cr>', { desc = 'save all' })
-vim.keymap.set('n', '<leader>q', '<cmd>xa<cr>', { desc = 'save and quit' })
-vim.keymap.set('n', '<c-q>', '<cmd>xa!<cr>', { desc = 'force quit all' })
 -- resize splits
 vim.keymap.set('n', '<c-left>', '<cmd>vertical resize +3<cr>', { desc = 'resize split to the left' })
 vim.keymap.set('n', '<c-right>', '<cmd>vertical resize -3<cr>', { desc = 'resize split to the right' })

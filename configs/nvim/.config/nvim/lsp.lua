@@ -1,4 +1,4 @@
--- Diagnostic mappings
+-- Global mappings
 vim.keymap.set('n', '[g', vim.diagnostic.goto_prev, { noremap=true, silent=true, desc="Go to [p]rev [d]iagnostic" })
 vim.keymap.set('n', ']g', vim.diagnostic.goto_next, { noremap=true, silent=true, desc="Go to [n]ext [d]iagnostic" })
 vim.keymap.set('n', '<leader>d', vim.diagnostic.setloclist, { noremap=true, silent=true, desc="Open [d]iagnostics" })
