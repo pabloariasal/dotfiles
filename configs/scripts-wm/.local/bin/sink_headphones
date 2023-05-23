@@ -1,0 +1,17 @@
+#!/bin/bash
+
+set -e
+
+SINK_NAME="alsa_output.pci-0000_00_1f.3.analog-stereo"
+SOURCE_NAME="$SINK_NAME"
+
+pactl set-default-sink "$SINK_NAME"
+pactl set-default-source "$SOURCE_NAME"
+
+pactl list short sink-inputs|while read stream; do
+    streamId=$(echo $stream|cut '-d ' -f1)
+    pactl move-sink-input "$streamId" "$SINK_NAME"
+done
+
+notify-send "Headphones ON" -u low -t 1000
+echo "🎧" > ~/.sink_pulseaudio

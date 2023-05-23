@@ -15,6 +15,7 @@ general {
 }
 
 # order += "tztime holder__hey_man"
+order += "read_file sink"
 order += "tztime holder__pomodoro"
 order += "tztime holder__brightness"
 order += "volume master"
@@ -63,4 +64,10 @@ tztime holder__brightness {
 
 tztime holder__pomodoro {
        format = "holder__pomodoro"
+}
+
+read_file sink {
+    format = "%content"
+    format_bad = ""
+    path = "~/.sink_pulseaudio"
 }
