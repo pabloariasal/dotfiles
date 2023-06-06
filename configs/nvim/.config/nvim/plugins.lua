@@ -20,7 +20,6 @@ return require('packer').startup(function()
   use 'tpope/vim-eunuch'
   use 'tpope/vim-unimpaired'
   use 'tpope/vim-commentary'
-  use 'jiangmiao/auto-pairs'
   use 'vim-scripts/ReplaceWithRegister'
   use 'romainl/vim-qf'
   use 'vifm/vifm.vim'
@@ -53,6 +52,12 @@ return require('packer').startup(function()
     end,
   }
   use 'sitiom/nvim-numbertoggle'
+  use {
+    "windwp/nvim-autopairs",
+    config = function() require("nvim-autopairs").setup {
+      fast_wrap = {},
+    } end
+  }
   -- colors
   use 'morhetz/gruvbox'
   use 'shaunsingh/solarized.nvim'
