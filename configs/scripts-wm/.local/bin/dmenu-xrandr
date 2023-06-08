@@ -1,0 +1,6 @@
+#!/bin/bash
+
+screenlayouts="${HOME}/.screenlayout"
+profiles="$(fd -t f . ${screenlayouts} -x basename {})"
+selection=$(echo "$profiles" | bemenu_wrapper -c -W 0.2 -w -l 20 -B 1 -p "Xrandr Profile")
+bash "$(realpath ${screenlayouts}/${selection})"

@@ -49,9 +49,10 @@ bindsym $mod+Shift+b exec $browser --incognito
 bindsym $mod+p exec bemenu_run_wrapper -p "Run" -i
 bindsym $mod+c exec dmenu-clipboard
 bindsym $mod+i exec dmenu-emoji
-bindsym $mod+x exec dmenu-audio-source
+bindsym $mod+semicolon exec dmenu-audio-source
 bindsym $mod+w exec system-monitor
 bindsym $mod+z exec wetter
+bindsym $mod+x exec dmenu-xrandr
 bindsym $mod+Ctrl+a exec arandr
 bindsym $mod+Ctrl+p exec pavucontrol
 bindsym $mod+Ctrl+t exec theme-selector
