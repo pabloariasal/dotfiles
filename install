@@ -130,6 +130,18 @@ function install_git_worktree_relative()
     bash -- install.sh ~/.local/bin
 }
 
+function create_github_personal_ssh_key()
+{
+    ssh-keygen -t ed25519 -C "pabloariasal@gmail.com" -f ~/.ssh/github_personal
+    xclip -selection clipboard < ~/.ssh/github_personal.pub
+    echo "copied public key to clipboard!"
+}
+
+function switch_repo_to_ssh() {
+    git remote set-url origin git@github.com:pabloariasal/dotfiles.git
+    git remote -v
+}
+
 if [[ $# -eq 0 || "$*" == *"--help"* ]]; then
     SCRIPTPATH="$(realpath "$0")"
     cat "$SCRIPTPATH" | grep 'function' | head -n -1 | awk '{print $2}' | tr -d '()'
