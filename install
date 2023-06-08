@@ -46,21 +46,6 @@ aur_packages=(spotify
     google-chrome
 )
 
-function install_patched_dmenu()
-{
-    local tools_dir=${HOME}/tools
-    mkdir -p ${tools_dir}
-    cd ${tools_dir}
-    git clone git://git.suckless.org/dmenu
-    cd dmenu
-    wget https://tools.suckless.org/dmenu/patches/case-insensitive/dmenu-caseinsensitive-5.0.diff -O patch1
-    patch < patch1
-    wget https://gist.githubusercontent.com/pabloariasal/6b41324165613ce346c0242daa4a09e1/raw/df71daa361b2ac96e1a02763781bf4e2fd9ac006/gistfile1.txt -O patch2
-    patch < patch2
-    make
-    sudo make install
-}
-
 function install_paru()
 {
     rm -rf ~/paru
