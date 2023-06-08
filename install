@@ -43,7 +43,6 @@ packages=(i3-gaps
 )
 
 aur_packages=(spotify
-    devour
     google-chrome
 )
 
