@@ -1,6 +1,0 @@
-#!/bin/bash
-
-echo "Switching to docked setup"
-xrandr --output "HDMI2" --off --output "eDP1" --auto
-i3-msg restart
-setrrate
