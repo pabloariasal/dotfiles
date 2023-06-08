@@ -2,6 +2,12 @@
 
 set -e
 
+if [ $# -eq 0 ]; then
+    echo "No arguments provided."
+    echo "usage: brightness-control <inc|dec>"
+    exit 0
+fi
+
 INCREMENT=5
 
 if [ "$1" = "inc" ]; then
