@@ -18,4 +18,8 @@ bindkey -M vicmd '^[l' end-of-line
 bindkey -v '^?' backward-delete-char
 
 # cp to bookmarked directory
-bindkey '^F' zfm-cd-to-bookmark
+bindkey -r '^O'
+bindkey '^O' zfm-cd-to-bookmark
+
+# insert bookmark into command line
+bindkey '^F' zfm-insert-bookmark
