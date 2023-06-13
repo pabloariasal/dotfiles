@@ -58,7 +58,6 @@ return require('packer').startup(function()
       fast_wrap = {},
     } end
   }
-  use 'masukomi/vim-markdown-folding'
   -- colors
   use 'morhetz/gruvbox'
   use 'shaunsingh/solarized.nvim'
