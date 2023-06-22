@@ -19,6 +19,7 @@ vim.keymap.set('n', '<leader>a', require('alternate').alternate, { desc = 'alter
 vim.keymap.set('n', '<leader>c', "<cmd>bp <bar> bd #<cr>", { desc = 'close the current buffer' })
 -- file explorer
 vim.keymap.set('n', '<leader>e', '<cmd>EditVifm<cr>', { desc = 'open file explorer' })
+vim.keymap.set('n', '<leader>k', '<cmd>Vtip<cr>', { desc = 'Show tip' }, '<cmd>Vtip<cr>')
 -- maximize current window
 vim.keymap.set('n', '<leader>l', '<cmd>MaximizerToggle<cr>', { desc = 'maximize current window' })
 -- grepping
