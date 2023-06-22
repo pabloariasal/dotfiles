@@ -58,6 +58,13 @@ return require('packer').startup(function()
       fast_wrap = {},
     } end
   }
+  use({
+    'Wansmer/treesj',
+    requires = { 'nvim-treesitter' },
+    config = function()
+      require('treesj').setup({use_default_keymaps = false,})
+    end,
+  })
   -- colors
   use 'morhetz/gruvbox'
   use 'shaunsingh/solarized.nvim'

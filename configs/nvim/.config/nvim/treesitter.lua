@@ -10,3 +10,6 @@ require'nvim-treesitter.configs'.setup {
 }
 vim.o.foldmethod = 'expr'
 vim.o.foldexpr = 'nvim_treesitter#foldexpr()'
+
+-- join node under cursor
+vim.keymap.set('n', '<leader>j', require('treesj').toggle, { noremap=true, desc = 'split/[J]oin node under cursor' })

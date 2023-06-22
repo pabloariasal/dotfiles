@@ -66,9 +66,9 @@ vim.keymap.set('n', '<c-p>', builtin.find_files, { desc = "Open Files"})
 vim.keymap.set('n', '<c-n>', builtin.buffers, { desc = "Navigate buffers" })
 vim.keymap.set('n', '<leader>gl', builtin.live_grep, { desc = "[G]rep [L]ive" })
 vim.keymap.set('n', '<leader>o', builtin.oldfiles, { desc = "Open [O]ld files" })
-vim.keymap.set('n', '<leader>j', builtin.current_buffer_fuzzy_find, { desc = "[J]ump to line in current buffer" })
-require('telescope').load_extension('neoclip')
 vim.keymap.set('n', '<leader>v', '<cmd>Telescope neoclip initial_mode=normal<cr>', { desc = 'open neoclip clipboard' })
 -- Lsp
 vim.keymap.set('n', '<leader>sd', builtin.lsp_document_symbols, { desc = "Navigate [s]ymbols [d]ocument" })
 vim.keymap.set('n', '<leader>sw', builtin.lsp_dynamic_workspace_symbols, { desc = "Navigate [s]ymbols in workspace" })
+
+require('telescope').load_extension('neoclip')
