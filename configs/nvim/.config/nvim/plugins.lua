@@ -65,6 +65,7 @@ return require('packer').startup(function()
       require('treesj').setup({use_default_keymaps = false,})
     end,
   })
+  use 'nvim-lua/plenary.nvim'
   -- colors
   use 'morhetz/gruvbox'
   use 'shaunsingh/solarized.nvim'
