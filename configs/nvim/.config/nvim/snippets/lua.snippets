@@ -1,2 +1,16 @@
 snippet p "print"
     print($1)
+snippet af "anonymous function"
+    function($1) $0 end
+snippet nf "named function"
+    function $1($2)
+        $3
+    end
+snippet m "module"
+    local M = {}
+    $0
+    return M
+snippet rp "return plain"
+    return $1
+snippet re "return"
+    return
