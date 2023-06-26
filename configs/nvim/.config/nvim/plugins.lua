@@ -41,7 +41,7 @@ return require('packer').startup(function()
   }
   use 'pabloariasal/alternate.nvim'
   use 'pabloariasal/webify.nvim'
-  use 'takac/vim-hardtime'
+  use 'm4xshen/hardtime.nvim'
   use {
   "AckslD/nvim-neoclip.lua",
     requires = {

@@ -72,9 +72,6 @@ let g:traces_num_range_preview = 1
 "Enable syntax highlighting
 syntax on
 
-" Enable hard mode per default
-let g:hardtime_default_on = 1
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " netrw
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -126,13 +123,6 @@ let g:qf_max_height = 20
 " Required Plugins: vim-dispatch
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:dispatch_no_maps = 1
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Hardmode
-"
-" Required Plugins: vim-hardtime
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:hardtime_ignore_quickfix = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Templates
