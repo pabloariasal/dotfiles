@@ -9,3 +9,8 @@ vim.api.nvim_create_user_command('BuffOnly', '%bd|e#', {})
 vim.api.nvim_create_user_command('SpellCheckGerman', 'set spell spelllang=de_de', {})
 -- turn on spell checking in englisch
 vim.api.nvim_create_user_command('SpellCheckEnglish', 'set spell spelllang=en_us', {})
+-- open a tip like clippy
+function Vtip()
+  vim.api.nvim_echo({{vim.fn.system('curl -s ' .. "https://vtip.43z.one")}}, true, {})
+end
+vim.api.nvim_create_user_command('Vtip', Vtip, {})
