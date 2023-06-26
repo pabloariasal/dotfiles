@@ -40,6 +40,7 @@ return require('packer').startup(function()
     requires = { {'nvim-lua/plenary.nvim'} }
   }
   use 'pabloariasal/alternate.nvim'
+  use 'pabloariasal/webify.nvim'
   use 'takac/vim-hardtime'
   use {
   "AckslD/nvim-neoclip.lua",
