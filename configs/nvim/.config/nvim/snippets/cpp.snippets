@@ -113,6 +113,8 @@ snippet cbe "begin end const iterator pair" i
     $1.cbegin(), $1.cend()
 snippet mu "mayunused" i
    [[maybe_unused]]
+snippet nd "nodiscard" i
+   [[nodiscard]]
 snippet do "default operations"
     $1(const $1&) = delete;
     $1& operator=(const $1&) = delete;
