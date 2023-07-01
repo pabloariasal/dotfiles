@@ -18,6 +18,7 @@ compile_commands.json
 
 .ccls-cache
 .ccls
+.clangd
 build_*
 build/
 
