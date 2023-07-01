@@ -27,8 +27,8 @@ floating_modifier $mod
 assign [class=$browser_class instance="gmail.com"] $ws4
 assign [class=$browser_class instance="discord.com"] $ws5
 assign [class=$browser_class instance="keep."] $ws6
-assign [class=$browser_class instance="calendar."] $ws9
 for_window [class="^Spotify$"] move container to workspace $ws8
+assign [class=$browser_class instance="calendar."] $ws9
 
 #######################################################################
 # Window rules
