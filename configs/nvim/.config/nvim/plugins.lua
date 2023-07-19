@@ -27,7 +27,6 @@ return require('packer').startup(function()
   use 'ludovicchabant/vim-gutentags'
   use 'lewis6991/gitsigns.nvim'
   use 'neovim/nvim-lspconfig'
-  use 'aperezdc/vim-template'
   use 'szw/vim-maximizer'
   use {
     "nvim-treesitter/nvim-treesitter",
