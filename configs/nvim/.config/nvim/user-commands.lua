@@ -14,3 +14,5 @@ function Vtip()
   vim.api.nvim_echo({{vim.fn.system('curl -s ' .. "https://vtip.43z.one")}}, true, {})
 end
 vim.api.nvim_create_user_command('Vtip', Vtip, {})
+-- list snippets of current filetype
+vim.api.nvim_create_user_command('PrintSnippets', function() vim.cmd('!list_snippets ' .. vim.bo.filetype) end, {})
