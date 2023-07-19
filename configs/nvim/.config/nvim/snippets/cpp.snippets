@@ -139,3 +139,19 @@ snippet mv "std::move" i
     std::move($0)
 snippet op "std::optional" i
     std::optional<$1>
+snippet oo "std::ostream operator"
+    inline auto operator<<(std::ostream& os, const $2& value) -> std::ostream&
+    {
+        os << $0;
+        return os;
+    }
+snippet eo "equality operations"
+    inline auto operator==(const $2$ lhs, const $2$ rhs) -> bool
+    {
+        return $0;
+    }
+
+    inline auto operator!=(const $2$ lhs, const $2$ rhs) -> bool
+    {
+        return !(lhs == rhs);
+    }
