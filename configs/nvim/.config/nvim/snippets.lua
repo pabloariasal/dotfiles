@@ -17,4 +17,4 @@ map( { 'i', 's' }, '<tab>', function() return require('snippy').can_expand() and
 map( { 'i', 's' }, '<c-k>', function() return require('snippy').can_jump(-1) and '<plug>(snippy-previous)' or '<c-k>' end, { expr = true } )
 map( { 'i', 's' }, '<c-j>', function() return require('snippy').can_jump(1) and '<plug>(snippy-next)' or '<c-j>' end, { expr = true } )
 map('x', '<Tab>', '<plug>(snippy-cut-text)')
-map( 'n', 'g<Tab>', '<plug>(snippy-cut-text)')
+map('n', 'g<Tab>', '<plug>(snippy-cut-text)')
