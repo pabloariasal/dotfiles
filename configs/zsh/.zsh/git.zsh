@@ -47,10 +47,15 @@ zle     -N   fzf-git-file-widget
 bindkey '^s' fzf-git-file-widget
 
 # CTRL-B - Jump to worktree
-__select_git_worktree() {
+__jump_to_worktree() {
   local cmd="git worktree list"
   setopt localoptions pipefail no_aliases 2> /dev/null
-  local dir="$(eval "$cmd" | $(__fzfcmd) | awk '{print $1}')"
+  local dir="$(eval "$cmd" | $(__fzfcmd))"
+  if [[ -z "$dir" ]]; then
+    zle redisplay
+    return 0
+  fi
+  dir=$(echo $dir | awk '{ print $1 }')
   # make relative paths absolute to repo root
   if [[ ! "$dir" =~ ^/ ]]; then
     if [[ $(basename $(dirname $(pwd))) == ".worktrees" ]]; then
@@ -65,10 +70,6 @@ __select_git_worktree() {
     fi
     dir="${repo_root}/${dir}"
   fi
-  if [[ -z "$dir" ]]; then
-    zle redisplay
-    return 0
-  fi
   # zle push-line # Clear buffer. Auto-restored on next prompt.
   BUFFER="builtin cd -- ${(q)dir}"
   zle accept-line
@@ -77,8 +78,8 @@ __select_git_worktree() {
   zle reset-prompt
   return $ret
 }
-zle     -N   __select_git_worktree
-bindkey '^b' __select_git_worktree
+zle     -N   __jump_to_worktree
+bindkey '^b' __jump_to_worktree
 
 #######################################################################
 # Aliases
@@ -131,9 +132,7 @@ function gclb() {
 }
 
 function gwa() {
-  if [ ! -d ".worktrees" ]; then
-    mkdir .worktrees
-  fi
+  mkdir -p .worktrees
   git worktree add "$@"
 }
 
