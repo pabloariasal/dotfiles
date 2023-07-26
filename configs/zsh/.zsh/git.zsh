@@ -148,8 +148,6 @@ function gwrel() {
     fi
     local worktree_name="$(basename $1)"
     git-worktree-relative -w "$1" -r "$(pwd)/.git/worktrees/${worktree_name}"
-    echo "Done!"
-    git worktree list
 }
 
 function gwabs() {
@@ -164,6 +162,79 @@ function gwabs() {
     fi
     local worktree_name="$(basename $1)"
     git-worktree-absolute -w "$1" -r "$(pwd)/.git/worktrees/${worktree_name}"
-    echo "Done!"
-    git worktree list
+}
+
+# git worktree add new branch
+# creates a new worktree with a new branch
+function gwan() {
+    if [ "$#" -eq 0 ]; then
+      echo "No arguments provided."
+      echo "usage: gwan <new_branch_name> [<worktree_name>]"
+      return 1
+    fi
+    local parent_dir="$(basename $(dirname $(pwd)))"
+    if [[ "$parent_dir" == ".worktrees" || "$(basename $(pwd))" == ".worktrees" ]]; then
+      echo "Can only be run from repo's root"
+      return 1
+    fi
+    if [ -z "$2" ]; then
+      local worktree_path=".worktrees/${1}"
+    else
+      local worktree_path=".worktrees/${2}"
+    fi
+    gwa "$worktree_path" -b "$1" \
+      && gwrel "$worktree_path" \
+      && echo "New worktree created in $worktree_path" \
+      || echo "failed to create worktree"
+}
+
+# git worktree add existing branch
+# creates a new worktree with an existing branch
+function gwae() {
+    if [ "$#" -eq 0 ]; then
+      echo "No arguments provided."
+      echo "usage: gwae <branch_name> [<worktree_name>]"
+      return 1
+    fi
+    local parent_dir="$(basename $(dirname $(pwd)))"
+    if [[ "$parent_dir" == ".worktrees" || "$(basename $(pwd))" == ".worktrees" ]]; then
+      echo "Can only be run from repo's root"
+      return 1
+    fi
+    if [ -z "$2" ]; then
+      local worktree_path=".worktrees/${1}"
+    else
+      local worktree_path=".worktrees/${2}"
+    fi
+    gwa "$worktree_path" "$1" \
+      && gwrel "$worktree_path" \
+      && echo "New worktree created in $worktree_path" \
+      || echo "failed to create worktree"
+}
+
+# git worktree remove
+function gwr() {
+  local parent_dir="$(basename $(dirname $(pwd)))"
+  if [[ "$parent_dir" == ".worktrees" || "$(basename $(pwd))" == ".worktrees" ]]; then
+    echo "Can only be run from repo's root"
+    return 1
+  fi
+  local worktrees="$(git worktree list | sed -n '1d;p' | $(__fzfcmd) --multi)"
+  if [[ -z "$worktrees" ]]; then
+    return 0
+  fi
+  echo "Remove following worktrees?"
+  echo "$worktrees"
+  printf '[y/n]? '
+  read answer
+  if [ "$answer" != "${answer#[Yy]}" ] ;then
+    echo "$worktrees" | while read line ; do
+      local worktree_path=$(echo $line | awk '{ print $1 }')
+      gwabs "$worktree_path" \
+        && git worktree remove --force "$worktree_path" \
+        && echo "$worktree_path removed"
+    done
+  else
+      echo "cancelled"
+  fi
 }
