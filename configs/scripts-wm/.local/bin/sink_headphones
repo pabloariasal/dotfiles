@@ -13,5 +13,5 @@ pactl list short sink-inputs|while read stream; do
     pactl move-sink-input "$streamId" "$SINK_NAME"
 done
 
-notify-send "Headphones ON" -u low -t 1000
+notify-send "Headphones ON" -u low -t 2000
 echo "🎧" > ~/.sink_pulseaudio
