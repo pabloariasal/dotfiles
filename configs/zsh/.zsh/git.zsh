@@ -128,7 +128,7 @@ alias ge='git commit --allow-empty -m "Empty commit"'
 
 function gclb() {
   git remote update --prune &&
-  git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -D
+  git branch -vv | grep -vE '^[*+]' | awk '/: gone]/{print $1}' | xargs git branch -D
 }
 
 function gwa() {
