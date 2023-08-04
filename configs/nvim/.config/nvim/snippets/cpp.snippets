@@ -12,25 +12,25 @@ snippet str "struct"
     {
         $2
     };
-snippet la "sambda" i
+snippet la "lambda" i
     []($1){$2}
 snippet l1 "one argument generic lamdba" i
     [](const auto& $1) { $2 }
 snippet l2 "two argument generic lamdba" i
     [](const auto& $1, const auto& $2) { $3 }
-snippet iq "include Quotes" b
+snippet iq "include quotes" b
     #include "$1"
-snippet ib "include Brackets" b
+snippet ib "include brackets" b
     #include <$1>
-snippet iv "include std::vector" b
+snippet iv "include vector" b
     #include <vector>
-snippet ii "include std::iostream" b
+snippet ii "include iostream" b
     #include <iostream>
-snippet is "include std::string" b
+snippet is "include string" b
     #include <string>
-snippet io "include std::optional" b
+snippet io "include optional" b
     #include <optional>
-snippet im "include std::memory" b
+snippet im "include memory" b
     #include <memory>
 snippet main "main() (main)" b
     int main(int argc, char *argv[])
@@ -65,6 +65,10 @@ snippet if "if clause"
     {
         $2
     }
+snippet el "else clause"
+    else {
+        $0
+    }
 snippet fdef "function definition"
     auto $1($2) -> ${3:void}
     {
@@ -81,15 +85,19 @@ snippet todo "TODO"
     // TODO: $0
 snippet vc "void cast"
     (void) $0;
-snippet ve "std vector" i
+snippet ve "std::vector" i
     std::vector<$1>
-snippet fp "std filesystem path" i
+snippet fp "std::filesystem::path" i
     std::filesystem::path
-snippet up "std unique_ptr" i
+snippet up "std::unique_ptr" i
     std::unique_ptr<$1>
-snippet sp "std shared_ptr" i
+snippet mun "std::make_unique" i
+    std::make_unique<$1>($2)
+snippet sp "std::shared_ptr" i
     std::shared_ptr<$1>
-snippet st "std string" i
+snippet msa "std::make_shared" i
+    std::make_unique<$1>($2)
+snippet st "std::string" i
     std::string
 snippet re "return"
     return ${1:\{\}};
@@ -113,7 +121,7 @@ snippet be "begin end iterator pair" i
     $1.begin(), $1.end()
 snippet cbe "begin end const iterator pair" i
     $1.cbegin(), $1.cend()
-snippet mu "mayunused" i
+snippet mu "maybe_unused" i
    [[maybe_unused]]
 snippet nd "nodiscard" i
    [[nodiscard]]
@@ -131,7 +139,7 @@ snippet ig "include guard"
     #ifndef $1_H_
     #define $1_H_
     #endif
-snippet doc "start doxygen doc"
+snippet doc "doxygen doc"
     /**
     * @brief $0
     */
@@ -141,13 +149,13 @@ snippet mv "std::move" i
     std::move($0)
 snippet op "std::optional" i
     std::optional<$1>
-snippet oo "std::ostream operator"
+snippet oo "define std::ostream operator"
     inline auto operator<<(std::ostream& os, const $2& value) -> std::ostream&
     {
         os << $0;
         return os;
     }
-snippet eo "equality operations"
+snippet eo "define equality operations"
     inline auto operator==(const $2$ lhs, const $2$ rhs) -> bool
     {
         return $0;
@@ -157,14 +165,14 @@ snippet eo "equality operations"
     {
         return !(lhs == rhs);
     }
-snippet tc "try catch"
+snippet tc "try catch block"
     try
     {
         $2
     } catch($1) {
         $0
     }
-snippet cat "catch"
+snippet cat "catch block"
     catch($1) {
-
+        $0
     }
