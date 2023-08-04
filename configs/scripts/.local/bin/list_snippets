@@ -12,6 +12,7 @@ function print_snippets()
         echo "--$1--"
     fi
     rg --no-line-number '^snippet\s+(\w+)\s+"(.+)"' -or '$1-$2' "${snippets_folder}/${1}.snippets" \
+        | sort \
         | column -t -s '-'
 }
 
