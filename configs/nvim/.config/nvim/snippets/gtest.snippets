@@ -1,16 +1,16 @@
 snippet it "include gtest"
     #include <gtest/gtest.h>
-snippet test "Gtest Test Case"
+snippet test "test case"
     TEST($1, $2)
     {
         $3
     }
-snippet testf "Gtest Test Fixture"
+snippet testf "fixture test"
     TEST_F($1, $2)
     {
         $3
     }
-snippet fclass "Gtest Fixture Class"
+snippet fclass "fixture class"
     class $1 : public ::testing::Test
     {
     protected:
@@ -27,7 +27,7 @@ snippet fclass "Gtest Fixture Class"
         {
         }
     };
-snippet ptest "Parameterized Test Fixture"
+snippet ptest "parameterized test fixture"
     struct $1 {
 
     };
