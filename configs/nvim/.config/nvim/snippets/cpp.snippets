@@ -30,6 +30,8 @@ snippet is "Include std::string" b
     #include <string>
 snippet io "Include std::optional" b
     #include <optional>
+snippet im "Include std::memory" b
+    #include <memory>
 snippet main "main() (main)" b
     int main(int argc, char *argv[])
     {
@@ -154,4 +156,15 @@ snippet eo "equality operations"
     inline auto operator!=(const $2$ lhs, const $2$ rhs) -> bool
     {
         return !(lhs == rhs);
+    }
+snippet tc "try catch"
+    try
+    {
+        $2
+    } catch($1) {
+        $0
+    }
+snippet cat "catch"
+    catch($1) {
+
     }
