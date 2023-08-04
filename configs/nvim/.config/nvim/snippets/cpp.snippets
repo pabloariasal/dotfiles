@@ -1,36 +1,36 @@
 snippet po "pragma once directive" b
     #pragma once
-snippet cla "Class"
+snippet cla "class"
     class $1
     {
     public:
         $2
     private:
     };
-snippet str "Struct"
+snippet str "struct"
     struct $1
     {
         $2
     };
-snippet la "Lambda" i
+snippet la "sambda" i
     []($1){$2}
-snippet l1 "One argument generic lamdba" i
+snippet l1 "one argument generic lamdba" i
     [](const auto& $1) { $2 }
-snippet l2 "Two argument generic lamdba" i
+snippet l2 "two argument generic lamdba" i
     [](const auto& $1, const auto& $2) { $3 }
-snippet iq "Include Quotes" b
+snippet iq "include Quotes" b
     #include "$1"
-snippet ib "Include Brackets" b
+snippet ib "include Brackets" b
     #include <$1>
-snippet iv "Include std::vector" b
+snippet iv "include std::vector" b
     #include <vector>
-snippet ii "Include std::iostream" b
+snippet ii "include std::iostream" b
     #include <iostream>
-snippet is "Include std::string" b
+snippet is "include std::string" b
     #include <string>
-snippet io "Include std::optional" b
+snippet io "include std::optional" b
     #include <optional>
-snippet im "Include std::memory" b
+snippet im "include std::memory" b
     #include <memory>
 snippet main "main() (main)" b
     int main(int argc, char *argv[])
@@ -48,7 +48,7 @@ snippet fi "for counter"
     {
         $2
     }
-snippet ns "Namespace"
+snippet ns "namespace"
     namespace $1
     {
     $2
