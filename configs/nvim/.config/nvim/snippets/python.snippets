@@ -1,3 +1,19 @@
 # Python debugger stop
 snippet pdb "debugger stack trace"
     __import__('pdb').set_trace()
+snippet sb "shebang"
+    #!/usr/bin/python3
+snippet cla "class"
+    class $1:
+        def __init__(self):
+            pass
+snippet cm "context manager operations"
+    def __enter__(self):
+        return self
+    def __exit__(self, type, value, traceback):
+        pass
+snippet tc "try catch"
+    try:
+      $1
+    except:
+      print("An exception occurred")
