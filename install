@@ -133,6 +133,15 @@ function install_greenclip() {
     chmod +x ~/.local/bin/greenclip
 }
 
+function install_python_language_server() {
+    sudo pacman -S python-pip \
+        python-lsp-server \
+        python-pyflakes \
+        python-pycodestyle \
+        yapf \
+        python-pylint
+}
+
 if [[ $# -eq 0 || "$*" == *"--help"* ]]; then
     SCRIPTPATH="$(realpath "$0")"
     cat "$SCRIPTPATH" | grep 'function' | head -n -1 | awk '{print $2}' | tr -d '()'
