@@ -50,7 +50,7 @@ lspconfig.rust_analyzer.setup{}
 
 -- Python - python-language-server
 lspconfig.pylsp.setup{
-  cmd = {"pyls"},
+  cmd = {"pylsp"},
 }
 
 -- CMake - cmake-language-server
