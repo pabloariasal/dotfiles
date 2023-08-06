@@ -66,6 +66,10 @@ return require('packer').startup(function()
     end,
   })
   use 'nvim-lua/plenary.nvim'
+  use {
+    'kana/vim-textobj-entire',
+    requires = { 'kana/vim-textobj-user' }
+  }
   -- colors
   use 'morhetz/gruvbox'
   use 'shaunsingh/solarized.nvim'
