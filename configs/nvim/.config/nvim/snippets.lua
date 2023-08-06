@@ -7,7 +7,7 @@ end
 snippy.setup {
     scopes = {
         cpp = {'_', 'cpp', 'gtest'},
-        sh = {'bash'}
+        sh = {'bash', 'zsh'}
    }
 }
 
