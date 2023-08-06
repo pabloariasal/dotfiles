@@ -51,6 +51,15 @@ lspconfig.rust_analyzer.setup{}
 -- Python - python-language-server
 lspconfig.pylsp.setup{
   cmd = {"pylsp"},
+  settings = {
+    pylsp = {
+      plugins = {
+        pylint  = {
+          enabled = true
+        }
+      }
+    }
+  }
 }
 
 -- CMake - cmake-language-server
