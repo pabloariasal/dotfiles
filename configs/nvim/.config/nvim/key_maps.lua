@@ -8,6 +8,8 @@ vim.keymap.set('n', "\\", ',', { noremap=true })
 vim.keymap.set({'n', 'v'}, ',', ':', { noremap=true })
 -- quitting and saving
 vim.keymap.set({'n'}, '<leader>w', '<cmd>wa<cr>', { noremap=true })
+vim.keymap.set({'n'}, '<leader>q', '<cmd>q<cr>', { noremap=true })
+vim.keymap.set({'n'}, '<c-q>', '<cmd>qa!<cr>', { noremap=true })
 -- exit insert mode with jj (best mapping ever)
 vim.keymap.set('i', 'jj', '<ESC>', { noremap=true })
 -- indent visual block
