@@ -6,6 +6,9 @@ vim.g.maplocalleader = ' '
 vim.keymap.set('n', "\\", ',', { noremap=true })
 -- open command line prompt with ,
 vim.keymap.set({'n', 'v'}, ',', ':', { noremap=true })
+-- move to begining and end of the line
+vim.keymap.set({'n', 'v'}, '<a-l>', '$', { noremap=true })
+vim.keymap.set({'n', 'v'}, '<a-h>', '^', { noremap=true })
 -- quitting and saving
 vim.keymap.set({'n'}, '<leader>w', '<cmd>wa<cr>', { noremap=true })
 vim.keymap.set({'n'}, '<leader>q', '<cmd>q<cr>', { noremap=true })
