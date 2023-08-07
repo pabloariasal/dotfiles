@@ -41,6 +41,7 @@ packages=(i3-gaps
     pulseaudio-alsa
     gnome-themes-extra
     sxiv
+    playerctl
 )
 
 aur_packages=(spotify
