@@ -144,21 +144,6 @@ mode "$mode_system" {
 bindsym $mod+Delete mode "$mode_system"
 
 #######################################################################
-# Common commands
-set $mode_commands (1) pomodoro start (2) pomodoro stop
-mode "$mode_commands" {
-    bindsym 1 exec --no-startup-id pomodoro start
-    bindsym 2 exec --no-startup-id pomodoro stop
-
-    # back to normal: Enter or Escape
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-    bindsym q mode "default"
-}
-
-bindsym $mod+Insert mode "$mode_commands"
-
-#######################################################################
 # Key Bindings - Workspaces
 
 # Switch Workspace

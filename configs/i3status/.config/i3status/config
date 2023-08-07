@@ -16,7 +16,6 @@ general {
 
 # order += "tztime holder__hey_man"
 order += "read_file sink"
-order += "tztime holder__pomodoro"
 order += "tztime holder__brightness"
 order += "volume master"
 order += "battery all"
@@ -60,10 +59,6 @@ tztime holder__hey_man {
 
 tztime holder__brightness {
        format = "holder__brightness"
-}
-
-tztime holder__pomodoro {
-       format = "holder__pomodoro"
 }
 
 read_file sink {

@@ -58,12 +58,6 @@ function brightness {
   json_array=$(update_holder holder__brightness "$json")
 }
 
-function pomodoro_func {
-  local status=$(pomodoro show)
-  local json="{\"full_text\":\"🍅${status}\" , \"markup\":\"pango\"}"
-  json_array=$(update_holder holder__pomodoro "$json")
-}
-
 i3status | (read line; echo "$line"; read line ; echo "$line" ; read line ; echo "$line" ; while true
 do
   read line
