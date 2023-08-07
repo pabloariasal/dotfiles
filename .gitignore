@@ -10,4 +10,3 @@ configs/nvim/.config/nvim/plugin/
 configs/alacritty/.config/alacritty/alacritty_colors.yml
 configs/nvim/.config/nvim/nvim_colorscheme.txt
 configs/nvim/.config/nvim/nvim_background.txt
-misc/bookmarks.txt

@@ -2,7 +2,7 @@
 
 set -e
 
-bookmarksfile="${DOTFILES}/misc/bookmarks.txt"
+bookmarksfile="${HOME}/.bookmarks.txt"
 if [[ ! -e "$bookmarksfile" ]]; then
     echo "error: bookmark file does not exist!"
     exit 1
