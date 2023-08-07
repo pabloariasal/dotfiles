@@ -68,6 +68,14 @@ bindsym $mod+Ctrl+8 exec spotify
 bindsym $mod+Ctrl+9 exec gcal
 
 #######################################################################
+# Key Bindings - Open favorite bookmarks
+bindsym $mod+F1 exec open_bookmark 1
+bindsym $mod+F2 exec open_bookmark 2
+bindsym $mod+F3 exec open_bookmark 3
+bindsym $mod+F4 exec open_bookmark 4
+bindsym $mod+F5 exec open_bookmark 5
+
+#######################################################################
 # Key Bindings - Windows
 # Change Window Focus
 bindsym $mod+h focus left
