@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then
+    echo "error: parameter is not set or empty."
+    exit 1
+fi
+
+playerctl --player=spotify,chromium "$1"
