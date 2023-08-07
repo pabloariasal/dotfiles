@@ -1,0 +1,19 @@
+#!/bin/bash
+
+set -e
+
+if [ "$PWD" != "${DOTFILES}" ]; then
+    echo "Please run this script from the directory: ${DOTFILES}"
+    exit 1
+fi
+
+if [ -z "$1" ]; then
+    echo "error: parameter is not set or empty."
+    exit 1
+fi
+
+script="${DOTFILES}/configs/scripts-wm/.local/bin/${1}"
+touch "${script}"
+chmod +x "$script"
+echo '#!/bin/bash' > "$script"
+nvim "$script"
