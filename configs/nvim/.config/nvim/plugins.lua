@@ -70,6 +70,7 @@ return require('packer').startup(function()
     'kana/vim-textobj-entire',
     requires = { 'kana/vim-textobj-user' }
   }
+  use 'mbbill/undotree'
   -- colors
   use 'morhetz/gruvbox'
   use 'shaunsingh/solarized.nvim'

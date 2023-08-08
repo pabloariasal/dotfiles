@@ -13,6 +13,8 @@ vim.keymap.set({'n', 'v'}, '<a-h>', '^', { noremap=true })
 vim.keymap.set({'n'}, '<leader>w', '<cmd>wa<cr>', { noremap=true })
 vim.keymap.set({'n'}, '<leader>q', '<cmd>q<cr>', { noremap=true })
 vim.keymap.set({'n'}, '<c-q>', '<cmd>qa!<cr>', { noremap=true })
+-- toggle vim undo tree
+vim.keymap.set({'n'}, '<leader>u', vim.cmd.UndotreeToggle, { noremap=true, desc = 'Toggle [u]ndo tree'})
 -- exit insert mode with jj (best mapping ever)
 vim.keymap.set('i', 'jj', '<ESC>', { noremap=true })
 -- indent visual block
