@@ -1,0 +1,14 @@
+#!/bin/bash
+
+set -e
+
+timezone="$(curl -s --fail https://ipapi.co/timezone)"
+
+echo "Timezone '$timezone' detected. Update time?"
+printf '[y/n]? '
+read answer
+if [ "$answer" != "${answer#[Yy]}" ] ;then
+    timedatectl set-timezone "$timezone"
+else
+    echo "cancelled"
+fi
