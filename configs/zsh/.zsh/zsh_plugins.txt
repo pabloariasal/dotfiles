@@ -1,6 +1,7 @@
 ohmyzsh/ohmyzsh path:plugins/dircycle
 ohmyzsh/ohmyzsh path:lib/clipboard.zsh
 ohmyzsh/ohmyzsh path:plugins/copypath
+ohmyzsh/ohmyzsh path:plugins/copyfile
 ohmyzsh/ohmyzsh path:plugins/last-working-dir
 ael-code/zsh-colored-man-pages
 zsh-users/zsh-syntax-highlighting
