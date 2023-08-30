@@ -30,9 +30,5 @@ alias sx='devour sxiv'
 # add ssh keys to agent
 alias sag='ssh-add ~/.ssh/github_personal'
 
-# system clipboard
-alias cin="xclip -selection clipboard -in"
-alias cout="xclip -selection clipboard -out"
-
 alias install_config='stow --verbose=2 -d configs -t ~ '
 
