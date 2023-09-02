@@ -136,7 +136,7 @@ function gwa() {
   git worktree add "$@"
 }
 
-function gwrel() {
+function __gwrel() {
     local parent_dir="$(basename $(dirname $(pwd)))"
     if [[ "$parent_dir" == ".worktrees" || "$(basename $(pwd))" == ".worktrees" ]]; then
       echo "Can only be run from repo's root"
@@ -150,7 +150,7 @@ function gwrel() {
     git-worktree-relative -w "$1" -r "$(pwd)/.git/worktrees/${worktree_name}"
 }
 
-function gwabs() {
+function __gwabs() {
     local parent_dir="$(basename $(dirname $(pwd)))"
     if [[ "$parent_dir" == ".worktrees" || "$(basename $(pwd))" == ".worktrees" ]]; then
       echo "Can only be run from repo's root"
@@ -183,7 +183,7 @@ function gwan() {
       local worktree_path=".worktrees/${2}"
     fi
     gwa "$worktree_path" -b "$1" \
-      && gwrel "$worktree_path" \
+      && __gwrel "$worktree_path" \
       && echo "New worktree created in $worktree_path" \
       || echo "failed to create worktree"
 }
@@ -207,7 +207,7 @@ function gwae() {
       local worktree_path=".worktrees/${2}"
     fi
     gwa "$worktree_path" "$1" \
-      && gwrel "$worktree_path" \
+      && __gwrel "$worktree_path" \
       && echo "New worktree created in $worktree_path" \
       || echo "failed to create worktree"
 }
@@ -230,7 +230,7 @@ function gwr() {
   if [ "$answer" != "${answer#[Yy]}" ] ;then
     echo "$worktrees" | while read line ; do
       local worktree_path=$(echo $line | awk '{ print $1 }')
-      gwabs "$worktree_path" \
+      __gwabs "$worktree_path" \
         && git worktree remove --force "$worktree_path" \
         && echo "$worktree_path removed"
     done
