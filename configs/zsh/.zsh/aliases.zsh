@@ -1,5 +1,6 @@
 # program shorcuts
 alias n='nvim'
+alias nd='nvim .'
 alias v='vifm'
 alias b='bat --plain'
 
