@@ -52,7 +52,7 @@ lspconfig.rust_analyzer.setup{}
 
 -- Python - python-language-server
 lspconfig.pylsp.setup{
-  cmd = {"pylsp"},
+  cmd = {"pyls"},
   settings = {
     pylsp = {
       plugins = {
