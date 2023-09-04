@@ -26,7 +26,7 @@ floating_modifier $mod
 #######################################################################
 # Assign programs to workspaces
 assign [class=$browser_class instance="gmail.com"] $ws4
-assign [class=$browser_class instance="discord.com"] $ws5
+assign [class=$browser_class instance="web.whatsapp.com"] $ws5
 assign [class=$browser_class instance="keep."] $ws6
 for_window [class="^Spotify$"] move container to workspace $ws8
 assign [class=$browser_class instance="calendar."] $ws9
@@ -63,7 +63,7 @@ bindsym $mod+Shift+comma resize set width 50 ppt height 75 ppt, move position ce
 # programs assigned to workspaces
 bindsym $mod+Ctrl+1 exec layout_code
 bindsym $mod+Ctrl+4 exec gmail
-bindsym $mod+Ctrl+5 exec discord
+bindsym $mod+Ctrl+5 exec whatsapp
 bindsym $mod+Ctrl+6 exec keep
 bindsym $mod+Ctrl+8 exec spotify
 bindsym $mod+Ctrl+9 exec gcal
