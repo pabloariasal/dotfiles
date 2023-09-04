@@ -7,6 +7,7 @@ set $no_browser_class "^(?!Google-chrome$)"
 set $terminal alacritty
 
 # workspaces
+# format number:name
 set $ws1 1:1
 set $ws2 2:2
 set $ws3 3:3
