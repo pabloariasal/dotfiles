@@ -39,6 +39,7 @@ for_window [class=Arandr] floating enable, resize set width 75 ppt height 75 ppt
 for_window [class=Nitrogen] floating enable, resize set width 95 ppt height 95 ppt, move position center
 for_window [class=flameshot] floating enable
 for_window [instance="__system_monitor"] floating enable, resize set width 75 ppt height 75 ppt, move position center
+for_window [instance="__dotfiles"] floating enable, resize set width 90 ppt height 90 ppt, move position center
 for_window [class=$browser_class instance="www.wetteronline.de__wettertrend_muenchen"] floating enable, resize set width 50 ppt height 75 ppt, move position center
 for_window [class=$browser_class instance="chat.openai.com__chat"] move scratchpad
 
@@ -57,6 +58,7 @@ bindsym $mod+x exec dmenu-xrandr
 bindsym $mod+Ctrl+a exec arandr
 bindsym $mod+Ctrl+p exec pavucontrol
 bindsym $mod+Ctrl+t exec theme-selector
+bindsym $mod+Ctrl+d exec open_dotfiles
 bindsym $mod+comma resize set width 85 ppt height 85 ppt, move position center
 bindsym $mod+Shift+comma resize set width 50 ppt height 75 ppt, move position center
 
