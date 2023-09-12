@@ -71,6 +71,7 @@ return require('packer').startup(function()
     requires = { 'kana/vim-textobj-user' }
   }
   use 'mbbill/undotree'
+  use 'ThePrimeagen/harpoon'
   -- colors
   use 'morhetz/gruvbox'
   use 'shaunsingh/solarized.nvim'

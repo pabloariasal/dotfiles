@@ -56,3 +56,9 @@ vim.keymap.set({'n', 'v', 'x'}, '<leader>p', '"+p', { noremap=true, desc = 'past
 vim.keymap.set({'n', 'v'}, '<leader>P', '"+P', { noremap=true, desc = 'paste from system clipboard' })
 vim.keymap.set({'n', 'v', 'x'}, '<leader>y', '"+y', { noremap=true, desc = 'yank to system clipboard' })
 vim.keymap.set({'n', 'v'}, '<leader>Y', '"+y$', { noremap=true, desc = 'yank to system clipboard' })
+-- harpoon
+vim.keymap.set({'n'}, '<leader>jm', require("harpoon.ui").toggle_quick_menu, { noremap=true, desc = 'harpoon toggle quick menu' })
+vim.keymap.set({'n'}, '<leader>ja', require("harpoon.mark").add_file, { noremap=true, desc = 'harpoon toggle quick menu' })
+vim.keymap.set({'n'}, '<leader>jj', '<cmd>lua require("harpoon.ui").nav_file(1)<cr>', { noremap=true, desc = 'harpoon toggle quick menu' })
+vim.keymap.set({'n'}, '<leader>jk', '<cmd>lua require("harpoon.ui").nav_file(2)<cr>', { noremap=true, desc = 'harpoon toggle quick menu' })
+vim.keymap.set({'n'}, '<leader>jl', '<cmd>lua require("harpoon.ui").nav_file(3)<cr>', { noremap=true, desc = 'harpoon toggle quick menu' })
