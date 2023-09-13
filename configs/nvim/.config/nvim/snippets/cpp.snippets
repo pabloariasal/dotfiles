@@ -150,18 +150,18 @@ snippet mv "std::move" i
 snippet op "std::optional" i
     std::optional<$1>
 snippet oo "define std::ostream operator"
-    inline auto operator<<(std::ostream& os, const $2& value) -> std::ostream&
+    inline auto operator<<(std::ostream& os, const $1& value) -> std::ostream&
     {
         os << $0;
         return os;
     }
 snippet eo "define equality operations"
-    inline auto operator==(const $2$ lhs, const $2$ rhs) -> bool
+    inline auto operator==(const $1& lhs, const $1& rhs) -> bool
     {
         return $0;
     }
 
-    inline auto operator!=(const $2$ lhs, const $2$ rhs) -> bool
+    inline auto operator!=(const $1& lhs, const $1& rhs) -> bool
     {
         return !(lhs == rhs);
     }
