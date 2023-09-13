@@ -20,6 +20,7 @@ order += "tztime holder__brightness"
 order += "volume master"
 order += "battery all"
 order += "tztime date"
+order += "tztime timezone"
 order += "tztime time"
 
 volume master {
@@ -51,6 +52,11 @@ tztime date {
 tztime time {
   format = "<span size='large'>%H:%M</span>"
   # format_time = "%H:%M"
+}
+
+tztime timezone {
+  format = "🌎%Z"
+  # format_time = "%Z"
 }
 
 tztime holder__hey_man {
