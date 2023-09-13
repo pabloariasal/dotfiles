@@ -1,3 +1,3 @@
 #!/bin/bash
 
-alacritty --class '__dotfiles' --working-directory "$DOTFILES"
+alacritty --class '__dotfiles' -o 'env.NO_LWD=ON' --working-directory "$DOTFILES"

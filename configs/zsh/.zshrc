@@ -33,5 +33,7 @@ function py() {
     python3 -c "from math import *; print($*)"
 }
 
-# switch to last visited directory
-lwd
+if [ -z "$NO_LWD" ]; then
+  # switch to last visited directory
+  lwd
+fi
