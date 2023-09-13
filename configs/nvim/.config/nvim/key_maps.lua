@@ -62,3 +62,6 @@ vim.keymap.set({'n'}, '<leader>ja', require("harpoon.mark").add_file, { noremap=
 vim.keymap.set({'n'}, '<leader>jj', '<cmd>lua require("harpoon.ui").nav_file(1)<cr>', { noremap=true, desc = 'harpoon toggle quick menu' })
 vim.keymap.set({'n'}, '<leader>jk', '<cmd>lua require("harpoon.ui").nav_file(2)<cr>', { noremap=true, desc = 'harpoon toggle quick menu' })
 vim.keymap.set({'n'}, '<leader>jl', '<cmd>lua require("harpoon.ui").nav_file(3)<cr>', { noremap=true, desc = 'harpoon toggle quick menu' })
+-- webify.nvim
+vim.keymap.set('n', '<leader>x', '<cmd>YankFileUrl +<cr>', { desc = 'Yank Url to system clipboard'})
+vim.keymap.set('n', '<leader>X', '<cmd>YankLineUrl +<cr>', { desc = 'Yank Url to system clipboard, including current line'})
