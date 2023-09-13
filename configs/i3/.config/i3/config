@@ -26,7 +26,6 @@ floating_modifier $mod
 #######################################################################
 # Assign programs to workspaces
 assign [class=$browser_class instance="gmail.com"] $ws4
-assign [class=$browser_class instance="web.whatsapp.com"] $ws5
 assign [class=$browser_class instance="keep."] $ws6
 for_window [class="^Spotify$"] move container to workspace $ws8
 assign [class=$browser_class instance="calendar."] $ws9
@@ -41,6 +40,7 @@ for_window [class=flameshot] floating enable
 for_window [instance="__system_monitor"] floating enable, resize set width 75 ppt height 75 ppt, move position center
 for_window [instance="__dotfiles"] floating enable, resize set width 90 ppt height 90 ppt, move position center
 for_window [class=$browser_class instance="www.wetteronline.de__wettertrend_muenchen"] floating enable, resize set width 50 ppt height 75 ppt, move position center
+for_window [class=$browser_class instance="web.whatsapp.com"] floating enable, resize set width 90 ppt height 90 ppt, move position center
 for_window [class=$browser_class instance="chat.openai.com__chat"] move scratchpad
 
 #######################################################################
@@ -66,7 +66,6 @@ bindsym $mod+Shift+comma resize set width 50 ppt height 75 ppt, move position ce
 # programs assigned to workspaces
 bindsym $mod+Ctrl+1 exec layout_code
 bindsym $mod+Ctrl+4 exec gmail
-bindsym $mod+Ctrl+5 exec whatsapp
 bindsym $mod+Ctrl+6 exec keep
 bindsym $mod+Ctrl+8 exec spotify
 bindsym $mod+Ctrl+9 exec gcal
