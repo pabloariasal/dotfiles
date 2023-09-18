@@ -60,6 +60,10 @@ bindsym $mod+Ctrl+a exec arandr
 bindsym $mod+Ctrl+p exec pavucontrol
 bindsym $mod+Ctrl+t exec theme-selector
 bindsym $mod+Ctrl+d exec open_dotfiles
+bindsym $mod+Ctrl+w exec whatsapp
+
+#######################################################################
+# Key Bindings - Resize windows
 bindsym $mod+comma resize set width 85 ppt height 85 ppt, move position center
 bindsym $mod+Shift+comma resize set width 50 ppt height 75 ppt, move position center
 
