@@ -17,12 +17,12 @@ alias h='history -r -E -35'
 
 # ls
 alias ls='ls --color=tty'
-alias l='exa'
-alias la='exa -a'
-alias ll='exa -l'
-alias lla='exa -la'
-alias lal='exa -la'
-alias lt='exa -T'
+alias l='eza'
+alias la='eza -a'
+alias ll='eza -l'
+alias lla='eza -la'
+alias lal='eza -la'
+alias lt='eza --tree'
 
 # devour
 alias za='devour zathura'
