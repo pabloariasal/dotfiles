@@ -1,0 +1,18 @@
+#!/bin/bash
+
+set -e
+
+if [ "$PWD" != "${DOTFILES}" ]; then
+    echo "Please run this script from the directory: ${DOTFILES}"
+    exit 1
+fi
+
+if [ "$#" -ne 2 ]; then
+    echo "usage: create_webapp <name> <url>"
+    echo "example: create_webapp google google.com"
+    exit 1
+fi
+
+script="${DOTFILES}/configs/webapps/.local/bin/${1}"
+echo '#!/bin/bash' > "$script"
+echo "${CHROMIUM_EXEC} --app=\"https://${2}\"" >> "$script"
