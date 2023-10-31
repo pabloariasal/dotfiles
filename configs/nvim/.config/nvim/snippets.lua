@@ -13,8 +13,8 @@ snippy.setup {
 
 local map = vim.keymap.set
 
-map( { 'i', 's' }, '<tab>', function() return require('snippy').can_expand() and '<plug>(snippy-expand)' or '<tab>' end, { expr = true } )
+map( { 'i', 's' }, '<c-space>', function() return require('snippy').can_expand() and '<plug>(snippy-expand)' or '<tab>' end, { expr = true } )
 map( { 'i', 's' }, '<c-k>', function() return require('snippy').can_jump(-1) and '<plug>(snippy-previous)' or '<c-k>' end, { expr = true } )
 map( { 'i', 's' }, '<c-j>', function() return require('snippy').can_jump(1) and '<plug>(snippy-next)' or '<c-j>' end, { expr = true } )
-map('x', '<Tab>', '<plug>(snippy-cut-text)')
-map('n', 'g<Tab>', '<plug>(snippy-cut-text)')
+map('x', '<c-space>', '<plug>(snippy-cut-text)')
+map('n', 'g<c-space>', '<plug>(snippy-cut-text)')
