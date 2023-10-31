@@ -218,11 +218,16 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 #######################################################################
-# Key Bindings - Scratchpad
+# Key Bindings - Scratchpads
 # mod+Minus is the generic scratchpad
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus [class=$no_browser_class instance="^(?!__terminal_scratchpad$)"] scratchpad show
+
+# mod+plus is the browser scratchpad
+bindsym $mod+Shift+plus move scratchpad
 bindsym $mod+plus [class=$browser_class instance="^(?!chat.openai.com__chat$)"] scratchpad show
+
+# chat gpt in a scratchpad window
 bindsym $mod+g exec i3-toggle-gpt-scratchpad
 
 # mod+0 is the drop down terminal
