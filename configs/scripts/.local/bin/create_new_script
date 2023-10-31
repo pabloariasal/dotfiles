@@ -8,12 +8,19 @@ if [ "$PWD" != "${DOTFILES}" ]; then
 fi
 
 if [ -z "$1" ]; then
-    echo "error: parameter is not set or empty."
+    echo "usage: create_new_script <script_name>"
     exit 1
 fi
 
-script="${DOTFILES}/configs/scripts/.local/bin/${1}"
+read -p "Is the script WM only? (y/n): " confirmation
+
+if [ "$confirmation" == "y" ] || [ "$confirmation" == "Y" ]; then
+    script="${DOTFILES}/configs/scripts-wm/.local/bin/${1}"
+else
+    script="${DOTFILES}/configs/scripts/.local/bin/${1}"
+fi
+
 touch "${script}"
 chmod +x "$script"
 echo '#!/bin/bash' > "$script"
-nvim "$script"
+$EDITOR "$script"
