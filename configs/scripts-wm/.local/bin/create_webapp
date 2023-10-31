@@ -16,3 +16,6 @@ fi
 script="${DOTFILES}/configs/webapps/.local/bin/${1}"
 echo '#!/bin/bash' > "$script"
 echo "${CHROMIUM_EXEC} --app=\"https://${2}\"" >> "$script"
+chmod +x "$script"
+echo 'webapp created!'
+cat "$script"
