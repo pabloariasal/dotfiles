@@ -1,2 +1,2 @@
 #!/bin/bash
-flatpak run net.ankiweb.Anki
+flatpak run --filesystem=host net.ankiweb.Anki
