@@ -17,7 +17,7 @@ bindkey -M vicmd '^[l' end-of-line
 # Fix vi mode backspace behavior
 bindkey -v '^?' backward-delete-char
 
-# cp to bookmarked directory
+# cd to bookmarked directory
 bindkey -r '^O'
 bindkey '^O' zfm-cd-to-bookmark
 
