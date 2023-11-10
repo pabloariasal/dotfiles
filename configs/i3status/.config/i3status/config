@@ -15,6 +15,7 @@ general {
 }
 
 # order += "tztime holder__hey_man"
+order += "tztime distro"
 order += "read_file sink"
 order += "tztime holder__brightness"
 order += "volume master"
@@ -65,6 +66,10 @@ tztime holder__hey_man {
 
 tztime holder__brightness {
        format = "placeholder"
+}
+
+tztime distro {
+       format = "🐧Arch Linux"
 }
 
 read_file sink {
