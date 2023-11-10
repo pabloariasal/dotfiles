@@ -1,2 +1,2 @@
 #!/bin/bash
-google-chrome-stable --app="https://read.amazon.com"
+${CHROMIUM_EXEC} --app="https://read.amazon.com"
