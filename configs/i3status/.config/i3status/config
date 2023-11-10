@@ -60,11 +60,11 @@ tztime timezone {
 }
 
 tztime holder__hey_man {
-       format = "holder__hey_man"
+       format = "placeholder"
 }
 
 tztime holder__brightness {
-       format = "holder__brightness"
+       format = "placeholder"
 }
 
 read_file sink {

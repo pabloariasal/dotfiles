@@ -63,8 +63,6 @@ do
   read line
   json_array="$(echo $line | sed -e 's/^,//')"
   brightness
-  pomodoro_func
-  # hey_man_moving
-  hey_man_static
+  # hey_man_static
   echo ",$json_array"
 done)
