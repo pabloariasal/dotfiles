@@ -279,6 +279,7 @@ bar {
         height 20
         colors {
                 background #282828aa
+                statusline #FFFFFFFF
         }
         tray_output primary
 }

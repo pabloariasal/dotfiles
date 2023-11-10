@@ -68,7 +68,7 @@ tztime holder__brightness {
 }
 
 read_file sink {
-    format = "%content"
+    format = "<span color='#ffffff'>%content</span>"
     format_bad = ""
     path = "~/.sink_pulseaudio"
 }
