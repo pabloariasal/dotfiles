@@ -79,6 +79,7 @@ bindsym $mod+F2 exec open_bookmark 2
 bindsym $mod+F3 exec open_bookmark 3
 bindsym $mod+F4 exec open_bookmark 4
 bindsym $mod+F5 exec open_bookmark 5
+bindsym $mod+period exec open_bookmark_dmenu
 
 #######################################################################
 # Key Bindings - Windows
