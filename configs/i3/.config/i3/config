@@ -137,7 +137,7 @@ mode "move" {
 
 bindsym $mod+u mode "move"
 
-bindsym $mod+d sticky enable
+bindsym $mod+d sticky toggle
 
 #######################################################################
 # System Mode
