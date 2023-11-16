@@ -42,7 +42,7 @@ return require('packer').startup(function()
   use 'pabloariasal/webify.nvim'
   use 'm4xshen/hardtime.nvim'
   use {
-  "AckslD/nvim-neoclip.lua",
+    "AckslD/nvim-neoclip.lua",
     requires = {
       {'kkharji/sqlite.lua', module = 'sqlite'},
       {'nvim-telescope/telescope.nvim'},
@@ -77,8 +77,8 @@ return require('packer').startup(function()
   use 'shaunsingh/solarized.nvim'
   use 'dracula/vim'
   use {
-      "catppuccin/nvim",
-      as = "catppuccin",
+    "catppuccin/nvim",
+    as = "catppuccin",
   }
   use 'mhartington/oceanic-next'
   use {
