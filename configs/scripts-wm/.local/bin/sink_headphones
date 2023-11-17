@@ -2,8 +2,8 @@
 
 set -e
 
-SINK_NAME="alsa_output.pci-0000_00_1f.3.analog-stereo"
-SOURCE_NAME="$SINK_NAME"
+SINK_NAME="alsa_output.usb-0b0e_Jabra_Link_380_50C2ED7A49E3-00.analog-stereo"
+SOURCE_NAME="alsa_input.usb-0b0e_Jabra_Link_380_50C2ED7A49E3-00.mono-fallback"
 
 pactl set-default-sink "$SINK_NAME"
 pactl set-default-source "$SOURCE_NAME"
