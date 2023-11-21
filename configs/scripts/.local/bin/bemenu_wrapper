@@ -1,2 +1,17 @@
 #!/bin/bash
-bemenu --binding vim --fb "#24273a" --ff "#8bd5ca" --nb "#24273a" --nf "#f4dbd6" --tb "#24273a" --hb "#24273a" --tf "#c6a0f6" --hf "#8aadf4" --nf "#f4dbd6" --af "#f4dbd6" --ab "#24273a" --bdr "#c6a0f6" "$@"
+bemenu \
+    --binding vim \
+    --vim-esc-exits \
+    --fb "#24273a" \
+    --ff "#8bd5ca" \
+    --nb "#24273a" \
+    --nf "#f4dbd6" \
+    --tb "#24273a" \
+    --hb "#24273a" \
+    --tf "#c6a0f6" \
+    --hf "#8aadf4" \
+    --nf "#f4dbd6" \
+    --af "#f4dbd6" \
+    --ab "#24273a" \
+    --bdr "#c6a0f6" \
+    "$@"
