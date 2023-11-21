@@ -27,7 +27,7 @@ alias lt='eza --tree'
 
 # devour
 alias za='devour zathura'
-alias sx='devour sxiv'
+alias iv='devour eog'
 
 # add ssh keys to agent
 alias sag='ssh-add ~/.ssh/github_personal'

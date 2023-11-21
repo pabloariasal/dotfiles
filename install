@@ -40,7 +40,6 @@ packages=(i3-gaps
     pulseaudio
     pulseaudio-alsa
     gnome-themes-extra
-    sxiv
     playerctl
 )
 
