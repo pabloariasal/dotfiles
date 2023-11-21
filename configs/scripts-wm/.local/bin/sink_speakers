@@ -12,4 +12,4 @@ pactl list short sink-inputs|while read stream; do
 done
 
 notify-send "External speakers ON" -u low -t 2000
-echo "📢Speakers" > ~/.sink_pulseaudio
+echo "📢speakers" > ~/.sink_pulseaudio
