@@ -1,7 +1,12 @@
 #!/bin/bash
 
-chosen=$(nl -w1 -s ' ' ~/.bookmarks.txt | bemenu_wrapper -l 10 -w -p 'Bookmarks' -c -B 1 -W 0.25)
+bookmarks="${HOME}/.bookmarks.txt"
+chosen=$(nl -w1 -s ' ' "${bookmarks}" | awk '{NF--; print}' | bemenu_wrapper -l 10 -w -p 'Bookmarks' -c -B 1 -W 0.25)
+
 if [ -z "$chosen" ]; then
     exit 0
 fi
-${CHROMIUM_EXEC} $(echo $chosen | awk '{print $2}')
+
+index=$(echo $chosen | awk '{print $1}')
+url=$(awk 'NR==x {print $NF}' x=${index} "${bookmarks}")
+${CHROMIUM_EXEC} "$url"
