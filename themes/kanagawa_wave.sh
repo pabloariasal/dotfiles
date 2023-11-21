@@ -1,0 +1,3 @@
+ALACRITTY_COLOR_FILE=kanagawa_wave.yaml
+NVIM_COLORSCHEME=kanagawa-wave
+NVIM_BACKGROUND=dark
