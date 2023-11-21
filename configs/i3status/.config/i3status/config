@@ -16,11 +16,11 @@ general {
 
 # order += "tztime holder__hey_man"
 order += "tztime distro"
+order += "read_file theme"
 order += "memory"
 order += "cpu_usage"
 order += "disk /"
 order += "read_file sink"
-order += "read_file theme"
 order += "tztime holder__brightness"
 order += "volume master"
 order += "battery all"
