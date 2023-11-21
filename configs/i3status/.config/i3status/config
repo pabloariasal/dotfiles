@@ -16,6 +16,9 @@ general {
 
 # order += "tztime holder__hey_man"
 order += "tztime distro"
+order += "memory"
+order += "cpu_usage"
+order += "disk /"
 order += "read_file sink"
 order += "tztime holder__brightness"
 order += "volume master"
@@ -76,4 +79,20 @@ read_file sink {
     format = "<span color='#ffffff'>%content</span>"
     format_bad = ""
     path = "~/.sink_pulseaudio"
+}
+
+memory {
+        format = "💾RAM %percentage_used"
+        memory_used_method = "memavailable"
+        threshold_degraded = "10%"
+        format_degraded = "MEMORY: %free"
+}
+
+cpu_usage {
+        format="️🖥CPU %usage"
+        max_threshold=75
+}
+
+disk "/" {
+        format = "💽DISK %percentage_used"
 }
