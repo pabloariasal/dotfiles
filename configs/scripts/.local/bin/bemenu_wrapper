@@ -2,6 +2,8 @@
 bemenu \
     --binding vim \
     --vim-esc-exits \
+    --fn 'JetBrainsMono Nerd Font Medium 15' \
+    --prefix '👉' \
     --fb "#24273a" \
     --ff "#8bd5ca" \
     --nb "#24273a" \
