@@ -96,7 +96,7 @@ memory {
 }
 
 cpu_usage {
-        format="️🖥CPU %usage"
+        format = "️🖥CPU %usage"
         max_threshold=75
 }
 
