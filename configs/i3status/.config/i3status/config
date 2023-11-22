@@ -79,7 +79,7 @@ tztime holder__brightness {
 }
 
 tztime distro {
-       format = "🐧Arch Linux"
+       format = "🐧Ubuntu 20.04.6"
 }
 
 read_file sink {
