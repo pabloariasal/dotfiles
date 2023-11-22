@@ -1,6 +1,6 @@
 #!/bin/bash
 
-options="🎧 Headphones\n📢 Speakers\n"
+options="🎧 Headphones\n📢 Speakers"
 selection=$(echo -e "$options" | bemenu_wrapper -c -W 0.2 -w -l 20 -B 1 -p "🔊" | awk '{print $2}')
 
 case "$selection" in
