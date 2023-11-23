@@ -106,8 +106,11 @@ set hlsearch
 set smartindent
 "Use spaces instead of tabs
 set expandtab
+" size of the identation
 set shiftwidth=4
+" how many spaces are deleted by <bs> or inserted by <tab>
 set softtabstop=2
+" how many columns is a tab character width?
 set tabstop=4
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
