@@ -16,6 +16,6 @@ nvim_config_dir=${HOME}/.config/nvim
 echo ${NVIM_COLORSCHEME} > ${nvim_config_dir}/nvim_colorscheme.txt
 echo ${NVIM_BACKGROUND} > ${nvim_config_dir}/nvim_background.txt
 
-theme_without_suffix="${theme%.sh}"
+theme_without_suffix=$(echo ${theme%.sh} | tr "_" " ")
 echo "Theme '${theme_without_suffix}' selected!"
 echo "$theme_without_suffix" > "${HOME}/.theme"
