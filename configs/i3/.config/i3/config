@@ -107,36 +107,7 @@ bindsym $mod+q kill
 # Kill all windows on all workspaces
 bindsym $mod+Shift+q [class=".*"] kill
 
-# resize windows (you can also use the mouse for that)
-mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-        bindsym h resize shrink width 20 px or 5 ppt
-        bindsym j resize grow height 20 px or 5 ppt
-        bindsym k resize shrink height 20 px or 5 ppt
-        bindsym l resize grow width 20 px or 5 ppt
-
-        # back to normal: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
-
-bindsym $mod+r mode "resize"
-
-# move floating windows
-mode "move" {
-        # These bindings trigger as soon as you enter the resize mode
-        bindsym h move left 25 px
-        bindsym j move down 25 px
-        bindsym k move up 25 px
-        bindsym l move right 25 px
-
-        # back to normal: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
-
-bindsym $mod+u mode "move"
-
+# Toggle sticky window
 bindsym $mod+d sticky toggle
 
 #######################################################################
@@ -158,11 +129,19 @@ mode "$mode_system" {
 bindsym $mod+Delete mode "$mode_system"
 
 #######################################################################
-# Key Bindings - Resizing Windows
+# Key Bindings - Resizing and Moving Windows
+
+# Resize using arrow keys
 bindsym $mod+Left resize shrink width 20 px or 5 ppt
 bindsym $mod+Down resize grow height 20 px or 5 ppt
 bindsym $mod+Up resize shrink height 20 px or 5 ppt
 bindsym $mod+Right resize grow width 20 px or 5 ppt
+
+# Move using shift+arrow keys
+bindsym $mod+Shift+Left move left 25 px
+bindsym $mod+Shift+Down move down 25 px
+bindsym $mod+Shift+Up move up 25 px
+bindsym $mod+Shift+Right move right 25 px
 
 #######################################################################
 # Key Bindings - Workspaces
