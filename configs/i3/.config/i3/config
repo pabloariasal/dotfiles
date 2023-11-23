@@ -57,7 +57,7 @@ bindsym $mod+x exec dmenu-xrandr
 bindsym $mod+Ctrl+a exec arandr
 bindsym $mod+Ctrl+p exec pavucontrol
 bindsym $mod+Ctrl+t exec dmenu-theme-selector
-bindsym $mod+Ctrl+d exec open_dotfiles
+bindsym $mod+u exec open_dotfiles
 bindsym $mod+Ctrl+w exec whatsapp
 
 #######################################################################
