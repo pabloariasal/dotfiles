@@ -74,7 +74,7 @@ return require('packer').startup(function()
   use 'ThePrimeagen/harpoon'
   -- colors
   use 'morhetz/gruvbox'
-  use 'shaunsingh/solarized.nvim'
+  use 'maxmx03/solarized.nvim'
   use 'dracula/vim'
   use {
     "catppuccin/nvim",
