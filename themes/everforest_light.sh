@@ -1,0 +1,3 @@
+ALACRITTY_COLOR_FILE=everforest_light.yaml
+NVIM_COLORSCHEME=everforest
+NVIM_BACKGROUND=light

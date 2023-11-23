@@ -91,6 +91,7 @@ return require('packer').startup(function()
   use 'folke/tokyonight.nvim'
   use 'connorholyday/vim-snazzy'
   use "rebelot/kanagawa.nvim"
+  use "neanias/everforest-nvim"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
