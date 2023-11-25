@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -e
+file=$(mktemp --suffix=.txt)
+alacritty --class="__text_scratchpad" -e $SHELL -c "nvim -c startinsert -c 'set spell' ${file}"
+if [ -e "${file}" ]; then
+    xclip -selection clipboard < ${file}
+fi

@@ -33,6 +33,7 @@ assign [class=$browser_class instance="calendar."] $ws9
 #######################################################################
 # Window rules
 for_window [instance="__terminal_scratchpad"] move scratchpad
+for_window [instance="__text_scratchpad"] floating enable, resize set width 50 ppt height 50 ppt, move position centered
 for_window [class=Pavucontrol] floating enable, resize set width 95 ppt height 95 ppt, move position center
 for_window [class=Arandr] floating enable, resize set width 75 ppt height 75 ppt, move position center
 for_window [class=Nitrogen] floating enable, resize set width 95 ppt height 95 ppt, move position center
@@ -57,7 +58,8 @@ bindsym $mod+x exec dmenu-xrandr
 bindsym $mod+Ctrl+a exec arandr
 bindsym $mod+Ctrl+p exec pavucontrol
 bindsym $mod+Ctrl+t exec dmenu-theme-selector
-bindsym $mod+u exec open_dotfiles
+bindsym $mod+r exec open_dotfiles
+bindsym $mod+u exec text_scratchpad
 bindsym $mod+Ctrl+w exec whatsapp
 
 #######################################################################
