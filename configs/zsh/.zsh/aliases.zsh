@@ -8,6 +8,7 @@ alias bookmarks='nvim ~/.bookmarks.txt'
 # convenience
 alias sudo='sudo '
 alias ..='cd ..'
+alias d='cd $DOTFILES'
 
 # prompt before doing anything stupid
 alias rm='rm -I'
@@ -33,4 +34,3 @@ alias iv='devour eog'
 alias sag='ssh-add ~/.ssh/github_personal'
 
 alias install_config='stow --verbose=2 -d configs -t ~ '
-
