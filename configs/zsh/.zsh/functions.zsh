@@ -28,3 +28,18 @@ function lcc() {
   fi
   ln -s -v "$compilation_database" .
 }
+
+function reveal_new_presentation()
+{
+  wget https://github.com/hakimel/reveal.js/archive/master.zip
+  unzip -o master.zip
+  cp -r reveal.js-master/* .
+  cp index.html index.html.orig
+  rm -rf reveal.js-master
+  rm master.zip
+}
+
+function reveal_present()
+{
+  ${CHROMIUM_EXEC} "$1" index.html
+}
