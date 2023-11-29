@@ -1,16 +1,22 @@
 snippet p "print"
     print($1)
-snippet af "anonymous function"
+snippet fa "anonymous function"
     function($1) $0 end
-snippet nf "named function"
+snippet fn "named function"
     function $1($2)
         $3
     end
-snippet m "module"
+snippet fm "function in module"
+    function $1.$2($3)
+        $0
+    end
+snippet mod "module"
     local M = {}
-    $0
+        $0
     return M
 snippet rp "return plain"
     return
 snippet re "return"
     return $1
+snippet de "debug"
+    debug.debug()
