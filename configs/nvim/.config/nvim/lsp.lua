@@ -66,3 +66,6 @@ lspconfig.pylsp.setup{
 
 -- CMake - cmake-language-server
 lspconfig.cmake.setup{}
+
+-- Lua
+lspconfig.lua_ls.setup{}
