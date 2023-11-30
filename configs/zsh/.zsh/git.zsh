@@ -86,6 +86,7 @@ bindkey '^b' __jump_to_worktree
 alias gr='git restore'
 alias grs='git restore --staged'
 alias gs='git status'
+alias g='git status'
 alias ga='git add'
 alias gaa='git add --all'
 alias gapa='git add --patch'
@@ -117,6 +118,8 @@ alias grh='git reset HEAD'
 alias grha='git reset --hard'
 alias grhh='git reset --hard HEAD'
 alias gb='git branch -vv'
+alias gbd='git branch -d'
+alias gbdd='git branch -D'
 alias gba='git branch --all -vv'
 alias gcl='git clean -f -d'
 alias gw='git worktree'
@@ -126,7 +129,7 @@ alias ge='git commit --allow-empty -m "Empty commit"'
 #######################################################################
 # Functions
 
-function gclb() {
+function gbcl() {
   git remote update --prune &&
   git branch -vv | grep -vE '^[*+]' | awk '/: gone]/{print $1}' | xargs git branch -D
 }
