@@ -20,3 +20,21 @@ snippet re "return"
     return $1
 snippet de "debug"
     debug.debug()
+snippet if "if"
+    if $1 then
+        $2
+    end
+snippet ife "if else"
+    if $1 then
+        $2
+    else
+        $0
+    end
+snippet for "for loop generic (iterator)"
+    for $1 in $2 do
+        $0
+    end
+snippet fi "for numeric"
+    for $1=$2,$3,$4 do
+        $0
+    end
