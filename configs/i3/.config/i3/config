@@ -111,6 +111,9 @@ bindsym $mod+Shift+q [class=".*"] kill
 # Toggle sticky window
 bindsym $mod+d sticky toggle
 
+# Toggle picom
+bindsym $mod+slash exec toggle_picom
+
 #######################################################################
 # System Mode
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (s) shutdown

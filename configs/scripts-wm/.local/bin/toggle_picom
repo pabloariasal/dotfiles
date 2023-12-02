@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if pgrep -x "picom" > /dev/null
+then
+  echo "Killing picom"
+  pkill picom
+else
+  echo "Starting picom"
+  launch-picom
+fi
