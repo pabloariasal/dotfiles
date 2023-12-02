@@ -7,7 +7,7 @@ snippet bi "bold italics"
 snippet link "Link to something"
     [${1:${VISUAL:Text}}]($2)
 snippet c "Inline Code"
-    \`$1\`
+    \`$1\` $0
 snippet cb "codeblock"
     \`\`\`$1
     $2
@@ -16,5 +16,5 @@ snippet fnt "footnote"
     [^${1:${VISUAL:Footnote}}]$0
 
     [^$1]:${2:Text}
-snippet [ "todo list item"
-    [$1]$2
+snippet img "image"
+    ![]($1)
