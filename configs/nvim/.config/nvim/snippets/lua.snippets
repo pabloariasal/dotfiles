@@ -38,3 +38,15 @@ snippet fi "for numeric"
     for $1=$2,$3,$4 do
         $0
     end
+snippet l "local"
+    local $0
+snippet lv "local variable"
+    local $1 = $0
+snippet iv "iterate over values"
+    for _,v ipairs($1) do
+        $0
+    end
+snippet ikv "iterate over key value pairs"
+    for k,v pairs($1) do
+        $0
+    end
