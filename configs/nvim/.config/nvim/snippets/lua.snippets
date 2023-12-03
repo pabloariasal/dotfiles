@@ -7,7 +7,11 @@ snippet fn "named function"
         $3
     end
 snippet fm "function in module"
-    function $1.$2($3)
+    function M.$1($2)
+        $0
+    end
+snippet fl "local function"
+    local function $1($2)
         $0
     end
 snippet mod "module"
@@ -43,10 +47,14 @@ snippet l "local"
 snippet lv "local variable"
     local $1 = $0
 snippet iv "iterate over values"
-    for _,v ipairs($1) do
+    for _,v in ipairs($1) do
         $0
     end
 snippet ikv "iterate over key value pairs"
-    for k,v pairs($1) do
+    for k,v in pairs($1) do
         $0
     end
+snippet as "assert"
+    assert($1)
+snippet asm "assert message"
+    assert($1, $2)
