@@ -22,11 +22,9 @@ snippet rp "return plain"
     return
 snippet re "return"
     return $1
-snippet de "debug"
-    debug.debug()
 snippet if "if"
     if $1 then
-        $2
+        $0
     end
 snippet ife "if else"
     if $1 then
@@ -39,21 +37,21 @@ snippet for "for loop generic (iterator)"
         $0
     end
 snippet fi "for numeric"
-    for $1=$2,$3,$4 do
+    for ${1:i}=$2,$3 do
+        $0
+    end
+snippet fip "for ipairs"
+    for ${1:_},${2:v} in ipairs($3) do
+        $0
+    end
+snippet fp "for pairs"
+    for k,v in pairs($1) do
         $0
     end
 snippet l "local"
     local $0
 snippet lv "local variable"
     local $1 = $0
-snippet iv "iterate over values"
-    for _,v in ipairs($1) do
-        $0
-    end
-snippet ikv "iterate over key value pairs"
-    for k,v in pairs($1) do
-        $0
-    end
 snippet as "assert"
     assert($1)
 snippet asm "assert message"
