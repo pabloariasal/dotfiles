@@ -31,7 +31,8 @@ vim.api.nvim_create_user_command('Template', function(opts)
       vim.cmd('0d')
     end
     -- replace all ocurrences of '%YEAR%' with the current year
-    vim.cmd('%s/%YEAR%/' .. getCurrentYear() .. '/g')
+    vim.cmd('silent! %s/%YEAR%/' .. getCurrentYear() .. '/g')
+    -- vim.cmd('w')
   end,
   { nargs = 1,
     complete = function(ArgLead, CmdLine, CursorPos)
