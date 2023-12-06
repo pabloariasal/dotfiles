@@ -1,33 +1,23 @@
 local util = require 'util'
 local fun = require 'functional'
+local inspect = require 'inspect'
 
-local function test()
-    local testcases = {
-        {input = '', expected = {}},
-    }
-    for _,t in ipairs(testcases) do
-        local actual = {}
-        local desc = string.format("Input: %s, Expected: %s, Actual: %s", t.input, util.dump(t.expected), util.dump(actual))
-        assert(util.are_lists_equal(actual, t.expected), desc)
-    end
-end
+local M = {}
 
-local function part1()
-    for l in io.lines(arg[1]) do
+function M.part1(input_file)
+    for l in io.lines(input_file) do
     end
     return 0
 end
 
-local p1 = part1()
-print('Part 1: ' .. p1)
-assert(p1 == 0)
 
-local function part2()
-    for l in io.lines(arg[1]) do
+function M.part2(input_file)
+    for l in io.lines(input_file) do
     end
     return 0
 end
 
-local p2 = part2()
-print('Part 2: ' .. p2)
-assert(p2 == 0)
+M.solution_part1 = 0
+M.solution_part2 = 0
+
+return M
