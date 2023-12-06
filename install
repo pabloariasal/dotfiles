@@ -28,19 +28,20 @@ packages=(i3-gaps
     flameshot
     nitrogen
     zsh
-    which
     wget
     mlocate
-    exa
+    eza
     ctags
-    imagemagick
     xdotool # needed for scratchpad terminal
     tlp
-    vlc
     pulseaudio
     pulseaudio-alsa
     gnome-themes-extra
     playerctl
+    # spotify flatpak
+    xdg-utils
+    eog
+    xrandr
 )
 
 aur_packages=(spotify
@@ -69,6 +70,7 @@ function install_packages()
 function install_wallpapers()
 {
     local wallpaper_loc="$HOME/wallpapers"
+    rm -rf "$wallpaper_loc"
     mkdir -p $wallpaper_loc
     cd "$wallpaper_loc"
     [ ! -d dt ] && git clone https://gitlab.com/dwt1/wallpapers.git dt
