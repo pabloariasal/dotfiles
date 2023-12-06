@@ -56,3 +56,6 @@ snippet as "assert"
     assert($1)
 snippet asm "assert message"
     assert($1, $2)
+snippet let "local empty table"
+    local ${1,result} = {}
+    $0
