@@ -3,7 +3,7 @@ FD_HIDDEN="--hidden -E '.git'"
 
 # per default find only files including hidden ones, but not those in .git directory
 export FZF_DEFAULT_COMMAND="fd -tf $FD_HIDDEN $FD_EXTRA_OPTS"
-export FZF_DEFAULT_OPTS='--cycle --height 60%'
+export FZF_DEFAULT_OPTS='--cycle --height ~60%'
 
 # Jump to subdirectory (includes hidden directories)
 # <c-space> remove hidden directories from the view
