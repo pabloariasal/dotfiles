@@ -57,5 +57,8 @@ snippet as "assert"
 snippet asm "assert message"
     assert($1, $2)
 snippet let "local empty table"
-    local ${1,result} = {}
-    $0
+    local ${1:result} = {}
+snippet req "require
+    local $1 = require '$2'
+snippet pi "print inspect"
+    print(inspect($1))
