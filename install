@@ -129,9 +129,13 @@ function clone_repo() {
     git clone git@github.com:pabloariasal/dotfiles.git ~/dotfiles
 }
 
+_get_all_functions() {
+    script_dir="$( cd "$( dirname "${(%):-%x}" )" && pwd )"
+    cat "${script_dir}/install" | grep '^function' | awk '{print $2}' | tr -d '()'
+}
+
 if [[ $# -eq 0 || "$*" == *"--help"* ]]; then
-    SCRIPTPATH="$(realpath "$0")"
-    cat "$SCRIPTPATH" | grep 'function' | head -n -1 | awk '{print $2}' | tr -d '()'
+    _get_all_functions
     exit 0
 fi
 
