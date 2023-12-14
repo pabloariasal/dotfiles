@@ -2,52 +2,6 @@
 
 set -e
 
-packages=(i3-gaps
-    i3lock
-    alacritty
-    dunst
-    fd
-    stow
-    bat
-    htop
-    noto-fonts-emoji
-    neovim
-    picom
-    ripgrep
-    zathura
-    zathura-pdf-mupdf
-    xss-lock
-    xorg-xinit
-    xorg
-    fzf
-    xsel
-    networkmanager
-    networkmanager-manager-applet
-    libnotify
-    alsa-utils
-    flameshot
-    nitrogen
-    zsh
-    wget
-    mlocate
-    eza
-    ctags
-    xdotool # needed for scratchpad terminal
-    tlp
-    pulseaudio
-    pulseaudio-alsa
-    gnome-themes-extra
-    playerctl
-    # spotify flatpak
-    xdg-utils
-    eog
-    xrandr
-)
-
-aur_packages=(spotify
-    google-chrome
-)
-
 function install_paru()
 {
     rm -rf ~/paru
@@ -55,16 +9,6 @@ function install_paru()
     cd ~/paru
     makepkg -si
     rm -rf ~/paru
-}
-
-function install_aur()
-{
-    paru -S --noconfirm "${aur_packages[@]}"
-}
-
-function install_packages()
-{
-    pacman -S --noconfirm "${packages[@]}"
 }
 
 function install_wallpapers()
@@ -80,10 +24,27 @@ function install_wallpapers()
 
 function install_nerd_fonts()
 {
-    local nerd_fonts_dir="$HOME/.nerd-fonts"
+    local nerd_fonts_dir="$HOME/nerd-fonts"
     [ -d "$nerd-fonts" ] || git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git $nerd_fonts_dir
     cd "$nerd_fonts_dir"
-    ./install.sh JetBrainsMono
+    ./install.sh JetBrainsMono DejaVuSansMono
+}
+
+function install_scripts() {
+    cd "$DOTFILES"
+    stow --verbose=2 -d configs -t ~ scripts
+    stow --verbose=2 -d configs -t ~ scripts-wm
+    stow --verbose=2 -d configs -t ~ webapps
+}
+
+function install_pulseaudio() {
+    sudo pacman -S pulseaudio \
+        pavucontrol \
+        pulseaudio-alss
+}
+
+function install_cpp_dev_tools() {
+    sudo pacman -S ccache clang cmake ninja
 }
 
 function install_keyboard_conf()
@@ -95,6 +56,10 @@ function enable_agent_service()
 {
    systemctl --user enable ssh-agent.service
    systemctl --user start ssh-agent.service
+}
+
+function install_command_line_goodies() {
+    sudo pacman -S fd ripgrep vifm fzf bat eza
 }
 
 function install_devour()
@@ -119,14 +84,10 @@ function install_git_worktree_relative()
 
 function create_github_personal_ssh_key()
 {
+    mkdir -p ~/.ssh
     ssh-keygen -t ed25519 -C "pabloariasal@gmail.com" -f ~/.ssh/github_personal
     xclip -selection clipboard < ~/.ssh/github_personal.pub
     echo "copied public key to clipboard!"
-}
-
-function switch_repo_to_ssh() {
-    git remote set-url origin git@github.com:pabloariasal/dotfiles.git
-    git remote -v
 }
 
 function install_greenclip() {
@@ -142,6 +103,30 @@ function install_python_language_server() {
         python-pycodestyle \
         yapf \
         python-pylint
+}
+
+function install_xorg() {
+    sudo pacman -S xorg-server \
+        xorg-xev \
+        xdotool \
+        xorg-xmodmap \
+        xorg-xrand \
+        arandr
+}
+
+function install_i3_wm() {
+    sudo pacman -S i3-wm \
+        i3lock \
+        i3status \ 
+        bemenu \
+        xss-lock \
+        jq \
+        dunst \
+        noto-fonts-emoji
+}
+
+function clone_repo() {
+    git clone git@github.com:pabloariasal/dotfiles.git ~/dotfiles
 }
 
 if [[ $# -eq 0 || "$*" == *"--help"* ]]; then
