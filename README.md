@@ -23,6 +23,8 @@ The config can serve as inspiration, however, many hours of my life have been sp
 - Fresh Arch install (no xorg installed yet)
 - user is created with zsh as login shell
 - sudo is installed and the user is entered in the sudoers file
+- nvim is installed
+- Internet connection
 
 ## Download Installation Scripts
 
