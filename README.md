@@ -21,9 +21,9 @@ The config can serve as inspiration, however, many hours of my life have been sp
 ## Prerequisites
 
 - Fresh Arch install (no xorg installed yet)
-- user is created with zsh as login shell
-- sudo is installed and the user is entered in the sudoers file
-- nvim is installed
+- Basic packages like neovim, locate, network manager, man pages are installed
+- User is created with zsh as login shell
+- User is a sudoer
 - Internet connection
 
 ## Download Installation Scripts
@@ -115,7 +115,10 @@ ssh-add ~/.ssh/github_personal
 
 ```sh
 sudo pacman -S git
+cd pabloariasal-dotfiles-xxx
 ./install clone_repo
+cd ..
+rm -rf pabloariasal-dotfiles-XXX
 ```
 
 The dotfiles repo is now cloned to the home directory
@@ -303,11 +306,6 @@ cd dotfiles
 ### Lua
 
 ```sh
-sudo pacman -S lua luarocks lua-language-server
-```
-
-## Cleanup
-
-```sh
-rm -rf pabloariasal-dotfiles-XXX
+cd dotfiles
+./install install_lua_dev_tools
 ```

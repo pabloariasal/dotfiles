@@ -40,11 +40,15 @@ function install_scripts() {
 function install_pulseaudio() {
     sudo pacman -S pulseaudio \
         pavucontrol \
-        pulseaudio-alss
+        pulseaudio-alsa
 }
 
 function install_cpp_dev_tools() {
     sudo pacman -S ccache clang cmake ninja
+}
+
+function install_lua_dev_tools() {
+    sudo pacman -S lua luarocks lua-language-server
 }
 
 function install_keyboard_conf()
