@@ -21,7 +21,7 @@ The config can serve as inspiration, however, many hours of my life have been sp
 ## Prerequisites
 
 - Fresh Arch install (no xorg installed yet)
-- Basic packages like neovim, locate, network manager, man pages are installed
+- Basic packages like neovim, zsh, locate, network manager, man pages are installed
 - User is created with zsh as login shell
 - User is a sudoer
 - Internet connection
