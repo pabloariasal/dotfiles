@@ -21,7 +21,7 @@ The config can serve as inspiration, however, many hours of my life have been sp
 ## Prerequisites
 
 - Fresh Arch install (no xorg installed yet)
-- Basic packages like neovim, zsh, locate, network manager, man pages are installed
+- Basic packages like neovim, zsh, mlocate, network manager, man pages are installed
 - User is created with zsh as login shell
 - User is a sudoer
 - Internet connection
@@ -33,9 +33,9 @@ sudo pacman -S wget tar
 cd ~
 wget https://api.github.com/repos/pabloariasal/dotfiles/tarball/master -O dotfiles.tar.gz
 tar -xzvf dotfiles.tar.gz
+rm dotfiles.tar.gz
 ```
 there is now a directory `pabloariasal-dotfiles-xxx` containing installation scripts and setup files.
-
 
 ## Install Xorg
 
@@ -51,9 +51,15 @@ In order to launch i3-wm [xinit](https://wiki.archlinux.org/title/Xinit) needs t
 ```sh
 sudo pacman -S xorg-xinit
 cd pabloariasal-dotfiles-XXX
-cp configs/xorg/.xinitrc ~/.xinitrc
-cp configs/zsh/.zprofile ~/.zprofile
-cp configs/zsh/.env ~/.env
+cp configs/xorg/.xinitrc ..
+cp configs/zsh/.zprofile ..
+cp configs/env/.env ..
+```
+
+## Install git
+
+```sh
+sudo pacman -S git
 ```
 
 ## Install i3-wm
@@ -62,6 +68,14 @@ cp configs/zsh/.env ~/.env
 cd pabloariasal-dotfiles-xxx
 ./install install_i3_wm
 ```
+
+## Install bemenu
+
+```sh
+sudo pacman -S bemenu
+```
+
+Select option "x11"
 
 ## Install paru
 
@@ -88,6 +102,7 @@ sudo pacman -S alacritty
 
 Now we should be able to boot into i3-wm:
 
+- Logout (Ctrl-d) and login back again
 - Create a default config
 - `mod+enter` opens a alacritty
 
@@ -95,6 +110,7 @@ Now we should be able to boot into i3-wm:
 
 ```sh
 sudo pacman -S xclip
+cd pabloariasal-dotfiles-xxx
 ./install create_github_personal_ssh_key
 ```
 
@@ -102,7 +118,8 @@ sudo pacman -S xclip
 
 1. open a terminal
 2. start google chrome
-3. enter public key in the clipboard in github account
+3. Login into google and github
+4. enter public key in the clipboard in github account
 
 ### Start ssh Agent and add ssh key
 
@@ -114,7 +131,6 @@ ssh-add ~/.ssh/github_personal
 ## Clone dotfiles
 
 ```sh
-sudo pacman -S git
 cd pabloariasal-dotfiles-xxx
 ./install clone_repo
 cd ..
@@ -130,9 +146,11 @@ The dotfiles repo is now cloned to the home directory
 rm ~/.xinitrc ~/.zprofile ~/.env
 cd dotfiles
 sudo pacman -S stow
-install_config zsh
-install_config env
+stow --verbose=2 -d configs -t ~ zsh
+stow --verbose=2 -d configs -t ~ env
 ```
+
+close and reopen terminal
 
 ## xorg configuraton
 
@@ -140,7 +158,6 @@ install_config env
 rm ~/.xinitrc
 cd dotfiles
 install_config xorg
-cd dotfiles
 ./install install_keyboard_conf
 ```
 
@@ -152,6 +169,8 @@ cd dotfiles
 install_config i3
 install_config i3status
 ```
+
+Reload i3
 
 ## Fonts
 
@@ -221,10 +240,17 @@ sudo systemctl enable tlp.service
 ```sh
 sudo pacman -S nitrogen
 cd dotfiles
+sag
 ./install install_wallpapers
 ```
 
 Open nitrogen and add `~/wallpapers` as wallpaper directory (recursively), select a wallpaper.
+
+## System Monitoring
+
+```sh
+sudo pacman -S htop
+```
 
 ## Pdfs, Image Viewer and Window Swallowing
 

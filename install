@@ -4,6 +4,7 @@ set -e
 
 function install_paru()
 {
+    sudo pacman -S base-devel
     rm -rf ~/paru
     git clone https://aur.archlinux.org/paru-bin.git ~/paru
     cd ~/paru
@@ -53,7 +54,7 @@ function install_lua_dev_tools() {
 
 function install_keyboard_conf()
 {
-    sudo ln -s ${DOTFILES}/extra/00-keyboard.conf /etc/X11/xorg.conf.d/
+    sudo ln -sv ${DOTFILES}/extra/00-keyboard.conf /etc/X11/xorg.conf.d/
 }
 
 function enable_agent_service()
@@ -114,15 +115,14 @@ function install_xorg() {
         xorg-xev \
         xdotool \
         xorg-xmodmap \
-        xorg-xrand \
+        xorg-xrandr \
         arandr
 }
 
 function install_i3_wm() {
     sudo pacman -S i3-wm \
         i3lock \
-        i3status \ 
-        bemenu \
+        i3status \
         xss-lock \
         jq \
         dunst \
