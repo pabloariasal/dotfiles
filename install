@@ -77,16 +77,6 @@ function install_devour()
     sudo make install
 }
 
-function install_git_worktree_relative()
-{
-    cd /tmp
-    rm -rf git-worktree-relative
-    git clone https://github.com/Kristian-Tan/git-worktree-relative.git
-    cd git-worktree-relative
-    [[ -e ~/.local/bin/git-worktree-relative ]] && bash -- uninstall.sh ~/.local/bin
-    bash -- install.sh ~/.local/bin
-}
-
 function create_github_personal_ssh_key()
 {
     mkdir -p ~/.ssh
