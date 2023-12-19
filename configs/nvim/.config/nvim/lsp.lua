@@ -10,8 +10,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(ev)
     -- Enable completion triggered by <c-x><c-o>
     vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
-    -- don't override tag function
-    vim.bo[ev.buf].tagfunc = nil
 
     local nmap = function(keys, func, desc)
       if desc then

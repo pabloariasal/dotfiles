@@ -209,7 +209,6 @@ intall_config alacritty
 ## NeoVim Configuration
 
 ```sh
-sudo pacman -S ctags
 intall_config nvim
 ```
 

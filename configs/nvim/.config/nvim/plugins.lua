@@ -24,7 +24,6 @@ return require('packer').startup(function()
   use 'romainl/vim-qf'
   use 'vifm/vifm.vim'
   use 'markonm/traces.vim'
-  use 'ludovicchabant/vim-gutentags'
   use 'lewis6991/gitsigns.nvim'
   use 'neovim/nvim-lspconfig'
   use 'szw/vim-maximizer'

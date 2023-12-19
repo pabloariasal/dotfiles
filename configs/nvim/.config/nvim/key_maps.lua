@@ -31,8 +31,6 @@ vim.keymap.set('n', '<leader>l', '<cmd>MaximizerToggle<cr>', { desc = 'maximize 
 -- grepping
 vim.keymap.set('n', '<leader>gn', ':<c-u>grep! ', { desc = 'grep for word' })
 vim.keymap.set('n', '<leader>gc', ':<c-u>grep! <C-r>=expand("<cword>")<cr>', { desc = 'grep for word under cursor' })
--- jump to tag
-vim.keymap.set('n', '<leader>t', ':<c-u>tjump ', { desc = 'start tjump prompt' })
 -- resize splits
 vim.keymap.set('n', '<c-left>', '<cmd>vertical resize +3<cr>', { desc = 'resize split to the left' })
 vim.keymap.set('n', '<c-right>', '<cmd>vertical resize -3<cr>', { desc = 'resize split to the right' })

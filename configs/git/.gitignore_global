@@ -10,7 +10,6 @@ Session.vim
 tags
 tags.*
 [._]*.un~
-.ctagsenable
 lsp_settings.json
 
 .gdb_history

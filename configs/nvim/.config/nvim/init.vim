@@ -23,7 +23,6 @@ runtime key_maps.lua
 runtime snippets.lua
 runtime statusline.lua
 runtime lsp.lua
-runtime ctags.lua
 runtime completion.lua
 runtime treesitter.lua
 runtime treesitter-textobjects.lua
