@@ -1,0 +1,26 @@
+#!/bin/bash
+
+set -e
+
+if [ ! "$#" -eq 2 ]; then
+    echo "usage: reveal_create <name_of_project> <repo_url>"
+    echo -e "example:\n\treveal_create my_page git@github.com:pabloariasal/my-test-repo.git"
+    exit 1
+fi
+
+name="$1"
+repo="$2"
+
+echo "Creating reveal project in ${name}..."
+
+ssh-add ~/.ssh/github_personal
+git clone -o reveal_upstream git@github.com:hakimel/reveal.js.git "$name"
+cd "$name"
+cp index.html index.html.orig
+
+git remote add origin "$repo"
+git branch -M master
+git push -u -f origin master
+git remote -v
+
+echo "done!"
