@@ -70,7 +70,7 @@ vim.keymap.set('n', '<leader><leader>', builtin.current_buffer_fuzzy_find, { des
 vim.keymap.set('n', '<leader>z', builtin.command_history, { desc = 'open command window' })
 vim.keymap.set('n', '<leader>v', '<cmd>Telescope neoclip initial_mode=normal<cr>', { desc = 'open neoclip clipboard' })
 -- Lsp
-vim.keymap.set('n', '<leader>sd', builtin.lsp_document_symbols, { desc = "Navigate [s]ymbols [d]ocument" })
-vim.keymap.set('n', '<leader>sw', builtin.lsp_dynamic_workspace_symbols, { desc = "Navigate [s]ymbols in workspace" })
+vim.keymap.set('n', '<leader>i', builtin.lsp_document_symbols, { desc = "Navigate [s]ymbols [d]ocument" })
+vim.keymap.set('n', '<leader>t', builtin.lsp_dynamic_workspace_symbols, { desc = "Navigate [s]ymbols in workspace" })
 
 require('telescope').load_extension('neoclip')
