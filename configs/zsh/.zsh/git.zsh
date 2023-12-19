@@ -125,6 +125,7 @@ alias gcl='git clean -f -d'
 alias gw='git worktree'
 alias gwl='git worktree list'
 alias ge='git commit --allow-empty -m "Empty commit"'
+alias gceg='git config user.email pabloariasal@gmail.com'
 
 #######################################################################
 # Functions
