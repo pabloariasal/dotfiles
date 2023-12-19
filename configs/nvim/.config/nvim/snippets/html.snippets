@@ -6,8 +6,6 @@ snippet link "link"
     <a href="$1">$2</a>
 snippet p "paragraph"
     <p>$1</p>
-snippet pf "paragraph fragment"
-    <p class="fragment">$1</p>
 snippet h1 "h1"
     <h1>$1</h1>
 snippet h2 "h2"
@@ -34,37 +32,12 @@ snippet lt "less than <"
     &lt;
 snippet gt "greater than >"
     &gt;
-snippet cb "code block"
-    <pre><code class="hljs $1" data-trim>
-        $2
-    </code></pre>
-snippet cbh "code block with highlight"
-    <pre><code data-trim data-line-numbers="|3,4|8">
-        $1
-    </code></pre>
-snippet cba "code block with animation"
-    <pre data-id="code-animation"><code data-trim data-line-numbers="|3,4|8">
-        $1
-    </code></pre>
 snippet fs "font small attribute"
     style="font-size:small;"
-snippet fr "make fragment"
-    class="fragment"
-snippet st "slide with title"
-    <section>
-      <h2>$1</h2>
-    </section>
 snippet it "Italic"
     <em>$1</em>
 snippet bo "bold"
     <b>$1</b>
-snippet st "strectch"
-    class="r-stretch"
-snippet lf "fragmented list"
-    <ul>
-      <li class="fragment">$1</li>
-      <li class="fragment"></li>
-    </ul>
 snippet tab "table"
      <table>
        <thead>
@@ -89,5 +62,3 @@ snippet tab "table"
          </tr>
        </tbody>
      </table>
-snippet ft "fit text"
-    class="r-fit-text"

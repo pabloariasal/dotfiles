@@ -37,6 +37,10 @@ if [ "$filetype" = "cpp" ]; then
     print_snippets 'gtest'
 fi
 
+if [ "$filetype" = "html" ]; then
+    print_snippets 'reveal'
+fi
+
 if [ "$filetype" != "all" ] && [ "$filetype" != "_" ]; then
     print_snippets '_'
 fi
