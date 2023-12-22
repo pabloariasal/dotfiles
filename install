@@ -45,7 +45,7 @@ function install_pulseaudio() {
 }
 
 function install_cpp_dev_tools() {
-    sudo pacman -S base-devel ccache clang cmake ninja
+    sudo pacman -S base-devel ccache clang cmake ninja gdb
 }
 
 function install_lua_dev_tools() {
