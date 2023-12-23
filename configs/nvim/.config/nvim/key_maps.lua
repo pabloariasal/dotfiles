@@ -63,5 +63,3 @@ vim.keymap.set({'n'}, '<leader>jl', '<cmd>lua require("harpoon.ui").nav_file(3)<
 -- webify.nvim
 vim.keymap.set('n', '<leader>x', '<cmd>YankFileUrl +<cr>', { desc = 'Yank Url to system clipboard'})
 vim.keymap.set('n', '<leader>X', '<cmd>YankLineUrl +<cr>', { desc = 'Yank Url to system clipboard, including current line'})
--- macros
-vim.keymap.set('n', 'Q', '@qj')
