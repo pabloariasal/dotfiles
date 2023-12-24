@@ -1,7 +1,6 @@
-Vim
 IDE
 zfm
-Zsh
+zsh
 fzf
 plugin
 vim
@@ -17,3 +16,12 @@ deallocating
 repo
 worktree
 worktrees
+symlink
+dotfiles
+repos
+metadata
+filesystem
+config
+repo's
+subfolder
+hotfix
