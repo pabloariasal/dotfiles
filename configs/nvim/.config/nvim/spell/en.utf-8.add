@@ -14,3 +14,6 @@ coroutine
 destructor
 deallocate
 deallocating
+repo
+worktree
+worktrees
