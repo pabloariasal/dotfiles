@@ -84,7 +84,7 @@ alias grha='git reset --hard'
 alias grhh='git reset --hard HEAD'
 alias gb='git branch -vv'
 alias gbd='git branch -d'
-alias gbdd='git branch -D'
+alias gbD='git branch -D'
 alias gba='git branch --all -vv'
 alias gcl='git clean -f -d'
 alias ge='git commit --allow-empty -m "Empty commit"'
@@ -96,4 +96,9 @@ alias gceg='git config user.email pabloariasal@gmail.com'
 function gbcl() {
   git remote update --prune &&
   git branch -vv | grep -vE '^[*+]' | awk '/: gone]/{print $1}' | xargs git branch -D
+}
+
+# Deletes a branch in the remote
+function gbdo() {
+  git push ${2:-origin} ":${1}"
 }
