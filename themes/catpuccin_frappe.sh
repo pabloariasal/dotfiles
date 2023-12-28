@@ -1,3 +1,3 @@
-ALACRITTY_COLOR_FILE=catppuccin_frappe.yml
+ALACRITTY_COLOR_FILE=catppuccin_frappe.toml
 NVIM_COLORSCHEME=catppuccin-frappe
 NVIM_BACKGROUND=dark

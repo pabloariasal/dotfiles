@@ -1,3 +1,3 @@
-ALACRITTY_COLOR_FILE=papercolor_light.yml
+ALACRITTY_COLOR_FILE=papercolor_light.toml
 NVIM_COLORSCHEME=PaperColor
 NVIM_BACKGROUND=light

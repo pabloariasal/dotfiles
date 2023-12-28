@@ -1,3 +1,3 @@
-ALACRITTY_COLOR_FILE=kanagawa_dragon.yaml
+ALACRITTY_COLOR_FILE=kanagawa_dragon.toml
 NVIM_COLORSCHEME=kanagawa-dragon
 NVIM_BACKGROUND=dark

@@ -1,3 +1,3 @@
-ALACRITTY_COLOR_FILE=gruvbox_light.yml
+ALACRITTY_COLOR_FILE=gruvbox_light.toml
 NVIM_COLORSCHEME=gruvbox
 NVIM_BACKGROUND=light

@@ -1,0 +1,45 @@
+import = ["~/.config/alacritty/alacritty_colors.toml"]
+
+[font]
+size = 8.0
+
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+style = "Bold"
+
+[font.bold_italic]
+family = "JetBrainsMono Nerd Font"
+style = "Bold Italic"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font"
+style = "Italic"
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Regular"
+
+[[keyboard.bindings]]
+action = "ScrollPageUp"
+key = "U"
+mode = "~Alt"
+mods = "Alt"
+
+[[keyboard.bindings]]
+action = "ScrollPageDown"
+key = "D"
+mode = "~Alt"
+mods = "Alt"
+
+[[keyboard.bindings]]
+action = "ToggleViMode"
+key = "M"
+mode = "~Search"
+mods = "Alt"
+
+[shell]
+program = "/bin/zsh"
+
+[window.padding]
+x = 5
+y = 5

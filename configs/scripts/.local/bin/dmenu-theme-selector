@@ -8,8 +8,8 @@ source "${themes_dir}/$theme"
 
 ## Set alacritty colorscheme
 alacritty_config_dir=${HOME}/.config/alacritty
-ln -sf ${alacritty_config_dir}/colors/${ALACRITTY_COLOR_FILE} ${alacritty_config_dir}/alacritty_colors.yml
-touch ${alacritty_config_dir}/alacritty.yml
+ln -sf ${alacritty_config_dir}/colors/${ALACRITTY_COLOR_FILE} ${alacritty_config_dir}/alacritty_colors.toml
+touch ${alacritty_config_dir}/alacritty.toml
 
 ## Set nvim colorscheme
 nvim_config_dir=${HOME}/.config/nvim

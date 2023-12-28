@@ -1,3 +1,3 @@
-ALACRITTY_COLOR_FILE=monokai.yml
+ALACRITTY_COLOR_FILE=monokai_pro.toml
 NVIM_COLORSCHEME=monokaipro
 NVIM_BACKGROUND=dark

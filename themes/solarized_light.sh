@@ -1,3 +1,3 @@
-ALACRITTY_COLOR_FILE=solarized_light.yml
+ALACRITTY_COLOR_FILE=solarized_light.toml
 NVIM_COLORSCHEME=solarized
 NVIM_BACKGROUND=light

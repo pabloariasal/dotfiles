@@ -7,6 +7,6 @@ configs/vifm/.config/vifm/vifm-help.txt
 configs/vifm/.config/vifm/vifminfo.json
 configs/systemd/.config/systemd/user/default.target.wants/
 configs/nvim/.config/nvim/plugin/
-configs/alacritty/.config/alacritty/alacritty_colors.yml
+configs/alacritty/.config/alacritty/alacritty_colors.toml
 configs/nvim/.config/nvim/nvim_colorscheme.txt
 configs/nvim/.config/nvim/nvim_background.txt
