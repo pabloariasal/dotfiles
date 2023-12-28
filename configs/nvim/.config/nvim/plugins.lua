@@ -86,7 +86,6 @@ return require('packer').startup(function()
   }
   use 'arcticicestudio/nord-vim'
   use 'NLKNguyen/papercolor-theme'
-  use 'junegunn/seoul256.vim'
   use 'folke/tokyonight.nvim'
   use 'connorholyday/vim-snazzy'
   use "rebelot/kanagawa.nvim"
