@@ -270,7 +270,7 @@ bar {
         workspace_min_width 60
         height 20
         colors {
-                background #282828cc
+                background #28282877
                 statusline #FFFFFFFF
         }
         tray_output primary
