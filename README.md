@@ -209,6 +209,7 @@ intall_config alacritty
 ## NeoVim Configuration
 
 ```sh
+sudo pacman -S words
 intall_config nvim
 ```
 
