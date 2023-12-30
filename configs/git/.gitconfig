@@ -2,15 +2,25 @@
 	name = Pablo Arias
 [core]
 	excludesfile = ~/.gitignore_global
+	pager = delta
 [diff]
 	tool = vimdiff
+	colorMoved = default
 [difftool]
 	prompt = true
 [difftool "vimdiff"]
 	path = nvim
 [merge]
 	tool = vimdiff
+	conflictstyle = diff3
 [mergetool]
 	prompt = true
 [mergetool "vimdiff"]
 	path = nvim
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+	hunk-header-style = omit
+[delta "side-by-side"]
+	line-numbers = true
