@@ -33,6 +33,9 @@ function py() {
     python3 -c "from math import *; print($*)"
 }
 
+# source haskell environment
+[ -f "${HOME}/.ghcup/env" ] && source "${HOME}/.ghcup/env"
+
 if [ -z "$NO_LWD" ]; then
   # switch to last visited directory
   lwd

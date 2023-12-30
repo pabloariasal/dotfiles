@@ -35,11 +35,9 @@ local lspconfig = require'lspconfig'
 
 -- Haskell - hls
 lspconfig.hls.setup {
- settings = {
-      languageServerHaskell = {
-        formattingProvider = "ormolu";
-      }
-    },
+  haskell = {
+    formattingProvider = "ormolu",
+  }
 }
 
 -- C++ clangd
