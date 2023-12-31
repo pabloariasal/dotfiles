@@ -25,4 +25,5 @@
 	file-modified-label = ""
 	file-decoration-style = "ul ol blue"
 [delta "side-by-side"]
+	side-by-side = true
 	line-numbers = true
