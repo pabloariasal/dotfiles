@@ -1,7 +1,8 @@
 -- Global mappings
 vim.keymap.set('n', '[g', vim.diagnostic.goto_prev, { noremap=true, silent=true, desc="Go to [p]rev [d]iagnostic" })
 vim.keymap.set('n', ']g', vim.diagnostic.goto_next, { noremap=true, silent=true, desc="Go to [n]ext [d]iagnostic" })
-vim.keymap.set('n', '<leader>d', vim.diagnostic.setloclist, { noremap=true, silent=true, desc="Open [d]iagnostics" })
+vim.keymap.set('n', '<leader>dl', vim.diagnostic.setloclist, { noremap=true, silent=true, desc="Open [d]iagnostics in [l]ocation list" })
+vim.keymap.set('n', '<leader>df', vim.diagnostic.open_float, { noremap=true, silent=true, desc="Open [d]iagnostics in [f]loating window" })
 
 -- Use LspAttach autocommand to only map the following keys
 -- after the language server attaches to the current buffer
@@ -11,9 +12,12 @@ vim.api.nvim_create_autocmd('LspAttach', {
     -- Enable completion triggered by <c-x><c-o>
     vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
 
-    local nmap = function(keys, func, desc)
+    local nmap = function(keys, func, desc, mode)
       if desc then
         desc = 'LSP: ' .. desc
+      end
+      if mode == nil then
+        mode = 'n'
       end
 
       vim.keymap.set('n', keys, func, { buffer = ev.buf, desc = desc, silent=true, noremap=true })
@@ -25,9 +29,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
     nmap('gy', vim.lsp.buf.type_definition, "Open Type Definition")
     nmap('<leader>sh', vim.lsp.buf.signature_help, '[S]ignature [H]elp')
     nmap('<F2>', vim.lsp.buf.rename, "Rename symbol")
-    -- vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, bufopts)
+    nmap('<leader>m', vim.lsp.buf.code_action, "code action", {'n', 'v'})
     nmap('<leader>r', vim.lsp.buf.references, "Open [R]eferences")
-    nmap('<leader>f', vim.lsp.buf.format, "[F]ormat")
+    nmap('<leader>f', function() vim.lsp.buf.format {async = true } end, "[F]ormat")
   end,
 })
 
