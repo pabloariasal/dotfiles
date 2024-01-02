@@ -60,7 +60,7 @@ bindsym $mod+Ctrl+p exec pavucontrol
 bindsym $mod+Ctrl+t exec dmenu-theme-selector
 bindsym $mod+u exec text_scratchpad
 bindsym $mod+Ctrl+w exec whatsapp
-bindsym $mod+Shift+w exec set_random_wallpaper
+bindsym $mod+Shift+w exec --no-startup-id set_random_wallpaper
 
 #######################################################################
 # Key Bindings - Resize windows
