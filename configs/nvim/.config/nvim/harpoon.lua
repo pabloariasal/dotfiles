@@ -14,3 +14,5 @@ vim.keymap.set("n", "<leader>jl", function() harpoon:list():select(3) end)
 -- Toggle previous & next buffers stored within Harpoon list
 vim.keymap.set("n", "<leader>jp", function() harpoon:list():prev() end)
 vim.keymap.set("n", "<leader>jn", function() harpoon:list():next() end)
+
+vim.keymap.set("n", "<leader>jc", function() harpoon:list():clear() end)
