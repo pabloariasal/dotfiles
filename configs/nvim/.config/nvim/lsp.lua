@@ -29,7 +29,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     nmap('gy', vim.lsp.buf.type_definition, "Open Type Definition")
     nmap('<leader>sh', vim.lsp.buf.signature_help, '[S]ignature [H]elp')
     nmap('<F2>', vim.lsp.buf.rename, "Rename symbol")
-    nmap('<leader>m', vim.lsp.buf.code_action, "code action", {'n', 'v'})
+    nmap('<leader>m', vim.lsp.buf.code_action, "Code Action", {'n', 'v'})
     nmap('<leader>r', vim.lsp.buf.references, "Open [R]eferences")
     nmap('<leader>f', function() vim.lsp.buf.format {async = true } end, "[F]ormat")
   end,
