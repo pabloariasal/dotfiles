@@ -31,3 +31,4 @@ runtime gitsigns.lua
 runtime colors.lua
 runtime user-commands.lua
 runtime hardtime.lua
+runtime harpoon.lua
