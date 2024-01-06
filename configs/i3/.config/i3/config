@@ -55,7 +55,8 @@ bindsym $mod+semicolon exec dmenu-audio-source
 bindsym $mod+w exec system-monitor
 bindsym $mod+z exec wetter
 bindsym $mod+x exec dmenu-xrandr
-bindsym $mod+Ctrl+a exec arandr
+bindsym $mod+Ctrl+r exec arandr
+bindsym $mod+Ctrl+a exec anki
 bindsym $mod+Ctrl+p exec pavucontrol
 bindsym $mod+Ctrl+t exec dmenu-theme-selector
 bindsym $mod+u exec text_scratchpad
