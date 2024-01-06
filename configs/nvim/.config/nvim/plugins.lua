@@ -1,7 +1,8 @@
 local fn = vim.fn
-local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
-  packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+  packer_bootstrap = fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim',
+    install_path })
   print "Installing packer close and reopen Neovim..."
   vim.cmd [[packadd packer.nvim]]
 end
@@ -35,7 +36,7 @@ return require('packer').startup(function()
   use 'dcampos/nvim-snippy'
   use {
     'nvim-telescope/telescope.nvim',
-    requires = { {'nvim-lua/plenary.nvim'} }
+    requires = { { 'nvim-lua/plenary.nvim' } }
   }
   use 'pabloariasal/alternate.nvim'
   use 'pabloariasal/webify.nvim'
@@ -43,25 +44,27 @@ return require('packer').startup(function()
   use {
     "AckslD/nvim-neoclip.lua",
     requires = {
-      {'kkharji/sqlite.lua', module = 'sqlite'},
-      {'nvim-telescope/telescope.nvim'},
+      { 'kkharji/sqlite.lua',           module = 'sqlite' },
+      { 'nvim-telescope/telescope.nvim' },
     },
     config = function()
-      require('neoclip').setup({enable_persistent_history = true,})
+      require('neoclip').setup({ enable_persistent_history = true, })
     end,
   }
   use 'sitiom/nvim-numbertoggle'
   use {
     "windwp/nvim-autopairs",
-    config = function() require("nvim-autopairs").setup {
-      fast_wrap = {},
-    } end
+    config = function()
+      require("nvim-autopairs").setup {
+        fast_wrap = {},
+      }
+    end
   }
   use({
     'Wansmer/treesj',
     requires = { 'nvim-treesitter' },
     config = function()
-      require('treesj').setup({use_default_keymaps = false,})
+      require('treesj').setup({ use_default_keymaps = false, })
     end,
   })
   use 'nvim-lua/plenary.nvim'
