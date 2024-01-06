@@ -17,6 +17,7 @@ general {
 # order += "tztime holder__hey_man"
 order += "tztime distro"
 order += "read_file theme"
+order += "cpu_temperature 0"
 order += "memory"
 order += "cpu_usage"
 order += "disk /"
@@ -98,6 +99,10 @@ memory {
 cpu_usage {
         format = "️🖥CPU %usage"
         max_threshold=75
+}
+
+cpu_temperature 0 {
+        format = "🌡%degrees°C"
 }
 
 disk "/" {
