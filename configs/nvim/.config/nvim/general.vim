@@ -33,15 +33,3 @@ let g:vifm_exec_args = "-c :only"
 " Required Plugins: vim-qf
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:qf_max_height = 20
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" autocommands
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"enable spell checkinf for markdown files
-autocmd FileType markdown setlocal spell spelllang=en_us
-"Open help bufers on the right per default
-autocmd FileType help wincmd L
-"Don't show numbers on terminal buffers (needed for fzf)
-autocmd TermOpen * setlocal nonumber norelativenumber
-" autoclose scratchpad window
-autocmd CompleteDone * pclose

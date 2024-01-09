@@ -1,6 +1,7 @@
 vim.cmd('runtime general.vim')
 require("config.plugins")
 require("config.options")
+require("config.autocommands")
 require("config.key_maps")
 require("config.snippets")
 require("config.statusline")
