@@ -121,23 +121,6 @@ set tabstop=4
 let g:qf_max_height = 20
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Building
-"
-" Required Plugins: vim-dispatch
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:dispatch_no_maps = 1
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Templates
-"
-" Required Plugins: vim-template
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:templates_no_autocmd = 1
-let g:templates_no_builtin_templates = 1
-let g:templates_directory = "~/.config/nvim/templates/"
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " autocommands
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "enable spell checkinf for markdown files
