@@ -1,4 +1,3 @@
--- change this to lua
 vim.cmd('runtime general.vim')
 require("config.plugins")
 require("config.options")
