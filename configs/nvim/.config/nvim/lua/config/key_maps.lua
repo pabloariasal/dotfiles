@@ -1,7 +1,3 @@
--- map leader to space
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
-
 -- reverse motion with backslash
 vim.keymap.set('n', "\\", ',', { noremap=true })
 -- open command line prompt with ,
@@ -13,21 +9,15 @@ vim.keymap.set({'n', 'v'}, '<a-h>', '^', { noremap=true })
 vim.keymap.set({'n'}, '<leader>w', '<cmd>wa<cr>', { noremap=true })
 vim.keymap.set({'n'}, '<leader>q', '<cmd>q<cr>', { noremap=true })
 vim.keymap.set({'n'}, '<c-q>', '<cmd>qa!<cr>', { noremap=true })
--- toggle vim undo tree
-vim.keymap.set({'n'}, '<leader>u', vim.cmd.UndotreeToggle, { noremap=true, desc = 'Toggle [u]ndo tree'})
 -- exit insert mode with jj (best mapping ever)
 vim.keymap.set('i', 'jj', '<ESC>', { noremap=true })
 -- indent visual block
 vim.keymap.set('v', '<', '<gv', { desc = 'Indent visual block right' })
 vim.keymap.set('v', '>', '>gv', { desc = 'Indent visual block left' })
--- alternate between h and cpp
-vim.keymap.set('n', '<leader>a', require('alternate').alternate, { desc = 'alternate between header and cpp' })
 -- close buffer
 vim.keymap.set('n', '<leader>c', "<cmd>bp <bar> bd #<cr>", { desc = 'close the current buffer' })
 -- file explorer
-vim.keymap.set('n', '<leader>e', '<cmd>EditVifm<cr>', { desc = 'open file explorer' })
--- maximize current window
-vim.keymap.set('n', '<leader>l', '<cmd>MaximizerToggle<cr>', { desc = 'maximize current window' })
+-- vim.keymap.set('n', '<leader>e', '<cmd>EditVifm<cr>', { desc = 'open file explorer' })
 -- grepping
 vim.keymap.set('n', '<leader>gn', ':<c-u>grep! ', { desc = 'grep for word' })
 vim.keymap.set('n', '<leader>gc', ':<c-u>grep! <C-r>=expand("<cword>")<cr>', { desc = 'grep for word under cursor' })
@@ -48,7 +38,7 @@ vim.keymap.set('n', 'gl', '<Plug>(qf_loc_toggle)', { desc = 'toggle location lis
 vim.keymap.set({'n', 'v'}, 'z*', '*N', { desc = 'search for word under cursor no jump' })
 vim.keymap.set({'n', 'v'}, 'z#', '#N', { desc = 'search backward for word under cursor no jump' })
 -- reload config
-vim.keymap.set('n', '<F1>', '<cmd>source ~/.config/nvim/init.vim<cr>', { desc = 'reload config' })
+vim.keymap.set('n', '<F1>', '<cmd>source ~/.config/nvim/init.lua<cr>', { desc = 'reload config' })
 -- system clipboard
 vim.keymap.set({'n', 'v', 'x'}, '<leader>p', '"+p', { noremap=true, desc = 'paste from system clipboard' })
 vim.keymap.set({'n', 'v'}, '<leader>P', '"+P', { noremap=true, desc = 'paste from system clipboard' })

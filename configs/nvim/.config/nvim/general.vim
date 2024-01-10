@@ -7,8 +7,6 @@
 filetype plugin on
 filetype plugin indent on
 
-let g:traces_num_range_preview = 1
-
 "Enable syntax highlighting
 syntax on
 
@@ -24,12 +22,5 @@ let g:netrw_liststyle = 3
 let g:loaded_netrw       = 1
 let g:loaded_netrwPlugin = 1
 "use vifm instead
-let g:vifm_replace_netrw = 1
-let g:vifm_exec_args = "-c :only"
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Quickfix and Location lists
-"
-" Required Plugins: vim-qf
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:qf_max_height = 20
+" let g:vifm_replace_netrw = 1
+" let g:vifm_exec_args = "-c :only"
