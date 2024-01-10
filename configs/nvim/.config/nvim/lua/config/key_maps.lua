@@ -17,7 +17,7 @@ vim.keymap.set('v', '>', '>gv', { desc = 'Indent visual block left' })
 -- close buffer
 vim.keymap.set('n', '<leader>c', "<cmd>bp <bar> bd #<cr>", { desc = 'close the current buffer' })
 -- file explorer
--- vim.keymap.set('n', '<leader>e', '<cmd>EditVifm<cr>', { desc = 'open file explorer' })
+vim.keymap.set('n', '<leader>e', '<cmd>EditVifm<cr>', { desc = 'open file explorer' })
 -- grepping
 vim.keymap.set('n', '<leader>gn', ':<c-u>grep! ', { desc = 'grep for word' })
 vim.keymap.set('n', '<leader>gc', ':<c-u>grep! <C-r>=expand("<cword>")<cr>', { desc = 'grep for word under cursor' })

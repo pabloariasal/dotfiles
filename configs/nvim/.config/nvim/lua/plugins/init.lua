@@ -13,13 +13,23 @@ return {
             vim.g.qf_max_height = 20
         end
     },
-    {
-        'stevearc/oil.nvim',
-        keys = { { "<leader>e", "<cmd>Oil<cr>", desc = "Open parent directory" } },
-        config = function()
-            require('oil').setup()
-        end
+    { 'vifm/vifm.vim',
+        init = function()
+            vim.g.netrw_banner = 0
+            vim.g.netrw_liststyle = 3
+            vim.g.loaded_netrw = 1
+            vim.g.loaded_netrwPlugin = 1
+            vim.g.vifm_replace_netrw = 1
+            vim.g.vifm_exec_args = '-c :only'
+        end,
     },
+    -- {
+    --     'stevearc/oil.nvim',
+    --     keys = { { "<leader>e", "<cmd>Oil<cr>", desc = "Open parent directory" } },
+    --     config = function()
+    --         require('oil').setup()
+    --     end
+    -- },
     {
         'markonm/traces.vim',
         init = function()
