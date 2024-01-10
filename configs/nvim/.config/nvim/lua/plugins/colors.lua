@@ -1,7 +1,7 @@
 return {
     { 'morhetz/gruvbox',        lazy = true },
     { 'maxmx03/solarized.nvim', lazy = true },
-    { 'dracula/vim',            lazy = true },
+    { 'dracula/vim',            lazy = true, name = "dracula" },
     {
         "catppuccin/nvim",
         lazy = true,
