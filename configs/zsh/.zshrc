@@ -12,6 +12,7 @@ source ~/.zsh/directories.zsh
 source ~/.zsh/git.zsh
 source ~/.zsh/bindings.zsh
 source ~/.zsh/functions.zsh
+source ~/.zsh/neovim_development.zsh
 
 # Make CTRL-Z background things and unbackground them.
 function fg-bg() {
