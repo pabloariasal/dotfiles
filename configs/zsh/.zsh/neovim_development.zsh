@@ -8,5 +8,6 @@ function debug_nvim_tui() {
 }
 
 function run_local_nvim() {
-  VIMRUNTIME=./runtime ./build/bin/nvim --clean "$@"
+  make &&
+  VIMRUNTIME=./runtime ./build/bin/nvim --luamod-dev --clean "$@"
 }
