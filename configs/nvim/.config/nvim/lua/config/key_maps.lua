@@ -32,8 +32,8 @@ vim.keymap.set('n', '<c-k>', '<c-w>k', { desc = 'move to split right' })
 vim.keymap.set('n', '<c-h>', '<c-w>h', { desc = 'move to split top' })
 vim.keymap.set('n', '<c-l>', '<c-w>l', { desc = 'move to split bottom' })
 -- toggle quickfix and location lists
-vim.keymap.set('n', 'gq', '<Plug>(qf_qf_toggle)', { desc = 'toggle quickfix list' })
-vim.keymap.set('n', 'gl', '<Plug>(qf_loc_toggle)', { desc = 'toggle location list' })
+vim.keymap.set('n', '<leader>sq', '<Plug>(qf_qf_toggle)', { desc = 'toggle quickfix list' })
+vim.keymap.set('n', '<leader>sl', '<Plug>(qf_loc_toggle)', { desc = 'toggle location list' })
 -- search word under cursor without jumping
 vim.keymap.set({'n', 'v'}, 'z*', '*N', { desc = 'search for word under cursor no jump' })
 vim.keymap.set({'n', 'v'}, 'z#', '#N', { desc = 'search backward for word under cursor no jump' })
