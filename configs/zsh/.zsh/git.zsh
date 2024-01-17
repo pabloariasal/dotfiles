@@ -46,6 +46,34 @@ fzf-git-file-widget() {
 zle     -N   fzf-git-file-widget
 bindkey '^s' fzf-git-file-widget
 
+__flocalbranch() {
+  local cmd="git branch"
+  setopt localoptions pipefail 2> /dev/null
+  eval "$cmd" | $(__fzfcmd) --reverse "$@" |
+  while read item; do
+    echo -n "${(q)item}" | tr -d '\\+*' | tr -d ' '
+  done
+  local ret=$?
+  echo
+  return $ret
+}
+
+fzf-git-checkout-local-branch-widget() {
+  local branch=$(__flocalbranch)
+  if [[ -z "$branch" ]]; then
+    local ret=$?
+    zle reset-prompt
+    return $ret
+  fi
+  LBUFFER="git checkout ${branch}"
+  zle reset-prompt
+  zle accept-line
+  local ret=$?
+  return $ret
+}
+zle     -N   fzf-git-checkout-local-branch-widget
+bindkey '^b' fzf-git-checkout-local-branch-widget
+
 #######################################################################
 # Aliases
 alias gr='git restore'
