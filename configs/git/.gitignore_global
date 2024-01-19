@@ -12,6 +12,7 @@ tags.*
 [._]*.un~
 lsp_settings.json
 
+.gdb_init
 .gdb_history
 compile_commands.json
 

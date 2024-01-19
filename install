@@ -123,6 +123,16 @@ function clone_repo() {
     git clone git@github.com:pabloariasal/dotfiles.git ~/dotfiles
 }
 
+function install_gdb_dashboard() {
+    rm -f ~/.gdbinit
+    wget -P ~ https://git.io/.gdbinit
+}
+
+function setup_gdb() {
+    install_gdb_dashboard
+    sudo pacman -S python-pygments
+}
+
 _get_all_functions() {
     script_dir="$( cd "$( dirname "${(%):-%x}" )" && pwd )"
     cat "${script_dir}/install" | grep '^function' | awk '{print $2}' | tr -d '()'

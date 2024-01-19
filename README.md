@@ -319,6 +319,7 @@ flatpak install anki
 
 ```sh
 cd dotfiles
+install_config gdb
 ./install install_cpp_dev_tools
 ```
 
@@ -345,7 +346,7 @@ install_config gem
 
 # Q & A
 
-## Lazy loads install treesitter every time
+## Lazy loads installs treesitter every time
 
 ```sh
 rm -rf ~/.local/share/nvim
