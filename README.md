@@ -336,6 +336,13 @@ cd dotfiles
 ./install install_lua_dev_tools
 ```
 
+### Ruby
+
+```sh
+cd dotfiles
+install_config gem
+```
+
 # Q & A
 
 ## Lazy loads install treesitter every time
