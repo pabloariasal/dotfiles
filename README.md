@@ -335,3 +335,11 @@ cd dotfiles
 cd dotfiles
 ./install install_lua_dev_tools
 ```
+
+# Q & A
+
+## Lazy loads install treesitter every time
+
+```sh
+rm -rf ~/.local/share/nvim
+```
