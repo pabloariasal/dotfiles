@@ -19,3 +19,4 @@ echo '${CHROMIUM_EXEC}' "--app=\"https://${2}\"" >> "$script"
 chmod +x "$script"
 echo 'webapp created!'
 cat "$script"
+echo 'Run ./install install_scripts to install'
