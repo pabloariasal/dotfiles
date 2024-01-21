@@ -321,6 +321,7 @@ flatpak install anki
 cd dotfiles
 install_config gdb
 ./install install_cpp_dev_tools
+./install setup_gdb
 ```
 
 ### Python
