@@ -78,7 +78,6 @@ bindkey '^b' fzf-git-checkout-local-branch-widget
 # Aliases
 alias gr='git restore'
 alias grs='git restore --staged'
-alias gs='git status'
 alias g='git status'
 alias ga='git add'
 alias gaa='git add --all'
@@ -122,12 +121,13 @@ alias gceg='git config user.email pabloariasal@gmail.com'
 #######################################################################
 # Functions
 
+# Remove branches not present in the remotes anymore
 function gbcl() {
   git remote update --prune &&
   git branch -vv | grep -vE '^[*+]' | awk '/: gone]/{print $1}' | xargs git branch -D
 }
 
 # Deletes a branch in the remote
-function gbdo() {
+function gbdr() {
   git push ${2:-origin} ":${1}"
 }
