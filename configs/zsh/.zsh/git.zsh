@@ -117,6 +117,7 @@ alias gba='git branch --all -vv'
 alias gcl='git clean -f -d'
 alias ge='git commit --allow-empty -m "Empty commit"'
 alias gceg='git config user.email pabloariasal@gmail.com'
+alias gk='gitk'
 
 #######################################################################
 # Functions
