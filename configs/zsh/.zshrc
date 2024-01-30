@@ -41,3 +41,7 @@ if [ -z "$NO_LWD" ]; then
   # switch to last visited directory
   lwd
 fi
+
+if [ -n "$GREET" ]; then
+  neofetch
+fi
