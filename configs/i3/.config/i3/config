@@ -67,6 +67,7 @@ bindsym $mod+Ctrl+t exec dmenu-theme-selector
 bindsym $mod+u exec text_scratchpad
 bindsym $mod+Ctrl+w exec whatsapp
 bindsym $mod+Shift+w exec --no-startup-id set_random_wallpaper
+bindsym $mod+Ctrl+s exec --no-startup-id start_programs
 
 #######################################################################
 # Key Bindings - Resize windows
