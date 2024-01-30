@@ -18,6 +18,3 @@ sleep 2
 
 i3-msg 'workspace 1:1'
 i3-msg 'exec --no-startup-id GREET=1 alacritty'
-sleep 1
-
-notify-send "Hello!"
