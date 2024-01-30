@@ -2,19 +2,19 @@
 
 i3-msg 'workspace 6:6'
 i3-msg 'exec --no-startup-id keep'
-sleep 2
+sleep 3
 
 i3-msg 'workspace 7:7'
 i3-msg 'exec --no-startup-id google-chrome-stable'
-sleep 2
+sleep 3
 
 i3-msg 'workspace 8:8'
 i3-msg 'exec --no-startup-id spotify'
-sleep 3
+sleep 5
 
 i3-msg 'workspace 9:9'
 i3-msg 'exec --no-startup-id gcal'
-sleep 2
+sleep 5
 
 i3-msg 'workspace 1:1'
 i3-msg 'exec --no-startup-id GREET=1 alacritty'
