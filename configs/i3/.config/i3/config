@@ -267,6 +267,10 @@ smart_borders on
 # disable window titles in stacking and tabbed layouts
 font pango:DejaVu Sans Mono 0
 
+# class                 border  backgr. text    indicator child_border
+# client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
+client.focused          #4c7899 #285577 #ffffff #2e9ef4   #7a88c2
+
 #######################################################################
 # Status bar
 bar {
