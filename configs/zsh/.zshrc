@@ -44,4 +44,6 @@ fi
 
 if [ -n "$GREET" ]; then
   neofetch
+  cal -m --color=always
+  echo "Welcome!"
 fi
