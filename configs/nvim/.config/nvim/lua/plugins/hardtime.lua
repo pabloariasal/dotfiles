@@ -22,6 +22,7 @@ return {
             ["<LEFT>"] = { "", "i" },
             ["<RIGHT>"] = { "", "i" }
         },
-        disabled_filetypes = { "qf", "netrw", "help", "oil" },
+        -- vim is necessary because of command line buffer
+        disabled_filetypes = { "qf", "netrw", "help", "oil", "vim" },
     }
 }
