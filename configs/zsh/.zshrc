@@ -39,7 +39,7 @@ function py() {
 
 if [ -n "$GREET" ]; then
   neofetch
-  cal -m -n 2 --color=always
+  ncal -b -M -A1
   figlet "Welcome!"
   return 0
 fi
