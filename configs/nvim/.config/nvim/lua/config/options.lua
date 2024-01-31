@@ -35,3 +35,6 @@ vim.o.tabstop = 4
 -- use ripgrep as grep program
 vim.o.grepprg = 'rg -H --no-heading --vimgrep'
 vim.o.grepformat = '%f:%l:%c:%m'
+
+-- allow - to be a word character
+vim.opt.iskeyword:append { "-" }
