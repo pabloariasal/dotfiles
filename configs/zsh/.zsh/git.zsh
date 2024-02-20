@@ -116,7 +116,7 @@ alias gbD='git branch -D'
 alias gba='git branch --all -vv'
 alias gcl='git clean -f -d'
 alias ge='git commit --allow-empty -m "Empty commit"'
-alias gceg='git config --local user.email pabloariasal@gmail.com'
+alias gce='git config --local user.email'
 alias gk='gitk'
 
 #######################################################################
