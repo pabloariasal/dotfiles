@@ -6,13 +6,14 @@
 [diff]
 	tool = vimdiff
 	colorMoved = default
+	algorithm = histogram
 [difftool]
 	prompt = true
 [difftool "vimdiff"]
 	path = nvim
 [merge]
 	tool = vimdiff
-	conflictstyle = diff3
+	conflictstyle = zdiff3
 [mergetool]
 	prompt = true
 [mergetool "vimdiff"]
@@ -27,3 +28,7 @@
 [delta "side-by-side"]
 	side-by-side = true
 	line-numbers = true
+[rebase]
+	autosquash = true
+[rerere]
+	enabled = true
