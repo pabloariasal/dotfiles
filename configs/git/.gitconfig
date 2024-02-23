@@ -13,7 +13,7 @@
 	path = nvim
 [merge]
 	tool = vimdiff
-	conflictstyle = zdiff3
+	conflictstyle = diff3
 [mergetool]
 	prompt = true
 [mergetool "vimdiff"]
