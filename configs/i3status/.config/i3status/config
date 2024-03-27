@@ -15,7 +15,8 @@ general {
 }
 
 # order += "tztime holder__hey_man"
-order += "tztime distro"
+order += "tztime holder__vpn"
+# order += "tztime distro"
 order += "read_file theme"
 order += "cpu_temperature 0"
 order += "memory"
@@ -66,6 +67,10 @@ tztime timezone {
 }
 
 tztime holder__hey_man {
+       format = "placeholder"
+}
+
+tztime holder__vpn {
        format = "placeholder"
 }
 
