@@ -1,2 +1,2 @@
 #!/bin/bash
-${CHROMIUM_EXEC} --app="https://www.wetteronline.de/wettertrend/muenchen"
+${CHROMIUM_EXEC} --app="https://www.wetter.com/deutschland/muenchen/DE0006515.html"
