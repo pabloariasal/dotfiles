@@ -111,5 +111,5 @@ cpu_temperature 0 {
 }
 
 disk "/" {
-        format = "💽DISK %percentage_used"
+        format = "💽DISK %percentage_used (%avail avail)"
 }
