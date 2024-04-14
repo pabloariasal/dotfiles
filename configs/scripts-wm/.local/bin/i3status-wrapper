@@ -58,7 +58,7 @@ function brightness {
   json_array=$(update_holder holder__brightness "$json")
 }
 
-function vpn {
+function express_vpn {
   if command -v expressvpn &> /dev/null; then
     local status="$(expressvpn status | head -n 1 | sed -r 's/\x1B\[(;?[0-9]{1,3})+[mGK]//g')"
   else
@@ -73,7 +73,7 @@ do
   read line
   json_array="$(echo $line | sed -e 's/^,//')"
   brightness
-  vpn
+  express_vpn
   # hey_man_static
   echo ",$json_array"
 done)
