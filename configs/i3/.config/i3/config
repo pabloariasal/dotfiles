@@ -19,7 +19,7 @@ set $ws8 8:8
 set $ws9 9:9
 
 #######################################################################
-# General
+# Mouse Control
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -70,11 +70,6 @@ bindsym $mod+Ctrl+w exec whatsapp
 bindsym $mod+Shift+w exec --no-startup-id set_random_wallpaper
 bindsym $mod+Ctrl+s exec --no-startup-id start_programs
 
-#######################################################################
-# Key Bindings - Resize windows
-bindsym $mod+comma resize set width 85 ppt height 85 ppt, move position center
-bindsym $mod+Shift+comma resize set width 50 ppt height 75 ppt, move position center
-
 # programs assigned to workspaces
 bindsym $mod+Ctrl+1 exec layout_code
 bindsym $mod+Ctrl+4 exec gmail
@@ -83,7 +78,7 @@ bindsym $mod+Ctrl+8 exec spotify
 bindsym $mod+Ctrl+9 exec gcal
 
 #######################################################################
-# Key Bindings - Open favorite bookmarks
+# Key Bindings - Open bookmarks
 bindsym $mod+F1 exec open_bookmark 1
 bindsym $mod+F2 exec open_bookmark 2
 bindsym $mod+F3 exec open_bookmark 3
@@ -92,7 +87,7 @@ bindsym $mod+F5 exec open_bookmark 5
 bindsym $mod+period exec dmenu-open-bookmark
 
 #######################################################################
-# Key Bindings - Windows
+# Key Bindings - Moving Around
 # Change Window Focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -156,6 +151,10 @@ bindsym $mod+Shift+Down move down 25 px
 bindsym $mod+Shift+Up move up 25 px
 bindsym $mod+Shift+Right move right 25 px
 
+# Resize floating windows
+bindsym $mod+comma resize set width 85 ppt height 85 ppt, move position center
+bindsym $mod+Shift+comma resize set width 50 ppt height 75 ppt, move position center
+
 #######################################################################
 # Key Bindings - Workspaces
 
@@ -198,7 +197,7 @@ bindsym $mod+Ctrl+j move workspace to output down
 bindsym $mod+Ctrl+k move workspace to output up
 
 #######################################################################
-# Key Bindings - Layout
+# Key Bindings - Window Layout
 bindsym $mod+o split h
 bindsym $mod+v split v
 bindsym $mod+e layout toggle split
@@ -257,7 +256,7 @@ bindsym XF86AudioPrev exec music_control previous
 bindsym $mod+F6 exec music_control previous
 
 #######################################################################
-# Window borders
+# Appearance
 
 # disable title bars
 for_window [class="^.*"] border pixel 2
