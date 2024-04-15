@@ -16,6 +16,7 @@ vim.api.nvim_create_user_command('ListSnippets', function(opts)
     vim.cmd('!list_snippets ' .. opts.fargs[1])
   end
 end, { nargs='?'})
+
 -- Read template
 function getCurrentYear()
     local currentTime = os.time()
