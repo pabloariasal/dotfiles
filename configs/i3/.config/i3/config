@@ -96,7 +96,7 @@ bindsym $mod+Shift+l move right
 bindsym $mod+space focus mode_toggle
 
 bindsym $mod+a focus parent
-bindsym $mod+c focus child
+# bindsym $mod+c focus child
 
 # Kill Focused Window
 bindsym $mod+q kill
