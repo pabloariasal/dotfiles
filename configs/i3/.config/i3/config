@@ -69,6 +69,7 @@ bindsym $mod+u exec text_scratchpad
 bindsym $mod+Ctrl+w exec whatsapp
 bindsym $mod+Shift+w exec --no-startup-id set_random_wallpaper
 bindsym $mod+Ctrl+s exec --no-startup-id start_programs
+bindsym $mod+period exec dmenu-open-bookmark
 
 # programs assigned to workspaces
 bindsym $mod+Ctrl+1 exec layout_code
@@ -76,15 +77,6 @@ bindsym $mod+Ctrl+4 exec gmail
 bindsym $mod+Ctrl+6 exec keep
 bindsym $mod+Ctrl+8 exec spotify
 bindsym $mod+Ctrl+9 exec gcal
-
-#######################################################################
-# Key Bindings - Open bookmarks
-bindsym $mod+F1 exec open_bookmark 1
-bindsym $mod+F2 exec open_bookmark 2
-bindsym $mod+F3 exec open_bookmark 3
-bindsym $mod+F4 exec open_bookmark 4
-bindsym $mod+F5 exec open_bookmark 5
-bindsym $mod+period exec dmenu-open-bookmark
 
 #######################################################################
 # Key Bindings - Moving Around
@@ -104,7 +96,7 @@ bindsym $mod+Shift+l move right
 bindsym $mod+space focus mode_toggle
 
 bindsym $mod+a focus parent
-# bindsym $mod+c focus child
+bindsym $mod+c focus child
 
 # Kill Focused Window
 bindsym $mod+q kill
@@ -256,7 +248,7 @@ bindsym XF86AudioPrev exec music_control previous
 bindsym $mod+F6 exec music_control previous
 
 #######################################################################
-# Appearance
+# Window borders
 
 # disable title bars
 for_window [class="^.*"] border pixel 2
@@ -267,6 +259,8 @@ smart_borders on
 # disable window titles in stacking and tabbed layouts
 font pango:DejaVu Sans Mono 0
 
+#######################################################################
+# Colors
 # class                 border  backgr. text    indicator child_border
 # client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
 client.focused          #4c7899 #285577 #ffffff #2e9ef4   #7a88c2
