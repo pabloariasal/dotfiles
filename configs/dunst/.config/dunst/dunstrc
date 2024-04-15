@@ -307,6 +307,9 @@
     mouse_middle_click = do_action, close_current
     mouse_right_click = close_all
 
+    close = "mod1+g"
+    close_all = "mod1+r"
+
 # Experimental features that may or may not work correctly. Do not expect them
 # to have a consistent behaviour across releases.
 [experimental]
