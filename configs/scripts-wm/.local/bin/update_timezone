@@ -4,6 +4,7 @@ set -e
 
 timezone="$(curl -s --fail https://ipapi.co/timezone)"
 timedatectl set-timezone "$timezone"
+timedatectl set-ntp true
 
 echo "Timezone '$timezone' detected."
 notify-send -u low -e "Timezone changed to '$timezone'"
