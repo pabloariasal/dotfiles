@@ -16,7 +16,6 @@ general {
 
 # order += "tztime holder__hey_man"
 order += "tztime holder__vpn"
-# order += "tztime distro"
 order += "read_file theme"
 order += "cpu_temperature 0"
 order += "memory"
@@ -76,10 +75,6 @@ tztime holder__vpn {
 
 tztime holder__brightness {
        format = "placeholder"
-}
-
-tztime distro {
-       format = "🐧Arch Linux"
 }
 
 read_file sink {
