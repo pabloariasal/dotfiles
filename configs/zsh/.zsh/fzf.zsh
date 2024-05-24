@@ -25,7 +25,7 @@ bindkey '^n' fzf-file-widget
 bindkey '^k' fzf-cd-widget
 
 edit-fuzzy() {
-  local sel=$(__fsel)
+  local sel=$(__fzf_select)
   if [[ -z "$sel" ]]; then
     local ret=$?
     zle reset-prompt
