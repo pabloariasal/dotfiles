@@ -9,8 +9,6 @@ vim.g.oceanic_next_terminal_italic = true
 -- seoul256
 vim.g.seoul256_background = 236
 
-vim.o.termguicolors = true
-
 function read_file(file_path)
     local file = io.open(file_path, 'r')
     if not file then
