@@ -117,9 +117,9 @@ cd pabloariasal-dotfiles-xxx
 ### Add ssh public key to github account
 
 1. open a terminal
-2. start google chrome
+2. Start google chrome
 3. Login into google and github
-4. enter public key in the clipboard in github account
+4. Enter public key in the clipboard in github account
 
 ### Start ssh Agent and add ssh key
 
@@ -139,7 +139,6 @@ rm -rf pabloariasal-dotfiles-XXX
 
 The dotfiles repo is now cloned to the home directory
 
-
 ## Shell Configuration
 
 ```sh
@@ -150,7 +149,7 @@ stow --verbose=2 -d configs -t ~ zsh
 stow --verbose=2 -d configs -t ~ env
 ```
 
-close and reopen terminal
+Close and reopen terminal
 
 ## xorg configuraton
 
@@ -206,7 +205,7 @@ install_config vifm
 intall_config alacritty
 ```
 
-## NeoVim Configuration
+## Neovim Configuration
 
 ```sh
 sudo pacman -S words
@@ -228,7 +227,7 @@ install_config systemd
 ./install enable_agent_service
 ```
 
-## Tlp
+## TLP
 
 ```sh
 sudo pacman -S tlp
@@ -252,7 +251,7 @@ Open nitrogen and add `~/wallpapers` as wallpaper directory (recursively), selec
 sudo pacman -S htop
 ```
 
-## Pdfs, Image Viewer and Window Swallowing
+## PDFs, Image Viewer and Window Swallowing
 
 ```sh
 sudo pacman -S zathura zathura-pdf-mupdf eog
@@ -260,7 +259,7 @@ cd dotfiles
 ./install install_devour
 ```
 
-`iv` and `za` in command line can be use to open pdfs and images!
+`iv` and `za` in command line can be use to open PDFs and images!
 
 ## Clipboard Manager
 
@@ -298,6 +297,7 @@ sudo pacman -S brightnessctl playerctl
 
 ```sh
 sudo pacman -S flatpak
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 ```
 
 ### Spotify
