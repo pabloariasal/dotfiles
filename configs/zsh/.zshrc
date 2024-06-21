@@ -44,10 +44,10 @@ if [ -n "$GREET" ]; then
   return 0
 fi
 
+# Expand aliases with TAB
+zstyle ':completion:*' completer _expand_alias _complete _ignored
+
 if [ -z "$NO_LWD" ]; then
   # switch to last visited directory
   lwd
 fi
-
-# Expand aliases with TAB
-zstyle ':completion:*' completer _expand_alias _complete _ignored
