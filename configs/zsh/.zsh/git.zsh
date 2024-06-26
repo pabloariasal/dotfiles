@@ -77,6 +77,7 @@ bindkey '^b' fzf-git-checkout-local-branch-widget
 #######################################################################
 # Aliases
 alias gr='git restore'
+alias grp='git restore -p'
 alias grs='git restore --staged'
 alias g='git status'
 alias ga='git add'
@@ -87,7 +88,8 @@ alias gc='git commit -v'
 alias gcm='git commit -m'
 alias 'gca'='git commit -v --amend'
 alias 'gcan'='git commit -v --no-edit --amend'
-alias gcb='git checkout -b'
+alias gs='git switch'
+alias gsc='git switch -c'
 alias gco='git checkout'
 alias gd='git diff'
 alias gdca='git diff --cached'
