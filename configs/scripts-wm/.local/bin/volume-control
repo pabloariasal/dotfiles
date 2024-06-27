@@ -3,13 +3,13 @@
 INCREMENT=5
 case "$1" in
     up)
-        vol=$(pactl set-sink-volume 0 +${INCREMENT}%)
+        vol=$(pactl set-sink-volume @DEFAULT_SINK@ +${INCREMENT}%)
         ;;
     down)
-        vol=$(pactl set-sink-volume 0 -${INCREMENT}%)
+        vol=$(pactl set-sink-volume @DEFAULT_SINK@ -${INCREMENT}%)
         ;;
     toggle)
-        vol=$(pactl set-sink-mute 0 toggle)
+        vol=$(pactl set-sink-mute @DEFAULT_SINK@ toggle)
         ;;
 esac
 
