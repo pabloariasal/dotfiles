@@ -17,6 +17,14 @@ function py() {
     python3 -c "from math import *; print($*)"
 }
 
+function bookmarks {
+    local bookmarks_file="${HOME}/.bookmarks.txt"
+    if [ ! -e "${bookmarks_file}" ]; then
+      echo "# name url" > "${bookmarks_file}"
+    fi
+    ${EDITOR} "${bookmarks_file}"
+}
+
 ##########################
 # Archives
 

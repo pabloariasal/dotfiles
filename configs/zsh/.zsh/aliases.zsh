@@ -3,7 +3,6 @@ alias n='nvim'
 alias nd='nvim .'
 alias v='vifm'
 alias b='bat --plain'
-alias bookmarks='nvim ~/.bookmarks.txt'
 
 # convenience
 alias sudo='sudo '

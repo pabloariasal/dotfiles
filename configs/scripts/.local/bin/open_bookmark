@@ -2,8 +2,7 @@
 
 set -e
 
-bookmarksfile="${HOME}/.bookmarks.txt"
-if [[ ! -e "$bookmarksfile" ]]; then
+if [[ ! -e "${BOOKMARKS_FILE}" ]]; then
     echo "error: bookmark file does not exist!"
     exit 1
 fi
@@ -13,7 +12,8 @@ if [ -z "$1" ]; then
     exit 1
 fi
 
-url=$(awk 'NR==x {print $NF}' x=${1} "${bookmarksfile}")
+bookmark_nr="${1}"
+url=$(awk 'NR==x {print $NF}' x=$((bookmark_nr+1)) "${BOOKMARKS_FILE}")
 if [ -z "${url:+x}" ]; then
     echo "error: bookmark out of bounds!"
     exit 1
