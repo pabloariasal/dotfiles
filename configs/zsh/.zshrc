@@ -30,8 +30,11 @@ autoload -Uz promptinit && promptinit && prompt powerlevel10k
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# source haskell environment
+# initialize haskell environment
 [ -f "${HOME}/.ghcup/env" ] && source "${HOME}/.ghcup/env"
+
+# initialize rust environment
+[ -f "${HOME}/.cargo/env" ] && source "${HOME}/.cargo/env"
 
 if [ -n "$GREET" ]; then
   neofetch
