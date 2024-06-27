@@ -13,6 +13,10 @@ function reveal_present()
   ${CHROMIUM_EXEC} "$1" index.html
 }
 
+function py() {
+    python3 -c "from math import *; print($*)"
+}
+
 ##########################
 # Archives
 
