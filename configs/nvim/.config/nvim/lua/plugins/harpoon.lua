@@ -6,7 +6,7 @@ return {
         require('harpoon'):setup()
     end,
     keys = {
-        { "<leader>ja", function() require('harpoon'):list():append() end,                      desc = "Harpoon: add " },
+        { "<leader>ja", function() require('harpoon'):list():add() end,                      desc = "Harpoon: add " },
         { "<leader>jm", function() require('harpoon').ui:toggle_quick_menu(require('harpoon'):list()) end, desc = "Harpoon: toggle menu " },
         { "<leader>jj", function() require('harpoon'):list():select(1) end,                     desc = "Harpoon: select 1" },
         { "<leader>jk", function() require('harpoon'):list():select(2) end,                     desc = "Harpoon: select 2" },
