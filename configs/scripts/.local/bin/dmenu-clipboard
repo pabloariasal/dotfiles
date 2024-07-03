@@ -1,3 +1,6 @@
 #!/bin/bash
 
-greenclip print | sed '/^$/d' | bemenu_wrapper --vim-normal-mode -l 35 -p clipboard | xargs -r -d'\n' -I '{}' greenclip print '{}'
+chosen_line=$(gpaste-client --oneline | awk 'NF > 0' | bemenu_wrapper --vim-normal-mode -l 35 -p clipboard)
+[[ $chosen_line ]] || exit 0
+chosen_number=$(echo "$chosen_line" | awk '{gsub(/:/, ""); print $1}')
+gpaste-client select $chosen_number
