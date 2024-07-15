@@ -138,3 +138,13 @@ function gbcl() {
 function gbdr() {
   git push ${2:-origin} ":${1}"
 }
+
+function copy_commit_hash() {
+  local sel=$(git log --pretty=format:"%H %s" $1 | fzf)
+  hsh="$(echo "${sel}" | awk '{ print $1 }')"
+  if [ -z "$hsh" ]; then
+    return 0
+  fi
+  echo "$hsh" | xclip -selection clipboard
+  echo \'"$hsh"\' copied to clipboard!
+}
