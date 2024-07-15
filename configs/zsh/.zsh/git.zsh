@@ -140,7 +140,7 @@ function gbdr() {
 }
 
 function copy_commit_hash() {
-  local sel=$(git log --pretty=format:"%H %s" $1 | fzf)
+  local sel=$(git log --pretty=format:"%H %s (%an)" $1 | fzf)
   hsh="$(echo "${sel}" | awk '{ print $1 }')"
   if [ -z "$hsh" ]; then
     return 0
