@@ -103,6 +103,7 @@ alias glg='git log --oneline --graph --decorate'
 alias glgm='git log --oneline --graph --decorate HEAD origin/master'
 alias glga='git log --oneline --graph --decorate --all'
 alias glo='git log --oneline'
+alias glh="git log --pretty='%C(yellow)%h %C(cyan)%cd %Cblue%aN%C(auto)%d %Creset%s' --graph --date=relative --date-order"
 alias gm='git merge'
 alias gp='git push'
 alias gpu='git push --set-upstream origin HEAD'
