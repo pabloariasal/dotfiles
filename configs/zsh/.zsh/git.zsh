@@ -111,7 +111,9 @@ alias gpf='git push --force'
 alias gpfl='git push --force-with-lease'
 alias grb='git rebase'
 alias gsta='git stash'
+# stash also untracked files
 alias gstaa='git stash --all'
+alias gstal='git stash list'
 alias grh='git reset HEAD'
 alias grha='git reset --hard'
 alias grhh='git reset --hard HEAD'
@@ -137,6 +139,14 @@ function gbcl() {
 # Deletes a branch in the remote
 function gbdr() {
   git push ${2:-origin} ":${1}"
+}
+
+function gstas() {
+  git stash show -u stash@\{${1}\}
+}
+
+function gstad() {
+  git stash show -u -p stash@\{${1}\}
 }
 
 function copy_commit_hash() {
