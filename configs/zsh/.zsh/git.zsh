@@ -149,7 +149,7 @@ function gstad() {
   git stash show -u -p stash@\{${1}\}
 }
 
-function copy_commit_hash() {
+function git_copy_commit_hash() {
   local sel=$(git log --pretty=format:"%H %s (%an)" $1 | fzf)
   hsh="$(echo "${sel}" | awk '{ print $1 }')"
   if [ -z "$hsh" ]; then
