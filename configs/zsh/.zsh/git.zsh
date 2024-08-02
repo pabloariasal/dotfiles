@@ -141,10 +141,12 @@ function gbdr() {
   git push ${2:-origin} ":${1}"
 }
 
+# show stats of a stash
 function gstas() {
   git stash show -u stash@\{${1}\}
 }
 
+# show diff of a stash
 function gstad() {
   git stash show -u -p stash@\{${1}\}
 }
