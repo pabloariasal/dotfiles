@@ -22,13 +22,6 @@ return {
             vim.g.vifm_exec_args = '-c :only'
         end,
     },
-    -- {
-    --     'stevearc/oil.nvim',
-    --     keys = { { "<leader>e", "<cmd>Oil<cr>", desc = "Open parent directory" } },
-    --     config = function()
-    --         require('oil').setup()
-    --     end
-    -- },
     {
         'markonm/traces.vim',
         init = function()
