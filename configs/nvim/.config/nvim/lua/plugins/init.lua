@@ -5,7 +5,6 @@ return {
     'tpope/vim-sleuth',
     'tpope/vim-eunuch',
     'tpope/vim-unimpaired',
-    'tpope/vim-commentary',
     'vim-scripts/ReplaceWithRegister',
     {
         'romainl/vim-qf',

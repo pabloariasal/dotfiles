@@ -5,6 +5,10 @@ vim.keymap.set({'n', 'v'}, ',', ':', { noremap=true })
 -- move to begining and end of the line
 vim.keymap.set({'n', 'v'}, '<a-l>', '$', { noremap=true })
 vim.keymap.set({'n', 'v'}, '<a-h>', '^', { noremap=true })
+-- move through folds
+vim.keymap.set({'n'}, '<a-j>', 'zj', { noremap=true })
+vim.keymap.set({'n'}, '<a-k>', 'zk', { noremap=true })
+vim.keymap.set({'n'}, '<a-space>', 'za', { noremap=true })
 -- quitting and saving
 vim.keymap.set({'n'}, '<leader>w', '<cmd>wa<cr>', { noremap=true })
 vim.keymap.set({'n'}, '<leader>q', '<cmd>q<cr>', { noremap=true })
