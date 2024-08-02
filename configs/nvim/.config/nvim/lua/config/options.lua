@@ -1,4 +1,3 @@
-vim.o.foldenable = false
 vim.o.undofile = true
 vim.o.splitright = true
 vim.o.splitbelow = true
@@ -38,3 +37,8 @@ vim.o.grepformat = '%f:%l:%c:%m'
 
 -- allow - to be a word character
 vim.opt.iskeyword:append { "-" }
+
+-- folding
+-- vim.o.foldcolumn = '1'
+vim.o.foldlevelstart = 99
+vim.o.foldnestmax = 4
