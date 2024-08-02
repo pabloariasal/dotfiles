@@ -18,7 +18,7 @@ return {
                     enable = true,
 
                     -- Automatically jump forward to textobj, similar to targets.vim
-                    -- lookahead = true,
+                    lookahead = true,
 
                     keymaps = {
                         -- You can use the capture groups defined in textobjects.scm
@@ -26,16 +26,22 @@ return {
                         ["if"] = "@function.inner",
                         ["ac"] = "@class.outer",
                         ["ic"] = "@class.inner",
+                        ["aa"] = { query = "@parameter.outer", desc = "Select outer part of a parameter/argument" },
+                        ["ia"] = { query = "@parameter.inner", desc = "Select inner part of a parameter/argument" },
+                        ["a="] = { query = "@assignment.outer", desc = "Select outer part of an assignment" },
+                        ["i="] = { query = "@assignment.inner", desc = "Select inner part of an assignment" },
+                        ["l="] = { query = "@assignment.lhs", desc = "Select left hand side of an assignment" },
+                        ["r="] = { query = "@assignment.rhs", desc = "Select right hand side of an assignment" },
                     },
                     include_surrounding_whitespace = true,
                 },
                 swap = {
                     enable = true,
                     swap_next = {
-                        ["<leader>b"] = "@parameter.inner",
+                        ["<leader>sn"] = "@parameter.inner",
                     },
                     swap_previous = {
-                        ["<leader>B"] = "@parameter.inner",
+                        ["<leader>sp"] = "@parameter.inner",
                     },
                 },
             },
