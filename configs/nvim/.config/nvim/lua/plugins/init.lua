@@ -1,6 +1,5 @@
 return {
     'neovim/nvim-lspconfig',
-    'tpope/vim-surround',
     'tpope/vim-repeat',
     'tpope/vim-sleuth',
     'tpope/vim-eunuch',
@@ -12,7 +11,8 @@ return {
             vim.g.qf_max_height = 20
         end
     },
-    { 'vifm/vifm.vim',
+    {
+        'vifm/vifm.vim',
         init = function()
             vim.g.netrw_banner = 0
             vim.g.netrw_liststyle = 3
@@ -58,5 +58,14 @@ return {
             { '<leader>u', vim.cmd.UndotreeToggle, desc = "Toggle undo tree" }
         }
     },
-    { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} }
+    { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
+    {
+        "kylechui/nvim-surround",
+        version = "*",
+        event = "VeryLazy",
+        config = function() require("nvim-surround").setup({
+                -- Configuration here, or leave empty to use defaults
+            })
+        end
+    }
 }
