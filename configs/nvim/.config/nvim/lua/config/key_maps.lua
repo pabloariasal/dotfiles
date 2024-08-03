@@ -41,8 +41,6 @@ vim.keymap.set('n', '<leader>sl', '<Plug>(qf_loc_toggle)', { desc = 'toggle loca
 -- search word under cursor without jumping
 vim.keymap.set({'n', 'v'}, 'z*', '*N', { desc = 'search for word under cursor no jump' })
 vim.keymap.set({'n', 'v'}, 'z#', '#N', { desc = 'search backward for word under cursor no jump' })
--- reload config
-vim.keymap.set('n', '<F1>', '<cmd>source ~/.config/nvim/init.lua<cr>', { desc = 'reload config' })
 -- system clipboard
 vim.keymap.set({'n', 'v', 'x'}, '<leader>p', '"+p', { noremap=true, desc = 'paste from system clipboard' })
 vim.keymap.set({'n', 'v'}, '<leader>P', '"+P', { noremap=true, desc = 'paste from system clipboard' })
