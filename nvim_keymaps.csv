@@ -1,0 +1,66 @@
+fuzzy open file,n,<c-p>
+fuzzy navigate buffer,n,<c-n>
+fuzzy live grep,n,<leader>gl
+fuzzy old files,n,<leader>o
+fuzzy search current file,n,<leader><leader>
+fuzzy open clipboard,n,<leader>v
+fuzzy document symbols,n,<leader>sd
+fuzzy workspace symbols,n,<leader>sw
+quickfix toggle,n,<leader>tq
+location list toggle,n,<leader>tl
+jump to end of line,n,<a-l>
+jump to beginning of line,n,<a-h>
+jump to next fold,n,<a-j>
+jump to prev fold,n,<a-k>
+save buffer,n,<leader>w
+quit,n,<leader>q
+toggle fold under cursor,n,<a-space>
+go back to insert mode,i,jj
+close current buffer,n,<leader>c
+open file explorer,n,<leader>e
+grep for word,n,<leader>gn
+grep for word under cursor,n,<leader>gc
+resize window,n,<c-arrow>
+navigate window,n,<c-hjkl>
+search next word without jumping,n,z*
+search prev word without jumping,n,z#
+paste from system clipboard,nx,<leader>p[P]
+yank to system clipboard,n,<leader>y
+jump to next diagnostic,n,]g
+jump to prev diagnostic,n,[g
+open diagnostics in loc list,n,<leader>dl
+open diagnostics in floating window,n,<leader>df
+LSP jump to declaration,n,gD
+LSP jump to definition,n,gd
+LSP jump to implementation,n,gI
+LSP jump to type definition,n,gy
+LSP rename symbol,n,<F2>
+LSP code action,n,<leader>m
+LSP references,n,<leader>r
+LSP format,n,<leader>f
+LSP hover,n,K
+LSP signature help,i,<c-h>
+replace text object with register,n,gr
+replace line with register,nx,grr
+jump to next hunk,n,]c
+jump to prev hunk,n,[c
+git reset hunk,n,<leader>hr
+git reset all hunks in buffer,n,<leader>hR
+git preview hunk,n,<leader>hp
+git show line git blame,n,<leader>hb
+harpoon add,n,<leader>ja
+harpoon toggle menu,n,<leader>jm
+harpoon jump 1,n,<leader>jj
+harpoon jump 2,n,<leader>jk
+harpoon jump 3,n,<leader>jl
+harpoon jump next,n,<leader>jn
+harpoon jump previous,n,<leader>jp
+harpoon clear,n,<leader>jc
+snippet expand,n,<c-space>
+copilot apply,n,<tab>
+split/join node under cursor,n,<leader>k
+swap parameter with next one,n,<leader>sn
+swap parameter with prev one,n,<leader>sp
+maximize split,n,<leader>l
+jump to alternate file,n,<leader>a
+open undo tree,n,<leader>u

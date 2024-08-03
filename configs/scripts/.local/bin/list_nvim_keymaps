@@ -1,0 +1,26 @@
+#!/bin/bash
+
+keymaps_file="${DOTFILES}"/nvim_keymaps.csv
+
+# Define color codes
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+BLUE='\033[0;34m'
+YELLOW='\033[0;33m'
+NC='\033[0m'  # No Color
+
+# Process the CSV file
+{ head -n 1 "${keymaps_file}" && tail -n +2 "${keymaps_file}" | sort -t, -k3; } |
+awk -F, -v YELLOW="$YELLOW" -v RED="$RED" -v GREEN="$GREEN" -v BLUE="$BLUE" -v NC="$NC" '{
+    OFS="|";
+        print GREEN $3 NC, YELLOW $1 NC, BLUE $2 NC;
+}' | column -t -s '|'
+
+duplicates=$(awk -F, '{print $3}' "${keymaps_file}" | sort | uniq -d)
+
+# Check if duplicates were found and print them
+if [ -n "$duplicates" ]; then
+    echo -e "${RED}Duplicate keymaps found:"
+    echo -e "$duplicates ${NC}"
+    exit 1
+fi
