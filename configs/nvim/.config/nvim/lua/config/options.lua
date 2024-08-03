@@ -23,6 +23,7 @@ vim.o.smartcase = true
 
 -- Indentation
 vim.o.smartindent = true
+-- tabs are spaces
 vim.o.expandtab = true
 -- size of the identation
 vim.o.shiftwidth = 4

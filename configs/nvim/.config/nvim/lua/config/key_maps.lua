@@ -50,7 +50,7 @@ vim.keymap.set({'n', 'v'}, '<leader>Y', '"+y$', { noremap=true, desc = 'yank to 
 vim.keymap.set('n', '<leader>x', '<cmd>YankFileUrl +<cr>', { desc = 'Yank Url to system clipboard'})
 vim.keymap.set('n', '<leader>X', '<cmd>YankLineUrl +<cr>', { desc = 'Yank Url to system clipboard, including current line'})
 -- diagnostics
-vim.keymap.set('n', '[g', vim.diagnostic.goto_prev, { noremap=true, silent=true, desc="Go to [p]rev [d]iagnostic" })
-vim.keymap.set('n', ']g', vim.diagnostic.goto_next, { noremap=true, silent=true, desc="Go to [n]ext [d]iagnostic" })
-vim.keymap.set('n', '<leader>dl', vim.diagnostic.setloclist, { noremap=true, silent=true, desc="Open [d]iagnostics in [l]ocation list" })
-vim.keymap.set('n', '<leader>df', vim.diagnostic.open_float, { noremap=true, silent=true, desc="Open [d]iagnostics in [f]loating window" })
+vim.keymap.set('n', '[g', vim.diagnostic.goto_prev, { noremap=true, silent=true, desc="Go to prev diagnostic" })
+vim.keymap.set('n', ']g', vim.diagnostic.goto_next, { noremap=true, silent=true, desc="Go to next diagnostic" })
+vim.keymap.set('n', '<leader>dl', vim.diagnostic.setloclist, { noremap=true, silent=true, desc="Open diagnostics in location list" })
+vim.keymap.set('n', '<leader>df', vim.diagnostic.open_float, { noremap=true, silent=true, desc="Open diagnostics in floating window" })
