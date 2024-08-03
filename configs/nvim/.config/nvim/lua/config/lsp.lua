@@ -9,7 +9,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
         mode = 'n'
       end
 
-      vim.keymap.set('n', keys, func, { buffer = ev.buf, desc = desc, silent=true, noremap=true })
+      vim.keymap.set(mode, keys, func, { buffer = ev.buf, desc = desc, silent=true, noremap=true })
     end
     nmap('gD', vim.lsp.buf.declaration, 'Open [D]eclaration')
     nmap('gd', vim.lsp.buf.definition, 'Open [D]efinition')
@@ -19,6 +19,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     nmap('<leader>m', vim.lsp.buf.code_action, "Code Action", {'n', 'v'})
     nmap('<leader>r', vim.lsp.buf.references, "Open [R]eferences")
     nmap('<leader>f', function() vim.lsp.buf.format {async = true } end, "[F]ormat")
+    nmap('<c-h>', vim.lsp.buf.signature_help, "Signature help", 'i')
   end,
 })
 
