@@ -57,5 +57,6 @@ return {
         keys = {
             { '<leader>u', vim.cmd.UndotreeToggle, desc = "Toggle undo tree" }
         }
-    }
+    },
+    { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} }
 }
