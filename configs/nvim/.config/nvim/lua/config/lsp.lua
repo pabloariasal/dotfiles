@@ -18,7 +18,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
     nmap('<F2>', vim.lsp.buf.rename, "Rename symbol")
     nmap('<leader>m', vim.lsp.buf.code_action, "Code Action", {'n', 'v'})
     nmap('<leader>r', vim.lsp.buf.references, "Open [R]eferences")
-    nmap('<leader>f', function() vim.lsp.buf.format {async = true } end, "[F]ormat")
   end,
 })
 
