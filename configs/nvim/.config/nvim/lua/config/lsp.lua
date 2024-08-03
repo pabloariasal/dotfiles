@@ -1,8 +1,5 @@
 vim.api.nvim_create_autocmd('LspAttach', {
-  group = vim.api.nvim_create_augroup('UserLspConfig', {}),
   callback = function(ev)
-    -- Enable completion triggered by <c-x><c-o>
-    vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
 
     local nmap = function(keys, func, desc, mode)
       if desc then
@@ -16,10 +13,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end
     nmap('gD', vim.lsp.buf.declaration, 'Open [D]eclaration')
     nmap('gd', vim.lsp.buf.definition, 'Open [D]efinition')
-    nmap('K', vim.lsp.buf.hover, 'Hover')
     nmap('gI', vim.lsp.buf.implementation, 'Open [I]mplementation')
     nmap('gy', vim.lsp.buf.type_definition, "Open Type Definition")
-    nmap('<leader>sh', vim.lsp.buf.signature_help, '[S]ignature [H]elp')
     nmap('<F2>', vim.lsp.buf.rename, "Rename symbol")
     nmap('<leader>m', vim.lsp.buf.code_action, "Code Action", {'n', 'v'})
     nmap('<leader>r', vim.lsp.buf.references, "Open [R]eferences")
