@@ -91,6 +91,7 @@ alias gca='git commit -v --amend'
 alias gcan='git commit -v --no-edit --amend'
 # Changes only contents but no commit message of a previous commit
 alias gcf='git commit --fixup'
+alias gcfi='git log -n 50 --pretty=format:"%h %s" --no-merges | fzf --reverse | cut -c -7 | xargs -o git commit --fixup'
 alias gs='git switch'
 alias gsc='git switch -c'
 alias gco='git checkout'
