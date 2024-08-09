@@ -87,8 +87,10 @@ alias gapa='git add --patch'
 alias gau='git add --update'
 alias gc='git commit -v'
 alias gcm='git commit -m'
-alias 'gca'='git commit -v --amend'
-alias 'gcan'='git commit -v --no-edit --amend'
+alias gca='git commit -v --amend'
+alias gcan='git commit -v --no-edit --amend'
+# Changes only contents but no commit message of a previous commit
+alias gcf='git commit --fixup'
 alias gs='git switch'
 alias gsc='git switch -c'
 alias gco='git checkout'
@@ -99,6 +101,8 @@ alias gds='DELTA_FEATURES="+side-by-side" git diff'
 alias gf='git fetch --all --prune'
 alias gl='git log'
 alias glp='git log --stat -p'
+alias glpl='git log -p -5'
+alias glpo='git log -p -1'
 alias gls='git log --stat'
 alias glg='git log --oneline --graph --decorate'
 alias glgm='git log --oneline --graph --decorate HEAD origin/master'
@@ -112,6 +116,7 @@ alias gpu='git push --set-upstream origin HEAD'
 alias gpf='git push --force'
 alias gpfl='git push --force-with-lease'
 alias grb='git rebase'
+alias grbi='git rebase --interactive --autosquash'
 alias gsta='git stash'
 # stash also untracked files
 alias gstaa='git stash --all'
@@ -154,12 +159,23 @@ function gstad() {
   git stash show -u -p stash@\{${1}\}
 }
 
-function git_copy_commit_hash() {
+# Copy hash to clipboard
+function gch() {
   local sel=$(git log --pretty=format:"%H %s (%an)" $1 | fzf --reverse)
   hsh="$(echo "${sel}" | awk '{ print $1 }')"
   if [ -z "$hsh" ]; then
     return 0
   fi
-  echo "$hsh" | xclip -selection clipboard
+  echo "$hsh" | xclip -r -selection clipboard
   echo \'"$hsh"\' copied to clipboard!
+}
+
+# Change both contents and commit message of a previous commit
+function gcfa() {
+  git commit --fixup=amend:"${1}"
+}
+
+# Change commit message only of a previous commit
+function gcfr() {
+  git commit --fixup=reword:"${1}"
 }
