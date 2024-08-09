@@ -114,6 +114,7 @@ alias gsta='git stash'
 # stash also untracked files
 alias gstaa='git stash --all'
 alias gstal='git stash list'
+alias gstac='git stash clear'
 alias grh='git reset HEAD'
 alias grha='git reset --hard'
 alias grhh='git reset --hard HEAD'
