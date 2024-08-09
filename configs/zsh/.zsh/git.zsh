@@ -79,6 +79,7 @@ bindkey '^b' fzf-git-checkout-local-branch-widget
 alias gr='git restore'
 alias grp='git restore -p'
 alias grs='git restore --staged'
+alias grsp='git restore --staged -p'
 alias g='git status'
 alias ga='git add'
 alias gaa='git add --all'
