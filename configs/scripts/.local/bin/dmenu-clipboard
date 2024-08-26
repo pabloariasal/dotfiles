@@ -1,6 +1,6 @@
 #!/bin/bash
 
-chosen_line=$(gpaste-client --oneline | awk 'NF > 0' | bemenu_wrapper --vim-normal-mode -l 35 -p clipboard)
+chosen_line=$(gpaste-client --oneline "$1" | awk 'NF > 0' | bemenu_wrapper --vim-normal-mode -l 35 -p "$1")
 [[ $chosen_line ]] || exit 0
 chosen_number=$(echo "$chosen_line" | awk '{gsub(/:/, ""); print $1}')
 gpaste-client select $chosen_number

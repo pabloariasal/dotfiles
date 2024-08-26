@@ -54,7 +54,9 @@ bindsym $mod+Return exec $terminal
 bindsym $mod+b exec $browser
 bindsym $mod+Shift+b exec $browser --incognito
 bindsym $mod+p exec bemenu_run_wrapper -p "Run" -i
-bindsym $mod+c exec dmenu-clipboard
+bindsym $mod+c exec dmenu-clipboard history
+bindsym $mod+r exec dmenu-clipboard static
+bindsym $mod+Shift+c exec gpaste-client ui
 bindsym $mod+i exec dmenu-emoji
 bindsym $mod+Shift+i exec dmenu-emoji --copy
 bindsym $mod+semicolon exec dmenu-audio-source
@@ -201,7 +203,7 @@ bindsym $mod+f fullscreen toggle
 #######################################################################
 # Key Bindings - Restart and Reload
 # reload the configuration file
-bindsym $mod+Shift+c reload
+bindsym $mod+Ctrl+c reload
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
