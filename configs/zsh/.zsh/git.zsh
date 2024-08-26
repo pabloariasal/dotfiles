@@ -89,6 +89,7 @@ alias gc='git commit -v'
 alias gcm='git commit -m'
 alias gca='git commit -v --amend'
 alias gcan='git commit -v --no-edit --amend'
+alias gcap='git commit -v --no-edit --amend && git push --force'
 # Changes only contents but no commit message of a previous commit
 alias gcf='git commit --fixup'
 alias gcfi='git log -n 50 --pretty=format:"%h %s" --no-merges | fzf --reverse | cut -c -7 | xargs -o git commit --fixup'
