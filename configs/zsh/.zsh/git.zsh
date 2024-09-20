@@ -109,9 +109,8 @@ alias gls='git log --stat'
 alias glg='git log --oneline --graph --decorate'
 alias glgm='git log --oneline --graph --decorate HEAD origin/master'
 alias glga='git log --oneline --graph --decorate --all'
-alias glo='git log --oneline --decorate'
-alias glh="git log --pretty='%C(yellow)%h %C(cyan)%cd %Cblue%aN%C(auto)%d %Creset%s' --date=relative --date-order"
-alias gll="git log --pretty='%C(yellow)%h %Cblue%aN%C(auto)%d %Creset%s' -12"
+alias gll="git log --pretty='%C(yellow)%H %C(cyan)%cd %Cblue%aN%C(auto)%d %Creset%s' --decorate --date=relative --date-order -12"
+alias glo="git log --pretty='%C(yellow)%H %C(cyan)%cd %Cblue%aN%C(auto)%d %Creset%s' --decorate --date=relative --date-order"
 alias gm='git merge'
 alias gp='git push'
 alias gpu='git push --set-upstream origin HEAD'
