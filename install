@@ -25,7 +25,7 @@ function install_wallpapers()
 
 function install_nerd_fonts()
 {
-    local nerd_fonts_dir="$HOME/nerd-fonts"
+    local nerd_fonts_dir="$HOME/.nerd_fonts"
     [ -d "$nerd-fonts" ] || git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git $nerd_fonts_dir
     cd "$nerd_fonts_dir"
     ./install.sh JetBrainsMono DejaVuSansMono
