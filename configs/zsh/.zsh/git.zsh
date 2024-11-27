@@ -58,22 +58,6 @@ __flocalbranch() {
   return $ret
 }
 
-fzf-git-checkout-local-branch-widget() {
-  local branch=$(__flocalbranch)
-  if [[ -z "$branch" ]]; then
-    local ret=$?
-    zle reset-prompt
-    return $ret
-  fi
-  LBUFFER="git checkout ${branch}"
-  zle reset-prompt
-  zle accept-line
-  local ret=$?
-  return $ret
-}
-zle     -N   fzf-git-checkout-local-branch-widget
-bindkey '^b' fzf-git-checkout-local-branch-widget
-
 #######################################################################
 # Aliases
 alias gr='git restore'
