@@ -72,7 +72,6 @@ bindsym $mod+Ctrl+s exec --no-startup-id start_programs
 bindsym $mod+period exec dmenu-open-bookmark
 
 # programs assigned to workspaces
-bindsym $mod+Ctrl+1 exec layout_code
 bindsym $mod+Ctrl+4 exec gmail
 bindsym $mod+Ctrl+6 exec keep
 bindsym $mod+Ctrl+8 exec spotify

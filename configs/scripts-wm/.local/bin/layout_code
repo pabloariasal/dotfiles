@@ -1,9 +1,0 @@
-#!/bin/bash
-
-# First we append the saved layout of workspace N to workspace M
-i3-msg "append_layout ${HOME}/.config/i3/coding_layout.json"
-
-# And finally we fill the containers with the programs they had
-(alacritty &)
-(alacritty &)
-(google-chrome-stable &)
