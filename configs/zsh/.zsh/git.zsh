@@ -46,18 +46,6 @@ fzf-git-file-widget() {
 zle     -N   fzf-git-file-widget
 bindkey '^s' fzf-git-file-widget
 
-__flocalbranch() {
-  local cmd="git branch"
-  setopt localoptions pipefail 2> /dev/null
-  eval "$cmd" | $(__fzfcmd) --reverse "$@" |
-  while read item; do
-    echo -n "${(q)item}" | tr -d '\\+*' | tr -d ' '
-  done
-  local ret=$?
-  echo
-  return $ret
-}
-
 #######################################################################
 # Aliases
 alias gr='git restore'
@@ -84,11 +72,11 @@ alias gso='git show'
 alias gd='git diff'
 alias gdca='git diff --cached'
 alias gds='DELTA_FEATURES="+side-by-side" git diff'
-alias gf='git fetch --all --prune'
+alias gf='git fetch --all --prune --tags'
 alias gl='git log'
 alias glp='git log --stat -p'
-alias glpl='git log -p -5'
-alias glpo='git log -p -1'
+alias glpl='git log --patch -5'
+alias glpo='git log --patch -1'
 alias gls='git log --stat'
 alias glg='git log --oneline --graph --decorate'
 alias glgm='git log --oneline --graph --decorate HEAD origin/master'
@@ -112,6 +100,7 @@ alias grha='git reset --hard'
 alias grhh='git reset --hard HEAD'
 alias gb='git branch -vv'
 alias gba='git branch --all -vv'
+# show remote branches
 alias gbr='git for-each-ref --color=always --sort="-committerdate:iso8601" --format="%(color:green)%(committerdate:relative)%(color:reset)|%(color:blue)%(committername)%(color:reset)|%(refname:short)" refs/remotes/ | column -s "|" -t | less -R -F'
 alias gbd='git branch -d'
 alias gbD='git branch -D'
@@ -119,6 +108,7 @@ alias gcl='git clean -f -d'
 alias ge='git commit --allow-empty -m "Empty commit"'
 alias gce='git config --local user.email'
 alias gk='gitk'
+alias gcp='git cherry-pick'
 
 #######################################################################
 # Functions
@@ -145,7 +135,7 @@ function gstad() {
 }
 
 # Copy hash to clipboard
-function gch() {
+function copy-commit-hash() {
   local sel=$(git log --pretty=format:"%H %s (%an)" $1 | fzf --reverse)
   hsh="$(echo "${sel}" | awk '{ print $1 }')"
   if [ -z "$hsh" ]; then
