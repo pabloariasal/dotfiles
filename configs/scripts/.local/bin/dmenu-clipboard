@@ -13,4 +13,5 @@ chosen_line=$(gpaste-client --oneline | awk 'NF > 0' | bemenu_wrapper --vim-norm
 [[ $chosen_line ]] || exit 0
 chosen_number=$(echo "$chosen_line" | awk '{gsub(/:/, ""); print $1}')
 sel=$(gpaste-client get "${chosen_number}")
+gpaste-client switch-history history
 echo -n "$sel" | xclip -selection clipboard
