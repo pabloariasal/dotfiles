@@ -1,2 +1,0 @@
-#!/bin/bash
-${CHROMIUM_EXEC} --app="https://onefootball.com/de"
