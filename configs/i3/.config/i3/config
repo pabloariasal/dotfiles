@@ -57,7 +57,7 @@ bindsym $mod+p exec bemenu_run_wrapper -p "Run" -i
 bindsym $mod+c exec dmenu-clipboard history
 bindsym $mod+r exec dmenu-clipboard static
 bindsym $mod+Shift+c exec gpaste-client ui
-bindsym $mod+semicolon exec dmenu-audio-source
+bindsym $mod+semicolon exec dmenu-audio-device
 bindsym $mod+w exec system-monitor
 bindsym $mod+z exec wetter
 bindsym $mod+x exec dmenu-xrandr
