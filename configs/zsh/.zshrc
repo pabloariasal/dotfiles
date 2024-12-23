@@ -12,6 +12,7 @@ source ~/.zsh/directories.zsh
 source ~/.zsh/git.zsh
 source ~/.zsh/bindings.zsh
 source ~/.zsh/functions.zsh
+source ~/.zsh/archives.zsh
 source ~/.zsh/neovim_development.zsh
 
 # prompt
