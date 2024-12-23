@@ -32,4 +32,4 @@ alias iv='devour eog'
 # add ssh keys to agent
 alias sag='ssh-add ~/.ssh/github_personal'
 
-alias install_config='stow --verbose=2 -d configs -t ~ '
+alias install_config='ensure_dots_dir && stow --verbose=2 -d configs -t ~ '

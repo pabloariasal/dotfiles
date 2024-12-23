@@ -8,11 +8,6 @@ function tmp()
   fi
 }
 
-function reveal_present()
-{
-  ${CHROMIUM_EXEC} "$1" index.html
-}
-
 function py() {
     python3 -c "from math import *; print($*)"
 }
@@ -36,5 +31,18 @@ function fg-bg() {
 zle -N fg-bg
 bindkey '^Z' fg-bg
 
-##########################
+function ensure_dots_dir {
+  if [ "$(pwd)" != "$DOTFILES" ]; then
+    echo "Error: must be in $DOTFILES directory!"
+    return 1
+  fi
+  return 0
+}
 
+##########################
+# reveal
+
+function reveal_present()
+{
+  ${CHROMIUM_EXEC} "$1" index.html
+}
