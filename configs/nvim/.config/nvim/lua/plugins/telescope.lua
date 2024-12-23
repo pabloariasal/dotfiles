@@ -71,9 +71,9 @@ return {
             { '<leader>gl',       function() require('telescope.builtin').live_grep() end,                     desc = "[G]rep [L]ive" },
             { '<leader>o',        function() require('telescope.builtin').oldfiles() end,                      desc = "Open [O]ld files" },
             { '<leader><leader>', function() require('telescope.builtin').current_buffer_fuzzy_find() end,     desc = "Search in current buffer" },
-            { '<leader>v',        function() require('telescope').extensions.neoclip.default() end,            desc = 'open neoclip clipboard' },
+            { '<leader>v',        function() require('telescope').extensions.neoclip.default() end,            desc = "Open neoclip clipboard" },
             { '<leader>sd',        function() require('telescope.builtin').lsp_document_symbols() end,          desc = "Navigate [s]ymbols [d]ocument" },
-            { '<leader>sw',        function() require('telescope.builtin').lsp_dynamic_workspace_symbols() end, desc = "Navigate [s]ymbols in workspace" },
+            { '<leader>sw',        function() require('telescope.builtin').lsp_dynamic_workspace_symbols() end, desc = "Navigate [s]ymbols in [w]orkspace" },
         }
     },
     {
