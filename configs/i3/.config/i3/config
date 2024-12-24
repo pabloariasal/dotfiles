@@ -51,6 +51,7 @@ for_window [class="Anki" title="Edit Current"] floating enable, move position ce
 #######################################################################
 # Key Bindings - Run Programs
 bindsym $mod+Return exec $terminal
+bindsym $mod+Ctrl+Return exec $terminal --class="__floating"
 bindsym $mod+b exec $browser
 bindsym $mod+Shift+b exec $browser --incognito
 bindsym $mod+p exec bemenu_run_wrapper -p "Run" -i
