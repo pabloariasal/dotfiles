@@ -6,7 +6,7 @@ fuzzy search current file,n,<leader><leader>
 fuzzy open clipboard,n,<leader>v
 fuzzy document symbols,n,<leader>sd
 fuzzy workspace symbols,n,<leader>sw
-quickfix toggle,n,<leader>tq
+quickfix list toggle,n,<leader>tq
 location list toggle,n,<leader>tl
 jump to end of line,n,<a-l>
 jump to beginning of line,n,<a-h>
