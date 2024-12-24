@@ -31,12 +31,16 @@ function fg-bg() {
 zle -N fg-bg
 bindkey '^Z' fg-bg
 
-function ensure_dots_dir {
+function ensure_dots_dir() {
   if [ "$(pwd)" != "$DOTFILES" ]; then
     echo "Error: must be in $DOTFILES directory!"
     return 1
   fi
   return 0
+}
+
+function nvim-help() {
+  nvim +"help $1" +'only'
 }
 
 ##########################
