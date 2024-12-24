@@ -1,0 +1,3 @@
+#!/bin/bash
+
+allacritty --class="__floating" -e "$1"

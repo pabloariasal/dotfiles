@@ -1,0 +1,3 @@
+#!/bin/bash
+
+open_in_floating_terminal "$DOTFILES"
