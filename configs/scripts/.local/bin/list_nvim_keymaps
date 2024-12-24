@@ -14,7 +14,7 @@ NC='\033[0m'  # No Color
 awk -F, -v YELLOW="$YELLOW" -v RED="$RED" -v GREEN="$GREEN" -v BLUE="$BLUE" -v NC="$NC" '{
     OFS="|";
         print GREEN $3 NC, YELLOW $1 NC, BLUE $2 NC;
-}' | column -t -s '|'
+}' | column -t -s '|' | bat -p
 
 duplicates=$(awk -F, '{print $3}' "${keymaps_file}" | sort | uniq -d)
 
