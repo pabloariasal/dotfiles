@@ -116,7 +116,7 @@ alias gcp='git cherry-pick'
 # Remove branches not present in the remotes anymore
 function gbcl() {
   git remote update --prune &&
-  git branch -vv | grep -vE '^[*+]' | awk '/: gone]/{print $1}' | xargs git branch -D
+  for branch in $(git for-each-ref --format '%(refname) %(upstream:track)' refs/heads | awk '$2 == "[gone]" {sub("refs/heads/", "", $1); print $1}'); do git branch -D $branch; done
 }
 
 # Deletes a branch in the remote
