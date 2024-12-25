@@ -22,7 +22,6 @@ source ~/.zsh/functions.zsh
 source ~/.zsh/archives.zsh
 source ~/.zsh/neovim_development.zsh
 
-
 # initialize haskell environment
 [ -f "${HOME}/.ghcup/env" ] && source "${HOME}/.ghcup/env"
 
@@ -35,7 +34,6 @@ if [ -n "$GREET" ]; then
   figlet "Welcome!"
   return 0
 fi
-
 
 if [ -z "$NO_LWD" ]; then
   # switch to last visited directory

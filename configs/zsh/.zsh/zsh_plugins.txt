@@ -8,4 +8,6 @@ zsh-users/zsh-syntax-highlighting
 zsh-users/zsh-autosuggestions
 pabloariasal/zfm
 hlissner/zsh-autopair
+
+# powerlevel10k supports promptinit, so it just need to be added to fpath and not sourced
 romkatv/powerlevel10k kind:fpath
