@@ -20,5 +20,10 @@ zstyle ':completion:*' completer _expand_alias _complete _ignored
 # case and hyphen insensitive matching
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z-_}={A-Za-z_-}' 'r:|=*' 'l:|=* r:|=*'
 
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+
 autoload -Uz compinit
 compinit
