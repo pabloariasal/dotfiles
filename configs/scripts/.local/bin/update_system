@@ -1,0 +1,13 @@
+#!/bin/zsh
+
+set -e
+
+figlet paru
+paru
+
+figlet flatpak
+flatpak update
+
+figlet antigen
+source ${HOME}/.antidote/antidote.zsh
+antidote update
