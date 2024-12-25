@@ -22,10 +22,6 @@ source ~/.zsh/functions.zsh
 source ~/.zsh/archives.zsh
 source ~/.zsh/neovim_development.zsh
 
-# prompt
-autoload -Uz promptinit && promptinit && prompt powerlevel10k
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # initialize haskell environment
 [ -f "${HOME}/.ghcup/env" ] && source "${HOME}/.ghcup/env"
@@ -47,3 +43,12 @@ if [ -z "$NO_LWD" ]; then
   # switch to last visited directory
   lwd
 fi
+
+# Prompt
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# prompt looks for themes installed in directories under fpath
+# themes are zsh functions with the name prompt_<theme>_setup
+# powerlevel10k installs a files called prompt_powerlevel10k_setup
+# that file sources powerlevel10k.zsh-theme
+autoload -Uz promptinit && promptinit && prompt powerlevel10k
