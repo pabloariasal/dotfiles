@@ -32,7 +32,6 @@ if [ -n "$GREET" ]; then
   neofetch
   cal -m -n 2 --color=always
   figlet "Welcome!"
-  return 0
 fi
 
 if [ -z "$NO_LWD" ]; then
