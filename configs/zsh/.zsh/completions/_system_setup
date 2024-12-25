@@ -1,0 +1,25 @@
+#compdef _system_setup system_setup
+
+local -a subcmds
+subcmds=(
+    'install_paru'
+    'install_wallpapers'
+    'install_nerd_fonts'
+    'install_scripts'
+    'install_pulseaudio'
+    'install_cpp_dev_tools'
+    'install_lua_dev_tools'
+    'install_keyboard_conf'
+    'enable_agent_service'
+    'install_command_line_goodies'
+    'install_devour'
+    'create_github_personal_ssh_key'
+    'install_greenclip'
+    'install_python_language_server'
+    'install_xorg'
+    'install_i3_wm'
+    'clone_repo'
+    'install_gdb_dashboard'
+    'setup_gdb'
+)
+_describe 'command' subcmds

@@ -41,7 +41,7 @@ there is now a directory `pabloariasal-dotfiles-xxx` containing installation scr
 
 ```sh
 cd pabloariasal-dotfiles-xxx
-./install install_xorg
+./system_setup install_xorg
 ```
 
 ### Setup xinit and zprofile
@@ -66,7 +66,7 @@ sudo pacman -S git
 
 ```sh
 cd pabloariasal-dotfiles-xxx
-./install install_i3_wm
+./system_setup install_i3_wm
 ```
 
 ## Install bemenu
@@ -81,7 +81,7 @@ Select option "x11"
 
 ```sh
 cd pabloariasal-dotfiles-xxx
-./install install_paru
+./system_setup install_paru
 ```
 
 ## Install google-chrome
@@ -111,7 +111,7 @@ Now we should be able to boot into i3-wm:
 ```sh
 sudo pacman -S xclip
 cd pabloariasal-dotfiles-xxx
-./install create_github_personal_ssh_key
+./system_setup create_github_personal_ssh_key
 ```
 
 ### Add ssh public key to github account
@@ -132,7 +132,7 @@ ssh-add ~/.ssh/github_personal
 
 ```sh
 cd pabloariasal-dotfiles-xxx
-./install clone_repo
+./system_setup clone_repo
 cd ..
 rm -rf pabloariasal-dotfiles-XXX
 ```
@@ -157,7 +157,7 @@ Close and reopen terminal
 rm ~/.xinitrc
 cd dotfiles
 install_config xorg
-./install install_keyboard_conf
+./system_setup install_keyboard_conf
 ```
 
 ## i3-wm configuration
@@ -175,7 +175,7 @@ Reload i3
 
 ```sh
 cd dotfiles
-./install install_nerd_fonts
+./system_setup install_nerd_fonts
 ```
 
 ## git Configuration
@@ -189,13 +189,13 @@ install_config git
 
 ```sh
 cd dotfiles
-./install install_scripts
+./system_setup install_scripts
 ```
 
 ## Install CLI Goodies
 
 ```sh
-./install install_command_line_goodies
+./system_setup install_command_line_goodies
 install_config vifm
 ```
 
@@ -224,7 +224,7 @@ install_config picom
 ```sh
 cd dotfiles
 install_config systemd
-./install enable_agent_service
+./system_setup enable_agent_service
 ```
 
 ## TLP
@@ -240,7 +240,7 @@ sudo systemctl enable tlp.service
 sudo pacman -S nitrogen
 cd dotfiles
 sag
-./install install_wallpapers
+./system_setup install_wallpapers
 ```
 
 Open nitrogen and add `~/wallpapers` as wallpaper directory (recursively), select a wallpaper.
@@ -256,7 +256,7 @@ sudo pacman -S htop
 ```sh
 sudo pacman -S zathura zathura-pdf-mupdf eog
 cd dotfiles
-./install install_devour
+./system_setup install_devour
 ```
 
 `iv` and `za` in command line can be use to open PDFs and images!
@@ -264,7 +264,7 @@ cd dotfiles
 ## Clipboard Manager
 
 ```sh
-./install install_greenclip
+./system_setup install_greenclip
 install_config greenclip
 ```
 
@@ -290,7 +290,7 @@ sudo pacman -S brightnessctl playerctl
 ## Pulseaudio
 
 ```sh
-./install install_pulseaudio
+./system_setup install_pulseaudio
 ```
 
 ## Flatpak
@@ -320,22 +320,22 @@ flatpak install anki
 ```sh
 cd dotfiles
 install_config gdb
-./install install_cpp_dev_tools
-./install setup_gdb
+./system_setup install_cpp_dev_tools
+./system_setup setup_gdb
 ```
 
 ### Python
 
 ```sh
 cd dotfiles
-./install install_python_language_server
+./system_setup install_python_language_server
 ```
 
 ### Lua
 
 ```sh
 cd dotfiles
-./install install_lua_dev_tools
+./system_setup install_lua_dev_tools
 ```
 
 ### Ruby

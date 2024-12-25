@@ -135,7 +135,7 @@ function setup_gdb() {
 
 _get_all_functions() {
     script_dir="$( cd "$( dirname "${(%):-%x}" )" && pwd )"
-    cat "${script_dir}/install" | grep '^function' | awk '{print $2}' | tr -d '()'
+    cat "${script_dir}/system_setup" | grep '^function' | awk '{print $2}' | tr -d '()'
 }
 
 if [[ $# -eq 0 || "$*" == *"--help"* ]]; then

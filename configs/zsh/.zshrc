@@ -10,6 +10,9 @@ if [[ -z "$LS_COLORS" ]]; then
   (( $+commands[dircolors] )) && eval "$(dircolors -b)"
 fi
 
+# Add custom completions to fpath
+fpath+=( ~/.zsh/completions )
+
 source ~/.zsh/plugins.zsh
 source ~/.zsh/fzf.zsh
 source ~/.zsh/history.zsh
