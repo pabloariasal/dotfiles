@@ -27,3 +27,6 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 
 autoload -Uz compinit
 compinit
+
+# complete hidden files
+_comp_options+=(globdots)
