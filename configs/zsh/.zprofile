@@ -1,7 +1,8 @@
 # Source Environment Variables
 if [ -f ~/.env ]; then
-    . ~/.env
+    source ~/.env
 fi
+
 setrrate
 
 # Start x server
