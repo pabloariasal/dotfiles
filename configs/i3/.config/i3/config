@@ -288,3 +288,4 @@ exec_always --no-startup-id nitrogen --restore
 exec_always --no-startup-id xss-lock --transfer-sleep-lock -- lock-screen
 exec_always --no-startup-id gpaste-client start
 exec_always --no-startup-id nm-applet
+exec --no-startup-id NO_LWD=1 GREET=1 alacritty

@@ -17,4 +17,3 @@ i3-msg 'exec --no-startup-id gcal'
 sleep 5
 
 i3-msg 'workspace 1:1'
-i3-msg 'exec --no-startup-id NO_LWD=YES GREET=1 alacritty'
