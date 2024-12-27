@@ -112,7 +112,7 @@ bindsym $mod+slash exec toggle_picom
 
 #######################################################################
 # System Mode
-set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (s) shutdown
+set $mode_system System (l) lock, (e) logout, (u) suspend, (h) hibernate, (r) reboot, (s) shutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id system-control "lock", mode "default"
     bindsym e exec --no-startup-id system-control "logout", mode "default"
