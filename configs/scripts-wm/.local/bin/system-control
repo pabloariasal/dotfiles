@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 chosen="$1"
 case $chosen in
     "shutdown")
@@ -12,14 +14,18 @@ case $chosen in
         lock-screen
         ;;
     "suspend")
-        lock-screen &&
         systemctl suspend
         ;;
     "hibernate")
-        lock-screen &&
         systemctl hibernate
+        ;;
+    "suspend-then-hibernate")
+        systemctl suspend-then-hibernate
         ;;
     "logout")
         i3-msg exit
         ;;
+    *)
+        echo "unknown option: $chosen"
+        exit 1
 esac

@@ -112,12 +112,13 @@ bindsym $mod+slash exec toggle_picom
 
 #######################################################################
 # System Mode
-set $mode_system System (l) lock, (e) logout, (u) suspend, (h) hibernate, (r) reboot, (s) shutdown
+set $mode_system System (l) lock, (e) logout, (u) suspend, (h) hibernate, (t) suspend-then-hibernate (r) reboot, (s) shutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id system-control "lock", mode "default"
     bindsym e exec --no-startup-id system-control "logout", mode "default"
     bindsym u exec --no-startup-id system-control "suspend", mode "default"
     bindsym h exec --no-startup-id system-control "hibernate", mode "default"
+    bindsym t exec --no-startup-id system-control "suspend-then-hibernate", mode "default"
     bindsym r exec --no-startup-id system-control "reboot", mode "default"
     bindsym s exec --no-startup-id system-control "shutdown", mode "default"
 
@@ -285,6 +286,7 @@ bar {
 # Auto Start Services
 exec_always --no-startup-id launch-picom
 exec_always --no-startup-id nitrogen --restore
+# lock before suspend or hibernate events
 exec_always --no-startup-id xss-lock --transfer-sleep-lock -- lock-screen
 exec_always --no-startup-id gpaste-client start
 exec_always --no-startup-id nm-applet
