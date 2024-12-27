@@ -54,7 +54,8 @@ function install_lua_dev_tools() {
 
 function install_keyboard_conf()
 {
-    sudo ln -sv ${DOTFILES}/extra/00-keyboard.conf /etc/X11/xorg.conf.d/
+    sudo ln -sv ${DOTFILES}/xorg_extra_config/00-keyboard.conf /etc/X11/xorg.conf.d/
+    sudo ln -sv ${DOTFILES}/xorg_extra_config/10-serverflags.conf /etc/X11/xorg.conf.d/
 }
 
 function enable_agent_service()
