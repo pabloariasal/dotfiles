@@ -1,8 +1,11 @@
 return {
   'stevearc/conform.nvim',
   opts = {
+    formatters_by_ft = {
+      json = { 'jq' }
+    },
     default_format_opts = {
-      lsp_format = "prefer",
+      lsp_format = "fallback",
     },
   },
   config = function(_, opts)
@@ -10,7 +13,7 @@ return {
     vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"
   end,
   keys = {
-    { "<leader>f", function() require('conform').format({async = true}) end, desc = "[Format] document" },
+    { "<leader>f", function() require('conform').format({ async = true }) end, desc = "[Format] document" },
   },
   lazy = false
 }
