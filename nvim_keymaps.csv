@@ -58,7 +58,10 @@ harpoon jump previous,n,<leader>jp
 harpoon clear,n,<leader>jc
 snippet expand,n,<c-space>
 copilot apply,n,<tab>
-split/join node under cursor,n,<leader>k
+split/join node under cursor,n,gS
+duplicate text,n,gm
+exchange text,n,gx
+sort text,n,gs
 swap parameter with next one,n,<leader>sn
 swap parameter with prev one,n,<leader>sp
 maximize split,n,<leader>l

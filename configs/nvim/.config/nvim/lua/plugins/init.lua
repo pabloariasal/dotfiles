@@ -4,7 +4,6 @@ return {
     'tpope/vim-sleuth',
     'tpope/vim-eunuch',
     'tpope/vim-unimpaired',
-    'vim-scripts/ReplaceWithRegister',
     {
         'romainl/vim-qf',
         init = function()
