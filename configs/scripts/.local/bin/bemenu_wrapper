@@ -4,16 +4,15 @@ bemenu \
     --vim-esc-exits \
     --fn 'JetBrainsMono Nerd Font Medium 15' \
     --prefix '👉' \
-    --fb "#24273a" \
-    --ff "#8bd5ca" \
-    --nb "#24273a" \
-    --nf "#f4dbd6" \
-    --tb "#24273a" \
-    --hb "#24273a" \
-    --tf "#c6a0f6" \
-    --hf "#8aadf4" \
-    --nf "#f4dbd6" \
-    --af "#f4dbd6" \
-    --ab "#24273a" \
-    --bdr "#c6a0f6" \
+    --fb "#282828"\
+    --ff "#ebdbb2"\
+    --nb "#282828"\
+    --nf "#ebdbb2"\
+    --tb "#282828"\
+    --hb "#282828"\
+    --tf "#fb4934"\
+    --hf "#fabd2f"\
+    --nf "#ebdbb2"\
+    --af "#ebdbb2" \
+    --ab "#282828"\
     "$@"
