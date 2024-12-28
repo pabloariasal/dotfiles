@@ -39,7 +39,6 @@ LSP rename symbol,n,<F2>
 LSP code action,n,<leader>m
 LSP references,n,<leader>r
 LSP hover ,n,K
-LSP signature help,i,<c-h>
 format document,n,<leader>f
 replace text object with register,n,gr
 replace line with register,nx,grr

@@ -18,7 +18,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     nmap('<F2>', vim.lsp.buf.rename, "Rename symbol")
     nmap('<leader>m', vim.lsp.buf.code_action, "Code Action", {'n', 'v'})
     nmap('<leader>r', vim.lsp.buf.references, "Open [R]eferences")
-    nmap('<c-h>', vim.lsp.buf.signature_help, "Signature help", 'i')
+    -- nmap('<c-h>', vim.lsp.buf.signature_help, "Signature help", 'i')
 
   -- Unset 'formatexpr', as this is handled by conform.nvim
     vim.bo[ev.buf].formatexpr = nil
