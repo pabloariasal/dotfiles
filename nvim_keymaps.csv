@@ -38,7 +38,7 @@ LSP jump to type definition,n,gy
 LSP rename symbol,n,<F2>
 LSP code action,n,<leader>m
 LSP references,n,<leader>r
-LSP format,n,<leader>f
+format document,n,<leader>f
 LSP hover/Fold hover,n,K
 LSP signature help,i,<c-h>
 replace text object with register,n,gr
