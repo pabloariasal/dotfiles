@@ -19,6 +19,7 @@ go back to insert mode,i,jj
 close current buffer,n,<leader>c
 open file explorer,n,<leader>e
 grep for word,n,<leader>gn
+grep for word including hidden files,n,<leader>gh
 grep for word under cursor,n,<leader>gc
 resize window,n,<c-arrow>
 navigate window,n,<c-hjkl>

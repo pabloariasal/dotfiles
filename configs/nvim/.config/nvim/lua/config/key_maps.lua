@@ -23,6 +23,7 @@ vim.keymap.set('n', '<leader>c', "<cmd>bp <bar> bd #<cr>", { desc = 'close the c
 vim.keymap.set('n', '<leader>e', '<cmd>EditVifm<cr>', { desc = 'open file explorer' })
 -- grepping
 vim.keymap.set('n', '<leader>gn', ':<c-u>grep! ', { desc = 'grep for word' })
+vim.keymap.set('n', '<leader>gh', ':<c-u>grep! --hidden ', { desc = 'grep for word including hidden files' })
 vim.keymap.set('n', '<leader>gc', ':<c-u>grep! <C-r>=expand("<cword>")<cr>', { desc = 'grep for word under cursor' })
 -- resize splits
 vim.keymap.set('n', '<c-left>', '<cmd>vertical resize +3<cr>', { desc = 'resize split to the left' })
