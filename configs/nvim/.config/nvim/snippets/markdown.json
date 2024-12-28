@@ -1,0 +1,50 @@
+{
+    "i": {
+        "prefix": "i",
+        "descr": "italics",
+        "body": "*$1*"
+    },
+    "b": {
+        "prefix": "b",
+        "descr": "bold",
+        "body": "**$1**"
+    },
+    "bi": {
+        "prefix": "bi",
+        "descr": "bold italics",
+        "body": "***$1***"
+    },
+    "link": {
+        "prefix": "link",
+        "descr": "Link to something",
+        "body": "[$1]($0)"
+    },
+    "c": {
+        "prefix": "c",
+        "descr": "Inline Code",
+        "body": "`$1`"
+    },
+    "cb": {
+        "prefix": "cb",
+        "descr": "codeblock",
+        "body": [
+            "```$1",
+            "$0",
+            "```"
+        ]
+    },
+    "img": {
+        "prefix": "img",
+        "descr": "image",
+        "body": "![]($0)"
+    },
+    "cbs": {
+        "prefix": "cbs",
+        "descr": "code block shell",
+        "body": [
+            "```sh",
+            "$0",
+            "```"
+        ]
+    }
+}

@@ -6,20 +6,15 @@ snippets_folder="${DOTFILES}/configs/nvim/.config/nvim/snippets"
 
 function print_snippets()
 {
-    if [ "$1" = "_" ]; then
-        echo "--all--"
-    else
-        echo "--$1--"
-    fi
-    rg --no-line-number '^snippet\s+(\w+)\s+"(.+)"' -or '$1-$2' "${snippets_folder}/${1}.snippets" \
-        | sort \
-        | column -t -s '-'
+    echo -e "--$1--"
+    local snippet_file="${snippets_folder}/${1}.json"
+    jq -r 'to_entries[] | "\(.value.prefix)-\(.value.descr)"' "$snippet_file" | sort | column -t -s '-'
 }
 
-
 if [ $# -eq 0 ]; then
-    echo "Avaliable snippets"
-    ls -1 "$snippets_folder" | sed 's/\.snippets$//' | sed 's/_/all/'
+    echo "Avaliable snippets:"
+    echo
+    ls -1 "$snippets_folder" | sed 's/\.json$//'
     exit 0
 fi
 
@@ -27,8 +22,6 @@ filetype="$1"
 
 if [ "$filetype" = "sh" ]; then
     print_snippets "bash"
-elif [ "$filetype" = "all" ]; then
-    print_snippets "_"
 else
     print_snippets "$filetype"
 fi
@@ -39,8 +32,4 @@ fi
 
 if [ "$filetype" = "html" ]; then
     print_snippets 'reveal'
-fi
-
-if [ "$filetype" != "all" ] && [ "$filetype" != "_" ]; then
-    print_snippets '_'
 fi

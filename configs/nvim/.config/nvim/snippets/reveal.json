@@ -1,0 +1,62 @@
+{
+    "pf": {
+        "prefix": "pf",
+        "descr": "paragraph fragment",
+        "body": "<p class=\"fragment\">$1</p>"
+    },
+    "cb": {
+        "prefix": "cb",
+        "descr": "code block",
+        "body": [
+            "<pre><code class=\"hljs $1\" data-trim>",
+            "\t$2",
+            "</code></pre>"
+        ]
+    },
+    "cbh": {
+        "prefix": "cbh",
+        "descr": "code block with highlight",
+        "body": [
+            "<pre><code data-trim data-line-numbers=\"|3,4|8\">",
+            "\t$1",
+            "</code></pre>"
+        ]
+    },
+    "cba": {
+        "prefix": "cba",
+        "descr": "code block with animation",
+        "body": [
+            "<pre data-id=\"code-animation\"><code data-trim data-line-numbers=\"|3,4|8\">",
+            "\t$1",
+            "</code></pre>"
+        ]
+    },
+    "fr": {
+        "prefix": "fr",
+        "descr": "make fragment",
+        "body": "class=\"fragment\""
+    },
+    "st": {
+        "prefix": "st",
+        "descr": "stretch",
+        "body": "class=\"r-stretch\""
+    },
+    "lf": {
+        "prefix": "lf",
+        "descr": "fragmented list",
+        "body": [
+            "<ul>",
+            "  <li class=\"fragment\">$1</li>",
+            "  <li class=\"fragment\"></li>",
+            "</ul>"
+        ]
+    },
+    "ft": {
+        "prefix": "ft",
+        "descr": "fit text",
+        "body": [
+            "class=\"r-fit-text\"",
+            ""
+        ]
+    }
+}

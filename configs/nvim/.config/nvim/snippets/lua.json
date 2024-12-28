@@ -1,0 +1,144 @@
+{
+    "p": {
+        "prefix": "p",
+        "descr": "print",
+        "body": "print($1)"
+    },
+    "fa": {
+        "prefix": "fa",
+        "descr": "anonymous function",
+        "body": "function($1) $0 end"
+    },
+    "fn": {
+        "prefix": "fn",
+        "descr": "named function",
+        "body": [
+            "function $1($2)",
+            "\t$3",
+            "end"
+        ]
+    },
+    "fm": {
+        "prefix": "fm",
+        "descr": "function in module",
+        "body": [
+            "function M.$1($2)",
+            "\t$0",
+            "end"
+        ]
+    },
+    "fl": {
+        "prefix": "fl",
+        "descr": "local function",
+        "body": [
+            "local function $1($2)",
+            "\t$0",
+            "end"
+        ]
+    },
+    "mod": {
+        "prefix": "mod",
+        "descr": "module",
+        "body": [
+            "local M = {}",
+            "\t$0",
+            "return M"
+        ]
+    },
+    "rp": {
+        "prefix": "rp",
+        "descr": "return plain",
+        "body": "return"
+    },
+    "re": {
+        "prefix": "re",
+        "descr": "return",
+        "body": "return $1"
+    },
+    "if": {
+        "prefix": "if",
+        "descr": "if",
+        "body": [
+            "if $1 then",
+            "\t$0",
+            "end"
+        ]
+    },
+    "ife": {
+        "prefix": "ife",
+        "descr": "if else",
+        "body": [
+            "if $1 then",
+            "\t$2",
+            "else",
+            "\t$0",
+            "end"
+        ]
+    },
+    "for": {
+        "prefix": "for",
+        "descr": "for loop generic (iterator)",
+        "body": [
+            "for $1 in $2 do",
+            "\t$0",
+            "end"
+        ]
+    },
+    "fi": {
+        "prefix": "fi",
+        "descr": "for numeric",
+        "body": [
+            "for ${1:i}=$2,$3 do",
+            "\t$0",
+            "end"
+        ]
+    },
+    "fip": {
+        "prefix": "fip",
+        "descr": "for ipairs",
+        "body": [
+            "for ${1:_},${2:v} in ipairs($3) do",
+            "\t$0",
+            "end"
+        ]
+    },
+    "fp": {
+        "prefix": "fp",
+        "descr": "for pairs",
+        "body": [
+            "for k,v in pairs($1) do",
+            "\t$0",
+            "end"
+        ]
+    },
+    "l": {
+        "prefix": "l",
+        "descr": "local",
+        "body": "local $0"
+    },
+    "lv": {
+        "prefix": "lv",
+        "descr": "local variable",
+        "body": "local $1 = $0"
+    },
+    "as": {
+        "prefix": "as",
+        "descr": "assert",
+        "body": "assert($1)"
+    },
+    "asm": {
+        "prefix": "asm",
+        "descr": "assert message",
+        "body": "assert($1, $2)"
+    },
+    "let": {
+        "prefix": "let",
+        "descr": "local empty table",
+        "body": "local ${1:result} = {}"
+    },
+    "pi": {
+        "prefix": "pi",
+        "descr": "print inspect",
+        "body": "print(inspect($1))"
+    }
+}

@@ -1,0 +1,128 @@
+{
+    "ul": {
+        "prefix": "ul",
+        "descr": "unordered list",
+        "body": [
+            "<ul>",
+            "\t<li>$1</li>",
+            "</ul>"
+        ]
+    },
+    "link": {
+        "prefix": "link",
+        "descr": "link",
+        "body": "<a href=\"$1\">$2</a>"
+    },
+    "p": {
+        "prefix": "p",
+        "descr": "paragraph",
+        "body": "<p>$1</p>"
+    },
+    "h1": {
+        "prefix": "h1",
+        "descr": "h1",
+        "body": "<h1>$1</h1>"
+    },
+    "h2": {
+        "prefix": "h2",
+        "descr": "h2",
+        "body": "<h2>$1</h2>"
+    },
+    "h3": {
+        "prefix": "h3",
+        "descr": "h3",
+        "body": "<h3>$1</h3>"
+    },
+    "h4": {
+        "prefix": "h4",
+        "descr": "h4",
+        "body": "<h4>$1</h4>"
+    },
+    "img": {
+        "prefix": "img",
+        "descr": "image",
+        "body": "<img src=\"$1\">"
+    },
+    "sec": {
+        "prefix": "sec",
+        "descr": "section",
+        "body": [
+            "<section>",
+            "\t$1",
+            "</section>"
+        ]
+    },
+    "co": {
+        "prefix": "co",
+        "descr": "code",
+        "body": "<code>$1</code>"
+    },
+    "li": {
+        "prefix": "li",
+        "descr": "list item",
+        "body": "<li>$1</li>"
+    },
+    "bq": {
+        "prefix": "bq",
+        "descr": "blockquote",
+        "body": [
+            "<blockquote>",
+            "\t$1",
+            "</blockquote>"
+        ]
+    },
+    "lt": {
+        "prefix": "lt",
+        "descr": "less than <",
+        "body": "&lt;"
+    },
+    "gt": {
+        "prefix": "gt",
+        "descr": "greater than >",
+        "body": "&gt;"
+    },
+    "fs": {
+        "prefix": "fs",
+        "descr": "font small attribute",
+        "body": "style=\"font-size:small;\""
+    },
+    "it": {
+        "prefix": "it",
+        "descr": "Italic",
+        "body": "<em>$1</em>"
+    },
+    "bo": {
+        "prefix": "bo",
+        "descr": "bold",
+        "body": "<b>$1</b>"
+    },
+    "tab": {
+        "prefix": "tab",
+        "descr": "table",
+        "body": [
+            "<table>",
+            "   <thead>",
+            "\t <tr>",
+            "\t   <th>$1</th>",
+            "\t   <th>$2</th>",
+            "\t   <th>$3</th>",
+            "\t </tr>",
+            "   </thead>",
+            "   <tbody>",
+            "\t <tr>",
+            "\t   <td></td>",
+            "\t   <td></td>",
+            "\t   <td></td>",
+            "\t   <td></td>",
+            "\t </tr>",
+            "\t <tr>",
+            "\t   <td></td>",
+            "\t   <td></td>",
+            "\t   <td></td>",
+            "\t   <td></td>",
+            "\t </tr>",
+            "   </tbody>",
+            " </table>"
+        ]
+    }
+}

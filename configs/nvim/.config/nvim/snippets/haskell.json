@@ -1,0 +1,88 @@
+{
+    "dr": {
+        "prefix": "dr",
+        "descr": "data record syntax",
+        "body": "data $1 = $1 {$2} deriving (Eq, Show)"
+    },
+    "da": {
+        "prefix": "da",
+        "descr": "algebraic data type",
+        "body": "data $1 = $2 deriving (Eq, Show)"
+    },
+    "f": {
+        "prefix": "f",
+        "descr": "function",
+        "body": [
+            "$1 :: $2 -> $3",
+            "$1 = ${4:undefined}"
+        ]
+    },
+    "f0": {
+        "prefix": "f0",
+        "descr": "function 0 arguments",
+        "body": [
+            "$1 :: $2",
+            "$1 = ${3:undefined}"
+        ]
+    },
+    "f1": {
+        "prefix": "f1",
+        "descr": "function 1 arguments",
+        "body": [
+            "$1 :: $2 -> $3",
+            "$1 = ${4:undefined}"
+        ]
+    },
+    "f2": {
+        "prefix": "f2",
+        "descr": "function 2 arguments",
+        "body": [
+            "$1 :: $2 -> $3 -> $4",
+            "$1 = ${5:undefined}"
+        ]
+    },
+    "id": {
+        "prefix": "id",
+        "descr": "import Data",
+        "body": [
+            "import Data.$1 ($1)",
+            "import qualified Data.$1 as $2"
+        ]
+    },
+    "is": {
+        "prefix": "is",
+        "descr": "import some",
+        "body": "import $1 ($2)"
+    },
+    "iq": {
+        "prefix": "iq",
+        "descr": "import qualified",
+        "body": "import qualified $1"
+    },
+    "i": {
+        "prefix": "i",
+        "descr": "simple import",
+        "body": "import $1"
+    },
+    "ca": {
+        "prefix": "ca",
+        "descr": "case of",
+        "body": [
+            "case $1 of",
+            "\t$2 -> $3"
+        ]
+    },
+    "li": {
+        "prefix": "li",
+        "descr": "let in",
+        "body": [
+            "let $1 = $2",
+            "in $3"
+        ]
+    },
+    "mo": {
+        "prefix": "mo",
+        "descr": "module declaration",
+        "body": "module $1 () where"
+    }
+}

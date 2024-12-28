@@ -1,0 +1,79 @@
+{
+    "it": {
+        "prefix": "it",
+        "descr": "include gtest",
+        "body": "#include <gtest/gtest.h>"
+    },
+    "test": {
+        "prefix": "test",
+        "descr": "test case",
+        "body": [
+            "TEST($1, $2)",
+            "{",
+            "\t$0",
+            "}"
+        ]
+    },
+    "testf": {
+        "prefix": "testf",
+        "descr": "fixture test",
+        "body": [
+            "TEST_F($1, $2)",
+            "{",
+            "\t$0",
+            "}"
+        ]
+    },
+    "fclass": {
+        "prefix": "fclass",
+        "descr": "fixture class",
+        "body": [
+            "class $1 : public ::testing::Test",
+            "{",
+            "protected:",
+            "\t$1()",
+            "\t{",
+            "\t}",
+            "\t~$1()",
+            "\t{",
+            "\t}",
+            "\tvoid SetUp() override",
+            "\t{",
+            "\t}",
+            "\tvoid TearDown() override",
+            "\t{",
+            "\t}",
+            "};"
+        ]
+    },
+    "ptest": {
+        "prefix": "ptest",
+        "descr": "parameterized test fixture",
+        "body": [
+            "struct $1 {",
+            "",
+            "};",
+            "",
+            "std::ostream& operator<<(std::ostream& os, const $1& data)",
+            "{",
+            "\t(void) data;",
+            "\treturn os;",
+            "}",
+            "",
+            "class ${2:$1Test} : public ::testing::TestWithParam<$1> {",
+            "};",
+            "",
+            "TEST_P($2, TestCaseName) {",
+            "}",
+            "",
+            "INSTANTIATE_TEST_SUITE_P(InstantiationName,",
+            "\t    $2,",
+            "\t    ::testing::Values());"
+        ]
+    },
+    "dis": {
+        "prefix": "dis",
+        "descr": "disable test",
+        "body":  "DISABLED_" 
+    }
+}

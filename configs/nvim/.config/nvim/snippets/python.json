@@ -1,0 +1,46 @@
+{
+    "pdb": {
+        "prefix": "pdb",
+        "descr": "debugger stack trace",
+        "body": "__import__('pdb').set_trace()"
+    },
+    "sb": {
+        "prefix": "sb",
+        "descr": "shebang",
+        "body": "#!/usr/bin/python3"
+    },
+    "cla": {
+        "prefix": "cla",
+        "descr": "class",
+        "body": [
+            "class $1:",
+            "\tdef __init__(self):",
+            "\t\tpass"
+        ]
+    },
+    "cm": {
+        "prefix": "cm",
+        "descr": "context manager operations",
+        "body": [
+            "def __enter__(self):",
+            "\treturn self",
+            "def __exit__(self, type, value, traceback):",
+            "\tpass"
+        ]
+    },
+    "tc": {
+        "prefix": "tc",
+        "descr": "try catch",
+        "body": [
+            "try:",
+            "\t$0",
+            "except:",
+            "\tprint(\"An exception occurred\")"
+        ]
+    },
+    "ifm": {
+        "prefix": "ifm",
+        "descr": "if main",
+        "body": "if __name__ == \"__main__\":"
+    }
+}

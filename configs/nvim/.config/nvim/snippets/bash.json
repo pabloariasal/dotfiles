@@ -1,0 +1,21 @@
+{
+    "sb": {
+        "prefix": "sb",
+        "descr": "shebang",
+        "body": [
+            "#!/bin/bash",
+            "",
+            "$0"
+        ]
+    },
+    "f": {
+        "prefix": "f",
+        "descr": "function",
+        "body": [
+            "function() {",
+            "\t$0",
+            "}",
+            ""
+        ]
+    }
+}

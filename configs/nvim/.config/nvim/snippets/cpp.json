@@ -1,0 +1,389 @@
+{
+    "po": {
+        "prefix": "po",
+        "descr": "pragma once directive",
+        "body": "#pragma once"
+    },
+    "cla": {
+        "prefix": "cla",
+        "descr": "class",
+        "body": [
+            "class $1",
+            "{",
+            "public:",
+            "\t$0",
+            "private:",
+            "};"
+        ]
+    },
+    "str": {
+        "prefix": "str",
+        "descr": "struct",
+        "body": [
+            "struct $1",
+            "{",
+            "\t$0",
+            "};"
+        ]
+    },
+    "la": {
+        "prefix": "la",
+        "descr": "lambda",
+        "body": "[]($1){$0}"
+    },
+    "l1": {
+        "prefix": "l1",
+        "descr": "one argument generic lamdba",
+        "body": "[](const auto& $1) { $0 }"
+    },
+    "l2": {
+        "prefix": "l2",
+        "descr": "two argument generic lamdba",
+        "body": "[](const auto& $1, const auto& $2) { $0 }"
+    },
+    "iq": {
+        "prefix": "iq",
+        "descr": "include quotes",
+        "body": "#include \"$1\""
+    },
+    "ib": {
+        "prefix": "ib",
+        "descr": "include brackets",
+        "body": "#include <$1>"
+    },
+    "iv": {
+        "prefix": "iv",
+        "descr": "include vector",
+        "body": "#include <vector>"
+    },
+    "ii": {
+        "prefix": "ii",
+        "descr": "include iostream",
+        "body": "#include <iostream>"
+    },
+    "is": {
+        "prefix": "is",
+        "descr": "include string",
+        "body": "#include <string>"
+    },
+    "io": {
+        "prefix": "io",
+        "descr": "include optional",
+        "body": "#include <optional>"
+    },
+    "im": {
+        "prefix": "im",
+        "descr": "include memory",
+        "body": "#include <memory>"
+    },
+    "main": {
+        "prefix": "main",
+        "descr": "main() (main)",
+        "body": [
+            "int main(int argc, char *argv[])",
+            "{",
+            "\t$0",
+            "\treturn 0;",
+            "}"
+        ]
+    },
+    "fr": {
+        "prefix": "fr",
+        "descr": "for range loop",
+        "body": [
+            "for ($1 : $2)",
+            "{",
+            "$0",
+            "}"
+        ]
+    },
+    "fi": {
+        "prefix": "fi",
+        "descr": "for counter",
+        "body": [
+            "for (int i = 0; i < $1; ++i)",
+            "{",
+            "\t$0",
+            "}"
+        ]
+    },
+    "ns": {
+        "prefix": "ns",
+        "descr": "namespace",
+        "body": [
+            "namespace $1",
+            "{",
+            "$0",
+            "}"
+        ]
+    },
+    "nsa": {
+        "prefix": "nsa",
+        "descr": "anonymous namespace",
+        "body": [
+            "namespace",
+            "{",
+            "$0",
+            "}"
+        ]
+    },
+    "cout": {
+        "prefix": "cout",
+        "descr": "std::cout",
+        "body": "std::cout << $1 << std::endl;"
+    },
+    "if": {
+        "prefix": "if",
+        "descr": "if clause",
+        "body": [
+            "if ($1)",
+            "{",
+            "\t$0",
+            "}"
+        ]
+    },
+    "el": {
+        "prefix": "el",
+        "descr": "else clause",
+        "body": [
+            "else {",
+            "\t$0",
+            "}"
+        ]
+    },
+    "fdef": {
+        "prefix": "fdef",
+        "descr": "function definition",
+        "body": [
+            "auto $1($2) -> ${3:void}",
+            "{",
+            "\t$0",
+            "}"
+        ]
+    },
+    "fdec": {
+        "prefix": "fdec",
+        "descr": "function declaration",
+        "body": "auto $1($2) -> ${0:void};"
+    },
+    "mdef": {
+        "prefix": "mdef",
+        "descr": "member function definition",
+        "body": [
+            "auto $1::$2($3) -> ${4:void}",
+            "{",
+            "\t$0",
+            "}"
+        ]
+    },
+    "todo": {
+        "prefix": "todo",
+        "descr": "TODO",
+        "body": "// TODO: $0"
+    },
+    "vc": {
+        "prefix": "vc",
+        "descr": "void cast",
+        "body": "(void) $0;"
+    },
+    "ve": {
+        "prefix": "ve",
+        "descr": "std::vector",
+        "body": "std::vector<$1>"
+    },
+    "fp": {
+        "prefix": "fp",
+        "descr": "std::filesystem::path",
+        "body": "std::filesystem::path"
+    },
+    "up": {
+        "prefix": "up",
+        "descr": "std::unique_ptr",
+        "body": "std::unique_ptr<$1>"
+    },
+    "mun": {
+        "prefix": "mun",
+        "descr": "std::make_unique",
+        "body": "std::make_unique<$1>($0)"
+    },
+    "sp": {
+        "prefix": "sp",
+        "descr": "std::shared_ptr",
+        "body": "std::shared_ptr<$1>"
+    },
+    "msa": {
+        "prefix": "msa",
+        "descr": "std::make_shared",
+        "body": "std::make_shared<$1>($0)"
+    },
+    "st": {
+        "prefix": "st",
+        "descr": "std::string",
+        "body": "std::string"
+    },
+    "re": {
+        "prefix": "re",
+        "descr": "return",
+        "body": "return ${1:\\{\\}};"
+    },
+    "cr": {
+        "prefix": "cr",
+        "descr": "const reference",
+        "body": "const $1& $0"
+    },
+    "ad": {
+        "prefix": "ad",
+        "descr": "auto variable declaration",
+        "body": "auto $1 = $2;"
+    },
+    "ar": {
+        "prefix": "ar",
+        "descr": "auto reference",
+        "body": "auto& $0"
+    },
+    "ca": {
+        "prefix": "ca",
+        "descr": "const auto",
+        "body": "const auto $0"
+    },
+    "car": {
+        "prefix": "car",
+        "descr": "const auto reference",
+        "body": "const auto& $0"
+    },
+    "cap": {
+        "prefix": "cap",
+        "descr": "const auto pointer",
+        "body": "const auto* $0"
+    },
+    "sci": {
+        "prefix": "sci",
+        "descr": "static cast int",
+        "body": "static_cast<int>($1)"
+    },
+    "sc": {
+        "prefix": "sc",
+        "descr": "static cast",
+        "body": "static_cast<$1>($2)"
+    },
+    "be": {
+        "prefix": "be",
+        "descr": "begin end iterator pair",
+        "body": "$1.begin(), $1.end()"
+    },
+    "cbe": {
+        "prefix": "cbe",
+        "descr": "begin end const iterator pair",
+        "body": "$1.cbegin(), $1.cend()"
+    },
+    "mu": {
+        "prefix": "mu",
+        "descr": "maybe_unused",
+        "body": "[[maybe_unused]]"
+    },
+    "nd": {
+        "prefix": "nd",
+        "descr": "nodiscard",
+        "body": "[[nodiscard]]"
+    },
+    "do": {
+        "prefix": "do",
+        "descr": "default operations",
+        "body": [
+            "$1(const $1&) = delete;",
+            "$1& operator=(const $1&) = delete;",
+            "$1($1&&) = delete;",
+            "$1& operator=($1&&) = delete;"
+        ]
+    },
+    "dot": {
+        "prefix": "dot",
+        "descr": "default operations trailing return type",
+        "body": [
+            "$1(const $1&) = delete;",
+            "auto operator=(const $1&) -> $1& = delete;",
+            "$1($1&&) = delete;",
+            "auto operator=($1&&) -> $1& = delete;"
+        ]
+    },
+    "ig": {
+        "prefix": "ig",
+        "descr": "include guard",
+        "body": [
+            "#ifndef $1_H_",
+            "#define $1_H_",
+            "#endif"
+        ]
+    },
+    "doc": {
+        "prefix": "doc",
+        "descr": "doxygen doc",
+        "body": [
+            "/**",
+            "* @brief $0",
+            "*/"
+        ]
+    },
+    "mi": {
+        "prefix": "mi",
+        "descr": "std::chrono::milliseconds",
+        "body": "std::chrono::milliseconds"
+    },
+    "mv": {
+        "prefix": "mv",
+        "descr": "std::move",
+        "body": "std::move($0)"
+    },
+    "op": {
+        "prefix": "op",
+        "descr": "std::optional",
+        "body": "std::optional<$1>"
+    },
+    "oo": {
+        "prefix": "oo",
+        "descr": "define std::ostream operator",
+        "body": [
+            "inline auto operator<<(std::ostream& os, const $1& value) -> std::ostream&",
+            "{",
+            "\tos << $0;",
+            "\treturn os;",
+            "}"
+        ]
+    },
+    "eo": {
+        "prefix": "eo",
+        "descr": "define equality operations",
+        "body": [
+            "inline auto operator==(const $1& lhs, const $1& rhs) -> bool",
+            "{",
+            "\treturn $0;",
+            "}",
+            "",
+            "inline auto operator!=(const $1& lhs, const $1& rhs) -> bool",
+            "{",
+            "\treturn !(lhs == rhs);",
+            "}"
+        ]
+    },
+    "tc": {
+        "prefix": "tc",
+        "descr": "try catch block",
+        "body": [
+            "try",
+            "{",
+            "\t$2",
+            "} catch($1) {",
+            "\t$0",
+            "}"
+        ]
+    },
+    "cat": {
+        "prefix": "cat",
+        "descr": "catch block",
+        "body": [
+            "catch($1) {",
+            "\t$0",
+            "}"
+        ]
+    }
+}

@@ -56,7 +56,10 @@ harpoon jump 3,n,<leader>jl
 harpoon jump next,n,<leader>jn
 harpoon jump previous,n,<leader>jp
 harpoon clear,n,<leader>jc
-snippet expand,n,<c-space>
+snippet expand,i,<c-space>
+snippet next,i,<c-l>
+snippet prev,i,<c-h>
+snippet cancel,i,<c-c>
 copilot apply,n,<tab>
 split/join node under cursor,n,gS
 duplicate text,n,gm
