@@ -5,5 +5,6 @@ return {
         require('mini.cursorword').setup()
         require('mini.splitjoin').setup()
         require('mini.operators').setup()
+        require('mini.pairs').setup()
     end
 }

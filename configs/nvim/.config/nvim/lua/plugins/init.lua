@@ -42,12 +42,6 @@ return {
     'pabloariasal/webify.nvim',
     'sitiom/nvim-numbertoggle',
     {
-        "windwp/nvim-autopairs",
-        opts = {
-            fast_wrap = {},
-        }
-    },
-    {
         'kana/vim-textobj-entire',
         dependencies = { 'kana/vim-textobj-user' }
     },
