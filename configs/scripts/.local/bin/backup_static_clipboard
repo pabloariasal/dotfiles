@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -e
+
+STATIC_HIST_FILE="${HOME}/.local/share/gpaste/static.xml"
+BACKUP_DIR="${HOME}/.gpaste_backups"
+
+mkdir -p "$BACKUP_DIR"
+
+CURRENT_DATE=$(date +"%Y-%m-%d")
+BACKUP_FILE="$BACKUP_DIR/static_backup_$CURRENT_DATE.${STATIC_HIST_FILE##*.}"
+
+cp "$STATIC_HIST_FILE" "$BACKUP_FILE"
+
+echo "Backup created: $BACKUP_FILE"
