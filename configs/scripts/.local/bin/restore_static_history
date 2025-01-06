@@ -1,0 +1,16 @@
+#!/bin/bash
+
+STATIC_HIST="${HOME}/.local/share/gpaste/static.xml"
+BACKUP_DIR="${HOME}/.gpaste_backups"
+
+choice=$(eza -1 -s created "$BACKUP_DIR" | fzf)
+
+set -e
+
+if [ -z "$choice" ]; then
+    exit 0
+fi
+
+cp "${BACKUP_DIR}/${choice}" "$STATIC_HIST"
+
+echo "Static history restored from: $choice"
