@@ -293,6 +293,10 @@ sudo pacman -S brightnessctl playerctl
 ./system_setup install_pulseaudio
 ```
 
+## Disable Bluetooth
+
+In order to save battery life, bluetooth can be turned off entirely by following the [instructions in the wiki](https://wiki.archlinux.org/title/Power_management#Bluetooth)
+
 ## Flatpak
 
 ```sh
