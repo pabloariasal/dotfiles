@@ -33,3 +33,4 @@ alias iv='devour eog'
 alias sag='ssh-add ~/.ssh/github_personal'
 
 alias install_config='ensure_dots_dir && stow --verbose=2 -d configs -t ~ '
+alias ssh_config='nvim ~/.ssh/config'
