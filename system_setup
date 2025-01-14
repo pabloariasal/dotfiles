@@ -86,12 +86,6 @@ function create_github_personal_ssh_key()
     echo "copied public key to clipboard!"
 }
 
-function install_greenclip() {
-    rm -f ~/.local/bin/greenclip
-    wget -P ~/.local/bin https://github.com/erebe/greenclip/releases/download/v4.2/greenclip
-    chmod +x ~/.local/bin/greenclip
-}
-
 function install_python_language_server() {
     sudo pacman -S python-pip \
         python-lsp-server \

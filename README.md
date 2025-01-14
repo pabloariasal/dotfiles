@@ -264,8 +264,7 @@ cd dotfiles
 ## Clipboard Manager
 
 ```sh
-./system_setup install_greenclip
-install_config greenclip
+pacman -S gpaste
 ```
 
 ## Screenshots

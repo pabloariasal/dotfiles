@@ -14,7 +14,6 @@ subcmds=(
     'install_command_line_goodies'
     'install_devour'
     'create_github_personal_ssh_key'
-    'install_greenclip'
     'install_python_language_server'
     'install_xorg'
     'install_i3_wm'
