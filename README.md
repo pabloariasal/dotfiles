@@ -266,6 +266,9 @@ cd dotfiles
 ```sh
 pacman -S gpaste
 ```
+## Hibernation
+
+Setup hibernation as described [here](https://wiki.archlinux.org/title/Power_management/Suspend_and_hibernate#Configure_the_initramfs)
 
 ## Screenshots
 
