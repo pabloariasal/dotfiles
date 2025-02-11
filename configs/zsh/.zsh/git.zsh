@@ -134,17 +134,6 @@ function gstad() {
   git stash show -u -p stash@\{${1}\}
 }
 
-# Copy hash to clipboard
-function copy-commit-hash() {
-  local sel=$(git log --pretty=format:"%H %s (%an)" $1 | fzf --reverse)
-  hsh="$(echo "${sel}" | awk '{ print $1 }')"
-  if [ -z "$hsh" ]; then
-    return 0
-  fi
-  echo "$hsh" | xclip -r -selection clipboard
-  echo \'"$hsh"\' copied to clipboard!
-}
-
 # Change both contents and commit message of a previous commit
 function gcfa() {
   git commit --fixup=amend:"${1}"
