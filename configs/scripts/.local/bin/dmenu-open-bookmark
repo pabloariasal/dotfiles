@@ -1,6 +1,6 @@
 #!/bin/bash
 
-chosen=$(tail -n +2 "${BOOKMARKS_FILE}" | nl -w1 -s ' ' | awk '{NF--; print}' | bemenu_wrapper -i -l 10 -w -p 'Bookmarks' -c -B 1 -W 0.25)
+chosen=$(tail -n +2 "${BOOKMARKS_FILE}" | nl -w1 -s ' ' | awk '{NF--; print}' | bemenu_wrapper -i -l 40 -w -p 'Bookmarks' -c -B 1 -W 0.25)
 
 if [ -z "$chosen" ]; then
     exit 0
