@@ -46,6 +46,28 @@ fzf-git-file-widget() {
 zle     -N   fzf-git-file-widget
 bindkey '^s' fzf-git-file-widget
 
+# CTRL-B - Paste the selected commit hash into the current command line
+__commit_hash() {
+  local cmd='git log --pretty=format:"%H %s" --no-merges'
+  setopt localoptions pipefail 2> /dev/null
+  eval "$cmd" | $(__fzfcmd) --reverse | awk '{print $1}'
+  while read item; do
+    echo -n "${(q)item} " | awk '{print $NF}' | tr '\r\n' ' '
+  done
+  local ret=$?
+  echo
+  return $ret
+}
+
+fzf-commit-hash-widget() {
+  LBUFFER="${LBUFFER}$(__commit_hash)"
+  local ret=$?
+  zle reset-prompt
+  return $ret
+}
+zle     -N   fzf-commit-hash-widget
+bindkey '^b' fzf-commit-hash-widget
+
 #######################################################################
 # Aliases
 alias gr='git restore'
@@ -64,7 +86,6 @@ alias gcan='git commit -v --no-edit --amend'
 alias gcap='git commit -v --no-edit --amend && git push --force'
 # Changes only contents but no commit message of a previous commit
 alias gcf='git commit --fixup'
-alias gcfi='git log -n 50 --pretty=format:"%h %s" --no-merges | fzf --reverse | cut -c -7 | xargs -o git commit --fixup'
 alias gs='git switch'
 alias gsc='git switch -c'
 alias gco='git checkout'
