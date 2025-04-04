@@ -60,7 +60,7 @@ function brightness {
 
 function express_vpn {
   if command -v expressvpn &> /dev/null; then
-    local status="$(expressvpn status | head -n 1 | sed -r 's/\x1B\[(;?[0-9]{1,3})+[mGK]//g')"
+    local status="$(expressvpn status | tail -n 1)"
   else
     local status="Not installed"
   fi
