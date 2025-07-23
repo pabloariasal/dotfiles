@@ -5,11 +5,10 @@ set -e
 function install_paru()
 {
     sudo pacman -S base-devel
-    rm -rf ~/paru
-    git clone https://aur.archlinux.org/paru-bin.git ~/paru
-    cd ~/paru
+    rm -rf /tmp/paru
+    git clone https://aur.archlinux.org/paru-bin.git /tmp/paru
+    cd /tmp/paru
     makepkg -si
-    rm -rf ~/paru
 }
 
 function install_wallpapers()
