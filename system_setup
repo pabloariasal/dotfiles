@@ -51,7 +51,7 @@ function install_lua_dev_tools() {
     sudo pacman -S lua luarocks lua-language-server
 }
 
-function install_keyboard_conf()
+function install_xorg_conf()
 {
     sudo ln -sv ${DOTFILES}/xorg_extra_config/00-keyboard.conf /etc/X11/xorg.conf.d/
     sudo ln -sv ${DOTFILES}/xorg_extra_config/10-serverflags.conf /etc/X11/xorg.conf.d/

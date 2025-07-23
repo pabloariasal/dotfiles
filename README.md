@@ -149,7 +149,7 @@ Close and reopen terminal
 rm ~/.xinitrc
 cd dotfiles
 install_config xorg
-./system_setup install_keyboard_conf
+./system_setup install_xorg_conf
 ```
 
 ## i3-wm configuration
