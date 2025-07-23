@@ -297,7 +297,9 @@ sudo pacman -S brightnessctl playerctl
 
 ## Disable Bluetooth
 
-In order to save battery life, bluetooth can be turned off entirely by following the [instructions in the wiki](https://wiki.archlinux.org/title/Power_management#Bluetooth)
+```sh
+sudo ./system-setup disable_bluetooth
+```
 
 ## Flatpak
 

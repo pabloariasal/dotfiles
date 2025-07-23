@@ -123,6 +123,10 @@ function install_gdb_dashboard() {
     wget -P ~ https://git.io/.gdbinit
 }
 
+function disable_bluetooth {
+    echo -e '# disable bluetooth\nSUBSYSTEM=="rfkill", ATTR{type}=="bluetooth", ATTR{state}="0"' > /etc/udev/rules.d/50-bluetooth.rules
+}
+
 function setup_gdb() {
     install_gdb_dashboard
     sudo pacman -S python-pygments
