@@ -31,8 +31,8 @@ The config can serve as inspiration, however, many hours of my life have been sp
 ```sh
 sudo pacman -S wget tar
 cd ~
-wget https://api.github.com/repos/pabloariasal/dotfiles/tarball/master -O dotfiles.tar.gz
-tar -xzvf dotfiles.tar.gz
+wget https://github.com/pabloariasal/dotfiles/archive/refs/heads/master.tar.gz
+tar -xzvf master.tar.gz
 rm dotfiles.tar.gz
 ```
 there is now a directory `pabloariasal-dotfiles-xxx` containing installation scripts and setup files.
