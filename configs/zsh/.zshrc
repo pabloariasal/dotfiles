@@ -32,7 +32,7 @@ source ~/.zsh/neovim_development.zsh
 [ -f "${HOME}/.cargo/env" ] && source "${HOME}/.cargo/env"
 
 if [ -n "$GREET" ]; then
-  neofetch
+  fastfetch
   figlet "Welcome!" | lolcat
 fi
 

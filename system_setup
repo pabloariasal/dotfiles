@@ -65,7 +65,7 @@ function enable_agent_service()
 }
 
 function install_command_line_goodies() {
-    sudo pacman -S fd ripgrep vifm fzf bat eza git-delta
+    sudo pacman -S fd ripgrep vifm fzf bat eza git-delta figlet lolcat fastfetch
 }
 
 function install_devour()
