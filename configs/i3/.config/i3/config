@@ -54,7 +54,7 @@ bindsym $mod+Return exec $terminal
 bindsym $mod+Ctrl+Return exec $terminal --class="__floating"
 bindsym $mod+b exec $browser
 bindsym $mod+Shift+b exec $browser --incognito
-bindsym $mod+p exec bemenu_run_wrapper -p "Run" -i
+bindsym $mod+p exec dmenu_run -fn 'JetBrainsMono Nerd Font Medium 15'
 bindsym $mod+c exec dmenu-clipboard history
 bindsym $mod+r exec dmenu-clipboard static
 bindsym $mod+Shift+c exec gpaste-client ui

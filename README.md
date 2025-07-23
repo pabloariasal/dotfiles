@@ -69,14 +69,6 @@ cd pabloariasal-dotfiles-xxx
 ./system_setup install_i3_wm
 ```
 
-## Install bemenu
-
-```sh
-sudo pacman -S bemenu
-```
-
-Select option "x11"
-
 ## Install paru
 
 ```sh

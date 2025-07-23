@@ -2,5 +2,5 @@
 
 screenlayouts="${HOME}/.screenlayout"
 profiles="$(fd -t f . ${screenlayouts} -x basename {} | sort)"
-selection=$(echo "$profiles" | bemenu_wrapper --vim-normal-mode -c -W 0.15 -w -l 20 -B 1 -p "🖥️")
+selection=$(echo "$profiles" | dmenu_wrapper -l 20 -p "🖥️")
 bash "${screenlayouts}/${selection}"

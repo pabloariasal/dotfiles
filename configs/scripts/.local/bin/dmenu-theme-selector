@@ -3,7 +3,7 @@
 set -e
 
 themes_dir=${DOTFILES}/themes
-theme=$(ls ${themes_dir} | bemenu_wrapper -p 'Select a theme' -w -l 30 -c -B 1 -W '0.4')
+theme=$(ls ${themes_dir} | dmenu_wrapper -l 30)
 source "${themes_dir}/$theme"
 
 ## Set alacritty colorscheme

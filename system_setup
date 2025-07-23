@@ -111,7 +111,8 @@ function install_i3_wm() {
         xss-lock \
         jq \
         dunst \
-        noto-fonts-emoji
+        noto-fonts-emoji \
+        dmenu
 }
 
 function clone_repo() {
