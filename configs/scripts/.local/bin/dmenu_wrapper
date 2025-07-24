@@ -1,2 +1,2 @@
 #!/bin/bash
-dmenu -fn 'JetBrainsMono Nerd Font Medium 15' "$@"
+dmenu -fn 'JetBrainsMono Nerd Font Medium 15' -i "$@"
