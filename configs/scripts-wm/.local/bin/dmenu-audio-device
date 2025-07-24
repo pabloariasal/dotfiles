@@ -3,7 +3,7 @@
 set -ex
 
 options="🎧 Headphones\n📢 Speakers"
-selection=$(echo -e "$options" | dmenu_wrapper -l 20 -p "🔊" | awk '{print $2}')
+selection=$(echo -e "$options" | dmenu_wrapper -p "🔊Select audio device" | awk '{print $2}')
 
 # TODO should we add ports as well?
 # pactl list {sources,sinks}
