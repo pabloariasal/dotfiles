@@ -1,11 +1,11 @@
 fuzzy open file,n,<c-p>
-fuzzy navigate buffer,n,<c-n>
+fuzzy open buffer,n,<c-n>
 fuzzy live grep,n,<leader>gl
 fuzzy old files,n,<leader>o
 fuzzy search current file,n,<leader><leader>
 fuzzy open clipboard,n,<leader>v
-fuzzy document symbols,n,<leader>sd
-fuzzy workspace symbols,n,<leader>sw
+fuzzy find document symbols,n,<leader>sd
+fuzzy find workspace symbols,n,<leader>sw
 quickfix list toggle,n,<leader>tq
 location list toggle,n,<leader>tl
 jump to end of line,n,<a-l>
@@ -40,14 +40,14 @@ LSP code action,n,<leader>m
 LSP references,n,<leader>r
 LSP hover ,n,K
 format document,n,<leader>f
-replace text object with register,n,gr
-replace line with register,nx,grr
+[mini.operators] replace text object with register,n,gr
+[mini.operators] replace line with register,nx,grr
 jump to next hunk,n,]c
 jump to prev hunk,n,[c
-git reset hunk,n,<leader>hr
-git reset all hunks in buffer,n,<leader>hR
-git preview hunk,n,<leader>hp
-git show line git blame,n,<leader>hb
+[gitsigns] git reset hunk,n,<leader>hr
+[gitsigns] git reset all hunks in buffer,n,<leader>hR
+[gitsigns] git preview hunk,n,<leader>hp
+[gitsigns] git show line git blame,n,<leader>hb
 harpoon add,n,<leader>ja
 harpoon toggle menu,n,<leader>jm
 harpoon jump 1,n,<leader>jj
@@ -62,11 +62,13 @@ snippet prev,i,<c-h>
 snippet cancel,i,<c-c>
 copilot apply,n,<tab>
 split/join node under cursor,n,gS
-duplicate text,n,gm
-exchange text,n,gx
-sort text,n,gs
+[mini.operators] duplicate text,n,gm
+[mini.operators] exchange text,n,gx
+[mini.operators] sort text,n,gs
+[mini.operators] sort line,n,gss
 swap parameter with next one,n,<leader>sn
 swap parameter with prev one,n,<leader>sp
 maximize split,n,<leader>l
 jump to alternate file,n,<leader>a
 open undo tree,n,<leader>u
+open url,n,gX
