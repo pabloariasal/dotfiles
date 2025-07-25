@@ -42,5 +42,13 @@
         "prefix": "ifm",
         "descr": "if main",
         "body": "if __name__ == \"__main__\":"
+    },
+    "fun": {
+        "prefix": "fun",
+        "descr": "function",
+        "body": [
+            "def $1($2):",
+            "\t${0:pass}"
+        ]
     }
 }
