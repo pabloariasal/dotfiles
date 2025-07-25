@@ -11,6 +11,17 @@ function install_paru()
     makepkg -si
 }
 
+function install_dmenu() {
+    cd /tmp
+    wget https://gist.githubusercontent.com/pabloariasal/e0b65c5c158b436a1685f69624d629f2/raw/62f4b4587cc8a57d59f090eb4029ae68b54de8ff/dmenu_custom_bindings.patch
+    rm -rf dmenu
+    git clone https://git.suckless.org/dmenu
+    cd dmenu
+    git apply ../dmenu_custom_bindings.patch
+    make
+    sudo make install
+}
+
 function install_wallpapers()
 {
     local wallpaper_loc="$HOME/wallpapers"
@@ -110,8 +121,7 @@ function install_i3_wm() {
         xss-lock \
         jq \
         dunst \
-        noto-fonts-emoji \
-        dmenu
+        noto-fonts-emoji
 }
 
 function clone_repo() {

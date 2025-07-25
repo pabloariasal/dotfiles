@@ -69,6 +69,12 @@ cd pabloariasal-dotfiles-xxx
 ./system_setup install_i3_wm
 ```
 
+## Install patched dmenu
+
+```sh
+./system_setup install_dmenu
+```
+
 ## Install paru
 
 ```sh
