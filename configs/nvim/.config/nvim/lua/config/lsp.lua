@@ -24,38 +24,3 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.bo[ev.buf].formatexpr = nil
   end,
 })
-
-local lspconfig = require'lspconfig'
-
--- Haskell - hls
-lspconfig.hls.setup {
-  haskell = {
-    formattingProvider = "ormolu",
-  }
-}
-
--- C++ clangd
-lspconfig.clangd.setup{}
-
--- Rust - rust-analyzer
-lspconfig.rust_analyzer.setup{}
-
--- Python - python-language-server
-lspconfig.pylsp.setup{
-  cmd = {"pylsp"},
-  settings = {
-    pylsp = {
-      plugins = {
-        pylint  = {
-          enabled = true
-        }
-      }
-    }
-  }
-}
-
--- CMake - cmake-language-server
-lspconfig.cmake.setup{}
-
--- Lua
-lspconfig.lua_ls.setup{}
