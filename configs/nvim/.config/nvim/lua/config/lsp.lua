@@ -24,3 +24,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.bo[ev.buf].formatexpr = nil
   end,
 })
+
+-- Enable Language servers
+-- configuration is provided by nvim-lspconfig
+vim.lsp.enable({'pylsp'})
