@@ -23,6 +23,7 @@
 	hunk-header-style = omit
 	file-modified-label = ""
 	file-decoration-style = "ul ol blue"
+	hyperlinks = true
 [delta "side-by-side"]
 	side-by-side = true
 	line-numbers = true
