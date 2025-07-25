@@ -27,10 +27,10 @@ search next word without jumping,n,z*
 search prev word without jumping,n,z#
 paste from system clipboard,nx,<leader>p[P]
 yank to system clipboard,n,<leader>y
-jump to next diagnostic,n,]g
-jump to prev diagnostic,n,[g
+[builtin] jump to next diagnostic,n,]d
+[builtin] jump to prev diagnostic,n,[d
 open diagnostics in loc list,n,<leader>dl
-open diagnostics in floating window,n,<leader>df
+[builtin] open diagnostics in floating window,n,<c-w>d
 LSP jump to declaration,n,gD
 LSP jump to definition,n,gd
 LSP jump to implementation,n,gI
@@ -38,7 +38,7 @@ LSP jump to type definition,n,gy
 LSP rename symbol,n,<F2>
 LSP code action,n,<leader>m
 LSP references,n,<leader>r
-LSP hover ,n,K
+[builtin] LSP hover,n,K
 format document,n,<leader>f
 [mini.operators] replace text object with register,n,gr
 [mini.operators] replace line with register,nx,grr
@@ -48,14 +48,14 @@ jump to prev hunk,n,[c
 [gitsigns] git reset all hunks in buffer,n,<leader>hR
 [gitsigns] git preview hunk,n,<leader>hp
 [gitsigns] git show line git blame,n,<leader>hb
-harpoon add,n,<leader>ja
-harpoon toggle menu,n,<leader>jm
-harpoon jump 1,n,<leader>jj
-harpoon jump 2,n,<leader>jk
-harpoon jump 3,n,<leader>jl
-harpoon jump next,n,<leader>jn
-harpoon jump previous,n,<leader>jp
-harpoon clear,n,<leader>jc
+[harpoon] add,n,<leader>ja
+[harpoon] toggle menu,n,<leader>jm
+[harpoon] jump 1,n,<leader>jj
+[harpoon] jump 2,n,<leader>jk
+[harpoon] jump 3,n,<leader>jl
+[harpoon] jump next,n,<leader>jn
+[harpoon] jump previous,n,<leader>jp
+[harpoon] clear,n,<leader>jc
 snippet expand,i,<c-space>
 snippet next,i,<c-l>
 snippet prev,i,<c-h>
