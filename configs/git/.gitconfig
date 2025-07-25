@@ -12,12 +12,10 @@
 [difftool "vimdiff"]
 	path = nvim
 [merge]
-	tool = vimdiff
-	conflictstyle = diff3
+	tool = meld
+	; conflictstyle = diff3
 [mergetool]
 	prompt = true
-[mergetool "vimdiff"]
-	path = nvim
 [interactive]
 	diffFilter = delta --color-only
 [delta]
