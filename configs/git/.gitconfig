@@ -1,5 +1,6 @@
 [user]
 	name = Pablo Arias
+	email = pabloariasal@gmail.com
 [core]
 	excludesfile = ~/.gitignore_global
 	pager = delta
