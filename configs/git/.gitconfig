@@ -16,6 +16,8 @@
 	; conflictstyle = diff3
 [mergetool]
 	prompt = true
+[mergetool "meld"]
+	cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
 [interactive]
 	diffFilter = delta --color-only
 [delta]
