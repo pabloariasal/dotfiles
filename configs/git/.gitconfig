@@ -13,10 +13,14 @@
 [difftool "vimdiff"]
 	path = nvim
 [merge]
+	; tool = vimdiff
 	tool = meld
-	; conflictstyle = diff3
+[mergetool "vimdiff"]
+	path = nvim
+	; layout = "LOCAL,MERGED,REMOTE"
 [mergetool]
 	prompt = true
+	keepBackup = false
 [mergetool "meld"]
 	cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
 [interactive]
