@@ -1,0 +1,75 @@
+#!/bin/bash
+
+set -e
+
+BOOKMARKS_FILE="${HOME}/.bookmarks.txt"
+
+# create bookmarks file if it doesn't exist
+if [ ! -e "${BOOKMARKS_FILE}" ]; then
+  echo "# name url" > "${BOOKMARKS_FILE}"
+fi
+
+function list_bookmarks() {
+    tail -n +2 "${BOOKMARKS_FILE}" | nl -w1 -s ') ' | awk '{NF--; print}'
+}
+
+usage() {
+    echo "Usage: bookmarks [-o|--open <index>] [--edit|-e] [--list|-l] "
+    echo
+    echo "Options:"
+    echo "  --open | -o <index>       Opens bookmark at specified index"
+    echo "  --edit | -e               Edit bookmarks"
+    echo "  --list | -l               List all bookmarks"
+    echo "  --select                  Select and open a bookmark using dmenu"
+    exit 1
+}
+
+if [ $# -eq 0 ]; then
+    list_bookmarks
+    exit 0
+fi
+
+while [[ "$#" -gt 0 ]]; do
+    case $1 in
+        --help|-h)
+            usage
+            exit 0
+            ;;
+        --list|-l)
+            list_bookmarks
+            exit 0
+            ;;
+        --edit|-e)
+            ${EDITOR} ${BOOKMARKS_FILE}
+            exit 0
+            ;;
+        --open|-o)
+            bookmark_nr=$2
+            if [ ! "$bookmark_nr" -gt 0 ]; then
+                echo "index must be positive"
+                exit 1
+            fi
+            shift
+            ;;
+        --select)
+            bookmark_nr=$(list_bookmarks | dmenu_wrapper -l 50 | cut -d ')' -f1)
+            if [ -z "$bookmark_nr" ]; then
+                exit 0
+            fi
+            ;;
+        *)
+         echo "Unknown parameter passed: $1"
+         exit 1
+         ;;
+    esac
+    shift
+done
+
+echo "Opening bookmark ${bookmark_nr}"
+url=$(awk 'NR==x {print $NF}' x=$((bookmark_nr+1)) "${BOOKMARKS_FILE}")
+if [ -z "${url:+x}" ]; then
+    echo "error: bookmark out of bounds!"
+    exit 1
+fi
+
+${CHROMIUM_EXEC} "$url"
