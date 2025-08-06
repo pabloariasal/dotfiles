@@ -4,6 +4,14 @@ return {
     'tpope/vim-sleuth',
     'tpope/vim-eunuch',
     'tpope/vim-unimpaired',
+    -- highlight word under the cursor
+    { 'echasnovski/mini.cursorword', version = false, config = true },
+    { 'echasnovski/mini.splitjoin', version = false, config = true },
+    -- operators like gx, gr
+    { 'echasnovski/mini.operators', version = false, config = true },
+    -- autopairs
+    { 'echasnovski/mini.pairs', version = false, config = true },
+    { 'echasnovski/mini.snippets', version = false },
     {
         'romainl/vim-qf',
         init = function()
