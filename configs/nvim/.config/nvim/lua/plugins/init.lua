@@ -15,22 +15,12 @@ return {
     -- delete buffers by keeping window layout
     { 'echasnovski/mini.bufremove', version = false, config = true },
     { 'echasnovski/mini.trailspace', version = false, config = true },
+    { 'echasnovski/mini.files', version = false, config = true },
     {
         'romainl/vim-qf',
         init = function()
             vim.g.qf_max_height = 20
         end
-    },
-    {
-        'vifm/vifm.vim',
-        init = function()
-            vim.g.netrw_banner = 0
-            vim.g.netrw_liststyle = 3
-            vim.g.loaded_netrw = 1
-            vim.g.loaded_netrwPlugin = 1
-            vim.g.vifm_replace_netrw = 1
-            vim.g.vifm_exec_args = '-c :only'
-        end,
     },
     {
         'markonm/traces.vim',
