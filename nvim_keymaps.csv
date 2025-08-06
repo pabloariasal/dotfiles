@@ -1,11 +1,11 @@
-fuzzy open file,n,<c-p>
-fuzzy open buffer,n,<c-n>
-fuzzy live grep,n,<leader>gl
-fuzzy old files,n,<leader>o
-fuzzy search current file,n,<leader><leader>
-fuzzy open clipboard,n,<leader>v
-fuzzy find document symbols,n,<leader>sd
-fuzzy find workspace symbols,n,<leader>sw
+[telescope] fuzzy open file,n,<c-p>
+[telescope] fuzzy open buffer,n,<c-n>
+[telescope] fuzzy live grep,n,<leader>gl
+[telescope] fuzzy old files,n,<leader>o
+[telescope] fuzzy search current file,n,<leader><leader>
+[telescope] fuzzy open clipboard,n,<leader>v
+[telescope] fuzzy find document symbols,n,<leader>sd
+[telescope] fuzzy find workspace symbols,n,<leader>sw
 quickfix list toggle,n,<leader>tq
 location list toggle,n,<leader>tl
 jump to end of line,n,<a-l>
