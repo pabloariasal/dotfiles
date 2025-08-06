@@ -16,7 +16,7 @@ save buffer,n,<leader>w
 quit,n,<leader>q
 toggle fold under cursor,n,<a-space>
 go back to insert mode,i,jj
-close current buffer,n,<leader>c
+[mini.bufremove] close current buffer,n,<leader>c
 open file explorer,n,<leader>e
 grep for word,n,<leader>gn
 grep for word including hidden files,n,<leader>gh

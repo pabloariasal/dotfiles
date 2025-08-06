@@ -12,6 +12,7 @@ return {
     -- autopairs
     { 'echasnovski/mini.pairs', version = false, config = true },
     { 'echasnovski/mini.snippets', version = false },
+    { 'echasnovski/mini.bufremove', version = false, config = true },
     {
         'romainl/vim-qf',
         init = function()

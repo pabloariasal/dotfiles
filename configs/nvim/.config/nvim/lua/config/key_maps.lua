@@ -18,7 +18,7 @@ vim.keymap.set('i', 'jj', '<ESC>', { noremap=true })
 vim.keymap.set('v', '<', '<gv', { desc = 'Indent visual block right' })
 vim.keymap.set('v', '>', '>gv', { desc = 'Indent visual block left' })
 -- close buffer
-vim.keymap.set('n', '<leader>c', "<cmd>bp <bar> bd #<cr>", { desc = 'close the current buffer' })
+vim.keymap.set('n', '<leader>c', MiniBufremove.delete, { desc = 'close the current buffer' })
 -- file explorer
 vim.keymap.set('n', '<leader>e', '<cmd>EditVifm<cr>', { desc = 'open file explorer' })
 -- grepping
