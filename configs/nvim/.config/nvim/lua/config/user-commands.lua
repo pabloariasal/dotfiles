@@ -1,5 +1,5 @@
 -- removes trailing white space
-vim.api.nvim_create_user_command('ClearWhitespace', '%s/\\s\\+$//', {})
+vim.api.nvim_create_user_command('ClearWhitespace', 'lua MiniTrailspace.trim()', {})
 -- close all buffers
 vim.api.nvim_create_user_command('BuffCloseAll', 'bufdo bwipeout', {})
 -- close all buffers but the current one (similar to tabonly)

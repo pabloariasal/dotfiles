@@ -12,7 +12,9 @@ return {
     -- autopairs
     { 'echasnovski/mini.pairs', version = false, config = true },
     { 'echasnovski/mini.snippets', version = false },
+    -- delete buffers by keeping window layout
     { 'echasnovski/mini.bufremove', version = false, config = true },
+    { 'echasnovski/mini.trailspace', version = false, config = true },
     {
         'romainl/vim-qf',
         init = function()
