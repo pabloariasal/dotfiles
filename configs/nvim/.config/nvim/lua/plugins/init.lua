@@ -60,13 +60,4 @@ return {
         }
     },
     { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
-    {
-        "kylechui/nvim-surround",
-        version = "*",
-        event = "VeryLazy",
-        config = function() require("nvim-surround").setup({
-                -- Configuration here, or leave empty to use defaults
-            })
-        end
-    }
 }

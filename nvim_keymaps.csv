@@ -72,3 +72,6 @@ maximize split,n,<leader>l
 jump to alternate file,n,<leader>a
 open undo tree,n,<leader>u
 open url,n,gX
+[mini.surround] add surround,n,ys
+[mini.surround] delete surround,n,ds
+[mini.surround] change surround,n,cs
