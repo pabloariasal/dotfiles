@@ -20,7 +20,7 @@ vim.keymap.set('v', '>', '>gv', { desc = 'Indent visual block left' })
 -- close buffer
 vim.keymap.set('n', '<leader>c', MiniBufremove.delete, { desc = 'close the current buffer' })
 -- file explorer
-vim.keymap.set('n', '<leader>e', MiniFiles.open, { desc = 'open file explorer' })
+vim.keymap.set('n', '<leader>e', function() MiniFiles.open(vim.api.nvim_buf_get_name(0), false) end, { desc = 'open file explorer' })
 -- grepping
 vim.keymap.set('n', '<leader>gn', ':<c-u>grep! ', { desc = 'grep for word' })
 vim.keymap.set('n', '<leader>gh', ':<c-u>grep! --hidden ', { desc = 'grep for word including hidden files' })
