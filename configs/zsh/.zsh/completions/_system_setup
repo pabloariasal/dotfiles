@@ -3,13 +3,14 @@
 local -a subcmds
 subcmds=(
     'install_paru'
-    'install_wallpapers'
+    'install_dmenu'
+    'setup_wallpaper'
     'install_nerd_fonts'
     'install_scripts'
     'install_pulseaudio'
     'install_cpp_dev_tools'
     'install_lua_dev_tools'
-    'install_keyboard_conf'
+    'install_xorg_conf'
     'enable_agent_service'
     'install_command_line_goodies'
     'install_devour'
@@ -19,6 +20,7 @@ subcmds=(
     'install_i3_wm'
     'clone_repo'
     'install_gdb_dashboard'
+    'disable_bluetooth'
     'setup_gdb'
 )
 _describe 'command' subcmds
