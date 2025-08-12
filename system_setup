@@ -22,15 +22,9 @@ function install_dmenu() {
     sudo make install
 }
 
-function install_wallpapers()
+function setup_wallpaper()
 {
-    local wallpaper_loc="$HOME/wallpapers"
-    rm -rf "$wallpaper_loc"
-    mkdir -p $wallpaper_loc
-    cd "$wallpaper_loc"
-    [ ! -d dt ] && git clone https://gitlab.com/dwt1/wallpapers.git dt
-    [ ! -d gruvbox ] && git clone https://github.com/mTvare6/gruvbox-wallpaper.git gruvbox
-    [ ! -d me ] && git clone git@github.com:pabloariasal/wallpapers.git me
+    ln -s ${DOTFILES}/extra/wallpaper.png ~/.wallpaper.png
 }
 
 function install_nerd_fonts()

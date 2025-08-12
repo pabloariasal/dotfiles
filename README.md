@@ -235,13 +235,9 @@ sudo systemctl enable tlp.service
 ## Wallpaper
 
 ```sh
-sudo pacman -S nitrogen
-cd dotfiles
-sag
-./system_setup install_wallpapers
+sudo pacman -S feh
+./system_setup setup_wallpaper
 ```
-
-Open nitrogen and add `~/wallpapers` as wallpaper directory (recursively), select a wallpaper.
 
 ## System Monitoring
 
