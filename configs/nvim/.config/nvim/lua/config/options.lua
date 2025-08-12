@@ -38,3 +38,6 @@ vim.o.grepformat = '%f:%l:%c:%m'
 
 -- allow - to be a word character
 vim.opt.iskeyword:append { "-" }
+
+-- don't add an eol character at the end of each file
+vim.opt.fixendofline = false
