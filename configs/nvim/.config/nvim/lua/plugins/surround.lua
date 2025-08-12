@@ -14,7 +14,13 @@ return {
 
                 suffix_last = '', -- Suffix to search with "prev" method
                 suffix_next = '', -- Suffix to search with "next" method
-              }
+              },
+             custom_surroundings = {
+                B = {
+                  input = { '%b{}', '^.().*().$' },
+                  output = { left = '{', right = '}' },
+                },
+              },
         }
         )
     end
