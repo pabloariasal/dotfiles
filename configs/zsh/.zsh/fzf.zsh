@@ -20,7 +20,7 @@ export FZF_CTRL_T_OPTS="--bind='ctrl-space:reload(fd $FD_EXTRA_OPTS)' --bind='ct
 
 export FZF_CTRL_R_OPTS="--no-height --no-reverse --exact --preview 'echo {}' --preview-window down:3:wrap --bind '?:toggle-preview'"
 
-source /usr/share/fzf/key-bindings.zsh
+source "$FZF_KEY_BINDINGS_SCRIPT"
 bindkey '^n' fzf-file-widget
 bindkey '^k' fzf-cd-widget
 
