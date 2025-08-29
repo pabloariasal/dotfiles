@@ -25,12 +25,6 @@ source ~/.zsh/functions.zsh
 source ~/.zsh/archives.zsh
 source ~/.zsh/neovim_development.zsh
 
-# initialize haskell environment
-[ -f "${HOME}/.ghcup/env" ] && source "${HOME}/.ghcup/env"
-
-# initialize rust environment
-[ -f "${HOME}/.cargo/env" ] && source "${HOME}/.cargo/env"
-
 if [ -n "$GREET" ]; then
   fastfetch
   figlet "Welcome!" | lolcat
