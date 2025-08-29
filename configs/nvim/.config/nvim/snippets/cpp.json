@@ -44,12 +44,12 @@
     "iq": {
         "prefix": "iq",
         "descr": "include quotes",
-        "body": "#include \"$1\""
+        "body": "#include \"$0\""
     },
     "ib": {
         "prefix": "ib",
         "descr": "include brackets",
-        "body": "#include <$1>"
+        "body": "#include <$0>"
     },
     "iv": {
         "prefix": "iv",
@@ -130,7 +130,7 @@
     "cout": {
         "prefix": "cout",
         "descr": "std::cout",
-        "body": "std::cout << $1 << std::endl;"
+        "body": "std::cout << $0 << std::endl;"
     },
     "if": {
         "prefix": "if",
@@ -189,7 +189,7 @@
     "ve": {
         "prefix": "ve",
         "descr": "std::vector",
-        "body": "std::vector<$1>"
+        "body": "std::vector<$0>"
     },
     "fp": {
         "prefix": "fp",
@@ -199,7 +199,7 @@
     "up": {
         "prefix": "up",
         "descr": "std::unique_ptr",
-        "body": "std::unique_ptr<$1>"
+        "body": "std::unique_ptr<$0>"
     },
     "mun": {
         "prefix": "mun",
