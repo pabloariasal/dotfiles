@@ -4,7 +4,11 @@ function tmp()
   if [[ -z "$1" ]]; then
     nvim $(mktemp)
   else
-    nvim $(mktemp --suffix ."$1")
+    if [[ $OSTYPE == 'darwin'* ]]; then
+      nvim $(mktemp $TMPDIR/$(uuidgen)."$1")
+    else
+      nvim $(mktemp --suffix ."$1")
+    fi
   fi
 }
 
