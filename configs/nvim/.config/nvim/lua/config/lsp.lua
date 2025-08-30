@@ -28,3 +28,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
 -- Enable Language servers
 -- configuration is provided by nvim-lspconfig
 vim.lsp.enable({'pylsp'})
+
+-- Enable inline diagnostics for the current line
+vim.diagnostic.config({
+  virtual_text = { current_line = true }
+})
