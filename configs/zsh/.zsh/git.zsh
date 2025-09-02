@@ -48,7 +48,7 @@ bindkey '^s' fzf-git-file-widget
 
 # CTRL-B - Paste the selected commit hash into the current command line
 __commit_hash() {
-  local cmd='git log --pretty=format:"%H %s" --no-merges'
+  local cmd='git log --pretty=format:"%H %an %s" --no-merges'
   setopt localoptions pipefail 2> /dev/null
   eval "$cmd" | $(__fzfcmd) --reverse | awk '{print $1}'
   while read item; do
