@@ -7,7 +7,6 @@ function launchOrFocusApp(appName)
     end
 end
 
--- Bind hotkeys
 hyper = {"cmd", "alt", "ctrl", "shift"}
 hs.hotkey.bind(hyper, "1", function() launchOrFocusApp("iTerm") end)
 hs.hotkey.bind(hyper, "m", function() launchOrFocusApp("iTerm") end)
