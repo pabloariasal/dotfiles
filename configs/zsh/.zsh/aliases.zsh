@@ -2,6 +2,7 @@
 alias n='nvim'
 alias nd='nvim .'
 alias b='bat --plain'
+alias v='vifm'
 
 # convenience
 alias sudo='sudo '
@@ -32,7 +33,6 @@ alias ssh_config='nvim ~/.ssh/config'
 
 # Linux only aliases
 if [[ $OSTYPE == 'linux'* ]]; then
-  alias v='vifm'
 
   # devour
   alias za='devour zathura'
