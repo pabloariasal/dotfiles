@@ -52,3 +52,6 @@ vim.keymap.set('n', '<leader>X', '<cmd>YankLineUrl +<cr>', { desc = 'Yank Url to
 -- diagnostics
 vim.keymap.set('n', '<leader>dl', vim.diagnostic.setloclist, { noremap=true, silent=true, desc="Open diagnostics in location list" })
 vim.keymap.set('n', '<leader>df', vim.diagnostic.open_float, { noremap=true, silent=true, desc="Open diagnostics in floating window" })
+-- Diffview
+vim.keymap.set('n', '<leader>ho', '<cmd>DiffviewFileHistory %<cr>', { noremap=true, desc="Open git history of current file"})
+vim.keymap.set('n', '<leader>hc', '<cmd>DiffviewClose<cr>', { noremap=true, desc="Close git history of current file"})

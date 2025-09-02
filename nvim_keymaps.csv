@@ -48,6 +48,8 @@ jump to prev hunk,n,[c
 [gitsigns] git reset all hunks in buffer,n,<leader>hR
 [gitsigns] git preview hunk,n,<leader>hp
 [gitsigns] git show line git blame,n,<leader>hb
+[gitsigns] git show history of current file,n,<leader>ho
+[gitsigns] git close history of current file,n,<leader>hc
 [harpoon] add,n,<leader>ja
 [harpoon] toggle menu,n,<leader>jm
 [harpoon] jump 1,n,<leader>jj
