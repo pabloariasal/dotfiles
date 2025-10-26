@@ -11,3 +11,4 @@ configs/alacritty/.config/alacritty/alacritty_colors.toml
 configs/nvim/.config/nvim/nvim_colorscheme.txt
 configs/nvim/.config/nvim/nvim_background.txt
 configs/nvim/.config/nvim/lazy-lock.json
+.DS_Store
