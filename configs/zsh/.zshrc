@@ -24,6 +24,7 @@ source ~/.zsh/bindings.zsh
 source ~/.zsh/functions.zsh
 source ~/.zsh/archives.zsh
 source ~/.zsh/neovim_development.zsh
+source ~/.zsh/python.zsh
 
 if [ -n "$GREET" ]; then
   fastfetch
