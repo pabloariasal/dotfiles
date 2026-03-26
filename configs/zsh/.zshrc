@@ -26,7 +26,7 @@ source ~/.zsh/archives.zsh
 source ~/.zsh/neovim_development.zsh
 source ~/.zsh/python.zsh
 
-if [ -n "$GREET" ]; then
+if [[ -f /etc/os-release ]] && [[ -n "$GREET" ]] && grep -q '^ID=arch$' /etc/os-release; then
   fastfetch
   figlet "Welcome!" | lolcat
 fi
