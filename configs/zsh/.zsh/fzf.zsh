@@ -20,7 +20,14 @@ export FZF_CTRL_T_OPTS="--bind='ctrl-space:reload(fd $FD_EXTRA_OPTS)' --bind='ct
 
 export FZF_CTRL_R_OPTS="--no-height --no-reverse --exact --preview 'echo {}' --preview-window down:3:wrap --bind '?:toggle-preview'"
 
-source "$FZF_KEY_BINDINGS_SCRIPT"
+# Source FZF key bindings
+if [[ $OSTYPE == 'darwin'* ]]; then
+    FZF_VERSION=$(brew list --versions fzf | awk '{print $2}')
+    source "/opt/homebrew/Cellar/fzf/${FZF_VERSION}/shell/key-bindings.zsh"
+else
+    source "/usr/share/fzf/key-bindings.zsh"
+fi
+
 bindkey '^n' fzf-file-widget
 bindkey '^k' fzf-cd-widget
 
