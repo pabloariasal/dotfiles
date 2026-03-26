@@ -26,6 +26,12 @@ source ~/.zsh/archives.zsh
 source ~/.zsh/neovim_development.zsh
 source ~/.zsh/python.zsh
 
+if command -v alacritty &>/dev/null && [ ! -f ~/.config/alacritty/alacritty_colors.toml ]; then
+    echo "Setting default alacritty theme to gruvbox_dark"
+    alacritty_config_dir=${HOME}/.config/alacritty
+    ln -sf ${alacritty_config_dir}/colors/gruvbox_dark.toml ${alacritty_config_dir}/alacritty_colors.toml
+fi
+
 if [[ -f /etc/os-release ]] && [[ -n "$GREET" ]] && grep -q '^ID=arch$' /etc/os-release; then
   fastfetch
   figlet "Welcome!" | lolcat
