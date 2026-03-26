@@ -8,17 +8,16 @@ if [ "$PWD" != "${DOTFILES}" ]; then
 fi
 
 if [ -z "$1" ]; then
-    echo "usage: create_new_script <script_name>"
+    echo "usage: create_new_script <scripts|scripts-i3|scripts-linux> <script_name>"
     exit 1
 fi
 
-read -p "Is the script WM only? (y/n): " confirmation
-
-if [ "$confirmation" == "y" ] || [ "$confirmation" == "Y" ]; then
-    script="${DOTFILES}/configs/scripts-wm/.local/bin/${1}"
-else
-    script="${DOTFILES}/configs/scripts/.local/bin/${1}"
+if [ ! -d "${DOTFILES}/configs/${1}" ]; then
+  echo "${DOTFILES}/configs/${1} does not exist."
+  exit 1
 fi
+
+script="${DOTFILES}/configs/${1}/.local/bin/${2}"
 
 touch "${script}"
 chmod +x "$script"
