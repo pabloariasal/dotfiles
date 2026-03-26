@@ -1,6 +1,6 @@
 # Source Environment Variables
-if [ -f ~/.env ]; then
-    source ~/.env
+if [ -f ~/.env.sh ]; then
+    source ~/.env.sh
 fi
 
 if [[ "$OSTYPE" != "darwin"* ]]; then
