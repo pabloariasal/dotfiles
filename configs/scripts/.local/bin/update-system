@@ -1,0 +1,17 @@
+#!/bin/zsh
+
+set -e
+
+if command -v paru &>/dev/null; then
+    figlet paru
+    paru
+fi
+
+if command -v flatpak &>/dev/null; then
+    figlet flatpak
+    flatpak update
+fi
+
+figlet antigen
+source ${HOME}/.antidote/antidote.zsh
+antidote update
