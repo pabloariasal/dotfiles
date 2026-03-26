@@ -3,9 +3,13 @@ if [ -f ~/.env ]; then
     source ~/.env
 fi
 
-setrrate
+if [[ "$OSTYPE" != "darwin"* ]]; then
+  setrrate
+fi
 
-# Start x server
-if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
-  exec startx
+# On Arch, start x server...
+if [[ -f /etc/os-release ]] && grep -q '^ID=arch$' /etc/os-release; then
+  if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
+    exec startx
+  fi
 fi
