@@ -2,7 +2,8 @@
 alias n='nvim'
 alias nd='nvim .'
 alias b='bat --plain'
-alias v='vifm'
+alias v='vifm -c only'
+alias vp='vifm -c view'
 
 # convenience
 alias sudo='sudo '

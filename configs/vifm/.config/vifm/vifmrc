@@ -6,6 +6,7 @@ nnoremap , :
 
 " Toggle visibility of preview window
 nnoremap w :view<cr>
+
 nnoremap <c-h> <c-w>h
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
@@ -13,6 +14,3 @@ nnoremap <c-l> <c-w>l
 
 " quit vifm
 nnoremap q :q<cr>
-
-" start per default in single window mode
-only
