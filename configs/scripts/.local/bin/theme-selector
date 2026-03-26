@@ -1,0 +1,95 @@
+#!/bin/bash
+
+set -e
+
+THEMES_DIR=${DOTFILES}/themes
+
+function list_themes() {
+    fd . "${THEMES_DIR}" --type f --color="never" --format '{/.}'
+}
+
+usage() {
+    echo "Usage: theme-selector [--list|-l] [--theme <theme>] [--select-fzf] [--select-dmenu] [--status-bar]"
+    echo
+    echo "Options:"
+    echo "  --theme <theme>           Sets the specified theme"
+    echo "  --list | -l               List all themes"
+    echo "  --select-dmenu            Selects a theme using dmenu"
+    echo "  --select              Selects a theme using fzf"
+    echo "  --status-bar              Adds status bar information"
+    exit 1
+}
+
+if [ $# -eq 0 ]; then
+    list_themes
+    exit 0
+fi
+
+while [[ "$#" -gt 0 ]]; do
+    case $1 in
+        --help|-h)
+            usage
+            exit 0
+            ;;
+        --list|-l)
+            list_themes
+            exit 0
+            ;;
+        --select-dmenu)
+            SELECT_DMENU="YES"
+            ;;
+        --select)
+            SELECT_FZF="YES"
+            ;;
+        --theme)
+            THEME="$2"
+            shift
+            ;;
+        --status-bar)
+            STATUS_BAR="YES"
+            ;;
+        *)
+         echo "Unknown parameter passed: $1"
+         exit 1
+         ;;
+    esac
+    shift
+done
+
+if [ ! -z "${SELECT_DMENU+x}" ]; then
+    THEME=$(list_themes | dmenu_wrapper -l 30)
+elif [ ! -z "${SELECT_FZF+x}" ]; then
+    THEME=$(list_themes | fzf)
+fi
+
+THEME_FULL="${THEMES_DIR}/${THEME}.sh"
+if [ ! -f "$THEME_FULL" ]; then
+    echo "The theme $THEME does not exist!"
+    exit 1
+fi
+
+source "${THEME_FULL}"
+
+# Set alacritty colorscheme
+if command -v alacritty &>/dev/null; then
+    alacritty_config_dir=${HOME}/.config/alacritty
+    ln -sf ${alacritty_config_dir}/colors/${ALACRITTY_COLOR_FILE} ${alacritty_config_dir}/alacritty_colors.toml
+    touch ${alacritty_config_dir}/alacritty.toml
+    echo "=> Set alacritty theme to ${THEME}!"
+else
+    echo "alacritty not installed, skipping"
+fi
+
+# Set nvim colorscheme
+if command -v nvim &>/dev/null; then
+    nvim_config_dir=${HOME}/.config/nvim
+    echo ${NVIM_COLORSCHEME} > ${nvim_config_dir}/nvim_colorscheme.txt
+    echo ${NVIM_BACKGROUND} > ${nvim_config_dir}/nvim_background.txt
+    echo "=> Set nvim theme to ${THEME}!"
+else
+    echo "nvim not installed, skipping"
+fi
+
+if [ ! -z "${STATUS_BAR+x}" ]; then
+    echo "${THEME}" > "${HOME}/.theme"
+fi
