@@ -1,5 +1,4 @@
 return {
-    'neovim/nvim-lspconfig',
     'tpope/vim-sleuth',
     'tpope/vim-unimpaired',
     -- highlight word under the cursor
