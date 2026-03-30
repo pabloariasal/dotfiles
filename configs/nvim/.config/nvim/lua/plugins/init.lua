@@ -1,14 +1,4 @@
 return {
-    'tpope/vim-sleuth',
-    'tpope/vim-unimpaired',
-    -- highlight word under the cursor
-    { 'echasnovski/mini.cursorword', version = false, config = true },
-    { 'echasnovski/mini.splitjoin', version = false, config = true },
-    -- operators like gx, gr
-    { 'echasnovski/mini.operators', version = false, config = true },
-    -- autopairs
-    { 'echasnovski/mini.pairs', version = false, config = true },
-    { 'echasnovski/mini.snippets', version = false },
     -- delete buffers by keeping window layout
     { 'echasnovski/mini.bufremove', version = false, config = true },
     { 'echasnovski/mini.trailspace', version = false, config = true },
