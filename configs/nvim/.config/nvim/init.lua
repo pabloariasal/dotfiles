@@ -2,14 +2,17 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
-require("config.lazy")
-require("config.options")
-require("config.autocommands")
-require("config.key_maps")
-require("config.statusline")
-require("config.lsp")
-require("config.completion")
-require("config.colors")
-require("config.user-commands")
-require("config.folding")
-require("config.snippets")
+-- Plugins
+require("lazy_plugin")
+
+-- Config
+require("options")
+require("autocommands")
+require("key_maps")
+require("statusline")
+require("lsp")
+require("completion")
+require("colors")
+require("user-commands")
+require("folding")
+require("snippets")
