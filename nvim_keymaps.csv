@@ -72,7 +72,6 @@ swap parameter with next one,n,<leader>sn
 swap parameter with prev one,n,<leader>sp
 maximize split,n,<leader>l
 jump to alternate file,n,<leader>a
-open undo tree,n,<leader>u
 open url,n,gX
 [mini.surround] add surround,n,ys
 [mini.surround] delete surround,n,ds

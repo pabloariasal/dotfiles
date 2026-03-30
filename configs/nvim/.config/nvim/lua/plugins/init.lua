@@ -1,8 +1,6 @@
 return {
     'neovim/nvim-lspconfig',
-    'tpope/vim-repeat',
     'tpope/vim-sleuth',
-    'tpope/vim-eunuch',
     'tpope/vim-unimpaired',
     -- highlight word under the cursor
     { 'echasnovski/mini.cursorword', version = false, config = true },
@@ -40,16 +38,12 @@ return {
         }
     },
     'pabloariasal/webify.nvim',
+    -- automatically toggle between relative and absolute line numbers
     'sitiom/nvim-numbertoggle',
+    -- text object 'ae' as entire buffer
     {
         'kana/vim-textobj-entire',
         dependencies = { 'kana/vim-textobj-user' }
-    },
-    {
-        'mbbill/undotree',
-        keys = {
-            { '<leader>u', vim.cmd.UndotreeToggle, desc = "Toggle undo tree" }
-        }
     },
     { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
     'sindrets/diffview.nvim',
