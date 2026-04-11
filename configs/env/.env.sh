@@ -8,3 +8,11 @@ export PATH="${HOME}/.local/bin:$PATH"
 if [ -f /etc/arch-release ]; then
     export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 fi
+
+if [ -d "$HOME/.cargo/bin" ]; then
+    export PATH="$HOME/.cargo/bin:$PATH"
+fi
+
+if [ -d "$HOME/.devcontainers/bin" ]; then
+    export PATH="$HOME/.devcontainers/bin:$PATH"
+fi
