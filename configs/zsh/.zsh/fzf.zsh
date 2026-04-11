@@ -25,7 +25,10 @@ if [[ $OSTYPE == 'darwin'* ]]; then
     FZF_VERSION=$(brew list --versions fzf | awk '{print $2}')
     source "/opt/homebrew/Cellar/fzf/${FZF_VERSION}/shell/key-bindings.zsh"
 else
-    source "/usr/share/fzf/key-bindings.zsh"
+    # On arch, fzf is installed via pacman
+    [ -f "/usr/share/fzf/key-bindings.zsh" ] && source "/usr/share/fzf/key-bindings.zsh"
+    # On other distros, its installed via install script
+    [ -f "~/.fzf.zsh" ] && source "~/.fzf.zsh"
 fi
 
 bindkey '^n' fzf-file-widget
