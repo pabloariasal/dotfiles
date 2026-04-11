@@ -1,4 +1,3 @@
-
 [font]
 size = 8.0
 
@@ -44,6 +43,4 @@ x = 5
 y = 5
 
 [general]
-import = ["~/.config/alacritty/alacritty_colors.toml"]
-
-[terminal]
+import = ["alacritty_colors.toml"]
