@@ -1,6 +1,5 @@
 #!/bin/bash -e
 
-stow --verbose=2 -d configs -t ~ env
 stow --verbose=2 -d configs -t ~ zsh
 
 if [ "$SHELL" != '/bin/zsh' ]; then
