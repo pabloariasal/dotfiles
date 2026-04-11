@@ -39,7 +39,6 @@ function install_scripts() {
     cd "$DOTFILES"
     stow --verbose=2 -d configs -t ~ scripts
     stow --verbose=2 -d configs -t ~ scripts-wm
-    stow --verbose=2 -d configs -t ~ webapps
 }
 
 function install_pulseaudio() {
