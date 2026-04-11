@@ -10,10 +10,6 @@ alias sudo='sudo '
 alias ..='cd ..'
 alias d='cd $DOTFILES'
 
-# prompt before doing anything stupid
-alias rm='rm -I'
-alias mv='mv -i'
-
 # commands
 alias h='history -r -E -35'
 
