@@ -1,3 +1,6 @@
+# On systems where ZSH is not the login shell, add this to the existing ~/.profile
+# source ~/.zprofile
+
 # Source Environment Variables
 if [ -f ~/.env.sh ]; then
     source ~/.env.sh
