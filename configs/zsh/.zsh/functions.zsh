@@ -38,11 +38,3 @@ function ensure_dots_dir() {
 function nvim-help() {
   nvim +"help $1" +'only'
 }
-
-##########################
-# reveal
-
-function reveal_present()
-{
-  ${CHROMIUM_EXEC} "$1" index.html
-}

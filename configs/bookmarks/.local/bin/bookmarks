@@ -72,4 +72,4 @@ if [ -z "${url:+x}" ]; then
     exit 1
 fi
 
-${CHROMIUM_EXEC} "$url"
+xdg-open "$url"

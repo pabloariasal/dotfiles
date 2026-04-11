@@ -8,7 +8,3 @@ export PATH="${HOME}/.local/bin:$PATH"
 if [ -f /etc/os-release ] && grep -q '^ID=arch$' /etc/os-release; then
     export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 fi
-
-if [[ "$OSTYPE" != "darwin"* ]]; then
-    export CHROMIUM_EXEC=google-chrome-stable
-fi
