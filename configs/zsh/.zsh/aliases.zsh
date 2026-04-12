@@ -10,6 +10,7 @@ if [ -x "$(command -v bat)" ]; then
 fi
 
 if [ -x "$(command -v batcat)" ]; then
+  alias bat='batcat'
   alias b='batcat --plain'
 fi
 
