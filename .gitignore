@@ -3,6 +3,7 @@
 antigen.zsh.zwc
 *.spl
 *.sug
+configs/vifm/.config/vifm/scripts
 configs/vifm/.config/vifm/vifm-help.txt
 configs/vifm/.config/vifm/vifminfo.json
 configs/systemd/.config/systemd/user/default.target.wants/
