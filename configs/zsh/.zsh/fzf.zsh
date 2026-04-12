@@ -28,7 +28,7 @@ else
     # On arch, fzf is installed via pacman
     [ -f "/usr/share/fzf/key-bindings.zsh" ] && source "/usr/share/fzf/key-bindings.zsh"
     # On other distros, its installed via install script
-    [ -f "~/.fzf.zsh" ] && source "~/.fzf.zsh"
+    [ -f "${HOME}/.fzf.zsh" ] && source "${HOME}/.fzf.zsh"
 fi
 
 bindkey '^n' fzf-file-widget
