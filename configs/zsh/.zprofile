@@ -7,7 +7,7 @@ if [ -f ~/.env.sh ]; then
 fi
 
 # for linux systems that run a login manager and therefore don't use xinit/startx
-if [ "$(uname)" != "Darwin" ]; then
+if [ "$(uname)" != "Darwin" ] && [  -x "$(command -v setrrate)" ]; then
   setrrate
 fi
 
