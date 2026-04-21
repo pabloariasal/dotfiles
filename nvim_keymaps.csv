@@ -27,19 +27,19 @@ search next word without jumping,n,z*
 search prev word without jumping,n,z#
 paste from system clipboard,nx,<leader>p[P]
 yank to system clipboard,n,<leader>y
-[builtin] jump to next diagnostic,n,]d
-[builtin] jump to prev diagnostic,n,[d
-open diagnostics in loc list,n,<leader>dl
-[builtin] open diagnostics in floating window,n,<c-w>d
-LSP jump to declaration,n,gD
-LSP jump to definition,n,gd
-LSP jump to implementation,n,gI
-LSP jump to type definition,n,gy
-LSP rename symbol,n,<F2>
-LSP code action,n,<leader>m
-LSP references,n,<leader>r
-[builtin] LSP hover,n,K
-format document,n,<leader>f
+[diagnostics] jump to next diagnostic,n,]d
+[diagnostics] jump to prev diagnostic,n,[d
+[diagnostics] open diagnostics in loc list,n,<leader>dl
+[diagnostics] open diagnostics in floating window,n,<c-w>d
+[LSP] jump to declaration,n,gD
+[LSP] jump to definition,n,gd
+[LSP] jump to implementation,n,gI
+[LSP] jump to type definition,n,gy
+[LSP] rename symbol,n,<F2>
+[LSP] code action,n,<leader>m
+[LSP] references,n,<leader>r
+[LSP] LSP hover,n,K
+[conform]format document,n,<leader>f
 [mini.operators] replace text object with register,n,gr
 [mini.operators] replace line with register,nx,grr
 jump to next hunk,n,]c
@@ -58,21 +58,31 @@ jump to prev hunk,n,[c
 [harpoon] jump next,n,<leader>jn
 [harpoon] jump previous,n,<leader>jp
 [harpoon] clear,n,<leader>jc
-snippet expand,i,<c-space>
-snippet next,i,<c-l>
-snippet prev,i,<c-h>
-snippet cancel,i,<c-c>
-copilot apply,n,<tab>
-split/join node under cursor,n,gS
+[mini.snippets] snippet expand,i,<c-space>
+[mini.snippets] snippet next,i,<c-l>
+[mini.snippets] snippet prev,i,<c-h>
+[mini.snippets] snippet cancel,i,<c-c>
+[mini.snippets] copilot apply,n,<tab>
+[treesitter]split/join node under cursor,n,gS
 [mini.operators] duplicate text,n,gm
 [mini.operators] exchange text,n,gx
 [mini.operators] sort text,n,gs
 [mini.operators] sort line,n,gss
-swap parameter with next one,n,<leader>sn
-swap parameter with prev one,n,<leader>sp
+[treesitter] swap parameter with next one,n,<leader>sn
+[treesitter] swap parameter with prev one,n,<leader>sp
 maximize split,n,<leader>l
 jump to alternate file,n,<leader>a
 open url,n,gX
 [mini.surround] add surround,n,ys
 [mini.surround] delete surround,n,ds
 [mini.surround] change surround,n,cs
+[treesitter] function outer text object,n,af
+[treesitter] function inner text object,n,ai
+[treesitter] class outer text object,n,ic
+[treesitter] class inner text object,n,ac
+[treesitter] parameter inner text object,n,aa
+[treesitter] parameter outer text object,n,ia
+[treesitter] assignment outer text object,n,a=
+[treesitter] assignment inner text object,n,i=
+[treesitter] assignment left text object,n,l=
+[treesitter] assignment right text object,n,r=

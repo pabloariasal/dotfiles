@@ -10,7 +10,7 @@ YELLOW='\033[0;33m'
 NC='\033[0m'  # No Color
 
 # Process the CSV file
-{ head -n 1 "${keymaps_file}" && tail -n +2 "${keymaps_file}" | sort -t, -k3; } |
+cat "${keymaps_file}" | sort -t, -k1 |
 awk -F, -v YELLOW="$YELLOW" -v RED="$RED" -v GREEN="$GREEN" -v BLUE="$BLUE" -v NC="$NC" '{
     OFS="|";
         print GREEN $3 NC, YELLOW $1 NC, BLUE $2 NC;
