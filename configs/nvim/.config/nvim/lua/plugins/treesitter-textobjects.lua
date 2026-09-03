@@ -40,9 +40,6 @@ return {
             include_surrounding_whitespace = false,
         },
     },
-    config = function()
-        -- put your config here
-    end,
     keys = {
         {
             "af",
