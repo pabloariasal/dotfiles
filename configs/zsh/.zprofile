@@ -3,7 +3,7 @@
 
 # Source Environment Variables
 if [ -f ~/.env.sh ]; then
-    source ~/.env.sh
+    . ~/.env.sh
 fi
 
 # for linux systems that run a login manager and therefore don't use xinit/startx
